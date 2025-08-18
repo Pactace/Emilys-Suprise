@@ -1,0 +1,116 @@
+[gd_scene load_steps=14 format=3 uid="uid://c47m27y4nnj2c"]
+
+[ext_resource type="Script" uid="uid://dj0iky5kc1xqf" path="res://Levels/Level_Edit.gd" id="1_1w7ek"]
+[ext_resource type="Script" uid="uid://c800a6ejyr3l3" path="res://Levels/character_body_3d.gd" id="1_s5mk4"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_u46fl"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI/Room Edit.tscn" id="3_1w7ek"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5mk4"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_u46fl"]
+sky_material = SubResource("ProceduralSkyMaterial_s5mk4")
+
+[sub_resource type="Environment" id="Environment_a4bbc"]
+background_mode = 2
+sky = SubResource("Sky_u46fl")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_u46fl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a4bbc"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1w7ek"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ethlp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lujw4"]
+
+[node name="TestLevel" type="Node3D"]
+script = ExtResource("1_1w7ek")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a4bbc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Room" type="Node3D" parent="."]
+
+[node name="Wall0" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(16, 0, 0, 0, 8, 0, 0, 0, 1, 0, 4, -8)
+mesh = SubResource("QuadMesh_u46fl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall0/StaticBody3D"]
+shape = SubResource("BoxShape3D_a4bbc")
+
+[node name="Wall1" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(1.90798e-07, 0, -1, 0, 8, 0, 16, 0, 1.19249e-08, 8, 4, 0)
+mesh = SubResource("QuadMesh_u46fl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall1/StaticBody3D"]
+shape = SubResource("BoxShape3D_a4bbc")
+
+[node name="Wall2" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(-6.99382e-07, 0, 1, 0, 8, 0, -16, 0, -4.37114e-08, -8, 4, 0)
+mesh = SubResource("QuadMesh_u46fl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall2/StaticBody3D"]
+shape = SubResource("BoxShape3D_a4bbc")
+
+[node name="Wall3" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(-16, 0, -1.50996e-07, 0, 8, 0, 2.41593e-06, 0, -1, 0, 4, 8)
+mesh = SubResource("QuadMesh_u46fl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall3/StaticBody3D"]
+shape = SubResource("BoxShape3D_a4bbc")
+
+[node name="Floor" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1w7ek")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Floor/StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_ethlp")
+
+[node name="Ceiling" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(8, 0, 0, 0, -1, 6.99382e-07, 0, -8.74228e-08, -8, 0, 8, 0)
+mesh = SubResource("PlaneMesh_1w7ek")
+
+[node name="Emily" type="CharacterBody3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
+script = ExtResource("1_s5mk4")
+SPEED = 7.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Emily"]
+shape = SubResource("CapsuleShape3D_5v4x7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Emily"]
+mesh = SubResource("CapsuleMesh_lujw4")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+script = ExtResource("2_u46fl")
+
+[node name="RoomEdit" parent="." instance=ExtResource("3_1w7ek")]
+
+[connection signal="change_game_state" from="Emily" to="RoomEdit" method="_on_emily_change_game_state"]
+[connection signal="spawn_object" from="RoomEdit" to="." method="_on_room_edit_spawn_object"]
