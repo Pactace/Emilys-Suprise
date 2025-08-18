@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://blqcb0l0orvyd"]
 
-[ext_resource type="Script" uid="uid://b8yqm27gxxu13" path="res://UI/room_edit.gd" id="1_nj71v"]
+[ext_resource type="Script" path="res://UI/room_edit.gd" id="1_nj71v"]
 [ext_resource type="Texture2D" uid="uid://oshgb0l62w35" path="res://UI/Sprites/Navigation/image-removebg-preview (1).png" id="2_psi8o"]
-[ext_resource type="Script" uid="uid://mtfj8vk0klca" path="res://UI/Scripts/mouse_controller.gd" id="3_4h6r5"]
+[ext_resource type="Script" path="res://UI/Scripts/mouse_controller.gd" id="3_4h6r5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ssn7"]
 size = Vector2(50, 50)

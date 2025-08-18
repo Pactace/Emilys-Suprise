@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://c47m27y4nnj2c"]
 
-[ext_resource type="Script" uid="uid://dj0iky5kc1xqf" path="res://Levels/Level_Edit.gd" id="1_1w7ek"]
-[ext_resource type="Script" uid="uid://c800a6ejyr3l3" path="res://Levels/character_body_3d.gd" id="1_s5mk4"]
-[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_u46fl"]
+[ext_resource type="Script" path="res://Levels/Level_Edit.gd" id="1_1w7ek"]
+[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="1_s5mk4"]
+[ext_resource type="Script" path="res://Levels/camera_controller.gd" id="2_u46fl"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI/Room Edit.tscn" id="3_1w7ek"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5mk4"]
