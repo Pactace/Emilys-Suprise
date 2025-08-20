@@ -48,6 +48,8 @@ mesh = SubResource("QuadMesh_u46fl")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall0"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall0/StaticBody3D"]
 shape = SubResource("BoxShape3D_a4bbc")
@@ -58,6 +60,8 @@ mesh = SubResource("QuadMesh_u46fl")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall1"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall1/StaticBody3D"]
 shape = SubResource("BoxShape3D_a4bbc")
@@ -68,6 +72,8 @@ mesh = SubResource("QuadMesh_u46fl")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall2"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall2/StaticBody3D"]
 shape = SubResource("BoxShape3D_a4bbc")
@@ -78,6 +84,8 @@ mesh = SubResource("QuadMesh_u46fl")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall3"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall3/StaticBody3D"]
 shape = SubResource("BoxShape3D_a4bbc")
@@ -97,6 +105,8 @@ mesh = SubResource("PlaneMesh_1w7ek")
 
 [node name="Emily" type="CharacterBody3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_s5mk4")
 SPEED = 7.0
 
@@ -113,4 +123,3 @@ script = ExtResource("2_u46fl")
 [node name="RoomEdit" parent="." instance=ExtResource("3_1w7ek")]
 
 [connection signal="change_game_state" from="Emily" to="RoomEdit" method="_on_emily_change_game_state"]
-[connection signal="spawn_object" from="RoomEdit" to="." method="_on_room_edit_spawn_object"]
