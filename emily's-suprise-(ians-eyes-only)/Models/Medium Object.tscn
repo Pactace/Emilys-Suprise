@@ -1,18 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://bndjddtlvjlra"]
+[gd_scene load_steps=5 format=3 uid="uid://bndjddtlvjlra"]
+
+[ext_resource type="Script" path="res://Models/object_script.gd" id="1_g6fse"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wp7ya"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n2voe"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g6fse"]
+
 [node name="Medium Object" type="Node3D"]
+script = ExtResource("1_g6fse")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_wp7ya")
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+collision_layer = 129
+collision_mask = 129
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
 shape = SubResource("BoxShape3D_n2voe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_g6fse")
 
 [node name="Placement Marker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

@@ -19,83 +19,157 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nj71v")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.734375
-anchor_top = 0.134259
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.891975
+offset_left = -336.0
+offset_top = 1.0
+offset_right = -24.0
+offset_bottom = 86.0
 grow_horizontal = 0
-grow_vertical = 2
+current_tab = 0
+
+[node name="Floor Objects" type="GridContainer" parent="TabContainer"]
+layout_mode = 2
 columns = 4
 metadata/_edit_use_anchors_ = true
+metadata/_tab_index = 0
 
-[node name="Large Object" type="ColorRect" parent="GridContainer"]
+[node name="Large Object" type="ColorRect" parent="TabContainer/Floor Objects"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="GridContainer/Large Object"]
+[node name="Label" type="Label" parent="TabContainer/Floor Objects/Large Object"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Large"
 
-[node name="Area2D" type="Area2D" parent="GridContainer/Large Object"]
+[node name="Area2D" type="Area2D" parent="TabContainer/Floor Objects/Large Object"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GridContainer/Large Object/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TabContainer/Floor Objects/Large Object/Area2D"]
 position = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_0ssn7")
 
-[node name="Medium Object" type="ColorRect" parent="GridContainer"]
+[node name="Medium Object" type="ColorRect" parent="TabContainer/Floor Objects"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="GridContainer/Medium Object"]
+[node name="Label" type="Label" parent="TabContainer/Floor Objects/Medium Object"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Med"
 
-[node name="Area2D" type="Area2D" parent="GridContainer/Medium Object"]
+[node name="Area2D" type="Area2D" parent="TabContainer/Floor Objects/Medium Object"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GridContainer/Medium Object/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TabContainer/Floor Objects/Medium Object/Area2D"]
 position = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_0ssn7")
 
-[node name="Small Object" type="ColorRect" parent="GridContainer"]
+[node name="Small Object" type="ColorRect" parent="TabContainer/Floor Objects"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="GridContainer/Small Object"]
+[node name="Label" type="Label" parent="TabContainer/Floor Objects/Small Object"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Small"
 
-[node name="Area2D" type="Area2D" parent="GridContainer/Small Object"]
+[node name="Area2D" type="Area2D" parent="TabContainer/Floor Objects/Small Object"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GridContainer/Small Object/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TabContainer/Floor Objects/Small Object/Area2D"]
 position = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_0ssn7")
 
-[node name="Mouse" type="TextureRect" parent="."]
+[node name="Wall Objects" type="GridContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+columns = 4
+metadata/_edit_use_anchors_ = true
+metadata/_tab_index = 1
+
+[node name="Large Picture" type="ColorRect" parent="TabContainer/Wall Objects"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Wall Objects/Large Picture"]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 62.0
-offset_right = 175.0
-offset_bottom = 109.0
-texture = ExtResource("2_psi8o")
-expand_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Picture"
+
+[node name="Area2D" type="Area2D" parent="TabContainer/Wall Objects/Large Picture"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TabContainer/Wall Objects/Large Picture/Area2D"]
+position = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_0ssn7")
+
+[node name="Clock" type="ColorRect" parent="TabContainer/Wall Objects"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Wall Objects/Clock"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Clock"
+
+[node name="Area2D" type="Area2D" parent="TabContainer/Wall Objects/Clock"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TabContainer/Wall Objects/Clock/Area2D"]
+position = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_0ssn7")
+
+[node name="Small Picture" type="ColorRect" parent="TabContainer/Wall Objects"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Wall Objects/Small Picture"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Small Pic"
+
+[node name="Area2D" type="Area2D" parent="TabContainer/Wall Objects/Small Picture"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TabContainer/Wall Objects/Small Picture/Area2D"]
+position = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_0ssn7")
+
+[node name="Fart" type="GridContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+columns = 4
+metadata/_edit_use_anchors_ = true
+metadata/_tab_index = 2
+
+[node name="Mouse" type="Marker2D" parent="."]
+position = Vector2(148, 69)
 script = ExtResource("3_4h6r5")
 
-[node name="Area2D" type="Area2D" parent="Mouse"]
+[node name="Mouse" type="TextureRect" parent="Mouse"]
+offset_left = -17.0
+offset_top = -7.0
+offset_right = 27.0
+offset_bottom = 40.0
+pivot_offset = Vector2(16, 6)
+texture = ExtResource("2_psi8o")
+expand_mode = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Area2D"]
-position = Vector2(15, 11.5)
+[node name="Area2D" type="Area2D" parent="Mouse/Mouse"]
+position = Vector2(17, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Mouse/Area2D"]
 shape = SubResource("RectangleShape2D_e6oho")
 
-[connection signal="area_entered" from="Mouse/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Mouse/Mouse/Area2D" to="." method="_on_area_2d_area_entered"]

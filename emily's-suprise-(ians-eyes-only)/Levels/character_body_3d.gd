@@ -6,11 +6,13 @@ const JUMP_VELOCITY = 4.5
 @onready var cam: Camera3D = $"../Camera"
 
 var game_state = 0
+var old_position
 signal change_game_state(state: int)
 
 var game_states = [
 	{"name": "Walk Around" },
-	{"name": "Room Edit"}
+	{"name": "Room Edit"},
+	{"name": "Wall Edit"}
 ]
 
 func _physics_process(delta: float) -> void:
@@ -25,10 +27,13 @@ func switch_states(delta: float):
 			game_state = 1
 			emit_signal("change_game_state", game_state)
 			visible = false
+			old_position = position
+			position = Vector3(0,-10, 0)
 		else:
 			game_state = 0
 			emit_signal("change_game_state", game_state)
 			visible = true
+			position = old_position
 	
 func walk_around_logic(delta: float):
 	if not is_on_floor():
