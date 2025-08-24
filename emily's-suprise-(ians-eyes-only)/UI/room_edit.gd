@@ -5,7 +5,6 @@ extends Control
 @onready var medium_object = preload("res://Models/Medium Object.tscn")
 @onready var small_object = preload("res://Models/Small Object.tscn")
 
-
 #---Scene Elements---#
 var camera
 @onready var tab_container = $TabContainer
@@ -30,20 +29,25 @@ var selected_item = "null"
 var edit_object_query
 var object_just_placed
 
-#this is if the editing UI is enabled
+#--- This is to check the change state ---#
 func _on_emily_change_game_state(state: int) -> void:
-	if state > 0:
-		visible = true
-		get_child(1).can_move = true
+	if state == 1:
+		UI_visible()
 	else: 
-		visible = false
-		get_child(1).can_move = false
-		tab_container.current_tab = 0
-		_update_is_wall_state()
-		placing = false
-		selected_item = "null"
-		if instance and placing and instance != edit_object_query:
-			instance.queue_free()
+		UI_invisible()
+			
+func UI_visible():
+	visible = true
+	get_child(1).can_move = true
+	
+func UI_invisible():
+	visible = false
+	get_child(1).can_move = false
+	
+	#reset everything to the beginning
+	tab_container.current_tab = 0
+	_update_is_wall_state()
+	placing_cancel()
 
 func _ready() -> void:
 	visible = false
@@ -51,12 +55,13 @@ func _ready() -> void:
 	tab_container.current_tab = 0
 		
 func _process(delta: float) -> void:
-	check_selection()
-	if not placing:
-		edit_object_position()
-	if placing:
-		placing_object()
-			
+	if visible:
+		check_selection()
+		if not placing:
+			edit_object_position()
+		if placing:
+			placing_object()
+				
 #This creates a ray on our screen from the UI to the ground
 func create_ray():
 	var mouse_pos = get_child(1).position
@@ -69,13 +74,12 @@ func create_ray():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if placing == false:
 		selected_item = area.get_parent().name
+		print(selected_item)
 
 #this is to spawn that object if it is selected
 func check_selection():
 	if selected_item:
 		if Input.is_action_just_pressed("Accept"): 
-			if placing:
-				instance.queue_free()
 			match selected_item:
 				"Large Object":
 					instance = large_object.instantiate()
@@ -94,21 +98,21 @@ func check_selection():
 
 #this is for when I have placed an object and want to go back and select it to edit it.	
 func edit_object_position():
-	var query = create_ray()
-	query.collide_with_areas = true
-	query.collide_with_bodies = false
-	var pick = camera.get_world_3d().direct_space_state.intersect_ray(query)
-	if pick:
-		edit_object_query = pick.collider.get_parent().get_parent()
-		if object_just_placed != edit_object_query and edit_object_query.name != "Room":
-			print(edit_object_query.name)
-			edit_object_query.placement_yellow()
-			object_just_placed = null
-	else:
-		if edit_object_query and edit_object_query.name != "Room":
-			edit_object_query.placed()
-			edit_object_query = null
-			object_just_placed = null
+	if visible == true:
+		var query = create_ray()
+		query.collide_with_areas = true
+		query.collide_with_bodies = false
+		var pick = camera.get_world_3d().direct_space_state.intersect_ray(query)
+		if pick:
+			edit_object_query = pick.collider.get_parent().get_parent()
+			if object_just_placed != edit_object_query and edit_object_query.name != "Room" and edit_object_query.is_on_wall == is_wall:
+				edit_object_query.placement_yellow()
+				object_just_placed = null
+		else:
+			if (edit_object_query and edit_object_query.name != "Room") or visible == false:
+				edit_object_query.placed()
+				edit_object_query = null
+				object_just_placed = null
 
 #this is after selection (by new creation or editing) to place the object
 func placing_object():
@@ -119,7 +123,7 @@ func placing_object():
 	if collision:
 		instance.visible = true
 		
-		if is_wall && collision.rid != previous_rid:
+		if is_wall and collision.rid != previous_rid:
 			var basis = Basis.IDENTITY
 			basis.z = collision.normal
 			basis.y = Vector3(0,1,0)
@@ -136,8 +140,11 @@ func placing_object():
 		
 func _update_is_wall_state() -> void:
 	var current_tab = tab_container.get_current_tab_control().name
+	var changed = is_wall
 	is_wall = (current_tab == "Wall Objects")
 	wall_tab.emit(is_wall)
+	if changed != is_wall:
+		placing_cancel()
 
 func _rotate_target(target: Node3D, direction: int) -> void:
 	if !is_wall:
@@ -147,7 +154,6 @@ func _rotate_target(target: Node3D, direction: int) -> void:
 		target.transform.basis = target.transform.basis * rotation_matrix_z
 
 func _unhandled_input(event: InputEvent) -> void:
-	# placing / selecting
 	if event.is_action_pressed("Accept"):
 		if placing and can_place and collision:
 			placing = false
@@ -186,12 +192,20 @@ func _unhandled_input(event: InputEvent) -> void:
 			rotate_object = true
 
 	# tab navigation
-	if event.is_action_pressed("Tab Left"):
+	if event.is_action_pressed("Tab Left") and visible:
 		var count = tab_container.get_tab_count()
 		tab_container.current_tab = (tab_container.current_tab - 1 + count) % count
 		_update_is_wall_state()
 
-	elif event.is_action_pressed("Tab Right"):
+	elif event.is_action_pressed("Tab Right") and visible:
 		var count = tab_container.get_tab_count()
 		tab_container.current_tab = (tab_container.current_tab + 1) % count
 		_update_is_wall_state()
+
+func placing_cancel():
+	placing = false
+	selected_item = "null"
+	if edit_object_query:
+		edit_object_query.placed()
+	if instance:
+		instance.placed()

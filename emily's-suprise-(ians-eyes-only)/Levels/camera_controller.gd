@@ -33,8 +33,6 @@ var snap_positions = [
 var wall_view : bool = false
 var target_pos: Vector3
 var target_rot_y: float
-var saved_pos: Vector3
-var saved_rot_y: float
 
 
 func _ready():
@@ -48,7 +46,6 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("Camera Snap Right"):
 		snap_right()
 
-	# Smooth interpolation
 	position = position.lerp(target_pos, delta * LERP_SPEED)
 	rotation.y = lerp_angle(rotation.y, target_rot_y, delta * LERP_SPEED)
 
@@ -77,12 +74,9 @@ func _apply_snap():
 func _on_room_edit_wall_tab(enabled: bool) -> void:
 	wall_view = enabled
 	if wall_view:
-		saved_pos = position
-		saved_rot_y = rotation.y
 		target_pos = WALL_VIEW_POS
 		rotation.x = WALL_VIEW_TILT
 		target_rot_y = snap_positions[snap_index]["rot"]
 	else:
-		target_pos = saved_pos
-		target_rot_y = saved_rot_y
 		rotation.x = CAMERA_TILT_ANGLE
+		target_pos = snap_positions[snap_index]["pos"]
