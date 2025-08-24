@@ -1,23 +1,34 @@
 extends Control
 
+#---Objects---$
 @onready var large_object = preload("res://Models/Large Object.tscn")
 @onready var medium_object = preload("res://Models/Medium Object.tscn")
 @onready var small_object = preload("res://Models/Small Object.tscn")
 
+
+#---Scene Elements---#
 var camera
+@onready var tab_container = $TabContainer
+
+#---Placing Variables---#
 var instance
 var placing = false
-var range = 1000
 var can_place = false
-var collision
-var edit_object_query
-var object_just_placed
 var rotate_object = true
-var selected_item = "null"
-@onready var tab_container = $TabContainer
+
+#---Wall Placement Specific Variables---#
 var is_wall: bool= false
 signal wall_tab(boolean: bool)
 var previous_rid = RID()
+
+#---Ray Variables---#
+var range = 1000
+var collision
+
+#---Selected Object Variables---#
+var selected_item = "null"
+var edit_object_query
+var object_just_placed
 
 #this is if the editing UI is enabled
 func _on_emily_change_game_state(state: int) -> void:
@@ -89,11 +100,12 @@ func edit_object_position():
 	var pick = camera.get_world_3d().direct_space_state.intersect_ray(query)
 	if pick:
 		edit_object_query = pick.collider.get_parent().get_parent()
-		if object_just_placed != edit_object_query:
+		if object_just_placed != edit_object_query and edit_object_query.name != "Room":
+			print(edit_object_query.name)
 			edit_object_query.placement_yellow()
 			object_just_placed = null
 	else:
-		if edit_object_query:
+		if edit_object_query and edit_object_query.name != "Room":
 			edit_object_query.placed()
 			edit_object_query = null
 			object_just_placed = null

@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c47m27y4nnj2c"]
+[gd_scene load_steps=16 format=3 uid="uid://dwpmaxxdv730r"]
 
-[ext_resource type="Script" path="res://Levels/door.gd" id="1_1w7ek"]
-[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="1_s5mk4"]
-[ext_resource type="Script" path="res://Levels/camera_controller.gd" id="2_u46fl"]
-[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI/Room Edit.tscn" id="3_1w7ek"]
+[ext_resource type="Script" path="res://Levels/door.gd" id="1_va61b"]
+[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="2_gx12d"]
+[ext_resource type="Script" path="res://Levels/camera_controller.gd" id="3_2b52x"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI/Room Edit.tscn" id="4_axehl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5mk4"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -109,12 +109,12 @@ transform = Transform3D(8, 0, 0, 0, -1, 6.99382e-07, 0, -8.74228e-08, -8, 0, 8, 
 mesh = SubResource("PlaneMesh_1w7ek")
 
 [node name="Door" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.62797, 7.6564)
+transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.62797, -7.81369)
 mesh = SubResource("BoxMesh_ethlp")
 
 [node name="Area3D" type="Area3D" parent="Room/Door"]
-script = ExtResource("1_1w7ek")
-connected_door = "res://Levels/Test_Level_2.tscn"
+script = ExtResource("1_va61b")
+connected_door = "res://Levels/Test_Level.tscn"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Door/Area3D"]
 shape = SubResource("BoxShape3D_ethlp")
@@ -123,7 +123,7 @@ shape = SubResource("BoxShape3D_ethlp")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
 collision_layer = 7
 collision_mask = 7
-script = ExtResource("1_s5mk4")
+script = ExtResource("2_gx12d")
 SPEED = 7.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Emily"]
@@ -135,9 +135,9 @@ mesh = SubResource("CapsuleMesh_lujw4")
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
 visible = false
-script = ExtResource("2_u46fl")
+script = ExtResource("3_2b52x")
 
-[node name="RoomEdit" parent="." instance=ExtResource("3_1w7ek")]
+[node name="RoomEdit" parent="." instance=ExtResource("4_axehl")]
 
 [connection signal="body_entered" from="Room/Door/Area3D" to="Room/Door/Area3D" method="_on_body_entered"]
 [connection signal="change_game_state" from="Emily" to="RoomEdit" method="_on_emily_change_game_state"]
