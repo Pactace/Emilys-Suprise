@@ -1,13 +1,19 @@
 extends Control
 
-#---Objects---$
+#---Objects---#
 @onready var large_object = preload("res://Models/Large Object.tscn")
 @onready var medium_object = preload("res://Models/Medium Object.tscn")
 @onready var small_object = preload("res://Models/Small Object.tscn")
 
 #---Scene Elements---#
 var camera
+@export var room : Node3D = null
 @onready var tab_container = $TabContainer
+@onready var room_size_modifier_display = $"Room Size Modifier"
+@onready var vertical_room_size_modifier = $"Room Size Modifier/HBoxContainer/VerticalSliderEdit"
+@onready var horizontal_room_size_modifier = $"Room Size Modifier/HBoxContainer2/HorizontalSliderEdit"
+
+
 
 #---Placing Variables---#
 var instance
@@ -29,6 +35,14 @@ var selected_item = "null"
 var edit_object_query
 var object_just_placed
 
+#---Edit State Variables---#
+enum EditState {Clear, Size_Modify, Object_Select}
+var current_state: EditState = EditState.Clear
+
+var Clear = 0
+var Size_Modify = 1
+var Object_Select = 2
+
 #--- This is to check the change state ---#
 func _on_emily_change_game_state(state: int) -> void:
 	if state == 1:
@@ -49,6 +63,7 @@ func UI_invisible():
 	_update_is_wall_state()
 	placing_cancel()
 
+#---TimeLine Functions---#
 func _ready() -> void:
 	visible = false
 	camera = get_viewport().get_camera_3d()
@@ -61,42 +76,108 @@ func _process(delta: float) -> void:
 			edit_object_position()
 		if placing:
 			placing_object()
-				
-#This creates a ray on our screen from the UI to the ground
-func create_ray():
-	var mouse_pos = get_child(1).position
-	var ray_origin = camera.project_ray_origin(mouse_pos)
-	var ray_end = ray_origin + camera.project_ray_normal(mouse_pos) * range
-	var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
-	return query
+			
+func _unhandled_input(event: InputEvent) -> void:
+	if visible:
+		if event.is_action_pressed("Accept"):
+			if placing and can_place and collision:
+				placing = false
+				can_place = false
+				instance.placed()
+				instance.camera = camera
+				if is_wall:
+					instance.is_on_wall = true
+				selected_item = null
+				if instance.has_node("CollisionShape3D"):
+					instance.get_node("CollisionShape3D").disabled = false
+				object_just_placed = instance
+				_finalize_edit_object()
+			elif edit_object_query:
+				placing = true
+				instance = edit_object_query
+				if instance.has_node("CollisionShape3D"):
+					instance.get_node("CollisionShape3D").disabled = true
 
+		# rotation
+		var target: Node3D = null
+		if placing and instance:
+			target = instance
+		elif edit_object_query and edit_object_query != object_just_placed:
+			target = edit_object_query
+
+		if target:
+			if rotate_object:
+				if event.is_action_pressed("Rotate Left"):
+					_rotate_target(target, -1)
+					rotate_object = false
+				elif event.is_action_pressed("Rotate Right"):
+					_rotate_target(target, 1)
+					rotate_object = false
+			elif event.is_action_released("Rotate Left") or event.is_action_released("Rotate Right"):
+				rotate_object = true
+
+		if event.is_action_pressed("Pad Left"):
+			if current_state == EditState.Object_Select:
+				_navigate_tabs(-1)
+			elif current_state == EditState.Size_Modify:
+				horizontal_room_size_modifier.value -= 1
+				room.on_horizontal_change(horizontal_room_size_modifier.value)
+		elif event.is_action_pressed("Pad Right"):
+			if current_state == EditState.Object_Select:
+				_navigate_tabs(1)
+			elif current_state == EditState.Size_Modify:
+				horizontal_room_size_modifier.value += 1
+				room.on_horizontal_change(horizontal_room_size_modifier.value)
+		elif event.is_action_pressed("Pad Up") && current_state == EditState.Size_Modify:
+			vertical_room_size_modifier.value += 1
+			room.on_vertical_change(vertical_room_size_modifier.value)
+		elif event.is_action_pressed("Pad Down") && current_state == EditState.Size_Modify:
+			vertical_room_size_modifier.value -= 1
+			room.on_vertical_change(vertical_room_size_modifier.value)
+			
+		if event.is_action_pressed("+"):
+			if current_state == EditState.Clear or current_state == EditState.Size_Modify:
+				tab_container.visible = true
+				room_size_modifier_display.visible = false
+				current_state = EditState.Object_Select
+			elif current_state == EditState.Object_Select:
+				tab_container.visible = false
+				current_state = EditState.Clear
+		if event.is_action_pressed("-"):
+			if current_state == EditState.Clear or current_state == EditState.Object_Select:
+				tab_container.visible = false
+				room_size_modifier_display.visible = true
+				current_state = EditState.Size_Modify
+			elif current_state == EditState.Size_Modify:
+				room_size_modifier_display.visible = false
+				current_state = EditState.Clear
+
+#---Selecting Functions---#
 #this is for selecting a new object in the UI
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if placing == false:
 		selected_item = area.get_parent().name
-		print(selected_item)
 
-#this is to spawn that object if it is selected
+#these are to spawn that object if it is selected
 func check_selection():
-	if selected_item:
-		if Input.is_action_just_pressed("Accept"): 
-			match selected_item:
-				"Large Object":
-					instance = large_object.instantiate()
-				"Medium Object":
-					instance = medium_object.instantiate()
-				"Small Object":
-					instance = small_object.instantiate()
-				"Large Picture":
-					instance = large_object.instantiate()
-				"Clock":
-					instance = medium_object.instantiate()
-				"Small Picture":
-					instance = small_object.instantiate()
+	if selected_item and Input.is_action_just_pressed("Accept"): 
+		instance = _instantiate_selected_object(selected_item)
+		if instance:
 			placing = true
 			get_parent().add_child(instance)
 
-#this is for when I have placed an object and want to go back and select it to edit it.	
+func _instantiate_selected_object(name: String) -> Node3D:
+	match name:
+		"Large Object", "Large Picture":
+			return large_object.instantiate()
+		"Medium Object", "Clock":
+			return medium_object.instantiate()
+		"Small Object", "Small Picture":
+			return small_object.instantiate()
+		_:
+			return null
+			
+#this is for selecting an object that already exists
 func edit_object_position():
 	if visible == true:
 		var query = create_ray()
@@ -109,12 +190,9 @@ func edit_object_position():
 				edit_object_query.placement_yellow()
 				object_just_placed = null
 		else:
-			if (edit_object_query and edit_object_query.name != "Room") or visible == false:
-				edit_object_query.placed()
-				edit_object_query = null
-				object_just_placed = null
+			_finalize_edit_object()
 
-#this is after selection (by new creation or editing) to place the object
+#---Placing Functions--#
 func placing_object():
 	var query = create_ray()
 	query.collision_mask = (1 if !is_wall else 2)
@@ -137,15 +215,21 @@ func placing_object():
 		can_place = instance.check_placement()
 	else:
 		instance.visible = false
-		
-func _update_is_wall_state() -> void:
-	var current_tab = tab_container.get_current_tab_control().name
-	var changed = is_wall
-	is_wall = (current_tab == "Wall Objects")
-	wall_tab.emit(is_wall)
-	if changed != is_wall:
-		placing_cancel()
 
+func _finalize_edit_object():
+	if edit_object_query and edit_object_query.name != "Room":
+		edit_object_query.placed()
+	edit_object_query = null
+	object_just_placed = null
+	
+func placing_cancel():
+	placing = false
+	selected_item = "null"
+	_finalize_edit_object()
+	if instance:
+		instance.placed()
+
+#---Editing Functions---#
 func _rotate_target(target: Node3D, direction: int) -> void:
 	if !is_wall:
 		target.rotation.y += deg_to_rad(90) * direction
@@ -153,59 +237,25 @@ func _rotate_target(target: Node3D, direction: int) -> void:
 		var rotation_matrix_z = Basis.from_euler(Vector3(0, 0, deg_to_rad(15) * -direction))
 		target.transform.basis = target.transform.basis * rotation_matrix_z
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("Accept"):
-		if placing and can_place and collision:
-			placing = false
-			can_place = false
-			instance.placed()
-			instance.camera = camera
-			if is_wall:
-				instance.is_on_wall = true
-			selected_item = null
-			if instance.has_node("CollisionShape3D"):
-				instance.get_node("CollisionShape3D").disabled = false
-			object_just_placed = instance
-			edit_object_query = null
-		elif edit_object_query:
-			placing = true
-			instance = edit_object_query
-			if instance.has_node("CollisionShape3D"):
-				instance.get_node("CollisionShape3D").disabled = true
+#---Tab Container & Modify Room UI---#
+func _navigate_tabs(direction: int) -> void:
+	var count = tab_container.get_tab_count()
+	tab_container.current_tab = (tab_container.current_tab + direction + count) % count
+	_update_is_wall_state()
 
-	# rotation
-	var target: Node3D = null
-	if placing and instance:
-		target = instance
-	elif edit_object_query and edit_object_query != object_just_placed:
-		target = edit_object_query
+#---Helper functions---#
+#This creates a ray on our screen from the UI to the ground
+func create_ray():
+	var mouse_pos = get_child(1).position
+	var ray_origin = camera.project_ray_origin(mouse_pos)
+	var ray_end = ray_origin + camera.project_ray_normal(mouse_pos) * range
+	var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
+	return query
 
-	if target:
-		if rotate_object:
-			if event.is_action_pressed("Rotate Left"):
-				_rotate_target(target, -1)
-				rotate_object = false
-			elif event.is_action_pressed("Rotate Right"):
-				_rotate_target(target, 1)
-				rotate_object = false
-		elif event.is_action_released("Rotate Left") or event.is_action_released("Rotate Right"):
-			rotate_object = true
-
-	# tab navigation
-	if event.is_action_pressed("Tab Left") and visible:
-		var count = tab_container.get_tab_count()
-		tab_container.current_tab = (tab_container.current_tab - 1 + count) % count
-		_update_is_wall_state()
-
-	elif event.is_action_pressed("Tab Right") and visible:
-		var count = tab_container.get_tab_count()
-		tab_container.current_tab = (tab_container.current_tab + 1) % count
-		_update_is_wall_state()
-
-func placing_cancel():
-	placing = false
-	selected_item = "null"
-	if edit_object_query:
-		edit_object_query.placed()
-	if instance:
-		instance.placed()
+func _update_is_wall_state() -> void:
+	var current_tab = tab_container.get_current_tab_control().name
+	var changed = is_wall
+	is_wall = (current_tab == "Wall Objects")
+	wall_tab.emit(is_wall)
+	if changed != is_wall:
+		placing_cancel()

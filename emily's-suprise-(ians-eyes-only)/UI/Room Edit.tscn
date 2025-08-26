@@ -20,6 +20,7 @@ grow_vertical = 2
 script = ExtResource("1_nj71v")
 
 [node name="TabContainer" type="TabContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -171,5 +172,43 @@ position = Vector2(17, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Mouse/Area2D"]
 shape = SubResource("RectangleShape2D_e6oho")
+
+[node name="Room Size Modifier" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 338.0
+offset_bottom = 114.0
+
+[node name="Label" type="Label" parent="Room Size Modifier"]
+layout_mode = 2
+text = "Room Size Edit"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Room Size Modifier"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Room Size Modifier/HBoxContainer"]
+layout_mode = 2
+text = "Vertical"
+
+[node name="VerticalSliderEdit" type="HSlider" parent="Room Size Modifier/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+max_value = 10.0
+tick_count = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Room Size Modifier"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Room Size Modifier/HBoxContainer2"]
+layout_mode = 2
+text = "Horizontal"
+
+[node name="HorizontalSliderEdit" type="HSlider" parent="Room Size Modifier/HBoxContainer2"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+max_value = 10.0
+tick_count = 10
 
 [connection signal="area_entered" from="Mouse/Mouse/Area2D" to="." method="_on_area_2d_area_entered"]
