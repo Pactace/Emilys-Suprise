@@ -40,12 +40,7 @@ transform = Transform3D(1, 0, 0, 0, 0.0206109, -0.999788, 0, 0.999788, 0.0206109
 material_override = SubResource("StandardMaterial3D_n2voe")
 mesh = SubResource("PlaneMesh_d7x7e")
 
-[node name="Back Wall Ray" type="RayCast3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.103711)
-target_position = Vector3(0, 0, -5)
-collision_mask = 2
-
-[node name="Front Wall Ray" type="RayCast3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.998319)
+[node name="Wall Ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
 target_position = Vector3(0, 0, 5)
 collision_mask = 2

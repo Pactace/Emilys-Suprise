@@ -10,14 +10,29 @@ var vertical_size := 0
 @onready var floor: Node3D = $"Floor"
 @onready var ceiling: Node3D = $"Ceiling"
 @onready var wall_nodes = $"Wall Nodes"
+var forward: bool = false
+var horizontal: bool = false
 
 func on_horizontal_change(size: int) -> void:
-	horizontal_size = size
-	update_walls()
+	if horizontal_size != size:
+		if size > horizontal_size: 
+			forward = false 
+			
+		else:
+			forward = true
+		horizontal = true
+		horizontal_size = size
+		update_walls()
 	
 func on_vertical_change(size: int) -> void:
-	vertical_size = size
-	update_walls()
+	if vertical_size != size:
+		if size > vertical_size: 
+			forward = false 
+		else:
+			forward = true
+		horizontal = false
+		vertical_size = size
+		update_walls()
 
 func update_walls() -> void:
 	floor.scale.x = horizontal_size + 8
@@ -39,5 +54,5 @@ func update_walls() -> void:
 	#finally we update all of the nodes on the wall
 	for wall_node in wall_nodes.get_children():
 		if wall_node.has_method("wall_move"):
-			wall_node.wall_move()
+			wall_node.wall_move(forward, horizontal)
 	

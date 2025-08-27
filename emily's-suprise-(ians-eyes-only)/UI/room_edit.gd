@@ -25,6 +25,7 @@ var rotate_object = true
 var is_wall: bool= false
 signal wall_tab(boolean: bool)
 var previous_rid = RID()
+var wall_name
 
 #---Ray Variables---#
 var range = 1000
@@ -87,6 +88,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				instance.camera = camera
 				if is_wall:
 					instance.is_on_wall = true
+					if wall_name == "Left Wall" || wall_name == "Right Wall":
+						instance.is_horizontal = true
+					else:
+						instance.is_horizontal = false
 				selected_item = null
 				if instance.has_node("CollisionShape3D"):
 					instance.get_node("CollisionShape3D").disabled = false
@@ -209,7 +214,8 @@ func placing_object():
 				basis.x = basis.y.cross(basis.z) 
 				instance.basis = basis
 				previous_rid = collision.rid
-
+				wall_name = collision.collider.get_parent().name
+			
 			instance.transform.origin = collision.position
 			
 			can_place = instance.check_placement()
