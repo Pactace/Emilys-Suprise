@@ -164,7 +164,7 @@ func check_selection():
 		instance = _instantiate_selected_object(selected_item)
 		if instance:
 			placing = true
-			get_parent().add_child(instance)
+			get_parent().get_child(2).get_child(0).add_child(instance)
 
 func _instantiate_selected_object(name: String) -> Node3D:
 	match name:
@@ -198,23 +198,23 @@ func placing_object():
 	query.collision_mask = (1 if !is_wall else 2)
 	
 	collision = camera.get_world_3d().direct_space_state.intersect_ray(query)
-	if collision:
-		instance.visible = true
-		
-		if is_wall and collision.rid != previous_rid:
-			var basis = Basis.IDENTITY
-			basis.z = collision.normal
-			basis.y = Vector3(0,1,0)
-			basis.x = basis.y.cross(basis.z) 
-			instance.basis = basis
-			previous_rid = collision.rid
+	if instance:
+		if collision:
+			instance.visible = true
 			
-		var marker = instance.get_node("Placement Marker")
-		instance.transform.origin = collision.position + marker.transform.origin
-		
-		can_place = instance.check_placement()
-	else:
-		instance.visible = false
+			if is_wall and collision.rid != previous_rid:
+				var basis = Basis.IDENTITY
+				basis.z = collision.normal
+				basis.y = Vector3(0,1,0)
+				basis.x = basis.y.cross(basis.z) 
+				instance.basis = basis
+				previous_rid = collision.rid
+
+			instance.transform.origin = collision.position
+			
+			can_place = instance.check_placement()
+		else:
+			instance.visible = false
 
 func _finalize_edit_object():
 	if edit_object_query and edit_object_query.name != "Room":

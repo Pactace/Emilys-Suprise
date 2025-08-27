@@ -7,6 +7,9 @@ extends Node3D
 @onready var yellow_mat = preload("res://Models/query_yellow.tres")
 @onready var mesh = $MeshInstance3D
 @onready var offset = $"Placement Marker"
+@onready var back_wall_ray = $"Back Wall Ray"
+@onready var front_wall_ray = $"Front Wall Ray"
+
 @export_category("Characteristics")
 var is_on_wall = false
 var camera = null
@@ -53,3 +56,14 @@ func placement_green() -> void:
 
 func placement_yellow():
 	mesh.material_override = yellow_mat
+	
+func wall_move():
+	if is_on_wall:
+		if front_wall_ray.is_colliding():
+			print("HIT")
+		elif back_wall_ray.is_colliding():
+			var collision = back_wall_ray.get_collision_point()
+			var normal = back_wall_ray.get_collision_normal()
+			var position_offset = -mesh.scale.z/2
+			position = collision + normal * position_offset
+		
