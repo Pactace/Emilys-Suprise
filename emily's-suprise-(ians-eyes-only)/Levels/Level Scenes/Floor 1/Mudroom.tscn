@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://gg8r6hhxb30v"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_e7f4o"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="2_k82rx"]
+[ext_resource type="PackedScene" uid="uid://bn6dfevhmero" path="res://Levels/Components/Camera.tscn" id="3_bkddi"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_y2m46"]
+[ext_resource type="PackedScene" uid="uid://bas51s26l1kp1" path="res://Levels/Components/World_Enviorment.tscn" id="5_1m53i"]
+[ext_resource type="PackedScene" uid="uid://d2jeyf620x7rp" path="res://Levels/Components/Directional_Light.tscn" id="6_1iutv"]
+[ext_resource type="PackedScene" uid="uid://o63r3anii4c7" path="res://Levels/Components/Door.tscn" id="7_k82rx"]
+
+[node name="Mudroom" type="Node3D"]
+
+[node name="Room" parent="." instance=ExtResource("1_e7f4o")]
+
+[node name="Emily" parent="." instance=ExtResource("2_k82rx")]
+
+[node name="Camera" parent="." instance=ExtResource("3_bkddi")]
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("4_y2m46")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("5_1m53i")]
+
+[node name="DirectionalLight3D" parent="." instance=ExtResource("6_1iutv")]
+
+[node name="Open Concept Door" parent="." instance=ExtResource("7_k82rx")]
+transform = Transform3D(-5.34051, 0, -0.0149556, 0, 6.96892, 0, 0.0802597, 0, -0.995154, -0.305438, 3.29625, 7.95164)
+
+[node name="Area3D" parent="Open Concept Door" index="0"]
+connected_door = "res://Levels/Level Scenes/Floor 1/Open Concept.tscn"
+
+[editable path="Open Concept Door"]

@@ -46,7 +46,6 @@ func _ready() -> void:
 	
 	#next we are going to switch states to the default edit object state
 	current_state = 0
-	switch_states()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if visible:

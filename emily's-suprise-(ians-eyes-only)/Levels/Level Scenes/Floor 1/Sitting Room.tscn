@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkavhjqhwy3sm"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_50qdr"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="2_d8qwi"]
+[ext_resource type="PackedScene" uid="uid://bn6dfevhmero" path="res://Levels/Components/Camera.tscn" id="3_fy3mg"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_0gb51"]
+[ext_resource type="PackedScene" uid="uid://bas51s26l1kp1" path="res://Levels/Components/World_Enviorment.tscn" id="5_vw436"]
+[ext_resource type="PackedScene" uid="uid://d2jeyf620x7rp" path="res://Levels/Components/Directional_Light.tscn" id="6_8p5yg"]
+[ext_resource type="PackedScene" uid="uid://o63r3anii4c7" path="res://Levels/Components/Door.tscn" id="7_fy3mg"]
+[ext_resource type="Material" uid="uid://bro2bf1fsgvpg" path="res://Levels/Components/Door Placeholder.tres" id="8_0gb51"]
+
+[node name="Sitting Room" type="Node3D"]
+
+[node name="Room" parent="." instance=ExtResource("1_50qdr")]
+
+[node name="Emily" parent="." instance=ExtResource("2_d8qwi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.6545, 0)
+
+[node name="Camera" parent="." instance=ExtResource("3_fy3mg")]
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("4_0gb51")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("5_vw436")]
+
+[node name="DirectionalLight3D" parent="." instance=ExtResource("6_8p5yg")]
+
+[node name="EntryWay Door" parent="." instance=ExtResource("7_fy3mg")]
+transform = Transform3D(-0.0318341, 0, -0.999944, 0, 5, 0, 2.99983, 0, -0.0106114, 8.27485, 2.39882, 3.156)
+material_override = ExtResource("8_0gb51")
+
+[node name="Area3D" parent="EntryWay Door" index="0"]
+transform = Transform3D(1, 0, 2.32831e-10, 0, 1, 0, 0, 0, 1, 0.000974253, 0, 0.275419)
+connected_door = "res://Levels/Level Scenes/Floor 1/Entry Way.tscn"
+
+[node name="Family Room Door" parent="." instance=ExtResource("7_fy3mg")]
+transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 1, -3.19521, 2.37968, -8.16226)
+material_override = ExtResource("8_0gb51")
+
+[node name="Area3D" parent="Family Room Door" index="0"]
+transform = Transform3D(1, 0, 2.32831e-10, 0, 1, 0, 0, 0, 1, 0.000974253, 0, 0.275419)
+connected_door = "res://Levels/Level Scenes/Floor 1/Family Room.tscn"
+
+[editable path="EntryWay Door"]
+[editable path="Family Room Door"]

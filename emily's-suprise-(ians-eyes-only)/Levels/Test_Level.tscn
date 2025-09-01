@@ -1,11 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://c47m27y4nnj2c"]
+[gd_scene load_steps=11 format=3 uid="uid://c47m27y4nnj2c"]
 
-[ext_resource type="Script" path="res://Levels/door.gd" id="1_1w7ek"]
-[ext_resource type="Script" path="res://Levels/level_script.gd" id="1_5v4x7"]
+[ext_resource type="PackedScene" uid="uid://d2jeyf620x7rp" path="res://Levels/Components/Directional_Light.tscn" id="1_5v4x7"]
 [ext_resource type="Script" path="res://Levels/room.gd" id="1_ethlp"]
-[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="1_s5mk4"]
-[ext_resource type="Script" path="res://Levels/camera_controller.gd" id="2_u46fl"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="2_1w7ek"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_1w7ek"]
+[ext_resource type="PackedScene" uid="uid://bn6dfevhmero" path="res://Levels/Components/Camera.tscn" id="4_ethlp"]
+[ext_resource type="PackedScene" uid="uid://bas51s26l1kp1" path="res://Levels/Components/World_Enviorment.tscn" id="5_lujw4"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_u46fl"]
 
@@ -15,33 +15,10 @@
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ethlp"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_ethlp"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ethlp"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_lujw4"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ethlp"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_u46fl"]
-sky_material = SubResource("ProceduralSkyMaterial_ethlp")
-
-[sub_resource type="Environment" id="Environment_5v4x7"]
-background_mode = 2
-sky = SubResource("Sky_u46fl")
-tonemap_mode = 2
-glow_enabled = true
-
 [node name="TestLevel" type="Node3D"]
-script = ExtResource("1_5v4x7")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
+[node name="DirectionalLight3D" parent="." instance=ExtResource("1_5v4x7")]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433012, 0, 0, 0)
 
 [node name="Room" type="Node3D" parent="."]
 script = ExtResource("1_ethlp")
@@ -111,40 +88,11 @@ shape = SubResource("WorldBoundaryShape3D_ethlp")
 transform = Transform3D(8, 0, 0, 0, -1, 6.99382e-07, 0, -8.74228e-08, -8, 0, 8, 0)
 mesh = SubResource("PlaneMesh_1w7ek")
 
-[node name="Door" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.62797, 7.6564)
-mesh = SubResource("BoxMesh_ethlp")
+[node name="Emily" parent="." instance=ExtResource("2_1w7ek")]
 
-[node name="Area3D" type="Area3D" parent="Room/Door"]
-script = ExtResource("1_1w7ek")
-connected_door = "res://Levels/Test_Level_2.tscn"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Door/Area3D"]
-shape = SubResource("BoxShape3D_ethlp")
-
-[node name="Emily" type="CharacterBody3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
-collision_layer = 7
-collision_mask = 7
-script = ExtResource("1_s5mk4")
-SPEED = 7.0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Emily"]
-shape = SubResource("CapsuleShape3D_5v4x7")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Emily"]
-mesh = SubResource("CapsuleMesh_lujw4")
-
-[node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
-visible = false
-script = ExtResource("2_u46fl")
-
-[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_1w7ek")]
-camera = NodePath("../Camera")
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("room") instance=ExtResource("3_1w7ek")]
 room = NodePath("../Room")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_5v4x7")
+[node name="WorldEnvironment" parent="." instance=ExtResource("5_lujw4")]
 
-[connection signal="body_entered" from="Room/Door/Area3D" to="Room/Door/Area3D" method="_on_body_entered"]
+[node name="Camera" parent="." instance=ExtResource("4_ethlp")]

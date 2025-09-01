@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwpmaxxdv730r"]
+[gd_scene load_steps=14 format=3 uid="uid://dwpmaxxdv730r"]
 
-[ext_resource type="Script" path="res://Levels/door.gd" id="1_va61b"]
+[ext_resource type="PackedScene" uid="uid://o63r3anii4c7" path="res://Levels/Components/Door.tscn" id="1_va61b"]
 [ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="2_gx12d"]
 [ext_resource type="Script" path="res://Levels/camera_controller.gd" id="3_2b52x"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
@@ -26,10 +26,6 @@ glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1w7ek"]
 size = Vector3(2, 0.001, 2)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ethlp"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ethlp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
 
@@ -108,16 +104,7 @@ shape = SubResource("BoxShape3D_1w7ek")
 transform = Transform3D(8, 0, 0, 0, -1, 6.99382e-07, 0, -8.74228e-08, -8, 0, 8, 0)
 mesh = SubResource("PlaneMesh_1w7ek")
 
-[node name="Door" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.62797, -7.81369)
-mesh = SubResource("BoxMesh_ethlp")
-
-[node name="Area3D" type="Area3D" parent="Room/Door"]
-script = ExtResource("1_va61b")
-connected_door = "res://Levels/Test_Level.tscn"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Door/Area3D"]
-shape = SubResource("BoxShape3D_ethlp")
+[node name="Door" parent="Room" instance=ExtResource("1_va61b")]
 
 [node name="Emily" type="CharacterBody3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
@@ -138,5 +125,3 @@ visible = false
 script = ExtResource("3_2b52x")
 
 [node name="RoomEdit" parent="." instance=ExtResource("4_axehl")]
-
-[connection signal="body_entered" from="Room/Door/Area3D" to="Room/Door/Area3D" method="_on_body_entered"]

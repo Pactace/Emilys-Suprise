@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Emily's Suprise (Ians Eyes Only)"
-run/main_scene="res://Levels/Test_Level.tscn"
+run/main_scene="res://Levels/Level Scenes/Floor 1/Entry Way.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [input]

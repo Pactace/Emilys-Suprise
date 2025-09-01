@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://o63r3anii4c7"]
+
+[ext_resource type="Script" path="res://Levels/door.gd" id="1_68ygc"]
+[ext_resource type="Material" uid="uid://bro2bf1fsgvpg" path="res://Levels/Components/Door Placeholder.tres" id="1_oa35c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ethlp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ethlp"]
+size = Vector3(1, 1, 1.5)
+
+[node name="Door" type="MeshInstance3D"]
+transform = Transform3D(3, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2.62797, -7.81369)
+mesh = SubResource("BoxMesh_ethlp")
+surface_material_override/0 = ExtResource("1_oa35c")
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_68ygc")
+connected_door = "res://Levels/Test_Level.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_ethlp")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
