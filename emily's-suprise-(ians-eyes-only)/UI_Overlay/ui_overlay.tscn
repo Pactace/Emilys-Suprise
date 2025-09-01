@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://blqcb0l0orvyd"]
+
+[ext_resource type="Script" path="res://UI_Overlay/room_edit.gd" id="1_nj71v"]
+[ext_resource type="PackedScene" uid="uid://da7iilnykcq4j" path="res://UI_Overlay/Components/Room Resize.tscn" id="2_0hs0u"]
+[ext_resource type="Texture2D" uid="uid://oshgb0l62w35" path="res://UI_Overlay/Sprites/Navigation/image-removebg-preview (1).png" id="2_psi8o"]
+[ext_resource type="Script" path="res://UI_Overlay/Scripts/mouse_controller.gd" id="3_4h6r5"]
+[ext_resource type="PackedScene" uid="uid://kfopx43ychj1" path="res://UI_Overlay/Components/Tab Select.tscn" id="5_dgyqn"]
+[ext_resource type="PackedScene" uid="uid://ca7m56xpyjn3v" path="res://UI_Overlay/Components/Edit Object.tscn" id="6_a5xhx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6oho"]
+size = Vector2(20, 21)
+
+[node name="UiOverlay" type="Control"]
+editor_description = "This control node acts as the state machine between the overlay ui elements during runtime.
+
+Open code for details
+"
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nj71v")
+
+[node name="RoomResize" parent="." instance=ExtResource("2_0hs0u")]
+layout_mode = 0
+offset_right = 585.0
+
+[node name="TabSelect" parent="." instance=ExtResource("5_dgyqn")]
+layout_mode = 1
+offset_left = -312.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 85.0
+
+[node name="Mouse" type="Marker2D" parent="."]
+position = Vector2(148, 69)
+script = ExtResource("3_4h6r5")
+
+[node name="Mouse" type="TextureRect" parent="Mouse"]
+offset_left = -17.0
+offset_top = -7.0
+offset_right = 27.0
+offset_bottom = 40.0
+pivot_offset = Vector2(16, 6)
+texture = ExtResource("2_psi8o")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="Mouse/Mouse"]
+position = Vector2(17, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Mouse/Area2D"]
+shape = SubResource("RectangleShape2D_e6oho")
+
+[node name="EditObject" parent="." instance=ExtResource("6_a5xhx")]
+editor_description = "When in the Edit_Objects enum in the UiOverlay State machine this object deals with selecting and moving objects already in the scene."
+visible = false
+layout_mode = 1
+
+[connection signal="is_wall_change" from="." to="EditObject" method="_on_ui_overlay_is_wall_change"]
+[connection signal="is_wall_change" from="TabSelect" to="." method="_on_tab_select_is_wall_change"]
+[connection signal="area_entered" from="Mouse/Mouse/Area2D" to="." method="_on_area_2d_area_entered"]

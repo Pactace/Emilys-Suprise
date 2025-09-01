@@ -10,6 +10,7 @@ var vertical_size := 0
 @onready var floor: Node3D = $"Floor"
 @onready var ceiling: Node3D = $"Ceiling"
 @onready var wall_nodes = $"Wall Nodes"
+@onready var floor_nodes = $"Floor Nodes"
 var forward: bool = false
 var horizontal: bool = false
 
@@ -55,4 +56,9 @@ func update_walls() -> void:
 	for wall_node in wall_nodes.get_children():
 		if wall_node.has_method("wall_move"):
 			wall_node.wall_move(forward, horizontal)
+			
+func add_object(instance, is_wall: bool):
+	if !is_wall:
+		wall_nodes.add_child(instance)
+		
 	

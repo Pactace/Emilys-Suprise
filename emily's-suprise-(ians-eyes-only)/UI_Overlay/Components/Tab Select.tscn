@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://kfopx43ychj1"]
+
+[ext_resource type="Script" path="res://UI_Overlay/Scripts/tab_select.gd" id="1_6vvw0"]
+[ext_resource type="PackedScene" uid="uid://d1kinq37vuc3m" path="res://UI_Overlay/Components/Object Select.tscn" id="2_f6myi"]
+
+[node name="TabContainer" type="TabContainer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -336.0
+offset_top = 1.0
+offset_right = -24.0
+offset_bottom = 86.0
+grow_horizontal = 0
+current_tab = 0
+script = ExtResource("1_6vvw0")
+
+[node name="ObjectSelect" parent="." instance=ExtResource("2_f6myi")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ObjectSelect2" parent="." instance=ExtResource("2_f6myi")]
+visible = false
+layout_mode = 2
+tab_name = "Wall Objects"
+metadata/_tab_index = 1
+
+[connection signal="is_wall_change" from="." to="ObjectSelect" method="_on_tab_container_is_wall_change"]

@@ -3,18 +3,18 @@
 [ext_resource type="Script" path="res://Levels/door.gd" id="1_va61b"]
 [ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="2_gx12d"]
 [ext_resource type="Script" path="res://Levels/camera_controller.gd" id="3_2b52x"]
-[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI/Room Edit.tscn" id="4_axehl"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5mk4"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
-[sub_resource type="Sky" id="Sky_u46fl"]
+[sub_resource type="Sky" id="Sky_va61b"]
 sky_material = SubResource("ProceduralSkyMaterial_s5mk4")
 
 [sub_resource type="Environment" id="Environment_a4bbc"]
 background_mode = 2
-sky = SubResource("Sky_u46fl")
+sky = SubResource("Sky_va61b")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -140,5 +140,3 @@ script = ExtResource("3_2b52x")
 [node name="RoomEdit" parent="." instance=ExtResource("4_axehl")]
 
 [connection signal="body_entered" from="Room/Door/Area3D" to="Room/Door/Area3D" method="_on_body_entered"]
-[connection signal="change_game_state" from="Emily" to="RoomEdit" method="_on_emily_change_game_state"]
-[connection signal="wall_tab" from="RoomEdit" to="Camera" method="_on_room_edit_wall_tab"]

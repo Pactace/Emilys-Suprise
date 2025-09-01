@@ -1,23 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://c47m27y4nnj2c"]
+[gd_scene load_steps=18 format=3 uid="uid://c47m27y4nnj2c"]
 
 [ext_resource type="Script" path="res://Levels/door.gd" id="1_1w7ek"]
+[ext_resource type="Script" path="res://Levels/level_script.gd" id="1_5v4x7"]
 [ext_resource type="Script" path="res://Levels/room.gd" id="1_ethlp"]
 [ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="1_s5mk4"]
 [ext_resource type="Script" path="res://Levels/camera_controller.gd" id="2_u46fl"]
-[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI/Room Edit.tscn" id="3_1w7ek"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5mk4"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_u46fl"]
-sky_material = SubResource("ProceduralSkyMaterial_s5mk4")
-
-[sub_resource type="Environment" id="Environment_a4bbc"]
-background_mode = 2
-sky = SubResource("Sky_u46fl")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_1w7ek"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_u46fl"]
 
@@ -35,10 +23,21 @@ glow_enabled = true
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lujw4"]
 
-[node name="TestLevel" type="Node3D"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ethlp"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_a4bbc")
+[sub_resource type="Sky" id="Sky_u46fl"]
+sky_material = SubResource("ProceduralSkyMaterial_ethlp")
+
+[sub_resource type="Environment" id="Environment_5v4x7"]
+background_mode = 2
+sky = SubResource("Sky_u46fl")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="TestLevel" type="Node3D"]
+script = ExtResource("1_5v4x7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
@@ -48,6 +47,8 @@ shadow_enabled = true
 script = ExtResource("1_ethlp")
 
 [node name="Wall Nodes" type="Node3D" parent="Room"]
+
+[node name="Floor Nodes" type="Node3D" parent="Room"]
 
 [node name="Back Wall" type="MeshInstance3D" parent="Room"]
 transform = Transform3D(16, 0, 0, 0, 8, 0, 0, 0, 1, 0, 4, -8)
@@ -139,9 +140,11 @@ transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 
 visible = false
 script = ExtResource("2_u46fl")
 
-[node name="RoomEdit" parent="." node_paths=PackedStringArray("room") instance=ExtResource("3_1w7ek")]
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_1w7ek")]
+camera = NodePath("../Camera")
 room = NodePath("../Room")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5v4x7")
+
 [connection signal="body_entered" from="Room/Door/Area3D" to="Room/Door/Area3D" method="_on_body_entered"]
-[connection signal="change_game_state" from="Emily" to="RoomEdit" method="_on_emily_change_game_state"]
-[connection signal="wall_tab" from="RoomEdit" to="Camera" method="_on_room_edit_wall_tab"]

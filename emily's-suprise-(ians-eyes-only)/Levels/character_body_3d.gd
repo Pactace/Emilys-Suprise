@@ -1,51 +1,45 @@
 extends CharacterBody3D
 
+#---Player Variables---#
 @export var SPEED = 5.0
-const JUMP_VELOCITY = 4.5
-
-@onready var cam: Camera3D = $"../Camera"
-
-var game_state = 0
 var old_position
-signal change_game_state(state: int)
 
-var game_states = [
-	{"name": "Walk Around" },
-	{"name": "Room Edit"},
-	{"name": "Wall Edit"}
-]
+#---Scene Variables---#
+@onready var camera: Camera3D = $"../Camera"
+@onready var ui_overlay: Control = $"../UiOverlay"
+
+enum PlayerState {Moving, Editing}
+var current_state: PlayerState = PlayerState.Moving
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Edit Mode"):
+		switch_states()
 
 func _physics_process(delta: float) -> void:
-	switch_states(delta)
-	if game_state == 0:
+	if current_state == PlayerState.Moving:
 		walk_around_logic(delta)
-		
 
-func switch_states(delta: float):
-	if Input.is_action_just_pressed("Edit Mode"):
-		if game_state == 0:
-			game_state = 1
-			emit_signal("change_game_state", game_state)
-			visible = false
-			old_position = position
-			position = Vector3(0,-10, 0)
-		else:
-			game_state = 0
-			emit_signal("change_game_state", game_state)
-			visible = true
-			position = old_position
+func switch_states():
+	if current_state == PlayerState.Moving:
+		current_state = PlayerState.Editing
+		ui_overlay.enabled()
+		visible = false
+		old_position = position
+		position = Vector3(0,-10, 0)
+	else:
+		current_state = PlayerState.Moving
+		ui_overlay.disabled()
+		visible = true
+		position = old_position
 	
 func walk_around_logic(delta: float):
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
 	var input_dir := Input.get_vector("Left", "Right", "Up", "Down")
 
 	# --- Camera-relative movement ---
 	if input_dir != Vector2.ZERO:
 		#First we need to get the camera axese.
-		var cam_forward = cam.global_transform.basis.z
-		var cam_right = cam.global_transform.basis.x
+		var cam_forward = camera.global_transform.basis.z
+		var cam_right = camera.global_transform.basis.x
 
 		#Here we are going to ignore vertical tilt
 		cam_forward.y = 0

@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://da7iilnykcq4j"]
+
+[ext_resource type="Script" path="res://UI_Overlay/Scripts/room_resize.gd" id="1_xbxfd"]
+
+[node name="RoomResize" type="Node"]
+editor_description = "A node to handle the resizing of rooms"
+script = ExtResource("1_xbxfd")
+
+[node name="Room Size Modifier" type="VBoxContainer" parent="."]
+visible = false
+offset_right = 338.0
+offset_bottom = 114.0
+
+[node name="Label" type="Label" parent="Room Size Modifier"]
+layout_mode = 2
+text = "Room Size Edit"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Room Size Modifier"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Room Size Modifier/HBoxContainer"]
+layout_mode = 2
+text = "Vertical"
+
+[node name="VerticalSliderEdit" type="HSlider" parent="Room Size Modifier/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+max_value = 10.0
+tick_count = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Room Size Modifier"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Room Size Modifier/HBoxContainer2"]
+layout_mode = 2
+text = "Horizontal"
+
+[node name="HorizontalSliderEdit" type="HSlider" parent="Room Size Modifier/HBoxContainer2"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+max_value = 10.0
+tick_count = 10

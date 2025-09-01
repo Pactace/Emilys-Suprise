@@ -49,7 +49,6 @@ func _process(delta: float) -> void:
 	position = position.lerp(target_pos, delta * LERP_SPEED)
 	rotation.y = lerp_angle(rotation.y, target_rot_y, delta * LERP_SPEED)
 
-
 func snap_left():
 	snap_index = (snap_index + 1) % CAMERA_SNAP_COUNT
 	_apply_snap()
@@ -71,7 +70,7 @@ func _apply_snap():
 	target_rot_y = snap_positions[snap_index]["rot"]
 
 
-func _on_room_edit_wall_tab(enabled: bool) -> void:
+func wall_update(enabled: bool) -> void:
 	wall_view = enabled
 	if wall_view:
 		target_pos = WALL_VIEW_POS

@@ -1,9 +1,14 @@
 extends Marker2D
 @export var SPEED = 7.0
-var can_move = false
+
+func enabled():
+	visible = true
+
+func disabled():
+	visible = false
 
 func _physics_process(delta: float) -> void:
-	if can_move:
+	if visible:
 		var input_dir := Input.get_vector("Left", "Right", "Up", "Down")
 		if input_dir != Vector2.ZERO:
 			var move = input_dir * SPEED * 100 * delta
