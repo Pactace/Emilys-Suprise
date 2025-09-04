@@ -18,7 +18,7 @@ script = ExtResource("1_phqny")
 [node name="Floor Nodes" type="Node3D" parent="."]
 
 [node name="Back Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(-16, 0, 0, 0, 8, -8.74228e-08, 0, 6.99382e-07, 1, 0, 4, -8)
+transform = Transform3D(-16, 0, 0, 0, 8, -1.50996e-07, 0, 1.20797e-06, 1, 0, 4, -8)
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
 
@@ -54,7 +54,7 @@ collision_mask = 2
 shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Front Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 6.99382e-07, -1.50996e-07, -1.39876e-06, 8, 0, -2.41593e-06, -1.05604e-13, -1, 0, 4, 8)
+transform = Transform3D(16, 1.20797e-06, -1.50996e-07, -2.41593e-06, 8, -4.75477e-20, -2.41593e-06, -1.82398e-13, -1, 0, 4, 8)
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
 

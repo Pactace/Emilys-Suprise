@@ -30,11 +30,11 @@ func enabled():
 	
 func disabled():
 	visible = false
-	mouse.disabled()
 	
 	#this might be subject to change based on play testing
 	current_state = EditState.Edit_Objects
 	switch_states()
+	mouse.disabled()
 	
 func _ready() -> void:
 	#global variables should be assigned by the parent.
@@ -76,7 +76,7 @@ func switch_states():
 	room_resize.enabled() if current_state == EditState.Size_Modify else room_resize.disabled()
 	tab_select.enabled() if current_state == EditState.Object_Select else tab_select.disabled()
 	
-	mouse.disabled() if current_state == EditState.Object_Select else mouse.enabled()
+	mouse.enabled() if current_state == EditState.Edit_Objects else mouse.disabled()
 
 #this will tell us if the wall has been changed by the tab_select and we will send it from here to where its needed
 signal is_wall_change(state: bool)
