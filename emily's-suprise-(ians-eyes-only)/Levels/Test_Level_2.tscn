@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwpmaxxdv730r"]
+[gd_scene load_steps=10 format=3 uid="uid://dwpmaxxdv730r"]
 
-[ext_resource type="PackedScene" uid="uid://o63r3anii4c7" path="res://Levels/Components/Door.tscn" id="1_va61b"]
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_va61b"]
 [ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="2_gx12d"]
 [ext_resource type="Script" path="res://Levels/camera_controller.gd" id="3_2b52x"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
@@ -18,15 +18,6 @@ sky = SubResource("Sky_va61b")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_u46fl"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_a4bbc"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_1w7ek"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_1w7ek"]
-size = Vector3(2, 0.001, 2)
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lujw4"]
@@ -40,71 +31,7 @@ environment = SubResource("Environment_a4bbc")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Room" type="Node3D" parent="."]
-
-[node name="Wall0" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(16, 0, 0, 0, 8, 0, 0, 0, 1, 0, 4, -8)
-mesh = SubResource("QuadMesh_u46fl")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall0"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall0/StaticBody3D"]
-shape = SubResource("BoxShape3D_a4bbc")
-
-[node name="Wall1" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(1.90798e-07, 0, -1, 0, 8, 0, 16, 0, 1.19249e-08, 8, 4, 0)
-mesh = SubResource("QuadMesh_u46fl")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall1"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall1/StaticBody3D"]
-shape = SubResource("BoxShape3D_a4bbc")
-
-[node name="Wall2" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(-6.99382e-07, 0, 1, 0, 8, 0, -16, 0, -4.37114e-08, -8, 4, 0)
-mesh = SubResource("QuadMesh_u46fl")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall2"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall2/StaticBody3D"]
-shape = SubResource("BoxShape3D_a4bbc")
-
-[node name="Wall3" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(-16, 0, -1.50996e-07, 0, 8, 0, 2.41593e-06, 0, -1, 0, 4, 8)
-mesh = SubResource("QuadMesh_u46fl")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Room/Wall3"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Wall3/StaticBody3D"]
-shape = SubResource("BoxShape3D_a4bbc")
-
-[node name="Floor" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
-mesh = SubResource("PlaneMesh_1w7ek")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Room/Floor"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Floor/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0246024, 0)
-shape = SubResource("BoxShape3D_1w7ek")
-
-[node name="Ceiling" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(8, 0, 0, 0, -1, 6.99382e-07, 0, -8.74228e-08, -8, 0, 8, 0)
-mesh = SubResource("PlaneMesh_1w7ek")
-
-[node name="Door" parent="Room" instance=ExtResource("1_va61b")]
+[node name="Room" parent="." instance=ExtResource("1_va61b")]
 
 [node name="Emily" type="CharacterBody3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
@@ -124,4 +51,6 @@ transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 
 visible = false
 script = ExtResource("3_2b52x")
 
-[node name="RoomEdit" parent="." instance=ExtResource("4_axehl")]
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("4_axehl")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")

@@ -36,6 +36,7 @@ offset_right = 0.0
 offset_bottom = 85.0
 
 [node name="Mouse" type="Marker2D" parent="."]
+visible = false
 position = Vector2(148, 69)
 script = ExtResource("3_4h6r5")
 

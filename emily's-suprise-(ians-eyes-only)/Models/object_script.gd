@@ -13,6 +13,7 @@ var is_on_wall = false
 var is_horizontal = false
 var camera = null
 var previous_cam_z = Vector3(0, 0, 1)
+var overlapping = false
 
 @export_enum("Normal", "Table", "Placeable on Table") var object_type: int
 
@@ -69,4 +70,3 @@ func wall_move(forward: bool, horizontal: bool):
 		else:
 			var position_offset = -mesh.scale.z
 			position = collision_point + normal * position_offset
-		

@@ -88,19 +88,19 @@ func _unhandled_input(event: InputEvent) -> void:
 	var row_count = grid.size()
 	var moved = false
 
-	if event.is_action_pressed("ui_up"):
+	if event.is_action_pressed("Up"):
 		selected_row = max(0, selected_row - 1)
 		moved = true
 
-	elif event.is_action_pressed("ui_down"):
+	elif event.is_action_pressed("Down"):
 		selected_row = min(row_count - 1, selected_row + 1)
 		moved = true
 
-	elif event.is_action_pressed("ui_left"):
+	elif event.is_action_pressed("Left"):
 		selected_col = max(0, selected_col - 1)
 		moved = true
 
-	elif event.is_action_pressed("ui_right"):
+	elif event.is_action_pressed("Right"):
 		selected_col = min(grid[selected_row].size() - 1, selected_col + 1)
 		moved = true
 	

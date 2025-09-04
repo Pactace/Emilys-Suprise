@@ -68,7 +68,13 @@ func on_vertical_change(size: int) -> void:
 
 func add_object(instance: Node, is_wall: bool) -> void:
 	if not is_wall:
-		wall_nodes.add_child(instance)
+		floor_nodes.add_child(instance)
+		#we have to wait just a second until the instance can be fully loaded.
+		await get_tree().create_timer(0.02).timeout
+		print(instance.check_placement())
+
+func add_object_in_empty_space():
+	pass
 
 # --- Make sure editor-set values apply at runtime ---
 func _ready() -> void:
