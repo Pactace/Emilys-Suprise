@@ -29,6 +29,7 @@ func enabled():
 func disabled():
 	visible = false
 	edit_ray = null
+	is_wall = false
 
 func _process(delta: float) -> void:
 	if visible:
@@ -54,7 +55,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				selected_object = null
 				possible_selected_object = null
 			#if thats not the case an instead there is a possible_selection we are hovering over we are going to select it
-			elif possible_selected_object:
+			elif possible_selected_object && possible_selected_object.is_on_wall == is_wall:
 				selected_object = possible_selected_object
 				
 
@@ -118,4 +119,3 @@ func finalize_edit_object():
 #here we are just getting the wall state from the parent
 func _on_ui_overlay_is_wall_change(state: bool) -> void:
 	is_wall = state
-	print(is_wall)

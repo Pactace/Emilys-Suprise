@@ -36,6 +36,10 @@ func disabled():
 	switch_states()
 	mouse.disabled()
 	
+	#the wall stuff
+	camera.wall_update(false)
+	_on_tab_select_is_wall_change(false)
+	
 func _ready() -> void:
 	#global variables should be assigned by the parent.
 	edit_object.mouse = mouse

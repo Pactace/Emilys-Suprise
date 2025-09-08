@@ -27,3 +27,4 @@ tab_name = "Wall Objects"
 metadata/_tab_index = 1
 
 [connection signal="is_wall_change" from="." to="ObjectSelect" method="_on_tab_container_is_wall_change"]
+[connection signal="is_wall_change" from="." to="ObjectSelect2" method="_on_tab_container_is_wall_change"]

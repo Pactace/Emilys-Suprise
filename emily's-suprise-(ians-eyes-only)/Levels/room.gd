@@ -4,6 +4,7 @@ extends Node3D
 @export var horizontal_size := 0 : set = set_horizontal_size
 @export var vertical_size := 0 : set = set_vertical_size
 @export var editable: bool = true
+@export var camera: Camera3D
 
 @onready var back_wall: Node3D = $"Back Wall"
 @onready var front_wall: Node3D = $"Front Wall"
@@ -69,6 +70,8 @@ func on_vertical_change(size: int) -> void:
 func add_object(instance: Node, is_wall: bool) -> void:
 	if not is_wall:
 		add_object_on_ground(instance)
+	else:
+		add_object_on_wall(instance)
 
 func add_object_on_ground(instance: Node3D):
 	instance.visible = false
@@ -109,6 +112,72 @@ func add_object_on_ground(instance: Node3D):
 	#finally we place the object.
 	instance.placed()
 	instance.visible = true
+
+#this is a very mathy function tbh
+func add_object_on_wall(instance: Node3D):
+	var from: Vector3 = camera.global_position
+	var to: Vector3 = from + -camera.global_transform.basis.z * 100.0
+
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(from, to)
+	query.collision_mask = 2
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		wall_nodes.add_child(instance)
+		instance.is_on_wall = true
+		if round(abs(result.normal.x)) == 1:
+			instance.is_horizontal = true
+		
+		var basis = Basis.IDENTITY
+		basis.z = result.normal
+		basis.y = Vector3(0,1,0)
+		basis.x = basis.y.cross(basis.z) 
+		instance.basis = basis
+		
+		var wall = result.collider.get_parent()
+		instance.transform.origin = Vector3(result.position.x, wall.position.y, result.position.z)
+		await get_tree().create_timer(0.02).timeout
+
+		#these are the directions its going to be left and right around the main guy
+		var directions = [
+			Vector3(1, 0, 1),   # East
+			Vector3(-1, 0, -1),  # West
+		]
+		
+		#depending which wall the object is on we are going to modify these direction vectors
+		var horizontal_vector = Vector3(0,1,1)
+		var vertical_vector = Vector3(1,1,0)
+		
+		#if it collides with something we are going go around the collision
+		var colliding_area = instance.area.get_overlapping_areas().front()
+		print(colliding_area)
+		if colliding_area:
+			var colliding_object = colliding_area.get_parent()
+			for direction in directions:
+				#We are going to reset it to the colliding objects position so the reallocation math is easier
+				if instance.is_horizontal == true:
+					instance.position.z = colliding_object.position.z
+				else:
+					instance.position.x = colliding_object.position.x
+				
+				#this is to decide which direction its going to go depending on the wall
+				var direction_vector_turnary = (vertical_vector if !instance.is_horizontal else horizontal_vector * 1.4)
+				#Relocation math
+				instance.position += (colliding_object.scale * direction * direction_vector_turnary
+				 + instance.scale * direction * direction_vector_turnary)
+				#got to wait a second before checking placement
+				await get_tree().create_timer(0.02).timeout
+				if instance.check_placement():
+					print("we chillin")
+					break
+		#temporary fix,
+		if instance.check_placement() == false:
+			print("Too many objects")
+			instance.queue_free()
+		#finally we place the object.
+		instance.placed()
+		instance.visible = true
 
 # --- Make sure editor-set values apply at runtime ---
 func _ready() -> void:

@@ -1,6 +1,5 @@
 extends Marker2D
-@export var SPEED = 300.0  # pixels per second
-var active := false
+@export var SPEED = 300.0 
 
 func enabled():
 	visible = true
@@ -9,7 +8,6 @@ func disabled():
 	visible = false
 
 func _process(delta: float) -> void:
-	print(visible)
 	if visible:
 		var input_dir := Input.get_vector("Left", "Right", "Up", "Down")
 		if input_dir != Vector2.ZERO:
