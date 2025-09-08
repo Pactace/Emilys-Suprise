@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="MasterInventory" load_steps=5 format=3 uid="uid://s3stjc66ixxb"]
+
+[ext_resource type="PackedScene" uid="uid://cb80x53jd37mj" path="res://Models/Large Object.tscn" id="1_a61ld"]
+[ext_resource type="Script" path="res://Inventories/MasterInventoryScript.gd" id="1_v54bo"]
+[ext_resource type="PackedScene" uid="uid://bndjddtlvjlra" path="res://Models/Medium Object.tscn" id="2_ry73k"]
+[ext_resource type="PackedScene" uid="uid://d3cln806dnetv" path="res://Models/Small Object.tscn" id="3_of0jc"]
+
+[resource]
+script = ExtResource("1_v54bo")
+master_inventory = {
+"Alarm Clock Demon": ExtResource("2_ry73k"),
+"Angry Lamp": ExtResource("3_of0jc"),
+"Banana Throne": ExtResource("1_a61ld"),
+"Bucket of Secrets": ExtResource("3_of0jc"),
+"Cactus Piano": ExtResource("2_ry73k"),
+"Cat-Shaped Toaster": ExtResource("3_of0jc"),
+"Ceaselessly Clicking Pen": ExtResource("1_a61ld"),
+"Ceiling Fish": ExtResource("2_ry73k"),
+"Chair That Screams": ExtResource("2_ry73k"),
+"Chair of Infinite Regret": ExtResource("3_of0jc"),
+"Chair of Mild Annoyance": ExtResource("3_of0jc"),
+"Chair of Wobbling Terror": ExtResource("3_of0jc"),
+"Desk Goblin": ExtResource("3_of0jc"),
+"Desk That Lies": ExtResource("2_ry73k"),
+"Desk of Whispers": ExtResource("2_ry73k"),
+"Drawer That Hums": ExtResource("2_ry73k"),
+"Enchanted Mop": ExtResource("1_a61ld"),
+"Fridge of Eternal Silence": ExtResource("2_ry73k"),
+"Ghostly Microwave": ExtResource("3_of0jc"),
+"Glorious Soup Can": ExtResource("1_a61ld"),
+"Half-Eaten Statue": ExtResource("3_of0jc"),
+"Keyboard Gremlin": ExtResource("3_of0jc"),
+"Keyboard of Doom": ExtResource("1_a61ld"),
+"Lamp That Judges You": ExtResource("1_a61ld"),
+"Lonely Drawer": ExtResource("3_of0jc"),
+"Melancholy Bookshelf": ExtResource("1_a61ld"),
+"Opera-Singing Shoe Rack": ExtResource("1_a61ld"),
+"Overdramatic Curtain": ExtResource("1_a61ld"),
+"Perpetual Sofa": ExtResource("1_a61ld"),
+"Pillow of Questionable Comfort": ExtResource("2_ry73k"),
+"Portal Spoon": ExtResource("2_ry73k"),
+"Quantum Pillow": ExtResource("2_ry73k"),
+"Rubber Duck Oracle": ExtResource("3_of0jc"),
+"Shrieking Vase": ExtResource("3_of0jc"),
+"Sofa That Knows Too Much": ExtResource("1_a61ld"),
+"Sofa of Eternal Itchiness": ExtResource("3_of0jc"),
+"Spicy Umbrella": ExtResource("2_ry73k"),
+"Suspicious Blender": ExtResource("1_a61ld"),
+"Suspicious Carpet": ExtResource("1_a61ld"),
+"Suspicious Hamster Cage": ExtResource("2_ry73k"),
+"Table of Suspense": ExtResource("1_a61ld"),
+"Table of Unending Crumbs": ExtResource("2_ry73k"),
+"Teapot That Screams at Night": ExtResource("3_of0jc"),
+"Toaster of Destiny": ExtResource("1_a61ld"),
+"Tragic Broom": ExtResource("1_a61ld"),
+"Unblinking Painting": ExtResource("1_a61ld"),
+"Untrustworthy Mug": ExtResource("2_ry73k"),
+"Vacuum That Ponders": ExtResource("3_of0jc"),
+"Wall Clock of Dread": ExtResource("2_ry73k"),
+"Window of Infinite Drafts": ExtResource("2_ry73k")
+}

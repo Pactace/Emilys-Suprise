@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://chi74ew4vmi1s"]
+
+[ext_resource type="Script" path="res://Inventories/package.gd" id="1_l8sp0"]
+[ext_resource type="Resource" uid="uid://cfd7q6huh6g52" path="res://Inventories/FloorInventory.tres" id="2_hjnxw"]
+[ext_resource type="Resource" uid="uid://s3stjc66ixxb" path="res://Inventories/MasterInventory.tres" id="3_6u3od"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vpwgx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjnxw"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l8sp0"]
+size = Vector3(2, 2, 2)
+
+[node name="Package" type="Node3D"]
+script = ExtResource("1_l8sp0")
+changing_inventory = ExtResource("2_hjnxw")
+new_items = ExtResource("3_6u3od")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.651759, 0)
+mesh = SubResource("BoxMesh_vpwgx")
+surface_material_override/0 = SubResource("StandardMaterial3D_hjnxw")
+
+[node name="CheckOpen" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781465, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CheckOpen"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475242, 0)
+shape = SubResource("BoxShape3D_l8sp0")
+
+[connection signal="body_entered" from="CheckOpen" to="." method="_on_check_open_body_entered"]
+[connection signal="body_exited" from="CheckOpen" to="." method="_on_check_open_body_exited"]

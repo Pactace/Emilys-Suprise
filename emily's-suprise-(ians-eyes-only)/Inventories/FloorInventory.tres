@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="FloorInventory" load_steps=2 format=3 uid="uid://cfd7q6huh6g52"]
+
+[ext_resource type="Script" path="res://Inventories/FloorInventory.gd" id="1_dpl6x"]
+
+[resource]
+script = ExtResource("1_dpl6x")
+objects = {}

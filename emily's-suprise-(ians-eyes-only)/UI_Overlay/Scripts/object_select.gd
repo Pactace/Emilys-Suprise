@@ -2,71 +2,22 @@ extends GridContainer
 
 @export var tab_name: String = ""
 @export var nav_delay: float = 0.2  # seconds between moves
+@export var inventory: Resource   # assign .tres in Inspector
 var is_wall: bool = false
 
 var selected_object: Control = null
 var selected_row: int = 0
 var selected_col: int = 0
 var can_navigate: bool = true
-
-# Example dictionary of objects (could also be preloaded PackedScenes)
-var object_dict := {
-	"Banana Throne": preload("res://Models/Large Object.tscn"),
-	"Quantum Pillow": preload("res://Models/Medium Object.tscn"),
-	"Chair of Infinite Regret": preload("res://Models/Small Object.tscn"),
-	"Glorious Soup Can": preload("res://Models/Large Object.tscn"),
-	"Ceiling Fish": preload("res://Models/Medium Object.tscn"),
-	"Rubber Duck Oracle": preload("res://Models/Small Object.tscn"),
-	"Toaster of Destiny": preload("res://Models/Large Object.tscn"),
-	"Desk of Whispers": preload("res://Models/Medium Object.tscn"),
-	"Angry Lamp": preload("res://Models/Small Object.tscn"),
-	"Suspicious Carpet": preload("res://Models/Large Object.tscn"),
-	"Cactus Piano": preload("res://Models/Medium Object.tscn"),
-	"Ghostly Microwave": preload("res://Models/Small Object.tscn"),
-	"Perpetual Sofa": preload("res://Models/Large Object.tscn"),
-	"Untrustworthy Mug": preload("res://Models/Medium Object.tscn"),
-	"Bucket of Secrets": preload("res://Models/Small Object.tscn"),
-	"Enchanted Mop": preload("res://Models/Large Object.tscn"),
-	"Portal Spoon": preload("res://Models/Medium Object.tscn"),
-	"Desk Goblin": preload("res://Models/Small Object.tscn"),
-	"Melancholy Bookshelf": preload("res://Models/Large Object.tscn"),
-	"Chair That Screams": preload("res://Models/Medium Object.tscn"),
-	"Half-Eaten Statue": preload("res://Models/Small Object.tscn"),
-	"Keyboard of Doom": preload("res://Models/Large Object.tscn"),
-	"Spicy Umbrella": preload("res://Models/Medium Object.tscn"),
-	"Lonely Drawer": preload("res://Models/Small Object.tscn"),
-	"Suspicious Blender": preload("res://Models/Large Object.tscn"),
-	"Table of Unending Crumbs": preload("res://Models/Medium Object.tscn"),
-	"Chair of Mild Annoyance": preload("res://Models/Small Object.tscn"),
-	"Lamp That Judges You": preload("res://Models/Large Object.tscn"),
-	"Fridge of Eternal Silence": preload("res://Models/Medium Object.tscn"),
-	"Cat-Shaped Toaster": preload("res://Models/Small Object.tscn"),
-	"Opera-Singing Shoe Rack": preload("res://Models/Large Object.tscn"),
-	"Drawer That Hums": preload("res://Models/Medium Object.tscn"),
-	"Sofa of Eternal Itchiness": preload("res://Models/Small Object.tscn"),
-	"Ceaselessly Clicking Pen": preload("res://Models/Large Object.tscn"),
-	"Window of Infinite Drafts": preload("res://Models/Medium Object.tscn"),
-	"Shrieking Vase": preload("res://Models/Small Object.tscn"),
-	"Table of Suspense": preload("res://Models/Large Object.tscn"),
-	"Alarm Clock Demon": preload("res://Models/Medium Object.tscn"),
-	"Vacuum That Ponders": preload("res://Models/Small Object.tscn"),
-	"Overdramatic Curtain": preload("res://Models/Large Object.tscn"),
-	"Desk That Lies": preload("res://Models/Medium Object.tscn"),
-	"Keyboard Gremlin": preload("res://Models/Small Object.tscn"),
-	"Tragic Broom": preload("res://Models/Large Object.tscn"),
-	"Suspicious Hamster Cage": preload("res://Models/Medium Object.tscn"),
-	"Chair of Wobbling Terror": preload("res://Models/Small Object.tscn"),
-	"Sofa That Knows Too Much": preload("res://Models/Large Object.tscn"),
-	"Wall Clock of Dread": preload("res://Models/Medium Object.tscn"),
-	"Teapot That Screams at Night": preload("res://Models/Small Object.tscn"),
-	"Unblinking Painting": preload("res://Models/Large Object.tscn"),
-	"Pillow of Questionable Comfort": preload("res://Models/Medium Object.tscn"),
-}
-
+var object_dict: Dictionary = {}   # local copy of the inventory
 
 func _ready() -> void:
 	name = tab_name
-	load_objects(object_dict)
+	
+	# Load from the resource
+	if inventory:
+		object_dict = inventory.objects
+		load_objects(object_dict)
 
 	# Initialize selection if we have children
 	var grid = get_children_grid()
@@ -165,6 +116,13 @@ func load_objects(dict: Dictionary) -> void:
 		
 		add_child(new_item)
 
+
 #here we are changing this is_wall state
 func _on_tab_container_is_wall_change(state: bool) -> void:
 	is_wall = state
+
+
+func _on_visibility_changed() -> void:
+	if inventory:
+		object_dict = inventory.objects
+		load_objects(object_dict)
