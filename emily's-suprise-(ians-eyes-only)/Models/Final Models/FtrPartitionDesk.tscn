@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8nqbh8yvw0n1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gen1h"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j7lv3"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c5pum"]
+resource_name = "base_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_gen1h"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_j7lv3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16oyn"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ax00g"]
+_surfaces = [{
+"aabb": AABB(-0.0277179, 0.0899339, -0.0460334, 0.0554357, 0.0554357, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "mReFabric",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(145, 16, 227, 188, 196, 219, 20, 62, 127, 141, 60, 189, 145, 16, 227, 60, 63, 47, 184, 61, 127, 141, 60, 189, 145, 16, 227, 188, 63, 47, 184, 61, 127, 141, 60, 189, 145, 16, 227, 60, 196, 219, 20, 62, 127, 141, 60, 189)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m1axr"]
+resource_name = "flyer_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_16oyn"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ax00g")
+
+[node name="FtrPartitionDesk" type="Node3D"]
+
+[node name="base_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_c5pum")
+skeleton = NodePath("")
+
+[node name="flyer_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_m1axr")
+skeleton = NodePath("")

@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwhj58nont48i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx05u"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lp8sl"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sg38h"]
+resource_name = "Board__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_wx05u"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lp8sl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87yj4"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ux4by"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ubb06"]
+resource_name = "back__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_87yj4"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ux4by")
+
+[node name="FtrHangingBoardCeiling" type="Node3D"]
+
+[node name="Board__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_sg38h")
+skeleton = NodePath("")
+
+[node name="back__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ubb06")
+skeleton = NodePath("")

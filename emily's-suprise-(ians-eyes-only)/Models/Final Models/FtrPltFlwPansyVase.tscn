@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://1wvq5uq8mpho"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcya0"]
+resource_name = "mPansyBody"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kxn4w"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mPansyBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vctuc"]
+resource_name = "Leaf39__mPansyBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_qcya0"),
+"name": "mPansyBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kxn4w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5hgu"]
+resource_name = "mPansyVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1g5rc"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mPansyVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_de1c5"]
+resource_name = "PltFlwPansyVase__mPansyVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_o5hgu"),
+"name": "mPansyVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1g5rc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abe74"]
+resource_name = "mPansyFlower"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m0ubp"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mPansyFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3g0ox"]
+resource_name = "pCylinder1__mPansyFlower"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_abe74"),
+"name": "mPansyFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_m0ubp")
+
+[node name="FtrPltFlwPansyVase" type="Node3D"]
+
+[node name="Leaf39__mPansyBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_vctuc")
+skeleton = NodePath("")
+
+[node name="PltFlwPansyVase__mPansyVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_de1c5")
+skeleton = NodePath("")
+
+[node name="pCylinder1__mPansyFlower" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_3g0ox")
+skeleton = NodePath("")

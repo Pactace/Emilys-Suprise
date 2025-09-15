@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://dli1s617pnoiw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfpha"]
+resource_name = "mFlowerBodyTulip"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fsjbx"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mFlowerBodyTulip",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ihhs7"]
+resource_name = "Av8_Leaf_R1__mFlowerBodyTulip"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_mfpha"),
+"name": "mFlowerBodyTulip",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fsjbx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unu85"]
+resource_name = "mFlowerTulip"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kgka2"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mFlowerTulip",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1rhd4"]
+resource_name = "FLW_in_a__mFlowerTulip"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_unu85"),
+"name": "mFlowerTulip",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kgka2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1u7av"]
+resource_name = "mTulipVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dfojq"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mTulipVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qyuqs"]
+resource_name = "PltFlwTulipVase_1__mTulipVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_1u7av"),
+"name": "mTulipVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dfojq")
+
+[node name="FtrPltFlwTulipVase" type="Node3D"]
+
+[node name="Av8_Leaf_R1__mFlowerBodyTulip" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ihhs7")
+skeleton = NodePath("")
+
+[node name="FLW_in_a__mFlowerTulip" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_1rhd4")
+skeleton = NodePath("")
+
+[node name="PltFlwTulipVase_1__mTulipVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_qyuqs")
+skeleton = NodePath("")

@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://byk2nnq10sp50"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrv1e"]
+resource_name = "mCosmosFlower"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u00ji"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mCosmosFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_egvhs"]
+resource_name = "Center__mCosmosFlower"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_qrv1e"),
+"name": "mCosmosFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u00ji")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m866h"]
+resource_name = "mCosmosBody"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ax8p"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mCosmosBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jg4ww"]
+resource_name = "PltFlwCosmos0Test_pCylinder25__mCosmosBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_m866h"),
+"name": "mCosmosBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0ax8p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fwcj"]
+resource_name = "mCosmosVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ibrji"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mCosmosVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2r6do"]
+resource_name = "PltFlwCosmosVase__mCosmosVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_0fwcj"),
+"name": "mCosmosVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ibrji")
+
+[node name="FtrPltFlwCosmosVase" type="Node3D"]
+
+[node name="Center__mCosmosFlower" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_egvhs")
+skeleton = NodePath("")
+
+[node name="PltFlwCosmos0Test_pCylinder25__mCosmosBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_jg4ww")
+skeleton = NodePath("")
+
+[node name="PltFlwCosmosVase__mCosmosVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_2r6do")
+skeleton = NodePath("")

@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqk5ems0mhlxq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wbu4y"]
+resource_name = "mRoseGoldVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qo3eg"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mRoseGoldVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ydjul"]
+resource_name = "PltFlwRoseGoldVase__mRoseGoldVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_wbu4y"),
+"name": "mRoseGoldVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qo3eg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfcfc"]
+resource_name = "mRosePetalGold"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yp8wm"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mRosePetalGold",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ckxoq"]
+resource_name = "RosePetal46__mRosePetalGold"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_mfcfc"),
+"name": "mRosePetalGold",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yp8wm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0v4l"]
+resource_name = "mRoseLeafGold"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vlefr"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mRoseLeafGold",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a6ypn"]
+resource_name = "calyx2__mRoseLeafGold"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_t0v4l"),
+"name": "mRoseLeafGold",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vlefr")
+
+[node name="FtrPltFlwRoseGoldVase" type="Node3D"]
+
+[node name="PltFlwRoseGoldVase__mRoseGoldVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ydjul")
+skeleton = NodePath("")
+
+[node name="RosePetal46__mRosePetalGold" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ckxoq")
+skeleton = NodePath("")
+
+[node name="calyx2__mRoseLeafGold" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_a6ypn")
+skeleton = NodePath("")

@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://55uitfbkygc7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tp5k"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bueyb"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ghvh"]
+resource_name = "Box_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_6tp5k"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bueyb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v36v"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u30pe"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j6hah"]
+resource_name = "PeparBa_low__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_5v36v"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u30pe")
+
+[node name="FtrTissuebox" type="Node3D"]
+
+[node name="Box_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_0ghvh")
+skeleton = NodePath("")
+
+[node name="PeparBa_low__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_j6hah")
+skeleton = NodePath("")

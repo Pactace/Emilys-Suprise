@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2w4tu0xd82kk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7spsj"]
+resource_name = "mAnemoneBody"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_trgdf"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mAnemoneBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vn8v6"]
+resource_name = "Body_1__mAnemoneBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_7spsj"),
+"name": "mAnemoneBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_trgdf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1jwh"]
+resource_name = "mAnemoneVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6mxk7"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mAnemoneVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_08fn6"]
+resource_name = "PltFlwAnemoneVase__mAnemoneVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_s1jwh"),
+"name": "mAnemoneVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6mxk7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ytg7"]
+resource_name = "mAnemoneFlower"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4rbgb"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mAnemoneFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_56u72"]
+resource_name = "PltFlwTestAnemone_pCylinder10__mAnemoneFlower"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_4ytg7"),
+"name": "mAnemoneFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4rbgb")
+
+[node name="FtrPltFlwAnemoneVase" type="Node3D"]
+
+[node name="Body_1__mAnemoneBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_vn8v6")
+skeleton = NodePath("")
+
+[node name="PltFlwAnemoneVase__mAnemoneVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_08fn6")
+skeleton = NodePath("")
+
+[node name="PltFlwTestAnemone_pCylinder10__mAnemoneFlower" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_56u72")
+skeleton = NodePath("")

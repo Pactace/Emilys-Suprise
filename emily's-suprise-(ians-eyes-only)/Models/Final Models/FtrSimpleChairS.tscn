@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://csec2bn155dw3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svkd2"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5coa7"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2uvgg"]
+resource_name = "leg1_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_svkd2"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5coa7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls6k7"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_njrch"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4wcpx"]
+resource_name = "saet_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_ls6k7"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_njrch")
+
+[node name="FtrSimpleChairS" type="Node3D"]
+
+[node name="leg1_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_2uvgg")
+skeleton = NodePath("")
+
+[node name="saet_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_4wcpx")
+skeleton = NodePath("")

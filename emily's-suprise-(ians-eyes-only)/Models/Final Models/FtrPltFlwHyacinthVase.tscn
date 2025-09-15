@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://csljh530rh7ch"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdfnk"]
+resource_name = "mHyacinthLeafGrd"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_20qml"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHyacinthLeafGrd",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b6fcr"]
+resource_name = "Leaf52__mHyacinthLeafGrd"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_jdfnk"),
+"name": "mHyacinthLeafGrd",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_20qml")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6ng2"]
+resource_name = "mHyacinthPetalGrd"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7v0hc"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHyacinthPetalGrd",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_522q3"]
+resource_name = "PetalA2__mHyacinthPetalGrd"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_o6ng2"),
+"name": "mHyacinthPetalGrd",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7v0hc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d633j"]
+resource_name = "mHyacinthVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g2ugc"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHyacinthVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_06exn"]
+resource_name = "PltFlwHyacinthVase__mHyacinthVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_d633j"),
+"name": "mHyacinthVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g2ugc")
+
+[node name="FtrPltFlwHyacinthVase" type="Node3D"]
+
+[node name="Leaf52__mHyacinthLeafGrd" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_b6fcr")
+skeleton = NodePath("")
+
+[node name="PetalA2__mHyacinthPetalGrd" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_522q3")
+skeleton = NodePath("")
+
+[node name="PltFlwHyacinthVase__mHyacinthVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_06exn")
+skeleton = NodePath("")

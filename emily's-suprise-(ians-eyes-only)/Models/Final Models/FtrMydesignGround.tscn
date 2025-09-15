@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://dygxnd4bbhji8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byfg8"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bnmff"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_38jbv"]
+resource_name = "plane__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_byfg8"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bnmff")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seds2"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8wgrp"]
+_surfaces = [{
+"aabb": AABB(-0.05, 0.00205, -0.05, 0.1, 1e-05, 0.1),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "mReFabric",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(205, 204, 76, 189, 75, 89, 6, 59, 205, 204, 76, 61, 205, 204, 76, 61, 75, 89, 6, 59, 207, 204, 76, 189, 205, 204, 76, 61, 75, 89, 6, 59, 205, 204, 76, 61, 205, 204, 76, 189, 75, 89, 6, 59, 205, 204, 76, 189)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j4uot"]
+resource_name = "plane__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_seds2"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8wgrp")
+
+[node name="FtrMydesignGround" type="Node3D"]
+
+[node name="plane__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_38jbv")
+skeleton = NodePath("")
+
+[node name="plane__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_j4uot")
+skeleton = NodePath("")

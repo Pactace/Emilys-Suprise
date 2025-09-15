@@ -1,0 +1,148 @@
+[gd_scene load_steps=13 format=3 uid="uid://bkelorkgs64le"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kscep"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yyicf"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4h6ae"]
+resource_name = "Apple1_low__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_kscep"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yyicf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4gdnn"]
+resource_name = "mGlassR"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_grp6v"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlassR",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kvkk5"]
+resource_name = "GlassIn_low__mGlassR"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_4gdnn"),
+"name": "mGlassR",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_grp6v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8ppg"]
+resource_name = "mGlass"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vx8pb"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3tulo"]
+resource_name = "Glass_low__mGlass"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_l8ppg"),
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vx8pb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdblk"]
+resource_name = "mJelly"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o2vut"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mJelly",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mgn2s"]
+resource_name = "Jelly_low__mJelly"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_jdblk"),
+"name": "mJelly",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o2vut")
+
+[node name="FtrJellyApple" type="Node3D"]
+
+[node name="Apple1_low__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_4h6ae")
+skeleton = NodePath("")
+
+[node name="GlassIn_low__mGlassR" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_kvkk5")
+skeleton = NodePath("")
+
+[node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_3tulo")
+skeleton = NodePath("")
+
+[node name="Jelly_low__mJelly" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_mgn2s")
+skeleton = NodePath("")

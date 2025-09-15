@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4qxx73oejnsn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_na31p"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3qkhx"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fe1ph"]
+resource_name = "iron_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_na31p"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3qkhx")
+
+[node name="FtrIronwoodChairS" type="Node3D"]
+
+[node name="iron_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_fe1ph")
+skeleton = NodePath("")

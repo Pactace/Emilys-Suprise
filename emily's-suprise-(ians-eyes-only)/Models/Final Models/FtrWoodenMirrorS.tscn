@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsq7e5jdmh75a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl831"]
+resource_name = "mMirror"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0o7i2"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mMirror",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h7hvb"]
+resource_name = "Mdl_Mirror__mMirror"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_kl831"),
+"name": "mMirror",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0o7i2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxdl1"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5kjwa"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cb33r"]
+resource_name = "Mdl_back__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_nxdl1"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5kjwa")
+
+[node name="FtrWoodenMirrorS" type="Node3D"]
+
+[node name="Mdl_Mirror__mMirror" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_h7hvb")
+skeleton = NodePath("")
+
+[node name="Mdl_back__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_cb33r")
+skeleton = NodePath("")

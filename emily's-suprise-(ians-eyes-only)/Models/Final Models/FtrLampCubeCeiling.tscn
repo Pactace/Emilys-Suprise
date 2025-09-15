@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0pihh5pl77a2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ys5qd"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cypa3"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aro3p"]
+resource_name = "Cube__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_ys5qd"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cypa3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k632h"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o05eu"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fpqea"]
+resource_name = "pCylinder1__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_k632h"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o05eu")
+
+[node name="FtrLampCubeCeiling" type="Node3D"]
+
+[node name="Cube__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_aro3p")
+skeleton = NodePath("")
+
+[node name="pCylinder1__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_fpqea")
+skeleton = NodePath("")

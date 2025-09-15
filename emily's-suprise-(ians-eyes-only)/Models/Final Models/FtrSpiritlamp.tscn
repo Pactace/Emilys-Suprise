@@ -1,0 +1,148 @@
+[gd_scene load_steps=13 format=3 uid="uid://crtasj6iff314"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvnlw"]
+resource_name = "mGlassBack"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_73f3s"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlassBack",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4x5up"]
+resource_name = "capBack__mGlassBack"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_mvnlw"),
+"name": "mGlassBack",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_73f3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6leql"]
+resource_name = "mGlass"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wcbcn"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1pnf2"]
+resource_name = "capFront__mGlass"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_6leql"),
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wcbcn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jpfd"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xrt6g"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fxa67"]
+resource_name = "cap__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_6jpfd"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xrt6g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yoia3"]
+resource_name = "mLiquid"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dp5ru"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mLiquid",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ic3cd"]
+resource_name = "liquid_bottom__mLiquid"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_yoia3"),
+"name": "mLiquid",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dp5ru")
+
+[node name="FtrSpiritlamp" type="Node3D"]
+
+[node name="capBack__mGlassBack" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_4x5up")
+skeleton = NodePath("")
+
+[node name="capFront__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_1pnf2")
+skeleton = NodePath("")
+
+[node name="cap__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_fxa67")
+skeleton = NodePath("")
+
+[node name="liquid_bottom__mLiquid" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ic3cd")
+skeleton = NodePath("")

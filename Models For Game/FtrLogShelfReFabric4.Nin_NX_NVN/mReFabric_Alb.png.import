@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ercpu3n6hxr0"
+path="res://.godot/imported/mReFabric_Alb.png-24f67d783a4fd58b66f762e5f9c1e13b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Models For Game/FtrLogShelfReFabric4.Nin_NX_NVN/mReFabric_Alb.png"
+dest_files=["res://.godot/imported/mReFabric_Alb.png-24f67d783a4fd58b66f762e5f9c1e13b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

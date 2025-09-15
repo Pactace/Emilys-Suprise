@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://beyfkb4wpxktb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfqeq"]
+resource_name = "mFlowerBodyYuri"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vg5aa"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mFlowerBodyYuri",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ivnwc"]
+resource_name = "Leaf01__mFlowerBodyYuri"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_tfqeq"),
+"name": "mFlowerBodyYuri",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vg5aa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3lp8"]
+resource_name = "mYuriVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x4fgb"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mYuriVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wg7hy"]
+resource_name = "PltFlwYuriVase__mYuriVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_j3lp8"),
+"name": "mYuriVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_x4fgb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqvvr"]
+resource_name = "mFlowerYuri"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nbwkl"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mFlowerYuri",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mps8u"]
+resource_name = "Shibe10__mFlowerYuri"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_rqvvr"),
+"name": "mFlowerYuri",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nbwkl")
+
+[node name="FtrPltFlwYuriVase" type="Node3D"]
+
+[node name="Leaf01__mFlowerBodyYuri" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ivnwc")
+skeleton = NodePath("")
+
+[node name="PltFlwYuriVase__mYuriVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_wg7hy")
+skeleton = NodePath("")
+
+[node name="Shibe10__mFlowerYuri" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_mps8u")
+skeleton = NodePath("")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnjpq0rto1ha8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8f4w"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3xp2a"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ydbra"]
+resource_name = "Cube__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_d8f4w"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3xp2a")
+
+[node name="FtrLampCube" type="Node3D"]
+
+[node name="Cube__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ydbra")
+skeleton = NodePath("")

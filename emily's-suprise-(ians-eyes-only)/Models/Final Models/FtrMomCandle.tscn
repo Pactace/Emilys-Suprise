@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://sfbee8q2c5tu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvth8"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5kjvj"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t6jxw"]
+resource_name = "Candle01__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_xvth8"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5kjvj")
+
+[node name="FtrMomCandle" type="Node3D"]
+
+[node name="Candle01__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_t6jxw")
+skeleton = NodePath("")

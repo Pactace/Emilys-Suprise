@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6y3w7yofcv2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cglir"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8cmua"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_30h6b"]
+resource_name = "FtrMydesignEasel__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_cglir"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8cmua")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_havyf"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_77y0m"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8ld15"]
+resource_name = "FtrMydesignEasel__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_havyf"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_77y0m")
+
+[node name="FtrMydesignEasel" type="Node3D"]
+
+[node name="FtrMydesignEasel__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_30h6b")
+skeleton = NodePath("")
+
+[node name="FtrMydesignEasel__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_8ld15")
+skeleton = NodePath("")

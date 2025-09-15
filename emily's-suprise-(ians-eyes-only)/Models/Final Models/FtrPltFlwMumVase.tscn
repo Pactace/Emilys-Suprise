@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://bncyghjfj6e42"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41xgk"]
+resource_name = "mMumBody"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iltsf"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mMumBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jfi5l"]
+resource_name = "Mum2A_LeafA__mMumBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_41xgk"),
+"name": "mMumBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iltsf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8de24"]
+resource_name = "mMumFlower"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2e61c"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mMumFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ucwx7"]
+resource_name = "Nairin_Neo__mMumFlower"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_8de24"),
+"name": "mMumFlower",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2e61c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s67ds"]
+resource_name = "mMumVase"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jhvke"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mMumVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t60wd"]
+resource_name = "PltFlwMumVase__mMumVase"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_s67ds"),
+"name": "mMumVase",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jhvke")
+
+[node name="FtrPltFlwMumVase" type="Node3D"]
+
+[node name="Mum2A_LeafA__mMumBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_jfi5l")
+skeleton = NodePath("")
+
+[node name="Nairin_Neo__mMumFlower" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ucwx7")
+skeleton = NodePath("")
+
+[node name="PltFlwMumVase__mMumVase" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_t60wd")
+skeleton = NodePath("")

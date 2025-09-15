@@ -1,0 +1,148 @@
+[gd_scene load_steps=13 format=3 uid="uid://cabd2nc2mdo0h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj6i0"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n6o75"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sdwbw"]
+resource_name = "Cherry_low__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_mj6i0"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n6o75")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m82tb"]
+resource_name = "mGlassR"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nrvyl"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlassR",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rgbqj"]
+resource_name = "GlassIn_low__mGlassR"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_m82tb"),
+"name": "mGlassR",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nrvyl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f77jl"]
+resource_name = "mGlass"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3fat2"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_coc0b"]
+resource_name = "Glass_low__mGlass"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_f77jl"),
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3fat2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dpg8m"]
+resource_name = "mJelly"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oqkmk"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mJelly",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d8idf"]
+resource_name = "Jelly_low__mJelly"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_dpg8m"),
+"name": "mJelly",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_oqkmk")
+
+[node name="FtrJellyCherry" type="Node3D"]
+
+[node name="Cherry_low__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_sdwbw")
+skeleton = NodePath("")
+
+[node name="GlassIn_low__mGlassR" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_rgbqj")
+skeleton = NodePath("")
+
+[node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_coc0b")
+skeleton = NodePath("")
+
+[node name="Jelly_low__mJelly" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_d8idf")
+skeleton = NodePath("")

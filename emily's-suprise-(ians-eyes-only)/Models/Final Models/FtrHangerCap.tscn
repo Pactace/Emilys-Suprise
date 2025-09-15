@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://drpeoxdhio3dk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cath"]
+resource_name = "mHanger"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o1vvu"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8dq5a"]
+resource_name = "Hook__mHanger"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_8cath"),
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o1vvu")
+
+[node name="FtrHangerCap" type="Node3D"]
+
+[node name="Hook__mHanger" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_8dq5a")
+skeleton = NodePath("")

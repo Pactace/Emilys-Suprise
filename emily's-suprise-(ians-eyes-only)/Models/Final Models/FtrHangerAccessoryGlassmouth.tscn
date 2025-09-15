@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8klcknyl5h02"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ildag"]
+resource_name = "mHanger"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jkmip"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5qvvr"]
+resource_name = "Base__mHanger"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_ildag"),
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jkmip")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nmnga"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o1uos"]
+resource_name = "Body__mHanger"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_ildag"),
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nmnga")
+
+[node name="FtrHangerAccessoryGlassmouth" type="Node3D"]
+
+[node name="Base__mHanger" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_5qvvr")
+skeleton = NodePath("")
+
+[node name="Body__mHanger" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_o1uos")
+skeleton = NodePath("")

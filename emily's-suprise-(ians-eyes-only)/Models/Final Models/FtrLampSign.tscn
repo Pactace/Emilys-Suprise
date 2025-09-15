@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdr2e7lsli5f3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7ew2"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1sict"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_41rig"]
+resource_name = "Bis_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_g7ew2"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1sict")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkjlr"]
+resource_name = "mReFabric"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nnam3"]
+_surfaces = [{
+"aabb": AABB(-0.041256, 0.00550056, 0.021576, 0.0825121, 0.0425495, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "mReFabric",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(22, 252, 40, 189, 44, 208, 68, 61, 28, 192, 176, 60, 22, 252, 40, 61, 15, 62, 180, 59, 28, 192, 176, 60, 22, 252, 40, 189, 15, 62, 180, 59, 28, 192, 176, 60, 22, 252, 40, 61, 44, 208, 68, 61, 28, 192, 176, 60)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7kwkd"]
+resource_name = "Fabric_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_qkjlr"),
+"name": "mReFabric",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nnam3")
+
+[node name="FtrLampSign" type="Node3D"]
+
+[node name="Bis_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_41rig")
+skeleton = NodePath("")
+
+[node name="Fabric_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_7kwkd")
+skeleton = NodePath("")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://qs6r5jnyvwyv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpmcc"]
+resource_name = "mHanger"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_warft"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q6l3s"]
+resource_name = "Board__mHanger"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_fpmcc"),
+"name": "mHanger",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_warft")
+
+[node name="FtrHangerAccessoryGlass" type="Node3D"]
+
+[node name="Board__mHanger" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_q6l3s")
+skeleton = NodePath("")

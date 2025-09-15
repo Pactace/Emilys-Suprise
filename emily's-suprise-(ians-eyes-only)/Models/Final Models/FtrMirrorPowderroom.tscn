@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbkd7owht5tqg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tibni"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ru2w1"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ftqep"]
+resource_name = "BackBord_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_tibni"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ru2w1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovw54"]
+resource_name = "mMirror"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ffyey"]
+_surfaces = [{
+"aabb": AABB(-0.01953, 0.0910842, -0.045652, 0.0390635, 0.0879956, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "mMirror",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(97, 253, 159, 188, 172, 96, 55, 62, 148, 253, 58, 189, 200, 4, 160, 60, 84, 138, 186, 61, 148, 253, 58, 189, 97, 253, 159, 188, 88, 138, 186, 61, 148, 253, 58, 189, 200, 4, 160, 60, 172, 96, 55, 62, 148, 253, 58, 189)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vr8xf"]
+resource_name = "Mirror_low__mMirror"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_ovw54"),
+"name": "mMirror",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ffyey")
+
+[node name="FtrMirrorPowderroom" type="Node3D"]
+
+[node name="BackBord_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ftqep")
+skeleton = NodePath("")
+
+[node name="Mirror_low__mMirror" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_vr8xf")
+skeleton = NodePath("")

@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://ckrq51s0jxwq0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwltw"]
+resource_name = "mGlass"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kk606"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uwa5a"]
+resource_name = "Glass00_low__mGlass"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_kwltw"),
+"name": "mGlass",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kk606")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nh5vw"]
+resource_name = "mGlassBack"
+transparency = 4
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5o7ao"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mGlassBack",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pywvj"]
+resource_name = "GlassBack00_low__mGlassBack"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_nh5vw"),
+"name": "mGlassBack",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5o7ao")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4jpkt"]
+resource_name = "mReBody"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pvtyk"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0me68"]
+resource_name = "candle00_low__mReBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_4jpkt"),
+"name": "mReBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pvtyk")
+
+[node name="FtrGlasscandle" type="Node3D"]
+
+[node name="Glass00_low__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_uwa5a")
+skeleton = NodePath("")
+
+[node name="GlassBack00_low__mGlassBack" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_pywvj")
+skeleton = NodePath("")
+
+[node name="candle00_low__mReBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_0me68")
+skeleton = NodePath("")

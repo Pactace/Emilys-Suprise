@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdirw48x02444"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brvx3"]
+resource_name = "mBody"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0v62f"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oclkf"]
+resource_name = "FtrYogamatExercise__mBody"
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 0, 0, 0),
+"format": 34359738368,
+"material": SubResource("StandardMaterial3D_brvx3"),
+"name": "mBody",
+"primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 0,
+"vertex_data": PackedByteArray()
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0v62f")
+
+[node name="FtrYogamatExercise" type="Node3D"]
+
+[node name="FtrYogamatExercise__mBody" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_oclkf")
+skeleton = NodePath("")
