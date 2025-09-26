@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dclumntajw3f3"]
+[gd_scene load_steps=12 format=4 uid="uid://dclumntajw3f3"]
+
+[ext_resource type="Material" uid="uid://dkx1lbdstrg8s" path="res://Models/Final Models/FtrArtBarFBTextures/mBody0.tres" id="1_7mbua"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hhlo8"]
+[ext_resource type="Material" uid="uid://cagpcbuwr1aj" path="res://Models/Final Models/FtrArtBarFBTextures/mFrame0.tres" id="2_hhlo8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfurb"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gqqsw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7mbua"]
+size = Vector3(0.13, 0.092, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhlo8"]
+size = Vector3(0.13, 0.092, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcjll"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q7fen")
 
 [node name="FtrArtBarFB" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_hhlo8")
+area_path = NodePath("BarFB__mBody/@Area3D@68307")
 
 [node name="BarFB__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_xpv3t")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7mbua")
+
+[node name="@StaticBody3D@68305" type="StaticBody3D" parent="BarFB__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68304" type="CollisionShape3D" parent="BarFB__mBody/@StaticBody3D@68305"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_7mbua")
+
+[node name="@Area3D@68307" type="Area3D" parent="BarFB__mBody"]
+
+[node name="@CollisionShape3D@68306" type="CollisionShape3D" parent="BarFB__mBody/@Area3D@68307"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_hhlo8")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_5pko7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_hhlo8")

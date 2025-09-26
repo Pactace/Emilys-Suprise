@@ -1,4 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://d0rslc3hkbiaj"]
+[gd_scene load_steps=19 format=4 uid="uid://d0rslc3hkbiaj"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_r28di"]
+[ext_resource type="Material" uid="uid://qic8ugda47kn" path="res://Models/Final Models/FtrHarvestKitchenEventTextures/mFtrHarvestKitchenEventNuki0.tres" id="1_ti12e"]
+[ext_resource type="Material" uid="uid://b4dv5jvq5ande" path="res://Models/Final Models/FtrHarvestKitchenEventTextures/mFtrHarvestKitchenEventKazari0.tres" id="2_r28di"]
+[ext_resource type="Material" uid="uid://b85g20cxbubsc" path="res://Models/Final Models/FtrHarvestKitchenEventTextures/mFtrHarvestKitchenEvent0.tres" id="3_l1e2s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gauyo"]
 resource_name = "mFtrHarvestKitchenEventNuki"
@@ -31,6 +36,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7oyd6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ti12e"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r28di"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxp6w"]
 resource_name = "mFtrHarvestKitchenEventKazari"
@@ -143,18 +154,36 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jn67j")
 
 [node name="FtrHarvestKitchenEvent" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_r28di")
+area_path = NodePath("EvtobjHarvestGarlandN_LineL12__mFtrHarvestKitchenEventNuki/@Area3D@69931")
 
 [node name="EvtobjHarvestGarlandN_LineL12__mFtrHarvestKitchenEventNuki" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mg626")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ti12e")
+
+[node name="@StaticBody3D@69929" type="StaticBody3D" parent="EvtobjHarvestGarlandN_LineL12__mFtrHarvestKitchenEventNuki"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69928" type="CollisionShape3D" parent="EvtobjHarvestGarlandN_LineL12__mFtrHarvestKitchenEventNuki/@StaticBody3D@69929"]
+shape = SubResource("BoxShape3D_ti12e")
+
+[node name="@Area3D@69931" type="Area3D" parent="EvtobjHarvestGarlandN_LineL12__mFtrHarvestKitchenEventNuki"]
+
+[node name="@CollisionShape3D@69930" type="CollisionShape3D" parent="EvtobjHarvestGarlandN_LineL12__mFtrHarvestKitchenEventNuki/@Area3D@69931"]
+shape = SubResource("BoxShape3D_r28di")
 
 [node name="FtrCuttingboard_board_low__mFtrHarvestKitchenEventKazari" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_tb05s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_r28di")
 
 [node name="FtrKitchenOven_Dial_low1_1__mFtrHarvestKitchenEvent" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lcvg7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_l1e2s")
 
 [node name="Lights__mFtrHarvestKitchenEventLight" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wrwig")

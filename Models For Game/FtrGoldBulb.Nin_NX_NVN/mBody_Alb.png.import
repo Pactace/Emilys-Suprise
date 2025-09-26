@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://61xwjmnkl1kq"
-path="res://.godot/imported/mBody_Alb.png-064d288044daa1cb988ba086a2d92417.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-064d288044daa1cb988ba086a2d92417.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrGoldBulb.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-064d288044daa1cb988ba086a2d92417.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-064d288044daa1cb988ba086a2d92417.s3tc.ctex"]
 
 [params]
 

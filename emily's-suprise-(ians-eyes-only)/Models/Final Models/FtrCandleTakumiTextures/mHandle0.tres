@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://6gj8oabx6iqt"]
+
+[ext_resource type="Texture2D" uid="uid://cqmljp7m401yn" path="res://Models/Final Models/FtrCandleTakumiTextures/mHandle_Alb.png" id="1_vmjgn"]
+[ext_resource type="Texture2D" uid="uid://dq00eewaktwp6" path="res://Models/Final Models/FtrCandleTakumiTextures/mHandle_Nrm.png" id="2_6fkfg"]
+
+[resource]
+resource_name = "mHandle0"
+albedo_texture = ExtResource("1_vmjgn")
+normal_enabled = true
+normal_texture = ExtResource("2_6fkfg")

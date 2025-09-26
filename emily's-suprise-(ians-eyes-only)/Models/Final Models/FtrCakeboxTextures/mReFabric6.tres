@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dwhg58n338aq8"]
+
+[ext_resource type="Texture2D" uid="uid://eso1dxp2wqpp" path="res://Models/Final Models/FtrCakeboxTextures/mReFabric_Alb6.png" id="1_ktvx3"]
+
+[resource]
+resource_name = "mReFabric6"
+albedo_texture = ExtResource("1_ktvx3")
+normal_enabled = true

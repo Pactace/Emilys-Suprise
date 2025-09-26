@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mblvjwuso8id"
-path="res://.godot/imported/mAlpha_Alb.png-932258805c6af94f9d690cb11f12a0ad.ctex"
+path.s3tc="res://.godot/imported/mAlpha_Alb.png-932258805c6af94f9d690cb11f12a0ad.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrExperimentset.Nin_NX_NVN/mAlpha_Alb.png"
-dest_files=["res://.godot/imported/mAlpha_Alb.png-932258805c6af94f9d690cb11f12a0ad.ctex"]
+dest_files=["res://.godot/imported/mAlpha_Alb.png-932258805c6af94f9d690cb11f12a0ad.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dwlt411p3hcl8"]
+
+[ext_resource type="Texture2D" uid="uid://ck13ksrlvvpl6" path="res://Models/Final Models/FtrBottlePlasticTextures/mReBody_Alb1.png" id="1_u41oc"]
+[ext_resource type="Texture2D" uid="uid://brnquyqep61wb" path="res://Models/Final Models/FtrBottlePlasticTextures/mReBody_Nrm1.png" id="2_86y1n"]
+
+[resource]
+resource_name = "mReBody1"
+albedo_texture = ExtResource("1_u41oc")
+normal_enabled = true
+normal_texture = ExtResource("2_86y1n")

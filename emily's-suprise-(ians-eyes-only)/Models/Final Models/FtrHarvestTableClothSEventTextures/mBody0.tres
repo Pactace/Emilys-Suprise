@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://1vbapo3faqm6"]
+
+[ext_resource type="Texture2D" uid="uid://b708gtarjrytd" path="res://Models/Final Models/FtrHarvestTableClothSEventTextures/mBody_Alb.png" id="1_gom41"]
+[ext_resource type="Texture2D" uid="uid://decnnwak7c7ow" path="res://Models/Final Models/FtrHarvestTableClothSEventTextures/mBody_Nrm.png" id="2_squkh"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_gom41")
+normal_enabled = true
+normal_texture = ExtResource("2_squkh")

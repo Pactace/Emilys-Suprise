@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bop6wx21vvepl"
-path="res://.godot/imported/mDokutaafish_Alb.png-f4065e6d749cad69d081ad0c2bfcc666.ctex"
+path.s3tc="res://.godot/imported/mDokutaafish_Alb.png-f4065e6d749cad69d081ad0c2bfcc666.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDokutaafish.Nin_NX_NVN/mDokutaafish_Alb.png"
-dest_files=["res://.godot/imported/mDokutaafish_Alb.png-f4065e6d749cad69d081ad0c2bfcc666.ctex"]
+dest_files=["res://.godot/imported/mDokutaafish_Alb.png-f4065e6d749cad69d081ad0c2bfcc666.s3tc.ctex"]
 
 [params]
 

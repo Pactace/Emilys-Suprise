@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://dygnoki0dpe3"]
+[gd_scene load_steps=8 format=4 uid="uid://dygnoki0dpe3"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_0ntg4"]
+[ext_resource type="Material" uid="uid://b6jov6e1lc35n" path="res://Models/Final Models/FtrGoldGearHorizontalTextures/mBody0.tres" id="1_no20h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8a3t0"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wce4b")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_no20h"]
+size = Vector3(0.182337, 0.4, 0.182337)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ntg4"]
+size = Vector3(0.182337, 0.4, 0.182337)
+
 [node name="FtrGoldGearHorizontal" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_0ntg4")
+area_path = NodePath("Bolt_low__mBody/@Area3D@69827")
 
 [node name="Bolt_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_g7l3m")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_no20h")
+
+[node name="@StaticBody3D@69825" type="StaticBody3D" parent="Bolt_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69824" type="CollisionShape3D" parent="Bolt_low__mBody/@StaticBody3D@69825"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.2, -9.685755e-08)
+shape = SubResource("BoxShape3D_no20h")
+
+[node name="@Area3D@69827" type="Area3D" parent="Bolt_low__mBody"]
+
+[node name="@CollisionShape3D@69826" type="CollisionShape3D" parent="Bolt_low__mBody/@Area3D@69827"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.2, -9.685755e-08)
+shape = SubResource("BoxShape3D_0ntg4")

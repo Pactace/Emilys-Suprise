@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crxqala4neexx"
-path="res://.godot/imported/mBody_Alb.png-62501f6222931d6faa85d9938a0b329c.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-62501f6222931d6faa85d9938a0b329c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPuzzle.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-62501f6222931d6faa85d9938a0b329c.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-62501f6222931d6faa85d9938a0b329c.s3tc.ctex"]
 
 [params]
 

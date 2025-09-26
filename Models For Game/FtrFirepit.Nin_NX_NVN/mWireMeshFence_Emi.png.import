@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdcmoqy24s3g2"
-path="res://.godot/imported/mWireMeshFence_Emi.png-96572fd548ec9cdc39629f54f13c27ef.ctex"
+path.s3tc="res://.godot/imported/mWireMeshFence_Emi.png-96572fd548ec9cdc39629f54f13c27ef.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFirepit.Nin_NX_NVN/mWireMeshFence_Emi.png"
-dest_files=["res://.godot/imported/mWireMeshFence_Emi.png-96572fd548ec9cdc39629f54f13c27ef.ctex"]
+dest_files=["res://.godot/imported/mWireMeshFence_Emi.png-96572fd548ec9cdc39629f54f13c27ef.s3tc.ctex"]
 
 [params]
 

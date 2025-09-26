@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckrq51s0jxwq0"]
+[gd_scene load_steps=14 format=3 uid="uid://ckrq51s0jxwq0"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4vhlg"]
+[ext_resource type="Material" uid="uid://c2nrx74wy86lk" path="res://Models/Final Models/FtrGlasscandleTextures/mReBody0.tres" id="1_5j73u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwltw"]
 resource_name = "mGlass"
@@ -98,7 +101,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pvtyk")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5j73u"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4vhlg"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrGlasscandle" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4vhlg")
+area_path = NodePath("candle00_low__mReBody/@Area3D@69735")
 
 [node name="Glass00_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_uwa5a")
@@ -111,3 +123,16 @@ skeleton = NodePath("")
 [node name="candle00_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0me68")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_5j73u")
+
+[node name="@StaticBody3D@69733" type="StaticBody3D" parent="candle00_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69732" type="CollisionShape3D" parent="candle00_low__mReBody/@StaticBody3D@69733"]
+shape = SubResource("BoxShape3D_5j73u")
+
+[node name="@Area3D@69735" type="Area3D" parent="candle00_low__mReBody"]
+
+[node name="@CollisionShape3D@69734" type="CollisionShape3D" parent="candle00_low__mReBody/@Area3D@69735"]
+shape = SubResource("BoxShape3D_4vhlg")

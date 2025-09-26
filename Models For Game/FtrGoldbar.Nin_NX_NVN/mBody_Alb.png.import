@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyxs5ym7rwwpf"
-path="res://.godot/imported/mBody_Alb.png-398ed1a95e6f0936ef43649e86b6071a.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-398ed1a95e6f0936ef43649e86b6071a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrGoldbar.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-398ed1a95e6f0936ef43649e86b6071a.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-398ed1a95e6f0936ef43649e86b6071a.s3tc.ctex"]
 
 [params]
 

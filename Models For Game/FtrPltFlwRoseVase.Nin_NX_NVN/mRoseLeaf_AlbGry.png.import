@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2buwscjolfeh"
-path="res://.godot/imported/mRoseLeaf_AlbGry.png-73c18280cb719ab7b13f611f252803f2.ctex"
+path.s3tc="res://.godot/imported/mRoseLeaf_AlbGry.png-73c18280cb719ab7b13f611f252803f2.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwRoseVase.Nin_NX_NVN/mRoseLeaf_AlbGry.png"
-dest_files=["res://.godot/imported/mRoseLeaf_AlbGry.png-73c18280cb719ab7b13f611f252803f2.ctex"]
+dest_files=["res://.godot/imported/mRoseLeaf_AlbGry.png-73c18280cb719ab7b13f611f252803f2.s3tc.ctex"]
 
 [params]
 

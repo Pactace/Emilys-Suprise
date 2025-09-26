@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn101in47t6ex"
-path="res://.godot/imported/mBody_Alb.png-e2e41860bcaaabb003dc090f36a3111e.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-e2e41860bcaaabb003dc090f36a3111e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrVesselBread.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-e2e41860bcaaabb003dc090f36a3111e.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-e2e41860bcaaabb003dc090f36a3111e.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://y16k4ig3kb3h"]
+
+[ext_resource type="Texture2D" uid="uid://3kvxe33mgc82" path="res://Models/Final Models/FtrArtVitruvianManTextures/mFrame_Alb.png" id="1_tervy"]
+[ext_resource type="Texture2D" uid="uid://bds0tpkninboa" path="res://Models/Final Models/FtrArtVitruvianManTextures/mFrame_Nrm.png" id="2_rh1m1"]
+
+[resource]
+resource_name = "mFrame0"
+albedo_texture = ExtResource("1_tervy")
+normal_enabled = true
+normal_texture = ExtResource("2_rh1m1")

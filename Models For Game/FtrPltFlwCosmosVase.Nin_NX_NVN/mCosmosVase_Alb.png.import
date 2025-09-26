@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r68dhewjotsw"
-path="res://.godot/imported/mCosmosVase_Alb.png-613fbaeda6bcd333944409b395680dbc.ctex"
+path.s3tc="res://.godot/imported/mCosmosVase_Alb.png-613fbaeda6bcd333944409b395680dbc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwCosmosVase.Nin_NX_NVN/mCosmosVase_Alb.png"
-dest_files=["res://.godot/imported/mCosmosVase_Alb.png-613fbaeda6bcd333944409b395680dbc.ctex"]
+dest_files=["res://.godot/imported/mCosmosVase_Alb.png-613fbaeda6bcd333944409b395680dbc.s3tc.ctex"]
 
 [params]
 

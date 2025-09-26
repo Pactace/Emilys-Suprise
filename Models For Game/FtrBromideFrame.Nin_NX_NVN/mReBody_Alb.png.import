@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk7xga1urcgga"
-path="res://.godot/imported/mReBody_Alb.png-933b579b9762f7cdbae45f8384365033.ctex"
+path.s3tc="res://.godot/imported/mReBody_Alb.png-933b579b9762f7cdbae45f8384365033.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBromideFrame.Nin_NX_NVN/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-933b579b9762f7cdbae45f8384365033.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-933b579b9762f7cdbae45f8384365033.s3tc.ctex"]
 
 [params]
 

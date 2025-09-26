@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dcr3qslj4mqqr"]
+[gd_scene load_steps=12 format=4 uid="uid://dcr3qslj4mqqr"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_f5c6v"]
+[ext_resource type="Material" uid="uid://c30688w0jl2gf" path="res://Models/Final Models/FtrArtSlowerTextures/mFrame0.tres" id="1_pe3tt"]
+[ext_resource type="Material" uid="uid://bvrw0oehurhu7" path="res://Models/Final Models/FtrArtSlowerTextures/mBody0.tres" id="2_f5c6v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8wqp"]
 resource_name = "mFrame"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pcq7r")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pe3tt"]
+size = Vector3(0.0719336, 0.0884004, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f5c6v"]
+size = Vector3(0.0719336, 0.0884004, 1e-05)
+
 [node name="FtrArtSlower" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_f5c6v")
+area_path = NodePath("Slower__mBody/@Area3D@68467")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_yqw1j")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_pe3tt")
 
 [node name="Slower__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1u6jy")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_f5c6v")
+
+[node name="@StaticBody3D@68465" type="StaticBody3D" parent="Slower__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68464" type="CollisionShape3D" parent="Slower__mBody/@StaticBody3D@68465"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_pe3tt")
+
+[node name="@Area3D@68467" type="Area3D" parent="Slower__mBody"]
+
+[node name="@CollisionShape3D@68466" type="CollisionShape3D" parent="Slower__mBody/@Area3D@68467"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_f5c6v")

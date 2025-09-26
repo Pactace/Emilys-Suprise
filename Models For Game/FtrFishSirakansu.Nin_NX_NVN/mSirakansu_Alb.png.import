@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b587qn7c7cmyd"
-path="res://.godot/imported/mSirakansu_Alb.png-4c81b4f06a1ec0e9d8587c85ff4ad8f8.ctex"
+path.s3tc="res://.godot/imported/mSirakansu_Alb.png-4c81b4f06a1ec0e9d8587c85ff4ad8f8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishSirakansu.Nin_NX_NVN/mSirakansu_Alb.png"
-dest_files=["res://.godot/imported/mSirakansu_Alb.png-4c81b4f06a1ec0e9d8587c85ff4ad8f8.ctex"]
+dest_files=["res://.godot/imported/mSirakansu_Alb.png-4c81b4f06a1ec0e9d8587c85ff4ad8f8.s3tc.ctex"]
 
 [params]
 

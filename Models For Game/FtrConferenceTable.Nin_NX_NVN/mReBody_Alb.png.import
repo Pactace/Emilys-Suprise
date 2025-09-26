@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn6f7b2t11uvg"
-path="res://.godot/imported/mReBody_Alb.png-d2d2ff06700d48cee2d042d4ace4465c.ctex"
+path.s3tc="res://.godot/imported/mReBody_Alb.png-d2d2ff06700d48cee2d042d4ace4465c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrConferenceTable.Nin_NX_NVN/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-d2d2ff06700d48cee2d042d4ace4465c.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-d2d2ff06700d48cee2d042d4ace4465c.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://dyjx1v048y6qs"]
+[gd_scene load_steps=15 format=4 uid="uid://dyjx1v048y6qs"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_7hroj"]
+[ext_resource type="Material" uid="uid://oab000ulsoq8" path="res://Models/Final Models/FtrMermaidLampTextures/mBody0.tres" id="1_hme0c"]
+[ext_resource type="Material" uid="uid://bfneyfwya1g53" path="res://Models/Final Models/FtrMermaidLampTextures/mShell0.tres" id="2_7hroj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_328aa"]
 resource_name = "mBody"
@@ -31,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_r0624")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hme0c"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7hroj"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qeti"]
 resource_name = "mLight"
@@ -104,10 +114,26 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3km0y")
 
 [node name="FtrMermaidLamp" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_7hroj")
+area_path = NodePath("pCube5__mBody/@Area3D@70359")
 
 [node name="pCube5__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wttc6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hme0c")
+
+[node name="@StaticBody3D@70357" type="StaticBody3D" parent="pCube5__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70356" type="CollisionShape3D" parent="pCube5__mBody/@StaticBody3D@70357"]
+shape = SubResource("BoxShape3D_hme0c")
+
+[node name="@Area3D@70359" type="Area3D" parent="pCube5__mBody"]
+
+[node name="@CollisionShape3D@70358" type="CollisionShape3D" parent="pCube5__mBody/@Area3D@70359"]
+shape = SubResource("BoxShape3D_7hroj")
 
 [node name="pCube8__mLight" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_a0f32")
@@ -116,3 +142,4 @@ skeleton = NodePath("")
 [node name="pCube8__mShell" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1hnt6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_7hroj")

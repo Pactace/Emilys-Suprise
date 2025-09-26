@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr3qdjr7jt6aq"
-path="res://.godot/imported/mBody_Alb.png-0dfb8037185aadcada8e15acf6c5c70c.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-0dfb8037185aadcada8e15acf6c5c70c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrOfficePapers.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-0dfb8037185aadcada8e15acf6c5c70c.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-0dfb8037185aadcada8e15acf6c5c70c.s3tc.ctex"]
 
 [params]
 

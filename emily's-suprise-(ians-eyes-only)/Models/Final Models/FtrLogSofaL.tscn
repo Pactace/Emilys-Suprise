@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://b2baw7yta6o5j"]
+[gd_scene load_steps=12 format=4 uid="uid://b2baw7yta6o5j"]
+
+[ext_resource type="Material" uid="uid://cfy6l1v0ht213" path="res://Models/Final Models/FtrLogSofaLTextures/mReBody0.tres" id="1_bius3"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wsb8q"]
+[ext_resource type="Material" uid="uid://u6x6280q1b2f" path="res://Models/Final Models/FtrLogSofaLTextures/mReFabric0.tres" id="2_wsb8q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e1f4g"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xe60i")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bius3"]
+size = Vector3(0.198957, 0.0896453, 0.095006)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wsb8q"]
+size = Vector3(0.198957, 0.0896453, 0.095006)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ryvx"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -78,11 +88,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j7vul")
 
 [node name="FtrLogSofaL" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_wsb8q")
+area_path = NodePath("Back__mReBody/@Area3D@70303")
 
 [node name="Back__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_8dt8n")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_bius3")
+
+[node name="@StaticBody3D@70301" type="StaticBody3D" parent="Back__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70300" type="CollisionShape3D" parent="Back__mReBody/@StaticBody3D@70301"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2499433e-05, 0.04482265, -0.00017110258)
+shape = SubResource("BoxShape3D_bius3")
+
+[node name="@Area3D@70303" type="Area3D" parent="Back__mReBody"]
+
+[node name="@CollisionShape3D@70302" type="CollisionShape3D" parent="Back__mReBody/@Area3D@70303"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2499433e-05, 0.04482265, -0.00017110258)
+shape = SubResource("BoxShape3D_wsb8q")
 
 [node name="Front_cushion1__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_b16b6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_wsb8q")

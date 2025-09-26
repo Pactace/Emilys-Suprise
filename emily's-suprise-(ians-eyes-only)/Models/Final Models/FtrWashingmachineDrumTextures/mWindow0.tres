@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://djxytb6dp161t"]
+
+[ext_resource type="Texture2D" uid="uid://c4q25p2o57vsu" path="res://Models/Final Models/FtrWashingmachineDrumTextures/mWindow_Alb.png" id="1_21nrd"]
+[ext_resource type="Texture2D" uid="uid://desp6tn7pyjbg" path="res://Models/Final Models/FtrWashingmachineDrumTextures/mWindow_Nrm.png" id="2_at2bp"]
+
+[resource]
+resource_name = "mWindow0"
+albedo_texture = ExtResource("1_21nrd")
+normal_enabled = true
+normal_texture = ExtResource("2_at2bp")

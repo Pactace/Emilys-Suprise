@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e1ii07hw6yrt"
-path="res://.godot/imported/mBody_Alb.png-a57b1793e24266447d34f50940d7f1ac.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-a57b1793e24266447d34f50940d7f1ac.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMydesignEaselWall.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-a57b1793e24266447d34f50940d7f1ac.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-a57b1793e24266447d34f50940d7f1ac.s3tc.ctex"]
 
 [params]
 

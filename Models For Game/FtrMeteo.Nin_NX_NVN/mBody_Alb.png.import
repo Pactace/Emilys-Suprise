@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e5gprnqvfit7"
-path="res://.godot/imported/mBody_Alb.png-645dbce751a19b87f2ab50057c00bd3a.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-645dbce751a19b87f2ab50057c00bd3a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMeteo.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-645dbce751a19b87f2ab50057c00bd3a.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-645dbce751a19b87f2ab50057c00bd3a.s3tc.ctex"]
 
 [params]
 

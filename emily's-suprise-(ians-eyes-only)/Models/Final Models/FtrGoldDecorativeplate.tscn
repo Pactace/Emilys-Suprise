@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cu0mawwjgy5yr"]
+[gd_scene load_steps=12 format=4 uid="uid://cu0mawwjgy5yr"]
+
+[ext_resource type="Material" uid="uid://cj4e0vgk5brvt" path="res://Models/Final Models/FtrGoldDecorativeplateTextures/mDish0.tres" id="1_hbop1"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hxvse"]
+[ext_resource type="Material" uid="uid://ca86t34ewvsbu" path="res://Models/Final Models/FtrGoldDecorativeplateTextures/mBody0.tres" id="2_hxvse"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4p0t"]
 resource_name = "mDish"
@@ -68,12 +72,35 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bl6x8")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbop1"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxvse"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrGoldDecorativeplate" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_hxvse")
+area_path = NodePath("Stand_low__mBody/@Area3D@69811")
 
 [node name="Dish_low__mDish" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_di82a")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hbop1")
 
 [node name="Stand_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_oi13b")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_hxvse")
+
+[node name="@StaticBody3D@69809" type="StaticBody3D" parent="Stand_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69808" type="CollisionShape3D" parent="Stand_low__mBody/@StaticBody3D@69809"]
+shape = SubResource("BoxShape3D_hbop1")
+
+[node name="@Area3D@69811" type="Area3D" parent="Stand_low__mBody"]
+
+[node name="@CollisionShape3D@69810" type="CollisionShape3D" parent="Stand_low__mBody/@Area3D@69811"]
+shape = SubResource("BoxShape3D_hxvse")

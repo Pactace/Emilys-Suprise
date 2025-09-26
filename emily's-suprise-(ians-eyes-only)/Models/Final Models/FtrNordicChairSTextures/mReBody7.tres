@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b5hqgygj8xv7k"]
+
+[ext_resource type="Texture2D" uid="uid://d4aq7km1ddtfh" path="res://Models/Final Models/FtrNordicChairSTextures/mReBody_Alb7.png" id="1_sdf14"]
+[ext_resource type="Texture2D" uid="uid://bmrjqaad4qdbs" path="res://Models/Final Models/FtrNordicChairSTextures/mReBody_Nrm7.png" id="2_8473r"]
+
+[resource]
+resource_name = "mReBody7"
+albedo_texture = ExtResource("1_sdf14")
+normal_enabled = true
+normal_texture = ExtResource("2_8473r")

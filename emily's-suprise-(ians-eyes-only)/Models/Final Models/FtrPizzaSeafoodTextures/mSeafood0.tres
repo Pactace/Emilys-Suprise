@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bywlftynyg4f2"]
+
+[ext_resource type="Texture2D" uid="uid://b8rnb55iqsy3o" path="res://Models/Final Models/FtrPizzaSeafoodTextures/mSeafood_Alb.png" id="1_7y701"]
+[ext_resource type="Texture2D" uid="uid://cxe2nwa833fpr" path="res://Models/Final Models/FtrPizzaSeafoodTextures/mSeafood_Nrm.png" id="2_vj5db"]
+
+[resource]
+resource_name = "mSeafood0"
+albedo_texture = ExtResource("1_7y701")
+normal_enabled = true
+normal_texture = ExtResource("2_vj5db")

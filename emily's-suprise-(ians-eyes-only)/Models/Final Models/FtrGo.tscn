@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cwmtud6lg5aoi"]
+[gd_scene load_steps=8 format=4 uid="uid://cwmtud6lg5aoi"]
+
+[ext_resource type="Material" uid="uid://ng5j2c5uiw76" path="res://Models/Final Models/FtrGoTextures/mBody0.tres" id="1_1vnb6"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vfs2r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryplu"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y16kc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1vnb6"]
+size = Vector3(0.062846, 0.0633255, 0.0614682)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vfs2r"]
+size = Vector3(0.062846, 0.0633255, 0.0614682)
+
 [node name="FtrGo" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vfs2r")
+area_path = NodePath("GoBoard_low__mBody/@Area3D@69763")
 
 [node name="GoBoard_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_17xbc")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_1vnb6")
+
+[node name="@StaticBody3D@69761" type="StaticBody3D" parent="GoBoard_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69760" type="CollisionShape3D" parent="GoBoard_low__mBody/@StaticBody3D@69761"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0006888993, 0.031915907, 0)
+shape = SubResource("BoxShape3D_1vnb6")
+
+[node name="@Area3D@69763" type="Area3D" parent="GoBoard_low__mBody"]
+
+[node name="@CollisionShape3D@69762" type="CollisionShape3D" parent="GoBoard_low__mBody/@Area3D@69763"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0006888993, 0.031915907, 0)
+shape = SubResource("BoxShape3D_vfs2r")

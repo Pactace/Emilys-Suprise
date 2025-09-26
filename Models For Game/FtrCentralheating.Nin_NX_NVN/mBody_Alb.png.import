@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jcev5404xm27"
-path="res://.godot/imported/mBody_Alb.png-437f500797273a8b43b99c90c2f11c7e.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-437f500797273a8b43b99c90c2f11c7e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCentralheating.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-437f500797273a8b43b99c90c2f11c7e.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-437f500797273a8b43b99c90c2f11c7e.s3tc.ctex"]
 
 [params]
 

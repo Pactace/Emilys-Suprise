@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb1s6y7xfocj2"
-path="res://.godot/imported/mKajiki_Alb.png-28a5ec6fb10245450801cd16cb679210.ctex"
+path.s3tc="res://.godot/imported/mKajiki_Alb.png-28a5ec6fb10245450801cd16cb679210.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKajikiToy.Nin_NX_NVN/mKajiki_Alb.png"
-dest_files=["res://.godot/imported/mKajiki_Alb.png-28a5ec6fb10245450801cd16cb679210.ctex"]
+dest_files=["res://.godot/imported/mKajiki_Alb.png-28a5ec6fb10245450801cd16cb679210.s3tc.ctex"]
 
 [params]
 

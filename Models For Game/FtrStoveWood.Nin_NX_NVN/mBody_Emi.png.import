@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f8lunco4l3p4"
-path="res://.godot/imported/mBody_Emi.png-19bc010157dde5324329a38cdb9194f9.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-19bc010157dde5324329a38cdb9194f9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrStoveWood.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-19bc010157dde5324329a38cdb9194f9.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-19bc010157dde5324329a38cdb9194f9.s3tc.ctex"]
 
 [params]
 

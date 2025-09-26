@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://ckobdeffcmkh5"]
+[gd_scene load_steps=11 format=4 uid="uid://ckobdeffcmkh5"]
+
+[ext_resource type="Material" uid="uid://dlkkfefx4c6ue" path="res://Models/Final Models/FtrClockPendulumWallTextures/mBody0.tres" id="1_ehjqs"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_tc6i4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krheq"]
 resource_name = "mBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hela8")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ehjqs"]
+size = Vector3(0.0572805, 0.0980973, 0.026274)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tc6i4"]
+size = Vector3(0.0572805, 0.0980973, 0.026274)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whyfj"]
 resource_name = "mGlass"
 vertex_color_use_as_albedo = true
@@ -77,10 +86,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t8b7i")
 
 [node name="FtrClockPendulumWall" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_tc6i4")
+area_path = NodePath("Dial_low__mBody/@Area3D@68943")
 
 [node name="Dial_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_sis38")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ehjqs")
+
+[node name="@StaticBody3D@68941" type="StaticBody3D" parent="Dial_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68940" type="CollisionShape3D" parent="Dial_low__mBody/@StaticBody3D@68941"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.029142e-08, -4.8428774e-08, 0.013137)
+shape = SubResource("BoxShape3D_ehjqs")
+
+[node name="@Area3D@68943" type="Area3D" parent="Dial_low__mBody"]
+
+[node name="@CollisionShape3D@68942" type="CollisionShape3D" parent="Dial_low__mBody/@Area3D@68943"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.029142e-08, -4.8428774e-08, 0.013137)
+shape = SubResource("BoxShape3D_tc6i4")
 
 [node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rkksv")

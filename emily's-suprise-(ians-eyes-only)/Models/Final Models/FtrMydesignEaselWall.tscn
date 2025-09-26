@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyv4gddeclqb5"]
+[gd_scene load_steps=12 format=3 uid="uid://cyv4gddeclqb5"]
+
+[ext_resource type="Material" uid="uid://c16mmtf43uduj" path="res://Models/Final Models/FtrMydesignEaselWallTextures/mBody0.tres" id="1_3ofh1"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vtbxx"]
+[ext_resource type="Material" uid="uid://kku22vxr2dih" path="res://Models/Final Models/FtrMydesignEaselWallTextures/mReFabric0.tres" id="2_vtbxx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwst8"]
 resource_name = "mBody"
@@ -31,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f05n1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ofh1"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtbxx"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdtba"]
 resource_name = "mReFabric"
@@ -65,11 +75,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ttxh4")
 
 [node name="FtrMydesignEaselWall" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vtbxx")
+area_path = NodePath("FtrMydesignEaselWall__mBody/@Area3D@70547")
 
 [node name="FtrMydesignEaselWall__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_114v1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_3ofh1")
+
+[node name="@StaticBody3D@70545" type="StaticBody3D" parent="FtrMydesignEaselWall__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70544" type="CollisionShape3D" parent="FtrMydesignEaselWall__mBody/@StaticBody3D@70545"]
+shape = SubResource("BoxShape3D_3ofh1")
+
+[node name="@Area3D@70547" type="Area3D" parent="FtrMydesignEaselWall__mBody"]
+
+[node name="@CollisionShape3D@70546" type="CollisionShape3D" parent="FtrMydesignEaselWall__mBody/@Area3D@70547"]
+shape = SubResource("BoxShape3D_vtbxx")
 
 [node name="FtrMydesignEaselWall__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_s6bit")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_vtbxx")

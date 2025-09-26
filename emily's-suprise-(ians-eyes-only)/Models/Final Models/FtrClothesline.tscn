@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://d1hyirt8d2om8"]
+[gd_scene load_steps=16 format=4 uid="uid://d1hyirt8d2om8"]
+
+[ext_resource type="Material" uid="uid://c4uni7qmfnym5" path="res://Models/Final Models/FtrClotheslineTextures/mBody0.tres" id="1_qdd5s"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_v022m"]
+[ext_resource type="Material" uid="uid://dseun1msqf8ue" path="res://Models/Final Models/FtrClotheslineTextures/mCloth0.tres" id="2_v022m"]
+[ext_resource type="Material" uid="uid://b3ky16ey4py4j" path="res://Models/Final Models/FtrClotheslineTextures/mReFabric0.tres" id="3_01cc4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7os4t"]
 resource_name = "mBody"
@@ -38,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a4lyr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qdd5s"]
+size = Vector3(0.198599, 0.1499, 0.025893)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v022m"]
+size = Vector3(0.198599, 0.1499, 0.025893)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hxkex"]
 resource_name = "mCloth"
@@ -119,15 +130,35 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mseoc")
 
 [node name="FtrClothesline" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_v022m")
+area_path = NodePath("Body_low__mBody/@Area3D@68951")
 
 [node name="Body_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_p8ljb")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_qdd5s")
+
+[node name="@StaticBody3D@68949" type="StaticBody3D" parent="Body_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68948" type="CollisionShape3D" parent="Body_low__mBody/@StaticBody3D@68949"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005599037, 0.07495, 0.0072558103)
+shape = SubResource("BoxShape3D_qdd5s")
+
+[node name="@Area3D@68951" type="Area3D" parent="Body_low__mBody"]
+
+[node name="@CollisionShape3D@68950" type="CollisionShape3D" parent="Body_low__mBody/@Area3D@68951"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005599037, 0.07495, 0.0072558103)
+shape = SubResource("BoxShape3D_v022m")
 
 [node name="Laundry_low__mCloth" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_sx87f")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_v022m")
 
 [node name="Shirt_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7rr7t")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_01cc4")

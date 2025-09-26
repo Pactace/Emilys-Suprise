@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c4ulist30qe3d"]
+
+[ext_resource type="Texture2D" uid="uid://da123k5n5wkf7" path="res://Models/Final Models/FtrObjChairCutTextures/mPipe_Alb.png" id="1_fyb5d"]
+[ext_resource type="Texture2D" uid="uid://x3au2jcv3ee3" path="res://Models/Final Models/FtrObjChairCutTextures/mPipe_Nrm.png" id="2_mv8a5"]
+
+[resource]
+resource_name = "mPipe0"
+albedo_texture = ExtResource("1_fyb5d")
+normal_enabled = true
+normal_texture = ExtResource("2_mv8a5")

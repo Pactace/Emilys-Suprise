@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cy6gyc26qrbxx"]
+[gd_scene load_steps=12 format=4 uid="uid://cy6gyc26qrbxx"]
+
+[ext_resource type="Material" uid="uid://drpypv40d16o1" path="res://Models/Final Models/FtrPlantCacaoTextures/mBody0.tres" id="1_2eh7k"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_jmwr7"]
+[ext_resource type="Material" uid="uid://k4ddbl8jnbe8" path="res://Models/Final Models/FtrPlantCacaoTextures/mPlant0.tres" id="2_jmwr7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocmdr"]
 resource_name = "mBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7hyes")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2eh7k"]
+size = Vector3(0.0601405, 0.222954, 0.0488013)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmwr7"]
+size = Vector3(0.0601405, 0.222954, 0.0488013)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_numd6"]
 resource_name = "mPlant"
 vertex_color_use_as_albedo = true
@@ -75,11 +85,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_74rnt")
 
 [node name="FtrPlantCacao" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_jmwr7")
+area_path = NodePath("HempBag_low__mBody/@Area3D@70731")
 
 [node name="HempBag_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_fells")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_2eh7k")
+
+[node name="@StaticBody3D@70729" type="StaticBody3D" parent="HempBag_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70728" type="CollisionShape3D" parent="HempBag_low__mBody/@StaticBody3D@70729"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012504477, 0.11098595, 8.635037e-05)
+shape = SubResource("BoxShape3D_2eh7k")
+
+[node name="@Area3D@70731" type="Area3D" parent="HempBag_low__mBody"]
+
+[node name="@CollisionShape3D@70730" type="CollisionShape3D" parent="HempBag_low__mBody/@Area3D@70731"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012504477, 0.11098595, 8.635037e-05)
+shape = SubResource("BoxShape3D_jmwr7")
 
 [node name="Leaf00_low__mPlant" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_w1nfo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_jmwr7")

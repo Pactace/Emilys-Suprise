@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://74larlgphosk"]
+
+[ext_resource type="Texture2D" uid="uid://bmwipemjnhjjh" path="res://Models/Final Models/FtrMermaidChairSTextures/mBody_Alb.png" id="1_t7dtu"]
+[ext_resource type="Texture2D" uid="uid://bmnllt6npcsux" path="res://Models/Final Models/FtrMermaidChairSTextures/mBody_Nrm.png" id="2_0kaqa"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_t7dtu")
+normal_enabled = true
+normal_texture = ExtResource("2_0kaqa")

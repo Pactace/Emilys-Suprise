@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqbjo8ag6b6bk"
-path="res://.godot/imported/mTyouzame_Alb.png-d9ae3eff7fd8e9e04138ade528555150.ctex"
+path.s3tc="res://.godot/imported/mTyouzame_Alb.png-d9ae3eff7fd8e9e04138ade528555150.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishTyouzameToy.Nin_NX_NVN/mTyouzame_Alb.png"
-dest_files=["res://.godot/imported/mTyouzame_Alb.png-d9ae3eff7fd8e9e04138ade528555150.ctex"]
+dest_files=["res://.godot/imported/mTyouzame_Alb.png-d9ae3eff7fd8e9e04138ade528555150.s3tc.ctex"]
 
 [params]
 

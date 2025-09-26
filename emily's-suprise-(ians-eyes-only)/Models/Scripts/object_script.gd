@@ -1,12 +1,10 @@
 extends Node3D
-
-@onready var area = $MeshInstance3D/Area3D
-@onready var collision = $MeshInstance3D/StaticBody3D
+@export var area_path: NodePath
+@onready var area: Area3D = get_node(area_path)
 @onready var green_mat = preload("res://Models/placement_green.tres")
 @onready var red_mat = preload("res://Models/placement_red.tres")
 @onready var yellow_mat = preload("res://Models/query_yellow.tres")
 @onready var mesh = $MeshInstance3D
-@onready var offset = $"Placement Marker"
 @onready var wall_ray = $"Wall Ray"
 @export_category("Characteristics")
 var is_on_wall = false
@@ -14,9 +12,10 @@ var is_horizontal = false
 var camera = null
 var previous_cam_z = Vector3(0, 0, 1)
 var overlapping = false
+var collision
 
 @export_enum("Normal", "Table", "Placeable on Table") var object_type: int
-
+	
 func _process(delta: float) -> void:
 	#this is just for some culling effects
 	if is_on_wall && camera && camera.basis.z != previous_cam_z:
@@ -46,19 +45,24 @@ func check_placement() -> bool:
 
 	
 func placed() -> void:
-	mesh.material_override = null
+	for child in get_children():
+		child.material_override = null
 
 func placement_red() -> void:
-	mesh.material_override = red_mat
+	for child in get_children():
+		child.material_override = red_mat
 	
 func placement_green() -> void:
-	mesh.material_override = green_mat
+	for child in get_children():
+		child.material_override = green_mat
 
 func placement_yellow():
-	mesh.material_override = yellow_mat
+	for child in get_children():
+		child.material_override = yellow_mat
 	
 func clear_material() -> void:
-	mesh.material_override = null
+	for child in get_children():
+		child.material_override = null
 	
 func wall_move(forward: bool, horizontal: bool):
 	if is_on_wall and wall_ray.is_colliding() and is_horizontal == horizontal:

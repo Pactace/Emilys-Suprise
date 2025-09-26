@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://d2pon8oynvg3u"]
+[gd_scene load_steps=8 format=4 uid="uid://d2pon8oynvg3u"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_27g26"]
+[ext_resource type="Material" uid="uid://dayt7r7emfhdv" path="res://Models/Final Models/FtrRockingchairTextures/mReBody0.tres" id="1_p6pxl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1os6e"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m10uo")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6pxl"]
+size = Vector3(0.0738631, 0.147815, 0.0973866)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_27g26"]
+size = Vector3(0.0738631, 0.147815, 0.0973866)
+
 [node name="FtrRockingchair" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_27g26")
+area_path = NodePath("Rockingchair1_low__mReBody/@Area3D@70895")
 
 [node name="Rockingchair1_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nd72t")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_p6pxl")
+
+[node name="@StaticBody3D@70893" type="StaticBody3D" parent="Rockingchair1_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70892" type="CollisionShape3D" parent="Rockingchair1_low__mReBody/@StaticBody3D@70893"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0.074056044, -1.899898e-05)
+shape = SubResource("BoxShape3D_p6pxl")
+
+[node name="@Area3D@70895" type="Area3D" parent="Rockingchair1_low__mReBody"]
+
+[node name="@CollisionShape3D@70894" type="CollisionShape3D" parent="Rockingchair1_low__mReBody/@Area3D@70895"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0.074056044, -1.899898e-05)
+shape = SubResource("BoxShape3D_27g26")

@@ -1,4 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://3tu4k8n1xxdq"]
+[gd_scene load_steps=14 format=4 uid="uid://3tu4k8n1xxdq"]
+
+[ext_resource type="Material" uid="uid://dikp8hu1qjhud" path="res://Models/Final Models/FtrMermaidBedSTextures/mBody0.tres" id="1_axu6x"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_n30on"]
+[ext_resource type="Material" uid="uid://cvop72gq5fttw" path="res://Models/Final Models/FtrMermaidBedSTextures/mShell0.tres" id="2_n30on"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uiyy4"]
 resource_name = "mBody"
@@ -105,16 +109,40 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_01ryj")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_axu6x"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n30on"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrMermaidBedS" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_n30on")
+area_path = NodePath("Starfish__mBody/@Area3D@70331")
 
 [node name="Back_Mat1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_48byy")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_axu6x")
 
 [node name="Foot2__mShell" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lij37")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_n30on")
 
 [node name="Starfish__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3yaay")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_axu6x")
+
+[node name="@StaticBody3D@70329" type="StaticBody3D" parent="Starfish__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70328" type="CollisionShape3D" parent="Starfish__mBody/@StaticBody3D@70329"]
+shape = SubResource("BoxShape3D_axu6x")
+
+[node name="@Area3D@70331" type="Area3D" parent="Starfish__mBody"]
+
+[node name="@CollisionShape3D@70330" type="CollisionShape3D" parent="Starfish__mBody/@Area3D@70331"]
+shape = SubResource("BoxShape3D_n30on")

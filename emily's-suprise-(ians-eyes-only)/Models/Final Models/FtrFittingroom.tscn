@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://duq5aqksmjybi"]
+[gd_scene load_steps=16 format=4 uid="uid://duq5aqksmjybi"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_1q46n"]
+[ext_resource type="Material" uid="uid://byd0ii7g8rwv1" path="res://Models/Final Models/FtrFittingroomTextures/mReBody0.tres" id="1_ttkn3"]
+[ext_resource type="Material" uid="uid://cmuunwo7maiua" path="res://Models/Final Models/FtrFittingroomTextures/mReFabric0.tres" id="2_1q46n"]
+[ext_resource type="Material" uid="uid://d1mnd00slbffx" path="res://Models/Final Models/FtrFittingroomTextures/mMirror0.tres" id="3_hp42a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vp7s"]
 resource_name = "mReBody"
@@ -39,6 +44,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tr5br")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ttkn3"]
+size = Vector3(0.1, 0.187426, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1q46n"]
+size = Vector3(0.1, 0.187426, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrhsg"]
 resource_name = "mReFabric"
@@ -106,15 +117,35 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ckh07")
 
 [node name="FtrFittingroom" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_1q46n")
+area_path = NodePath("pCube11__mReBody/@Area3D@69527")
 
 [node name="pCube11__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rvb3l")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ttkn3")
+
+[node name="@StaticBody3D@69525" type="StaticBody3D" parent="pCube11__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69524" type="CollisionShape3D" parent="pCube11__mReBody/@StaticBody3D@69525"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.093713, 0)
+shape = SubResource("BoxShape3D_ttkn3")
+
+[node name="@Area3D@69527" type="Area3D" parent="pCube11__mReBody"]
+
+[node name="@CollisionShape3D@69526" type="CollisionShape3D" parent="pCube11__mReBody/@Area3D@69527"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.093713, 0)
+shape = SubResource("BoxShape3D_1q46n")
 
 [node name="pCube18__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kqs1v")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_1q46n")
 
 [node name="polySurface11__mMirror" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lvpew")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_hp42a")

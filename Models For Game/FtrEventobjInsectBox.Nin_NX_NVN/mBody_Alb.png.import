@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buyhh76psggf7"
-path="res://.godot/imported/mBody_Alb.png-ab7ce18ef83cf3a05337694a390f05c7.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-ab7ce18ef83cf3a05337694a390f05c7.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrEventobjInsectBox.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-ab7ce18ef83cf3a05337694a390f05c7.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-ab7ce18ef83cf3a05337694a390f05c7.s3tc.ctex"]
 
 [params]
 

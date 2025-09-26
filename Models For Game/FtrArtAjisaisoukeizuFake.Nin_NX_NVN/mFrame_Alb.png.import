@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dswfrmsocxqu0"
-path="res://.godot/imported/mFrame_Alb.png-f7f81a385960ca366c5c5a3a3c9737a0.ctex"
+path.s3tc="res://.godot/imported/mFrame_Alb.png-f7f81a385960ca366c5c5a3a3c9737a0.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtAjisaisoukeizuFake.Nin_NX_NVN/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-f7f81a385960ca366c5c5a3a3c9737a0.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-f7f81a385960ca366c5c5a3a3c9737a0.s3tc.ctex"]
 
 [params]
 

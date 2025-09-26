@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxy3dgjee32oh"
-path="res://.godot/imported/mOikawa_Alb.png-63cf2f870cb08e5b7f1cec8291d5f6cc.ctex"
+path.s3tc="res://.godot/imported/mOikawa_Alb.png-63cf2f870cb08e5b7f1cec8291d5f6cc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishOikawa.Nin_NX_NVN/mOikawa_Alb.png"
-dest_files=["res://.godot/imported/mOikawa_Alb.png-63cf2f870cb08e5b7f1cec8291d5f6cc.ctex"]
+dest_files=["res://.godot/imported/mOikawa_Alb.png-63cf2f870cb08e5b7f1cec8291d5f6cc.s3tc.ctex"]
 
 [params]
 

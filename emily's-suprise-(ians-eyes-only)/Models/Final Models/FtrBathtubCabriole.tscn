@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://2m5invyibqp"]
+[gd_scene load_steps=8 format=4 uid="uid://2m5invyibqp"]
+
+[ext_resource type="Material" uid="uid://b8no5xdyl0efx" path="res://Models/Final Models/FtrBathtubCabrioleTextures/mReBody0.tres" id="1_7i1vc"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ptrmv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjmji"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qmeyt")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7i1vc"]
+size = Vector3(0.172171, 0.0835304, 0.089559)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptrmv"]
+size = Vector3(0.172171, 0.0835304, 0.089559)
+
 [node name="FtrBathtubCabriole" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ptrmv")
+area_path = NodePath("BathPlug__mReBody/@Area3D@68563")
 
 [node name="BathPlug__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_t5p6i")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7i1vc")
+
+[node name="@StaticBody3D@68561" type="StaticBody3D" parent="BathPlug__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68560" type="CollisionShape3D" parent="BathPlug__mReBody/@StaticBody3D@68561"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002441004, 0.0417652, 0)
+shape = SubResource("BoxShape3D_7i1vc")
+
+[node name="@Area3D@68563" type="Area3D" parent="BathPlug__mReBody"]
+
+[node name="@CollisionShape3D@68562" type="CollisionShape3D" parent="BathPlug__mReBody/@Area3D@68563"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002441004, 0.0417652, 0)
+shape = SubResource("BoxShape3D_ptrmv")

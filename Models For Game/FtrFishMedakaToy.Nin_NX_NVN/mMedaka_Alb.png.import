@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://whkkaxjowaan"
-path="res://.godot/imported/mMedaka_Alb.png-cfa6ec96f2b19efb1a4f2aba0de7359a.ctex"
+path.s3tc="res://.godot/imported/mMedaka_Alb.png-cfa6ec96f2b19efb1a4f2aba0de7359a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishMedakaToy.Nin_NX_NVN/mMedaka_Alb.png"
-dest_files=["res://.godot/imported/mMedaka_Alb.png-cfa6ec96f2b19efb1a4f2aba0de7359a.ctex"]
+dest_files=["res://.godot/imported/mMedaka_Alb.png-cfa6ec96f2b19efb1a4f2aba0de7359a.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba1vja6mhth8q"
-path="res://.godot/imported/mBody_Alb.png-760ea429636af26d512f679a738b6425.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-760ea429636af26d512f679a738b6425.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrIronstand.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-760ea429636af26d512f679a738b6425.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-760ea429636af26d512f679a738b6425.s3tc.ctex"]
 
 [params]
 

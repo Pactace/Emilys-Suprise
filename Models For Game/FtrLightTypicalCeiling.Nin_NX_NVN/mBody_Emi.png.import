@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfu0bqoj7mp5s"
-path="res://.godot/imported/mBody_Emi.png-75933c213fc10e66fce3263bea0fb0dc.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-75933c213fc10e66fce3263bea0fb0dc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLightTypicalCeiling.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-75933c213fc10e66fce3263bea0fb0dc.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-75933c213fc10e66fce3263bea0fb0dc.s3tc.ctex"]
 
 [params]
 

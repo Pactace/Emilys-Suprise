@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnnlt2clfekms"
-path="res://.godot/imported/mReBody_Alb.png-3aa78957868512e9424160f8192e4496.ctex"
+path.s3tc="res://.godot/imported/mReBody_Alb.png-3aa78957868512e9424160f8192e4496.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBingo.Nin_NX_NVN/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-3aa78957868512e9424160f8192e4496.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-3aa78957868512e9424160f8192e4496.s3tc.ctex"]
 
 [params]
 

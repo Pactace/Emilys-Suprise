@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://iqnvjiipiby6"]
+
+[ext_resource type="Texture2D" uid="uid://fnxvd5h4mrmy" path="res://Models/Final Models/FtrPltFlwAnemoneVaseTextures/mAnemoneVase_Alb.png" id="1_7ioww"]
+[ext_resource type="Texture2D" uid="uid://dic82jk5fnmyi" path="res://Models/Final Models/FtrPltFlwAnemoneVaseTextures/mAnemoneVase_Nrm.png" id="2_cu4d5"]
+
+[resource]
+resource_name = "mAnemoneVase0"
+albedo_texture = ExtResource("1_7ioww")
+normal_enabled = true
+normal_texture = ExtResource("2_cu4d5")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6cys4ypfaexr"
-path="res://.godot/imported/mCloth_Alb.png-39b65d404e629d4e6bdac2754f18176f.ctex"
+path.s3tc="res://.godot/imported/mCloth_Alb.png-39b65d404e629d4e6bdac2754f18176f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrClothesline.Nin_NX_NVN/mCloth_Alb.png"
-dest_files=["res://.godot/imported/mCloth_Alb.png-39b65d404e629d4e6bdac2754f18176f.ctex"]
+dest_files=["res://.godot/imported/mCloth_Alb.png-39b65d404e629d4e6bdac2754f18176f.s3tc.ctex"]
 
 [params]
 

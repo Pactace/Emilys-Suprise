@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gvweaaql3op8"
-path="res://.godot/imported/mCan_Alb.png-90b4da78c672123a0cc304a2ddb4f66f.ctex"
+path.s3tc="res://.godot/imported/mCan_Alb.png-90b4da78c672123a0cc304a2ddb4f66f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrTableStainless.Nin_NX_NVN/mCan_Alb.png"
-dest_files=["res://.godot/imported/mCan_Alb.png-90b4da78c672123a0cc304a2ddb4f66f.ctex"]
+dest_files=["res://.godot/imported/mCan_Alb.png-90b4da78c672123a0cc304a2ddb4f66f.s3tc.ctex"]
 
 [params]
 

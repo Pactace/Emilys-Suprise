@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://4y5twggdpa3b"]
+[gd_scene load_steps=12 format=4 uid="uid://4y5twggdpa3b"]
+
+[ext_resource type="Material" uid="uid://7rxxcaxvf3x3" path="res://Models/Final Models/FtrArtLibertyLeadingTextures/mFrame0.tres" id="1_0xrlo"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4q755"]
+[ext_resource type="Material" uid="uid://clisf3yjh31m4" path="res://Models/Final Models/FtrArtLibertyLeadingTextures/mBody0.tres" id="2_4q755"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gv7ae"]
 resource_name = "mFrame"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kwgb2")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xrlo"]
+size = Vector3(0.177646, 0.14157, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4q755"]
+size = Vector3(0.177646, 0.14157, 1e-05)
+
 [node name="FtrArtLibertyLeading" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4q755")
+area_path = NodePath("LibertyLeading__mBody/@Area3D@68391")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_e6w0d")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_0xrlo")
 
 [node name="LibertyLeading__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_63g3f")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_4q755")
+
+[node name="@StaticBody3D@68389" type="StaticBody3D" parent="LibertyLeading__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68388" type="CollisionShape3D" parent="LibertyLeading__mBody/@StaticBody3D@68389"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0116568e-07, 0, 0.003005)
+shape = SubResource("BoxShape3D_0xrlo")
+
+[node name="@Area3D@68391" type="Area3D" parent="LibertyLeading__mBody"]
+
+[node name="@CollisionShape3D@68390" type="CollisionShape3D" parent="LibertyLeading__mBody/@Area3D@68391"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0116568e-07, 0, 0.003005)
+shape = SubResource("BoxShape3D_4q755")

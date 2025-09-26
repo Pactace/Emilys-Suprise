@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnrfrbex0o8wk"
-path="res://.godot/imported/mBody_Alb.png-dd8c722111c7dc4380e09b99b2781d90.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-dd8c722111c7dc4380e09b99b2781d90.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBalancingtoy.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-dd8c722111c7dc4380e09b99b2781d90.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-dd8c722111c7dc4380e09b99b2781d90.s3tc.ctex"]
 
 [params]
 

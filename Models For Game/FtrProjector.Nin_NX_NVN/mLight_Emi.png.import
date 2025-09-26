@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk6pji3ommc23"
-path="res://.godot/imported/mLight_Emi.png-31d642f379956636e94d1fa1888acb1e.ctex"
+path.s3tc="res://.godot/imported/mLight_Emi.png-31d642f379956636e94d1fa1888acb1e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrProjector.Nin_NX_NVN/mLight_Emi.png"
-dest_files=["res://.godot/imported/mLight_Emi.png-31d642f379956636e94d1fa1888acb1e.ctex"]
+dest_files=["res://.godot/imported/mLight_Emi.png-31d642f379956636e94d1fa1888acb1e.s3tc.ctex"]
 
 [params]
 

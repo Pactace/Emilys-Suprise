@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpaswctsoi31v"
-path="res://.godot/imported/mBody_Alb.png-f061f134daf95cb987468cd577cb4208.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-f061f134daf95cb987468cd577cb4208.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrClarinet.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-f061f134daf95cb987468cd577cb4208.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-f061f134daf95cb987468cd577cb4208.s3tc.ctex"]
 
 [params]
 

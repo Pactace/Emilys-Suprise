@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tysc642d2ii8"
-path="res://.godot/imported/mReFabric_Emm.png-fcf6ab6e53c3c4faa816669bac49ca1e.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Emm.png-fcf6ab6e53c3c4faa816669bac49ca1e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCartoonistset.Nin_NX_NVN/mReFabric_Emm.png"
-dest_files=["res://.godot/imported/mReFabric_Emm.png-fcf6ab6e53c3c4faa816669bac49ca1e.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Emm.png-fcf6ab6e53c3c4faa816669bac49ca1e.s3tc.ctex"]
 
 [params]
 

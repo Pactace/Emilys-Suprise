@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dcbyv2k8sbr3h"]
+[gd_scene load_steps=12 format=4 uid="uid://dcbyv2k8sbr3h"]
+
+[ext_resource type="Material" uid="uid://qkrpq745s1s1" path="res://Models/Final Models/FtrLogTableLTextures/mReBody0.tres" id="1_0qgav"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_jvudo"]
+[ext_resource type="Material" uid="uid://bp7vwflt5l65d" path="res://Models/Final Models/FtrLogTableLTextures/mReFabric0.tres" id="2_jvudo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjgxu"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7ea1l")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0qgav"]
+size = Vector3(0.192536, 0.0726494, 0.164514)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jvudo"]
+size = Vector3(0.192536, 0.0726494, 0.164514)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vcxq"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -74,11 +84,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1fqsu")
 
 [node name="FtrLogTableL" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_jvudo")
+area_path = NodePath("foot1__mReBody/@Area3D@70319")
 
 [node name="foot1__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kk8ib")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_0qgav")
+
+[node name="@StaticBody3D@70317" type="StaticBody3D" parent="foot1__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70316" type="CollisionShape3D" parent="foot1__mReBody/@StaticBody3D@70317"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0003414005, 0.0363247, -0.0004273951)
+shape = SubResource("BoxShape3D_0qgav")
+
+[node name="@Area3D@70319" type="Area3D" parent="foot1__mReBody"]
+
+[node name="@CollisionShape3D@70318" type="CollisionShape3D" parent="foot1__mReBody/@Area3D@70319"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0003414005, 0.0363247, -0.0004273951)
+shape = SubResource("BoxShape3D_jvudo")
 
 [node name="lunchmat5__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wdjy3")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_jvudo")

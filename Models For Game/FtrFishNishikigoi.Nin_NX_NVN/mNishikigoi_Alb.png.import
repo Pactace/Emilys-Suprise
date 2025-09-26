@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c247547sk5d5l"
-path="res://.godot/imported/mNishikigoi_Alb.png-7b32ce1b17e10c38cf3876100147b3e8.ctex"
+path.s3tc="res://.godot/imported/mNishikigoi_Alb.png-7b32ce1b17e10c38cf3876100147b3e8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNishikigoi.Nin_NX_NVN/mNishikigoi_Alb.png"
-dest_files=["res://.godot/imported/mNishikigoi_Alb.png-7b32ce1b17e10c38cf3876100147b3e8.ctex"]
+dest_files=["res://.godot/imported/mNishikigoi_Alb.png-7b32ce1b17e10c38cf3876100147b3e8.s3tc.ctex"]
 
 [params]
 

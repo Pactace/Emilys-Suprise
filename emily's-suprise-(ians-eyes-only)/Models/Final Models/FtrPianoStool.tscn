@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://dun0ab2bstak3"]
+[gd_scene load_steps=8 format=4 uid="uid://dun0ab2bstak3"]
+
+[ext_resource type="Material" uid="uid://bj2epgmdblj7x" path="res://Models/Final Models/FtrPianoStoolTextures/mBody0.tres" id="1_dgd23"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wpgvq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8iec"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0xenj")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgd23"]
+size = Vector3(0.0542792, 0.0540669, 0.0542792)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wpgvq"]
+size = Vector3(0.0542792, 0.0540669, 0.0542792)
+
 [node name="FtrPianoStool" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_wpgvq")
+area_path = NodePath("pCube11__mBody/@Area3D@70695")
 
 [node name="pCube11__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6wesj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_dgd23")
+
+[node name="@StaticBody3D@70693" type="StaticBody3D" parent="pCube11__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70692" type="CollisionShape3D" parent="pCube11__mBody/@StaticBody3D@70693"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02703345, 0)
+shape = SubResource("BoxShape3D_dgd23")
+
+[node name="@Area3D@70695" type="Area3D" parent="pCube11__mBody"]
+
+[node name="@CollisionShape3D@70694" type="CollisionShape3D" parent="pCube11__mBody/@Area3D@70695"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02703345, 0)
+shape = SubResource("BoxShape3D_wpgvq")

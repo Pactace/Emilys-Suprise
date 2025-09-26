@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jltakw15yrqn"
-path="res://.godot/imported/mMirror_Alb.png-d9c1c15e95fa3327c040d59223e272b6.ctex"
+path.s3tc="res://.godot/imported/mMirror_Alb.png-d9c1c15e95fa3327c040d59223e272b6.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMermaidDresser.Nin_NX_NVN/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-d9c1c15e95fa3327c040d59223e272b6.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-d9c1c15e95fa3327c040d59223e272b6.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvfrkt02v5w6l"]
+[gd_scene load_steps=10 format=3 uid="uid://bvfrkt02v5w6l"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_757dl"]
+[ext_resource type="Material" uid="uid://bmwrtwnx5www7" path="res://Models/Final Models/FtrHangerAccessoryMouthTextures/mHanger0.tres" id="1_vxve1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdsgm"]
 resource_name = "mHanger"
@@ -32,6 +35,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vuo6h")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vxve1"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_757dl"]
+size = Vector3(0, 0, 0)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_be2oq"]
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 0, 0, 0),
@@ -60,11 +69,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_be2oq")
 
 [node name="FtrHangerAccessoryMouth" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_757dl")
+area_path = NodePath("Base__mHanger/@Area3D@69867")
 
 [node name="Base__mHanger" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wrhtk")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_vxve1")
+
+[node name="@StaticBody3D@69865" type="StaticBody3D" parent="Base__mHanger"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69864" type="CollisionShape3D" parent="Base__mHanger/@StaticBody3D@69865"]
+shape = SubResource("BoxShape3D_vxve1")
+
+[node name="@Area3D@69867" type="Area3D" parent="Base__mHanger"]
+
+[node name="@CollisionShape3D@69866" type="CollisionShape3D" parent="Base__mHanger/@Area3D@69867"]
+shape = SubResource("BoxShape3D_757dl")
 
 [node name="Body__mHanger" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ra5q3")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_vxve1")

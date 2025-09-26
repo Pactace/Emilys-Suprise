@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://8vte7qqbablm"]
+[gd_scene load_steps=8 format=4 uid="uid://8vte7qqbablm"]
+
+[ext_resource type="Material" uid="uid://b7jqyoa0ipxiv" path="res://Models/Final Models/FtrEventBalloon1Textures/mFtrEventBalloon10.tres" id="1_ai7sj"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_xt6gs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pysv0"]
 resource_name = "mFtrEventBalloon1"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ivulr")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ai7sj"]
+size = Vector3(0.101147, 0.231767, 0.0746209)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xt6gs"]
+size = Vector3(0.101147, 0.231767, 0.0746209)
+
 [node name="FtrEventBalloon1" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_xt6gs")
+area_path = NodePath("pCube1__mFtrEventBalloon1/@Area3D@69375")
 
 [node name="pCube1__mFtrEventBalloon1" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_m46h4")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ai7sj")
+
+[node name="@StaticBody3D@69373" type="StaticBody3D" parent="pCube1__mFtrEventBalloon1"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69372" type="CollisionShape3D" parent="pCube1__mFtrEventBalloon1/@StaticBody3D@69373"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7801841e-05, 0.1158835, -4.8428774e-08)
+shape = SubResource("BoxShape3D_ai7sj")
+
+[node name="@Area3D@69375" type="Area3D" parent="pCube1__mFtrEventBalloon1"]
+
+[node name="@CollisionShape3D@69374" type="CollisionShape3D" parent="pCube1__mFtrEventBalloon1/@Area3D@69375"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7801841e-05, 0.1158835, -4.8428774e-08)
+shape = SubResource("BoxShape3D_xt6gs")

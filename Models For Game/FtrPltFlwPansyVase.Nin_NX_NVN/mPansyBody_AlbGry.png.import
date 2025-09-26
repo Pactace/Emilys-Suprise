@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://colq83ldeukb2"
-path="res://.godot/imported/mPansyBody_AlbGry.png-4e1b4bd293ef3adb940b41c3f315f90d.ctex"
+path.s3tc="res://.godot/imported/mPansyBody_AlbGry.png-4e1b4bd293ef3adb940b41c3f315f90d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwPansyVase.Nin_NX_NVN/mPansyBody_AlbGry.png"
-dest_files=["res://.godot/imported/mPansyBody_AlbGry.png-4e1b4bd293ef3adb940b41c3f315f90d.ctex"]
+dest_files=["res://.godot/imported/mPansyBody_AlbGry.png-4e1b4bd293ef3adb940b41c3f315f90d.s3tc.ctex"]
 
 [params]
 

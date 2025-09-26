@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pt7mfvun3v5w"
-path="res://.godot/imported/mManbou_Alb.png-1c601fea4a777b9b206138eb8d2f1320.ctex"
+path.s3tc="res://.godot/imported/mManbou_Alb.png-1c601fea4a777b9b206138eb8d2f1320.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishManbou.Nin_NX_NVN/mManbou_Alb.png"
-dest_files=["res://.godot/imported/mManbou_Alb.png-1c601fea4a777b9b206138eb8d2f1320.ctex"]
+dest_files=["res://.godot/imported/mManbou_Alb.png-1c601fea4a777b9b206138eb8d2f1320.s3tc.ctex"]
 
 [params]
 

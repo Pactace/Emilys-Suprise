@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bgywqstxrvq00"]
+[gd_scene load_steps=12 format=4 uid="uid://bgywqstxrvq00"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_5bh0d"]
+[ext_resource type="Material" uid="uid://bcqebx64k3a7w" path="res://Models/Final Models/FtrArtGleanersTextures/mBody0.tres" id="1_hiq4i"]
+[ext_resource type="Material" uid="uid://bnokvubqbdtlo" path="res://Models/Final Models/FtrArtGleanersTextures/mFrame0.tres" id="2_5bh0d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqeqi"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tu7gr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hiq4i"]
+size = Vector3(0.0888813, 0.067873, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5bh0d"]
+size = Vector3(0.0888813, 0.067873, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqvl5"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hofoi")
 
 [node name="FtrArtGleaners" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_5bh0d")
+area_path = NodePath("Gleaners__mBody/@Area3D@68363")
 
 [node name="Gleaners__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dglaj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hiq4i")
+
+[node name="@StaticBody3D@68361" type="StaticBody3D" parent="Gleaners__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68360" type="CollisionShape3D" parent="Gleaners__mBody/@StaticBody3D@68361"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0, 0.003005)
+shape = SubResource("BoxShape3D_hiq4i")
+
+[node name="@Area3D@68363" type="Area3D" parent="Gleaners__mBody"]
+
+[node name="@CollisionShape3D@68362" type="CollisionShape3D" parent="Gleaners__mBody/@Area3D@68363"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0, 0.003005)
+shape = SubResource("BoxShape3D_5bh0d")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_30kkd")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_5bh0d")

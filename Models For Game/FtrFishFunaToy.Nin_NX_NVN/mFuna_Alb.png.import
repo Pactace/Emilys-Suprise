@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgxylikefkcg2"
-path="res://.godot/imported/mFuna_Alb.png-626228990ce3e1bddf261cb4a20c1b4c.ctex"
+path.s3tc="res://.godot/imported/mFuna_Alb.png-626228990ce3e1bddf261cb4a20c1b4c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishFunaToy.Nin_NX_NVN/mFuna_Alb.png"
-dest_files=["res://.godot/imported/mFuna_Alb.png-626228990ce3e1bddf261cb4a20c1b4c.ctex"]
+dest_files=["res://.godot/imported/mFuna_Alb.png-626228990ce3e1bddf261cb4a20c1b4c.s3tc.ctex"]
 
 [params]
 

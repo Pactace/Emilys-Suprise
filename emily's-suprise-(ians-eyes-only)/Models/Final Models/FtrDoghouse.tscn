@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://co6aj83jprtwv"]
+[gd_scene load_steps=8 format=4 uid="uid://co6aj83jprtwv"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_co45p"]
+[ext_resource type="Material" uid="uid://u8jmnc8o5okd" path="res://Models/Final Models/FtrDoghouseTextures/mReBody0.tres" id="1_q6pmb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xixyf"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_me2qs")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_q6pmb"]
+size = Vector3(0.0853584, 0.0977056, 0.0906165)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_co45p"]
+size = Vector3(0.0853584, 0.0977056, 0.0906165)
+
 [node name="FtrDoghouse" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_co45p")
+area_path = NodePath("AnimationMaterial__mReBody/@Area3D@69207")
 
 [node name="AnimationMaterial__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3cnxw")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_q6pmb")
+
+[node name="@StaticBody3D@69205" type="StaticBody3D" parent="AnimationMaterial__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69204" type="CollisionShape3D" parent="AnimationMaterial__mReBody/@StaticBody3D@69205"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6897917e-05, 0.0488528, 8.88519e-05)
+shape = SubResource("BoxShape3D_q6pmb")
+
+[node name="@Area3D@69207" type="Area3D" parent="AnimationMaterial__mReBody"]
+
+[node name="@CollisionShape3D@69206" type="CollisionShape3D" parent="AnimationMaterial__mReBody/@Area3D@69207"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6897917e-05, 0.0488528, 8.88519e-05)
+shape = SubResource("BoxShape3D_co45p")

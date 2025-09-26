@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1dhe58ans8fx"
-path="res://.godot/imported/mWindow_Alb.png-85108fa2211cfebc240dc4cd3451c453.ctex"
+path.s3tc="res://.godot/imported/mWindow_Alb.png-85108fa2211cfebc240dc4cd3451c453.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrWashingmachineDrum.Nin_NX_NVN/mWindow_Alb.png"
-dest_files=["res://.godot/imported/mWindow_Alb.png-85108fa2211cfebc240dc4cd3451c453.ctex"]
+dest_files=["res://.godot/imported/mWindow_Alb.png-85108fa2211cfebc240dc4cd3451c453.s3tc.ctex"]
 
 [params]
 

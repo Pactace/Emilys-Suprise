@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cuwuuuuqbadl"]
+[gd_scene load_steps=12 format=4 uid="uid://cuwuuuuqbadl"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_lnif2"]
+[ext_resource type="Material" uid="uid://cskixe02ss8cb" path="res://Models/Final Models/FtrEventobjInsectBoxTextures/mWireMesh0.tres" id="1_wcdil"]
+[ext_resource type="Material" uid="uid://do4pyqbkka6l8" path="res://Models/Final Models/FtrEventobjInsectBoxTextures/mBody0.tres" id="2_lnif2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6lvb"]
 resource_name = "mWireMesh"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xw770")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wcdil"]
+size = Vector3(0.154128, 0.08382, 0.097175)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lnif2"]
+size = Vector3(0.154128, 0.08382, 0.097175)
+
 [node name="FtrEventobjInsectBox" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_lnif2")
+area_path = NodePath("pCube10__mBody/@Area3D@69391")
 
 [node name="Sticker__mWireMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_l2x7u")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_wcdil")
 
 [node name="pCube10__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_fkt1y")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_lnif2")
+
+[node name="@StaticBody3D@69389" type="StaticBody3D" parent="pCube10__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69388" type="CollisionShape3D" parent="pCube10__mBody/@StaticBody3D@69389"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.685755e-08, 0.04191, 0.0024375021)
+shape = SubResource("BoxShape3D_wcdil")
+
+[node name="@Area3D@69391" type="Area3D" parent="pCube10__mBody"]
+
+[node name="@CollisionShape3D@69390" type="CollisionShape3D" parent="pCube10__mBody/@Area3D@69391"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.685755e-08, 0.04191, 0.0024375021)
+shape = SubResource("BoxShape3D_lnif2")

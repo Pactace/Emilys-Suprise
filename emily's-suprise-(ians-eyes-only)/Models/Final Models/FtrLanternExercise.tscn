@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://b1m3014j4k71h"]
+[gd_scene load_steps=14 format=4 uid="uid://b1m3014j4k71h"]
+
+[ext_resource type="Material" uid="uid://sm1hr6gmf4d7" path="res://Models/Final Models/FtrLanternExerciseTextures/mBody0.tres" id="1_2hwfn"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_u8nbv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27bn8"]
 resource_name = "mGlass"
@@ -71,6 +74,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wnidh")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2hwfn"]
+size = Vector3(0.0612015, 0.0965061, 0.0612015)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u8nbv"]
+size = Vector3(0.0612015, 0.0965061, 0.0612015)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcnre"]
 resource_name = "mGlassBack"
 transparency = 4
@@ -105,6 +114,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nutpb")
 
 [node name="FtrLanternExercise" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_u8nbv")
+area_path = NodePath("Reflector__mBody/@Area3D@70247")
 
 [node name="Omote__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pq4h1")
@@ -113,6 +125,21 @@ skeleton = NodePath("")
 [node name="Reflector__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_k4542")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_2hwfn")
+
+[node name="@StaticBody3D@70245" type="StaticBody3D" parent="Reflector__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70244" type="CollisionShape3D" parent="Reflector__mBody/@StaticBody3D@70245"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.04825305, -4.8428774e-08)
+shape = SubResource("BoxShape3D_2hwfn")
+
+[node name="@Area3D@70247" type="Area3D" parent="Reflector__mBody"]
+
+[node name="@CollisionShape3D@70246" type="CollisionShape3D" parent="Reflector__mBody/@Area3D@70247"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.04825305, -4.8428774e-08)
+shape = SubResource("BoxShape3D_u8nbv")
 
 [node name="Ura__mGlassBack" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_5bhvq")

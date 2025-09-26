@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dv4pu3o5rrje0"]
+[gd_scene load_steps=12 format=4 uid="uid://dv4pu3o5rrje0"]
+
+[ext_resource type="Material" uid="uid://bimo4dhsmwui7" path="res://Models/Final Models/FtrCottoncandymachineTextures/mReBody0.tres" id="1_fx37d"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_kc1d1"]
+[ext_resource type="Material" uid="uid://cf4htqlmk0xhs" path="res://Models/Final Models/FtrCottoncandymachineTextures/mBody0.tres" id="2_kc1d1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0yk0"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sd44i")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fx37d"]
+size = Vector3(0.194974, 0.1309, 0.0905342)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kc1d1"]
+size = Vector3(0.194974, 0.1309, 0.0905342)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xecp5"]
 resource_name = "mBody"
 vertex_color_use_as_albedo = true
@@ -78,11 +88,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ipsiv")
 
 [node name="FtrCottoncandymachine" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_kc1d1")
+area_path = NodePath("Spoon_low__mReBody/@Area3D@69023")
 
 [node name="Spoon_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_h2b1m")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_fx37d")
+
+[node name="@StaticBody3D@69021" type="StaticBody3D" parent="Spoon_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69020" type="CollisionShape3D" parent="Spoon_low__mReBody/@StaticBody3D@69021"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00020089746, 0.06546309, 0)
+shape = SubResource("BoxShape3D_fx37d")
+
+[node name="@Area3D@69023" type="Area3D" parent="Spoon_low__mReBody"]
+
+[node name="@CollisionShape3D@69022" type="CollisionShape3D" parent="Spoon_low__mReBody/@Area3D@69023"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00020089746, 0.06546309, 0)
+shape = SubResource("BoxShape3D_kc1d1")
 
 [node name="cotoncandyPlane_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2yy75")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_kc1d1")

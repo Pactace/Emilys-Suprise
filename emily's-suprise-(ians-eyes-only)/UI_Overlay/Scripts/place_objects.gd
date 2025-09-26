@@ -30,6 +30,11 @@ func disabled():
 	visible = false
 	edit_ray = null
 	is_wall = false
+	if possible_selected_object or selected_object:
+		possible_selected_object.placed()
+		possible_selected_object = null
+		selected_object = null
+		
 
 func _process(delta: float) -> void:
 	if visible:

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0aawj3d5htct"
-path="res://.godot/imported/mBody_Alb.png-863451376e541b7a8980c069965bc37b.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-863451376e541b7a8980c069965bc37b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMikeDesk.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-863451376e541b7a8980c069965bc37b.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-863451376e541b7a8980c069965bc37b.s3tc.ctex"]
 
 [params]
 

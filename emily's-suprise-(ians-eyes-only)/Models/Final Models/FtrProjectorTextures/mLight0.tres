@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://de46wlomioi7g"]
+
+[ext_resource type="Texture2D" uid="uid://d0bjqkvj8e3f6" path="res://Models/Final Models/FtrProjectorTextures/mLight_Alb.png" id="1_c7rm8"]
+[ext_resource type="Texture2D" uid="uid://t6qi1eyr1j6f" path="res://Models/Final Models/FtrProjectorTextures/mLight_Nrm.png" id="2_jf3fy"]
+
+[resource]
+resource_name = "mLight0"
+albedo_texture = ExtResource("1_c7rm8")
+normal_enabled = true
+normal_texture = ExtResource("2_jf3fy")

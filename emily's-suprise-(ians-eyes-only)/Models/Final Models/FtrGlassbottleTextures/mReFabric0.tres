@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cuynkt3fdyul3"]
+
+[ext_resource type="Texture2D" uid="uid://c1r7kp4q0d7em" path="res://Models/Final Models/FtrGlassbottleTextures/mReFabric_Alb.png" id="1_csm04"]
+[ext_resource type="Texture2D" uid="uid://c0phpf8fu8iwq" path="res://Models/Final Models/FtrGlassbottleTextures/mReFabric_Nrm.png" id="2_y1r53"]
+
+[resource]
+resource_name = "mReFabric0"
+albedo_texture = ExtResource("1_csm04")
+normal_enabled = true
+normal_texture = ExtResource("2_y1r53")

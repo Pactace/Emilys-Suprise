@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clryqff1cxdqn"
-path="res://.godot/imported/mBody_Alb.png-ef5f103530d68ba811d5e0fe9bd70013.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-ef5f103530d68ba811d5e0fe9bd70013.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNaporeonfish.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-ef5f103530d68ba811d5e0fe9bd70013.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-ef5f103530d68ba811d5e0fe9bd70013.s3tc.ctex"]
 
 [params]
 

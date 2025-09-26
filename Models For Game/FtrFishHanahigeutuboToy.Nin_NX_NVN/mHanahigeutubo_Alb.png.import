@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dru2x6qnt8smu"
-path="res://.godot/imported/mHanahigeutubo_Alb.png-ea05abbe6d668c63aae33d797584f2b4.ctex"
+path.s3tc="res://.godot/imported/mHanahigeutubo_Alb.png-ea05abbe6d668c63aae33d797584f2b4.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishHanahigeutuboToy.Nin_NX_NVN/mHanahigeutubo_Alb.png"
-dest_files=["res://.godot/imported/mHanahigeutubo_Alb.png-ea05abbe6d668c63aae33d797584f2b4.ctex"]
+dest_files=["res://.godot/imported/mHanahigeutubo_Alb.png-ea05abbe6d668c63aae33d797584f2b4.s3tc.ctex"]
 
 [params]
 

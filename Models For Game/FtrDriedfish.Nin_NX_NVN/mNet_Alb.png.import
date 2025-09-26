@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7r377d0gim5v"
-path="res://.godot/imported/mNet_Alb.png-fdfc6c9b6b26cb0e3e7fc0143595c13e.ctex"
+path.s3tc="res://.godot/imported/mNet_Alb.png-fdfc6c9b6b26cb0e3e7fc0143595c13e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDriedfish.Nin_NX_NVN/mNet_Alb.png"
-dest_files=["res://.godot/imported/mNet_Alb.png-fdfc6c9b6b26cb0e3e7fc0143595c13e.ctex"]
+dest_files=["res://.godot/imported/mNet_Alb.png-fdfc6c9b6b26cb0e3e7fc0143595c13e.s3tc.ctex"]
 
 [params]
 

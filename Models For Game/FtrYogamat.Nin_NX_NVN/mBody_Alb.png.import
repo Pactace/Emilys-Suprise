@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwwgmny4auub"
-path="res://.godot/imported/mBody_Alb.png-90e88ab10ca9225be0973b8b14d7f7a8.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-90e88ab10ca9225be0973b8b14d7f7a8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrYogamat.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-90e88ab10ca9225be0973b8b14d7f7a8.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-90e88ab10ca9225be0973b8b14d7f7a8.s3tc.ctex"]
 
 [params]
 

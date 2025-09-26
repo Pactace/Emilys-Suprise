@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://ceki036gnalv2"]
+[gd_scene load_steps=15 format=4 uid="uid://ceki036gnalv2"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ruiw2"]
+[ext_resource type="Material" uid="uid://brrtr64hhfo1a" path="res://Models/Final Models/FtrArcadegameFightTextures/mBody0.tres" id="1_tyvay"]
+[ext_resource type="Material" uid="uid://5vcgm62rdk7g" path="res://Models/Final Models/FtrArcadegameFightTextures/mMonitor0.tres" id="2_ruiw2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d81q4"]
 resource_name = "mBody"
@@ -38,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yuwrj")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tyvay"]
+size = Vector3(0.0942795, 0.180513, 0.0965048)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ruiw2"]
+size = Vector3(0.0942795, 0.180513, 0.0965048)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbj6j"]
 resource_name = "mGlass"
@@ -118,10 +128,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8j38l")
 
 [node name="FtrArcadegameFight" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ruiw2")
+area_path = NodePath("Body_low__mBody/@Area3D@68279")
 
 [node name="Body_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d4jr1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_tyvay")
+
+[node name="@StaticBody3D@68277" type="StaticBody3D" parent="Body_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68276" type="CollisionShape3D" parent="Body_low__mBody/@StaticBody3D@68277"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0.0902565, -7.810071e-05)
+shape = SubResource("BoxShape3D_tyvay")
+
+[node name="@Area3D@68279" type="Area3D" parent="Body_low__mBody"]
+
+[node name="@CollisionShape3D@68278" type="CollisionShape3D" parent="Body_low__mBody/@Area3D@68279"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0.0902565, -7.810071e-05)
+shape = SubResource("BoxShape3D_ruiw2")
 
 [node name="Grass__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_n8siw")
@@ -130,3 +158,4 @@ skeleton = NodePath("")
 [node name="Monitor_low__mMonitor" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_v5fk8")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_ruiw2")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bywfrmxnkcbjj"
-path="res://.godot/imported/mBody_Alb.png-c4cfa2dc529bb4b0e220641a6e4b98cc.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-c4cfa2dc529bb4b0e220641a6e4b98cc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBreadbasketSweet.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-c4cfa2dc529bb4b0e220641a6e4b98cc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-c4cfa2dc529bb4b0e220641a6e4b98cc.s3tc.ctex"]
 
 [params]
 

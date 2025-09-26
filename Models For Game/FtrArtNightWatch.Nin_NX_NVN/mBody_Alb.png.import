@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bieujpchyxvlj"
-path="res://.godot/imported/mBody_Alb.png-190182ed7d048df6dfe8176934b84869.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-190182ed7d048df6dfe8176934b84869.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtNightWatch.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-190182ed7d048df6dfe8176934b84869.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-190182ed7d048df6dfe8176934b84869.s3tc.ctex"]
 
 [params]
 

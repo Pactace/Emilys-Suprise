@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://0jlqjfod3xg6"]
+
+[ext_resource type="Texture2D" uid="uid://dhpauu80nua0i" path="res://Models/Final Models/FtrArtBlueBoyTextures/mBody_Alb1.png" id="1_g5xs6"]
+[ext_resource type="Texture2D" uid="uid://jlgxjmhdlf8i" path="res://Models/Final Models/FtrArtBlueBoyTextures/mBody_Nrm1.png" id="2_ie5vy"]
+
+[resource]
+resource_name = "mBody1"
+albedo_texture = ExtResource("1_g5xs6")
+normal_enabled = true
+normal_texture = ExtResource("2_ie5vy")

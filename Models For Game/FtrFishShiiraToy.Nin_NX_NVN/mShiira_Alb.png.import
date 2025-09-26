@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o488kkugjsxn"
-path="res://.godot/imported/mShiira_Alb.png-17c0db1922c1c0905cfe6d1dc9d971c3.ctex"
+path.s3tc="res://.godot/imported/mShiira_Alb.png-17c0db1922c1c0905cfe6d1dc9d971c3.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishShiiraToy.Nin_NX_NVN/mShiira_Alb.png"
-dest_files=["res://.godot/imported/mShiira_Alb.png-17c0db1922c1c0905cfe6d1dc9d971c3.ctex"]
+dest_files=["res://.godot/imported/mShiira_Alb.png-17c0db1922c1c0905cfe6d1dc9d971c3.s3tc.ctex"]
 
 [params]
 

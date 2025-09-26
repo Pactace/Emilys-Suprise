@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cp23pq0auh2nd"]
+[gd_scene load_steps=12 format=4 uid="uid://cp23pq0auh2nd"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_7qibv"]
+[ext_resource type="Material" uid="uid://bqg2g4iws328q" path="res://Models/Final Models/FtrCountryBedSTextures/mReBody0.tres" id="1_xr1lx"]
+[ext_resource type="Material" uid="uid://bfvp8iyx6r4qn" path="res://Models/Final Models/FtrCountryBedSTextures/mReFabric0.tres" id="2_7qibv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l54lm"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0mxhi")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xr1lx"]
+size = Vector3(0.194, 0.107109, 0.0951509)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7qibv"]
+size = Vector3(0.194, 0.107109, 0.0951509)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ph7r5"]
 resource_name = "mReFabric"
@@ -81,11 +91,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gbokj")
 
 [node name="FtrCountryBedS" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_7qibv")
+area_path = NodePath("BedFrameBottom_low__mReBody/@Area3D@69043")
 
 [node name="BedFrameBottom_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vyiya")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_xr1lx")
+
+[node name="@StaticBody3D@69041" type="StaticBody3D" parent="BedFrameBottom_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69040" type="CollisionShape3D" parent="BedFrameBottom_low__mReBody/@StaticBody3D@69041"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.0535545, -8.493662e-07)
+shape = SubResource("BoxShape3D_xr1lx")
+
+[node name="@Area3D@69043" type="Area3D" parent="BedFrameBottom_low__mReBody"]
+
+[node name="@CollisionShape3D@69042" type="CollisionShape3D" parent="BedFrameBottom_low__mReBody/@Area3D@69043"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.0535545, -8.493662e-07)
+shape = SubResource("BoxShape3D_7qibv")
 
 [node name="ComforterBody_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_hkhaf")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_7qibv")

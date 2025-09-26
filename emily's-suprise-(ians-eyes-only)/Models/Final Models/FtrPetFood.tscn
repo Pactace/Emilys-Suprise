@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://ctba7eohkqyb3"]
+[gd_scene load_steps=11 format=4 uid="uid://ctba7eohkqyb3"]
+
+[ext_resource type="Material" uid="uid://lqanhgj4kxy6" path="res://Models/Final Models/FtrPetFoodTextures/mReBody0.tres" id="1_76wgj"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_y0crv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6bvs"]
 resource_name = "mReBody"
@@ -40,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t64jm")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_76wgj"]
+size = Vector3(0.0784832, 0.0209533, 0.0433305)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0crv"]
+size = Vector3(0.0784832, 0.0209533, 0.0433305)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghidg"]
 resource_name = "mWater"
 vertex_color_use_as_albedo = true
@@ -73,10 +82,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_g3jqp")
 
 [node name="FtrPetFood" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_y0crv")
+area_path = NodePath("Food_Base_low__mReBody/@Area3D@70675")
 
 [node name="Food_Base_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_05ipx")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_76wgj")
+
+[node name="@StaticBody3D@70673" type="StaticBody3D" parent="Food_Base_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70672" type="CollisionShape3D" parent="Food_Base_low__mReBody/@StaticBody3D@70673"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01047665, 5.029142e-08)
+shape = SubResource("BoxShape3D_76wgj")
+
+[node name="@Area3D@70675" type="Area3D" parent="Food_Base_low__mReBody"]
+
+[node name="@CollisionShape3D@70674" type="CollisionShape3D" parent="Food_Base_low__mReBody/@Area3D@70675"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01047665, 5.029142e-08)
+shape = SubResource("BoxShape3D_y0crv")
 
 [node name="Water_low__mWater" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4fjae")

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bldhdaevlmdgi"]
+[gd_scene load_steps=12 format=4 uid="uid://bldhdaevlmdgi"]
+
+[ext_resource type="Material" uid="uid://0i8wdoxoxwiw" path="res://Models/Final Models/FtrBonsaiShelfTextures/mBody0.tres" id="1_lr0l6"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_rli0i"]
+[ext_resource type="Material" uid="uid://bxqge075uuqrh" path="res://Models/Final Models/FtrBonsaiShelfTextures/mLeafNuki0.tres" id="2_rli0i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1uyfb"]
 resource_name = "mBody"
@@ -38,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vo5em")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lr0l6"]
+size = Vector3(0.191, 0.121358, 0.0695411)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rli0i"]
+size = Vector3(0.191, 0.121358, 0.0695411)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l25b2"]
 resource_name = "mLeafNuki"
@@ -79,11 +89,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_daomo")
 
 [node name="FtrBonsaiShelf" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_rli0i")
+area_path = NodePath("cylinderPot_low__mBody/@Area3D@68639")
 
 [node name="cylinderPot_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3kynh")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_lr0l6")
+
+[node name="@StaticBody3D@68637" type="StaticBody3D" parent="cylinderPot_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68636" type="CollisionShape3D" parent="cylinderPot_low__mBody/@StaticBody3D@68637"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.060679, -5.2154064e-08)
+shape = SubResource("BoxShape3D_lr0l6")
+
+[node name="@Area3D@68639" type="Area3D" parent="cylinderPot_low__mBody"]
+
+[node name="@CollisionShape3D@68638" type="CollisionShape3D" parent="cylinderPot_low__mBody/@Area3D@68639"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.060679, -5.2154064e-08)
+shape = SubResource("BoxShape3D_rli0i")
 
 [node name="kaedeLeaf_A010__mLeafNuki" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_e0rhg")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_rli0i")

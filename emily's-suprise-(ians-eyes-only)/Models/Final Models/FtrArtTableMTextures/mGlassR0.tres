@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bmxushasuqgjv"]
+
+[ext_resource type="Texture2D" uid="uid://b3oihr6cd2xup" path="res://Models/Final Models/FtrArtTableMTextures/mGlassR_Alb.png" id="1_olv4a"]
+[ext_resource type="Texture2D" uid="uid://dw112qxtm8ul5" path="res://Models/Final Models/FtrArtTableMTextures/mGlassR_Nrm.png" id="2_b7gab"]
+
+[resource]
+resource_name = "mGlassR0"
+albedo_texture = ExtResource("1_olv4a")
+normal_enabled = true
+normal_texture = ExtResource("2_b7gab")

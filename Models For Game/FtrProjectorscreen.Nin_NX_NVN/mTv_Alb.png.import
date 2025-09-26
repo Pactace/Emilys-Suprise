@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2v2r5kx0k4ev"
-path="res://.godot/imported/mTv_Alb.png-7f2148a8af76b41358fe856dea25674c.ctex"
+path.s3tc="res://.godot/imported/mTv_Alb.png-7f2148a8af76b41358fe856dea25674c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrProjectorscreen.Nin_NX_NVN/mTv_Alb.png"
-dest_files=["res://.godot/imported/mTv_Alb.png-7f2148a8af76b41358fe856dea25674c.ctex"]
+dest_files=["res://.godot/imported/mTv_Alb.png-7f2148a8af76b41358fe856dea25674c.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv2l1mc8en3h1"
-path="res://.godot/imported/mReFabric_Alb.png-50f2c1a0373a2c0c7807a64ac37ddbcb.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Alb.png-50f2c1a0373a2c0c7807a64ac37ddbcb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBottleShampoo.Nin_NX_NVN/mReFabric_Alb.png"
-dest_files=["res://.godot/imported/mReFabric_Alb.png-50f2c1a0373a2c0c7807a64ac37ddbcb.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb.png-50f2c1a0373a2c0c7807a64ac37ddbcb.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://wr073jeuilpv"]
+
+[ext_resource type="Texture2D" uid="uid://c5t1tl684tmt3" path="res://Models/Final Models/FtrPltFlwRoseGoldVaseTextures/mRosePetalGold_Alb.png" id="1_bbbtq"]
+[ext_resource type="Texture2D" uid="uid://brmd825hbypgu" path="res://Models/Final Models/FtrPltFlwRoseGoldVaseTextures/mRosePetalGold_Nrm.png" id="2_qv6e0"]
+
+[resource]
+resource_name = "mRosePetalGold0"
+albedo_texture = ExtResource("1_bbbtq")
+normal_enabled = true
+normal_texture = ExtResource("2_qv6e0")

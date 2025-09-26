@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://27endsr2ijgg"
-path="res://.godot/imported/mLotus_Alb.png-c872eec256c25de2ca0e639e65a28f7c.ctex"
+path.s3tc="res://.godot/imported/mLotus_Alb.png-c872eec256c25de2ca0e639e65a28f7c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKaeruToy.Nin_NX_NVN/mLotus_Alb.png"
-dest_files=["res://.godot/imported/mLotus_Alb.png-c872eec256c25de2ca0e639e65a28f7c.ctex"]
+dest_files=["res://.godot/imported/mLotus_Alb.png-c872eec256c25de2ca0e639e65a28f7c.s3tc.ctex"]
 
 [params]
 

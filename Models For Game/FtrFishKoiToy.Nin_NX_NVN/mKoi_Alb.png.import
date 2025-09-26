@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc2wds6qb285f"
-path="res://.godot/imported/mKoi_Alb.png-8c4d85529f4766b2b3aa35359e61c689.ctex"
+path.s3tc="res://.godot/imported/mKoi_Alb.png-8c4d85529f4766b2b3aa35359e61c689.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKoiToy.Nin_NX_NVN/mKoi_Alb.png"
-dest_files=["res://.godot/imported/mKoi_Alb.png-8c4d85529f4766b2b3aa35359e61c689.ctex"]
+dest_files=["res://.godot/imported/mKoi_Alb.png-8c4d85529f4766b2b3aa35359e61c689.s3tc.ctex"]
 
 [params]
 

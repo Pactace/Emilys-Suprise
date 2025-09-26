@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpgidgdcxgwef"
-path="res://.godot/imported/mSuzuki_Alb.png-b7eccd57801aa4188ba704d2078c6e69.ctex"
+path.s3tc="res://.godot/imported/mSuzuki_Alb.png-b7eccd57801aa4188ba704d2078c6e69.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishSuzukiToy.Nin_NX_NVN/mSuzuki_Alb.png"
-dest_files=["res://.godot/imported/mSuzuki_Alb.png-b7eccd57801aa4188ba704d2078c6e69.ctex"]
+dest_files=["res://.godot/imported/mSuzuki_Alb.png-b7eccd57801aa4188ba704d2078c6e69.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cxghsrnti6412"]
+
+[ext_resource type="Texture2D" uid="uid://cna42m1hj7pag" path="res://Models/Final Models/FtrHarvestTableClothSEventTextures/mFtrHarvestTableClothSEvent_Alb.png" id="1_k1wsg"]
+[ext_resource type="Texture2D" uid="uid://clexi5425menv" path="res://Models/Final Models/FtrHarvestTableClothSEventTextures/mFtrHarvestTableClothSEvent_Nrm.png" id="2_drqpf"]
+
+[resource]
+resource_name = "mFtrHarvestTableClothSEvent0"
+albedo_texture = ExtResource("1_k1wsg")
+normal_enabled = true
+normal_texture = ExtResource("2_drqpf")

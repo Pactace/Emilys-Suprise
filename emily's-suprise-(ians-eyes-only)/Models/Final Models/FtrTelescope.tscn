@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://d1mjxd1o3ohuv"]
+[gd_scene load_steps=8 format=4 uid="uid://d1mjxd1o3ohuv"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_jv2ie"]
+[ext_resource type="Material" uid="uid://cfagv4hybi8nu" path="res://Models/Final Models/FtrTelescopeTextures/mBody0.tres" id="1_taa4i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jth2"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o1b67")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_taa4i"]
+size = Vector3(0.0941294, 0.140386, 0.0644303)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jv2ie"]
+size = Vector3(0.0941294, 0.140386, 0.0644303)
+
 [node name="FtrTelescope" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_jv2ie")
+area_path = NodePath("Eyepiece_low__mBody/@Area3D@71143")
 
 [node name="Eyepiece_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ky3a8")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_taa4i")
+
+[node name="@StaticBody3D@71141" type="StaticBody3D" parent="Eyepiece_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71140" type="CollisionShape3D" parent="Eyepiece_low__mBody/@StaticBody3D@71141"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9198825e-05, 0.07006873, -0.000116150826)
+shape = SubResource("BoxShape3D_taa4i")
+
+[node name="@Area3D@71143" type="Area3D" parent="Eyepiece_low__mBody"]
+
+[node name="@CollisionShape3D@71142" type="CollisionShape3D" parent="Eyepiece_low__mBody/@Area3D@71143"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9198825e-05, 0.07006873, -0.000116150826)
+shape = SubResource("BoxShape3D_jv2ie")

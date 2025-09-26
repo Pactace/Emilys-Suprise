@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbocg2eg55i1a"
-path="res://.godot/imported/mFabric_Alb.png-5ee372da0d45e477f433315b6404aece.ctex"
+path.s3tc="res://.godot/imported/mFabric_Alb.png-5ee372da0d45e477f433315b6404aece.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrWoodenBedS.Nin_NX_NVN/mFabric_Alb.png"
-dest_files=["res://.godot/imported/mFabric_Alb.png-5ee372da0d45e477f433315b6404aece.ctex"]
+dest_files=["res://.godot/imported/mFabric_Alb.png-5ee372da0d45e477f433315b6404aece.s3tc.ctex"]
 
 [params]
 

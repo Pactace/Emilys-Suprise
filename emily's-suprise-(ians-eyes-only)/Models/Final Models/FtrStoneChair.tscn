@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://v6cukkl442c7"]
+[gd_scene load_steps=8 format=3 uid="uid://v6cukkl442c7"]
+
+[ext_resource type="Material" uid="uid://dn2n8enj5n3ov" path="res://Models/Final Models/FtrStoneChairTextures/mBody0.tres" id="1_7ixmh"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_bkdjq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvkub"]
 resource_name = "mBody"
@@ -32,8 +35,30 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kpq4b")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ixmh"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkdjq"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrStoneChair" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_bkdjq")
+area_path = NodePath("Chair_low__mBody/@Area3D@71059")
 
 [node name="Chair_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pops8")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7ixmh")
+
+[node name="@StaticBody3D@71057" type="StaticBody3D" parent="Chair_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71056" type="CollisionShape3D" parent="Chair_low__mBody/@StaticBody3D@71057"]
+shape = SubResource("BoxShape3D_7ixmh")
+
+[node name="@Area3D@71059" type="Area3D" parent="Chair_low__mBody"]
+
+[node name="@CollisionShape3D@71058" type="CollisionShape3D" parent="Chair_low__mBody/@Area3D@71059"]
+shape = SubResource("BoxShape3D_bkdjq")

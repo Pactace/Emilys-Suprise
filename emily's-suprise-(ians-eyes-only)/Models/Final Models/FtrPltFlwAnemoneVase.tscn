@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2w4tu0xd82kk"]
+[gd_scene load_steps=14 format=3 uid="uid://c2w4tu0xd82kk"]
+
+[ext_resource type="Material" uid="uid://iqnvjiipiby6" path="res://Models/Final Models/FtrPltFlwAnemoneVaseTextures/mAnemoneVase0.tres" id="1_0idse"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_nrtnh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7spsj"]
 resource_name = "mAnemoneBody"
@@ -32,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_trgdf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0idse"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nrtnh"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1jwh"]
 resource_name = "mAnemoneVase"
@@ -99,14 +108,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4rbgb")
 
 [node name="FtrPltFlwAnemoneVase" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_nrtnh")
+area_path = NodePath("Body_1__mAnemoneBody/@Area3D@70775")
 
 [node name="Body_1__mAnemoneBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vn8v6")
 skeleton = NodePath("")
 
+[node name="@StaticBody3D@70773" type="StaticBody3D" parent="Body_1__mAnemoneBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70772" type="CollisionShape3D" parent="Body_1__mAnemoneBody/@StaticBody3D@70773"]
+shape = SubResource("BoxShape3D_0idse")
+
+[node name="@Area3D@70775" type="Area3D" parent="Body_1__mAnemoneBody"]
+
+[node name="@CollisionShape3D@70774" type="CollisionShape3D" parent="Body_1__mAnemoneBody/@Area3D@70775"]
+shape = SubResource("BoxShape3D_nrtnh")
+
 [node name="PltFlwAnemoneVase__mAnemoneVase" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_08fn6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_0idse")
 
 [node name="PltFlwTestAnemone_pCylinder10__mAnemoneFlower" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_56u72")

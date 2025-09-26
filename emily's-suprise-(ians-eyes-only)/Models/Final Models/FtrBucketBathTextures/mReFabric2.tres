@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://yme0or2i1hdy"]
+
+[ext_resource type="Texture2D" uid="uid://bm0awemmmsl1l" path="res://Models/Final Models/FtrBucketBathTextures/mReFabric_Alb2.png" id="1_8hjyx"]
+
+[resource]
+resource_name = "mReFabric2"
+albedo_texture = ExtResource("1_8hjyx")
+normal_enabled = true

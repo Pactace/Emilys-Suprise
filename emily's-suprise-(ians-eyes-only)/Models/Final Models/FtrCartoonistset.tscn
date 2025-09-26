@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dbwhrerxf5ehq"]
+[gd_scene load_steps=12 format=4 uid="uid://dbwhrerxf5ehq"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_3r5b4"]
+[ext_resource type="Material" uid="uid://cyni0gs7ymg2y" path="res://Models/Final Models/FtrCartoonistsetTextures/mReBody0.tres" id="1_kundk"]
+[ext_resource type="Material" uid="uid://dxyy0uw3kha0q" path="res://Models/Final Models/FtrCartoonistsetTextures/mReFabric0.tres" id="2_3r5b4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq4n7"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8d08v")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kundk"]
+size = Vector3(0.088, 0.0307838, 0.0783316)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3r5b4"]
+size = Vector3(0.088, 0.0307838, 0.0783316)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsk4t"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -79,11 +89,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ove6r")
 
 [node name="FtrCartoonistset" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_3r5b4")
+area_path = NodePath("Eraser_low__mReBody/@Area3D@68839")
 
 [node name="Eraser_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ydy6u")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_kundk")
+
+[node name="@StaticBody3D@68837" type="StaticBody3D" parent="Eraser_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68836" type="CollisionShape3D" parent="Eraser_low__mReBody/@StaticBody3D@68837"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015391899, -0.000806801)
+shape = SubResource("BoxShape3D_kundk")
+
+[node name="@Area3D@68839" type="Area3D" parent="Eraser_low__mReBody"]
+
+[node name="@CollisionShape3D@68838" type="CollisionShape3D" parent="Eraser_low__mReBody/@Area3D@68839"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015391899, -0.000806801)
+shape = SubResource("BoxShape3D_3r5b4")
 
 [node name="Paper2_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_tbl3j")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_3r5b4")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d22ubvnn62w4v"]
+
+[ext_resource type="Texture2D" uid="uid://2d5o8hg3w60h" path="res://Models/Final Models/FtrUmbrellastandTextures/mReFabric_Alb1.png" id="1_kuw8c"]
+
+[resource]
+resource_name = "mReFabric1"
+albedo_texture = ExtResource("1_kuw8c")
+normal_enabled = true

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mn2pvx7483nq"
-path="res://.godot/imported/mBody_Alb.png-846a508ebc463621f136e409512c089d.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-846a508ebc463621f136e409512c089d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrGoldBathSquare.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-846a508ebc463621f136e409512c089d.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-846a508ebc463621f136e409512c089d.s3tc.ctex"]
 
 [params]
 

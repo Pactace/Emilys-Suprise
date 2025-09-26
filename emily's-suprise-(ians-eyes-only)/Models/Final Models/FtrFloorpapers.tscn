@@ -1,4 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://b1xmpcaxd1g40"]
+[gd_scene load_steps=14 format=4 uid="uid://b1xmpcaxd1g40"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_2sksw"]
+[ext_resource type="Material" uid="uid://btun5cwucwyk3" path="res://Models/Final Models/FtrFloorpapersTextures/mBody0.tres" id="1_3tt6w"]
+[ext_resource type="Material" uid="uid://1ucbj0u1oqxt" path="res://Models/Final Models/FtrFloorpapersTextures/mReFabric0.tres" id="2_2sksw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nefle"]
 resource_name = "mBody"
@@ -62,6 +66,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_oytj2")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tt6w"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2sksw"]
+size = Vector3(0, 0, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fwfkv"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -96,15 +106,33 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m7672")
 
 [node name="FtrFloorpapers" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_2sksw")
+area_path = NodePath("Papers_YellowR_low__mBody/@Area3D@69559")
 
 [node name="Floor_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qd3jb")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_3tt6w")
 
 [node name="Papers_YellowR_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4jluh")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_3tt6w")
+
+[node name="@StaticBody3D@69557" type="StaticBody3D" parent="Papers_YellowR_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69556" type="CollisionShape3D" parent="Papers_YellowR_low__mBody/@StaticBody3D@69557"]
+shape = SubResource("BoxShape3D_3tt6w")
+
+[node name="@Area3D@69559" type="Area3D" parent="Papers_YellowR_low__mBody"]
+
+[node name="@CollisionShape3D@69558" type="CollisionShape3D" parent="Papers_YellowR_low__mBody/@Area3D@69559"]
+shape = SubResource("BoxShape3D_2sksw")
 
 [node name="Papers_Yellow_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ph1aj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_2sksw")

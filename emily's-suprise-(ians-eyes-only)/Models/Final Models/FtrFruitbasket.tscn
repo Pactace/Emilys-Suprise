@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://de1h2wwii0cfq"]
+[gd_scene load_steps=8 format=4 uid="uid://de1h2wwii0cfq"]
+
+[ext_resource type="Material" uid="uid://cp8sda1oep7rt" path="res://Models/Final Models/FtrFruitbasketTextures/mBody0.tres" id="1_n0l30"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_xcplp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6n1y"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3fje2")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n0l30"]
+size = Vector3(0.0933425, 0.0487028, 0.0699827)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xcplp"]
+size = Vector3(0.0933425, 0.0487028, 0.0699827)
+
 [node name="FtrFruitbasket" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_xcplp")
+area_path = NodePath("BigHeta1_low__mBody/@Area3D@69663")
 
 [node name="BigHeta1_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_byl7s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_n0l30")
+
+[node name="@StaticBody3D@69661" type="StaticBody3D" parent="BigHeta1_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69660" type="CollisionShape3D" parent="BigHeta1_low__mBody/@StaticBody3D@69661"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00022155046, 0.024315853, 3.4149736e-05)
+shape = SubResource("BoxShape3D_n0l30")
+
+[node name="@Area3D@69663" type="Area3D" parent="BigHeta1_low__mBody"]
+
+[node name="@CollisionShape3D@69662" type="CollisionShape3D" parent="BigHeta1_low__mBody/@Area3D@69663"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00022155046, 0.024315853, 3.4149736e-05)
+shape = SubResource("BoxShape3D_xcplp")

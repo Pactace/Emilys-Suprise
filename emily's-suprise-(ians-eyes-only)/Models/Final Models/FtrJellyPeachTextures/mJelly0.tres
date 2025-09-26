@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://givl6bfspta2"]
+
+[ext_resource type="Texture2D" uid="uid://u4ohbnqhjtji" path="res://Models/Final Models/FtrJellyPeachTextures/mJelly_Alb.png" id="1_7p2sh"]
+[ext_resource type="Texture2D" uid="uid://ch274tmslcb67" path="res://Models/Final Models/FtrJellyPeachTextures/mJelly_Nrm.png" id="2_b8uux"]
+
+[resource]
+resource_name = "mJelly0"
+albedo_texture = ExtResource("1_7p2sh")
+normal_enabled = true
+normal_texture = ExtResource("2_b8uux")

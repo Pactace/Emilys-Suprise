@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lgolurudjsu"
-path="res://.godot/imported/mHandle_Alb.png-a61c1e28be742d76185fc3c85c097efa.ctex"
+path.s3tc="res://.godot/imported/mHandle_Alb.png-a61c1e28be742d76185fc3c85c097efa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCandleTakumi.Nin_NX_NVN/mHandle_Alb.png"
-dest_files=["res://.godot/imported/mHandle_Alb.png-a61c1e28be742d76185fc3c85c097efa.ctex"]
+dest_files=["res://.godot/imported/mHandle_Alb.png-a61c1e28be742d76185fc3c85c097efa.s3tc.ctex"]
 
 [params]
 

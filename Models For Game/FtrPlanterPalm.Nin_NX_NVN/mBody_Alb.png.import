@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://403djrpcithg"
-path="res://.godot/imported/mBody_Alb.png-85d3118e0ab052b9a59cc04f91ec50ec.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-85d3118e0ab052b9a59cc04f91ec50ec.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPlanterPalm.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-85d3118e0ab052b9a59cc04f91ec50ec.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-85d3118e0ab052b9a59cc04f91ec50ec.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ftrphqvkirbc"
-path="res://.godot/imported/mBody_Alb.png-1e6c9dbc89e13b3f3c95aacee41a6fab.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-1e6c9dbc89e13b3f3c95aacee41a6fab.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrGoldTrolley.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-1e6c9dbc89e13b3f3c95aacee41a6fab.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-1e6c9dbc89e13b3f3c95aacee41a6fab.s3tc.ctex"]
 
 [params]
 

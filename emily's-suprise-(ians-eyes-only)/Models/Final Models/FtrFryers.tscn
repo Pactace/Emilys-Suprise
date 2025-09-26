@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://brrqlkwkgdnu4"]
+[gd_scene load_steps=15 format=4 uid="uid://brrqlkwkgdnu4"]
+
+[ext_resource type="Material" uid="uid://gxvdfrw6g52q" path="res://Models/Final Models/FtrFryersTextures/mBody0.tres" id="1_suimr"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wag7j"]
+[ext_resource type="Material" uid="uid://ces86j2xvf7ow" path="res://Models/Final Models/FtrFryersTextures/mReBody0.tres" id="2_wag7j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ou2g"]
 resource_name = "mBody"
@@ -72,6 +76,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_va5sp")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_suimr"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wag7j"]
+size = Vector3(0, 0, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qer18"]
 resource_name = "mOil"
 vertex_color_use_as_albedo = true
@@ -107,14 +117,31 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_25fr2")
 
 [node name="FtrFryers" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_wag7j")
+area_path = NodePath("Button_top_low__mReBody/@Area3D@69711")
 
 [node name="BaseLeg_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vv5ju")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_suimr")
 
 [node name="Button_top_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_l85a1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_wag7j")
+
+[node name="@StaticBody3D@69709" type="StaticBody3D" parent="Button_top_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69708" type="CollisionShape3D" parent="Button_top_low__mReBody/@StaticBody3D@69709"]
+shape = SubResource("BoxShape3D_suimr")
+
+[node name="@Area3D@69711" type="Area3D" parent="Button_top_low__mReBody"]
+
+[node name="@CollisionShape3D@69710" type="CollisionShape3D" parent="Button_top_low__mReBody/@Area3D@69711"]
+shape = SubResource("BoxShape3D_wag7j")
 
 [node name="Oil_low__mOil" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7atfn")

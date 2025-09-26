@@ -1,4 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://b8tgccjs6avaf"]
+[gd_scene load_steps=10 format=4 uid="uid://b8tgccjs6avaf"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_spytd"]
+[ext_resource type="Material" uid="uid://cj5kjb2v5fpx8" path="res://Models/Final Models/FtrCuteChairLTextures/mReBody0.tres" id="1_yim3w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mk66v"]
 resource_name = "mReBody"
@@ -73,12 +76,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tvxqe")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yim3w"]
+size = Vector3(0.0565441, 0.048251, 0.0361864)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_spytd"]
+size = Vector3(0.0565441, 0.048251, 0.0361864)
+
 [node name="FtrCuteChairL" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_spytd")
+area_path = NodePath("heartCushion_low__mReBody/@Area3D@69139")
 
 [node name="bis_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2h0ci")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_yim3w")
 
 [node name="heartCushion_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wr50y")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_yim3w")
+
+[node name="@StaticBody3D@69137" type="StaticBody3D" parent="heartCushion_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69136" type="CollisionShape3D" parent="heartCushion_low__mReBody/@StaticBody3D@69137"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04427965, 0.0678713, -0.0019881)
+shape = SubResource("BoxShape3D_yim3w")
+
+[node name="@Area3D@69139" type="Area3D" parent="heartCushion_low__mReBody"]
+
+[node name="@CollisionShape3D@69138" type="CollisionShape3D" parent="heartCushion_low__mReBody/@Area3D@69139"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04427965, 0.0678713, -0.0019881)
+shape = SubResource("BoxShape3D_spytd")

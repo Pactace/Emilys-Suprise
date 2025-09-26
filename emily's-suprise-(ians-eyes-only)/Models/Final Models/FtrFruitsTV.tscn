@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://5m4ju3nc6cu6"]
+[gd_scene load_steps=12 format=4 uid="uid://5m4ju3nc6cu6"]
+
+[ext_resource type="Material" uid="uid://cfrub8yedujbl" path="res://Models/Final Models/FtrFruitsTVTextures/mReBody0.tres" id="1_gw3b5"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_sls1r"]
+[ext_resource type="Material" uid="uid://chf11ek2agdmg" path="res://Models/Final Models/FtrFruitsTVTextures/mTv0.tres" id="2_sls1r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pdpv"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h17rw")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gw3b5"]
+size = Vector3(0.0804183, 0.121162, 0.0485074)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sls1r"]
+size = Vector3(0.0804183, 0.121162, 0.0485074)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyofb"]
 resource_name = "mTv"
 vertex_color_use_as_albedo = true
@@ -73,11 +83,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7oeqe")
 
 [node name="FtrFruitsTV" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_sls1r")
+area_path = NodePath("pCube14__mReBody/@Area3D@69703")
 
 [node name="pCube14__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_s6bbu")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gw3b5")
+
+[node name="@StaticBody3D@69701" type="StaticBody3D" parent="pCube14__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69700" type="CollisionShape3D" parent="pCube14__mReBody/@StaticBody3D@69701"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4901161e-07, 0.059736464, -0.0020643007)
+shape = SubResource("BoxShape3D_gw3b5")
+
+[node name="@Area3D@69703" type="Area3D" parent="pCube14__mReBody"]
+
+[node name="@CollisionShape3D@69702" type="CollisionShape3D" parent="pCube14__mReBody/@Area3D@69703"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4901161e-07, 0.059736464, -0.0020643007)
+shape = SubResource("BoxShape3D_sls1r")
 
 [node name="pCube18__mTv" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_utwq3")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_sls1r")

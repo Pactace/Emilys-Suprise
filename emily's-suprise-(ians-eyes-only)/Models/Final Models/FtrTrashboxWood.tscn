@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://b2qedvdslvk6q"]
+[gd_scene load_steps=8 format=4 uid="uid://b2qedvdslvk6q"]
+
+[ext_resource type="Material" uid="uid://chtoqjuujks61" path="res://Models/Final Models/FtrTrashboxWoodTextures/mReBody0.tres" id="1_337pt"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_swk5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3n1e"]
 resource_name = "mReBody"
@@ -35,8 +38,30 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gdut7")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_337pt"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swk5x"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrTrashboxWood" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_swk5x")
+area_path = NodePath("Box_Wood__mReBody/@Area3D@71175")
 
 [node name="Box_Wood__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_bnb70")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_337pt")
+
+[node name="@StaticBody3D@71173" type="StaticBody3D" parent="Box_Wood__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71172" type="CollisionShape3D" parent="Box_Wood__mReBody/@StaticBody3D@71173"]
+shape = SubResource("BoxShape3D_337pt")
+
+[node name="@Area3D@71175" type="Area3D" parent="Box_Wood__mReBody"]
+
+[node name="@CollisionShape3D@71174" type="CollisionShape3D" parent="Box_Wood__mReBody/@Area3D@71175"]
+shape = SubResource("BoxShape3D_swk5x")

@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://b30w7m6iwcny6"]
+[gd_scene load_steps=14 format=4 uid="uid://b30w7m6iwcny6"]
+
+[ext_resource type="Material" uid="uid://do6y06qxg5qlk" path="res://Models/Final Models/FtrSeasoningTextures/mReBody0.tres" id="1_mjthk"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_voolc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg7cs"]
 resource_name = "mReBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t6cf0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjthk"]
+size = Vector3(0.0589333, 0.0566706, 0.0589333)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_voolc"]
+size = Vector3(0.0589333, 0.0566706, 0.0589333)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvrre"]
 resource_name = "mGlass"
@@ -106,10 +115,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_uaojk")
 
 [node name="FtrSeasoning" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_voolc")
+area_path = NodePath("Content01_low__mReBody/@Area3D@70923")
 
 [node name="Content01_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d7nlg")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_mjthk")
+
+[node name="@StaticBody3D@70921" type="StaticBody3D" parent="Content01_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70920" type="CollisionShape3D" parent="Content01_low__mReBody/@StaticBody3D@70921"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.029142e-08, 0.0283353, -5.029142e-08)
+shape = SubResource("BoxShape3D_mjthk")
+
+[node name="@Area3D@70923" type="Area3D" parent="Content01_low__mReBody"]
+
+[node name="@CollisionShape3D@70922" type="CollisionShape3D" parent="Content01_low__mReBody/@Area3D@70923"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.029142e-08, 0.0283353, -5.029142e-08)
+shape = SubResource("BoxShape3D_voolc")
 
 [node name="MBottle01_outer_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rv23n")

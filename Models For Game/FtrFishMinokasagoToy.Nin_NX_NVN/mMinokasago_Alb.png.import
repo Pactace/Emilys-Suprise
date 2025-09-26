@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu512widw4aye"
-path="res://.godot/imported/mMinokasago_Alb.png-09410d9d58a27088c514bad92d2d28b0.ctex"
+path.s3tc="res://.godot/imported/mMinokasago_Alb.png-09410d9d58a27088c514bad92d2d28b0.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishMinokasagoToy.Nin_NX_NVN/mMinokasago_Alb.png"
-dest_files=["res://.godot/imported/mMinokasago_Alb.png-09410d9d58a27088c514bad92d2d28b0.ctex"]
+dest_files=["res://.godot/imported/mMinokasago_Alb.png-09410d9d58a27088c514bad92d2d28b0.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb3sdsc0tbius"
-path="res://.godot/imported/mBody_Alb.png-171669677cee6ce92bcf9aef9149721e.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-171669677cee6ce92bcf9aef9149721e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFootball.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-171669677cee6ce92bcf9aef9149721e.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-171669677cee6ce92bcf9aef9149721e.s3tc.ctex"]
 
 [params]
 

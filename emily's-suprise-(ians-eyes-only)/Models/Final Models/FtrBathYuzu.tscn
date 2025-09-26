@@ -1,4 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://cbm2shbndqyw5"]
+[gd_scene load_steps=13 format=4 uid="uid://cbm2shbndqyw5"]
+
+[ext_resource type="Material" uid="uid://bjwwplixvx1lj" path="res://Models/Final Models/FtrBathYuzuTextures/mBody0.tres" id="1_6uu5w"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ngwbm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4sd2s"]
 resource_name = "mBody"
@@ -73,6 +76,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qyocd")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6uu5w"]
+size = Vector3(0.175174, 0.0801634, 0.175174)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngwbm"]
+size = Vector3(0.175174, 0.0801634, 0.175174)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40g51"]
 resource_name = "mWater"
 vertex_color_use_as_albedo = true
@@ -113,14 +122,33 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kwwx8")
 
 [node name="FtrBathYuzu" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ngwbm")
+area_path = NodePath("pCylinder1__mBody/@Area3D@68567")
 
 [node name="Bamboo01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_iog1s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_6uu5w")
 
 [node name="pCylinder1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1jjti")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_6uu5w")
+
+[node name="@StaticBody3D@68565" type="StaticBody3D" parent="pCylinder1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68564" type="CollisionShape3D" parent="pCylinder1__mBody/@StaticBody3D@68565"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0430813e-07, 0.04007537, 0)
+shape = SubResource("BoxShape3D_6uu5w")
+
+[node name="@Area3D@68567" type="Area3D" parent="pCylinder1__mBody"]
+
+[node name="@CollisionShape3D@68566" type="CollisionShape3D" parent="pCylinder1__mBody/@Area3D@68567"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0430813e-07, 0.04007537, 0)
+shape = SubResource("BoxShape3D_ngwbm")
 
 [node name="water__mWater" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rjvgw")

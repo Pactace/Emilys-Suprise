@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r4j4utw167ni"
-path="res://.godot/imported/mBody_Alb.png-a11a6e881d9e36cb87ea209ec49900aa.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-a11a6e881d9e36cb87ea209ec49900aa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJarTomato.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-a11a6e881d9e36cb87ea209ec49900aa.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-a11a6e881d9e36cb87ea209ec49900aa.s3tc.ctex"]
 
 [params]
 

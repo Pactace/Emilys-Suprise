@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blaxhxsty277s"
-path="res://.godot/imported/mPlant_Alb.png-3ae07add6621ccbf12cbb13fc7219811.ctex"
+path.s3tc="res://.godot/imported/mPlant_Alb.png-3ae07add6621ccbf12cbb13fc7219811.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPlantCacao.Nin_NX_NVN/mPlant_Alb.png"
-dest_files=["res://.godot/imported/mPlant_Alb.png-3ae07add6621ccbf12cbb13fc7219811.ctex"]
+dest_files=["res://.godot/imported/mPlant_Alb.png-3ae07add6621ccbf12cbb13fc7219811.s3tc.ctex"]
 
 [params]
 

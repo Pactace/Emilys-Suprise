@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://df3jh0oixuboh"]
+[gd_scene load_steps=8 format=4 uid="uid://df3jh0oixuboh"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_krmkk"]
+[ext_resource type="Material" uid="uid://fb6ic4gcj82i" path="res://Models/Final Models/FtrRiceCookerTextures/mReBody0.tres" id="1_qra2u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7p2g"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a6hcc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qra2u"]
+size = Vector3(0.0552339, 0.0504803, 0.0677048)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_krmkk"]
+size = Vector3(0.0552339, 0.0504803, 0.0677048)
+
 [node name="FtrRiceCooker" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_krmkk")
+area_path = NodePath("FtrRiceCooker__mReBody/@Area3D@70891")
 
 [node name="FtrRiceCooker__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qtvqj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_qra2u")
+
+[node name="@StaticBody3D@70889" type="StaticBody3D" parent="FtrRiceCooker__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70888" type="CollisionShape3D" parent="FtrRiceCooker__mReBody/@StaticBody3D@70889"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0.02524015, -0.00081850216)
+shape = SubResource("BoxShape3D_qra2u")
+
+[node name="@Area3D@70891" type="Area3D" parent="FtrRiceCooker__mReBody"]
+
+[node name="@CollisionShape3D@70890" type="CollisionShape3D" parent="FtrRiceCooker__mReBody/@Area3D@70891"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0.02524015, -0.00081850216)
+shape = SubResource("BoxShape3D_krmkk")

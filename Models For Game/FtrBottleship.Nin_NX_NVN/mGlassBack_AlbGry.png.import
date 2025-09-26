@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx3gvwk6odqp8"
-path="res://.godot/imported/mGlassBack_AlbGry.png-c3dc48fd6d65440a9b0e2b394f1ecb3d.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_AlbGry.png-c3dc48fd6d65440a9b0e2b394f1ecb3d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBottleship.Nin_NX_NVN/mGlassBack_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassBack_AlbGry.png-c3dc48fd6d65440a9b0e2b394f1ecb3d.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_AlbGry.png-c3dc48fd6d65440a9b0e2b394f1ecb3d.s3tc.ctex"]
 
 [params]
 

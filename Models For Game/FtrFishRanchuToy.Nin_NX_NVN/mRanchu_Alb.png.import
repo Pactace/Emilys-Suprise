@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k10cm23lwdta"
-path="res://.godot/imported/mRanchu_Alb.png-80a1cd242dedaa6a86b40a8647da4f2e.ctex"
+path.s3tc="res://.godot/imported/mRanchu_Alb.png-80a1cd242dedaa6a86b40a8647da4f2e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishRanchuToy.Nin_NX_NVN/mRanchu_Alb.png"
-dest_files=["res://.godot/imported/mRanchu_Alb.png-80a1cd242dedaa6a86b40a8647da4f2e.ctex"]
+dest_files=["res://.godot/imported/mRanchu_Alb.png-80a1cd242dedaa6a86b40a8647da4f2e.s3tc.ctex"]
 
 [params]
 

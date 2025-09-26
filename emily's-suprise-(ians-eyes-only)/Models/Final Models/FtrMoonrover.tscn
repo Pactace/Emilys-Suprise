@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://ddiu3yysjff07"]
+[gd_scene load_steps=8 format=4 uid="uid://ddiu3yysjff07"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6agdl"]
+[ext_resource type="Material" uid="uid://dvb35tngbygdw" path="res://Models/Final Models/FtrMoonroverTextures/mBody0.tres" id="1_lxxdm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0vjmr"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xly0l")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lxxdm"]
+size = Vector3(0.197726, 0.154312, 0.139978)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6agdl"]
+size = Vector3(0.197726, 0.154312, 0.139978)
+
 [node name="FtrMoonrover" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6agdl")
+area_path = NodePath("Antenna_01_low__mBody/@Area3D@70499")
 
 [node name="Antenna_01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0jbdj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_lxxdm")
+
+[node name="@StaticBody3D@70497" type="StaticBody3D" parent="Antenna_01_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70496" type="CollisionShape3D" parent="Antenna_01_low__mBody/@StaticBody3D@70497"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.120039e-05, 0.07502354, 2.3022294e-06)
+shape = SubResource("BoxShape3D_lxxdm")
+
+[node name="@Area3D@70499" type="Area3D" parent="Antenna_01_low__mBody"]
+
+[node name="@CollisionShape3D@70498" type="CollisionShape3D" parent="Antenna_01_low__mBody/@Area3D@70499"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.120039e-05, 0.07502354, 2.3022294e-06)
+shape = SubResource("BoxShape3D_6agdl")

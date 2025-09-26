@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l88lbx1nwqki"
-path="res://.godot/imported/mNamazu_Alb.png-558bcd074c6e7d087419ab049b39fbfa.ctex"
+path.s3tc="res://.godot/imported/mNamazu_Alb.png-558bcd074c6e7d087419ab049b39fbfa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNamazu.Nin_NX_NVN/mNamazu_Alb.png"
-dest_files=["res://.godot/imported/mNamazu_Alb.png-558bcd074c6e7d087419ab049b39fbfa.ctex"]
+dest_files=["res://.godot/imported/mNamazu_Alb.png-558bcd074c6e7d087419ab049b39fbfa.s3tc.ctex"]
 
 [params]
 

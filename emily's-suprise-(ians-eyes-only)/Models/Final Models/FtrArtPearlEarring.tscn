@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dbpyd0j6cxrne"]
+[gd_scene load_steps=12 format=4 uid="uid://dbpyd0j6cxrne"]
+
+[ext_resource type="Material" uid="uid://wxurl04jdq7o" path="res://Models/Final Models/FtrArtPearlEarringTextures/mBody0.tres" id="1_7vj10"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_bjvy4"]
+[ext_resource type="Material" uid="uid://rupqescjyf1r" path="res://Models/Final Models/FtrArtPearlEarringTextures/mFrame0.tres" id="2_bjvy4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmq6i"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xj2ra")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7vj10"]
+size = Vector3(0.05265, 0.06075, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bjvy4"]
+size = Vector3(0.05265, 0.06075, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkb7w"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rybtl")
 
 [node name="FtrArtPearlEarring" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_bjvy4")
+area_path = NodePath("FtrArtPearlEarring__mBody/@Area3D@68439")
 
 [node name="FtrArtPearlEarring__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_h5ycj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7vj10")
+
+[node name="@StaticBody3D@68437" type="StaticBody3D" parent="FtrArtPearlEarring__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68436" type="CollisionShape3D" parent="FtrArtPearlEarring__mBody/@StaticBody3D@68437"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_7vj10")
+
+[node name="@Area3D@68439" type="Area3D" parent="FtrArtPearlEarring__mBody"]
+
+[node name="@CollisionShape3D@68438" type="CollisionShape3D" parent="FtrArtPearlEarring__mBody/@Area3D@68439"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_bjvy4")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_l03pi")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_bjvy4")

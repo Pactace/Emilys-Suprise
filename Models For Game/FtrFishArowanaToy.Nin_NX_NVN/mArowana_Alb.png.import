@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3uro8x6nx0ti"
-path="res://.godot/imported/mArowana_Alb.png-b14699bfc48f111f349009848257c6df.ctex"
+path.s3tc="res://.godot/imported/mArowana_Alb.png-b14699bfc48f111f349009848257c6df.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishArowanaToy.Nin_NX_NVN/mArowana_Alb.png"
-dest_files=["res://.godot/imported/mArowana_Alb.png-b14699bfc48f111f349009848257c6df.ctex"]
+dest_files=["res://.godot/imported/mArowana_Alb.png-b14699bfc48f111f349009848257c6df.s3tc.ctex"]
 
 [params]
 

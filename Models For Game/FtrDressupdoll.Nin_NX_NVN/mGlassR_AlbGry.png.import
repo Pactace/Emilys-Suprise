@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i6gv8dkjxd4u"
-path="res://.godot/imported/mGlassR_AlbGry.png-528f18a4653b0b00102129ac81deed11.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-528f18a4653b0b00102129ac81deed11.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDressupdoll.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-528f18a4653b0b00102129ac81deed11.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-528f18a4653b0b00102129ac81deed11.s3tc.ctex"]
 
 [params]
 

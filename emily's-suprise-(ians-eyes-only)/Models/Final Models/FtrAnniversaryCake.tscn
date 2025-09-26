@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://d3j85ej6onrdi"]
+[gd_scene load_steps=8 format=4 uid="uid://d3j85ej6onrdi"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_35u5l"]
+[ext_resource type="Material" uid="uid://7it83wp13y53" path="res://Models/Final Models/FtrAnniversaryCakeTextures/mBody0.tres" id="1_ykegj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rpqc"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_p7x2s")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ykegj"]
+size = Vector3(0.0925579, 0.0871426, 0.0856329)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_35u5l"]
+size = Vector3(0.0925579, 0.0871426, 0.0856329)
+
 [node name="FtrAnniversaryCake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_35u5l")
+area_path = NodePath("CakeLower_low__mBody/@Area3D@68239")
 
 [node name="CakeLower_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ht0ut")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ykegj")
+
+[node name="@StaticBody3D@68237" type="StaticBody3D" parent="CakeLower_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68236" type="CollisionShape3D" parent="CakeLower_low__mBody/@StaticBody3D@68237"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.850809e-06, 0.04364721, 1.4901161e-07)
+shape = SubResource("BoxShape3D_ykegj")
+
+[node name="@Area3D@68239" type="Area3D" parent="CakeLower_low__mBody"]
+
+[node name="@CollisionShape3D@68238" type="CollisionShape3D" parent="CakeLower_low__mBody/@Area3D@68239"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.850809e-06, 0.04364721, 1.4901161e-07)
+shape = SubResource("BoxShape3D_35u5l")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b08sky06f71fd"
-path="res://.godot/imported/mBody_Alb.png-36b650cffc72ed5fb96d6a7a00777dba.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-36b650cffc72ed5fb96d6a7a00777dba.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMoonrover.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-36b650cffc72ed5fb96d6a7a00777dba.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-36b650cffc72ed5fb96d6a7a00777dba.s3tc.ctex"]
 
 [params]
 

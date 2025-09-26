@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kgelpn0f6jaw"
-path="res://.godot/imported/mGlass_Alb.png-acfc333ef82f4ff3c80d77f2fca8d37e.ctex"
+path.s3tc="res://.godot/imported/mGlass_Alb.png-acfc333ef82f4ff3c80d77f2fca8d37e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFruitswater.Nin_NX_NVN/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-acfc333ef82f4ff3c80d77f2fca8d37e.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-acfc333ef82f4ff3c80d77f2fca8d37e.s3tc.ctex"]
 
 [params]
 

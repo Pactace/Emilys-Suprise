@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dygxnd4bbhji8"]
+[gd_scene load_steps=12 format=3 uid="uid://dygxnd4bbhji8"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_561xq"]
+[ext_resource type="Material" uid="uid://codrf4oqdkolt" path="res://Models/Final Models/FtrMydesignGroundTextures/mBody0.tres" id="1_mwc1y"]
+[ext_resource type="Material" uid="uid://sui1kdh1cwr7" path="res://Models/Final Models/FtrMydesignGroundTextures/mReFabric0.tres" id="2_561xq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byfg8"]
 resource_name = "mBody"
@@ -31,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bnmff")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mwc1y"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_561xq"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seds2"]
 resource_name = "mReFabric"
@@ -67,11 +77,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8wgrp")
 
 [node name="FtrMydesignGround" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_561xq")
+area_path = NodePath("plane__mBody/@Area3D@70551")
 
 [node name="plane__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_38jbv")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_mwc1y")
+
+[node name="@StaticBody3D@70549" type="StaticBody3D" parent="plane__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70548" type="CollisionShape3D" parent="plane__mBody/@StaticBody3D@70549"]
+shape = SubResource("BoxShape3D_mwc1y")
+
+[node name="@Area3D@70551" type="Area3D" parent="plane__mBody"]
+
+[node name="@CollisionShape3D@70550" type="CollisionShape3D" parent="plane__mBody/@Area3D@70551"]
+shape = SubResource("BoxShape3D_561xq")
 
 [node name="plane__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_j4uot")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_561xq")

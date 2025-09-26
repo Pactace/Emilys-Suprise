@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7lk7t3snwvli"
-path="res://.godot/imported/mDemenigisuDome_Alb.png-99a776ae77fe6dfc3992e81e59636f13.ctex"
+path.s3tc="res://.godot/imported/mDemenigisuDome_Alb.png-99a776ae77fe6dfc3992e81e59636f13.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDemenigisuToy.Nin_NX_NVN/mDemenigisuDome_Alb.png"
-dest_files=["res://.godot/imported/mDemenigisuDome_Alb.png-99a776ae77fe6dfc3992e81e59636f13.ctex"]
+dest_files=["res://.godot/imported/mDemenigisuDome_Alb.png-99a776ae77fe6dfc3992e81e59636f13.s3tc.ctex"]
 
 [params]
 

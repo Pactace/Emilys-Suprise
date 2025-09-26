@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dor5it8p7mnsu"
-path="res://.godot/imported/mBody_Alb.png-c4aa51d75a821cdbfcc558d9b7224e70.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-c4aa51d75a821cdbfcc558d9b7224e70.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtPearlEarring.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-c4aa51d75a821cdbfcc558d9b7224e70.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-c4aa51d75a821cdbfcc558d9b7224e70.s3tc.ctex"]
 
 [params]
 

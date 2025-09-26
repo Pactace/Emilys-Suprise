@@ -1,4 +1,8 @@
-[gd_scene load_steps=15 format=4 uid="uid://dscbg6l6kj0v7"]
+[gd_scene load_steps=20 format=4 uid="uid://dscbg6l6kj0v7"]
+
+[ext_resource type="Material" uid="uid://bdmy40vmoy8wy" path="res://Models/Final Models/FtrComponentProTextures/mBody0.tres" id="1_ijes0"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_o3w1g"]
+[ext_resource type="Material" uid="uid://cc6qbmwgtsnti" path="res://Models/Final Models/FtrComponentProTextures/mEqualizer0.tres" id="2_o3w1g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwvbj"]
 resource_name = "mBody"
@@ -70,6 +74,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dkc6l")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijes0"]
+size = Vector3(0.0442568, 0.00943758, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o3w1g"]
+size = Vector3(0.0442568, 0.00943758, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_738of"]
 resource_name = "mEqualizer"
@@ -186,18 +196,38 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fnysw")
 
 [node name="FtrComponentPro" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_o3w1g")
+area_path = NodePath("equalizer__mBody/@Area3D@68975")
 
 [node name="Host__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_544kp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ijes0")
 
 [node name="equalizer__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6ooa4")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ijes0")
+
+[node name="@StaticBody3D@68973" type="StaticBody3D" parent="equalizer__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68972" type="CollisionShape3D" parent="equalizer__mBody/@StaticBody3D@68973"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00016100146, 0.03729289, 0.0325068)
+shape = SubResource("BoxShape3D_ijes0")
+
+[node name="@Area3D@68975" type="Area3D" parent="equalizer__mBody"]
+
+[node name="@CollisionShape3D@68974" type="CollisionShape3D" parent="equalizer__mBody/@Area3D@68975"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00016100146, 0.03729289, 0.0325068)
+shape = SubResource("BoxShape3D_o3w1g")
 
 [node name="equalizer__mEqualizer" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3l8up")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_o3w1g")
 
 [node name="transparent__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_11xml")

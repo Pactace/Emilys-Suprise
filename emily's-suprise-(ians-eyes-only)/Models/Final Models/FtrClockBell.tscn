@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://bkt0l1hqd7cq5"]
+[gd_scene load_steps=15 format=4 uid="uid://bkt0l1hqd7cq5"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ctf1m"]
+[ext_resource type="Material" uid="uid://kvvevcae4u2n" path="res://Models/Final Models/FtrClockBellTextures/mReBody0.tres" id="1_jbnpe"]
+[ext_resource type="Material" uid="uid://dglga2vwhwwxa" path="res://Models/Final Models/FtrClockBellTextures/mClockHand0.tres" id="2_ctf1m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki5rc"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_psmbm")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jbnpe"]
+size = Vector3(0.0484172, 0.0622702, 0.0317581)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ctf1m"]
+size = Vector3(0.0484172, 0.0622702, 0.0317581)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lwwk"]
 resource_name = "mClockHand"
@@ -115,14 +125,33 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_unxau")
 
 [node name="FtrClockBell" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ctf1m")
+area_path = NodePath("ClockBell1_low__mReBody/@Area3D@68939")
 
 [node name="ClockBell1_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_v5kdd")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_jbnpe")
+
+[node name="@StaticBody3D@68937" type="StaticBody3D" parent="ClockBell1_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68936" type="CollisionShape3D" parent="ClockBell1_low__mReBody/@StaticBody3D@68937"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03117135, -0.00546835)
+shape = SubResource("BoxShape3D_jbnpe")
+
+[node name="@Area3D@68939" type="Area3D" parent="ClockBell1_low__mReBody"]
+
+[node name="@CollisionShape3D@68938" type="CollisionShape3D" parent="ClockBell1_low__mReBody/@Area3D@68939"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03117135, -0.00546835)
+shape = SubResource("BoxShape3D_ctf1m")
 
 [node name="HourHand_low__mClockHand" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_bpp13")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_ctf1m")
 
 [node name="glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_re25h")

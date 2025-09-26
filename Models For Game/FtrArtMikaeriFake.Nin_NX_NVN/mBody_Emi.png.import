@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6qa2b84mnsdd"
-path="res://.godot/imported/mBody_Emi.png-0e87e1b27c2e67a7a31c1fac1c59f783.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-0e87e1b27c2e67a7a31c1fac1c59f783.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtMikaeriFake.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-0e87e1b27c2e67a7a31c1fac1c59f783.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-0e87e1b27c2e67a7a31c1fac1c59f783.s3tc.ctex"]
 
 [params]
 

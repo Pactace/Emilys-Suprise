@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://dlqlhcetx2yog"]
+[gd_scene load_steps=11 format=4 uid="uid://dlqlhcetx2yog"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_dxs4v"]
+[ext_resource type="Material" uid="uid://dbuefpbhs8wmv" path="res://Models/Final Models/FtrStoveWoodTextures/mBody0.tres" id="1_l8vi0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_db8gj"]
 resource_name = "mBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w0n44")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l8vi0"]
+size = Vector3(0.0984629, 0.4, 0.0677387)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxs4v"]
+size = Vector3(0.0984629, 0.4, 0.0677387)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uodw6"]
 resource_name = "mGlass"
 vertex_color_use_as_albedo = true
@@ -72,10 +81,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wakh1")
 
 [node name="FtrStoveWood" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_dxs4v")
+area_path = NodePath("Base1_low__mBody/@Area3D@71087")
 
 [node name="Base1_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7nsk4")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_l8vi0")
+
+[node name="@StaticBody3D@71085" type="StaticBody3D" parent="Base1_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71084" type="CollisionShape3D" parent="Base1_low__mBody/@StaticBody3D@71085"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.2, 0.0007423498)
+shape = SubResource("BoxShape3D_l8vi0")
+
+[node name="@Area3D@71087" type="Area3D" parent="Base1_low__mBody"]
+
+[node name="@CollisionShape3D@71086" type="CollisionShape3D" parent="Base1_low__mBody/@Area3D@71087"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.2, 0.0007423498)
+shape = SubResource("BoxShape3D_dxs4v")
 
 [node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ent3d")

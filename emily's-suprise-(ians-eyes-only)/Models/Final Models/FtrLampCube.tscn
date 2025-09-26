@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnjpq0rto1ha8"]
+[gd_scene load_steps=8 format=3 uid="uid://bnjpq0rto1ha8"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_a307l"]
+[ext_resource type="Material" uid="uid://xn724bkj5ux7" path="res://Models/Final Models/FtrLampCubeTextures/mReFabric0.tres" id="1_vf43i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8f4w"]
 resource_name = "mReFabric"
@@ -33,8 +36,30 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3xp2a")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vf43i"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a307l"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrLampCube" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_a307l")
+area_path = NodePath("Cube__mReFabric/@Area3D@70203")
 
 [node name="Cube__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ydbra")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_vf43i")
+
+[node name="@StaticBody3D@70201" type="StaticBody3D" parent="Cube__mReFabric"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70200" type="CollisionShape3D" parent="Cube__mReFabric/@StaticBody3D@70201"]
+shape = SubResource("BoxShape3D_vf43i")
+
+[node name="@Area3D@70203" type="Area3D" parent="Cube__mReFabric"]
+
+[node name="@CollisionShape3D@70202" type="CollisionShape3D" parent="Cube__mReFabric/@Area3D@70203"]
+shape = SubResource("BoxShape3D_a307l")

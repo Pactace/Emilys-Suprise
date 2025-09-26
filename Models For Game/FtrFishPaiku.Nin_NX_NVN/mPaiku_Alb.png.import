@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ir3a2ue0ry5j"
-path="res://.godot/imported/mPaiku_Alb.png-3d06633ec820b60119d42751fe355097.ctex"
+path.s3tc="res://.godot/imported/mPaiku_Alb.png-3d06633ec820b60119d42751fe355097.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishPaiku.Nin_NX_NVN/mPaiku_Alb.png"
-dest_files=["res://.godot/imported/mPaiku_Alb.png-3d06633ec820b60119d42751fe355097.ctex"]
+dest_files=["res://.godot/imported/mPaiku_Alb.png-3d06633ec820b60119d42751fe355097.s3tc.ctex"]
 
 [params]
 

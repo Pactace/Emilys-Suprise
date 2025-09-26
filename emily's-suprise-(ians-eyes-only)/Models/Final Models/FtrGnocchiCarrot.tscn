@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://u71ehh0lfnx"]
+[gd_scene load_steps=8 format=4 uid="uid://u71ehh0lfnx"]
+
+[ext_resource type="Material" uid="uid://da6qgrqiff5n8" path="res://Models/Final Models/FtrGnocchiCarrotTextures/mBody0.tres" id="1_pogvy"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_t1jp0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7hx0"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v46y3")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pogvy"]
+size = Vector3(0.0717378, 0.0145952, 0.0717377)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t1jp0"]
+size = Vector3(0.0717378, 0.0145952, 0.0717377)
+
 [node name="FtrGnocchiCarrot" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_t1jp0")
+area_path = NodePath("Gnocchi01_low__mBody/@Area3D@69751")
 
 [node name="Gnocchi01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_utnbs")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_pogvy")
+
+[node name="@StaticBody3D@69749" type="StaticBody3D" parent="Gnocchi01_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69748" type="CollisionShape3D" parent="Gnocchi01_low__mBody/@StaticBody3D@69749"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0072976, -5.2154064e-08)
+shape = SubResource("BoxShape3D_pogvy")
+
+[node name="@Area3D@69751" type="Area3D" parent="Gnocchi01_low__mBody"]
+
+[node name="@CollisionShape3D@69750" type="CollisionShape3D" parent="Gnocchi01_low__mBody/@Area3D@69751"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0072976, -5.2154064e-08)
+shape = SubResource("BoxShape3D_t1jp0")

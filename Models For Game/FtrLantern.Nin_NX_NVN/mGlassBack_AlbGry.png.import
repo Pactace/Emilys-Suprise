@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6ixlr7ripb57"
-path="res://.godot/imported/mGlassBack_AlbGry.png-3f2b26bb9769df91ed0da3d22779c68c.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_AlbGry.png-3f2b26bb9769df91ed0da3d22779c68c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLantern.Nin_NX_NVN/mGlassBack_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassBack_AlbGry.png-3f2b26bb9769df91ed0da3d22779c68c.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_AlbGry.png-3f2b26bb9769df91ed0da3d22779c68c.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://rce2p6lurrl5"]
+[gd_scene load_steps=15 format=4 uid="uid://rce2p6lurrl5"]
+
+[ext_resource type="Material" uid="uid://doqgbwfy8ye7g" path="res://Models/Final Models/FtrDripTextures/mReBody0.tres" id="1_q6swf"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_y1mx1"]
+[ext_resource type="Material" uid="uid://b58fx0vbafvs5" path="res://Models/Final Models/FtrDripTextures/mGlass0.tres" id="2_y1mx1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc6co"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m71pr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q6swf"]
+size = Vector3(0.0668213, 0.175917, 0.0569849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y1mx1"]
+size = Vector3(0.0668213, 0.175917, 0.0569849)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jg3o7"]
 resource_name = "mGlassR"
@@ -120,10 +130,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s10ox")
 
 [node name="FtrDrip" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_y1mx1")
+area_path = NodePath("ashiParts_low__mReBody/@Area3D@69283")
 
 [node name="ashiParts_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_syfvw")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_q6swf")
+
+[node name="@StaticBody3D@69281" type="StaticBody3D" parent="ashiParts_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69280" type="CollisionShape3D" parent="ashiParts_low__mReBody/@StaticBody3D@69281"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00051034987, 0.0879585, -0.0074914508)
+shape = SubResource("BoxShape3D_q6swf")
+
+[node name="@Area3D@69283" type="Area3D" parent="ashiParts_low__mReBody"]
+
+[node name="@CollisionShape3D@69282" type="CollisionShape3D" parent="ashiParts_low__mReBody/@Area3D@69283"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00051034987, 0.0879585, -0.0074914508)
+shape = SubResource("BoxShape3D_y1mx1")
 
 [node name="drip1R_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_g6piw")
@@ -132,3 +160,4 @@ skeleton = NodePath("")
 [node name="drip1_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_bpuql")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_y1mx1")

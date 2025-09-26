@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://58oxj6peafqr"
-path="res://.godot/imported/mGlassBack_Alb.png-b095b774563bd64bfa7a39950195f03b.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_Alb.png-b095b774563bd64bfa7a39950195f03b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKingsalmon.Nin_NX_NVN/mGlassBack_Alb.png"
-dest_files=["res://.godot/imported/mGlassBack_Alb.png-b095b774563bd64bfa7a39950195f03b.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Alb.png-b095b774563bd64bfa7a39950195f03b.s3tc.ctex"]
 
 [params]
 

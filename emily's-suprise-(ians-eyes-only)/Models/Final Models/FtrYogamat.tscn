@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cowj1yo8rfbgx"]
+[gd_scene load_steps=12 format=3 uid="uid://cowj1yo8rfbgx"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4o2y5"]
+[ext_resource type="Material" uid="uid://dbsv7kumhwbju" path="res://Models/Final Models/FtrYogamatTextures/mReFabric0.tres" id="1_wq0gi"]
+[ext_resource type="Material" uid="uid://cltgtcay31ty5" path="res://Models/Final Models/FtrYogamatTextures/mBody0.tres" id="2_4o2y5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cubke"]
 resource_name = "mReFabric"
@@ -65,12 +69,35 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jeyfu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wq0gi"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4o2y5"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrYogamat" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4o2y5")
+area_path = NodePath("Mattag__mBody/@Area3D@71343")
 
 [node name="Mat__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vjym8")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_wq0gi")
 
 [node name="Mattag__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ji3e5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_4o2y5")
+
+[node name="@StaticBody3D@71341" type="StaticBody3D" parent="Mattag__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71340" type="CollisionShape3D" parent="Mattag__mBody/@StaticBody3D@71341"]
+shape = SubResource("BoxShape3D_wq0gi")
+
+[node name="@Area3D@71343" type="Area3D" parent="Mattag__mBody"]
+
+[node name="@CollisionShape3D@71342" type="CollisionShape3D" parent="Mattag__mBody/@Area3D@71343"]
+shape = SubResource("BoxShape3D_4o2y5")

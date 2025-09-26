@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bivjr07t4odt4"
-path="res://.godot/imported/mBody_Alb.png-4d857c1f85a14f975d8413fa4e559ad5.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-4d857c1f85a14f975d8413fa4e559ad5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtBlueBoyFake.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-4d857c1f85a14f975d8413fa4e559ad5.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-4d857c1f85a14f975d8413fa4e559ad5.s3tc.ctex"]
 
 [params]
 

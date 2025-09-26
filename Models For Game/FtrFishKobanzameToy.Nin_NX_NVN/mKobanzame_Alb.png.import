@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8ta6ph2t6lrl"
-path="res://.godot/imported/mKobanzame_Alb.png-a87282472d275e166c0992fd31ae155a.ctex"
+path.s3tc="res://.godot/imported/mKobanzame_Alb.png-a87282472d275e166c0992fd31ae155a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKobanzameToy.Nin_NX_NVN/mKobanzame_Alb.png"
-dest_files=["res://.godot/imported/mKobanzame_Alb.png-a87282472d275e166c0992fd31ae155a.ctex"]
+dest_files=["res://.godot/imported/mKobanzame_Alb.png-a87282472d275e166c0992fd31ae155a.s3tc.ctex"]
 
 [params]
 

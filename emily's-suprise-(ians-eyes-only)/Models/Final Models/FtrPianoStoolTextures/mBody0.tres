@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bj2epgmdblj7x"]
+
+[ext_resource type="Texture2D" uid="uid://c1lhijx1tl8d5" path="res://Models/Final Models/FtrPianoStoolTextures/mBody_Alb.png" id="1_nv8fe"]
+[ext_resource type="Texture2D" uid="uid://dlspa67okndmh" path="res://Models/Final Models/FtrPianoStoolTextures/mBody_Nrm.png" id="2_sly02"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_nv8fe")
+normal_enabled = true
+normal_texture = ExtResource("2_sly02")

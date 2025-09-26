@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://clvfvl00xw0td"]
+[gd_scene load_steps=12 format=4 uid="uid://clvfvl00xw0td"]
+
+[ext_resource type="Material" uid="uid://u0nsk8seukp7" path="res://Models/Final Models/FtrArtVitruvianManFakeTextures/mFrame0.tres" id="1_dsbu6"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_suqg5"]
+[ext_resource type="Material" uid="uid://cxruv87outxuv" path="res://Models/Final Models/FtrArtVitruvianManFakeTextures/mBody0.tres" id="2_suqg5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlqxk"]
 resource_name = "mFrame"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a2rk5")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dsbu6"]
+size = Vector3(0.0421201, 0.05508, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suqg5"]
+size = Vector3(0.0421201, 0.05508, 1e-05)
+
 [node name="FtrArtVitruvianManFake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_suqg5")
+area_path = NodePath("VitruvianMan__mBody/@Area3D@68499")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_fshb7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_dsbu6")
 
 [node name="VitruvianMan__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wp83w")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_suqg5")
+
+[node name="@StaticBody3D@68497" type="StaticBody3D" parent="VitruvianMan__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68496" type="CollisionShape3D" parent="VitruvianMan__mBody/@StaticBody3D@68497"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0, 0.0020050001)
+shape = SubResource("BoxShape3D_dsbu6")
+
+[node name="@Area3D@68499" type="Area3D" parent="VitruvianMan__mBody"]
+
+[node name="@CollisionShape3D@68498" type="CollisionShape3D" parent="VitruvianMan__mBody/@Area3D@68499"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0, 0.0020050001)
+shape = SubResource("BoxShape3D_suqg5")

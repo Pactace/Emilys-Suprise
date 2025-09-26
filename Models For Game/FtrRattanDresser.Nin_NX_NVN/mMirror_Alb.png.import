@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c70u8jhjo8djb"
-path="res://.godot/imported/mMirror_Alb.png-989a9496e4a84915c8ea52679a8ff2f4.ctex"
+path.s3tc="res://.godot/imported/mMirror_Alb.png-989a9496e4a84915c8ea52679a8ff2f4.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrRattanDresser.Nin_NX_NVN/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-989a9496e4a84915c8ea52679a8ff2f4.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-989a9496e4a84915c8ea52679a8ff2f4.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ismy1iodceep"
-path="res://.godot/imported/mGlassR_AlbGry.png-3b9e81316b15937b21fc8b8da8555d0d.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-3b9e81316b15937b21fc8b8da8555d0d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDrip.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-3b9e81316b15937b21fc8b8da8555d0d.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-3b9e81316b15937b21fc8b8da8555d0d.s3tc.ctex"]
 
 [params]
 

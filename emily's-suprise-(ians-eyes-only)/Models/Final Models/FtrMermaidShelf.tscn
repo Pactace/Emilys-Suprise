@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://drhpfeer08xif"]
+[gd_scene load_steps=12 format=4 uid="uid://drhpfeer08xif"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_7eyn7"]
+[ext_resource type="Material" uid="uid://blvuugijqi2a8" path="res://Models/Final Models/FtrMermaidShelfTextures/mShell0.tres" id="1_w7ruo"]
+[ext_resource type="Material" uid="uid://b0qqqt0aamh53" path="res://Models/Final Models/FtrMermaidShelfTextures/mBody0.tres" id="2_7eyn7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0my3"]
 resource_name = "mShell"
@@ -78,12 +82,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7rwqn")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_w7ruo"]
+size = Vector3(0.164483, 0.114595, 0.0490486)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7eyn7"]
+size = Vector3(0.164483, 0.114595, 0.0490486)
+
 [node name="FtrMermaidShelf" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_7eyn7")
+area_path = NodePath("Bottle1_Body_mdl_low__mBody/@Area3D@70367")
 
 [node name="Board1_mdl_low__mShell" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d38hg")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_w7ruo")
 
 [node name="Bottle1_Body_mdl_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dlpix")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_7eyn7")
+
+[node name="@StaticBody3D@70365" type="StaticBody3D" parent="Bottle1_Body_mdl_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70364" type="CollisionShape3D" parent="Bottle1_Body_mdl_low__mBody/@StaticBody3D@70365"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018621013, 0.093500406, 0.0022097994)
+shape = SubResource("BoxShape3D_w7ruo")
+
+[node name="@Area3D@70367" type="Area3D" parent="Bottle1_Body_mdl_low__mBody"]
+
+[node name="@CollisionShape3D@70366" type="CollisionShape3D" parent="Bottle1_Body_mdl_low__mBody/@Area3D@70367"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018621013, 0.093500406, 0.0022097994)
+shape = SubResource("BoxShape3D_7eyn7")

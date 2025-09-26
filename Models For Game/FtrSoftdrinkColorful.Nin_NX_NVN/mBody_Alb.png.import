@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvb57w578sc53"
-path="res://.godot/imported/mBody_Alb.png-c2e7ce0977ccf9d2d5b47f3536b19064.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-c2e7ce0977ccf9d2d5b47f3536b19064.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrSoftdrinkColorful.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-c2e7ce0977ccf9d2d5b47f3536b19064.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-c2e7ce0977ccf9d2d5b47f3536b19064.s3tc.ctex"]
 
 [params]
 

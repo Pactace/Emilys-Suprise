@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqcmp7bgxwjyn"
-path="res://.godot/imported/mBody_Alb.png-32c26aedb1bec2a716dc8bcc86f911f1.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-32c26aedb1bec2a716dc8bcc86f911f1.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishandchips.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-32c26aedb1bec2a716dc8bcc86f911f1.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-32c26aedb1bec2a716dc8bcc86f911f1.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://b4bc3h8ldlw7i"]
+[gd_scene load_steps=12 format=4 uid="uid://b4bc3h8ldlw7i"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_qihiv"]
+[ext_resource type="Material" uid="uid://b0x5k1dncdfek" path="res://Models/Final Models/FtrBromideFrameTextures/mBody0.tres" id="1_vjhs3"]
+[ext_resource type="Material" uid="uid://cy0yvyv3mot4d" path="res://Models/Final Models/FtrBromideFrameTextures/mReBody0.tres" id="2_qihiv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5h3d"]
 resource_name = "mBody"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ui7qd")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjhs3"]
+size = Vector3(0.0440686, 0.0503195, 0.0356345)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qihiv"]
+size = Vector3(0.0440686, 0.0503195, 0.0356345)
+
 [node name="FtrBromideFrame" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_qihiv")
+area_path = NodePath("frame__mReBody/@Area3D@68763")
 
 [node name="frame__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qx2w5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_vjhs3")
 
 [node name="frame__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6sqt1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_qihiv")
+
+[node name="@StaticBody3D@68761" type="StaticBody3D" parent="frame__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68760" type="CollisionShape3D" parent="frame__mReBody/@StaticBody3D@68761"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025095968, 0.0006139502)
+shape = SubResource("BoxShape3D_vjhs3")
+
+[node name="@Area3D@68763" type="Area3D" parent="frame__mReBody"]
+
+[node name="@CollisionShape3D@68762" type="CollisionShape3D" parent="frame__mReBody/@Area3D@68763"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025095968, 0.0006139502)
+shape = SubResource("BoxShape3D_qihiv")

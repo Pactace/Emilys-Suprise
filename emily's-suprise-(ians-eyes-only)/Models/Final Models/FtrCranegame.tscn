@@ -1,4 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://cyhic0ndu5wwf"]
+[gd_scene load_steps=18 format=4 uid="uid://cyhic0ndu5wwf"]
+
+[ext_resource type="Material" uid="uid://bh4q1cb5d8qi2" path="res://Models/Final Models/FtrCranegameTextures/mReBody0.tres" id="1_jtq7e"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_v2f0c"]
+[ext_resource type="Material" uid="uid://2p1oismlccyg" path="res://Models/Final Models/FtrCranegameTextures/mLight0.tres" id="2_v2f0c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1bin"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sftfs")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jtq7e"]
+size = Vector3(0.0986, 0.200813, 0.0982908)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v2f0c"]
+size = Vector3(0.0986, 0.200813, 0.0982908)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyhoj"]
 resource_name = "mLight"
@@ -153,14 +163,33 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6srv2")
 
 [node name="FtrCranegame" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_v2f0c")
+area_path = NodePath("ArmCrawA_low__mReBody/@Area3D@69075")
 
 [node name="ArmCrawA_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_b65jj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_jtq7e")
+
+[node name="@StaticBody3D@69073" type="StaticBody3D" parent="ArmCrawA_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69072" type="CollisionShape3D" parent="ArmCrawA_low__mReBody/@StaticBody3D@69073"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10048427, -0.0003545992)
+shape = SubResource("BoxShape3D_jtq7e")
+
+[node name="@Area3D@69075" type="Area3D" parent="ArmCrawA_low__mReBody"]
+
+[node name="@CollisionShape3D@69074" type="CollisionShape3D" parent="ArmCrawA_low__mReBody/@Area3D@69075"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10048427, -0.0003545992)
+shape = SubResource("BoxShape3D_v2f0c")
 
 [node name="CranegameLight_low__mLight" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mp5dg")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_v2f0c")
 
 [node name="GlassInner_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pmf37")

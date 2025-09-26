@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k4703ya2yxqr"
-path="res://.godot/imported/mReFabric_Alb.png-7ba04443d05ee204ad1058dfc2ff1daa.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Alb.png-7ba04443d05ee204ad1058dfc2ff1daa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrTableCloth.Nin_NX_NVN/mReFabric_Alb.png"
-dest_files=["res://.godot/imported/mReFabric_Alb.png-7ba04443d05ee204ad1058dfc2ff1daa.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb.png-7ba04443d05ee204ad1058dfc2ff1daa.s3tc.ctex"]
 
 [params]
 

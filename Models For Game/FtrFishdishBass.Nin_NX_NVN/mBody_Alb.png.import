@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2u1vbofuc8jr"
-path="res://.godot/imported/mBody_Alb.png-24ed522322607eaebafbcceb40908e1f.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-24ed522322607eaebafbcceb40908e1f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishdishBass.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-24ed522322607eaebafbcceb40908e1f.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-24ed522322607eaebafbcceb40908e1f.s3tc.ctex"]
 
 [params]
 

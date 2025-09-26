@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://03ver62cnkfd"]
+[gd_scene load_steps=12 format=4 uid="uid://03ver62cnkfd"]
+
+[ext_resource type="Material" uid="uid://pcq4efgaxuxa" path="res://Models/Final Models/FtrSimpleBedSTextures/mReBody0.tres" id="1_e0ktl"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ix1km"]
+[ext_resource type="Material" uid="uid://sxcghpprgko0" path="res://Models/Final Models/FtrSimpleBedSTextures/mReFabric0.tres" id="2_ix1km"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_optt0"]
 resource_name = "mReBody"
@@ -32,6 +36,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6nqyh")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0ktl"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ix1km"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxkrx"]
 resource_name = "mReFabric"
@@ -71,11 +81,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0hjql")
 
 [node name="FtrSimpleBedS" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ix1km")
+area_path = NodePath("Body__mReBody/@Area3D@70979")
 
 [node name="Body__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mgipk")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_e0ktl")
+
+[node name="@StaticBody3D@70977" type="StaticBody3D" parent="Body__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70976" type="CollisionShape3D" parent="Body__mReBody/@StaticBody3D@70977"]
+shape = SubResource("BoxShape3D_e0ktl")
+
+[node name="@Area3D@70979" type="Area3D" parent="Body__mReBody"]
+
+[node name="@CollisionShape3D@70978" type="CollisionShape3D" parent="Body__mReBody/@Area3D@70979"]
+shape = SubResource("BoxShape3D_ix1km")
 
 [node name="Mattress__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nqugo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_ix1km")

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://b5fqrkg2da77n"]
+[gd_scene load_steps=12 format=4 uid="uid://b5fqrkg2da77n"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4hkcf"]
+[ext_resource type="Material" uid="uid://brfbg0vngx6ws" path="res://Models/Final Models/FtrForsythiaTextures/mPlant0.tres" id="1_jikib"]
+[ext_resource type="Material" uid="uid://dwqttew5e8wsf" path="res://Models/Final Models/FtrForsythiaTextures/mBody0.tres" id="2_4hkcf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wner"]
 resource_name = "mPlant"
@@ -71,12 +75,35 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hhj4i")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jikib"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4hkcf"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrForsythia" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4hkcf")
+area_path = NodePath("Branch_low__mBody/@Area3D@69639")
 
 [node name="B1_01__mPlant" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_p61f6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_jikib")
 
 [node name="Branch_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_y8v0m")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_4hkcf")
+
+[node name="@StaticBody3D@69637" type="StaticBody3D" parent="Branch_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69636" type="CollisionShape3D" parent="Branch_low__mBody/@StaticBody3D@69637"]
+shape = SubResource("BoxShape3D_jikib")
+
+[node name="@Area3D@69639" type="Area3D" parent="Branch_low__mBody"]
+
+[node name="@CollisionShape3D@69638" type="CollisionShape3D" parent="Branch_low__mBody/@Area3D@69639"]
+shape = SubResource("BoxShape3D_4hkcf")

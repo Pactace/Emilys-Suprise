@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://yy7d6ke5mbf"]
+[gd_scene load_steps=12 format=4 uid="uid://yy7d6ke5mbf"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_cgr4y"]
+[ext_resource type="Material" uid="uid://bmnnq0e7ysqb" path="res://Models/Final Models/FtrColorfulMirrorTextures/mReBody0.tres" id="1_fg3m7"]
+[ext_resource type="Material" uid="uid://c2jipffyw1a8x" path="res://Models/Final Models/FtrColorfulMirrorTextures/mMirror0.tres" id="2_cgr4y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qm0yf"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mn5q1")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fg3m7"]
+size = Vector3(0.0701517, 0.066743, 0.0392429)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cgr4y"]
+size = Vector3(0.0701517, 0.066743, 0.0392429)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oa2sx"]
 resource_name = "mMirror"
 vertex_color_use_as_albedo = true
@@ -80,11 +90,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kq8rn")
 
 [node name="FtrColorfulMirror" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_cgr4y")
+area_path = NodePath("Back_low__mReBody/@Area3D@68967")
 
 [node name="Back_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4kcn4")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_fg3m7")
+
+[node name="@StaticBody3D@68965" type="StaticBody3D" parent="Back_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68964" type="CollisionShape3D" parent="Back_low__mReBody/@StaticBody3D@68965"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.03338805, 0.006036251)
+shape = SubResource("BoxShape3D_fg3m7")
+
+[node name="@Area3D@68967" type="Area3D" parent="Back_low__mReBody"]
+
+[node name="@CollisionShape3D@68966" type="CollisionShape3D" parent="Back_low__mReBody/@Area3D@68967"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.03338805, 0.006036251)
+shape = SubResource("BoxShape3D_cgr4y")
 
 [node name="Mirror_low__mMirror" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_caqcn")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_cgr4y")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bprlwcgd3fadt"
-path="res://.godot/imported/mBody_Alb.png-9d697613ccb75509c8a41c93b3ae2e60.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-9d697613ccb75509c8a41c93b3ae2e60.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJellyPear.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-9d697613ccb75509c8a41c93b3ae2e60.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-9d697613ccb75509c8a41c93b3ae2e60.s3tc.ctex"]
 
 [params]
 

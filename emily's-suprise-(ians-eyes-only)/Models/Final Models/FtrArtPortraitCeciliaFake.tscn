@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cmcmn1m658cod"]
+[gd_scene load_steps=12 format=4 uid="uid://cmcmn1m658cod"]
+
+[ext_resource type="Material" uid="uid://bpbnyt7mw1xvk" path="res://Models/Final Models/FtrArtPortraitCeciliaFakeTextures/mFrame0.tres" id="1_152nu"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_d7mv3"]
+[ext_resource type="Material" uid="uid://cb3sak8tk8k44" path="res://Models/Final Models/FtrArtPortraitCeciliaFakeTextures/mBody0.tres" id="2_d7mv3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkdxq"]
 resource_name = "mFrame"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5x2il")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_152nu"]
+size = Vector3(0.0519999, 0.065, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d7mv3"]
+size = Vector3(0.0519999, 0.065, 1e-05)
+
 [node name="FtrArtPortraitCeciliaFake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_d7mv3")
+area_path = NodePath("PortraitCecilia__mBody/@Area3D@68451")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_f18v1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_152nu")
 
 [node name="PortraitCecilia__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_eh673")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_d7mv3")
+
+[node name="@StaticBody3D@68449" type="StaticBody3D" parent="PortraitCecilia__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68448" type="CollisionShape3D" parent="PortraitCecilia__mBody/@StaticBody3D@68449"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0, 0.003005)
+shape = SubResource("BoxShape3D_152nu")
+
+[node name="@Area3D@68451" type="Area3D" parent="PortraitCecilia__mBody"]
+
+[node name="@CollisionShape3D@68450" type="CollisionShape3D" parent="PortraitCecilia__mBody/@Area3D@68451"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0, 0.003005)
+shape = SubResource("BoxShape3D_d7mv3")

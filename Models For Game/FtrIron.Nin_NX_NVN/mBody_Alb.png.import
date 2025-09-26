@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd3w8x54u6ghf"
-path="res://.godot/imported/mBody_Alb.png-2db0dcaf6cf80c2d6d4d8c3ede8fdda3.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-2db0dcaf6cf80c2d6d4d8c3ede8fdda3.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrIron.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-2db0dcaf6cf80c2d6d4d8c3ede8fdda3.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-2db0dcaf6cf80c2d6d4d8c3ede8fdda3.s3tc.ctex"]
 
 [params]
 

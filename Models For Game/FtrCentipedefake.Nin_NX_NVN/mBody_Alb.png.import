@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://carfi7brnrwn"
-path="res://.godot/imported/mBody_Alb.png-f735b6e18a0605ce26a14252517129ca.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-f735b6e18a0605ce26a14252517129ca.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCentipedefake.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-f735b6e18a0605ce26a14252517129ca.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-f735b6e18a0605ce26a14252517129ca.s3tc.ctex"]
 
 [params]
 

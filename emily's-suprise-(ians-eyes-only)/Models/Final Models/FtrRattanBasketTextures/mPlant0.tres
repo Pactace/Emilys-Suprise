@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ckv2qkt7grlta"]
+
+[ext_resource type="Texture2D" uid="uid://bsxxhm78np602" path="res://Models/Final Models/FtrRattanBasketTextures/mPlant_Alb.png" id="1_jbylb"]
+[ext_resource type="Texture2D" uid="uid://mmjr2b8n82sn" path="res://Models/Final Models/FtrRattanBasketTextures/mPlant_Nrm.png" id="2_07408"]
+
+[resource]
+resource_name = "mPlant0"
+albedo_texture = ExtResource("1_jbylb")
+normal_enabled = true
+normal_texture = ExtResource("2_07408")

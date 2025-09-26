@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://obrfeljug6uf"
-path="res://.godot/imported/mBody_Alb.png-548dfd4704dde68bd699963801b11ef2.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-548dfd4704dde68bd699963801b11ef2.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHangingPanelCeiling.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-548dfd4704dde68bd699963801b11ef2.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-548dfd4704dde68bd699963801b11ef2.s3tc.ctex"]
 
 [params]
 

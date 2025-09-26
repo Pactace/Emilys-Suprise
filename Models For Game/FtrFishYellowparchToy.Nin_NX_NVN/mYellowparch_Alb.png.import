@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp4v5tducb1w3"
-path="res://.godot/imported/mYellowparch_Alb.png-be4791f7c3631ae70e28855922d674cd.ctex"
+path.s3tc="res://.godot/imported/mYellowparch_Alb.png-be4791f7c3631ae70e28855922d674cd.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishYellowparchToy.Nin_NX_NVN/mYellowparch_Alb.png"
-dest_files=["res://.godot/imported/mYellowparch_Alb.png-be4791f7c3631ae70e28855922d674cd.ctex"]
+dest_files=["res://.godot/imported/mYellowparch_Alb.png-be4791f7c3631ae70e28855922d674cd.s3tc.ctex"]
 
 [params]
 

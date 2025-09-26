@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://da8pyq1a6lwe7"]
+
+[ext_resource type="Texture2D" uid="uid://bsohvbnitbrii" path="res://Models/Final Models/FtrPltFlwTulipVaseTextures/mTulipVase_Alb.png" id="1_x4j26"]
+[ext_resource type="Texture2D" uid="uid://cl3vbphf46a5f" path="res://Models/Final Models/FtrPltFlwTulipVaseTextures/mTulipVase_Nrm.png" id="2_20jfw"]
+
+[resource]
+resource_name = "mTulipVase0"
+albedo_texture = ExtResource("1_x4j26")
+normal_enabled = true
+normal_texture = ExtResource("2_20jfw")

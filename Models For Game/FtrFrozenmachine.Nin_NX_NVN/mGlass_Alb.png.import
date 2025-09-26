@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2o313i338mfd"
-path="res://.godot/imported/mGlass_Alb.png-e04c2d228430578d9ae93b7900ba50f8.ctex"
+path.s3tc="res://.godot/imported/mGlass_Alb.png-e04c2d228430578d9ae93b7900ba50f8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFrozenmachine.Nin_NX_NVN/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-e04c2d228430578d9ae93b7900ba50f8.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-e04c2d228430578d9ae93b7900ba50f8.s3tc.ctex"]
 
 [params]
 

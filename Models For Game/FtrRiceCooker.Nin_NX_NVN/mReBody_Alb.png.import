@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlxx2be2fbr10"
-path="res://.godot/imported/mReBody_Alb.png-dcc588462931412f8df072a3b0db55a5.ctex"
+path.s3tc="res://.godot/imported/mReBody_Alb.png-dcc588462931412f8df072a3b0db55a5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrRiceCooker.Nin_NX_NVN/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-dcc588462931412f8df072a3b0db55a5.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-dcc588462931412f8df072a3b0db55a5.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j5itn61n3s8v"
-path="res://.godot/imported/mBody_Alb.png-714fb384f364ea64da5b9e5b4d51a1ac.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-714fb384f364ea64da5b9e5b4d51a1ac.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtPortraitCeciliaFake.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-714fb384f364ea64da5b9e5b4d51a1ac.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-714fb384f364ea64da5b9e5b4d51a1ac.s3tc.ctex"]
 
 [params]
 

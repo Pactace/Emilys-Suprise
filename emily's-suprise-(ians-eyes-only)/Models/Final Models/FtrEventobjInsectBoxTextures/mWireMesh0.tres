@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cskixe02ss8cb"]
+
+[ext_resource type="Texture2D" uid="uid://ctjx8teb8dsa3" path="res://Models/Final Models/FtrEventobjInsectBoxTextures/mWireMesh_Alb.png" id="1_n60dy"]
+[ext_resource type="Texture2D" uid="uid://bgwfobcbv0p5v" path="res://Models/Final Models/FtrEventobjInsectBoxTextures/mWireMesh_Nrm.png" id="2_4s4sw"]
+
+[resource]
+resource_name = "mWireMesh0"
+albedo_texture = ExtResource("1_n60dy")
+normal_enabled = true
+normal_texture = ExtResource("2_4s4sw")

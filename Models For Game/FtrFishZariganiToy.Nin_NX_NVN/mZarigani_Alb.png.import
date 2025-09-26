@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0oo58ykp1pkq"
-path="res://.godot/imported/mZarigani_Alb.png-2bf3ea88bc90221c77c9c43bf4dd42bb.ctex"
+path.s3tc="res://.godot/imported/mZarigani_Alb.png-2bf3ea88bc90221c77c9c43bf4dd42bb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishZariganiToy.Nin_NX_NVN/mZarigani_Alb.png"
-dest_files=["res://.godot/imported/mZarigani_Alb.png-2bf3ea88bc90221c77c9c43bf4dd42bb.ctex"]
+dest_files=["res://.godot/imported/mZarigani_Alb.png-2bf3ea88bc90221c77c9c43bf4dd42bb.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://b0rcerr1oqqff"]
+[gd_scene load_steps=12 format=4 uid="uid://b0rcerr1oqqff"]
+
+[ext_resource type="Material" uid="uid://ida2n2t818jx" path="res://Models/Final Models/FtrProjectorscreenTextures/mReBody0.tres" id="1_layw7"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_y26qj"]
+[ext_resource type="Material" uid="uid://b2jxjegl0vdb0" path="res://Models/Final Models/FtrProjectorscreenTextures/mTv0.tres" id="2_y26qj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhogj"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mmoce")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_layw7"]
+size = Vector3(0.271607, 0.216356, 0.0793755)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y26qj"]
+size = Vector3(0.271607, 0.216356, 0.0793755)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d26tf"]
 resource_name = "mTv"
 vertex_color_use_as_albedo = true
@@ -73,11 +83,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h6l4c")
 
 [node name="FtrProjectorscreen" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_y26qj")
+area_path = NodePath("BottomShaftAdjust_low__mReBody/@Area3D@70827")
 
 [node name="BottomShaftAdjust_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_e25ny")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_layw7")
+
+[node name="@StaticBody3D@70825" type="StaticBody3D" parent="BottomShaftAdjust_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70824" type="CollisionShape3D" parent="BottomShaftAdjust_low__mReBody/@StaticBody3D@70825"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.917383e-07, 0.1081732, -0.008213852)
+shape = SubResource("BoxShape3D_layw7")
+
+[node name="@Area3D@70827" type="Area3D" parent="BottomShaftAdjust_low__mReBody"]
+
+[node name="@CollisionShape3D@70826" type="CollisionShape3D" parent="BottomShaftAdjust_low__mReBody/@Area3D@70827"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.917383e-07, 0.1081732, -0.008213852)
+shape = SubResource("BoxShape3D_y26qj")
 
 [node name="Screen_low__mTv" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_c1l7m")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_y26qj")

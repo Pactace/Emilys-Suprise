@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://brhhbayxpqi2r"]
+
+[ext_resource type="Texture2D" uid="uid://ckwnt8ebfbuck" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mBase_Alb.png" id="1_cfwm5"]
+[ext_resource type="Texture2D" uid="uid://dxm2r115ta3cp" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mBase_Nrm.png" id="2_yhd16"]
+
+[resource]
+resource_name = "mBase0"
+albedo_texture = ExtResource("1_cfwm5")
+normal_enabled = true
+normal_texture = ExtResource("2_yhd16")

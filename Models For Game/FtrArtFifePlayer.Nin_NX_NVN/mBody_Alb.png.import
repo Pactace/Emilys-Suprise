@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsq4e2mil7ioj"
-path="res://.godot/imported/mBody_Alb.png-95dae6e43005a5c85b33545641fcd62b.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-95dae6e43005a5c85b33545641fcd62b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtFifePlayer.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-95dae6e43005a5c85b33545641fcd62b.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-95dae6e43005a5c85b33545641fcd62b.s3tc.ctex"]
 
 [params]
 

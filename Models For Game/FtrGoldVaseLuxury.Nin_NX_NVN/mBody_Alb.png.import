@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kjrxogv0vxhm"
-path="res://.godot/imported/mBody_Alb.png-924c42ca6d932d10f3304750a7317d5a.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-924c42ca6d932d10f3304750a7317d5a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrGoldVaseLuxury.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-924c42ca6d932d10f3304750a7317d5a.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-924c42ca6d932d10f3304750a7317d5a.s3tc.ctex"]
 
 [params]
 

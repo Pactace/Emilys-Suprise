@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://f16qt3wmyngy"]
+
+[ext_resource type="Texture2D" uid="uid://ccvojk2a2tip4" path="res://Models/Final Models/FtrStarMoonChairLTextures/mReBody_Alb4.png" id="1_4daag"]
+[ext_resource type="Texture2D" uid="uid://b8d1ujw0yqwyc" path="res://Models/Final Models/FtrStarMoonChairLTextures/mReBody_Nrm4.png" id="2_6celm"]
+
+[resource]
+resource_name = "mReBody4"
+albedo_texture = ExtResource("1_4daag")
+normal_enabled = true
+normal_texture = ExtResource("2_6celm")

@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://dxsf0g3g11foo"]
+[gd_scene load_steps=8 format=4 uid="uid://dxsf0g3g11foo"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_jps00"]
+[ext_resource type="Material" uid="uid://blvk6pc81urqe" path="res://Models/Final Models/FtrFootballTextures/mBody0.tres" id="1_pido1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lneoq"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f554n")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pido1"]
+size = Vector3(0.0670649, 0.0406855, 0.0416498)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jps00"]
+size = Vector3(0.0670649, 0.0406855, 0.0416498)
+
 [node name="FtrFootball" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_jps00")
+area_path = NodePath("Base_low__mBody/@Area3D@69635")
 
 [node name="Base_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cl28o")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_pido1")
+
+[node name="@StaticBody3D@69633" type="StaticBody3D" parent="Base_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69632" type="CollisionShape3D" parent="Base_low__mBody/@StaticBody3D@69633"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0150095e-05, 0.020246716, -8.090027e-05)
+shape = SubResource("BoxShape3D_pido1")
+
+[node name="@Area3D@69635" type="Area3D" parent="Base_low__mBody"]
+
+[node name="@CollisionShape3D@69634" type="CollisionShape3D" parent="Base_low__mBody/@Area3D@69635"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0150095e-05, 0.020246716, -8.090027e-05)
+shape = SubResource("BoxShape3D_jps00")

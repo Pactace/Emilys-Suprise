@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcs8f4ew2xbyq"
-path="res://.godot/imported/mGuppi_Alb.png-7d4be0d6587dab1de62e9ab0d72dcbbc.ctex"
+path.s3tc="res://.godot/imported/mGuppi_Alb.png-7d4be0d6587dab1de62e9ab0d72dcbbc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishGuppi.Nin_NX_NVN/mGuppi_Alb.png"
-dest_files=["res://.godot/imported/mGuppi_Alb.png-7d4be0d6587dab1de62e9ab0d72dcbbc.ctex"]
+dest_files=["res://.godot/imported/mGuppi_Alb.png-7d4be0d6587dab1de62e9ab0d72dcbbc.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ftnay4rxbjml"
-path="res://.godot/imported/mAnemoneVase_Alb.png-a409af50d77a833102b41e3fbe0e1604.ctex"
+path.s3tc="res://.godot/imported/mAnemoneVase_Alb.png-a409af50d77a833102b41e3fbe0e1604.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwAnemoneVase.Nin_NX_NVN/mAnemoneVase_Alb.png"
-dest_files=["res://.godot/imported/mAnemoneVase_Alb.png-a409af50d77a833102b41e3fbe0e1604.ctex"]
+dest_files=["res://.godot/imported/mAnemoneVase_Alb.png-a409af50d77a833102b41e3fbe0e1604.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://env8d6srktes"]
+[gd_scene load_steps=15 format=3 uid="uid://env8d6srktes"]
+
+[ext_resource type="Material" uid="uid://bs7wactmkie3c" path="res://Models/Final Models/FtrSoftdrinkColorfulTextures/mBody0.tres" id="1_gt12r"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_qx684"]
+[ext_resource type="Material" uid="uid://mfpncs3bs7jn" path="res://Models/Final Models/FtrSoftdrinkColorfulTextures/mGlass0.tres" id="2_qx684"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xshdm"]
 resource_name = "mBody"
@@ -31,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ek1n0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gt12r"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qx684"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lonc"]
 resource_name = "mGlassR"
@@ -98,10 +108,26 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aqtm5")
 
 [node name="FtrSoftdrinkColorful" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_qx684")
+area_path = NodePath("Cherrt_Heta__mBody/@Area3D@71027")
 
 [node name="Cherrt_Heta__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0bgqp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gt12r")
+
+[node name="@StaticBody3D@71025" type="StaticBody3D" parent="Cherrt_Heta__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71024" type="CollisionShape3D" parent="Cherrt_Heta__mBody/@StaticBody3D@71025"]
+shape = SubResource("BoxShape3D_gt12r")
+
+[node name="@Area3D@71027" type="Area3D" parent="Cherrt_Heta__mBody"]
+
+[node name="@CollisionShape3D@71026" type="CollisionShape3D" parent="Cherrt_Heta__mBody/@Area3D@71027"]
+shape = SubResource("BoxShape3D_qx684")
 
 [node name="GlassR_Foot__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pljg6")
@@ -110,3 +136,4 @@ skeleton = NodePath("")
 [node name="Glass__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4idnv")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_qx684")

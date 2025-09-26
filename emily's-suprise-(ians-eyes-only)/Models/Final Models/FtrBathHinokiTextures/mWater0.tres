@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c64pc3a5t4g5w"]
+
+[ext_resource type="Texture2D" uid="uid://ctmesw654u7ay" path="res://Models/Final Models/FtrBathHinokiTextures/mWater_Alb.png" id="1_fumdb"]
+[ext_resource type="Texture2D" uid="uid://dma8jfbx7a4we" path="res://Models/Final Models/FtrBathHinokiTextures/mWater_Nrm.png" id="2_ncjj5"]
+
+[resource]
+resource_name = "mWater0"
+albedo_texture = ExtResource("1_fumdb")
+normal_enabled = true
+normal_texture = ExtResource("2_ncjj5")

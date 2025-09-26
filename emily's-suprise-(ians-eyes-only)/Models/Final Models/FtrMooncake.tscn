@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://b0nihxxwcohsf"]
+[gd_scene load_steps=8 format=4 uid="uid://b0nihxxwcohsf"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_n2ic2"]
+[ext_resource type="Material" uid="uid://wqpj002u3dn8" path="res://Models/Final Models/FtrMooncakeTextures/mBody0.tres" id="1_q0yb2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5kty"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vfow2")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_q0yb2"]
+size = Vector3(0.0605106, 0.0266975, 0.0605106)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2ic2"]
+size = Vector3(0.0605106, 0.0266975, 0.0605106)
+
 [node name="FtrMooncake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_n2ic2")
+area_path = NodePath("Mooncake1__mBody/@Area3D@70491")
 
 [node name="Mooncake1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ox34u")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_q0yb2")
+
+[node name="@StaticBody3D@70489" type="StaticBody3D" parent="Mooncake1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70488" type="CollisionShape3D" parent="Mooncake1__mBody/@StaticBody3D@70489"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8982759e-06, 0.013366534, 2.9001385e-06)
+shape = SubResource("BoxShape3D_q0yb2")
+
+[node name="@Area3D@70491" type="Area3D" parent="Mooncake1__mBody"]
+
+[node name="@CollisionShape3D@70490" type="CollisionShape3D" parent="Mooncake1__mBody/@Area3D@70491"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8982759e-06, 0.013366534, 2.9001385e-06)
+shape = SubResource("BoxShape3D_n2ic2")

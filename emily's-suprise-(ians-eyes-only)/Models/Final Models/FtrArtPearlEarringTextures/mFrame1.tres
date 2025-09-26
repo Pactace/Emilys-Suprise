@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cx67iyurhi5ne"]
+
+[ext_resource type="Texture2D" uid="uid://bw5wxle18lvfh" path="res://Models/Final Models/FtrArtPearlEarringTextures/mFrame_Alb1.png" id="1_bhn81"]
+[ext_resource type="Texture2D" uid="uid://di170tviijr1x" path="res://Models/Final Models/FtrArtPearlEarringTextures/mFrame_Nrm1.png" id="2_toenq"]
+
+[resource]
+resource_name = "mFrame1"
+albedo_texture = ExtResource("1_bhn81")
+normal_enabled = true
+normal_texture = ExtResource("2_toenq")

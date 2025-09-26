@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dskmpuyu8ausr"]
+
+[ext_resource type="Texture2D" uid="uid://dhg1jumsi8aas" path="res://Models/Final Models/FtrMermaidDresserTextures/mMirror_Alb.png" id="1_161vl"]
+
+[resource]
+resource_name = "mMirror0"
+albedo_texture = ExtResource("1_161vl")
+normal_enabled = true

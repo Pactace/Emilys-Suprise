@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6hc02r8ygimf"
-path="res://.godot/imported/mGlassBack_Alb.png-29a46270573d23cf0034d1d9b90306b5.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_Alb.png-29a46270573d23cf0034d1d9b90306b5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtemiaAquarium.Nin_NX_NVN/mGlassBack_Alb.png"
-dest_files=["res://.godot/imported/mGlassBack_Alb.png-29a46270573d23cf0034d1d9b90306b5.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Alb.png-29a46270573d23cf0034d1d9b90306b5.s3tc.ctex"]
 
 [params]
 

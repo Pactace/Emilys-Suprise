@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccbr5x5eg331e"
-path="res://.godot/imported/mBody_Alb.png-346ca94a12af9329ff03455d878b7c4a.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-346ca94a12af9329ff03455d878b7c4a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishHirame.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-346ca94a12af9329ff03455d878b7c4a.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-346ca94a12af9329ff03455d878b7c4a.s3tc.ctex"]
 
 [params]
 

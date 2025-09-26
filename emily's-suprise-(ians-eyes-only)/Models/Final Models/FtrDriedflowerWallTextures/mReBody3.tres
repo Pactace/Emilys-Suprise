@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cyn8fx07465l6"]
+
+[ext_resource type="Texture2D" uid="uid://bj2gb1ig16vw5" path="res://Models/Final Models/FtrDriedflowerWallTextures/mReBody_Alb3.png" id="1_vajli"]
+[ext_resource type="Texture2D" uid="uid://b5ep4o6y6vdm3" path="res://Models/Final Models/FtrDriedflowerWallTextures/mReBody_Nrm3.png" id="2_lcpqv"]
+
+[resource]
+resource_name = "mReBody3"
+albedo_texture = ExtResource("1_vajli")
+normal_enabled = true
+normal_texture = ExtResource("2_lcpqv")

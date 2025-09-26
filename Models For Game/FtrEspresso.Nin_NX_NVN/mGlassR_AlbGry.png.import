@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxisvtuj0r5v8"
-path="res://.godot/imported/mGlassR_AlbGry.png-623119a0b8e6f144526185bba99a816f.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-623119a0b8e6f144526185bba99a816f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrEspresso.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-623119a0b8e6f144526185bba99a816f.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-623119a0b8e6f144526185bba99a816f.s3tc.ctex"]
 
 [params]
 

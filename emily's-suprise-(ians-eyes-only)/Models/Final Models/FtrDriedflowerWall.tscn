@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bn7xgf572t5y"]
+[gd_scene load_steps=8 format=4 uid="uid://bn7xgf572t5y"]
+
+[ext_resource type="Material" uid="uid://dih2u64pnksck" path="res://Models/Final Models/FtrDriedflowerWallTextures/mReBody0.tres" id="1_k5t7g"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vdyug"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1tpy"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hus5i")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_k5t7g"]
+size = Vector3(0.2, 0.0801394, 0.0290576)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vdyug"]
+size = Vector3(0.2, 0.0801394, 0.0290576)
+
 [node name="FtrDriedflowerWall" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vdyug")
+area_path = NodePath("Clip01_low__mReBody/@Area3D@69259")
 
 [node name="Clip01_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_273yo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_k5t7g")
+
+[node name="@StaticBody3D@69257" type="StaticBody3D" parent="Clip01_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69256" type="CollisionShape3D" parent="Clip01_low__mReBody/@StaticBody3D@69257"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0052661, 0.014528674)
+shape = SubResource("BoxShape3D_k5t7g")
+
+[node name="@Area3D@69259" type="Area3D" parent="Clip01_low__mReBody"]
+
+[node name="@CollisionShape3D@69258" type="CollisionShape3D" parent="Clip01_low__mReBody/@Area3D@69259"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0052661, 0.014528674)
+shape = SubResource("BoxShape3D_vdyug")

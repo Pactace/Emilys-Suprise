@@ -1,4 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://b881agoskfm5i"]
+[gd_scene load_steps=18 format=4 uid="uid://b881agoskfm5i"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_e7ye0"]
+[ext_resource type="Material" uid="uid://bvhwkvbbqrvul" path="res://Models/Final Models/FtrBabychairHighTextures/mReBody0.tres" id="1_t8c8h"]
+[ext_resource type="Material" uid="uid://dqstsrkvwcgdi" path="res://Models/Final Models/FtrBabychairHighTextures/mReFabric0.tres" id="2_e7ye0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxgeb"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kp35v")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t8c8h"]
+size = Vector3(0.0713599, 0.120611, 0.0690643)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e7ye0"]
+size = Vector3(0.0713599, 0.120611, 0.0690643)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4qmj"]
 resource_name = "mReFabric"
@@ -160,14 +170,33 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8wr7v")
 
 [node name="FtrBabychairHigh" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_e7ye0")
+area_path = NodePath("BackSeat_mReBody_low__mReBody/@Area3D@68515")
 
 [node name="BackSeat_mReBody_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7rkbk")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_t8c8h")
+
+[node name="@StaticBody3D@68513" type="StaticBody3D" parent="BackSeat_mReBody_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68512" type="CollisionShape3D" parent="BackSeat_mReBody_low__mReBody/@StaticBody3D@68513"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.06028613, 0.0005020499)
+shape = SubResource("BoxShape3D_t8c8h")
+
+[node name="@Area3D@68515" type="Area3D" parent="BackSeat_mReBody_low__mReBody"]
+
+[node name="@CollisionShape3D@68514" type="CollisionShape3D" parent="BackSeat_mReBody_low__mReBody/@Area3D@68515"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.06028613, 0.0005020499)
+shape = SubResource("BoxShape3D_e7ye0")
 
 [node name="BackSeat_mReFabric_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_yku8m")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_e7ye0")
 
 [node name="Mdl_mGlassR_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wyuhh")

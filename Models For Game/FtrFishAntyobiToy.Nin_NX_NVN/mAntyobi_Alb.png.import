@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2l4t82q103p3"
-path="res://.godot/imported/mAntyobi_Alb.png-115d628f0167434b78d71c73e02aba2a.ctex"
+path.s3tc="res://.godot/imported/mAntyobi_Alb.png-115d628f0167434b78d71c73e02aba2a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishAntyobiToy.Nin_NX_NVN/mAntyobi_Alb.png"
-dest_files=["res://.godot/imported/mAntyobi_Alb.png-115d628f0167434b78d71c73e02aba2a.ctex"]
+dest_files=["res://.godot/imported/mAntyobi_Alb.png-115d628f0167434b78d71c73e02aba2a.s3tc.ctex"]
 
 [params]
 

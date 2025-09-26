@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dwdb2jmdvxwav"]
+[gd_scene load_steps=12 format=4 uid="uid://dwdb2jmdvxwav"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_38545"]
+[ext_resource type="Material" uid="uid://bcu5s4yaxcxbo" path="res://Models/Final Models/FtrDrumSetTextures/mReBody0.tres" id="1_hm5gl"]
+[ext_resource type="Material" uid="uid://bhlsuq545x86e" path="res://Models/Final Models/FtrDrumSetTextures/mReFabric0.tres" id="2_38545"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80e3k"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ch5eg")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hm5gl"]
+size = Vector3(0.197587, 0.119852, 0.0946134)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_38545"]
+size = Vector3(0.197587, 0.119852, 0.0946134)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw34y"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_61kit")
 
 [node name="FtrDrumSet" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_38545")
+area_path = NodePath("FtrDrumSet__mReBody/@Area3D@69295")
 
 [node name="FtrDrumSet__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ufm7e")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hm5gl")
+
+[node name="@StaticBody3D@69293" type="StaticBody3D" parent="FtrDrumSet__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69292" type="CollisionShape3D" parent="FtrDrumSet__mReBody/@StaticBody3D@69293"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.799136e-06, 0.059356123, -0.00045179948)
+shape = SubResource("BoxShape3D_hm5gl")
+
+[node name="@Area3D@69295" type="Area3D" parent="FtrDrumSet__mReBody"]
+
+[node name="@CollisionShape3D@69294" type="CollisionShape3D" parent="FtrDrumSet__mReBody/@Area3D@69295"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.799136e-06, 0.059356123, -0.00045179948)
+shape = SubResource("BoxShape3D_38545")
 
 [node name="FtrDrumSet__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jeguc")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_38545")

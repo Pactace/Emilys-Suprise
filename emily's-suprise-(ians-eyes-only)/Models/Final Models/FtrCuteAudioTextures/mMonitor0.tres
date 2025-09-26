@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://gfbw2pptnsrk"]
+
+[ext_resource type="Texture2D" uid="uid://5ah61gh2e4ju" path="res://Models/Final Models/FtrCuteAudioTextures/mMonitor_Alb.png" id="1_21o2g"]
+[ext_resource type="Texture2D" uid="uid://de3fcjl3svpq4" path="res://Models/Final Models/FtrCuteAudioTextures/mMonitor_Nrm.png" id="2_q1sj2"]
+
+[resource]
+resource_name = "mMonitor0"
+albedo_texture = ExtResource("1_21o2g")
+normal_enabled = true
+normal_texture = ExtResource("2_q1sj2")

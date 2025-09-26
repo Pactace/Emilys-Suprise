@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb1vcojrba3na"
-path="res://.godot/imported/mChouchinankou_Emm.png-80cc7ff8949e6b016e42c112981debd4.ctex"
+path.s3tc="res://.godot/imported/mChouchinankou_Emm.png-80cc7ff8949e6b016e42c112981debd4.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishChouchinankou.Nin_NX_NVN/mChouchinankou_Emm.png"
-dest_files=["res://.godot/imported/mChouchinankou_Emm.png-80cc7ff8949e6b016e42c112981debd4.ctex"]
+dest_files=["res://.godot/imported/mChouchinankou_Emm.png-80cc7ff8949e6b016e42c112981debd4.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8s21d000m2px"
-path="res://.godot/imported/mWaterPlant_Alb.png-d86122db56e93e5daf53ed2caa3269c9.ctex"
+path.s3tc="res://.godot/imported/mWaterPlant_Alb.png-d86122db56e93e5daf53ed2caa3269c9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKingyo.Nin_NX_NVN/mWaterPlant_Alb.png"
-dest_files=["res://.godot/imported/mWaterPlant_Alb.png-d86122db56e93e5daf53ed2caa3269c9.ctex"]
+dest_files=["res://.godot/imported/mWaterPlant_Alb.png-d86122db56e93e5daf53ed2caa3269c9.s3tc.ctex"]
 
 [params]
 

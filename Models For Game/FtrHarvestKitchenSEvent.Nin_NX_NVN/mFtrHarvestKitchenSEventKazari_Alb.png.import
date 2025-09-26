@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4bc4f531l40j"
-path="res://.godot/imported/mFtrHarvestKitchenSEventKazari_Alb.png-c6d918168275ae015757815cd35fa743.ctex"
+path.s3tc="res://.godot/imported/mFtrHarvestKitchenSEventKazari_Alb.png-c6d918168275ae015757815cd35fa743.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHarvestKitchenSEvent.Nin_NX_NVN/mFtrHarvestKitchenSEventKazari_Alb.png"
-dest_files=["res://.godot/imported/mFtrHarvestKitchenSEventKazari_Alb.png-c6d918168275ae015757815cd35fa743.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestKitchenSEventKazari_Alb.png-c6d918168275ae015757815cd35fa743.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b4oqignutnww0"]
+
+[ext_resource type="Texture2D" uid="uid://djafm0icdd22w" path="res://Models/Final Models/FtrBalancingtoyTextures/mBody_Alb.png" id="1_j4uga"]
+[ext_resource type="Texture2D" uid="uid://gm0ijgo8o6j2" path="res://Models/Final Models/FtrBalancingtoyTextures/mBody_Nrm.png" id="2_fr0e4"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_j4uga")
+normal_enabled = true
+normal_texture = ExtResource("2_fr0e4")

@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://dilr2elrmk65q"]
+[gd_scene load_steps=10 format=4 uid="uid://dilr2elrmk65q"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_xg2s3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn3lc"]
 resource_name = "mReBody"
@@ -40,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_47jcs")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ej5fx"]
+size = Vector3(0.0305632, 0.0635942, 0.0291776)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xg2s3"]
+size = Vector3(0.0305632, 0.0635942, 0.0291776)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lf48x"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -78,10 +86,27 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3b271")
 
 [node name="FtrBottleShampoo" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_xg2s3")
+area_path = NodePath("shampoo_Botol___mReBody/@Area3D@68683")
 
 [node name="shampoo_Botol___mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7y1r7")
 skeleton = NodePath("")
+
+[node name="@StaticBody3D@68681" type="StaticBody3D" parent="shampoo_Botol___mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68680" type="CollisionShape3D" parent="shampoo_Botol___mReBody/@StaticBody3D@68681"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00086609926, 0.0317971, 4.830025e-05)
+shape = SubResource("BoxShape3D_ej5fx")
+
+[node name="@Area3D@68683" type="Area3D" parent="shampoo_Botol___mReBody"]
+
+[node name="@CollisionShape3D@68682" type="CollisionShape3D" parent="shampoo_Botol___mReBody/@Area3D@68683"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00086609926, 0.0317971, 4.830025e-05)
+shape = SubResource("BoxShape3D_xg2s3")
 
 [node name="shampoo_Label___mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_hmdxh")

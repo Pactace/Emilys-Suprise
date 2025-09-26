@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gl6048tgul8u"
-path="res://.godot/imported/mThirapia_Alb.png-8866df76628e4b386ce237920ff6dce1.ctex"
+path.s3tc="res://.godot/imported/mThirapia_Alb.png-8866df76628e4b386ce237920ff6dce1.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishThirapiaToy.Nin_NX_NVN/mThirapia_Alb.png"
-dest_files=["res://.godot/imported/mThirapia_Alb.png-8866df76628e4b386ce237920ff6dce1.ctex"]
+dest_files=["res://.godot/imported/mThirapia_Alb.png-8866df76628e4b386ce237920ff6dce1.s3tc.ctex"]
 
 [params]
 

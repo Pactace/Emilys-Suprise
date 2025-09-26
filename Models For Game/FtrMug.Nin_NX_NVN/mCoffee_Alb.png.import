@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi66lpiyqd10b"
-path="res://.godot/imported/mCoffee_Alb.png-3d4dbfa0e1fd27750bc44dbc092b3abb.ctex"
+path.s3tc="res://.godot/imported/mCoffee_Alb.png-3d4dbfa0e1fd27750bc44dbc092b3abb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMug.Nin_NX_NVN/mCoffee_Alb.png"
-dest_files=["res://.godot/imported/mCoffee_Alb.png-3d4dbfa0e1fd27750bc44dbc092b3abb.ctex"]
+dest_files=["res://.godot/imported/mCoffee_Alb.png-3d4dbfa0e1fd27750bc44dbc092b3abb.s3tc.ctex"]
 
 [params]
 

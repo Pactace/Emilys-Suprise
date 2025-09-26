@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b57wvwrxr10qf"
-path="res://.godot/imported/mBody_Alb.png-23afe33282903fae527f320e88aa376d.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-23afe33282903fae527f320e88aa376d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLazysusan.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-23afe33282903fae527f320e88aa376d.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-23afe33282903fae527f320e88aa376d.s3tc.ctex"]
 
 [params]
 

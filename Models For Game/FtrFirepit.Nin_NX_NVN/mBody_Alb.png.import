@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b66kj1a22im0g"
-path="res://.godot/imported/mBody_Alb.png-baa00217a1db96d23273ead2d7303a64.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-baa00217a1db96d23273ead2d7303a64.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFirepit.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-baa00217a1db96d23273ead2d7303a64.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-baa00217a1db96d23273ead2d7303a64.s3tc.ctex"]
 
 [params]
 

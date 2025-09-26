@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7kq28dhmf1pc"
-path="res://.godot/imported/mGlassR_AlbGry.png-72bd8189ccaaed74bedf8db72d4dff26.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-72bd8189ccaaed74bedf8db72d4dff26.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrKitchenware.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-72bd8189ccaaed74bedf8db72d4dff26.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-72bd8189ccaaed74bedf8db72d4dff26.s3tc.ctex"]
 
 [params]
 

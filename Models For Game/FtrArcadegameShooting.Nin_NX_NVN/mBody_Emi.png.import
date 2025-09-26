@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dykx84bbper44"
-path="res://.godot/imported/mBody_Emi.png-3d5f5395aab804ef1cc3fd32098ed57e.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-3d5f5395aab804ef1cc3fd32098ed57e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArcadegameShooting.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-3d5f5395aab804ef1cc3fd32098ed57e.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-3d5f5395aab804ef1cc3fd32098ed57e.s3tc.ctex"]
 
 [params]
 

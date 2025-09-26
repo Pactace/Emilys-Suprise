@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4fdl0a1570p0"
-path="res://.godot/imported/mGlass_Alb.png-2ed3af2ae1295e47efdbec4f96da6ba8.ctex"
+path.s3tc="res://.godot/imported/mGlass_Alb.png-2ed3af2ae1295e47efdbec4f96da6ba8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishRainbowfish.Nin_NX_NVN/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-2ed3af2ae1295e47efdbec4f96da6ba8.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-2ed3af2ae1295e47efdbec4f96da6ba8.s3tc.ctex"]
 
 [params]
 

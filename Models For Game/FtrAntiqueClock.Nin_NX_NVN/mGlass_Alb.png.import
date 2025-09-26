@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eoitfcq2ea31"
-path="res://.godot/imported/mGlass_Alb.png-ff9f5fd2efe16de20271223de516261f.ctex"
+path.s3tc="res://.godot/imported/mGlass_Alb.png-ff9f5fd2efe16de20271223de516261f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrAntiqueClock.Nin_NX_NVN/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-ff9f5fd2efe16de20271223de516261f.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-ff9f5fd2efe16de20271223de516261f.s3tc.ctex"]
 
 [params]
 

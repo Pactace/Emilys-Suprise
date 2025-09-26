@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://6beujba8lbiq"]
+[gd_scene load_steps=8 format=4 uid="uid://6beujba8lbiq"]
+
+[ext_resource type="Material" uid="uid://ch3rwkl81clyd" path="res://Models/Final Models/FtrCandleTextures/mReBody0.tres" id="1_g08mp"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_lbs46"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erocu"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_drtff")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g08mp"]
+size = Vector3(0.0461658, 0.0602349, 0.0396179)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lbs46"]
+size = Vector3(0.0461658, 0.0602349, 0.0396179)
+
 [node name="FtrCandle" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_lbs46")
+area_path = NodePath("Candle__mReBody/@Area3D@68823")
 
 [node name="Candle__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_702jp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_g08mp")
+
+[node name="@StaticBody3D@68821" type="StaticBody3D" parent="Candle__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68820" type="CollisionShape3D" parent="Candle__mReBody/@StaticBody3D@68821"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032739006, 0.029944886, -5.029142e-08)
+shape = SubResource("BoxShape3D_g08mp")
+
+[node name="@Area3D@68823" type="Area3D" parent="Candle__mReBody"]
+
+[node name="@CollisionShape3D@68822" type="CollisionShape3D" parent="Candle__mReBody/@Area3D@68823"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032739006, 0.029944886, -5.029142e-08)
+shape = SubResource("BoxShape3D_lbs46")

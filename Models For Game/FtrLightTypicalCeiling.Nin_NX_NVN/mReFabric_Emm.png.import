@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdfc64gedmkeu"
-path="res://.godot/imported/mReFabric_Emm.png-8263c0ca6de8dffdb63849a7ba0bc91a.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Emm.png-8263c0ca6de8dffdb63849a7ba0bc91a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLightTypicalCeiling.Nin_NX_NVN/mReFabric_Emm.png"
-dest_files=["res://.godot/imported/mReFabric_Emm.png-8263c0ca6de8dffdb63849a7ba0bc91a.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Emm.png-8263c0ca6de8dffdb63849a7ba0bc91a.s3tc.ctex"]
 
 [params]
 

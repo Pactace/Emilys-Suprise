@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cuxd1s8ju01i1"]
+[gd_scene load_steps=12 format=4 uid="uid://cuxd1s8ju01i1"]
+
+[ext_resource type="Material" uid="uid://b8ob60c34gblx" path="res://Models/Final Models/FtrCuckooclockTextures/mReBody0.tres" id="1_h8kmu"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_m2s6t"]
+[ext_resource type="Material" uid="uid://cdbrqbf5clxy8" path="res://Models/Final Models/FtrCuckooclockTextures/mHands0.tres" id="2_m2s6t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxu3a"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yc0xf")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8kmu"]
+size = Vector3(0.074998, 0.128782, 0.0425156)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m2s6t"]
+size = Vector3(0.074998, 0.128782, 0.0425156)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3s6o"]
 resource_name = "mHands"
 vertex_color_use_as_albedo = true
@@ -78,11 +88,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1fjcr")
 
 [node name="FtrCuckooclock" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_m2s6t")
+area_path = NodePath("Board_low__mReBody/@Area3D@69111")
 
 [node name="Board_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_v070p")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_h8kmu")
+
+[node name="@StaticBody3D@69109" type="StaticBody3D" parent="Board_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69108" type="CollisionShape3D" parent="Board_low__mReBody/@StaticBody3D@69109"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000325799, 0.0212578)
+shape = SubResource("BoxShape3D_h8kmu")
+
+[node name="@Area3D@69111" type="Area3D" parent="Board_low__mReBody"]
+
+[node name="@CollisionShape3D@69110" type="CollisionShape3D" parent="Board_low__mReBody/@Area3D@69111"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000325799, 0.0212578)
+shape = SubResource("BoxShape3D_m2s6t")
 
 [node name="Hour_hand_low__mHands" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_k42jp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_m2s6t")

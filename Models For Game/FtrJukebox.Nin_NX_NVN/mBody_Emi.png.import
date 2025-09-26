@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fdgoraw230gc"
-path="res://.godot/imported/mBody_Emi.png-1404b052b3fcd193e9f9a1b1508875fd.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-1404b052b3fcd193e9f9a1b1508875fd.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJukebox.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-1404b052b3fcd193e9f9a1b1508875fd.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-1404b052b3fcd193e9f9a1b1508875fd.s3tc.ctex"]
 
 [params]
 

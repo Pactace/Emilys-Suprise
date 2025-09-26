@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cdmaxxfese55u"]
+
+[ext_resource type="Texture2D" uid="uid://6u8h1eo31uhh" path="res://Models/Final Models/FtrPltFlwHyacinthVaseTextures/mHyacinthVase_Alb.png" id="1_xwhmn"]
+[ext_resource type="Texture2D" uid="uid://crk85mrh6x7l3" path="res://Models/Final Models/FtrPltFlwHyacinthVaseTextures/mHyacinthVase_Nrm.png" id="2_aieep"]
+
+[resource]
+resource_name = "mHyacinthVase0"
+albedo_texture = ExtResource("1_xwhmn")
+normal_enabled = true
+normal_texture = ExtResource("2_aieep")

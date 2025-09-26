@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvlpgsho2rfxm"
-path="res://.godot/imported/mFrame_Alb.png-6d733bb5aa946388663aa3c277846865.ctex"
+path.s3tc="res://.godot/imported/mFrame_Alb.png-6d733bb5aa946388663aa3c277846865.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtBarFB.Nin_NX_NVN/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-6d733bb5aa946388663aa3c277846865.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-6d733bb5aa946388663aa3c277846865.s3tc.ctex"]
 
 [params]
 

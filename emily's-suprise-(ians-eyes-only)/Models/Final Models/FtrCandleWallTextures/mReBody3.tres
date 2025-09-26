@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dkftpgdferf1k"]
+
+[ext_resource type="Texture2D" uid="uid://fxhvjq5gefrv" path="res://Models/Final Models/FtrCandleWallTextures/mReBody_Alb3.png" id="1_rbqwr"]
+[ext_resource type="Texture2D" uid="uid://bhxf5attoxb6n" path="res://Models/Final Models/FtrCandleWallTextures/mReBody_Nrm3.png" id="2_mb5a7"]
+
+[resource]
+resource_name = "mReBody3"
+albedo_texture = ExtResource("1_rbqwr")
+normal_enabled = true
+normal_texture = ExtResource("2_mb5a7")

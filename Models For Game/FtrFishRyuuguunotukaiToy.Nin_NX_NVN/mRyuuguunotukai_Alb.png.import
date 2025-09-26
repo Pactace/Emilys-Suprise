@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brluoloitthfk"
-path="res://.godot/imported/mRyuuguunotukai_Alb.png-e0b6f9d0f6f0ccbf97820682ee183441.ctex"
+path.s3tc="res://.godot/imported/mRyuuguunotukai_Alb.png-e0b6f9d0f6f0ccbf97820682ee183441.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishRyuuguunotukaiToy.Nin_NX_NVN/mRyuuguunotukai_Alb.png"
-dest_files=["res://.godot/imported/mRyuuguunotukai_Alb.png-e0b6f9d0f6f0ccbf97820682ee183441.ctex"]
+dest_files=["res://.godot/imported/mRyuuguunotukai_Alb.png-e0b6f9d0f6f0ccbf97820682ee183441.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://du4fu1xquupt0"]
+[gd_scene load_steps=12 format=4 uid="uid://du4fu1xquupt0"]
+
+[ext_resource type="Material" uid="uid://clms1s0gnvl8h" path="res://Models/Final Models/FtrArtAjisaisoukeizuFakeTextures/mBody0.tres" id="1_6k1fd"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_f78p3"]
+[ext_resource type="Material" uid="uid://cbjnhf08dhch8" path="res://Models/Final Models/FtrArtAjisaisoukeizuFakeTextures/mFrame0.tres" id="2_f78p3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lru1n"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wgsu3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6k1fd"]
+size = Vector3(0.0609659, 0.100414, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f78p3"]
+size = Vector3(0.0609659, 0.100414, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvwpm"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_427r4")
 
 [node name="FtrArtAjisaisoukeizuFake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_f78p3")
+area_path = NodePath("Ajisaisoukeizu__mBody/@Area3D@68299")
 
 [node name="Ajisaisoukeizu__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lw02c")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_6k1fd")
+
+[node name="@StaticBody3D@68297" type="StaticBody3D" parent="Ajisaisoukeizu__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68296" type="CollisionShape3D" parent="Ajisaisoukeizu__mBody/@StaticBody3D@68297"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, -0.008600201, 0.00388577)
+shape = SubResource("BoxShape3D_6k1fd")
+
+[node name="@Area3D@68299" type="Area3D" parent="Ajisaisoukeizu__mBody"]
+
+[node name="@CollisionShape3D@68298" type="CollisionShape3D" parent="Ajisaisoukeizu__mBody/@Area3D@68299"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, -0.008600201, 0.00388577)
+shape = SubResource("BoxShape3D_f78p3")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3pb6u")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_f78p3")

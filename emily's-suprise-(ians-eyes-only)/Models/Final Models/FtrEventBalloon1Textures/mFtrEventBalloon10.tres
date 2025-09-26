@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b7jqyoa0ipxiv"]
+
+[ext_resource type="Texture2D" uid="uid://cuj6ptpgh4p8f" path="res://Models/Final Models/FtrEventBalloon1Textures/mFtrEventBalloon1_Alb.png" id="1_h1hpy"]
+[ext_resource type="Texture2D" uid="uid://fgnihaleprxp" path="res://Models/Final Models/FtrEventBalloon1Textures/mFtrEventBalloon1_Nrm.png" id="2_ybihb"]
+
+[resource]
+resource_name = "mFtrEventBalloon10"
+albedo_texture = ExtResource("1_h1hpy")
+normal_enabled = true
+normal_texture = ExtResource("2_ybihb")

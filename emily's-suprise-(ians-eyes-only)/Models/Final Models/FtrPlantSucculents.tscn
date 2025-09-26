@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://b7sy7ce66tst3"]
+[gd_scene load_steps=12 format=4 uid="uid://b7sy7ce66tst3"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_0ma5v"]
+[ext_resource type="Material" uid="uid://1sft1uxy3hfo" path="res://Models/Final Models/FtrPlantSucculentsTextures/mBody0.tres" id="1_wp622"]
+[ext_resource type="Material" uid="uid://b1hpltsex8sc2" path="res://Models/Final Models/FtrPlantSucculentsTextures/mPlant0.tres" id="2_0ma5v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0iid"]
 resource_name = "mBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3wwat")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wp622"]
+size = Vector3(0.0468317, 0.0588157, 0.048007)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ma5v"]
+size = Vector3(0.0468317, 0.0588157, 0.048007)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wepov"]
 resource_name = "mPlant"
 vertex_color_use_as_albedo = true
@@ -72,11 +82,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mwhog")
 
 [node name="FtrPlantSucculents" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_0ma5v")
+area_path = NodePath("Can_low__mBody/@Area3D@70755")
 
 [node name="Can_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d3sj0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_wp622")
+
+[node name="@StaticBody3D@70753" type="StaticBody3D" parent="Can_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70752" type="CollisionShape3D" parent="Can_low__mBody/@StaticBody3D@70753"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004420504, 0.029425235, 0.00033180043)
+shape = SubResource("BoxShape3D_wp622")
+
+[node name="@Area3D@70755" type="Area3D" parent="Can_low__mBody"]
+
+[node name="@CollisionShape3D@70754" type="CollisionShape3D" parent="Can_low__mBody/@Area3D@70755"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004420504, 0.029425235, 0.00033180043)
+shape = SubResource("BoxShape3D_0ma5v")
 
 [node name="RubyKuki_low__mPlant" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dd1hp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_0ma5v")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctxhvxfwcvxyj"
-path="res://.godot/imported/mChouchouuo_Alb.png-d0353201b15e258eb6768a92aa1555b6.ctex"
+path.s3tc="res://.godot/imported/mChouchouuo_Alb.png-d0353201b15e258eb6768a92aa1555b6.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishChouchouuo.Nin_NX_NVN/mChouchouuo_Alb.png"
-dest_files=["res://.godot/imported/mChouchouuo_Alb.png-d0353201b15e258eb6768a92aa1555b6.ctex"]
+dest_files=["res://.godot/imported/mChouchouuo_Alb.png-d0353201b15e258eb6768a92aa1555b6.s3tc.ctex"]
 
 [params]
 

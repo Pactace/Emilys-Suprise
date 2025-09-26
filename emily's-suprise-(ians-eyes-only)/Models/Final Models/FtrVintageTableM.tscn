@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cmicrssoeas0v"]
+[gd_scene load_steps=8 format=4 uid="uid://cmicrssoeas0v"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_27y3g"]
+[ext_resource type="Material" uid="uid://dwmpbwkl8dxi6" path="res://Models/Final Models/FtrVintageTableMTextures/mReBody0.tres" id="1_hbu3b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67s57"]
 resource_name = "mReBody"
@@ -35,8 +38,30 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_st7v0")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbu3b"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_27y3g"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrVintageTableM" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_27y3g")
+area_path = NodePath("Fixture__mReBody/@Area3D@71243")
 
 [node name="Fixture__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_h0r2k")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hbu3b")
+
+[node name="@StaticBody3D@71241" type="StaticBody3D" parent="Fixture__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71240" type="CollisionShape3D" parent="Fixture__mReBody/@StaticBody3D@71241"]
+shape = SubResource("BoxShape3D_hbu3b")
+
+[node name="@Area3D@71243" type="Area3D" parent="Fixture__mReBody"]
+
+[node name="@CollisionShape3D@71242" type="CollisionShape3D" parent="Fixture__mReBody/@Area3D@71243"]
+shape = SubResource("BoxShape3D_27y3g")

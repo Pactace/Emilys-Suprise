@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dthd3wrxb12bg"]
+
+[ext_resource type="Texture2D" uid="uid://cjhmefv5qsnjd" path="res://Models/Final Models/FtrPltFlwCosmosVaseTextures/mCosmosVase_Alb.png" id="1_4n12n"]
+[ext_resource type="Texture2D" uid="uid://c7a0qnc1rxwa3" path="res://Models/Final Models/FtrPltFlwCosmosVaseTextures/mCosmosVase_Nrm.png" id="2_a022f"]
+
+[resource]
+resource_name = "mCosmosVase0"
+albedo_texture = ExtResource("1_4n12n")
+normal_enabled = true
+normal_texture = ExtResource("2_a022f")

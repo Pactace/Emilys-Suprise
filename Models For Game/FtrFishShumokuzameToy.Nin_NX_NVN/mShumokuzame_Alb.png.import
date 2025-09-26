@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w4u0awc43oaf"
-path="res://.godot/imported/mShumokuzame_Alb.png-dd42312cc0bfd4d8298da95fd6a9eef3.ctex"
+path.s3tc="res://.godot/imported/mShumokuzame_Alb.png-dd42312cc0bfd4d8298da95fd6a9eef3.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishShumokuzameToy.Nin_NX_NVN/mShumokuzame_Alb.png"
-dest_files=["res://.godot/imported/mShumokuzame_Alb.png-dd42312cc0bfd4d8298da95fd6a9eef3.ctex"]
+dest_files=["res://.godot/imported/mShumokuzame_Alb.png-dd42312cc0bfd4d8298da95fd6a9eef3.s3tc.ctex"]
 
 [params]
 

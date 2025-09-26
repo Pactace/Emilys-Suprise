@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://b6kg5vg8n35wu"]
+[gd_scene load_steps=8 format=4 uid="uid://b6kg5vg8n35wu"]
+
+[ext_resource type="Material" uid="uid://chvlqtux25igx" path="res://Models/Final Models/FtrCakeboxTextures/mReFabric0.tres" id="1_gmfgk"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_nygy8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itoy1"]
 resource_name = "mReFabric"
@@ -40,8 +43,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gonwp")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gmfgk"]
+size = Vector3(0.0622549, 0.0581919, 0.0371484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nygy8"]
+size = Vector3(0.0622549, 0.0581919, 0.0371484)
+
 [node name="FtrCakebox" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_nygy8")
+area_path = NodePath("FtrCakebox__mReFabric/@Area3D@68807")
 
 [node name="FtrCakebox__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_hta5y")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gmfgk")
+
+[node name="@StaticBody3D@68805" type="StaticBody3D" parent="FtrCakebox__mReFabric"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68804" type="CollisionShape3D" parent="FtrCakebox__mReFabric/@StaticBody3D@68805"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, 0.028602898, 0)
+shape = SubResource("BoxShape3D_gmfgk")
+
+[node name="@Area3D@68807" type="Area3D" parent="FtrCakebox__mReFabric"]
+
+[node name="@CollisionShape3D@68806" type="CollisionShape3D" parent="FtrCakebox__mReFabric/@Area3D@68807"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, 0.028602898, 0)
+shape = SubResource("BoxShape3D_nygy8")

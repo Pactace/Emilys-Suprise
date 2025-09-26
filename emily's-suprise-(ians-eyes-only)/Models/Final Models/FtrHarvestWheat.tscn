@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://byrce6he2xsyn"]
+[gd_scene load_steps=8 format=4 uid="uid://byrce6he2xsyn"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vi4yw"]
+[ext_resource type="Material" uid="uid://c5sg55jype6v6" path="res://Models/Final Models/FtrHarvestWheatTextures/mReBody0.tres" id="1_x21ve"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m86gs"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4ytl5")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x21ve"]
+size = Vector3(0.0835813, 0.0774511, 0.0822386)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vi4yw"]
+size = Vector3(0.0835813, 0.0774511, 0.0822386)
+
 [node name="FtrHarvestWheat" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vi4yw")
+area_path = NodePath("Ribbon_bottom_L__mReBody/@Area3D@69967")
 
 [node name="Ribbon_bottom_L__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_b0ttc")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_x21ve")
+
+[node name="@StaticBody3D@69965" type="StaticBody3D" parent="Ribbon_bottom_L__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69964" type="CollisionShape3D" parent="Ribbon_bottom_L__mReBody/@StaticBody3D@69965"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00020445138, 0.03872555, 0.0016007014)
+shape = SubResource("BoxShape3D_x21ve")
+
+[node name="@Area3D@69967" type="Area3D" parent="Ribbon_bottom_L__mReBody"]
+
+[node name="@CollisionShape3D@69966" type="CollisionShape3D" parent="Ribbon_bottom_L__mReBody/@Area3D@69967"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00020445138, 0.03872555, 0.0016007014)
+shape = SubResource("BoxShape3D_vi4yw")

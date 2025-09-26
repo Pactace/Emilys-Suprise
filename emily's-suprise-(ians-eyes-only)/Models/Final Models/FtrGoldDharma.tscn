@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bqky2xbmh4w61"]
+[gd_scene load_steps=8 format=4 uid="uid://bqky2xbmh4w61"]
+
+[ext_resource type="Material" uid="uid://dld8j1yrf8pbw" path="res://Models/Final Models/FtrGoldDharmaTextures/mBody0.tres" id="1_h6kws"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_yrrsj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nigyl"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_casam")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6kws"]
+size = Vector3(0.0706503, 0.0790008, 0.0691166)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yrrsj"]
+size = Vector3(0.0706503, 0.0790008, 0.0691166)
+
 [node name="FtrGoldDharma" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_yrrsj")
+area_path = NodePath("FtrGoldDharma_1__mBody/@Area3D@69815")
 
 [node name="FtrGoldDharma_1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_353p2")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_h6kws")
+
+[node name="@StaticBody3D@69813" type="StaticBody3D" parent="FtrGoldDharma_1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69812" type="CollisionShape3D" parent="FtrGoldDharma_1__mBody/@StaticBody3D@69813"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.0395004, 0.00070489943)
+shape = SubResource("BoxShape3D_h6kws")
+
+[node name="@Area3D@69815" type="Area3D" parent="FtrGoldDharma_1__mBody"]
+
+[node name="@CollisionShape3D@69814" type="CollisionShape3D" parent="FtrGoldDharma_1__mBody/@Area3D@69815"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.0395004, 0.00070489943)
+shape = SubResource("BoxShape3D_yrrsj")

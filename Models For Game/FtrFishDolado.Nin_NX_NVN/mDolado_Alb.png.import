@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://74jin1u35v8v"
-path="res://.godot/imported/mDolado_Alb.png-e68b37eade870c7843f29e07afb2cd60.ctex"
+path.s3tc="res://.godot/imported/mDolado_Alb.png-e68b37eade870c7843f29e07afb2cd60.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDolado.Nin_NX_NVN/mDolado_Alb.png"
-dest_files=["res://.godot/imported/mDolado_Alb.png-e68b37eade870c7843f29e07afb2cd60.ctex"]
+dest_files=["res://.godot/imported/mDolado_Alb.png-e68b37eade870c7843f29e07afb2cd60.s3tc.ctex"]
 
 [params]
 

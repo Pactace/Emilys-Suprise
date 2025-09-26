@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://yl1o5gbnqkni"]
+[gd_scene load_steps=8 format=4 uid="uid://yl1o5gbnqkni"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_dqclg"]
+[ext_resource type="Material" uid="uid://4rcf74hidurh" path="res://Models/Final Models/FtrFacilityMuseumStampStandTextures/mStampStand0.tres" id="1_os7ds"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcbo4"]
 resource_name = "mStampStand"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q7rt5")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_os7ds"]
+size = Vector3(0.078543, 0.146018, 0.0762963)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqclg"]
+size = Vector3(0.078543, 0.146018, 0.0762963)
+
 [node name="FtrFacilityMuseumStampStand" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_dqclg")
+area_path = NodePath("FtrMuseumStampStand_Edge1__mStampStand/@Area3D@69435")
 
 [node name="FtrMuseumStampStand_Edge1__mStampStand" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_11nyl")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_os7ds")
+
+[node name="@StaticBody3D@69433" type="StaticBody3D" parent="FtrMuseumStampStand_Edge1__mStampStand"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69432" type="CollisionShape3D" parent="FtrMuseumStampStand_Edge1__mStampStand/@StaticBody3D@69433"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017714985, 0.073009, 0.00064814836)
+shape = SubResource("BoxShape3D_os7ds")
+
+[node name="@Area3D@69435" type="Area3D" parent="FtrMuseumStampStand_Edge1__mStampStand"]
+
+[node name="@CollisionShape3D@69434" type="CollisionShape3D" parent="FtrMuseumStampStand_Edge1__mStampStand/@Area3D@69435"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017714985, 0.073009, 0.00064814836)
+shape = SubResource("BoxShape3D_dqclg")

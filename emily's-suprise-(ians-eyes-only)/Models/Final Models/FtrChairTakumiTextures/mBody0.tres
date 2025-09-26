@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ckjfvnpg123jo"]
+
+[ext_resource type="Texture2D" uid="uid://b1cejwe04oidw" path="res://Models/Final Models/FtrChairTakumiTextures/mBody_Alb.png" id="1_mgtni"]
+[ext_resource type="Texture2D" uid="uid://b05rr8w55ace1" path="res://Models/Final Models/FtrChairTakumiTextures/mBody_Nrm.png" id="2_lwbf5"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_mgtni")
+normal_enabled = true
+normal_texture = ExtResource("2_lwbf5")

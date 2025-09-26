@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://ehp14it352mo"]
+[gd_scene load_steps=12 format=4 uid="uid://ehp14it352mo"]
+
+[ext_resource type="Material" uid="uid://bebfkea8men7d" path="res://Models/Final Models/FtrCoconutjuiceTextures/mBody0.tres" id="1_542hi"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wkq3n"]
+[ext_resource type="Material" uid="uid://buqlh48k76q5g" path="res://Models/Final Models/FtrCoconutjuiceTextures/mFlowerPetalAlpha0.tres" id="2_wkq3n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxcwg"]
 resource_name = "mBody"
@@ -38,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lipkl")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_542hi"]
+size = Vector3(0.0407095, 0.0610235, 0.039752)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wkq3n"]
+size = Vector3(0.0407095, 0.0610235, 0.039752)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocupi"]
 resource_name = "mFlowerPetalAlpha"
@@ -79,11 +89,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q828a")
 
 [node name="FtrCoconutjuice" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_wkq3n")
+area_path = NodePath("Coconut_low__mBody/@Area3D@68959")
 
 [node name="Coconut_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1ns6k")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_542hi")
+
+[node name="@StaticBody3D@68957" type="StaticBody3D" parent="Coconut_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68956" type="CollisionShape3D" parent="Coconut_low__mBody/@StaticBody3D@68957"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00021625124, 0.030525759, -0.0012747999)
+shape = SubResource("BoxShape3D_542hi")
+
+[node name="@Area3D@68959" type="Area3D" parent="Coconut_low__mBody"]
+
+[node name="@CollisionShape3D@68958" type="CollisionShape3D" parent="Coconut_low__mBody/@Area3D@68959"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00021625124, 0.030525759, -0.0012747999)
+shape = SubResource("BoxShape3D_wkq3n")
 
 [node name="hanabira1__mFlowerPetalAlpha" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vwg3v")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_wkq3n")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://buigjs2pmpmst"]
+
+[ext_resource type="Texture2D" uid="uid://o4uu1ch3qwwc" path="res://Models/Final Models/FtrStockpotTextures/mReBody_Alb4.png" id="1_28tvb"]
+[ext_resource type="Texture2D" uid="uid://dhuv0sa7cjfq8" path="res://Models/Final Models/FtrStockpotTextures/mReBody_Nrm4.png" id="2_g5dbb"]
+
+[resource]
+resource_name = "mReBody4"
+albedo_texture = ExtResource("1_28tvb")
+normal_enabled = true
+normal_texture = ExtResource("2_g5dbb")

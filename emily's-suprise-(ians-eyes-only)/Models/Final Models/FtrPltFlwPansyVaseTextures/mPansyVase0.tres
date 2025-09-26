@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bs6u8lm201sui"]
+
+[ext_resource type="Texture2D" uid="uid://cacuep0v47e4i" path="res://Models/Final Models/FtrPltFlwPansyVaseTextures/mPansyVase_Alb.png" id="1_nc6bn"]
+[ext_resource type="Texture2D" uid="uid://clceh0t2a2yfd" path="res://Models/Final Models/FtrPltFlwPansyVaseTextures/mPansyVase_Nrm.png" id="2_6uy62"]
+
+[resource]
+resource_name = "mPansyVase0"
+albedo_texture = ExtResource("1_nc6bn")
+normal_enabled = true
+normal_texture = ExtResource("2_6uy62")

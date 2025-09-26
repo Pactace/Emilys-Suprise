@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn3k7sj105txt"
-path="res://.godot/imported/mGlassR_AlbGry.png-08be92703d45cd3ffa3251b55ff9e889.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-08be92703d45cd3ffa3251b55ff9e889.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrSeasoning.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-08be92703d45cd3ffa3251b55ff9e889.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-08be92703d45cd3ffa3251b55ff9e889.s3tc.ctex"]
 
 [params]
 

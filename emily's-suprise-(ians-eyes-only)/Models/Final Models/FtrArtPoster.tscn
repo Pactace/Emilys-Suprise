@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cihmympop1fk0"]
+[gd_scene load_steps=12 format=4 uid="uid://cihmympop1fk0"]
+
+[ext_resource type="Material" uid="uid://cagm6ga2tf8tj" path="res://Models/Final Models/FtrArtPosterTextures/mReBody0.tres" id="1_62t3v"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_rhx5x"]
+[ext_resource type="Material" uid="uid://dyc86fdvr53e4" path="res://Models/Final Models/FtrArtPosterTextures/mBody0.tres" id="2_rhx5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j04sh"]
 resource_name = "mReBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8dmvv")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_62t3v"]
+size = Vector3(0.0852729, 0.129024, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rhx5x"]
+size = Vector3(0.0852729, 0.129024, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tlme"]
 resource_name = "mBody"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dnrmf")
 
 [node name="FtrArtPoster" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_rhx5x")
+area_path = NodePath("FtrFishprint_low1__mReBody/@Area3D@68455")
 
 [node name="FtrFishprint_low1__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_g8thb")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_62t3v")
+
+[node name="@StaticBody3D@68453" type="StaticBody3D" parent="FtrFishprint_low1__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68452" type="CollisionShape3D" parent="FtrFishprint_low1__mReBody/@StaticBody3D@68453"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0, 0.00341215)
+shape = SubResource("BoxShape3D_62t3v")
+
+[node name="@Area3D@68455" type="Area3D" parent="FtrFishprint_low1__mReBody"]
+
+[node name="@CollisionShape3D@68454" type="CollisionShape3D" parent="FtrFishprint_low1__mReBody/@Area3D@68455"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0, 0.00341215)
+shape = SubResource("BoxShape3D_rhx5x")
 
 [node name="FtrFishprint_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dp2hy")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_rhx5x")

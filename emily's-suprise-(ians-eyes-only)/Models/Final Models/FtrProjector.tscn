@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://0ohubmmujf7p"]
+[gd_scene load_steps=12 format=4 uid="uid://0ohubmmujf7p"]
+
+[ext_resource type="Material" uid="uid://de46wlomioi7g" path="res://Models/Final Models/FtrProjectorTextures/mLight0.tres" id="1_h6sn7"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_pb2h0"]
+[ext_resource type="Material" uid="uid://c75b3ht18vorx" path="res://Models/Final Models/FtrProjectorTextures/mReel0.tres" id="2_pb2h0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m04b2"]
 resource_name = "mLight"
@@ -39,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kq5qb")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6sn7"]
+size = Vector3(0.0761085, 0.07796, 0.0215759)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pb2h0"]
+size = Vector3(0.0761085, 0.07796, 0.0215759)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyoq7"]
 resource_name = "mReel"
 vertex_color_use_as_albedo = true
@@ -72,11 +82,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cj1lu")
 
 [node name="FtrProjector" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_pb2h0")
+area_path = NodePath("BodyA_1_low__mLight/@Area3D@70823")
 
 [node name="BodyA_1_low__mLight" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0ujq5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_h6sn7")
+
+[node name="@StaticBody3D@70821" type="StaticBody3D" parent="BodyA_1_low__mLight"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70820" type="CollisionShape3D" parent="BodyA_1_low__mLight/@StaticBody3D@70821"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037674494, 0.03898, 0.00356287)
+shape = SubResource("BoxShape3D_h6sn7")
+
+[node name="@Area3D@70823" type="Area3D" parent="BodyA_1_low__mLight"]
+
+[node name="@CollisionShape3D@70822" type="CollisionShape3D" parent="BodyA_1_low__mLight/@Area3D@70823"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037674494, 0.03898, 0.00356287)
+shape = SubResource("BoxShape3D_pb2h0")
 
 [node name="ReelB_1_low__mReel" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_e0jqp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_pb2h0")

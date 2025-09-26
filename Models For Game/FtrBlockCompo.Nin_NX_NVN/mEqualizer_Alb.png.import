@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lchrd63joilp"
-path="res://.godot/imported/mEqualizer_Alb.png-2241f14904e3496f7491580a25535ec2.ctex"
+path.s3tc="res://.godot/imported/mEqualizer_Alb.png-2241f14904e3496f7491580a25535ec2.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBlockCompo.Nin_NX_NVN/mEqualizer_Alb.png"
-dest_files=["res://.godot/imported/mEqualizer_Alb.png-2241f14904e3496f7491580a25535ec2.ctex"]
+dest_files=["res://.godot/imported/mEqualizer_Alb.png-2241f14904e3496f7491580a25535ec2.s3tc.ctex"]
 
 [params]
 

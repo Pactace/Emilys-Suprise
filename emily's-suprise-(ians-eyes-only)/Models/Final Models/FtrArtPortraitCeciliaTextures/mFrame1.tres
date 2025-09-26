@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dyitjq1exwqo8"]
+
+[ext_resource type="Texture2D" uid="uid://8mfmbew6xxpl" path="res://Models/Final Models/FtrArtPortraitCeciliaTextures/mFrame_Alb1.png" id="1_8dmye"]
+[ext_resource type="Texture2D" uid="uid://bfft2v8ohemeq" path="res://Models/Final Models/FtrArtPortraitCeciliaTextures/mFrame_Nrm1.png" id="2_f3bf1"]
+
+[resource]
+resource_name = "mFrame1"
+albedo_texture = ExtResource("1_8dmye")
+normal_enabled = true
+normal_texture = ExtResource("2_f3bf1")

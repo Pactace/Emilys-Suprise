@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://q7rkgmnxudrk"]
+[gd_scene load_steps=12 format=4 uid="uid://q7rkgmnxudrk"]
+
+[ext_resource type="Material" uid="uid://c22v04lrs27n7" path="res://Models/Final Models/FtrLightTypicalCeilingTextures/mBody0.tres" id="1_bc34n"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_tq8v4"]
+[ext_resource type="Material" uid="uid://chmstoyuvl0le" path="res://Models/Final Models/FtrLightTypicalCeilingTextures/mReFabric0.tres" id="2_tq8v4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmqdr"]
 resource_name = "mBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ma6n5")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bc34n"]
+size = Vector3(0.0681913, 0.190233, 0.0692002)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tq8v4"]
+size = Vector3(0.0681913, 0.190233, 0.0692002)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8xchi"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fewrf")
 
 [node name="FtrLightTypicalCeiling" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_tq8v4")
+area_path = NodePath("cord_1__mBody/@Area3D@70295")
 
 [node name="cord_1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_aeqjw")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_bc34n")
+
+[node name="@StaticBody3D@70293" type="StaticBody3D" parent="cord_1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70292" type="CollisionShape3D" parent="cord_1__mBody/@StaticBody3D@70293"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, -0.0951165, 0.0005044006)
+shape = SubResource("BoxShape3D_bc34n")
+
+[node name="@Area3D@70295" type="Area3D" parent="cord_1__mBody"]
+
+[node name="@CollisionShape3D@70294" type="CollisionShape3D" parent="cord_1__mBody/@Area3D@70295"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, -0.0951165, 0.0005044006)
+shape = SubResource("BoxShape3D_tq8v4")
 
 [node name="outside__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d8jdr")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_tq8v4")

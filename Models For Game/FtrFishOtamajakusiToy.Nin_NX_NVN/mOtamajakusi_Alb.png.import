@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1orxfsa8fmdq"
-path="res://.godot/imported/mOtamajakusi_Alb.png-609232c68c9c71483d1510b33c5317d1.ctex"
+path.s3tc="res://.godot/imported/mOtamajakusi_Alb.png-609232c68c9c71483d1510b33c5317d1.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishOtamajakusiToy.Nin_NX_NVN/mOtamajakusi_Alb.png"
-dest_files=["res://.godot/imported/mOtamajakusi_Alb.png-609232c68c9c71483d1510b33c5317d1.ctex"]
+dest_files=["res://.godot/imported/mOtamajakusi_Alb.png-609232c68c9c71483d1510b33c5317d1.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dj0gq82bmjq6p"]
+[gd_scene load_steps=12 format=4 uid="uid://dj0gq82bmjq6p"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_28jjn"]
+[ext_resource type="Material" uid="uid://dpswbg6q1onjq" path="res://Models/Final Models/FtrCoolSofaLTextures/mReFabric0.tres" id="1_hbqxn"]
+[ext_resource type="Material" uid="uid://b2qgitjk0blv7" path="res://Models/Final Models/FtrCoolSofaLTextures/mReBody0.tres" id="2_28jjn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch2dh"]
 resource_name = "mReFabric"
@@ -78,12 +82,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u0uf0")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbqxn"]
+size = Vector3(0.194644, 0.0679253, 0.0875222)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_28jjn"]
+size = Vector3(0.194644, 0.0679253, 0.0875222)
+
 [node name="FtrCoolSofaL" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_28jjn")
+area_path = NodePath("Pipe_low__mReBody/@Area3D@68995")
 
 [node name="Cushion01_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_sgtdo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hbqxn")
 
 [node name="Pipe_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3i4au")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_28jjn")
+
+[node name="@StaticBody3D@68993" type="StaticBody3D" parent="Pipe_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68992" type="CollisionShape3D" parent="Pipe_low__mReBody/@StaticBody3D@68993"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0116568e-07, 0.03396265, -0.0025780983)
+shape = SubResource("BoxShape3D_hbqxn")
+
+[node name="@Area3D@68995" type="Area3D" parent="Pipe_low__mReBody"]
+
+[node name="@CollisionShape3D@68994" type="CollisionShape3D" parent="Pipe_low__mReBody/@Area3D@68995"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0116568e-07, 0.03396265, -0.0025780983)
+shape = SubResource("BoxShape3D_28jjn")

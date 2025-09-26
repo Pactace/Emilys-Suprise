@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq3tfp6svhl5m"
-path="res://.godot/imported/mGlassR_AlbGry.png-480d160bfcc001d7e8d43e1cdf08e77a.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-480d160bfcc001d7e8d43e1cdf08e77a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDrinkShelfWall.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-480d160bfcc001d7e8d43e1cdf08e77a.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-480d160bfcc001d7e8d43e1cdf08e77a.s3tc.ctex"]
 
 [params]
 

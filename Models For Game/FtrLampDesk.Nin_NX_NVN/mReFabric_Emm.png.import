@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb8m0ciljc14o"
-path="res://.godot/imported/mReFabric_Emm.png-bd960b86980dab37327923a0d10343a6.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Emm.png-bd960b86980dab37327923a0d10343a6.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLampDesk.Nin_NX_NVN/mReFabric_Emm.png"
-dest_files=["res://.godot/imported/mReFabric_Emm.png-bd960b86980dab37327923a0d10343a6.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Emm.png-bd960b86980dab37327923a0d10343a6.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bgtuyi7082m8m"]
+
+[ext_resource type="Texture2D" uid="uid://cjae7sdqki4co" path="res://Models/Final Models/FtrDigitalClockTextures/mClockColon_Alb.png" id="1_t2t7b"]
+
+[resource]
+resource_name = "mClockColon0"
+albedo_texture = ExtResource("1_t2t7b")
+normal_enabled = true

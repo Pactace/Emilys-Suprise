@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yc8f52jjassm"
-path="res://.godot/imported/mFlowerTulip_AlbGry.png-cdb6f443722a54d684a5a58097ec6aba.ctex"
+path.s3tc="res://.godot/imported/mFlowerTulip_AlbGry.png-cdb6f443722a54d684a5a58097ec6aba.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwTulipVase.Nin_NX_NVN/mFlowerTulip_AlbGry.png"
-dest_files=["res://.godot/imported/mFlowerTulip_AlbGry.png-cdb6f443722a54d684a5a58097ec6aba.ctex"]
+dest_files=["res://.godot/imported/mFlowerTulip_AlbGry.png-cdb6f443722a54d684a5a58097ec6aba.s3tc.ctex"]
 
 [params]
 

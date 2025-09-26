@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://xuadgodsnq4w"]
+[gd_scene load_steps=8 format=4 uid="uid://xuadgodsnq4w"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6qqij"]
+[ext_resource type="Material" uid="uid://d3qsqk7sch237" path="res://Models/Final Models/FtrEventLiveChairTextures/mFtrEventLiveChair0.tres" id="1_8h2ab"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nao4g"]
 resource_name = "mFtrEventLiveChair"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_01dn1")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8h2ab"]
+size = Vector3(0.046, 0.0361878, 0.045748)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qqij"]
+size = Vector3(0.046, 0.0361878, 0.045748)
+
 [node name="FtrEventLiveChair" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6qqij")
+area_path = NodePath("ASHI1__mFtrEventLiveChair/@Area3D@69383")
 
 [node name="ASHI1__mFtrEventLiveChair" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_iaox8")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_8h2ab")
+
+[node name="@StaticBody3D@69381" type="StaticBody3D" parent="ASHI1__mFtrEventLiveChair"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69380" type="CollisionShape3D" parent="ASHI1__mFtrEventLiveChair/@StaticBody3D@69381"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0180939, 0.004999999)
+shape = SubResource("BoxShape3D_8h2ab")
+
+[node name="@Area3D@69383" type="Area3D" parent="ASHI1__mFtrEventLiveChair"]
+
+[node name="@CollisionShape3D@69382" type="CollisionShape3D" parent="ASHI1__mFtrEventLiveChair/@Area3D@69383"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0180939, 0.004999999)
+shape = SubResource("BoxShape3D_6qqij")

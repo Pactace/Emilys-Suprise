@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwlugip0qdgom"
-path="res://.godot/imported/mMonitor_Alb.0.png-a77f89a7c5006270de049bbb80b389aa.ctex"
+path.s3tc="res://.godot/imported/mMonitor_Alb.0.png-a77f89a7c5006270de049bbb80b389aa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArcadegameShooting.Nin_NX_NVN/mMonitor_Alb.0.png"
-dest_files=["res://.godot/imported/mMonitor_Alb.0.png-a77f89a7c5006270de049bbb80b389aa.ctex"]
+dest_files=["res://.godot/imported/mMonitor_Alb.0.png-a77f89a7c5006270de049bbb80b389aa.s3tc.ctex"]
 
 [params]
 

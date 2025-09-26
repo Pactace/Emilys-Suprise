@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btr63qtp6spwf"
-path="res://.godot/imported/mNanyouhagi_Alb.png-d66c2e163a954eda13a9e76b80c788c6.ctex"
+path.s3tc="res://.godot/imported/mNanyouhagi_Alb.png-d66c2e163a954eda13a9e76b80c788c6.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNanyouhagi.Nin_NX_NVN/mNanyouhagi_Alb.png"
-dest_files=["res://.godot/imported/mNanyouhagi_Alb.png-d66c2e163a954eda13a9e76b80c788c6.ctex"]
+dest_files=["res://.godot/imported/mNanyouhagi_Alb.png-d66c2e163a954eda13a9e76b80c788c6.s3tc.ctex"]
 
 [params]
 

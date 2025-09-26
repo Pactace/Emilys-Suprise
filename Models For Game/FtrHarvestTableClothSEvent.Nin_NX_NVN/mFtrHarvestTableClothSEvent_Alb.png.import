@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://il13xmyafa04"
-path="res://.godot/imported/mFtrHarvestTableClothSEvent_Alb.png-1fbe4fa590746f53566581a59add790f.ctex"
+path.s3tc="res://.godot/imported/mFtrHarvestTableClothSEvent_Alb.png-1fbe4fa590746f53566581a59add790f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHarvestTableClothSEvent.Nin_NX_NVN/mFtrHarvestTableClothSEvent_Alb.png"
-dest_files=["res://.godot/imported/mFtrHarvestTableClothSEvent_Alb.png-1fbe4fa590746f53566581a59add790f.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestTableClothSEvent_Alb.png-1fbe4fa590746f53566581a59add790f.s3tc.ctex"]
 
 [params]
 

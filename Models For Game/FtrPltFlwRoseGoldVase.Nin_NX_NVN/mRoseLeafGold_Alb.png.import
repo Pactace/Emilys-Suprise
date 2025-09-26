@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buco6bkx18duu"
-path="res://.godot/imported/mRoseLeafGold_Alb.png-b84543a08d136b56d600e1f94d83b018.ctex"
+path.s3tc="res://.godot/imported/mRoseLeafGold_Alb.png-b84543a08d136b56d600e1f94d83b018.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwRoseGoldVase.Nin_NX_NVN/mRoseLeafGold_Alb.png"
-dest_files=["res://.godot/imported/mRoseLeafGold_Alb.png-b84543a08d136b56d600e1f94d83b018.ctex"]
+dest_files=["res://.godot/imported/mRoseLeafGold_Alb.png-b84543a08d136b56d600e1f94d83b018.s3tc.ctex"]
 
 [params]
 

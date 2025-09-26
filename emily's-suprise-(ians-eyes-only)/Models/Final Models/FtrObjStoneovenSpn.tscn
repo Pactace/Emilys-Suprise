@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://lbnddpykrbq"]
+[gd_scene load_steps=8 format=4 uid="uid://lbnddpykrbq"]
+
+[ext_resource type="Material" uid="uid://cnxabdtj5oata" path="res://Models/Final Models/FtrObjStoneovenSpnTextures/mBody0.tres" id="1_1coe1"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_k5mqs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qp6pe"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8rwr8")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1coe1"]
+size = Vector3(0.128986, 0.230416, 0.132308)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k5mqs"]
+size = Vector3(0.128986, 0.230416, 0.132308)
+
 [node name="FtrObjStoneovenSpn" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_k5mqs")
+area_path = NodePath("ChimneyTop_low__mBody/@Area3D@70599")
 
 [node name="ChimneyTop_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_x6rjn")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_1coe1")
+
+[node name="@StaticBody3D@70597" type="StaticBody3D" parent="ChimneyTop_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70596" type="CollisionShape3D" parent="ChimneyTop_low__mBody/@StaticBody3D@70597"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.115208, 0.003734503)
+shape = SubResource("BoxShape3D_1coe1")
+
+[node name="@Area3D@70599" type="Area3D" parent="ChimneyTop_low__mBody"]
+
+[node name="@CollisionShape3D@70598" type="CollisionShape3D" parent="ChimneyTop_low__mBody/@Area3D@70599"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.115208, 0.003734503)
+shape = SubResource("BoxShape3D_k5mqs")

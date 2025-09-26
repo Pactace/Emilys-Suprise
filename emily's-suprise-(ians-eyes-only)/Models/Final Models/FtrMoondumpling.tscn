@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://d2qxxjijhl27y"]
+[gd_scene load_steps=8 format=4 uid="uid://d2qxxjijhl27y"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_nc014"]
+[ext_resource type="Material" uid="uid://clyr520wdsnw1" path="res://Models/Final Models/FtrMoondumplingTextures/mBody0.tres" id="1_tnpmi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xumx1"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s6oc4")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tnpmi"]
+size = Vector3(0.0763925, 0.0742197, 0.0741268)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nc014"]
+size = Vector3(0.0763925, 0.0742197, 0.0741268)
+
 [node name="FtrMoondumpling" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_nc014")
+area_path = NodePath("dumpling10_low__mBody/@Area3D@70495")
 
 [node name="dumpling10_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_5gkl0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_tnpmi")
+
+[node name="@StaticBody3D@70493" type="StaticBody3D" parent="dumpling10_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70492" type="CollisionShape3D" parent="dumpling10_low__mBody/@StaticBody3D@70493"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3522804e-06, 0.03710985, 0.0011797026)
+shape = SubResource("BoxShape3D_tnpmi")
+
+[node name="@Area3D@70495" type="Area3D" parent="dumpling10_low__mBody"]
+
+[node name="@CollisionShape3D@70494" type="CollisionShape3D" parent="dumpling10_low__mBody/@Area3D@70495"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3522804e-06, 0.03710985, 0.0011797026)
+shape = SubResource("BoxShape3D_nc014")

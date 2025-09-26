@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cog34qrwpkpmw"]
+[gd_scene load_steps=8 format=4 uid="uid://cog34qrwpkpmw"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6njra"]
+[ext_resource type="Material" uid="uid://cani6uvvn3jns" path="res://Models/Final Models/FtrHandrailTextures/mReBody0.tres" id="1_xke6r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4iiol"]
 resource_name = "mReBody"
@@ -36,8 +39,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_oaf2d")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xke6r"]
+size = Vector3(0.2, 0.10322, 0.0389727)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6njra"]
+size = Vector3(0.2, 0.10322, 0.0389727)
+
 [node name="FtrHandrail" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6njra")
+area_path = NodePath("FtrHandrail__mReBody/@Area3D@69855")
 
 [node name="FtrHandrail__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nrhes")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_xke6r")
+
+[node name="@StaticBody3D@69853" type="StaticBody3D" parent="FtrHandrail__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69852" type="CollisionShape3D" parent="FtrHandrail__mReBody/@StaticBody3D@69853"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05161, -8.415058e-05)
+shape = SubResource("BoxShape3D_xke6r")
+
+[node name="@Area3D@69855" type="Area3D" parent="FtrHandrail__mReBody"]
+
+[node name="@CollisionShape3D@69854" type="CollisionShape3D" parent="FtrHandrail__mReBody/@Area3D@69855"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05161, -8.415058e-05)
+shape = SubResource("BoxShape3D_6njra")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d0gh8cnir82dj"]
+
+[ext_resource type="Texture2D" uid="uid://c433ywg3hga7x" path="res://Models/Final Models/FtrIronwoodClockWTextures/mReBody_Alb3.png" id="1_fxtan"]
+[ext_resource type="Texture2D" uid="uid://brljiy5l5n4mj" path="res://Models/Final Models/FtrIronwoodClockWTextures/mReBody_Nrm3.png" id="2_wrhsm"]
+
+[resource]
+resource_name = "mReBody3"
+albedo_texture = ExtResource("1_fxtan")
+normal_enabled = true
+normal_texture = ExtResource("2_wrhsm")

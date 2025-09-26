@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7643ia2abhkj"
-path="res://.godot/imported/mLight_Alb.png-76dbbc0f5144b2d0f3a0dbbf5e9d0caa.ctex"
+path.s3tc="res://.godot/imported/mLight_Alb.png-76dbbc0f5144b2d0f3a0dbbf5e9d0caa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDrinkmachine.Nin_NX_NVN/mLight_Alb.png"
-dest_files=["res://.godot/imported/mLight_Alb.png-76dbbc0f5144b2d0f3a0dbbf5e9d0caa.ctex"]
+dest_files=["res://.godot/imported/mLight_Alb.png-76dbbc0f5144b2d0f3a0dbbf5e9d0caa.s3tc.ctex"]
 
 [params]
 

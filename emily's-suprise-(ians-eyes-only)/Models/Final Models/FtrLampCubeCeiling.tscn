@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0pihh5pl77a2"]
+[gd_scene load_steps=12 format=3 uid="uid://c0pihh5pl77a2"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6y50k"]
+[ext_resource type="Material" uid="uid://d2bd1q2v2huwt" path="res://Models/Final Models/FtrLampCubeCeilingTextures/mReFabric0.tres" id="1_a64rm"]
+[ext_resource type="Material" uid="uid://ge3awkgvalvk" path="res://Models/Final Models/FtrLampCubeCeilingTextures/mBody0.tres" id="2_6y50k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ys5qd"]
 resource_name = "mReFabric"
@@ -65,12 +69,35 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o05eu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_a64rm"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6y50k"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrLampCubeCeiling" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6y50k")
+area_path = NodePath("pCylinder1__mBody/@Area3D@70207")
 
 [node name="Cube__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_aro3p")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_a64rm")
 
 [node name="pCylinder1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_fpqea")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_6y50k")
+
+[node name="@StaticBody3D@70205" type="StaticBody3D" parent="pCylinder1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70204" type="CollisionShape3D" parent="pCylinder1__mBody/@StaticBody3D@70205"]
+shape = SubResource("BoxShape3D_a64rm")
+
+[node name="@Area3D@70207" type="Area3D" parent="pCylinder1__mBody"]
+
+[node name="@CollisionShape3D@70206" type="CollisionShape3D" parent="pCylinder1__mBody/@Area3D@70207"]
+shape = SubResource("BoxShape3D_6y50k")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm32qnbi644mt"
-path="res://.godot/imported/mIka_Alb.png-5438e23c1311232462f60c163bed7161.ctex"
+path.s3tc="res://.godot/imported/mIka_Alb.png-5438e23c1311232462f60c163bed7161.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishIkaToy.Nin_NX_NVN/mIka_Alb.png"
-dest_files=["res://.godot/imported/mIka_Alb.png-5438e23c1311232462f60c163bed7161.ctex"]
+dest_files=["res://.godot/imported/mIka_Alb.png-5438e23c1311232462f60c163bed7161.s3tc.ctex"]
 
 [params]
 

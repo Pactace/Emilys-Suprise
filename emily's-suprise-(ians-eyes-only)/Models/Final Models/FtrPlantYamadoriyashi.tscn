@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bllvgmsvtiqdf"]
+[gd_scene load_steps=12 format=4 uid="uid://bllvgmsvtiqdf"]
+
+[ext_resource type="Material" uid="uid://csc0b6p6iwa8l" path="res://Models/Final Models/FtrPlantYamadoriyashiTextures/mPlant0.tres" id="1_aw764"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_c86ui"]
+[ext_resource type="Material" uid="uid://bt7te1x83s48q" path="res://Models/Final Models/FtrPlantYamadoriyashiTextures/mReBody0.tres" id="2_c86ui"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu4oy"]
 resource_name = "mPlant"
@@ -72,12 +76,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tbmx3")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_aw764"]
+size = Vector3(0.057187, 0.159297, 0.0471056)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c86ui"]
+size = Vector3(0.057187, 0.159297, 0.0471056)
+
 [node name="FtrPlantYamadoriyashi" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_c86ui")
+area_path = NodePath("Pot_low__mReBody/@Area3D@70767")
 
 [node name="Leaves_low__mPlant" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ecrwu")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_aw764")
 
 [node name="Pot_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ujw38")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_c86ui")
+
+[node name="@StaticBody3D@70765" type="StaticBody3D" parent="Pot_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70764" type="CollisionShape3D" parent="Pot_low__mReBody/@StaticBody3D@70765"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0006720014, 0.0796485, -0.0013232995)
+shape = SubResource("BoxShape3D_aw764")
+
+[node name="@Area3D@70767" type="Area3D" parent="Pot_low__mReBody"]
+
+[node name="@CollisionShape3D@70766" type="CollisionShape3D" parent="Pot_low__mReBody/@Area3D@70767"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0006720014, 0.0796485, -0.0013232995)
+shape = SubResource("BoxShape3D_c86ui")

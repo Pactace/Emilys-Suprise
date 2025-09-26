@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccqr74xlqobcn"
-path="res://.godot/imported/mKumanomi_Alb.png-aa9f58826c505b5db221d43c430ee59f.ctex"
+path.s3tc="res://.godot/imported/mKumanomi_Alb.png-aa9f58826c505b5db221d43c430ee59f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKumanomi.Nin_NX_NVN/mKumanomi_Alb.png"
-dest_files=["res://.godot/imported/mKumanomi_Alb.png-aa9f58826c505b5db221d43c430ee59f.ctex"]
+dest_files=["res://.godot/imported/mKumanomi_Alb.png-aa9f58826c505b5db221d43c430ee59f.s3tc.ctex"]
 
 [params]
 

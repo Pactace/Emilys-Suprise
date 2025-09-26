@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://c6gv4tgyyencr"]
+[gd_scene load_steps=8 format=4 uid="uid://c6gv4tgyyencr"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hu5f7"]
+[ext_resource type="Material" uid="uid://c10gfsd8ir4n5" path="res://Models/Final Models/FtrVesselPumpkinTextures/mBody0.tres" id="1_tm55v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0d1u"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3q75s")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tm55v"]
+size = Vector3(0.0713643, 0.038188, 0.0713644)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hu5f7"]
+size = Vector3(0.0713643, 0.038188, 0.0713644)
+
 [node name="FtrVesselPumpkin" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_hu5f7")
+area_path = NodePath("body_Futa_low__mBody/@Area3D@71223")
 
 [node name="body_Futa_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_koofs")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_tm55v")
+
+[node name="@StaticBody3D@71221" type="StaticBody3D" parent="body_Futa_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71220" type="CollisionShape3D" parent="body_Futa_low__mBody/@StaticBody3D@71221"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0.019094, 0)
+shape = SubResource("BoxShape3D_tm55v")
+
+[node name="@Area3D@71223" type="Area3D" parent="body_Futa_low__mBody"]
+
+[node name="@CollisionShape3D@71222" type="CollisionShape3D" parent="body_Futa_low__mBody/@Area3D@71223"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2154064e-08, 0.019094, 0)
+shape = SubResource("BoxShape3D_hu5f7")

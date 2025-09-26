@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://70iv75ap7hfx"
-path="res://.godot/imported/mReFabric_Alb.png-9121ce4940e937da4aa291ee0cb69c82.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Alb.png-9121ce4940e937da4aa291ee0cb69c82.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFacepanel3ds.Nin_NX_NVN/mReFabric_Alb.png"
-dest_files=["res://.godot/imported/mReFabric_Alb.png-9121ce4940e937da4aa291ee0cb69c82.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb.png-9121ce4940e937da4aa291ee0cb69c82.s3tc.ctex"]
 
 [params]
 

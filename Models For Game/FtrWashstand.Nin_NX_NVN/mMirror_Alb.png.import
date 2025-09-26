@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bklnamwbb13ds"
-path="res://.godot/imported/mMirror_Alb.png-4b7f8068a2580fdd68ce429a6062be5c.ctex"
+path.s3tc="res://.godot/imported/mMirror_Alb.png-4b7f8068a2580fdd68ce429a6062be5c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrWashstand.Nin_NX_NVN/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-4b7f8068a2580fdd68ce429a6062be5c.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-4b7f8068a2580fdd68ce429a6062be5c.s3tc.ctex"]
 
 [params]
 

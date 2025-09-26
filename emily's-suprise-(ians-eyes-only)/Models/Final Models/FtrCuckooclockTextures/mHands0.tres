@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cdbrqbf5clxy8"]
+
+[ext_resource type="Texture2D" uid="uid://lpa3opdi4muk" path="res://Models/Final Models/FtrCuckooclockTextures/mHands_Alb.png" id="1_ucexh"]
+[ext_resource type="Texture2D" uid="uid://d1w6e0nj5454b" path="res://Models/Final Models/FtrCuckooclockTextures/mHands_Nrm.png" id="2_mom11"]
+
+[resource]
+resource_name = "mHands0"
+albedo_texture = ExtResource("1_ucexh")
+normal_enabled = true
+normal_texture = ExtResource("2_mom11")

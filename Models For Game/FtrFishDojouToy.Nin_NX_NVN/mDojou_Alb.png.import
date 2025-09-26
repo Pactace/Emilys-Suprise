@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciuss2xavnhor"
-path="res://.godot/imported/mDojou_Alb.png-38a88421731464fd2574bb1bc8360562.ctex"
+path.s3tc="res://.godot/imported/mDojou_Alb.png-38a88421731464fd2574bb1bc8360562.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDojouToy.Nin_NX_NVN/mDojou_Alb.png"
-dest_files=["res://.godot/imported/mDojou_Alb.png-38a88421731464fd2574bb1bc8360562.ctex"]
+dest_files=["res://.godot/imported/mDojou_Alb.png-38a88421731464fd2574bb1bc8360562.s3tc.ctex"]
 
 [params]
 

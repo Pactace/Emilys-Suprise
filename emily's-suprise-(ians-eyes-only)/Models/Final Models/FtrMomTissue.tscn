@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://ddudu8xorq505"]
+[gd_scene load_steps=12 format=4 uid="uid://ddudu8xorq505"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_lqy4m"]
+[ext_resource type="Material" uid="uid://dhcj50y7pk60b" path="res://Models/Final Models/FtrMomTissueTextures/mReBody0.tres" id="1_qvmfh"]
+[ext_resource type="Material" uid="uid://cjnaqotfc4gra" path="res://Models/Final Models/FtrMomTissueTextures/mBody0.tres" id="2_lqy4m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lwkd"]
 resource_name = "mReBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cgcf3")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvmfh"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqy4m"]
+size = Vector3(0, 0, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8av3d"]
 resource_name = "mBody"
 vertex_color_use_as_albedo = true
@@ -69,11 +79,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0w8kk")
 
 [node name="FtrMomTissue" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_lqy4m")
+area_path = NodePath("Box_low__mReBody/@Area3D@70475")
 
 [node name="Box_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_li1do")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_qvmfh")
+
+[node name="@StaticBody3D@70473" type="StaticBody3D" parent="Box_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70472" type="CollisionShape3D" parent="Box_low__mReBody/@StaticBody3D@70473"]
+shape = SubResource("BoxShape3D_qvmfh")
+
+[node name="@Area3D@70475" type="Area3D" parent="Box_low__mReBody"]
+
+[node name="@CollisionShape3D@70474" type="CollisionShape3D" parent="Box_low__mReBody/@Area3D@70475"]
+shape = SubResource("BoxShape3D_lqy4m")
 
 [node name="TissueBack__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rri67")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_lqy4m")

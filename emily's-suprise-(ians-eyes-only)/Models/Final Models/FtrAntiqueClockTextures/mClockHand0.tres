@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dfkka420rcmkb"]
+
+[ext_resource type="Texture2D" uid="uid://dh68ymrifnwu3" path="res://Models/Final Models/FtrAntiqueClockTextures/mClockHand_Alb.png" id="1_c04ii"]
+[ext_resource type="Texture2D" uid="uid://doq4lcsmhdteh" path="res://Models/Final Models/FtrAntiqueClockTextures/mClockHand_Nrm.png" id="2_eujup"]
+
+[resource]
+resource_name = "mClockHand0"
+albedo_texture = ExtResource("1_c04ii")
+normal_enabled = true
+normal_texture = ExtResource("2_eujup")

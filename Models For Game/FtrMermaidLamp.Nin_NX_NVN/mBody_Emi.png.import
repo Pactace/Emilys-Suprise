@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqo825qlegi1m"
-path="res://.godot/imported/mBody_Emi.png-5dc817d90cf7e9ddcaac3ec5a06d31bb.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-5dc817d90cf7e9ddcaac3ec5a06d31bb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMermaidLamp.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-5dc817d90cf7e9ddcaac3ec5a06d31bb.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-5dc817d90cf7e9ddcaac3ec5a06d31bb.s3tc.ctex"]
 
 [params]
 

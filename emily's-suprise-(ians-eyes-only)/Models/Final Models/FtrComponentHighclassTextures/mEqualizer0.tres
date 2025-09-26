@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://k81c6a6tk0vm"]
+
+[ext_resource type="Texture2D" uid="uid://bd68ho2uukncb" path="res://Models/Final Models/FtrComponentHighclassTextures/mEqualizer_Alb.png" id="1_lf8jl"]
+[ext_resource type="Texture2D" uid="uid://cv0msvslo670r" path="res://Models/Final Models/FtrComponentHighclassTextures/mEqualizer_Nrm.png" id="2_4hjn0"]
+
+[resource]
+resource_name = "mEqualizer0"
+albedo_texture = ExtResource("1_lf8jl")
+normal_enabled = true
+normal_texture = ExtResource("2_4hjn0")

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://8x2v0qusxm85"]
+[gd_scene load_steps=12 format=4 uid="uid://8x2v0qusxm85"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_a3kt8"]
+[ext_resource type="Material" uid="uid://dda33jkat8c2k" path="res://Models/Final Models/FtrCoolTableMTextures/mReFabric0.tres" id="1_o6md3"]
+[ext_resource type="Material" uid="uid://cltcmyx7irrc8" path="res://Models/Final Models/FtrCoolTableMTextures/mReBody0.tres" id="2_a3kt8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4655"]
 resource_name = "mReFabric"
@@ -78,12 +82,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_364kb")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_o6md3"]
+size = Vector3(0.169189, 0.0504671, 0.08)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a3kt8"]
+size = Vector3(0.169189, 0.0504671, 0.08)
+
 [node name="FtrCoolTableM" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_a3kt8")
+area_path = NodePath("Pipe_low__mReBody/@Area3D@69003")
 
 [node name="Mid_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_gya12")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_o6md3")
 
 [node name="Pipe_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0nr01")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_a3kt8")
+
+[node name="@StaticBody3D@69001" type="StaticBody3D" parent="Pipe_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69000" type="CollisionShape3D" parent="Pipe_low__mReBody/@StaticBody3D@69001"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4959445e-06, 0.02523621, 0)
+shape = SubResource("BoxShape3D_o6md3")
+
+[node name="@Area3D@69003" type="Area3D" parent="Pipe_low__mReBody"]
+
+[node name="@CollisionShape3D@69002" type="CollisionShape3D" parent="Pipe_low__mReBody/@Area3D@69003"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4959445e-06, 0.02523621, 0)
+shape = SubResource("BoxShape3D_a3kt8")

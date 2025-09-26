@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c17n3vljlruso"
-path="res://.godot/imported/mMirror_Alb.png-f988f6a44cc04dcac7ec0fdbf1a9db02.ctex"
+path.s3tc="res://.godot/imported/mMirror_Alb.png-f988f6a44cc04dcac7ec0fdbf1a9db02.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCuteDresser.Nin_NX_NVN/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-f988f6a44cc04dcac7ec0fdbf1a9db02.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-f988f6a44cc04dcac7ec0fdbf1a9db02.s3tc.ctex"]
 
 [params]
 

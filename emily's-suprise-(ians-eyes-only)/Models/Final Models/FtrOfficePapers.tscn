@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://voqyyqp1ojut"]
+[gd_scene load_steps=12 format=3 uid="uid://voqyyqp1ojut"]
+
+[ext_resource type="Material" uid="uid://dmblit6jqn8vb" path="res://Models/Final Models/FtrOfficePapersTextures/mBody0.tres" id="1_5ol20"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6fmfy"]
+[ext_resource type="Material" uid="uid://birpxhdcp348f" path="res://Models/Final Models/FtrOfficePapersTextures/mReFabric0.tres" id="2_6fmfy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vndbs"]
 resource_name = "mBody"
@@ -31,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l1kk4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ol20"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6fmfy"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hoqp2"]
 resource_name = "mReFabric"
@@ -66,11 +76,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yeuqn")
 
 [node name="FtrOfficePapers" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6fmfy")
+area_path = NodePath("Documents01_low__mBody/@Area3D@70619")
 
 [node name="Documents01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_uy33u")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_5ol20")
+
+[node name="@StaticBody3D@70617" type="StaticBody3D" parent="Documents01_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70616" type="CollisionShape3D" parent="Documents01_low__mBody/@StaticBody3D@70617"]
+shape = SubResource("BoxShape3D_5ol20")
+
+[node name="@Area3D@70619" type="Area3D" parent="Documents01_low__mBody"]
+
+[node name="@CollisionShape3D@70618" type="CollisionShape3D" parent="Documents01_low__mBody/@Area3D@70619"]
+shape = SubResource("BoxShape3D_6fmfy")
 
 [node name="paper01_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vay31")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_6fmfy")

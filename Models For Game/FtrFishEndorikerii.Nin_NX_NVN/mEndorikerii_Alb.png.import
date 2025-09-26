@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f3hjybkc5m3m"
-path="res://.godot/imported/mEndorikerii_Alb.png-7bcdd52fd497f454b3cf581f68f2c2e8.ctex"
+path.s3tc="res://.godot/imported/mEndorikerii_Alb.png-7bcdd52fd497f454b3cf581f68f2c2e8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishEndorikerii.Nin_NX_NVN/mEndorikerii_Alb.png"
-dest_files=["res://.godot/imported/mEndorikerii_Alb.png-7bcdd52fd497f454b3cf581f68f2c2e8.ctex"]
+dest_files=["res://.godot/imported/mEndorikerii_Alb.png-7bcdd52fd497f454b3cf581f68f2c2e8.s3tc.ctex"]
 
 [params]
 

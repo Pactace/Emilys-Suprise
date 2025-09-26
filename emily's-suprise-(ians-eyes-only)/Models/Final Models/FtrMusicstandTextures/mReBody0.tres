@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dp721frngdwha"]
+
+[ext_resource type="Texture2D" uid="uid://cm26tmhiosxfg" path="res://Models/Final Models/FtrMusicstandTextures/mReBody_Alb.png" id="1_2d13j"]
+[ext_resource type="Texture2D" uid="uid://ct8h58mhyqrj6" path="res://Models/Final Models/FtrMusicstandTextures/mReBody_Nrm.png" id="2_f28xd"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_2d13j")
+normal_enabled = true
+normal_texture = ExtResource("2_f28xd")

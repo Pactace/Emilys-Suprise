@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bglbkl2lj0vdr"]
+[gd_scene load_steps=8 format=4 uid="uid://bglbkl2lj0vdr"]
+
+[ext_resource type="Material" uid="uid://c8xnn2sfso8ne" path="res://Models/Final Models/FtrKitchenFlameTextures/mBody0.tres" id="1_kbtqy"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wgdw8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hk7v0"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5cgtl")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbtqy"]
+size = Vector3(0.185333, 0.12336, 0.0904691)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wgdw8"]
+size = Vector3(0.185333, 0.12336, 0.0904691)
+
 [node name="FtrKitchenFlame" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_wgdw8")
+area_path = NodePath("back_low__mBody/@Area3D@70151")
 
 [node name="back_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lpw4f")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_kbtqy")
+
+[node name="@StaticBody3D@70149" type="StaticBody3D" parent="back_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70148" type="CollisionShape3D" parent="back_low__mBody/@StaticBody3D@70149"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0116568e-07, 0.061680425, 0.0002635494)
+shape = SubResource("BoxShape3D_kbtqy")
+
+[node name="@Area3D@70151" type="Area3D" parent="back_low__mBody"]
+
+[node name="@CollisionShape3D@70150" type="CollisionShape3D" parent="back_low__mBody/@Area3D@70151"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0116568e-07, 0.061680425, 0.0002635494)
+shape = SubResource("BoxShape3D_wgdw8")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c25i3e71ek8er"]
+
+[ext_resource type="Texture2D" uid="uid://daddbkawx1daw" path="res://Models/Final Models/FtrHarvestClocheEventTextures/mFtrHarvestClocheEvent_Alb.png" id="1_gaimu"]
+[ext_resource type="Texture2D" uid="uid://bhkssl86ep3fv" path="res://Models/Final Models/FtrHarvestClocheEventTextures/mFtrHarvestClocheEvent_Nrm.png" id="2_8w6cq"]
+
+[resource]
+resource_name = "mFtrHarvestClocheEvent0"
+albedo_texture = ExtResource("1_gaimu")
+normal_enabled = true
+normal_texture = ExtResource("2_8w6cq")

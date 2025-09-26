@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg0s3ly7lh4fg"
-path="res://.godot/imported/mClockHand_Alb.png-601e09a5174e1211f4c65a92e985e2aa.ctex"
+path.s3tc="res://.godot/imported/mClockHand_Alb.png-601e09a5174e1211f4c65a92e985e2aa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrAntiqueClock.Nin_NX_NVN/mClockHand_Alb.png"
-dest_files=["res://.godot/imported/mClockHand_Alb.png-601e09a5174e1211f4c65a92e985e2aa.ctex"]
+dest_files=["res://.godot/imported/mClockHand_Alb.png-601e09a5174e1211f4c65a92e985e2aa.s3tc.ctex"]
 
 [params]
 

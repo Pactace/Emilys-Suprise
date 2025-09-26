@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu31immdyf2v1"
-path="res://.godot/imported/mBody_Alb.png-9c9a5e836666b10cb228ff24ff49c465.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-9c9a5e836666b10cb228ff24ff49c465.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJarPeach.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-9c9a5e836666b10cb228ff24ff49c465.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-9c9a5e836666b10cb228ff24ff49c465.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bx3h124eldgs0"]
+
+[ext_resource type="Texture2D" uid="uid://bo755h7bsoxsa" path="res://Models/Final Models/FtrComponentHighclassTextures/mScreen_Alb.png" id="1_eymba"]
+[ext_resource type="Texture2D" uid="uid://c3f8j1qg3uy7w" path="res://Models/Final Models/FtrComponentHighclassTextures/mScreen_Nrm.png" id="2_kod47"]
+
+[resource]
+resource_name = "mScreen0"
+albedo_texture = ExtResource("1_eymba")
+normal_enabled = true
+normal_texture = ExtResource("2_kod47")

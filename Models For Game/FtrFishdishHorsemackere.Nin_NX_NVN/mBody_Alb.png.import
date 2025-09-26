@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3i3w73lj5tw6"
-path="res://.godot/imported/mBody_Alb.png-c0ce655caae3fb2f6f76600b0bf822c3.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-c0ce655caae3fb2f6f76600b0bf822c3.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishdishHorsemackere.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-c0ce655caae3fb2f6f76600b0bf822c3.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-c0ce655caae3fb2f6f76600b0bf822c3.s3tc.ctex"]
 
 [params]
 

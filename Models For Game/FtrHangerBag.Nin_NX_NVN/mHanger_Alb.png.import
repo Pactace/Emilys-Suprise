@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5y4qsh4dro4n"
-path="res://.godot/imported/mHanger_Alb.png-c9a70b6f3561788e1bf606d5ba6d41b0.ctex"
+path.s3tc="res://.godot/imported/mHanger_Alb.png-c9a70b6f3561788e1bf606d5ba6d41b0.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHangerBag.Nin_NX_NVN/mHanger_Alb.png"
-dest_files=["res://.godot/imported/mHanger_Alb.png-c9a70b6f3561788e1bf606d5ba6d41b0.ctex"]
+dest_files=["res://.godot/imported/mHanger_Alb.png-c9a70b6f3561788e1bf606d5ba6d41b0.s3tc.ctex"]
 
 [params]
 

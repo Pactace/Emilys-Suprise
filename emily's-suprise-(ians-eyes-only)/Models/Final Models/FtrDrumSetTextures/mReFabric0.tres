@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bhlsuq545x86e"]
+
+[ext_resource type="Texture2D" uid="uid://dvpw05kwwl5wb" path="res://Models/Final Models/FtrDrumSetTextures/mReFabric_Alb.png" id="1_bg457"]
+[ext_resource type="Texture2D" uid="uid://r5urxxxn51sh" path="res://Models/Final Models/FtrDrumSetTextures/mReFabric_Nrm.png" id="2_02wp1"]
+
+[resource]
+resource_name = "mReFabric0"
+albedo_texture = ExtResource("1_bg457")
+normal_enabled = true
+normal_texture = ExtResource("2_02wp1")

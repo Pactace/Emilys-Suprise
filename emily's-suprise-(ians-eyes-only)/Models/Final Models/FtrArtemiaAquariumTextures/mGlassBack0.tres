@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cib0ves4p42ol"]
+
+[ext_resource type="Texture2D" uid="uid://dh4dnp2jqx8k8" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mGlassBack_Alb.png" id="1_lphqi"]
+[ext_resource type="Texture2D" uid="uid://hhqd1rxq2jma" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mGlassBack_Nrm.png" id="2_vui17"]
+
+[resource]
+resource_name = "mGlassBack0"
+albedo_texture = ExtResource("1_lphqi")
+normal_enabled = true
+normal_texture = ExtResource("2_vui17")

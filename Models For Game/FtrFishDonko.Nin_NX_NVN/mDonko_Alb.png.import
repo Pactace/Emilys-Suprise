@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://baa3e6bmqoehg"
-path="res://.godot/imported/mDonko_Alb.png-60b7c6b55d75c5286bb83b5fdab0c9ec.ctex"
+path.s3tc="res://.godot/imported/mDonko_Alb.png-60b7c6b55d75c5286bb83b5fdab0c9ec.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDonko.Nin_NX_NVN/mDonko_Alb.png"
-dest_files=["res://.godot/imported/mDonko_Alb.png-60b7c6b55d75c5286bb83b5fdab0c9ec.ctex"]
+dest_files=["res://.godot/imported/mDonko_Alb.png-60b7c6b55d75c5286bb83b5fdab0c9ec.s3tc.ctex"]
 
 [params]
 

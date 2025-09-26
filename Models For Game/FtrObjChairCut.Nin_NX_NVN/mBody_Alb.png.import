@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4vrdbl2qj5h1"
-path="res://.godot/imported/mBody_Alb.png-b89cbd4ba2226afdcbcea40c31c8bb3d.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-b89cbd4ba2226afdcbcea40c31c8bb3d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrObjChairCut.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-b89cbd4ba2226afdcbcea40c31c8bb3d.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-b89cbd4ba2226afdcbcea40c31c8bb3d.s3tc.ctex"]
 
 [params]
 

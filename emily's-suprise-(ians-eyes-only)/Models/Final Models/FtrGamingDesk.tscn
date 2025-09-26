@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://e3c4x2eoomgj"]
+[gd_scene load_steps=15 format=4 uid="uid://e3c4x2eoomgj"]
+
+[ext_resource type="Material" uid="uid://di1bjplgwfovh" path="res://Models/Final Models/FtrGamingDeskTextures/mReBody0.tres" id="1_0gyjb"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fyk8h"]
+[ext_resource type="Material" uid="uid://bb8hga8k61ann" path="res://Models/Final Models/FtrGamingDeskTextures/mReFabric0.tres" id="2_fyk8h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nh4mu"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_x7c2g")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gyjb"]
+size = Vector3(0.194993, 0.188374, 0.0998172)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fyk8h"]
+size = Vector3(0.194993, 0.188374, 0.0998172)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4x8t1"]
 resource_name = "mGlass"
@@ -108,10 +118,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lavgh")
 
 [node name="FtrGamingDesk" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_fyk8h")
+area_path = NodePath("desctop_01_low__mReBody/@Area3D@69727")
 
 [node name="desctop_01_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qxnmx")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_0gyjb")
+
+[node name="@StaticBody3D@69725" type="StaticBody3D" parent="desctop_01_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69724" type="CollisionShape3D" parent="desctop_01_low__mReBody/@StaticBody3D@69725"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.094187, 0.00041970238)
+shape = SubResource("BoxShape3D_0gyjb")
+
+[node name="@Area3D@69727" type="Area3D" parent="desctop_01_low__mReBody"]
+
+[node name="@CollisionShape3D@69726" type="CollisionShape3D" parent="desctop_01_low__mReBody/@Area3D@69727"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.094187, 0.00041970238)
+shape = SubResource("BoxShape3D_fyk8h")
 
 [node name="desctop_glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_xi5ap")
@@ -120,3 +148,4 @@ skeleton = NodePath("")
 [node name="monitorA_screen_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jyy8h")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_fyk8h")

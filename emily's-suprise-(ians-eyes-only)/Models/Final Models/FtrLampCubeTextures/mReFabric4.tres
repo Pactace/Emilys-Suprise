@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3kb8qbconbom"]
+
+[ext_resource type="Texture2D" uid="uid://cvo8a6rlvf5kv" path="res://Models/Final Models/FtrLampCubeTextures/mReFabric_Alb14.png" id="1_1q8ea"]
+
+[resource]
+resource_name = "mReFabric4"
+albedo_texture = ExtResource("1_1q8ea")
+normal_enabled = true

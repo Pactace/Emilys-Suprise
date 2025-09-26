@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bh8sk4foma257"]
+[gd_scene load_steps=12 format=4 uid="uid://bh8sk4foma257"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_5jvip"]
+[ext_resource type="Material" uid="uid://co26bhmy156kh" path="res://Models/Final Models/FtrArtSummerFakeTextures/mFrame0.tres" id="1_7j5u1"]
+[ext_resource type="Material" uid="uid://bvta2016vagyp" path="res://Models/Final Models/FtrArtSummerFakeTextures/mBody0.tres" id="2_5jvip"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10bya"]
 resource_name = "mFrame"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_eukj7")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7j5u1"]
+size = Vector3(0.06, 0.0792, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5jvip"]
+size = Vector3(0.06, 0.0792, 1e-05)
+
 [node name="FtrArtSummerFake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_5jvip")
+area_path = NodePath("Summer__mBody/@Area3D@68479")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vv2pj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7j5u1")
 
 [node name="Summer__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kf2m0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_5jvip")
+
+[node name="@StaticBody3D@68477" type="StaticBody3D" parent="Summer__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68476" type="CollisionShape3D" parent="Summer__mBody/@StaticBody3D@68477"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_7j5u1")
+
+[node name="@Area3D@68479" type="Area3D" parent="Summer__mBody"]
+
+[node name="@CollisionShape3D@68478" type="CollisionShape3D" parent="Summer__mBody/@Area3D@68479"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_5jvip")

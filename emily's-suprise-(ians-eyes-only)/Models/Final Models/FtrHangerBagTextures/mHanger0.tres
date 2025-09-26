@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dsify78o6of4g"]
+
+[ext_resource type="Texture2D" uid="uid://cekmfocmp1xfl" path="res://Models/Final Models/FtrHangerBagTextures/mHanger_Alb.png" id="1_jvrcn"]
+[ext_resource type="Texture2D" uid="uid://cj8bm01wjgl82" path="res://Models/Final Models/FtrHangerBagTextures/mHanger_Nrm.png" id="2_eupjh"]
+
+[resource]
+resource_name = "mHanger0"
+albedo_texture = ExtResource("1_jvrcn")
+normal_enabled = true
+normal_texture = ExtResource("2_eupjh")

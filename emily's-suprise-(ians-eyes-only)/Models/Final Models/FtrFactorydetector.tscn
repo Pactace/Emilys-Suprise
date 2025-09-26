@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://bu76pcyjlknib"]
+[gd_scene load_steps=16 format=4 uid="uid://bu76pcyjlknib"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_5dcgd"]
+[ext_resource type="Material" uid="uid://by77dtnsmxl8x" path="res://Models/Final Models/FtrFactorydetectorTextures/mBody0.tres" id="1_jveke"]
+[ext_resource type="Material" uid="uid://bkqsn56wgy7jf" path="res://Models/Final Models/FtrFactorydetectorTextures/mReBody0.tres" id="2_5dcgd"]
+[ext_resource type="Material" uid="uid://cxisrbu5wnht5" path="res://Models/Final Models/FtrFactorydetectorTextures/mReFabric0.tres" id="3_wgqpx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38o58"]
 resource_name = "mBody"
@@ -77,6 +82,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dwil2")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jveke"]
+size = Vector3(0.0999954, 0.115375, 0.0893227)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5dcgd"]
+size = Vector3(0.0999954, 0.115375, 0.0893227)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abs6m"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -116,15 +127,35 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0md3p")
 
 [node name="FtrFactorydetector" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_5dcgd")
+area_path = NodePath("BeltConveyor02_low__mReBody/@Area3D@69439")
 
 [node name="BeltConveyor01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_tf3uv")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_jveke")
 
 [node name="BeltConveyor02_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kmlud")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_5dcgd")
+
+[node name="@StaticBody3D@69437" type="StaticBody3D" parent="BeltConveyor02_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69436" type="CollisionShape3D" parent="BeltConveyor02_low__mReBody/@StaticBody3D@69437"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2985041e-06, 0.0576875, 5.2154064e-08)
+shape = SubResource("BoxShape3D_jveke")
+
+[node name="@Area3D@69439" type="Area3D" parent="BeltConveyor02_low__mReBody"]
+
+[node name="@CollisionShape3D@69438" type="CollisionShape3D" parent="BeltConveyor02_low__mReBody/@Area3D@69439"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2985041e-06, 0.0576875, 5.2154064e-08)
+shape = SubResource("BoxShape3D_5dcgd")
 
 [node name="Monitor_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cgl4v")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_wgqpx")

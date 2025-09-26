@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://yx0noemrwfup"]
+[gd_scene load_steps=14 format=4 uid="uid://yx0noemrwfup"]
+
+[ext_resource type="Material" uid="uid://dqmfvcnpsa280" path="res://Models/Final Models/FtrJarPeachTextures/mBody0.tres" id="1_apdy5"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hp4jr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1nkmq"]
 resource_name = "mGlass"
@@ -104,7 +107,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_arwfv")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_apdy5"]
+size = Vector3(0.0652421, 0.0283485, 0.0690465)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hp4jr"]
+size = Vector3(0.0652421, 0.0283485, 0.0690465)
+
 [node name="FtrJarPeach" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_hp4jr")
+area_path = NodePath("Cap_Fr_1__mBody/@Area3D@70071")
 
 [node name="Bottle_Fr_1__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_32vax")
@@ -117,3 +129,18 @@ skeleton = NodePath("")
 [node name="Cap_Fr_1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vdwj7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_apdy5")
+
+[node name="@StaticBody3D@70069" type="StaticBody3D" parent="Cap_Fr_1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70068" type="CollisionShape3D" parent="Cap_Fr_1__mBody/@StaticBody3D@70069"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0013119504, 0.015064834, 0.0037775487)
+shape = SubResource("BoxShape3D_apdy5")
+
+[node name="@Area3D@70071" type="Area3D" parent="Cap_Fr_1__mBody"]
+
+[node name="@CollisionShape3D@70070" type="CollisionShape3D" parent="Cap_Fr_1__mBody/@Area3D@70071"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0013119504, 0.015064834, 0.0037775487)
+shape = SubResource("BoxShape3D_hp4jr")

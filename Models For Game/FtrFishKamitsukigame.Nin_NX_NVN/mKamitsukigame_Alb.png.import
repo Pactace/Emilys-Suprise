@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm55v6tdcthb5"
-path="res://.godot/imported/mKamitsukigame_Alb.png-63262d848d542d529bf1534c4d950957.ctex"
+path.s3tc="res://.godot/imported/mKamitsukigame_Alb.png-63262d848d542d529bf1534c4d950957.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKamitsukigame.Nin_NX_NVN/mKamitsukigame_Alb.png"
-dest_files=["res://.godot/imported/mKamitsukigame_Alb.png-63262d848d542d529bf1534c4d950957.ctex"]
+dest_files=["res://.godot/imported/mKamitsukigame_Alb.png-63262d848d542d529bf1534c4d950957.s3tc.ctex"]
 
 [params]
 

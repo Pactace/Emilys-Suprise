@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chnshvdeo4ygx"
-path="res://.godot/imported/mBody_Emi.png-dacb99b32666e4215aedbbb5dc502969.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-dacb99b32666e4215aedbbb5dc502969.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrKitchenKamado.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-dacb99b32666e4215aedbbb5dc502969.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-dacb99b32666e4215aedbbb5dc502969.s3tc.ctex"]
 
 [params]
 

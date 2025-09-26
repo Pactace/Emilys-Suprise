@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctc48xr6dt1ow"
-path="res://.godot/imported/mHanger_Alb.png-530fe569c34c2fc89578f24c564c70c4.ctex"
+path.s3tc="res://.godot/imported/mHanger_Alb.png-530fe569c34c2fc89578f24c564c70c4.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHangerAccessoryMouth.Nin_NX_NVN/mHanger_Alb.png"
-dest_files=["res://.godot/imported/mHanger_Alb.png-530fe569c34c2fc89578f24c564c70c4.ctex"]
+dest_files=["res://.godot/imported/mHanger_Alb.png-530fe569c34c2fc89578f24c564c70c4.s3tc.ctex"]
 
 [params]
 

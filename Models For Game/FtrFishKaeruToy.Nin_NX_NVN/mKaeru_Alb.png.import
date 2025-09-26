@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dagvqmy3df1f0"
-path="res://.godot/imported/mKaeru_Alb.png-23226b7775093806d97d3dd0e1e9280c.ctex"
+path.s3tc="res://.godot/imported/mKaeru_Alb.png-23226b7775093806d97d3dd0e1e9280c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKaeruToy.Nin_NX_NVN/mKaeru_Alb.png"
-dest_files=["res://.godot/imported/mKaeru_Alb.png-23226b7775093806d97d3dd0e1e9280c.ctex"]
+dest_files=["res://.godot/imported/mKaeru_Alb.png-23226b7775093806d97d3dd0e1e9280c.s3tc.ctex"]
 
 [params]
 

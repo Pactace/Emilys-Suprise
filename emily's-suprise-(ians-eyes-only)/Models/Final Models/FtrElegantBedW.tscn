@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cequxfg3curh4"]
+[gd_scene load_steps=12 format=4 uid="uid://cequxfg3curh4"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_exkn7"]
+[ext_resource type="Material" uid="uid://dfl33nbobalki" path="res://Models/Final Models/FtrElegantBedWTextures/mReBody0.tres" id="1_wnaxu"]
+[ext_resource type="Material" uid="uid://31hpcks1s8a0" path="res://Models/Final Models/FtrElegantBedWTextures/mReFabric0.tres" id="2_exkn7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_au1tt"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j3gab")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wnaxu"]
+size = Vector3(0.193436, 0.130044, 0.189671)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_exkn7"]
+size = Vector3(0.193436, 0.130044, 0.189671)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgxmr"]
 resource_name = "mReFabric"
@@ -81,11 +91,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_efbby")
 
 [node name="FtrElegantBedW" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_exkn7")
+area_path = NodePath("Flame_low__mReBody/@Area3D@69319")
 
 [node name="Flame_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6r846")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_wnaxu")
+
+[node name="@StaticBody3D@69317" type="StaticBody3D" parent="Flame_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69316" type="CollisionShape3D" parent="Flame_low__mReBody/@StaticBody3D@69317"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0005392954, 0.065022, 1.937151e-07)
+shape = SubResource("BoxShape3D_wnaxu")
+
+[node name="@Area3D@69319" type="Area3D" parent="Flame_low__mReBody"]
+
+[node name="@CollisionShape3D@69318" type="CollisionShape3D" parent="Flame_low__mReBody/@Area3D@69319"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0005392954, 0.065022, 1.937151e-07)
+shape = SubResource("BoxShape3D_exkn7")
 
 [node name="Sheets1_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_26qyr")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_exkn7")

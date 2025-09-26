@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://5qc3ftc6ndh8"]
+[gd_scene load_steps=12 format=4 uid="uid://5qc3ftc6ndh8"]
+
+[ext_resource type="Material" uid="uid://j1hyhml23y7t" path="res://Models/Final Models/FtrCoffeecupTextures/mCoffee0.tres" id="1_cfpj8"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_kyerm"]
+[ext_resource type="Material" uid="uid://qoxsjlcmaj4g" path="res://Models/Final Models/FtrCoffeecupTextures/mReBody0.tres" id="2_kyerm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipv1q"]
 resource_name = "mCoffee"
@@ -79,12 +83,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ooxac")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cfpj8"]
+size = Vector3(0.0441797, 0.0185762, 0.04373)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kyerm"]
+size = Vector3(0.0441797, 0.0185762, 0.04373)
+
 [node name="FtrCoffeecup" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_kyerm")
+area_path = NodePath("cup__mReBody/@Area3D@68963")
 
 [node name="Coffee__mCoffee" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_8uf8o")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_cfpj8")
 
 [node name="cup__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_04ko2")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_kyerm")
+
+[node name="@StaticBody3D@68961" type="StaticBody3D" parent="cup__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68960" type="CollisionShape3D" parent="cup__mReBody/@StaticBody3D@68961"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0.0092881, 0)
+shape = SubResource("BoxShape3D_cfpj8")
+
+[node name="@Area3D@68963" type="Area3D" parent="cup__mReBody"]
+
+[node name="@CollisionShape3D@68962" type="CollisionShape3D" parent="cup__mReBody/@Area3D@68963"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, 0.0092881, 0)
+shape = SubResource("BoxShape3D_kyerm")

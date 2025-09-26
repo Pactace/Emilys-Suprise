@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0cjgceimeko2"
-path="res://.godot/imported/mItou_Alb.png-075913b021d016cea49d1f57fc771319.ctex"
+path.s3tc="res://.godot/imported/mItou_Alb.png-075913b021d016cea49d1f57fc771319.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishItou.Nin_NX_NVN/mItou_Alb.png"
-dest_files=["res://.godot/imported/mItou_Alb.png-075913b021d016cea49d1f57fc771319.ctex"]
+dest_files=["res://.godot/imported/mItou_Alb.png-075913b021d016cea49d1f57fc771319.s3tc.ctex"]
 
 [params]
 

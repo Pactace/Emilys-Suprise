@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0nlkphxlb3as"
-path="res://.godot/imported/mBody_Alb.png-154a4817e5bbda3fffd138aa5745c60b.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-154a4817e5bbda3fffd138aa5745c60b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBookRecipe.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-154a4817e5bbda3fffd138aa5745c60b.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-154a4817e5bbda3fffd138aa5745c60b.s3tc.ctex"]
 
 [params]
 

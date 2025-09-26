@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bfkygmlqhh2r0"]
+[gd_scene load_steps=12 format=4 uid="uid://bfkygmlqhh2r0"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ctfnf"]
+[ext_resource type="Material" uid="uid://djbnlo0s7m4rf" path="res://Models/Final Models/FtrFacepanelTextures/mBody0.tres" id="1_g4tl8"]
+[ext_resource type="Material" uid="uid://bp66axsoccbxq" path="res://Models/Final Models/FtrFacepanelTextures/mReFabric0.tres" id="2_ctfnf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kiey"]
 resource_name = "mBody"
@@ -38,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0lvyb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4tl8"]
+size = Vector3(0.1, 0.1575, 0.04)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ctfnf"]
+size = Vector3(0.1, 0.1575, 0.04)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yfp4"]
 resource_name = "mReFabric"
@@ -79,11 +89,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q4do0")
 
 [node name="FtrFacepanel" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ctfnf")
+area_path = NodePath("FtrFacepanel_low__mBody/@Area3D@69423")
 
 [node name="FtrFacepanel_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qahlk")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_g4tl8")
+
+[node name="@StaticBody3D@69421" type="StaticBody3D" parent="FtrFacepanel_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69420" type="CollisionShape3D" parent="FtrFacepanel_low__mBody/@StaticBody3D@69421"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07875, 0)
+shape = SubResource("BoxShape3D_g4tl8")
+
+[node name="@Area3D@69423" type="Area3D" parent="FtrFacepanel_low__mBody"]
+
+[node name="@CollisionShape3D@69422" type="CollisionShape3D" parent="FtrFacepanel_low__mBody/@Area3D@69423"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07875, 0)
+shape = SubResource("BoxShape3D_ctfnf")
 
 [node name="FtrFacepanel_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_g0r1g")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_ctfnf")

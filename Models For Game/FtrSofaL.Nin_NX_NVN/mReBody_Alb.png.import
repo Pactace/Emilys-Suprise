@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ssnlfx62nbhb"
-path="res://.godot/imported/mReBody_Alb.png-e12e86476c6ac6bd0ef8c9230e33d3ec.ctex"
+path.s3tc="res://.godot/imported/mReBody_Alb.png-e12e86476c6ac6bd0ef8c9230e33d3ec.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrSofaL.Nin_NX_NVN/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-e12e86476c6ac6bd0ef8c9230e33d3ec.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-e12e86476c6ac6bd0ef8c9230e33d3ec.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbw34u3kkqjmt"
-path="res://.godot/imported/mHanger_Alb.png-fa38ecc1d4291d2318739e0e84228707.ctex"
+path.s3tc="res://.godot/imported/mHanger_Alb.png-fa38ecc1d4291d2318739e0e84228707.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHangerAccessoryGlassmouth.Nin_NX_NVN/mHanger_Alb.png"
-dest_files=["res://.godot/imported/mHanger_Alb.png-fa38ecc1d4291d2318739e0e84228707.ctex"]
+dest_files=["res://.godot/imported/mHanger_Alb.png-fa38ecc1d4291d2318739e0e84228707.s3tc.ctex"]
 
 [params]
 

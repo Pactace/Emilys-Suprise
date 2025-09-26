@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxwcxpqfkfgib"
-path="res://.godot/imported/mUgui_Alb.png-b7c5bbc7e9b36a85ad8c3acab3923e39.ctex"
+path.s3tc="res://.godot/imported/mUgui_Alb.png-b7c5bbc7e9b36a85ad8c3acab3923e39.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishUgui.Nin_NX_NVN/mUgui_Alb.png"
-dest_files=["res://.godot/imported/mUgui_Alb.png-b7c5bbc7e9b36a85ad8c3acab3923e39.ctex"]
+dest_files=["res://.godot/imported/mUgui_Alb.png-b7c5bbc7e9b36a85ad8c3acab3923e39.s3tc.ctex"]
 
 [params]
 

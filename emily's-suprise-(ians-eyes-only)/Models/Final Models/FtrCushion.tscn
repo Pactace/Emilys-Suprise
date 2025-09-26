@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cges6uktxvivc"]
+[gd_scene load_steps=8 format=4 uid="uid://cges6uktxvivc"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_12nmx"]
+[ext_resource type="Material" uid="uid://c7mjsrmggbhpl" path="res://Models/Final Models/FtrCushionTextures/mReFabric0.tres" id="1_cchhx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ml4d"]
 resource_name = "mReFabric"
@@ -40,8 +43,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_412gu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cchhx"]
+size = Vector3(0.0683823, 0.03, 0.065099)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_12nmx"]
+size = Vector3(0.0683823, 0.03, 0.065099)
+
 [node name="FtrCushion" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_12nmx")
+area_path = NodePath("Cushion_low__mReFabric/@Area3D@69115")
 
 [node name="Cushion_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1hxdj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_cchhx")
+
+[node name="@StaticBody3D@69113" type="StaticBody3D" parent="Cushion_low__mReFabric"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69112" type="CollisionShape3D" parent="Cushion_low__mReFabric/@StaticBody3D@69113"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8648566e-05, 0.014999996, 0.000104699284)
+shape = SubResource("BoxShape3D_cchhx")
+
+[node name="@Area3D@69115" type="Area3D" parent="Cushion_low__mReFabric"]
+
+[node name="@CollisionShape3D@69114" type="CollisionShape3D" parent="Cushion_low__mReFabric/@Area3D@69115"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8648566e-05, 0.014999996, 0.000104699284)
+shape = SubResource("BoxShape3D_12nmx")

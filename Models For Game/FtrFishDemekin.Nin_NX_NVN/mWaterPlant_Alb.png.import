@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wki7rdxq06yh"
-path="res://.godot/imported/mWaterPlant_Alb.png-a969108cefc3961cae5d3ed68a82ebba.ctex"
+path.s3tc="res://.godot/imported/mWaterPlant_Alb.png-a969108cefc3961cae5d3ed68a82ebba.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDemekin.Nin_NX_NVN/mWaterPlant_Alb.png"
-dest_files=["res://.godot/imported/mWaterPlant_Alb.png-a969108cefc3961cae5d3ed68a82ebba.ctex"]
+dest_files=["res://.godot/imported/mWaterPlant_Alb.png-a969108cefc3961cae5d3ed68a82ebba.s3tc.ctex"]
 
 [params]
 

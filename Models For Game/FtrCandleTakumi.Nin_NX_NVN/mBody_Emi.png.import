@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddnrtkkutp1yk"
-path="res://.godot/imported/mBody_Emi.png-0a51d50611d549f6f4a748391bd8b9fc.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-0a51d50611d549f6f4a748391bd8b9fc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCandleTakumi.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-0a51d50611d549f6f4a748391bd8b9fc.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-0a51d50611d549f6f4a748391bd8b9fc.s3tc.ctex"]
 
 [params]
 

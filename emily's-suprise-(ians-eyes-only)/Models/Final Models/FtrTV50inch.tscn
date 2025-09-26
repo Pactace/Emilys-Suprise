@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://wxx0pmtxlhm1"]
+[gd_scene load_steps=12 format=4 uid="uid://wxx0pmtxlhm1"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6ryv2"]
+[ext_resource type="Material" uid="uid://daew3ptrrxoa1" path="res://Models/Final Models/FtrTV50inchTextures/mReBody0.tres" id="1_pw1yv"]
+[ext_resource type="Material" uid="uid://dais6qasqhjea" path="res://Models/Final Models/FtrTV50inchTextures/mTv0.tres" id="2_6ryv2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfton"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_r7hxn")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw1yv"]
+size = Vector3(0.163913, 0.1, 0.040262)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ryv2"]
+size = Vector3(0.163913, 0.1, 0.040262)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8xusi"]
 resource_name = "mTv"
 vertex_color_use_as_albedo = true
@@ -73,11 +83,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nxnw7")
 
 [node name="FtrTV50inch" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6ryv2")
+area_path = NodePath("frame__mReBody/@Area3D@71191")
 
 [node name="frame__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jt2g1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_pw1yv")
+
+[node name="@StaticBody3D@71189" type="StaticBody3D" parent="frame__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71188" type="CollisionShape3D" parent="frame__mReBody/@StaticBody3D@71189"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8395483e-05, 0.05, 0.0014296994)
+shape = SubResource("BoxShape3D_pw1yv")
+
+[node name="@Area3D@71191" type="Area3D" parent="frame__mReBody"]
+
+[node name="@CollisionShape3D@71190" type="CollisionShape3D" parent="frame__mReBody/@Area3D@71191"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8395483e-05, 0.05, 0.0014296994)
+shape = SubResource("BoxShape3D_6ryv2")
 
 [node name="screen__mTv" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2ojno")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_6ryv2")

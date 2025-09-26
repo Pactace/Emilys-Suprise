@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cymugc1ip1iv2"
-path="res://.godot/imported/mLight_Alb.png-0b128ca693f25a511ce5fe55b2f2735a.ctex"
+path.s3tc="res://.godot/imported/mLight_Alb.png-0b128ca693f25a511ce5fe55b2f2735a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCranegame.Nin_NX_NVN/mLight_Alb.png"
-dest_files=["res://.godot/imported/mLight_Alb.png-0b128ca693f25a511ce5fe55b2f2735a.ctex"]
+dest_files=["res://.godot/imported/mLight_Alb.png-0b128ca693f25a511ce5fe55b2f2735a.s3tc.ctex"]
 
 [params]
 

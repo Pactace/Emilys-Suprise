@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x6uwt2g2fs26"
-path="res://.godot/imported/mPlant_Alb.png-2ee61be8e320a0115f9b992e5420b4dc.ctex"
+path.s3tc="res://.godot/imported/mPlant_Alb.png-2ee61be8e320a0115f9b992e5420b4dc.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPlantYamadoriyashi.Nin_NX_NVN/mPlant_Alb.png"
-dest_files=["res://.godot/imported/mPlant_Alb.png-2ee61be8e320a0115f9b992e5420b4dc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Alb.png-2ee61be8e320a0115f9b992e5420b4dc.s3tc.ctex"]
 
 [params]
 

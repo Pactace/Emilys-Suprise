@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://wxurl04jdq7o"]
+
+[ext_resource type="Texture2D" uid="uid://dhc4o4ojlpjsi" path="res://Models/Final Models/FtrArtPearlEarringTextures/mBody_Alb.png" id="1_dp01h"]
+[ext_resource type="Texture2D" uid="uid://bfl7mgudevgy3" path="res://Models/Final Models/FtrArtPearlEarringTextures/mBody_Nrm.png" id="2_1ya41"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_dp01h")
+normal_enabled = true
+normal_texture = ExtResource("2_1ya41")

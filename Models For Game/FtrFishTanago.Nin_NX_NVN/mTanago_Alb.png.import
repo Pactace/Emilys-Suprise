@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fiox4nl71lwd"
-path="res://.godot/imported/mTanago_Alb.png-ff6558a741e301ee52e9fd96d82ce98b.ctex"
+path.s3tc="res://.godot/imported/mTanago_Alb.png-ff6558a741e301ee52e9fd96d82ce98b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishTanago.Nin_NX_NVN/mTanago_Alb.png"
-dest_files=["res://.godot/imported/mTanago_Alb.png-ff6558a741e301ee52e9fd96d82ce98b.ctex"]
+dest_files=["res://.godot/imported/mTanago_Alb.png-ff6558a741e301ee52e9fd96d82ce98b.s3tc.ctex"]
 
 [params]
 

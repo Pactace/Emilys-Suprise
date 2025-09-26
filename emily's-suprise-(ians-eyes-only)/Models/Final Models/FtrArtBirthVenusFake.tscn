@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://b06cqhuw36c5p"]
+[gd_scene load_steps=12 format=4 uid="uid://b06cqhuw36c5p"]
+
+[ext_resource type="Material" uid="uid://cibg0w515lkf2" path="res://Models/Final Models/FtrArtBirthVenusFakeTextures/mBody0.tres" id="1_7cwi1"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_irh3s"]
+[ext_resource type="Material" uid="uid://devtf3px1s2p" path="res://Models/Final Models/FtrArtBirthVenusFakeTextures/mFrame0.tres" id="2_irh3s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2x6k"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1mau1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7cwi1"]
+size = Vector3(0.18135, 0.1118, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_irh3s"]
+size = Vector3(0.18135, 0.1118, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y81rw"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_35x0e")
 
 [node name="FtrArtBirthVenusFake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_irh3s")
+area_path = NodePath("BirthVenus__mBody/@Area3D@68315")
 
 [node name="BirthVenus__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_smsm4")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7cwi1")
+
+[node name="@StaticBody3D@68313" type="StaticBody3D" parent="BirthVenus__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68312" type="CollisionShape3D" parent="BirthVenus__mBody/@StaticBody3D@68313"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_7cwi1")
+
+[node name="@Area3D@68315" type="Area3D" parent="BirthVenus__mBody"]
+
+[node name="@CollisionShape3D@68314" type="CollisionShape3D" parent="BirthVenus__mBody/@Area3D@68315"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
+shape = SubResource("BoxShape3D_irh3s")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cuo48")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_irh3s")

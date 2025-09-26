@@ -1,4 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://bfsk32jfybpke"]
+[gd_scene load_steps=14 format=4 uid="uid://bfsk32jfybpke"]
+
+[ext_resource type="Material" uid="uid://by8ed103xqocx" path="res://Models/Final Models/FtrCornucopiaTextures/mBody0.tres" id="1_gwwny"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vb5ci"]
+[ext_resource type="Material" uid="uid://cbah75dv4w46v" path="res://Models/Final Models/FtrCornucopiaTextures/mLeaf0.tres" id="2_vb5ci"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w62ok"]
 resource_name = "mBody"
@@ -110,16 +114,42 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pau6j")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gwwny"]
+size = Vector3(0.0417393, 0.0296673, 0.0405024)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vb5ci"]
+size = Vector3(0.0417393, 0.0296673, 0.0405024)
+
 [node name="FtrCornucopia" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vb5ci")
+area_path = NodePath("Pumpkin_big_low__mBody/@Area3D@69019")
 
 [node name="Apple_red_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_81xw5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gwwny")
 
 [node name="Leaf1_low__mLeaf" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_tqb6s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_vb5ci")
 
 [node name="Pumpkin_big_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3r0mh")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gwwny")
+
+[node name="@StaticBody3D@69017" type="StaticBody3D" parent="Pumpkin_big_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69016" type="CollisionShape3D" parent="Pumpkin_big_low__mBody/@StaticBody3D@69017"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04615175, 0.0206438, -0.0168706)
+shape = SubResource("BoxShape3D_gwwny")
+
+[node name="@Area3D@69019" type="Area3D" parent="Pumpkin_big_low__mBody"]
+
+[node name="@CollisionShape3D@69018" type="CollisionShape3D" parent="Pumpkin_big_low__mBody/@Area3D@69019"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04615175, 0.0206438, -0.0168706)
+shape = SubResource("BoxShape3D_vb5ci")

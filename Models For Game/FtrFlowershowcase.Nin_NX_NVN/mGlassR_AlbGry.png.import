@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b25quiikr4cyf"
-path="res://.godot/imported/mGlassR_AlbGry.png-a2731faebb77cf7f730dbc1547c923aa.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-a2731faebb77cf7f730dbc1547c923aa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFlowershowcase.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-a2731faebb77cf7f730dbc1547c923aa.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-a2731faebb77cf7f730dbc1547c923aa.s3tc.ctex"]
 
 [params]
 

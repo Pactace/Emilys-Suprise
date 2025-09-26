@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxxkmdc1pqsck"
-path="res://.godot/imported/mBody_Alb.png-49c6b00f7feed1005c3da862164cdf44.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-49c6b00f7feed1005c3da862164cdf44.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtIsleOfDead.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-49c6b00f7feed1005c3da862164cdf44.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-49c6b00f7feed1005c3da862164cdf44.s3tc.ctex"]
 
 [params]
 

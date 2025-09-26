@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b63qpks7n7ujb"
-path="res://.godot/imported/mReFabric_Emm.png-66e9baac16a31df99e05708eb42b7e3c.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Emm.png-66e9baac16a31df99e05708eb42b7e3c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrAmeretroClock.Nin_NX_NVN/mReFabric_Emm.png"
-dest_files=["res://.godot/imported/mReFabric_Emm.png-66e9baac16a31df99e05708eb42b7e3c.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Emm.png-66e9baac16a31df99e05708eb42b7e3c.s3tc.ctex"]
 
 [params]
 

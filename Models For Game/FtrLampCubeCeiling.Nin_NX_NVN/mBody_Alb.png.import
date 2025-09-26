@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjegd3nn78cr0"
-path="res://.godot/imported/mBody_Alb.png-4f486c784c61d79c1f9427f0b7ddb801.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-4f486c784c61d79c1f9427f0b7ddb801.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLampCubeCeiling.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-4f486c784c61d79c1f9427f0b7ddb801.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-4f486c784c61d79c1f9427f0b7ddb801.s3tc.ctex"]
 
 [params]
 

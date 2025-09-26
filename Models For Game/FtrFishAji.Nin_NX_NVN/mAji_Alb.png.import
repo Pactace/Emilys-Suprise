@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcw2rotbrp7oc"
-path="res://.godot/imported/mAji_Alb.png-83aab6b76f82fbe39425a0ec85bf629d.ctex"
+path.s3tc="res://.godot/imported/mAji_Alb.png-83aab6b76f82fbe39425a0ec85bf629d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishAji.Nin_NX_NVN/mAji_Alb.png"
-dest_files=["res://.godot/imported/mAji_Alb.png-83aab6b76f82fbe39425a0ec85bf629d.ctex"]
+dest_files=["res://.godot/imported/mAji_Alb.png-83aab6b76f82fbe39425a0ec85bf629d.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://m8wugmhu1cy3"]
+[gd_scene load_steps=12 format=4 uid="uid://m8wugmhu1cy3"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_qy2oy"]
+[ext_resource type="Material" uid="uid://c0073uvk6luag" path="res://Models/Final Models/FtrArtMikaeriTextures/mFrame0.tres" id="1_vtei4"]
+[ext_resource type="Material" uid="uid://bqh8uhxr4me2j" path="res://Models/Final Models/FtrArtMikaeriTextures/mBody0.tres" id="2_qy2oy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1mexa"]
 resource_name = "mFrame"
@@ -76,12 +80,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n0cnh")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtei4"]
+size = Vector3(0.0434789, 0.0883601, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qy2oy"]
+size = Vector3(0.0434789, 0.0883601, 1e-05)
+
 [node name="FtrArtMikaeri" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_qy2oy")
+area_path = NodePath("Mikaeri__mBody/@Area3D@68395")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_206jk")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_vtei4")
 
 [node name="Mikaeri__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cj7fk")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_qy2oy")
+
+[node name="@StaticBody3D@68393" type="StaticBody3D" parent="Mikaeri__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68392" type="CollisionShape3D" parent="Mikaeri__mBody/@StaticBody3D@68393"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, -0.0111285485, 0.00388578)
+shape = SubResource("BoxShape3D_vtei4")
+
+[node name="@Area3D@68395" type="Area3D" parent="Mikaeri__mBody"]
+
+[node name="@CollisionShape3D@68394" type="CollisionShape3D" parent="Mikaeri__mBody/@Area3D@68395"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, -0.0111285485, 0.00388578)
+shape = SubResource("BoxShape3D_qy2oy")

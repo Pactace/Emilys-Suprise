@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b0qqqt0aamh53"]
+
+[ext_resource type="Texture2D" uid="uid://1l4bl51d31op" path="res://Models/Final Models/FtrMermaidShelfTextures/mBody_Alb.png" id="1_8papr"]
+[ext_resource type="Texture2D" uid="uid://cywwv3h6muhq1" path="res://Models/Final Models/FtrMermaidShelfTextures/mBody_Nrm.png" id="2_ssdgy"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_8papr")
+normal_enabled = true
+normal_texture = ExtResource("2_ssdgy")

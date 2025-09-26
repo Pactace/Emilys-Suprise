@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1dhdk3n83mh8"
-path="res://.godot/imported/mBody_Alb.png-22fb2b91d504f5e5ecf2dce2041df529.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-22fb2b91d504f5e5ecf2dce2041df529.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFruitbasket.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-22fb2b91d504f5e5ecf2dce2041df529.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-22fb2b91d504f5e5ecf2dce2041df529.s3tc.ctex"]
 
 [params]
 

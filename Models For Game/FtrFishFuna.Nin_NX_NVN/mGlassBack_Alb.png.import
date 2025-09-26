@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctf7rbaf0ritu"
-path="res://.godot/imported/mGlassBack_Alb.png-8f8bafdf57d0323fc48163a2f9e9023d.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_Alb.png-8f8bafdf57d0323fc48163a2f9e9023d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishFuna.Nin_NX_NVN/mGlassBack_Alb.png"
-dest_files=["res://.godot/imported/mGlassBack_Alb.png-8f8bafdf57d0323fc48163a2f9e9023d.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Alb.png-8f8bafdf57d0323fc48163a2f9e9023d.s3tc.ctex"]
 
 [params]
 

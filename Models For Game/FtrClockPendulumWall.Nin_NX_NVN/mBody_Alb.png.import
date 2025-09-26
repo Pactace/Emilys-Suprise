@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqj3pkgpv8g1c"
-path="res://.godot/imported/mBody_Alb.png-5d3cb3b82049cc15b72bf7769db83efa.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-5d3cb3b82049cc15b72bf7769db83efa.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrClockPendulumWall.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-5d3cb3b82049cc15b72bf7769db83efa.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-5d3cb3b82049cc15b72bf7769db83efa.s3tc.ctex"]
 
 [params]
 

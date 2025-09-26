@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://rks25plunx0u"]
+[gd_scene load_steps=12 format=4 uid="uid://rks25plunx0u"]
+
+[ext_resource type="Material" uid="uid://cp0yg3n040u0o" path="res://Models/Final Models/FtrArtAppleOrangeTextures/mBody0.tres" id="1_4j4nw"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_s6bwj"]
+[ext_resource type="Material" uid="uid://bt4g7cfaya4ws" path="res://Models/Final Models/FtrArtAppleOrangeTextures/mFrame0.tres" id="2_s6bwj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8lxe"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0h6vd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4j4nw"]
+size = Vector3(0.0880299, 0.0700453, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s6bwj"]
+size = Vector3(0.0880299, 0.0700453, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4y23m"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k1abn")
 
 [node name="FtrArtAppleOrange" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_s6bwj")
+area_path = NodePath("AppleOrange__mBody/@Area3D@68303")
 
 [node name="AppleOrange__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6gw4s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_4j4nw")
+
+[node name="@StaticBody3D@68301" type="StaticBody3D" parent="AppleOrange__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68300" type="CollisionShape3D" parent="AppleOrange__mBody/@StaticBody3D@68301"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, 4.8428774e-08, 0.003005)
+shape = SubResource("BoxShape3D_4j4nw")
+
+[node name="@Area3D@68303" type="Area3D" parent="AppleOrange__mBody"]
+
+[node name="@CollisionShape3D@68302" type="CollisionShape3D" parent="AppleOrange__mBody/@Area3D@68303"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, 4.8428774e-08, 0.003005)
+shape = SubResource("BoxShape3D_s6bwj")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ls3fo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_s6bwj")

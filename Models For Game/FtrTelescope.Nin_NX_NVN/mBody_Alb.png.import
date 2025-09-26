@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mtg0l6g7d4mv"
-path="res://.godot/imported/mBody_Alb.png-3be8fa3f7e1296e94db838e4b7675059.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-3be8fa3f7e1296e94db838e4b7675059.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrTelescope.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-3be8fa3f7e1296e94db838e4b7675059.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-3be8fa3f7e1296e94db838e4b7675059.s3tc.ctex"]
 
 [params]
 

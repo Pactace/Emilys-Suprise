@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnbxcw55fkn2d"
-path="res://.godot/imported/mBody_Alb.png-34ed3c676330bd77645be21b193b343b.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-34ed3c676330bd77645be21b193b343b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrGoldPigbank.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-34ed3c676330bd77645be21b193b343b.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-34ed3c676330bd77645be21b193b343b.s3tc.ctex"]
 
 [params]
 

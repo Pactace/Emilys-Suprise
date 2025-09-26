@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://brwbhvptpslua"]
+
+[ext_resource type="Texture2D" uid="uid://bipl0w6m6i2ie" path="res://Models/Final Models/FtrRefrigeratorDoubledoorTextures/mReBody_Alb.png" id="1_fxngv"]
+[ext_resource type="Texture2D" uid="uid://bbbt2sv05xeca" path="res://Models/Final Models/FtrRefrigeratorDoubledoorTextures/mReBody_Nrm.png" id="2_0epy0"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_fxngv")
+normal_enabled = true
+normal_texture = ExtResource("2_0epy0")

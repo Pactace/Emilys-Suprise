@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dtbt3eotmxxx2"]
+
+[ext_resource type="Texture2D" uid="uid://df6d5df3nffo2" path="res://Models/Final Models/FtrExperimentsetTextures/mAlpha_Alb.png" id="1_p6nmi"]
+[ext_resource type="Texture2D" uid="uid://c2u6f7d6xiyr5" path="res://Models/Final Models/FtrExperimentsetTextures/mAlpha_Nrm.png" id="2_ql4o1"]
+
+[resource]
+resource_name = "mAlpha0"
+albedo_texture = ExtResource("1_p6nmi")
+normal_enabled = true
+normal_texture = ExtResource("2_ql4o1")

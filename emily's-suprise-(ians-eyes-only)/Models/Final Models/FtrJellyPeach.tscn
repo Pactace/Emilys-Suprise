@@ -1,4 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://b7r7ph067q3wu"]
+[gd_scene load_steps=19 format=4 uid="uid://b7r7ph067q3wu"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_b75dd"]
+[ext_resource type="Material" uid="uid://coeh0ua2rk03a" path="res://Models/Final Models/FtrJellyPeachTextures/mGlass0.tres" id="1_r057j"]
+[ext_resource type="Material" uid="uid://bya8mu4up27i2" path="res://Models/Final Models/FtrJellyPeachTextures/mBody0.tres" id="2_b75dd"]
+[ext_resource type="Material" uid="uid://givl6bfspta2" path="res://Models/Final Models/FtrJellyPeachTextures/mJelly0.tres" id="3_v665k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kknqx"]
 resource_name = "mGlassR"
@@ -101,6 +106,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_laio0")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_r057j"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b75dd"]
+size = Vector3(0, 0, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vnga5"]
 resource_name = "mJelly"
 vertex_color_use_as_albedo = true
@@ -134,6 +145,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yl58h")
 
 [node name="FtrJellyPeach" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_b75dd")
+area_path = NodePath("JellyIn_low__mBody/@Area3D@70099")
 
 [node name="GlassIn_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_bedcw")
@@ -142,11 +156,26 @@ skeleton = NodePath("")
 [node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kgvlx")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_r057j")
 
 [node name="JellyIn_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_b878p")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_b75dd")
+
+[node name="@StaticBody3D@70097" type="StaticBody3D" parent="JellyIn_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70096" type="CollisionShape3D" parent="JellyIn_low__mBody/@StaticBody3D@70097"]
+shape = SubResource("BoxShape3D_r057j")
+
+[node name="@Area3D@70099" type="Area3D" parent="JellyIn_low__mBody"]
+
+[node name="@CollisionShape3D@70098" type="CollisionShape3D" parent="JellyIn_low__mBody/@Area3D@70099"]
+shape = SubResource("BoxShape3D_b75dd")
 
 [node name="Jelly_low__mJelly" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pdw0s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_v665k")

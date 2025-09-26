@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://jn1xjnextohc"]
+
+[ext_resource type="Texture2D" uid="uid://b70ueav43vdqj" path="res://Models/Final Models/FtrCleanerStickTextures/mReBody_Alb2.png" id="1_pmpvp"]
+[ext_resource type="Texture2D" uid="uid://biwfybt8evr77" path="res://Models/Final Models/FtrCleanerStickTextures/mReBody_Nrm2.png" id="2_exrjl"]
+
+[resource]
+resource_name = "mReBody2"
+albedo_texture = ExtResource("1_pmpvp")
+normal_enabled = true
+normal_texture = ExtResource("2_exrjl")

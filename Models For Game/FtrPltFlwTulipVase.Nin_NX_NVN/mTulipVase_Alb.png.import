@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db35owx8mspfy"
-path="res://.godot/imported/mTulipVase_Alb.png-379ed71c2cd67837aaee33261326f628.ctex"
+path.s3tc="res://.godot/imported/mTulipVase_Alb.png-379ed71c2cd67837aaee33261326f628.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwTulipVase.Nin_NX_NVN/mTulipVase_Alb.png"
-dest_files=["res://.godot/imported/mTulipVase_Alb.png-379ed71c2cd67837aaee33261326f628.ctex"]
+dest_files=["res://.godot/imported/mTulipVase_Alb.png-379ed71c2cd67837aaee33261326f628.s3tc.ctex"]
 
 [params]
 

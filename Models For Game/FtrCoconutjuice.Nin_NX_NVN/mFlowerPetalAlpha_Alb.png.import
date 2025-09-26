@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rd3ywi7bfdcx"
-path="res://.godot/imported/mFlowerPetalAlpha_Alb.png-bc69bf14e362ede665e1c02dfc3911c5.ctex"
+path.s3tc="res://.godot/imported/mFlowerPetalAlpha_Alb.png-bc69bf14e362ede665e1c02dfc3911c5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCoconutjuice.Nin_NX_NVN/mFlowerPetalAlpha_Alb.png"
-dest_files=["res://.godot/imported/mFlowerPetalAlpha_Alb.png-bc69bf14e362ede665e1c02dfc3911c5.ctex"]
+dest_files=["res://.godot/imported/mFlowerPetalAlpha_Alb.png-bc69bf14e362ede665e1c02dfc3911c5.s3tc.ctex"]
 
 [params]
 

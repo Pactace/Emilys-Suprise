@@ -1,4 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bkelorkgs64le"]
+[gd_scene load_steps=19 format=3 uid="uid://bkelorkgs64le"]
+
+[ext_resource type="Material" uid="uid://b2hhfom70rnco" path="res://Models/Final Models/FtrJellyAppleTextures/mBody0.tres" id="1_gsyeg"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_me2rw"]
+[ext_resource type="Material" uid="uid://e54yu5u68fwy" path="res://Models/Final Models/FtrJellyAppleTextures/mGlass0.tres" id="2_me2rw"]
+[ext_resource type="Material" uid="uid://bp4suh8q0khob" path="res://Models/Final Models/FtrJellyAppleTextures/mJelly0.tres" id="3_rnlae"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kscep"]
 resource_name = "mBody"
@@ -31,6 +36,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yyicf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsyeg"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_me2rw"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4gdnn"]
 resource_name = "mGlassR"
@@ -130,10 +141,26 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o2vut")
 
 [node name="FtrJellyApple" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_me2rw")
+area_path = NodePath("Apple1_low__mBody/@Area3D@70087")
 
 [node name="Apple1_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4h6ae")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gsyeg")
+
+[node name="@StaticBody3D@70085" type="StaticBody3D" parent="Apple1_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70084" type="CollisionShape3D" parent="Apple1_low__mBody/@StaticBody3D@70085"]
+shape = SubResource("BoxShape3D_gsyeg")
+
+[node name="@Area3D@70087" type="Area3D" parent="Apple1_low__mBody"]
+
+[node name="@CollisionShape3D@70086" type="CollisionShape3D" parent="Apple1_low__mBody/@Area3D@70087"]
+shape = SubResource("BoxShape3D_me2rw")
 
 [node name="GlassIn_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kvkk5")
@@ -142,7 +169,9 @@ skeleton = NodePath("")
 [node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3tulo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_me2rw")
 
 [node name="Jelly_low__mJelly" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mgn2s")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_rnlae")

@@ -27,14 +27,16 @@ var current_state: EditState = EditState.Edit_Objects
 func enabled():
 	visible = true
 	mouse.enabled()
+	switch_states()
 	
 func disabled():
 	visible = false
 	
 	#this might be subject to change based on play testing
 	current_state = EditState.Edit_Objects
-	switch_states()
 	mouse.disabled()
+	edit_object.disabled()
+	
 	
 	#the wall stuff
 	camera.wall_update(false)

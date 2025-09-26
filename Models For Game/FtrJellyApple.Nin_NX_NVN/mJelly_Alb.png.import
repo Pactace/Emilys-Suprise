@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpm6s13gqvn0w"
-path="res://.godot/imported/mJelly_Alb.png-0e9568a4206f3274d7d1ca7a0f6b7bf5.ctex"
+path.s3tc="res://.godot/imported/mJelly_Alb.png-0e9568a4206f3274d7d1ca7a0f6b7bf5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJellyApple.Nin_NX_NVN/mJelly_Alb.png"
-dest_files=["res://.godot/imported/mJelly_Alb.png-0e9568a4206f3274d7d1ca7a0f6b7bf5.ctex"]
+dest_files=["res://.godot/imported/mJelly_Alb.png-0e9568a4206f3274d7d1ca7a0f6b7bf5.s3tc.ctex"]
 
 [params]
 

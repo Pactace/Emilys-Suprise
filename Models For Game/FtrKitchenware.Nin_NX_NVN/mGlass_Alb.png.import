@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8s8wtspnslw1"
-path="res://.godot/imported/mGlass_Alb.png-cd07bc0a7ef9e5911f13a65fedc6e7bd.ctex"
+path.s3tc="res://.godot/imported/mGlass_Alb.png-cd07bc0a7ef9e5911f13a65fedc6e7bd.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrKitchenware.Nin_NX_NVN/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-cd07bc0a7ef9e5911f13a65fedc6e7bd.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-cd07bc0a7ef9e5911f13a65fedc6e7bd.s3tc.ctex"]
 
 [params]
 

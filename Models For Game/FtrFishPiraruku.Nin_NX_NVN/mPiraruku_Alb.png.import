@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpg37reo4jadj"
-path="res://.godot/imported/mPiraruku_Alb.png-71de82ca56048c148812e50d5358f65c.ctex"
+path.s3tc="res://.godot/imported/mPiraruku_Alb.png-71de82ca56048c148812e50d5358f65c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishPiraruku.Nin_NX_NVN/mPiraruku_Alb.png"
-dest_files=["res://.godot/imported/mPiraruku_Alb.png-71de82ca56048c148812e50d5358f65c.ctex"]
+dest_files=["res://.godot/imported/mPiraruku_Alb.png-71de82ca56048c148812e50d5358f65c.s3tc.ctex"]
 
 [params]
 

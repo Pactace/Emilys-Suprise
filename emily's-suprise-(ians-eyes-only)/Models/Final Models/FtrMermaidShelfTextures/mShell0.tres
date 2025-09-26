@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://blvuugijqi2a8"]
+
+[ext_resource type="Texture2D" uid="uid://b8b7k2y6lw8qe" path="res://Models/Final Models/FtrMermaidShelfTextures/mShell_Alb.png" id="1_ngv6o"]
+[ext_resource type="Texture2D" uid="uid://dvhgxo8s2xsor" path="res://Models/Final Models/FtrMermaidShelfTextures/mShell_Nrm.png" id="2_qpmfg"]
+
+[resource]
+resource_name = "mShell0"
+albedo_texture = ExtResource("1_ngv6o")
+normal_enabled = true
+normal_texture = ExtResource("2_qpmfg")

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://ccwyegedj3axb"]
+[gd_scene load_steps=12 format=4 uid="uid://ccwyegedj3axb"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6akfp"]
+[ext_resource type="Material" uid="uid://doy7qi5153sqj" path="res://Models/Final Models/FtrCountryTableMTextures/mReBody0.tres" id="1_8c0wm"]
+[ext_resource type="Material" uid="uid://cq6lu51k6ulw8" path="res://Models/Final Models/FtrCountryTableMTextures/mReFabric0.tres" id="2_6akfp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8g1o"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bwtkq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8c0wm"]
+size = Vector3(0.200007, 0.085, 0.0998939)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6akfp"]
+size = Vector3(0.200007, 0.085, 0.0998939)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6kek7"]
 resource_name = "mReFabric"
@@ -81,11 +91,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_boowm")
 
 [node name="FtrCountryTableM" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6akfp")
+area_path = NodePath("TableApronBack_low__mReBody/@Area3D@69067")
 
 [node name="TableApronBack_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ofta3")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_8c0wm")
+
+[node name="@StaticBody3D@69065" type="StaticBody3D" parent="TableApronBack_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69064" type="CollisionShape3D" parent="TableApronBack_low__mReBody/@StaticBody3D@69065"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.991889e-07, 0.0425, 4.8428774e-08)
+shape = SubResource("BoxShape3D_8c0wm")
+
+[node name="@Area3D@69067" type="Area3D" parent="TableApronBack_low__mReBody"]
+
+[node name="@CollisionShape3D@69066" type="CollisionShape3D" parent="TableApronBack_low__mReBody/@Area3D@69067"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.991889e-07, 0.0425, 4.8428774e-08)
+shape = SubResource("BoxShape3D_6akfp")
 
 [node name="TableCloth_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_oartc")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_6akfp")

@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://h3v5uwf2oafb"]
+[gd_scene load_steps=7 format=3 uid="uid://h3v5uwf2oafb"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_578r7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jav01"]
 resource_name = "mDummyWall"
@@ -32,8 +34,29 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m40r4")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_us58b"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_578r7"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrMydesignWallHigh" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_578r7")
+area_path = NodePath("Side0__mDummyWall/@Area3D@70555")
 
 [node name="Side0__mDummyWall" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ihn16")
 skeleton = NodePath("")
+
+[node name="@StaticBody3D@70553" type="StaticBody3D" parent="Side0__mDummyWall"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70552" type="CollisionShape3D" parent="Side0__mDummyWall/@StaticBody3D@70553"]
+shape = SubResource("BoxShape3D_us58b")
+
+[node name="@Area3D@70555" type="Area3D" parent="Side0__mDummyWall"]
+
+[node name="@CollisionShape3D@70554" type="CollisionShape3D" parent="Side0__mDummyWall/@Area3D@70555"]
+shape = SubResource("BoxShape3D_578r7")

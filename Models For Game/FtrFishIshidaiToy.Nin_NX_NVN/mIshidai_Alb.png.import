@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwhae4g2saea"
-path="res://.godot/imported/mIshidai_Alb.png-3fb090777d0a606127a2cc159d51668f.ctex"
+path.s3tc="res://.godot/imported/mIshidai_Alb.png-3fb090777d0a606127a2cc159d51668f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishIshidaiToy.Nin_NX_NVN/mIshidai_Alb.png"
-dest_files=["res://.godot/imported/mIshidai_Alb.png-3fb090777d0a606127a2cc159d51668f.ctex"]
+dest_files=["res://.godot/imported/mIshidai_Alb.png-3fb090777d0a606127a2cc159d51668f.s3tc.ctex"]
 
 [params]
 

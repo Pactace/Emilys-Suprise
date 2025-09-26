@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=4 uid="uid://cclnyfbtek4ka"]
+[gd_scene load_steps=7 format=4 uid="uid://cclnyfbtek4ka"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_gj4cc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysf6a"]
 resource_name = "mBody"
@@ -39,8 +41,31 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5ddds")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kwlyy"]
+size = Vector3(0.0820531, 0.0143838, 0.0820531)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gj4cc"]
+size = Vector3(0.0820531, 0.0143838, 0.0820531)
+
 [node name="FtrPizzaSeafood" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_gj4cc")
+area_path = NodePath("Minitomato2__mBody/@Area3D@70723")
 
 [node name="Minitomato2__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vcfin")
 skeleton = NodePath("")
+
+[node name="@StaticBody3D@70721" type="StaticBody3D" parent="Minitomato2__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70720" type="CollisionShape3D" parent="Minitomato2__mBody/@StaticBody3D@70721"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.0071919, 5.2154064e-08)
+shape = SubResource("BoxShape3D_kwlyy")
+
+[node name="@Area3D@70723" type="Area3D" parent="Minitomato2__mBody"]
+
+[node name="@CollisionShape3D@70722" type="CollisionShape3D" parent="Minitomato2__mBody/@Area3D@70723"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.0071919, 5.2154064e-08)
+shape = SubResource("BoxShape3D_gj4cc")

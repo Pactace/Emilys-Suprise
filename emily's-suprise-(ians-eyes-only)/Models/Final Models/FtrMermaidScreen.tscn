@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://ca5kspn4d3ss4"]
+[gd_scene load_steps=8 format=4 uid="uid://ca5kspn4d3ss4"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4i8g3"]
+[ext_resource type="Material" uid="uid://f1b76ab6f883" path="res://Models/Final Models/FtrMermaidScreenTextures/mShell0.tres" id="1_t15am"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n45d2"]
 resource_name = "mShell"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nuejm")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_t15am"]
+size = Vector3(0.196832, 0.180758, 0.0405635)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4i8g3"]
+size = Vector3(0.196832, 0.180758, 0.0405635)
+
 [node name="FtrMermaidScreen" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4i8g3")
+area_path = NodePath("body_1__mShell/@Area3D@70363")
 
 [node name="body_1__mShell" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cjojg")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_t15am")
+
+[node name="@StaticBody3D@70361" type="StaticBody3D" parent="body_1__mShell"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70360" type="CollisionShape3D" parent="body_1__mShell/@StaticBody3D@70361"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.899766e-05, 0.090379, -4.8428774e-08)
+shape = SubResource("BoxShape3D_t15am")
+
+[node name="@Area3D@70363" type="Area3D" parent="body_1__mShell"]
+
+[node name="@CollisionShape3D@70362" type="CollisionShape3D" parent="body_1__mShell/@Area3D@70363"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.899766e-05, 0.090379, -4.8428774e-08)
+shape = SubResource("BoxShape3D_4i8g3")

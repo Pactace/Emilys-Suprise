@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4qgk3a0j5d2s"
-path="res://.godot/imported/mClockColon_Clock.png-d4c05dfd23711b9b327ebc4c56f992b9.ctex"
+path.s3tc="res://.godot/imported/mClockColon_Clock.png-d4c05dfd23711b9b327ebc4c56f992b9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDigitalClock.Nin_NX_NVN/mClockColon_Clock.png"
-dest_files=["res://.godot/imported/mClockColon_Clock.png-d4c05dfd23711b9b327ebc4c56f992b9.ctex"]
+dest_files=["res://.godot/imported/mClockColon_Clock.png-d4c05dfd23711b9b327ebc4c56f992b9.s3tc.ctex"]
 
 [params]
 

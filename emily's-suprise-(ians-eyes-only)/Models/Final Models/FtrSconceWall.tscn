@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://o58i8wloutwv"]
+[gd_scene load_steps=8 format=4 uid="uid://o58i8wloutwv"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4nbrr"]
+[ext_resource type="Material" uid="uid://ddg84l6neahy4" path="res://Models/Final Models/FtrSconceWallTextures/mReBody0.tres" id="1_to7rd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nk16v"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8u2jj")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_to7rd"]
+size = Vector3(0.047226, 0.0515713, 0.0701526)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4nbrr"]
+size = Vector3(0.047226, 0.0515713, 0.0701526)
+
 [node name="FtrSconceWall" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4nbrr")
+area_path = NodePath("Sconce_low__mReBody/@Area3D@70919")
 
 [node name="Sconce_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_n6i65")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_to7rd")
+
+[node name="@StaticBody3D@70917" type="StaticBody3D" parent="Sconce_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70916" type="CollisionShape3D" parent="Sconce_low__mReBody/@StaticBody3D@70917"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00381295, 0.0350763)
+shape = SubResource("BoxShape3D_to7rd")
+
+[node name="@Area3D@70919" type="Area3D" parent="Sconce_low__mReBody"]
+
+[node name="@CollisionShape3D@70918" type="CollisionShape3D" parent="Sconce_low__mReBody/@Area3D@70919"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00381295, 0.0350763)
+shape = SubResource("BoxShape3D_4nbrr")

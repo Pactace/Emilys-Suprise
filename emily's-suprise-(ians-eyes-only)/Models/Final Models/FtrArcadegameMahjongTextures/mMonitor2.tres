@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ma2unvavc71d"]
+
+[ext_resource type="Texture2D" uid="uid://d3g3ifsducb2m" path="res://Models/Final Models/FtrArcadegameMahjongTextures/mMonitor_Alb.2.png" id="1_4xsnf"]
+
+[resource]
+resource_name = "mMonitor2"
+albedo_texture = ExtResource("1_4xsnf")
+normal_enabled = true

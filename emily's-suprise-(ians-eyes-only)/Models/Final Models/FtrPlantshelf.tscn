@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://hkko1kito6rk"]
+[gd_scene load_steps=14 format=4 uid="uid://hkko1kito6rk"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_sij66"]
+[ext_resource type="Material" uid="uid://322lx4eraj28" path="res://Models/Final Models/FtrPlantshelfTextures/mBody0.tres" id="1_xri28"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44n2s"]
 resource_name = "mBody"
@@ -38,6 +41,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5sctn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xri28"]
+size = Vector3(0.163798, 0.219689, 0.0778276)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sij66"]
+size = Vector3(0.163798, 0.219689, 0.0778276)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srkav"]
 resource_name = "mGlassR"
@@ -105,10 +114,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_p3teq")
 
 [node name="FtrPlantshelf" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_sij66")
+area_path = NodePath("AnaLeafGreen10_low__mBody/@Area3D@70751")
 
 [node name="AnaLeafGreen10_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0n8sl")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_xri28")
+
+[node name="@StaticBody3D@70749" type="StaticBody3D" parent="AnaLeafGreen10_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70748" type="CollisionShape3D" parent="AnaLeafGreen10_low__mBody/@StaticBody3D@70749"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0116568e-07, 0.1098445, 0.004927203)
+shape = SubResource("BoxShape3D_xri28")
+
+[node name="@Area3D@70751" type="Area3D" parent="AnaLeafGreen10_low__mBody"]
+
+[node name="@CollisionShape3D@70750" type="CollisionShape3D" parent="AnaLeafGreen10_low__mBody/@Area3D@70751"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0116568e-07, 0.1098445, 0.004927203)
+shape = SubResource("BoxShape3D_sij66")
 
 [node name="CoverBack_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0uc3n")

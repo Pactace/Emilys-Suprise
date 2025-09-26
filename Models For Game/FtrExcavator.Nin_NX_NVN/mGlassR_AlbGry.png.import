@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddvawqf2swqdn"
-path="res://.godot/imported/mGlassR_AlbGry.png-08043e5fd07b64de9d60dda57bf001dd.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-08043e5fd07b64de9d60dda57bf001dd.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrExcavator.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-08043e5fd07b64de9d60dda57bf001dd.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-08043e5fd07b64de9d60dda57bf001dd.s3tc.ctex"]
 
 [params]
 

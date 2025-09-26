@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b11uw2vqqlq5v"
-path="res://.godot/imported/mMumFlower_AlbGry.png-e3fc65260ec3afdde170b81da02ab079.ctex"
+path.s3tc="res://.godot/imported/mMumFlower_AlbGry.png-e3fc65260ec3afdde170b81da02ab079.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwMumVase.Nin_NX_NVN/mMumFlower_AlbGry.png"
-dest_files=["res://.godot/imported/mMumFlower_AlbGry.png-e3fc65260ec3afdde170b81da02ab079.ctex"]
+dest_files=["res://.godot/imported/mMumFlower_AlbGry.png-e3fc65260ec3afdde170b81da02ab079.s3tc.ctex"]
 
 [params]
 

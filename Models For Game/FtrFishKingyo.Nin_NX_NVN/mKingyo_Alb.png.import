@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdv366u7160lb"
-path="res://.godot/imported/mKingyo_Alb.png-db3d9e39de56b485d3e37b789b582251.ctex"
+path.s3tc="res://.godot/imported/mKingyo_Alb.png-db3d9e39de56b485d3e37b789b582251.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKingyo.Nin_NX_NVN/mKingyo_Alb.png"
-dest_files=["res://.godot/imported/mKingyo_Alb.png-db3d9e39de56b485d3e37b789b582251.ctex"]
+dest_files=["res://.godot/imported/mKingyo_Alb.png-db3d9e39de56b485d3e37b789b582251.s3tc.ctex"]
 
 [params]
 

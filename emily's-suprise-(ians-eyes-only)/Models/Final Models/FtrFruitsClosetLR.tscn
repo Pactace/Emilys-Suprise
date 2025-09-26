@@ -1,4 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://dr5jjwa3c2e5b"]
+[gd_scene load_steps=10 format=4 uid="uid://dr5jjwa3c2e5b"]
+
+[ext_resource type="Material" uid="uid://rihnanslsby7" path="res://Models/Final Models/FtrFruitsClosetLRTextures/mReBody0.tres" id="1_aulbh"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_uvjvy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rt3fd"]
 resource_name = "mReBody"
@@ -66,12 +69,35 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_46lbo")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_aulbh"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvjvy"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrFruitsClosetLR" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_uvjvy")
+area_path = NodePath("door_L_low__mReBody/@Area3D@69687")
 
 [node name="body_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ilprg")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_aulbh")
 
 [node name="door_L_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2ee8j")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_aulbh")
+
+[node name="@StaticBody3D@69685" type="StaticBody3D" parent="door_L_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69684" type="CollisionShape3D" parent="door_L_low__mReBody/@StaticBody3D@69685"]
+shape = SubResource("BoxShape3D_aulbh")
+
+[node name="@Area3D@69687" type="Area3D" parent="door_L_low__mReBody"]
+
+[node name="@CollisionShape3D@69686" type="CollisionShape3D" parent="door_L_low__mReBody/@Area3D@69687"]
+shape = SubResource("BoxShape3D_uvjvy")

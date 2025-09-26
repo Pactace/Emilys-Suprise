@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yoboofvf02bf"
-path="res://.godot/imported/mBody_Alb.png-ee8d073eafe63a1d2f32e2c24242b103.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-ee8d073eafe63a1d2f32e2c24242b103.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCushionTakumi.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-ee8d073eafe63a1d2f32e2c24242b103.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-ee8d073eafe63a1d2f32e2c24242b103.s3tc.ctex"]
 
 [params]
 

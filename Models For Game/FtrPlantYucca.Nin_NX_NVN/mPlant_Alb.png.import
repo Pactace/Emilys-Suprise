@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cop50ygwp6a40"
-path="res://.godot/imported/mPlant_Alb.png-c73057b143495216e5ab86517faa3dad.ctex"
+path.s3tc="res://.godot/imported/mPlant_Alb.png-c73057b143495216e5ab86517faa3dad.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPlantYucca.Nin_NX_NVN/mPlant_Alb.png"
-dest_files=["res://.godot/imported/mPlant_Alb.png-c73057b143495216e5ab86517faa3dad.ctex"]
+dest_files=["res://.godot/imported/mPlant_Alb.png-c73057b143495216e5ab86517faa3dad.s3tc.ctex"]
 
 [params]
 

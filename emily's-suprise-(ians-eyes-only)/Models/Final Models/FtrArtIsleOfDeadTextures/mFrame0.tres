@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://db34saykicfl2"]
+
+[ext_resource type="Texture2D" uid="uid://qwlcunii3pgd" path="res://Models/Final Models/FtrArtIsleOfDeadTextures/mFrame_Alb.png" id="1_mafkn"]
+[ext_resource type="Texture2D" uid="uid://c585ys3jappg7" path="res://Models/Final Models/FtrArtIsleOfDeadTextures/mFrame_Nrm.png" id="2_hom0a"]
+
+[resource]
+resource_name = "mFrame0"
+albedo_texture = ExtResource("1_mafkn")
+normal_enabled = true
+normal_texture = ExtResource("2_hom0a")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://db6l3uxwd46e1"]
+
+[ext_resource type="Texture2D" uid="uid://btour0sehiy1x" path="res://Models/Final Models/FtrHarvestTableCandleSEventTextures/mFtrHarvestTableCandleSEvent_Alb.png" id="1_ovwgn"]
+[ext_resource type="Texture2D" uid="uid://c7hm4a177mkt" path="res://Models/Final Models/FtrHarvestTableCandleSEventTextures/mFtrHarvestTableCandleSEvent_Nrm.png" id="2_6q6y7"]
+
+[resource]
+resource_name = "mFtrHarvestTableCandleSEvent0"
+albedo_texture = ExtResource("1_ovwgn")
+normal_enabled = true
+normal_texture = ExtResource("2_6q6y7")

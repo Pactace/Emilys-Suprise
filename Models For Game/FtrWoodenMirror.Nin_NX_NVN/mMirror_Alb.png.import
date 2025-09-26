@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bee7bk0v364rj"
-path="res://.godot/imported/mMirror_Alb.png-509adb2ea919f09144891b671bdbc2ab.ctex"
+path.s3tc="res://.godot/imported/mMirror_Alb.png-509adb2ea919f09144891b671bdbc2ab.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrWoodenMirror.Nin_NX_NVN/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-509adb2ea919f09144891b671bdbc2ab.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-509adb2ea919f09144891b671bdbc2ab.s3tc.ctex"]
 
 [params]
 

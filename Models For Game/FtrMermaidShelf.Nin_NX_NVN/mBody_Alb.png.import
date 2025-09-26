@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfdh1fh2vjtwf"
-path="res://.godot/imported/mBody_Alb.png-7f2dc9a4d35fb755686b2c1a5eab4375.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-7f2dc9a4d35fb755686b2c1a5eab4375.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMermaidShelf.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-7f2dc9a4d35fb755686b2c1a5eab4375.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-7f2dc9a4d35fb755686b2c1a5eab4375.s3tc.ctex"]
 
 [params]
 

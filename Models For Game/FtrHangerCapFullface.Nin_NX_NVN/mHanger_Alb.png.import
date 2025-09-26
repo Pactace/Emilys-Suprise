@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bokgltftf4t5o"
-path="res://.godot/imported/mHanger_Alb.png-34e741f46bfe45da672cc828e89f8f0b.ctex"
+path.s3tc="res://.godot/imported/mHanger_Alb.png-34e741f46bfe45da672cc828e89f8f0b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHangerCapFullface.Nin_NX_NVN/mHanger_Alb.png"
-dest_files=["res://.godot/imported/mHanger_Alb.png-34e741f46bfe45da672cc828e89f8f0b.ctex"]
+dest_files=["res://.godot/imported/mHanger_Alb.png-34e741f46bfe45da672cc828e89f8f0b.s3tc.ctex"]
 
 [params]
 

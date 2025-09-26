@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqdvu2a8v76tc"
-path="res://.godot/imported/mOoiwana_Alb.png-42f5c58f4e48ddc6f9c12321c35abe33.ctex"
+path.s3tc="res://.godot/imported/mOoiwana_Alb.png-42f5c58f4e48ddc6f9c12321c35abe33.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishOoiwana.Nin_NX_NVN/mOoiwana_Alb.png"
-dest_files=["res://.godot/imported/mOoiwana_Alb.png-42f5c58f4e48ddc6f9c12321c35abe33.ctex"]
+dest_files=["res://.godot/imported/mOoiwana_Alb.png-42f5c58f4e48ddc6f9c12321c35abe33.s3tc.ctex"]
 
 [params]
 

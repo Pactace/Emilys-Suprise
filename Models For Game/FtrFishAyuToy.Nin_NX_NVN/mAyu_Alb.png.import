@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0qhtt7vrrl4u"
-path="res://.godot/imported/mAyu_Alb.png-022201fc9eda6101d54794a800a91f48.ctex"
+path.s3tc="res://.godot/imported/mAyu_Alb.png-022201fc9eda6101d54794a800a91f48.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishAyuToy.Nin_NX_NVN/mAyu_Alb.png"
-dest_files=["res://.godot/imported/mAyu_Alb.png-022201fc9eda6101d54794a800a91f48.ctex"]
+dest_files=["res://.godot/imported/mAyu_Alb.png-022201fc9eda6101d54794a800a91f48.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cwqlr5o84ft2g"]
+[gd_scene load_steps=12 format=4 uid="uid://cwqlr5o84ft2g"]
+
+[ext_resource type="Material" uid="uid://dfdf57cty8kpx" path="res://Models/Final Models/FtrCountryLowBoardTextures/mReBody0.tres" id="1_hcpge"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_qbwn2"]
+[ext_resource type="Material" uid="uid://0fqr0v2ptqo" path="res://Models/Final Models/FtrCountryLowBoardTextures/mReFabric0.tres" id="2_qbwn2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll4dq"]
 resource_name = "mReBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bdqgq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hcpge"]
+size = Vector3(0.18, 0.0618048, 0.0847242)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbwn2"]
+size = Vector3(0.18, 0.0618048, 0.0847242)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgve7"]
 resource_name = "mReFabric"
@@ -81,11 +91,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_oqrjh")
 
 [node name="FtrCountryLowBoard" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_qbwn2")
+area_path = NodePath("BoardBodyBottomDecoLeg_low__mReBody/@Area3D@69063")
 
 [node name="BoardBodyBottomDecoLeg_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vl04e")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hcpge")
+
+[node name="@StaticBody3D@69061" type="StaticBody3D" parent="BoardBodyBottomDecoLeg_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69060" type="CollisionShape3D" parent="BoardBodyBottomDecoLeg_low__mReBody/@StaticBody3D@69061"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030897422, 0.00041680038)
+shape = SubResource("BoxShape3D_hcpge")
+
+[node name="@Area3D@69063" type="Area3D" parent="BoardBodyBottomDecoLeg_low__mReBody"]
+
+[node name="@CollisionShape3D@69062" type="CollisionShape3D" parent="BoardBodyBottomDecoLeg_low__mReBody/@Area3D@69063"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030897422, 0.00041680038)
+shape = SubResource("BoxShape3D_qbwn2")
 
 [node name="TableCloth_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6bush")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_qbwn2")

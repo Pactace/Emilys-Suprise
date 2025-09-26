@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://bxem0b3efn6y0"]
+[gd_scene load_steps=16 format=4 uid="uid://bxem0b3efn6y0"]
+
+[ext_resource type="Material" uid="uid://bj3rf2m3wvkhg" path="res://Models/Final Models/FtrHarvestTableCandleEventTextures/mFtrHarvestTableCandleEventMugi0.tres" id="1_o0ljv"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_u0p7y"]
+[ext_resource type="Material" uid="uid://brkhdjvw0mptk" path="res://Models/Final Models/FtrHarvestTableCandleEventTextures/mFtrHarvestTableCandleEvent0.tres" id="2_u0p7y"]
+[ext_resource type="Material" uid="uid://c5wxpy0ao37ib" path="res://Models/Final Models/FtrHarvestTableCandleEventTextures/mFtrHarvestTableCandleEventLeaf0.tres" id="3_sv65o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4oaf"]
 resource_name = "mFtrHarvestTableCandleEventMugi"
@@ -38,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ew25e")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o0ljv"]
+size = Vector3(0.0835813, 0.0774511, 0.0822386)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0p7y"]
+size = Vector3(0.0835813, 0.0774511, 0.0822386)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wj8vo"]
 resource_name = "mFtrHarvestTableCandleEvent"
@@ -104,15 +115,35 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f3ct0")
 
 [node name="FtrHarvestTableCandleEvent" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_u0p7y")
+area_path = NodePath("FtrHarvestWheat_Ribbon_bottom_L__mFtrHarvestTableCandleEventMugi/@Area3D@69943")
 
 [node name="FtrHarvestWheat_Ribbon_bottom_L__mFtrHarvestTableCandleEventMugi" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_fdu18")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_o0ljv")
+
+[node name="@StaticBody3D@69941" type="StaticBody3D" parent="FtrHarvestWheat_Ribbon_bottom_L__mFtrHarvestTableCandleEventMugi"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69940" type="CollisionShape3D" parent="FtrHarvestWheat_Ribbon_bottom_L__mFtrHarvestTableCandleEventMugi/@StaticBody3D@69941"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007890552, 0.041712712, 0.0023121014)
+shape = SubResource("BoxShape3D_o0ljv")
+
+[node name="@Area3D@69943" type="Area3D" parent="FtrHarvestWheat_Ribbon_bottom_L__mFtrHarvestTableCandleEventMugi"]
+
+[node name="@CollisionShape3D@69942" type="CollisionShape3D" parent="FtrHarvestWheat_Ribbon_bottom_L__mFtrHarvestTableCandleEventMugi/@Area3D@69943"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007890552, 0.041712712, 0.0023121014)
+shape = SubResource("BoxShape3D_u0p7y")
 
 [node name="FtrMomCandle_FtrMomCandle1_1__mFtrHarvestTableCandleEvent" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nfn3d")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_u0p7y")
 
 [node name="Leaf10__mFtrHarvestTableCandleEventLeaf" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pv2qt")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_sv65o")

@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://c27d6aeloyvpe"]
+[gd_scene load_steps=12 format=4 uid="uid://c27d6aeloyvpe"]
+
+[ext_resource type="Material" uid="uid://dbj66vmno4u1y" path="res://Models/Final Models/FtrDecorativeplateTextures/mReFabric0.tres" id="1_adl7h"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_bvk2w"]
+[ext_resource type="Material" uid="uid://viccwyay6bwl" path="res://Models/Final Models/FtrDecorativeplateTextures/mReBody0.tres" id="2_bvk2w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rnxk"]
 resource_name = "mReFabric"
@@ -80,12 +84,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qkbkc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_adl7h"]
+size = Vector3(0.061081, 0.0577707, 0.0460285)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvk2w"]
+size = Vector3(0.061081, 0.0577707, 0.0460285)
+
 [node name="FtrDecorativeplate" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_bvk2w")
+area_path = NodePath("Stand_low__mReBody/@Area3D@69187")
 
 [node name="Dish_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rr86h")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_adl7h")
 
 [node name="Stand_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_q610y")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_bvk2w")
+
+[node name="@StaticBody3D@69185" type="StaticBody3D" parent="Stand_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69184" type="CollisionShape3D" parent="Stand_low__mReBody/@StaticBody3D@69185"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028883815, 0.00015104935)
+shape = SubResource("BoxShape3D_adl7h")
+
+[node name="@Area3D@69187" type="Area3D" parent="Stand_low__mReBody"]
+
+[node name="@CollisionShape3D@69186" type="CollisionShape3D" parent="Stand_low__mReBody/@Area3D@69187"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028883815, 0.00015104935)
+shape = SubResource("BoxShape3D_bvk2w")

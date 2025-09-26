@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbhdwasxc0o2j"
-path="res://.godot/imported/mKarei_Alb.png-f87a2fd54d3502d0e634978eb97cb04f.ctex"
+path.s3tc="res://.godot/imported/mKarei_Alb.png-f87a2fd54d3502d0e634978eb97cb04f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishKarei.Nin_NX_NVN/mKarei_Alb.png"
-dest_files=["res://.godot/imported/mKarei_Alb.png-f87a2fd54d3502d0e634978eb97cb04f.ctex"]
+dest_files=["res://.godot/imported/mKarei_Alb.png-f87a2fd54d3502d0e634978eb97cb04f.s3tc.ctex"]
 
 [params]
 

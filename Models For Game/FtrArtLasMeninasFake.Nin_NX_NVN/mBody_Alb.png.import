@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq4yn6s3o2msq"
-path="res://.godot/imported/mBody_Alb.png-584231b277f32a1eae674ad52cabaf52.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-584231b277f32a1eae674ad52cabaf52.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtLasMeninasFake.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-584231b277f32a1eae674ad52cabaf52.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-584231b277f32a1eae674ad52cabaf52.s3tc.ctex"]
 
 [params]
 

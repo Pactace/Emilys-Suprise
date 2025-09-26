@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c7v1h80oi4sw5"]
+
+[ext_resource type="Texture2D" uid="uid://ce1dk4vrivomd" path="res://Models/Final Models/FtrFallenleavesGreenTextures/mBody_Alb.png" id="1_mpl44"]
+[ext_resource type="Texture2D" uid="uid://ckn168gtmr0uk" path="res://Models/Final Models/FtrFallenleavesGreenTextures/mBody_Nrm.png" id="2_ltvsq"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_mpl44")
+normal_enabled = true
+normal_texture = ExtResource("2_ltvsq")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n20h0kvco5wh"
-path="res://.godot/imported/mShell_Alb.png-255abdd6749e63bcf376179769613892.ctex"
+path.s3tc="res://.godot/imported/mShell_Alb.png-255abdd6749e63bcf376179769613892.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMermaidBedS.Nin_NX_NVN/mShell_Alb.png"
-dest_files=["res://.godot/imported/mShell_Alb.png-255abdd6749e63bcf376179769613892.ctex"]
+dest_files=["res://.godot/imported/mShell_Alb.png-255abdd6749e63bcf376179769613892.s3tc.ctex"]
 
 [params]
 

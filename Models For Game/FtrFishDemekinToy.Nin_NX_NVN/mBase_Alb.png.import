@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8irterjd5r63"
-path="res://.godot/imported/mBase_Alb.png-78e42178f5dce629151a4656918908eb.ctex"
+path.s3tc="res://.godot/imported/mBase_Alb.png-78e42178f5dce629151a4656918908eb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishDemekinToy.Nin_NX_NVN/mBase_Alb.png"
-dest_files=["res://.godot/imported/mBase_Alb.png-78e42178f5dce629151a4656918908eb.ctex"]
+dest_files=["res://.godot/imported/mBase_Alb.png-78e42178f5dce629151a4656918908eb.s3tc.ctex"]
 
 [params]
 

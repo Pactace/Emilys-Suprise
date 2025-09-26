@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sfgqe0rdlh5n"
-path="res://.godot/imported/mReBody_Alb.png-b167fde47b30f7516c19865d02ca447a.ctex"
+path.s3tc="res://.godot/imported/mReBody_Alb.png-b167fde47b30f7516c19865d02ca447a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHarvestTableL.Nin_NX_NVN/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-b167fde47b30f7516c19865d02ca447a.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-b167fde47b30f7516c19865d02ca447a.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d33mwatqbk6hw"]
+
+[ext_resource type="Texture2D" uid="uid://c31q4014at0to" path="res://Models/Final Models/FtrPuzzleTextures/mBody_Alb.png" id="1_1tu28"]
+[ext_resource type="Texture2D" uid="uid://c0ad5o3s3sae3" path="res://Models/Final Models/FtrPuzzleTextures/mBody_Nrm.png" id="2_61b8a"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_1tu28")
+normal_enabled = true
+normal_texture = ExtResource("2_61b8a")

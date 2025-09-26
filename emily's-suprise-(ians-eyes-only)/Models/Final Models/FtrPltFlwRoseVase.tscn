@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxdk2uebugmuu"]
+[gd_scene load_steps=14 format=3 uid="uid://bxdk2uebugmuu"]
+
+[ext_resource type="Material" uid="uid://bqdovcgqh52mh" path="res://Models/Final Models/FtrPltFlwRoseVaseTextures/mRoseVase0.tres" id="1_q1onb"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_t3ik2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kk7ac"]
 resource_name = "mRoseVase"
@@ -31,6 +34,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_re5cv")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q1onb"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t3ik2"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am73a"]
 resource_name = "mRosePetal"
@@ -99,10 +108,26 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rtlgx")
 
 [node name="FtrPltFlwRoseVase" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_t3ik2")
+area_path = NodePath("PltFlwRoseVase_1__mRoseVase/@Area3D@70799")
 
 [node name="PltFlwRoseVase_1__mRoseVase" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_15dk7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_q1onb")
+
+[node name="@StaticBody3D@70797" type="StaticBody3D" parent="PltFlwRoseVase_1__mRoseVase"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70796" type="CollisionShape3D" parent="PltFlwRoseVase_1__mRoseVase/@StaticBody3D@70797"]
+shape = SubResource("BoxShape3D_q1onb")
+
+[node name="@Area3D@70799" type="Area3D" parent="PltFlwRoseVase_1__mRoseVase"]
+
+[node name="@CollisionShape3D@70798" type="CollisionShape3D" parent="PltFlwRoseVase_1__mRoseVase/@Area3D@70799"]
+shape = SubResource("BoxShape3D_t3ik2")
 
 [node name="RosePetal46__mRosePetal" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dt1o6")

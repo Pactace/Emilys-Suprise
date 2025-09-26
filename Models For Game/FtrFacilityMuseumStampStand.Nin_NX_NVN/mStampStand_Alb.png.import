@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yxwp6ej5qngy"
-path="res://.godot/imported/mStampStand_Alb.png-1c55af472fd2744668a437ef1c63982f.ctex"
+path.s3tc="res://.godot/imported/mStampStand_Alb.png-1c55af472fd2744668a437ef1c63982f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFacilityMuseumStampStand.Nin_NX_NVN/mStampStand_Alb.png"
-dest_files=["res://.godot/imported/mStampStand_Alb.png-1c55af472fd2744668a437ef1c63982f.ctex"]
+dest_files=["res://.godot/imported/mStampStand_Alb.png-1c55af472fd2744668a437ef1c63982f.s3tc.ctex"]
 
 [params]
 

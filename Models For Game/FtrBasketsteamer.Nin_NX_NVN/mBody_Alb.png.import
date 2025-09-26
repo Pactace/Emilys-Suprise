@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmftim3npewxv"
-path="res://.godot/imported/mBody_Alb.png-c844510ea0d97f8668acbb523ed17d9c.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-c844510ea0d97f8668acbb523ed17d9c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBasketsteamer.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-c844510ea0d97f8668acbb523ed17d9c.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-c844510ea0d97f8668acbb523ed17d9c.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://cq3ash15e8oyd"]
+[gd_scene load_steps=16 format=4 uid="uid://cq3ash15e8oyd"]
+
+[ext_resource type="Material" uid="uid://dcwswvyxpsdat" path="res://Models/Final Models/FtrLazysusanTextures/mBody0.tres" id="1_kqdh5"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vtbto"]
+[ext_resource type="Material" uid="uid://cip36x5innelw" path="res://Models/Final Models/FtrLazysusanTextures/mAlpha0.tres" id="2_vtbto"]
+[ext_resource type="Material" uid="uid://dgblq7wxgrfkb" path="res://Models/Final Models/FtrLazysusanTextures/mReBody0.tres" id="3_qb7b5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2bjh"]
 resource_name = "mBody"
@@ -111,16 +116,42 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f1pa1")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kqdh5"]
+size = Vector3(0.180677, 0.0829801, 0.180677)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtbto"]
+size = Vector3(0.180677, 0.0829801, 0.180677)
+
 [node name="FtrLazysusan" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vtbto")
+area_path = NodePath("ChopStick_00_low__mReBody/@Area3D@70267")
 
 [node name="Broccoli_00_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_br1bo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_kqdh5")
 
 [node name="CarrotFlower_00_low__mAlpha" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ynua0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_vtbto")
 
 [node name="ChopStick_00_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_iy37t")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_qb7b5")
+
+[node name="@StaticBody3D@70265" type="StaticBody3D" parent="ChopStick_00_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70264" type="CollisionShape3D" parent="ChopStick_00_low__mReBody/@StaticBody3D@70265"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0116568e-07, 0.04149005, 2.0116568e-07)
+shape = SubResource("BoxShape3D_kqdh5")
+
+[node name="@Area3D@70267" type="Area3D" parent="ChopStick_00_low__mReBody"]
+
+[node name="@CollisionShape3D@70266" type="CollisionShape3D" parent="ChopStick_00_low__mReBody/@Area3D@70267"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0116568e-07, 0.04149005, 2.0116568e-07)
+shape = SubResource("BoxShape3D_vtbto")

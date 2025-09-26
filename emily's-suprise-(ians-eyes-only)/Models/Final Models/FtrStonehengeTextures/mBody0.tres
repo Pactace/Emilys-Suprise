@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://da88qvcbmri78"]
+
+[ext_resource type="Texture2D" uid="uid://cgqnq3sup3jh4" path="res://Models/Final Models/FtrStonehengeTextures/mBody_Alb.png" id="1_mxptf"]
+[ext_resource type="Texture2D" uid="uid://dye1gwksfdfau" path="res://Models/Final Models/FtrStonehengeTextures/mBody_Nrm.png" id="2_d2tb8"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_mxptf")
+normal_enabled = true
+normal_texture = ExtResource("2_d2tb8")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca7g6xdthwmq2"
-path="res://.godot/imported/mBody_Alb.png-4a1bae77959f41eadd23968193603d85.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-4a1bae77959f41eadd23968193603d85.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPianoStool.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-4a1bae77959f41eadd23968193603d85.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-4a1bae77959f41eadd23968193603d85.s3tc.ctex"]
 
 [params]
 

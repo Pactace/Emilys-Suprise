@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://budcj0dsx0du6"
-path="res://.godot/imported/mBody_Alb.png-8bc68741f32ba12a5f7b5cf0be3f2f0c.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-8bc68741f32ba12a5f7b5cf0be3f2f0c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrKitchenStainless.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-8bc68741f32ba12a5f7b5cf0be3f2f0c.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-8bc68741f32ba12a5f7b5cf0be3f2f0c.s3tc.ctex"]
 
 [params]
 

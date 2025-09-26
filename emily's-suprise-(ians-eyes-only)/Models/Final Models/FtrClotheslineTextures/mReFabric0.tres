@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b3ky16ey4py4j"]
+
+[ext_resource type="Texture2D" uid="uid://desvumcy2lumr" path="res://Models/Final Models/FtrClotheslineTextures/mReFabric_Alb.png" id="1_ii42m"]
+[ext_resource type="Texture2D" uid="uid://c0ie54jqrdfv" path="res://Models/Final Models/FtrClotheslineTextures/mReFabric_Nrm.png" id="2_voolh"]
+
+[resource]
+resource_name = "mReFabric0"
+albedo_texture = ExtResource("1_ii42m")
+normal_enabled = true
+normal_texture = ExtResource("2_voolh")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvihacmx55f3v"
-path="res://.godot/imported/mNokogirizame_Alb.png-bfdc671fe382c1be7708c78934e707be.ctex"
+path.s3tc="res://.godot/imported/mNokogirizame_Alb.png-bfdc671fe382c1be7708c78934e707be.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNokogirizameToy.Nin_NX_NVN/mNokogirizame_Alb.png"
-dest_files=["res://.godot/imported/mNokogirizame_Alb.png-bfdc671fe382c1be7708c78934e707be.ctex"]
+dest_files=["res://.godot/imported/mNokogirizame_Alb.png-bfdc671fe382c1be7708c78934e707be.s3tc.ctex"]
 
 [params]
 

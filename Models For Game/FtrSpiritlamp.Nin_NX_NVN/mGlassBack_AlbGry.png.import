@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3sujp035vd6a"
-path="res://.godot/imported/mGlassBack_AlbGry.png-cc62834a2b8e2608b3addf0bb2b90314.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_AlbGry.png-cc62834a2b8e2608b3addf0bb2b90314.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrSpiritlamp.Nin_NX_NVN/mGlassBack_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassBack_AlbGry.png-cc62834a2b8e2608b3addf0bb2b90314.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_AlbGry.png-cc62834a2b8e2608b3addf0bb2b90314.s3tc.ctex"]
 
 [params]
 

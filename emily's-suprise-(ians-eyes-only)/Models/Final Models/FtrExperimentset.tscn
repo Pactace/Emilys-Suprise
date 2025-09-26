@@ -1,4 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://dbtwofrhswjo4"]
+[gd_scene load_steps=19 format=4 uid="uid://dbtwofrhswjo4"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_0rqu5"]
+[ext_resource type="Material" uid="uid://bxwmq84pqrvn" path="res://Models/Final Models/FtrExperimentsetTextures/mBody0.tres" id="1_2irve"]
+[ext_resource type="Material" uid="uid://decxasw6228u2" path="res://Models/Final Models/FtrExperimentsetTextures/mGlass0.tres" id="2_0rqu5"]
+[ext_resource type="Material" uid="uid://dtbt3eotmxxx2" path="res://Models/Final Models/FtrExperimentsetTextures/mAlpha0.tres" id="3_uvvoa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac74j"]
 resource_name = "mGlassR"
@@ -79,6 +84,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jytal")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2irve"]
+size = Vector3(0.16362, 0.093575, 0.0669793)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0rqu5"]
+size = Vector3(0.16362, 0.093575, 0.0669793)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yqmh"]
 resource_name = "mGlass"
 vertex_color_use_as_albedo = true
@@ -156,6 +167,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q2651")
 
 [node name="FtrExperimentset" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_0rqu5")
+area_path = NodePath("Beaker_01_low__mBody/@Area3D@69411")
 
 [node name="Beaker_00_low__mGlassR" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_m6j7a")
@@ -164,11 +178,28 @@ skeleton = NodePath("")
 [node name="Beaker_01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_w60pc")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_2irve")
+
+[node name="@StaticBody3D@69409" type="StaticBody3D" parent="Beaker_01_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69408" type="CollisionShape3D" parent="Beaker_01_low__mBody/@StaticBody3D@69409"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036493987, 0.046787463, -0.0010181516)
+shape = SubResource("BoxShape3D_2irve")
+
+[node name="@Area3D@69411" type="Area3D" parent="Beaker_01_low__mBody"]
+
+[node name="@CollisionShape3D@69410" type="CollisionShape3D" parent="Beaker_01_low__mBody/@Area3D@69411"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036493987, 0.046787463, -0.0010181516)
+shape = SubResource("BoxShape3D_0rqu5")
 
 [node name="Beaker_03_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lx4k5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_0rqu5")
 
 [node name="Tenbin_00_low__mAlpha" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_sfvsq")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_uvvoa")

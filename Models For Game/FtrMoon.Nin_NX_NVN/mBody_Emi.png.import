@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvsd7pd7dbp31"
-path="res://.godot/imported/mBody_Emi.png-e7016d7d39e1c28505e1166cbaf6919d.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-e7016d7d39e1c28505e1166cbaf6919d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMoon.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-e7016d7d39e1c28505e1166cbaf6919d.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-e7016d7d39e1c28505e1166cbaf6919d.s3tc.ctex"]
 
 [params]
 

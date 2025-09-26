@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://crvuxpsp6t24m"]
+[gd_scene load_steps=12 format=4 uid="uid://crvuxpsp6t24m"]
+
+[ext_resource type="Material" uid="uid://blfmvkwkmj6wg" path="res://Models/Final Models/FtrArtFuujinTextures/mBody0.tres" id="1_5ofng"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_r3qw1"]
+[ext_resource type="Material" uid="uid://rydwvha1ajfv" path="res://Models/Final Models/FtrArtFuujinTextures/mFrame0.tres" id="2_r3qw1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1fwgv"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ry7sr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ofng"]
+size = Vector3(0.152795, 0.155, 0.0372615)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3qw1"]
+size = Vector3(0.152795, 0.155, 0.0372615)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpopo"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xpxey")
 
 [node name="FtrArtFuujin" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_r3qw1")
+area_path = NodePath("Fuujin_R1__mBody/@Area3D@68355")
 
 [node name="Fuujin_R1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0r6mx")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_5ofng")
+
+[node name="@StaticBody3D@68353" type="StaticBody3D" parent="Fuujin_R1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68352" type="CollisionShape3D" parent="Fuujin_R1__mBody/@StaticBody3D@68353"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.086500004, 0.02063075)
+shape = SubResource("BoxShape3D_5ofng")
+
+[node name="@Area3D@68355" type="Area3D" parent="Fuujin_R1__mBody"]
+
+[node name="@CollisionShape3D@68354" type="CollisionShape3D" parent="Fuujin_R1__mBody/@Area3D@68355"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.086500004, 0.02063075)
+shape = SubResource("BoxShape3D_r3qw1")
 
 [node name="Left__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_v3re1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_r3qw1")

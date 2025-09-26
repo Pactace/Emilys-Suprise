@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7s1uni3oaxqq"
-path="res://.godot/imported/mBody_Alb.png-63334c0315a923fd409538bd49a85229.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-63334c0315a923fd409538bd49a85229.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArcadegameMahjong.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-63334c0315a923fd409538bd49a85229.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-63334c0315a923fd409538bd49a85229.s3tc.ctex"]
 
 [params]
 

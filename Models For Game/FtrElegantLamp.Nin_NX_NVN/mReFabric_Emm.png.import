@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d262s5dd656pm"
-path="res://.godot/imported/mReFabric_Emm.png-76f852d8ac7436a368fee67170989b16.ctex"
+path.s3tc="res://.godot/imported/mReFabric_Emm.png-76f852d8ac7436a368fee67170989b16.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrElegantLamp.Nin_NX_NVN/mReFabric_Emm.png"
-dest_files=["res://.godot/imported/mReFabric_Emm.png-76f852d8ac7436a368fee67170989b16.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Emm.png-76f852d8ac7436a368fee67170989b16.s3tc.ctex"]
 
 [params]
 

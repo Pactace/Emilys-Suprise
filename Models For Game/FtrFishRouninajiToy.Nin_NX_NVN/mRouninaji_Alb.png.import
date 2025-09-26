@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d17weenbqsc3q"
-path="res://.godot/imported/mRouninaji_Alb.png-770ffcf9aaca86d0073455badaab4399.ctex"
+path.s3tc="res://.godot/imported/mRouninaji_Alb.png-770ffcf9aaca86d0073455badaab4399.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishRouninajiToy.Nin_NX_NVN/mRouninaji_Alb.png"
-dest_files=["res://.godot/imported/mRouninaji_Alb.png-770ffcf9aaca86d0073455badaab4399.ctex"]
+dest_files=["res://.godot/imported/mRouninaji_Alb.png-770ffcf9aaca86d0073455badaab4399.s3tc.ctex"]
 
 [params]
 

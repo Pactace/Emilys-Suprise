@@ -1,4 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://d2eb5v42toxha"]
+[gd_scene load_steps=10 format=4 uid="uid://d2eb5v42toxha"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6qn15"]
+[ext_resource type="Material" uid="uid://102i0u1ohjt8" path="res://Models/Final Models/FtrTurntableTextures/mReBody0.tres" id="1_v1obc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kfon"]
 resource_name = "mReBody"
@@ -66,12 +69,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_go62y")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_v1obc"]
+size = Vector3(0.0736796, 0.0229324, 0.0609812)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qn15"]
+size = Vector3(0.0736796, 0.0229324, 0.0609812)
+
 [node name="FtrTurntable" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_6qn15")
+area_path = NodePath("table_low__mReBody/@Area3D@71179")
 
 [node name="record_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_h4kb7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_v1obc")
 
 [node name="table_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_5wiay")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_v1obc")
+
+[node name="@StaticBody3D@71177" type="StaticBody3D" parent="table_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71176" type="CollisionShape3D" parent="table_low__mReBody/@StaticBody3D@71177"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021800026, 0.011476496, -1.7100945e-05)
+shape = SubResource("BoxShape3D_v1obc")
+
+[node name="@Area3D@71179" type="Area3D" parent="table_low__mReBody"]
+
+[node name="@CollisionShape3D@71178" type="CollisionShape3D" parent="table_low__mReBody/@Area3D@71179"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021800026, 0.011476496, -1.7100945e-05)
+shape = SubResource("BoxShape3D_6qn15")

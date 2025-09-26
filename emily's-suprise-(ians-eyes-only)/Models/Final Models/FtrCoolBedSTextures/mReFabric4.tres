@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cvmaejj4agagh"]
+
+[ext_resource type="Texture2D" uid="uid://crnvfxmvn5jwv" path="res://Models/Final Models/FtrCoolBedSTextures/mReFabric_Alb4.png" id="1_onovo"]
+[ext_resource type="Texture2D" uid="uid://de3ctpb6ba87u" path="res://Models/Final Models/FtrCoolBedSTextures/mReFabric_Nrm4.png" id="2_820xu"]
+
+[resource]
+resource_name = "mReFabric4"
+albedo_texture = ExtResource("1_onovo")
+normal_enabled = true
+normal_texture = ExtResource("2_820xu")

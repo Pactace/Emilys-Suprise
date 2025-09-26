@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj7yu8hke7os0"
-path="res://.godot/imported/mFtrHarvestKitchenEventNuki_Alb.png-b7c3c7b7433da13df7a9e987f26e0a03.ctex"
+path.s3tc="res://.godot/imported/mFtrHarvestKitchenEventNuki_Alb.png-b7c3c7b7433da13df7a9e987f26e0a03.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHarvestKitchenEvent.Nin_NX_NVN/mFtrHarvestKitchenEventNuki_Alb.png"
-dest_files=["res://.godot/imported/mFtrHarvestKitchenEventNuki_Alb.png-b7c3c7b7433da13df7a9e987f26e0a03.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestKitchenEventNuki_Alb.png-b7c3c7b7433da13df7a9e987f26e0a03.s3tc.ctex"]
 
 [params]
 

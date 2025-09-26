@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chmg1sutjlflx"
-path="res://.godot/imported/mYamame_Alb.png-3411070e55a9dec61f7e7dbd814e924c.ctex"
+path.s3tc="res://.godot/imported/mYamame_Alb.png-3411070e55a9dec61f7e7dbd814e924c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishYamame.Nin_NX_NVN/mYamame_Alb.png"
-dest_files=["res://.godot/imported/mYamame_Alb.png-3411070e55a9dec61f7e7dbd814e924c.ctex"]
+dest_files=["res://.godot/imported/mYamame_Alb.png-3411070e55a9dec61f7e7dbd814e924c.s3tc.ctex"]
 
 [params]
 

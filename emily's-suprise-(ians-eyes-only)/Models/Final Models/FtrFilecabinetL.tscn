@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://c2krhplaw2uhc"]
+[gd_scene load_steps=11 format=4 uid="uid://c2krhplaw2uhc"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_3alj6"]
+[ext_resource type="Material" uid="uid://b25v6i3jrr3vc" path="res://Models/Final Models/FtrFilecabinetLTextures/mReBody0.tres" id="1_cmpod"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8fwe"]
 resource_name = "mReBody"
@@ -40,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_or2l7")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmpod"]
+size = Vector3(0.165113, 0.197454, 0.0610261)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3alj6"]
+size = Vector3(0.165113, 0.197454, 0.0610261)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbdgn"]
 resource_name = "mGlass"
 vertex_color_use_as_albedo = true
@@ -78,10 +87,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4rplw")
 
 [node name="FtrFilecabinetL" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_3alj6")
+area_path = NodePath("File1_low__mReBody/@Area3D@69499")
 
 [node name="File1_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_yl6mc")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_cmpod")
+
+[node name="@StaticBody3D@69497" type="StaticBody3D" parent="File1_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69496" type="CollisionShape3D" parent="File1_low__mReBody/@StaticBody3D@69497"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.529953e-05, 0.098727, -0.00015914999)
+shape = SubResource("BoxShape3D_cmpod")
+
+[node name="@Area3D@69499" type="Area3D" parent="File1_low__mReBody"]
+
+[node name="@CollisionShape3D@69498" type="CollisionShape3D" parent="File1_low__mReBody/@Area3D@69499"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.529953e-05, 0.098727, -0.00015914999)
+shape = SubResource("BoxShape3D_3alj6")
 
 [node name="glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_00cx7")

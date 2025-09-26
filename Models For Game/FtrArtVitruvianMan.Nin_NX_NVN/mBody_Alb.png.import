@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctpeunempdtem"
-path="res://.godot/imported/mBody_Alb.png-fe6f3eea51758b32c8d336985bb97d7a.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-fe6f3eea51758b32c8d336985bb97d7a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtVitruvianMan.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-fe6f3eea51758b32c8d336985bb97d7a.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-fe6f3eea51758b32c8d336985bb97d7a.s3tc.ctex"]
 
 [params]
 

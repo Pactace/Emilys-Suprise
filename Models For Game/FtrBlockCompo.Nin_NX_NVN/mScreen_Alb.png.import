@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqd5pem1d4noc"
-path="res://.godot/imported/mScreen_Alb.png-7c90ed896780de0523e6cc45a4c8535e.ctex"
+path.s3tc="res://.godot/imported/mScreen_Alb.png-7c90ed896780de0523e6cc45a4c8535e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBlockCompo.Nin_NX_NVN/mScreen_Alb.png"
-dest_files=["res://.godot/imported/mScreen_Alb.png-7c90ed896780de0523e6cc45a4c8535e.ctex"]
+dest_files=["res://.godot/imported/mScreen_Alb.png-7c90ed896780de0523e6cc45a4c8535e.s3tc.ctex"]
 
 [params]
 

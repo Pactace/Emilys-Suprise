@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://c04qem4awo4li"]
+[gd_scene load_steps=8 format=4 uid="uid://c04qem4awo4li"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_3ybqk"]
+[ext_resource type="Material" uid="uid://dippvalj2qvjr" path="res://Models/Final Models/FtrCuteTableSTextures/mReBody0.tres" id="1_fu77n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k8que"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_g64hf")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fu77n"]
+size = Vector3(0.095851, 0.0770027, 0.095851)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ybqk"]
+size = Vector3(0.095851, 0.0770027, 0.095851)
+
 [node name="FtrCuteTableS" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_3ybqk")
+area_path = NodePath("BorardSupportA_low__mReBody/@Area3D@69163")
 
 [node name="BorardSupportA_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cy2l5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_fu77n")
+
+[node name="@StaticBody3D@69161" type="StaticBody3D" parent="BorardSupportA_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69160" type="CollisionShape3D" parent="BorardSupportA_low__mReBody/@StaticBody3D@69161"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03850135, 0)
+shape = SubResource("BoxShape3D_fu77n")
+
+[node name="@Area3D@69163" type="Area3D" parent="BorardSupportA_low__mReBody"]
+
+[node name="@CollisionShape3D@69162" type="CollisionShape3D" parent="BorardSupportA_low__mReBody/@Area3D@69163"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03850135, 0)
+shape = SubResource("BoxShape3D_3ybqk")

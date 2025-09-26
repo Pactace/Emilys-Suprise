@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://tj15wr6wwsk8"]
+[gd_scene load_steps=8 format=4 uid="uid://tj15wr6wwsk8"]
+
+[ext_resource type="Material" uid="uid://ctwee3lgn63d6" path="res://Models/Final Models/FtrLightSimpleCeilingTextures/mReBody0.tres" id="1_11dob"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_i5cuv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50fxv"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ctw3f")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_11dob"]
+size = Vector3(0.055605, 0.152897, 0.055605)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i5cuv"]
+size = Vector3(0.055605, 0.152897, 0.055605)
+
 [node name="FtrLightSimpleCeiling" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_i5cuv")
+area_path = NodePath("CeilingCover_low__mReBody/@Area3D@70291")
 
 [node name="CeilingCover_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1fs4p")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_11dob")
+
+[node name="@StaticBody3D@70289" type="StaticBody3D" parent="CeilingCover_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70288" type="CollisionShape3D" parent="CeilingCover_low__mReBody/@StaticBody3D@70289"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0764485, 0)
+shape = SubResource("BoxShape3D_11dob")
+
+[node name="@Area3D@70291" type="Area3D" parent="CeilingCover_low__mReBody"]
+
+[node name="@CollisionShape3D@70290" type="CollisionShape3D" parent="CeilingCover_low__mReBody/@Area3D@70291"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0764485, 0)
+shape = SubResource("BoxShape3D_i5cuv")

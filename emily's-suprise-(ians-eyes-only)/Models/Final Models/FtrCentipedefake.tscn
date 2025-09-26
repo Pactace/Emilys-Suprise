@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bovnoh2o77ep8"]
+[gd_scene load_steps=8 format=4 uid="uid://bovnoh2o77ep8"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ewoli"]
+[ext_resource type="Material" uid="uid://b1mwb60e5aux4" path="res://Models/Final Models/FtrCentipedefakeTextures/mBody0.tres" id="1_rdbsd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s536u"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ubdyq")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rdbsd"]
+size = Vector3(0.0202673, 0.00332219, 0.0610356)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ewoli"]
+size = Vector3(0.0202673, 0.00332219, 0.0610356)
+
 [node name="FtrCentipedefake" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ewoli")
+area_path = NodePath("InsectMukade3__mBody/@Area3D@68867")
 
 [node name="InsectMukade3__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_toitf")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_rdbsd")
+
+[node name="@StaticBody3D@68865" type="StaticBody3D" parent="InsectMukade3__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68864" type="CollisionShape3D" parent="InsectMukade3__mBody/@StaticBody3D@68865"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00092337, 0.0015842635, 7.059984e-05)
+shape = SubResource("BoxShape3D_rdbsd")
+
+[node name="@Area3D@68867" type="Area3D" parent="InsectMukade3__mBody"]
+
+[node name="@CollisionShape3D@68866" type="CollisionShape3D" parent="InsectMukade3__mBody/@Area3D@68867"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00092337, 0.0015842635, 7.059984e-05)
+shape = SubResource("BoxShape3D_ewoli")

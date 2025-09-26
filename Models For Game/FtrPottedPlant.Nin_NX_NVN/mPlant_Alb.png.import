@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7dlrdrylakon"
-path="res://.godot/imported/mPlant_Alb.png-be4e76b1b138a05e89405e8bcf9d8fa9.ctex"
+path.s3tc="res://.godot/imported/mPlant_Alb.png-be4e76b1b138a05e89405e8bcf9d8fa9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPottedPlant.Nin_NX_NVN/mPlant_Alb.png"
-dest_files=["res://.godot/imported/mPlant_Alb.png-be4e76b1b138a05e89405e8bcf9d8fa9.ctex"]
+dest_files=["res://.godot/imported/mPlant_Alb.png-be4e76b1b138a05e89405e8bcf9d8fa9.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbm07sb4ew2ce"
-path="res://.godot/imported/mBody_Alb.png-35364c78dc2b4d3221f9be2bb8768b02.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-35364c78dc2b4d3221f9be2bb8768b02.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtMilkmaid.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-35364c78dc2b4d3221f9be2bb8768b02.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-35364c78dc2b4d3221f9be2bb8768b02.s3tc.ctex"]
 
 [params]
 

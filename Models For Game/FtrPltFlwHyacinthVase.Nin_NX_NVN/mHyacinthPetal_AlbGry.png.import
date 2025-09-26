@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnxo6j3mgdydh"
-path="res://.godot/imported/mHyacinthPetal_AlbGry.png-447a04d80fce9f5f6b4ac3c77e0f16a7.ctex"
+path.s3tc="res://.godot/imported/mHyacinthPetal_AlbGry.png-447a04d80fce9f5f6b4ac3c77e0f16a7.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwHyacinthVase.Nin_NX_NVN/mHyacinthPetal_AlbGry.png"
-dest_files=["res://.godot/imported/mHyacinthPetal_AlbGry.png-447a04d80fce9f5f6b4ac3c77e0f16a7.ctex"]
+dest_files=["res://.godot/imported/mHyacinthPetal_AlbGry.png-447a04d80fce9f5f6b4ac3c77e0f16a7.s3tc.ctex"]
 
 [params]
 

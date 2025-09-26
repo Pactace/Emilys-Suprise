@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://buug8egmskyur"]
+[gd_scene load_steps=12 format=4 uid="uid://buug8egmskyur"]
+
+[ext_resource type="Material" uid="uid://b6nijb8jle33c" path="res://Models/Final Models/FtrArtAjisaisoukeizuTextures/mBody0.tres" id="1_bbl2b"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fluqn"]
+[ext_resource type="Material" uid="uid://dwe5qpfqca5u6" path="res://Models/Final Models/FtrArtAjisaisoukeizuTextures/mFrame0.tres" id="2_fluqn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4mk3"]
 resource_name = "mBody"
@@ -36,6 +40,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cl2i3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bbl2b"]
+size = Vector3(0.0609659, 0.100414, 1e-05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fluqn"]
+size = Vector3(0.0609659, 0.100414, 1e-05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjdfo"]
 resource_name = "mFrame"
@@ -77,11 +87,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3bvtv")
 
 [node name="FtrArtAjisaisoukeizu" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_fluqn")
+area_path = NodePath("Ajisaisoukeizu__mBody/@Area3D@68295")
 
 [node name="Ajisaisoukeizu__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qdkte")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_bbl2b")
+
+[node name="@StaticBody3D@68293" type="StaticBody3D" parent="Ajisaisoukeizu__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68292" type="CollisionShape3D" parent="Ajisaisoukeizu__mBody/@StaticBody3D@68293"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, -0.008600201, 0.00388577)
+shape = SubResource("BoxShape3D_bbl2b")
+
+[node name="@Area3D@68295" type="Area3D" parent="Ajisaisoukeizu__mBody"]
+
+[node name="@CollisionShape3D@68294" type="CollisionShape3D" parent="Ajisaisoukeizu__mBody/@Area3D@68295"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.029142e-08, -0.008600201, 0.00388577)
+shape = SubResource("BoxShape3D_fluqn")
 
 [node name="Gold__mFrame" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_c1d73")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_fluqn")

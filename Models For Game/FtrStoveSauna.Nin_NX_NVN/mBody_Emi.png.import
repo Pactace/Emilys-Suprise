@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pybscu4xc4ju"
-path="res://.godot/imported/mBody_Emi.png-dbe82b88377272de17c9c527a9f9253d.ctex"
+path.s3tc="res://.godot/imported/mBody_Emi.png-dbe82b88377272de17c9c527a9f9253d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrStoveSauna.Nin_NX_NVN/mBody_Emi.png"
-dest_files=["res://.godot/imported/mBody_Emi.png-dbe82b88377272de17c9c527a9f9253d.ctex"]
+dest_files=["res://.godot/imported/mBody_Emi.png-dbe82b88377272de17c9c527a9f9253d.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b3vsvphasvlwx"]
+
+[ext_resource type="Texture2D" uid="uid://s2gc5707yw6q" path="res://Models/Final Models/FtrArcadegameMahjongTextures/mBody_Alb.png" id="1_6hk0s"]
+[ext_resource type="Texture2D" uid="uid://dyqpwoe8ovq8x" path="res://Models/Final Models/FtrArcadegameMahjongTextures/mBody_Nrm.png" id="2_i62sc"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_6hk0s")
+normal_enabled = true
+normal_texture = ExtResource("2_i62sc")

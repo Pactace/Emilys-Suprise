@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tfqpikm53sei"
-path="res://.godot/imported/mBody_Alb.png-da15db1ab4c697122abb58770326338f.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-da15db1ab4c697122abb58770326338f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrStoveWood.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-da15db1ab4c697122abb58770326338f.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-da15db1ab4c697122abb58770326338f.s3tc.ctex"]
 
 [params]
 

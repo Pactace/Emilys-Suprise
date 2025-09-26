@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://0bmxs87yhks6"]
+[gd_scene load_steps=14 format=4 uid="uid://0bmxs87yhks6"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_e2o6p"]
+[ext_resource type="Material" uid="uid://cjgfvf70glauh" path="res://Models/Final Models/FtrHarvestTableClothEventTextures/mFtrHarvestTableClothEvent0.tres" id="1_j57yt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu1nx"]
 resource_name = "mReFabric1"
@@ -103,7 +106,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h3wpw")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j57yt"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2o6p"]
+size = Vector3(0, 0, 0)
+
 [node name="FtrHarvestTableClothEvent" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_e2o6p")
+area_path = NodePath("wood__mBody1/@Area3D@69951")
 
 [node name="cloth2__mReFabric1" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dca2m")
@@ -112,7 +124,20 @@ skeleton = NodePath("")
 [node name="cloth__mFtrHarvestTableClothEvent" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_72taj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_j57yt")
 
 [node name="wood__mBody1" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_m7tep")
 skeleton = NodePath("")
+
+[node name="@StaticBody3D@69949" type="StaticBody3D" parent="wood__mBody1"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69948" type="CollisionShape3D" parent="wood__mBody1/@StaticBody3D@69949"]
+shape = SubResource("BoxShape3D_j57yt")
+
+[node name="@Area3D@69951" type="Area3D" parent="wood__mBody1"]
+
+[node name="@CollisionShape3D@69950" type="CollisionShape3D" parent="wood__mBody1/@Area3D@69951"]
+shape = SubResource("BoxShape3D_e2o6p")

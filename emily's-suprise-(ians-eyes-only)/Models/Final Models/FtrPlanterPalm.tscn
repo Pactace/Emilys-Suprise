@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bg6x8vw2ql8ls"]
+[gd_scene load_steps=12 format=4 uid="uid://bg6x8vw2ql8ls"]
+
+[ext_resource type="Material" uid="uid://cnfg8llbew1un" path="res://Models/Final Models/FtrPlanterPalmTextures/mPlant0.tres" id="1_4ixhg"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_cg5hm"]
+[ext_resource type="Material" uid="uid://dvymb48rojy3d" path="res://Models/Final Models/FtrPlanterPalmTextures/mBody0.tres" id="2_cg5hm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tccgp"]
 resource_name = "mPlant"
@@ -71,12 +75,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wbmdu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ixhg"]
+size = Vector3(0.0573449, 0.14719, 0.0617572)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cg5hm"]
+size = Vector3(0.0573449, 0.14719, 0.0617572)
+
 [node name="FtrPlanterPalm" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_cg5hm")
+area_path = NodePath("coconut_low__mBody/@Area3D@70735")
 
 [node name="PlantA__mPlant" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qkprr")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_4ixhg")
 
 [node name="coconut_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2el2n")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_cg5hm")
+
+[node name="@StaticBody3D@70733" type="StaticBody3D" parent="coconut_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70732" type="CollisionShape3D" parent="coconut_low__mBody/@StaticBody3D@70733"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1648983e-05, -0.00045959651, 0.0308786)
+shape = SubResource("BoxShape3D_4ixhg")
+
+[node name="@Area3D@70735" type="Area3D" parent="coconut_low__mBody"]
+
+[node name="@CollisionShape3D@70734" type="CollisionShape3D" parent="coconut_low__mBody/@Area3D@70735"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1648983e-05, -0.00045959651, 0.0308786)
+shape = SubResource("BoxShape3D_cg5hm")

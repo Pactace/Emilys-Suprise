@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b71o4gp6fwex5"
-path="res://.godot/imported/mGlassBack_Alb.png-b4800ab150655c44a7c1672372c0b57c.ctex"
+path.s3tc="res://.godot/imported/mGlassBack_Alb.png-b4800ab150655c44a7c1672372c0b57c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishSuzuki.Nin_NX_NVN/mGlassBack_Alb.png"
-dest_files=["res://.godot/imported/mGlassBack_Alb.png-b4800ab150655c44a7c1672372c0b57c.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Alb.png-b4800ab150655c44a7c1672372c0b57c.s3tc.ctex"]
 
 [params]
 

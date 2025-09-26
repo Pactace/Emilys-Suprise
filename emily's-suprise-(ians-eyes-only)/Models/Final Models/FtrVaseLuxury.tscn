@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bhn8oljf5i5g3"]
+[gd_scene load_steps=8 format=4 uid="uid://bhn8oljf5i5g3"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_84t05"]
+[ext_resource type="Material" uid="uid://stx8gixed4mb" path="res://Models/Final Models/FtrVaseLuxuryTextures/mReBody0.tres" id="1_yao6t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fipxh"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vewn5")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yao6t"]
+size = Vector3(0.0771095, 0.137321, 0.0771095)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_84t05"]
+size = Vector3(0.0771095, 0.137321, 0.0771095)
+
 [node name="FtrVaseLuxury" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_84t05")
+area_path = NodePath("Pot__mReBody/@Area3D@71211")
 
 [node name="Pot__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7hajm")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_yao6t")
+
+[node name="@StaticBody3D@71209" type="StaticBody3D" parent="Pot__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71208" type="CollisionShape3D" parent="Pot__mReBody/@StaticBody3D@71209"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.068780735, -4.8428774e-08)
+shape = SubResource("BoxShape3D_yao6t")
+
+[node name="@Area3D@71211" type="Area3D" parent="Pot__mReBody"]
+
+[node name="@CollisionShape3D@71210" type="CollisionShape3D" parent="Pot__mReBody/@Area3D@71211"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8428774e-08, 0.068780735, -4.8428774e-08)
+shape = SubResource("BoxShape3D_84t05")

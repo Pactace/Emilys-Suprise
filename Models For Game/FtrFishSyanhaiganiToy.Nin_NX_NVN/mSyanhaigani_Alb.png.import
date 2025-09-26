@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce51er2fy1prc"
-path="res://.godot/imported/mSyanhaigani_Alb.png-f3688daa782bd095d37886c2ef6d7987.ctex"
+path.s3tc="res://.godot/imported/mSyanhaigani_Alb.png-f3688daa782bd095d37886c2ef6d7987.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishSyanhaiganiToy.Nin_NX_NVN/mSyanhaigani_Alb.png"
-dest_files=["res://.godot/imported/mSyanhaigani_Alb.png-f3688daa782bd095d37886c2ef6d7987.ctex"]
+dest_files=["res://.godot/imported/mSyanhaigani_Alb.png-f3688daa782bd095d37886c2ef6d7987.s3tc.ctex"]
 
 [params]
 

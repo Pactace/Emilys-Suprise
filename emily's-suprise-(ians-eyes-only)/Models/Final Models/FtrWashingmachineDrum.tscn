@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://ck54rc74pu3rw"]
+[gd_scene load_steps=16 format=4 uid="uid://ck54rc74pu3rw"]
+
+[ext_resource type="Material" uid="uid://djxytb6dp161t" path="res://Models/Final Models/FtrWashingmachineDrumTextures/mWindow0.tres" id="1_mrnwf"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ondfs"]
+[ext_resource type="Material" uid="uid://5anvqfluxahw" path="res://Models/Final Models/FtrWashingmachineDrumTextures/mReBody0.tres" id="2_ondfs"]
+[ext_resource type="Material" uid="uid://dy76pmjweotna" path="res://Models/Final Models/FtrWashingmachineDrumTextures/mDisplay0.tres" id="3_77y5a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ho6p"]
 resource_name = "mWindow"
@@ -68,6 +73,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_i5nop")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mrnwf"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ondfs"]
+size = Vector3(0, 0, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2kx7"]
 resource_name = "mDisplay"
 vertex_color_use_as_albedo = true
@@ -101,15 +112,33 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1od0d")
 
 [node name="FtrWashingmachineDrum" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ondfs")
+area_path = NodePath("body__mReBody/@Area3D@71255")
 
 [node name="Door__mWindow" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_yrtmv")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_mrnwf")
 
 [node name="body__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_oowkr")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_ondfs")
+
+[node name="@StaticBody3D@71253" type="StaticBody3D" parent="body__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71252" type="CollisionShape3D" parent="body__mReBody/@StaticBody3D@71253"]
+shape = SubResource("BoxShape3D_mrnwf")
+
+[node name="@Area3D@71255" type="Area3D" parent="body__mReBody"]
+
+[node name="@CollisionShape3D@71254" type="CollisionShape3D" parent="body__mReBody/@Area3D@71255"]
+shape = SubResource("BoxShape3D_ondfs")
 
 [node name="panel__mDisplay" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_uowci")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_77y5a")

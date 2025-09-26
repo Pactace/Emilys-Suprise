@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://w5bd6shoklpj"]
+[gd_scene load_steps=11 format=4 uid="uid://w5bd6shoklpj"]
+
+[ext_resource type="Material" uid="uid://bu64imsjrdlyr" path="res://Models/Final Models/FtrLibertyTextures/mBody0.tres" id="1_7iyyy"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_mxuen"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihcha"]
 resource_name = "mBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aplwg")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7iyyy"]
+size = Vector3(0.0956984, 0.312665, 0.0909491)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxuen"]
+size = Vector3(0.0956984, 0.312665, 0.0909491)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_47fqv"]
 resource_name = "mLight"
 vertex_color_use_as_albedo = true
@@ -72,10 +81,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hfxa3")
 
 [node name="FtrLiberty" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_mxuen")
+area_path = NodePath("StatueBase_low__mBody/@Area3D@70279")
 
 [node name="StatueBase_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_41w1y")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_7iyyy")
+
+[node name="@StaticBody3D@70277" type="StaticBody3D" parent="StatueBase_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70276" type="CollisionShape3D" parent="StatueBase_low__mBody/@StaticBody3D@70277"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0023748018, 0.15633252, 5.2154064e-08)
+shape = SubResource("BoxShape3D_7iyyy")
+
+[node name="@Area3D@70279" type="Area3D" parent="StatueBase_low__mBody"]
+
+[node name="@CollisionShape3D@70278" type="CollisionShape3D" parent="StatueBase_low__mBody/@Area3D@70279"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0023748018, 0.15633252, 5.2154064e-08)
+shape = SubResource("BoxShape3D_mxuen")
 
 [node name="StatueFire_low__mLight" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ccug3")

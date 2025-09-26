@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cedaj0ld3rubc"
-path="res://.godot/imported/mBody_Alb.png-8cd10633c3ea44cfb0eeca45b1288fdb.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-8cd10633c3ea44cfb0eeca45b1288fdb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrBucketsandsetHealthy.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-8cd10633c3ea44cfb0eeca45b1288fdb.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-8cd10633c3ea44cfb0eeca45b1288fdb.s3tc.ctex"]
 
 [params]
 

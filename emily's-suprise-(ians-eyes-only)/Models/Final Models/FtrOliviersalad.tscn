@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://cq3xkadoms4gp"]
+[gd_scene load_steps=11 format=4 uid="uid://cq3xkadoms4gp"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_2t1nh"]
+[ext_resource type="Material" uid="uid://u1shmfwiat7q" path="res://Models/Final Models/FtrOliviersaladTextures/mBody0.tres" id="1_71cxq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orqbv"]
 resource_name = "mBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o0ust")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_71cxq"]
+size = Vector3(0.072511, 0.0207148, 0.072511)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2t1nh"]
+size = Vector3(0.072511, 0.0207148, 0.072511)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ttymf"]
 resource_name = "mClear"
 vertex_color_use_as_albedo = true
@@ -72,10 +81,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u225w")
 
 [node name="FtrOliviersalad" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_2t1nh")
+area_path = NodePath("Dish_low__mBody/@Area3D@70635")
 
 [node name="Dish_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3te6q")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_71cxq")
+
+[node name="@StaticBody3D@70633" type="StaticBody3D" parent="Dish_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70632" type="CollisionShape3D" parent="Dish_low__mBody/@StaticBody3D@70633"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01031335, 0)
+shape = SubResource("BoxShape3D_71cxq")
+
+[node name="@Area3D@70635" type="Area3D" parent="Dish_low__mBody"]
+
+[node name="@CollisionShape3D@70634" type="CollisionShape3D" parent="Dish_low__mBody/@Area3D@70635"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01031335, 0)
+shape = SubResource("BoxShape3D_2t1nh")
 
 [node name="GroundPlane6__mClear" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_eiq1r")

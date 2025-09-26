@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bohou7c32hcsr"]
+[gd_scene load_steps=8 format=4 uid="uid://bohou7c32hcsr"]
+
+[ext_resource type="Material" uid="uid://p74smdswixuv" path="res://Models/Final Models/FtrBoxsofaTextures/mReBody0.tres" id="1_dihmy"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_r12bl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_de1ep"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k8jmh")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dihmy"]
+size = Vector3(0.0999908, 0.0918489, 0.0771714)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r12bl"]
+size = Vector3(0.0999908, 0.0918489, 0.0771714)
+
 [node name="FtrBoxsofa" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_r12bl")
+area_path = NodePath("Sofaback__mReBody/@Area3D@68691")
 
 [node name="Sofaback__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_gsc4y")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_dihmy")
+
+[node name="@StaticBody3D@68689" type="StaticBody3D" parent="Sofaback__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68688" type="CollisionShape3D" parent="Sofaback__mReBody/@StaticBody3D@68689"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04592445, -0.011408899)
+shape = SubResource("BoxShape3D_dihmy")
+
+[node name="@Area3D@68691" type="Area3D" parent="Sofaback__mReBody"]
+
+[node name="@CollisionShape3D@68690" type="CollisionShape3D" parent="Sofaback__mReBody/@Area3D@68691"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04592445, -0.011408899)
+shape = SubResource("BoxShape3D_r12bl")

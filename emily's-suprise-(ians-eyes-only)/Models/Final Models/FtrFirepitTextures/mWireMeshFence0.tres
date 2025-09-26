@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://yajq3rfan4kl"]
+
+[ext_resource type="Texture2D" uid="uid://bui083e27xaij" path="res://Models/Final Models/FtrFirepitTextures/mWireMeshFence_Alb.png" id="1_pt0rg"]
+[ext_resource type="Texture2D" uid="uid://c8spb7g3landu" path="res://Models/Final Models/FtrFirepitTextures/mWireMeshFence_Nrm.png" id="2_hev43"]
+
+[resource]
+resource_name = "mWireMeshFence0"
+albedo_texture = ExtResource("1_pt0rg")
+normal_enabled = true
+normal_texture = ExtResource("2_hev43")

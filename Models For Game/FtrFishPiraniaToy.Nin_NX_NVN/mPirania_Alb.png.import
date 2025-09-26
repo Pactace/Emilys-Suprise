@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ed2v4gjv86kc"
-path="res://.godot/imported/mPirania_Alb.png-1fab361baccaf0e7ec2306c161a373a8.ctex"
+path.s3tc="res://.godot/imported/mPirania_Alb.png-1fab361baccaf0e7ec2306c161a373a8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishPiraniaToy.Nin_NX_NVN/mPirania_Alb.png"
-dest_files=["res://.godot/imported/mPirania_Alb.png-1fab361baccaf0e7ec2306c161a373a8.ctex"]
+dest_files=["res://.godot/imported/mPirania_Alb.png-1fab361baccaf0e7ec2306c161a373a8.s3tc.ctex"]
 
 [params]
 

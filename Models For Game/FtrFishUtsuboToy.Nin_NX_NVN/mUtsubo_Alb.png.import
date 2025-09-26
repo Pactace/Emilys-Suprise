@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uega5q4onav5"
-path="res://.godot/imported/mUtsubo_Alb.png-ec5bf3423b63c10aaf1738ce813d8c7a.ctex"
+path.s3tc="res://.godot/imported/mUtsubo_Alb.png-ec5bf3423b63c10aaf1738ce813d8c7a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishUtsuboToy.Nin_NX_NVN/mUtsubo_Alb.png"
-dest_files=["res://.godot/imported/mUtsubo_Alb.png-ec5bf3423b63c10aaf1738ce813d8c7a.ctex"]
+dest_files=["res://.godot/imported/mUtsubo_Alb.png-ec5bf3423b63c10aaf1738ce813d8c7a.s3tc.ctex"]
 
 [params]
 

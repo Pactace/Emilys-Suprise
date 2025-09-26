@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce2rksp3cpwul"
-path="res://.godot/imported/mNaporeonfish_Alb.png-a05bb1bfbeda80fbb5f16823b42fe499.ctex"
+path.s3tc="res://.godot/imported/mNaporeonfish_Alb.png-a05bb1bfbeda80fbb5f16823b42fe499.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNaporeonfishToy.Nin_NX_NVN/mNaporeonfish_Alb.png"
-dest_files=["res://.godot/imported/mNaporeonfish_Alb.png-a05bb1bfbeda80fbb5f16823b42fe499.ctex"]
+dest_files=["res://.godot/imported/mNaporeonfish_Alb.png-a05bb1bfbeda80fbb5f16823b42fe499.s3tc.ctex"]
 
 [params]
 

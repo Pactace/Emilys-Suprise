@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2p0lv8ayf74v"]
+
+[ext_resource type="Texture2D" uid="uid://q34r01vrxjax" path="res://Models/Final Models/FtrBottlePlasticTextures/mReFabric_Alb4.png" id="1_scqrs"]
+
+[resource]
+resource_name = "mReFabric4"
+albedo_texture = ExtResource("1_scqrs")
+normal_enabled = true

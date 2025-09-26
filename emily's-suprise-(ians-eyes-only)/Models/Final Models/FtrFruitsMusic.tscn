@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bvrweb2fo6l36"]
+[gd_scene load_steps=12 format=4 uid="uid://bvrweb2fo6l36"]
+
+[ext_resource type="Material" uid="uid://blwmdtln1vqh6" path="res://Models/Final Models/FtrFruitsMusicTextures/mReBody0.tres" id="1_5s822"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_qq7eq"]
+[ext_resource type="Material" uid="uid://xvkjhd3h7iwt" path="res://Models/Final Models/FtrFruitsMusicTextures/mNet0.tres" id="2_qq7eq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh4qc"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_r22x8")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5s822"]
+size = Vector3(0.0769493, 0.080066, 0.0391465)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qq7eq"]
+size = Vector3(0.0769493, 0.080066, 0.0391465)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk1eb"]
 resource_name = "mNet"
 vertex_color_use_as_albedo = true
@@ -73,11 +83,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yow5h")
 
 [node name="FtrFruitsMusic" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_qq7eq")
+area_path = NodePath("LeafDisplay_low__mReBody/@Area3D@69695")
 
 [node name="LeafDisplay_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nobbi")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_5s822")
+
+[node name="@StaticBody3D@69693" type="StaticBody3D" parent="LeafDisplay_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69692" type="CollisionShape3D" parent="LeafDisplay_low__mReBody/@StaticBody3D@69693"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010924488, 0.039998, -8.324906e-05)
+shape = SubResource("BoxShape3D_5s822")
+
+[node name="@Area3D@69695" type="Area3D" parent="LeafDisplay_low__mReBody"]
+
+[node name="@CollisionShape3D@69694" type="CollisionShape3D" parent="LeafDisplay_low__mReBody/@Area3D@69695"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010924488, 0.039998, -8.324906e-05)
+shape = SubResource("BoxShape3D_qq7eq")
 
 [node name="Net_L_low__mNet" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_u1b1q")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_qq7eq")

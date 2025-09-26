@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0fmy1x1a17aq"
-path="res://.godot/imported/mRainbowfish_Alb.png-6a0736600a287ca20df43d4720e3208c.ctex"
+path.s3tc="res://.godot/imported/mRainbowfish_Alb.png-6a0736600a287ca20df43d4720e3208c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishRainbowfish.Nin_NX_NVN/mRainbowfish_Alb.png"
-dest_files=["res://.godot/imported/mRainbowfish_Alb.png-6a0736600a287ca20df43d4720e3208c.ctex"]
+dest_files=["res://.godot/imported/mRainbowfish_Alb.png-6a0736600a287ca20df43d4720e3208c.s3tc.ctex"]
 
 [params]
 

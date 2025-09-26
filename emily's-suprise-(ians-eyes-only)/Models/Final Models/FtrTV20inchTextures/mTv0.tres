@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://5vfdgvdop0l1"]
+
+[ext_resource type="Texture2D" uid="uid://1bj8v4xmp8w6" path="res://Models/Final Models/FtrTV20inchTextures/mTv_Alb.png" id="1_ywk7m"]
+[ext_resource type="Texture2D" uid="uid://bna18o0pr1o0n" path="res://Models/Final Models/FtrTV20inchTextures/mTv_Nrm.png" id="2_olunm"]
+
+[resource]
+resource_name = "mTv0"
+albedo_texture = ExtResource("1_ywk7m")
+normal_enabled = true
+normal_texture = ExtResource("2_olunm")

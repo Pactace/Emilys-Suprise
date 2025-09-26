@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://k7fgcwuympu8"]
+[gd_scene load_steps=12 format=4 uid="uid://k7fgcwuympu8"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_3qkjv"]
+[ext_resource type="Material" uid="uid://bip3cbjxg751d" path="res://Models/Final Models/FtrPinetreeTextures/mBody0.tres" id="1_gl8lo"]
+[ext_resource type="Material" uid="uid://dkri23loyxqc2" path="res://Models/Final Models/FtrPinetreeTextures/mLeaf0.tres" id="2_3qkjv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6d6cs"]
 resource_name = "mBody"
@@ -38,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q14mh")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gl8lo"]
+size = Vector3(0.275732, 0.258205, 0.187675)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3qkjv"]
+size = Vector3(0.275732, 0.258205, 0.187675)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_liexv"]
 resource_name = "mLeaf"
@@ -79,11 +89,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n8pav")
 
 [node name="FtrPinetree" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_3qkjv")
+area_path = NodePath("Ground__mBody/@Area3D@70715")
 
 [node name="Ground__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4qp6t")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_gl8lo")
+
+[node name="@StaticBody3D@70713" type="StaticBody3D" parent="Ground__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70712" type="CollisionShape3D" parent="Ground__mBody/@StaticBody3D@70713"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0067529976, 0.12904924, -0.0008165017)
+shape = SubResource("BoxShape3D_gl8lo")
+
+[node name="@Area3D@70715" type="Area3D" parent="Ground__mBody"]
+
+[node name="@CollisionShape3D@70714" type="CollisionShape3D" parent="Ground__mBody/@Area3D@70715"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0067529976, 0.12904924, -0.0008165017)
+shape = SubResource("BoxShape3D_3qkjv")
 
 [node name="Pineneedles1__mLeaf" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0ilvo")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_3qkjv")

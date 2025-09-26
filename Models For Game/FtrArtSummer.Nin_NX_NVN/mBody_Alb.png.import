@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ldmis7k2n0cy"
-path="res://.godot/imported/mBody_Alb.png-480bccbacb2f67cf02c0e70c6a52cb11.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-480bccbacb2f67cf02c0e70c6a52cb11.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtSummer.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-480bccbacb2f67cf02c0e70c6a52cb11.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-480bccbacb2f67cf02c0e70c6a52cb11.s3tc.ctex"]
 
 [params]
 

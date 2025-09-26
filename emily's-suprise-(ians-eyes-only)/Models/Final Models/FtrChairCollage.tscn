@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://nggh57erdgnw"]
+[gd_scene load_steps=8 format=4 uid="uid://nggh57erdgnw"]
+
+[ext_resource type="Material" uid="uid://dgnllg4e2lekj" path="res://Models/Final Models/FtrChairCollageTextures/mReBody0.tres" id="1_5wvab"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fryaj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d05ho"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yx6o6")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wvab"]
+size = Vector3(0.172021, 0.105501, 0.0793945)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fryaj"]
+size = Vector3(0.172021, 0.105501, 0.0793945)
+
 [node name="FtrChairCollage" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_fryaj")
+area_path = NodePath("backrest_low__mReBody/@Area3D@68875")
 
 [node name="backrest_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0hvmf")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_5wvab")
+
+[node name="@StaticBody3D@68873" type="StaticBody3D" parent="backrest_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68872" type="CollisionShape3D" parent="backrest_low__mReBody/@StaticBody3D@68873"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0430813e-07, 0.0527505, -0.0011947528)
+shape = SubResource("BoxShape3D_5wvab")
+
+[node name="@Area3D@68875" type="Area3D" parent="backrest_low__mReBody"]
+
+[node name="@CollisionShape3D@68874" type="CollisionShape3D" parent="backrest_low__mReBody/@Area3D@68875"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0430813e-07, 0.0527505, -0.0011947528)
+shape = SubResource("BoxShape3D_fryaj")

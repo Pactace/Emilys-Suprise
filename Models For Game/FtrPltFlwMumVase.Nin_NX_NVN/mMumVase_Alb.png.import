@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn34rpx25qcvc"
-path="res://.godot/imported/mMumVase_Alb.png-64528737efd6023eee8f9a3cd6522e0e.ctex"
+path.s3tc="res://.godot/imported/mMumVase_Alb.png-64528737efd6023eee8f9a3cd6522e0e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwMumVase.Nin_NX_NVN/mMumVase_Alb.png"
-dest_files=["res://.godot/imported/mMumVase_Alb.png-64528737efd6023eee8f9a3cd6522e0e.ctex"]
+dest_files=["res://.godot/imported/mMumVase_Alb.png-64528737efd6023eee8f9a3cd6522e0e.s3tc.ctex"]
 
 [params]
 

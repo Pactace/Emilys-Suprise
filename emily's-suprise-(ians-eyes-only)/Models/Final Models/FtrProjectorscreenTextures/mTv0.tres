@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b2jxjegl0vdb0"]
+
+[ext_resource type="Texture2D" uid="uid://bxu8rvy0h5lnf" path="res://Models/Final Models/FtrProjectorscreenTextures/mTv_Alb.png" id="1_jjrmh"]
+[ext_resource type="Texture2D" uid="uid://ylgbscv41cen" path="res://Models/Final Models/FtrProjectorscreenTextures/mTv_Nrm.png" id="2_e7kps"]
+
+[resource]
+resource_name = "mTv0"
+albedo_texture = ExtResource("1_jjrmh")
+normal_enabled = true
+normal_texture = ExtResource("2_e7kps")

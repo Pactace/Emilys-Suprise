@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w52ex7r4t447"
-path="res://.godot/imported/mBody_Alb.png-7f602be2d8ea5e7341e0860b26056643.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-7f602be2d8ea5e7341e0860b26056643.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFlourSugar.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-7f602be2d8ea5e7341e0860b26056643.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-7f602be2d8ea5e7341e0860b26056643.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cj4e0vgk5brvt"]
+
+[ext_resource type="Texture2D" uid="uid://dgju11q47hkeq" path="res://Models/Final Models/FtrGoldDecorativeplateTextures/mDish_Alb.png" id="1_teeet"]
+[ext_resource type="Texture2D" uid="uid://qpbv77r2aglp" path="res://Models/Final Models/FtrGoldDecorativeplateTextures/mDish_Nrm.png" id="2_lgujw"]
+
+[resource]
+resource_name = "mDish0"
+albedo_texture = ExtResource("1_teeet")
+normal_enabled = true
+normal_texture = ExtResource("2_lgujw")

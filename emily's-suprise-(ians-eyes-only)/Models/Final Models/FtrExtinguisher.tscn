@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cpnx5lq5xbsqt"]
+[gd_scene load_steps=8 format=4 uid="uid://cpnx5lq5xbsqt"]
+
+[ext_resource type="Material" uid="uid://x8uomdv0fm7j" path="res://Models/Final Models/FtrExtinguisherTextures/mBody0.tres" id="1_tw2ie"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vwsnb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqght"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_taofd")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tw2ie"]
+size = Vector3(0.0476139, 0.0997102, 0.0294013)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwsnb"]
+size = Vector3(0.0476139, 0.0997102, 0.0294013)
+
 [node name="FtrExtinguisher" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_vwsnb")
+area_path = NodePath("body_low__mBody/@Area3D@69415")
 
 [node name="body_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pneo0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_tw2ie")
+
+[node name="@StaticBody3D@69413" type="StaticBody3D" parent="body_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69412" type="CollisionShape3D" parent="body_low__mBody/@StaticBody3D@69413"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00021865033, 0.0498551, -0.0002605496)
+shape = SubResource("BoxShape3D_tw2ie")
+
+[node name="@Area3D@69415" type="Area3D" parent="body_low__mBody"]
+
+[node name="@CollisionShape3D@69414" type="CollisionShape3D" parent="body_low__mBody/@Area3D@69415"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00021865033, 0.0498551, -0.0002605496)
+shape = SubResource("BoxShape3D_vwsnb")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8nx523as4cml"
-path="res://.godot/imported/mGoldenTorauto_Alb.png-9b2fa08c03641dceed2612fe15a98000.ctex"
+path.s3tc="res://.godot/imported/mGoldenTorauto_Alb.png-9b2fa08c03641dceed2612fe15a98000.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishGoldenTorautoToy.Nin_NX_NVN/mGoldenTorauto_Alb.png"
-dest_files=["res://.godot/imported/mGoldenTorauto_Alb.png-9b2fa08c03641dceed2612fe15a98000.ctex"]
+dest_files=["res://.godot/imported/mGoldenTorauto_Alb.png-9b2fa08c03641dceed2612fe15a98000.s3tc.ctex"]
 
 [params]
 

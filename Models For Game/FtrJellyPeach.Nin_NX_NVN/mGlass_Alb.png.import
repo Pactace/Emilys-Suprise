@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byhduras355kh"
-path="res://.godot/imported/mGlass_Alb.png-fbcbc28277dc05c7b40c1bc927cf0474.ctex"
+path.s3tc="res://.godot/imported/mGlass_Alb.png-fbcbc28277dc05c7b40c1bc927cf0474.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJellyPeach.Nin_NX_NVN/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-fbcbc28277dc05c7b40c1bc927cf0474.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-fbcbc28277dc05c7b40c1bc927cf0474.s3tc.ctex"]
 
 [params]
 

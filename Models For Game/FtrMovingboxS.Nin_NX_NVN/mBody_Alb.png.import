@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clmm10hx5td3p"
-path="res://.godot/imported/mBody_Alb.png-bfffb959653707bf8be16b4c73c2ee08.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-bfffb959653707bf8be16b4c73c2ee08.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMovingboxS.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-bfffb959653707bf8be16b4c73c2ee08.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-bfffb959653707bf8be16b4c73c2ee08.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nau0jb2neqgs"
-path="res://.godot/imported/mBody_Alb.png-be006b7a81d0c1a3fae1437c81cd77c8.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-be006b7a81d0c1a3fae1437c81cd77c8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtAppleOrange.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-be006b7a81d0c1a3fae1437c81cd77c8.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-be006b7a81d0c1a3fae1437c81cd77c8.s3tc.ctex"]
 
 [params]
 

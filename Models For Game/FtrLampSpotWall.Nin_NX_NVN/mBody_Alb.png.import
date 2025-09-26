@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1cpcsq0g5fxl"
-path="res://.godot/imported/mBody_Alb.png-03ca6700ce8592f4b400a79c084b37c8.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-03ca6700ce8592f4b400a79c084b37c8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrLampSpotWall.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-03ca6700ce8592f4b400a79c084b37c8.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-03ca6700ce8592f4b400a79c084b37c8.s3tc.ctex"]
 
 [params]
 

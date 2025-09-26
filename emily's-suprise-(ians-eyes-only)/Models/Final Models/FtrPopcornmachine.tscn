@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://bvvqyf8kwc4tl"]
+[gd_scene load_steps=14 format=4 uid="uid://bvvqyf8kwc4tl"]
+
+[ext_resource type="Material" uid="uid://cefq15uypk3ep" path="res://Models/Final Models/FtrPopcornmachineTextures/mReBody0.tres" id="1_01np5"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ehj7c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1x564"]
 resource_name = "mGlass"
@@ -105,7 +108,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h3nnn")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_01np5"]
+size = Vector3(0.0963118, 0.165551, 0.065952)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ehj7c"]
+size = Vector3(0.0963118, 0.165551, 0.065952)
+
 [node name="FtrPopcornmachine" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_ehj7c")
+area_path = NodePath("MachineBodyFrame_low__mReBody/@Area3D@70811")
 
 [node name="GlassF_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kp6mk")
@@ -118,3 +130,18 @@ skeleton = NodePath("")
 [node name="MachineBodyFrame_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_c3coa")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_01np5")
+
+[node name="@StaticBody3D@70809" type="StaticBody3D" parent="MachineBodyFrame_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70808" type="CollisionShape3D" parent="MachineBodyFrame_low__mReBody/@StaticBody3D@70809"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012701005, 0.0827755, 1.3399869e-05)
+shape = SubResource("BoxShape3D_01np5")
+
+[node name="@Area3D@70811" type="Area3D" parent="MachineBodyFrame_low__mReBody"]
+
+[node name="@CollisionShape3D@70810" type="CollisionShape3D" parent="MachineBodyFrame_low__mReBody/@Area3D@70811"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012701005, 0.0827755, 1.3399869e-05)
+shape = SubResource("BoxShape3D_ehj7c")

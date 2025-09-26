@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btbwh6uy7hnbt"
-path="res://.godot/imported/mBody_Alb.png-89cc9f0fc1ec71f6a184def563682689.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-89cc9f0fc1ec71f6a184def563682689.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrJarVegetable.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-89cc9f0fc1ec71f6a184def563682689.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-89cc9f0fc1ec71f6a184def563682689.s3tc.ctex"]
 
 [params]
 

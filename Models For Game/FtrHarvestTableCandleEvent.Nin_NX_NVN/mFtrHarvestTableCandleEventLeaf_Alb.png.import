@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8atsu0dk16bw"
-path="res://.godot/imported/mFtrHarvestTableCandleEventLeaf_Alb.png-d30d315cf447d298121cbbe1ac00e0e1.ctex"
+path.s3tc="res://.godot/imported/mFtrHarvestTableCandleEventLeaf_Alb.png-d30d315cf447d298121cbbe1ac00e0e1.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrHarvestTableCandleEvent.Nin_NX_NVN/mFtrHarvestTableCandleEventLeaf_Alb.png"
-dest_files=["res://.godot/imported/mFtrHarvestTableCandleEventLeaf_Alb.png-d30d315cf447d298121cbbe1ac00e0e1.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestTableCandleEventLeaf_Alb.png-d30d315cf447d298121cbbe1ac00e0e1.s3tc.ctex"]
 
 [params]
 

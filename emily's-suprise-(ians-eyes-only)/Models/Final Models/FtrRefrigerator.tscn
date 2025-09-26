@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dwp5074fqsfks"]
+[gd_scene load_steps=12 format=4 uid="uid://dwp5074fqsfks"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hpevl"]
+[ext_resource type="Material" uid="uid://dupxnkne3kyen" path="res://Models/Final Models/FtrRefrigeratorTextures/mReBody0.tres" id="1_rirdb"]
+[ext_resource type="Material" uid="uid://bhm0p4amqlj1w" path="res://Models/Final Models/FtrRefrigeratorTextures/mReFabric0.tres" id="2_hpevl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qlvn"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6cc4t")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rirdb"]
+size = Vector3(0.0793341, 0.17, 0.0811106)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hpevl"]
+size = Vector3(0.0793341, 0.17, 0.0811106)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6u5k"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -74,11 +84,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5wb3x")
 
 [node name="FtrRefrigerator" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_hpevl")
+area_path = NodePath("Body__mReBody/@Area3D@70879")
 
 [node name="Body__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_i3yud")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_rirdb")
+
+[node name="@StaticBody3D@70877" type="StaticBody3D" parent="Body__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70876" type="CollisionShape3D" parent="Body__mReBody/@StaticBody3D@70877"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.085, 0.0004956983)
+shape = SubResource("BoxShape3D_rirdb")
+
+[node name="@Area3D@70879" type="Area3D" parent="Body__mReBody"]
+
+[node name="@CollisionShape3D@70878" type="CollisionShape3D" parent="Body__mReBody/@Area3D@70879"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.085, 0.0004956983)
+shape = SubResource("BoxShape3D_hpevl")
 
 [node name="Sticker__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lnjb5")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_hpevl")

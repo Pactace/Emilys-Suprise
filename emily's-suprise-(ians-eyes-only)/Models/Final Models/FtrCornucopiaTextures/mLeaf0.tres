@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cbah75dv4w46v"]
+
+[ext_resource type="Texture2D" uid="uid://cidmo7x2yxurl" path="res://Models/Final Models/FtrCornucopiaTextures/mLeaf_Alb.png" id="1_5puu4"]
+[ext_resource type="Texture2D" uid="uid://du3y8c81e08av" path="res://Models/Final Models/FtrCornucopiaTextures/mLeaf_Nrm.png" id="2_wqaxt"]
+
+[resource]
+resource_name = "mLeaf0"
+albedo_texture = ExtResource("1_5puu4")
+normal_enabled = true
+normal_texture = ExtResource("2_wqaxt")

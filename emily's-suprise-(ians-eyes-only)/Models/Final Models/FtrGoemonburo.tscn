@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://c6w0lrpwbnwbk"]
+[gd_scene load_steps=11 format=4 uid="uid://c6w0lrpwbnwbk"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_5xviq"]
+[ext_resource type="Material" uid="uid://dqxcktc6dq2t0" path="res://Models/Final Models/FtrGoemonburoTextures/mBody0.tres" id="1_y7ee1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vamg0"]
 resource_name = "mBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bpbtw")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y7ee1"]
+size = Vector3(0.136473, 0.104373, 0.136473)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5xviq"]
+size = Vector3(0.136473, 0.104373, 0.136473)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66sw1"]
 resource_name = "mWater"
 vertex_color_use_as_albedo = true
@@ -72,10 +81,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l6j27")
 
 [node name="FtrGoemonburo" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_5xviq")
+area_path = NodePath("Firewood_low__mBody/@Area3D@69767")
 
 [node name="Firewood_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dlqp4")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_y7ee1")
+
+[node name="@StaticBody3D@69765" type="StaticBody3D" parent="Firewood_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69764" type="CollisionShape3D" parent="Firewood_low__mBody/@StaticBody3D@69765"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.685755e-08, 0.05210816, 9.685755e-08)
+shape = SubResource("BoxShape3D_y7ee1")
+
+[node name="@Area3D@69767" type="Area3D" parent="Firewood_low__mBody"]
+
+[node name="@CollisionShape3D@69766" type="CollisionShape3D" parent="Firewood_low__mBody/@Area3D@69767"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.685755e-08, 0.05210816, 9.685755e-08)
+shape = SubResource("BoxShape3D_5xviq")
 
 [node name="Water__mWater" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_e3mmr")

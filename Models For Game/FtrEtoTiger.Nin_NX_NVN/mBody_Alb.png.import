@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5phrlifx5mgj"
-path="res://.godot/imported/mBody_Alb.png-22a070ad1ff7be7b58c3758430df9e36.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-22a070ad1ff7be7b58c3758430df9e36.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrEtoTiger.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-22a070ad1ff7be7b58c3758430df9e36.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-22a070ad1ff7be7b58c3758430df9e36.s3tc.ctex"]
 
 [params]
 

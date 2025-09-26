@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5ko06dkreaik"
-path="res://.godot/imported/mBody_Alb.png-28cbb45be91bbf054b0340a3ac737b49.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-28cbb45be91bbf054b0340a3ac737b49.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrVesselPumpkin.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-28cbb45be91bbf054b0340a3ac737b49.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-28cbb45be91bbf054b0340a3ac737b49.s3tc.ctex"]
 
 [params]
 

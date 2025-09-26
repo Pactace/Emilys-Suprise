@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bmpt2iwhl3r7s"]
+[gd_scene load_steps=12 format=4 uid="uid://bmpt2iwhl3r7s"]
+
+[ext_resource type="Material" uid="uid://c7jergk3xvbn4" path="res://Models/Final Models/FtrFloorchairTextures/mReBody0.tres" id="1_2116b"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_y4f8y"]
+[ext_resource type="Material" uid="uid://bagx62gen4v62" path="res://Models/Final Models/FtrFloorchairTextures/mReFabric0.tres" id="2_y4f8y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kxdw"]
 resource_name = "mReBody"
@@ -40,6 +44,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qytkf")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2116b"]
+size = Vector3(0.0666701, 0.0730908, 0.0801991)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y4f8y"]
+size = Vector3(0.0666701, 0.0730908, 0.0801991)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mse1"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -74,11 +84,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_plojj")
 
 [node name="FtrFloorchair" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_y4f8y")
+area_path = NodePath("Chair_low__mReBody/@Area3D@69551")
 
 [node name="Chair_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_85p0g")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_2116b")
+
+[node name="@StaticBody3D@69549" type="StaticBody3D" parent="Chair_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69548" type="CollisionShape3D" parent="Chair_low__mReBody/@StaticBody3D@69549"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8250197e-05, 0.036464766, -0.0052864514)
+shape = SubResource("BoxShape3D_2116b")
+
+[node name="@Area3D@69551" type="Area3D" parent="Chair_low__mReBody"]
+
+[node name="@CollisionShape3D@69550" type="CollisionShape3D" parent="Chair_low__mReBody/@Area3D@69551"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8250197e-05, 0.036464766, -0.0052864514)
+shape = SubResource("BoxShape3D_y4f8y")
 
 [node name="Pillow_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ukrxv")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_y4f8y")

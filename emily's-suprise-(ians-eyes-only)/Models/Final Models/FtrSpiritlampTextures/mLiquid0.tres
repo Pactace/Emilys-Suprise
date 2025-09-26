@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c0sh848mw4ikh"]
+
+[ext_resource type="Texture2D" uid="uid://bir4b85qbphf4" path="res://Models/Final Models/FtrSpiritlampTextures/mLiquid_Alb.png" id="1_imjfk"]
+[ext_resource type="Texture2D" uid="uid://7b3cb56jtu7n" path="res://Models/Final Models/FtrSpiritlampTextures/mLiquid_Nrm.png" id="2_3qa1s"]
+
+[resource]
+resource_name = "mLiquid0"
+albedo_texture = ExtResource("1_imjfk")
+normal_enabled = true
+normal_texture = ExtResource("2_3qa1s")

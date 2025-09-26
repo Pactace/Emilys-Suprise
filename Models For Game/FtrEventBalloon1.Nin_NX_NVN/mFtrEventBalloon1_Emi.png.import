@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://didu7vkdyk7ps"
-path="res://.godot/imported/mFtrEventBalloon1_Emi.png-1c0e10fd53263144f3c0f9df2f7fb20c.ctex"
+path.s3tc="res://.godot/imported/mFtrEventBalloon1_Emi.png-1c0e10fd53263144f3c0f9df2f7fb20c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrEventBalloon1.Nin_NX_NVN/mFtrEventBalloon1_Emi.png"
-dest_files=["res://.godot/imported/mFtrEventBalloon1_Emi.png-1c0e10fd53263144f3c0f9df2f7fb20c.ctex"]
+dest_files=["res://.godot/imported/mFtrEventBalloon1_Emi.png-1c0e10fd53263144f3c0f9df2f7fb20c.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cksunuykkya85"]
+
+[ext_resource type="Texture2D" uid="uid://dl36lrhy7j5fo" path="res://Models/Final Models/FtrHandrailTextures/mReBody_Alb1.png" id="1_otoox"]
+[ext_resource type="Texture2D" uid="uid://bhertp7jmxveo" path="res://Models/Final Models/FtrHandrailTextures/mReBody_Nrm1.png" id="2_r2mvh"]
+
+[resource]
+resource_name = "mReBody1"
+albedo_texture = ExtResource("1_otoox")
+normal_enabled = true
+normal_texture = ExtResource("2_r2mvh")

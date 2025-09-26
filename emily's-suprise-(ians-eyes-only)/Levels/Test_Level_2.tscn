@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://dwpmaxxdv730r"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_va61b"]
-[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="2_gx12d"]
-[ext_resource type="Script" path="res://Levels/camera_controller.gd" id="3_2b52x"]
+[ext_resource type="Script" uid="uid://c800a6ejyr3l3" path="res://Levels/character_body_3d.gd" id="2_gx12d"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="3_2b52x"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
 [ext_resource type="PackedScene" uid="uid://chi74ew4vmi1s" path="res://Inventories/Package.tscn" id="5_gx12d"]
 

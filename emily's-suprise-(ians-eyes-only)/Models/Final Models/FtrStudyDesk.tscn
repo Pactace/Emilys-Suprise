@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cpttpy2641ulx"]
+[gd_scene load_steps=8 format=4 uid="uid://cpttpy2641ulx"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_13ia8"]
+[ext_resource type="Material" uid="uid://cu2583e5axba3" path="res://Models/Final Models/FtrStudyDeskTextures/mReBody0.tres" id="1_lgxh4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwsm3"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tt4qj")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lgxh4"]
+size = Vector3(0.163402, 0.150192, 0.0859021)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13ia8"]
+size = Vector3(0.163402, 0.150192, 0.0859021)
+
 [node name="FtrStudyDesk" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_13ia8")
+area_path = NodePath("FtrStudyDesk__mReBody/@Area3D@71095")
 
 [node name="FtrStudyDesk__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_yvtuw")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_lgxh4")
+
+[node name="@StaticBody3D@71093" type="StaticBody3D" parent="FtrStudyDesk__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71092" type="CollisionShape3D" parent="FtrStudyDesk__mReBody/@StaticBody3D@71093"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0097932, 0.075096, 0.00010095164)
+shape = SubResource("BoxShape3D_lgxh4")
+
+[node name="@Area3D@71095" type="Area3D" parent="FtrStudyDesk__mReBody"]
+
+[node name="@CollisionShape3D@71094" type="CollisionShape3D" parent="FtrStudyDesk__mReBody/@Area3D@71095"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0097932, 0.075096, 0.00010095164)
+shape = SubResource("BoxShape3D_13ia8")

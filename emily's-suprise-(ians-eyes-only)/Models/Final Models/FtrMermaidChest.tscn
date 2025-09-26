@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://5rwca1ondnir"]
+[gd_scene load_steps=12 format=4 uid="uid://5rwca1ondnir"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_50dhy"]
+[ext_resource type="Material" uid="uid://c4ppaptbo31l4" path="res://Models/Final Models/FtrMermaidChestTextures/mShell0.tres" id="1_f0sus"]
+[ext_resource type="Material" uid="uid://c0b8h1o36i10h" path="res://Models/Final Models/FtrMermaidChestTextures/mBody0.tres" id="2_50dhy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50r4s"]
 resource_name = "mShell"
@@ -78,12 +82,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ldbre")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_f0sus"]
+size = Vector3(0.0996992, 0.059866, 0.0556461)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_50dhy"]
+size = Vector3(0.0996992, 0.059866, 0.0556461)
+
 [node name="FtrMermaidChest" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_50dhy")
+area_path = NodePath("hinge__mBody/@Area3D@70343")
 
 [node name="HeadBoard__mShell" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4w3t6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_f0sus")
 
 [node name="hinge__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jy23o")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_50dhy")
+
+[node name="@StaticBody3D@70341" type="StaticBody3D" parent="hinge__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70340" type="CollisionShape3D" parent="hinge__mBody/@StaticBody3D@70341"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00020739809, 0.130182, 0.0015869495)
+shape = SubResource("BoxShape3D_f0sus")
+
+[node name="@Area3D@70343" type="Area3D" parent="hinge__mBody"]
+
+[node name="@CollisionShape3D@70342" type="CollisionShape3D" parent="hinge__mBody/@Area3D@70343"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00020739809, 0.130182, 0.0015869495)
+shape = SubResource("BoxShape3D_50dhy")

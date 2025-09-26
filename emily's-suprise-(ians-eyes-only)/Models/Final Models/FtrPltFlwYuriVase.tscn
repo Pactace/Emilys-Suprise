@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://beyfkb4wpxktb"]
+[gd_scene load_steps=14 format=3 uid="uid://beyfkb4wpxktb"]
+
+[ext_resource type="Material" uid="uid://dy504ks28vsul" path="res://Models/Final Models/FtrPltFlwYuriVaseTextures/mYuriVase0.tres" id="1_5jank"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fgome"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfqeq"]
 resource_name = "mFlowerBodyYuri"
@@ -32,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vg5aa")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5jank"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fgome"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3lp8"]
 resource_name = "mYuriVase"
@@ -99,14 +108,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nbwkl")
 
 [node name="FtrPltFlwYuriVase" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_fgome")
+area_path = NodePath("Leaf01__mFlowerBodyYuri/@Area3D@70807")
 
 [node name="Leaf01__mFlowerBodyYuri" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ivnwc")
 skeleton = NodePath("")
 
+[node name="@StaticBody3D@70805" type="StaticBody3D" parent="Leaf01__mFlowerBodyYuri"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70804" type="CollisionShape3D" parent="Leaf01__mFlowerBodyYuri/@StaticBody3D@70805"]
+shape = SubResource("BoxShape3D_5jank")
+
+[node name="@Area3D@70807" type="Area3D" parent="Leaf01__mFlowerBodyYuri"]
+
+[node name="@CollisionShape3D@70806" type="CollisionShape3D" parent="Leaf01__mFlowerBodyYuri/@Area3D@70807"]
+shape = SubResource("BoxShape3D_fgome")
+
 [node name="PltFlwYuriVase__mYuriVase" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wg7hy")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_5jank")
 
 [node name="Shibe10__mFlowerYuri" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mps8u")

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwsu62gi8a731"
-path="res://.godot/imported/mLight_Alb.png-320de8901f16f9d4b6e7655836cecc17.ctex"
+path.s3tc="res://.godot/imported/mLight_Alb.png-320de8901f16f9d4b6e7655836cecc17.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFoodmachine.Nin_NX_NVN/mLight_Alb.png"
-dest_files=["res://.godot/imported/mLight_Alb.png-320de8901f16f9d4b6e7655836cecc17.ctex"]
+dest_files=["res://.godot/imported/mLight_Alb.png-320de8901f16f9d4b6e7655836cecc17.s3tc.ctex"]
 
 [params]
 

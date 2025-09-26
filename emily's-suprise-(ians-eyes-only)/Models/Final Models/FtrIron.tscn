@@ -1,4 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://73gvcjku6sry"]
+[gd_scene load_steps=12 format=4 uid="uid://73gvcjku6sry"]
+
+[ext_resource type="Material" uid="uid://cp5gq4e7rvpum" path="res://Models/Final Models/FtrIronTextures/mBody0.tres" id="1_bc3ef"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_tsfqr"]
+[ext_resource type="Material" uid="uid://cfgdmpho2epfe" path="res://Models/Final Models/FtrIronTextures/mReFabric0.tres" id="2_tsfqr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_was1o"]
 resource_name = "mBody"
@@ -39,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1hsbu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bc3ef"]
+size = Vector3(0.089022, 0.054924, 0.0549636)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tsfqr"]
+size = Vector3(0.089022, 0.054924, 0.0549636)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk8l6"]
 resource_name = "mReFabric"
 vertex_color_use_as_albedo = true
@@ -73,11 +83,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kkvvl")
 
 [node name="FtrIron" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_tsfqr")
+area_path = NodePath("Body_low__mBody/@Area3D@69971")
 
 [node name="Body_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_yyyo1")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_bc3ef")
+
+[node name="@StaticBody3D@69969" type="StaticBody3D" parent="Body_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69968" type="CollisionShape3D" parent="Body_low__mBody/@StaticBody3D@69969"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027462, 0)
+shape = SubResource("BoxShape3D_bc3ef")
+
+[node name="@Area3D@69971" type="Area3D" parent="Body_low__mBody"]
+
+[node name="@CollisionShape3D@69970" type="CollisionShape3D" parent="Body_low__mBody/@Area3D@69971"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027462, 0)
+shape = SubResource("BoxShape3D_tsfqr")
 
 [node name="Handkerchief_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4m7fs")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_tsfqr")

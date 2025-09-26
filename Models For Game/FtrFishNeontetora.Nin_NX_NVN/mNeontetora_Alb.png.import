@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg1lxejofs1es"
-path="res://.godot/imported/mNeontetora_Alb.png-18668a3dca4c70c3440c24335e60b8da.ctex"
+path.s3tc="res://.godot/imported/mNeontetora_Alb.png-18668a3dca4c70c3440c24335e60b8da.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFishNeontetora.Nin_NX_NVN/mNeontetora_Alb.png"
-dest_files=["res://.godot/imported/mNeontetora_Alb.png-18668a3dca4c70c3440c24335e60b8da.ctex"]
+dest_files=["res://.godot/imported/mNeontetora_Alb.png-18668a3dca4c70c3440c24335e60b8da.s3tc.ctex"]
 
 [params]
 

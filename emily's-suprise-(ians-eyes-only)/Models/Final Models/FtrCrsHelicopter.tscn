@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bhr1mt5a1lpt7"]
+[gd_scene load_steps=8 format=4 uid="uid://bhr1mt5a1lpt7"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_38bcm"]
+[ext_resource type="Material" uid="uid://bmpj4akvk3yvj" path="res://Models/Final Models/FtrCrsHelicopterTextures/mReBody0.tres" id="1_hod40"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myru1"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yfpbd")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hod40"]
+size = Vector3(0.0841935, 0.0476949, 0.0835381)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_38bcm"]
+size = Vector3(0.0841935, 0.0476949, 0.0835381)
+
 [node name="FtrCrsHelicopter" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_38bcm")
+area_path = NodePath("BackPro__mReBody/@Area3D@69095")
 
 [node name="BackPro__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d0ijr")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_hod40")
+
+[node name="@StaticBody3D@69093" type="StaticBody3D" parent="BackPro__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69092" type="CollisionShape3D" parent="BackPro__mReBody/@StaticBody3D@69093"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0002943501, 0.02384745, 0.00038725138)
+shape = SubResource("BoxShape3D_hod40")
+
+[node name="@Area3D@69095" type="Area3D" parent="BackPro__mReBody"]
+
+[node name="@CollisionShape3D@69094" type="CollisionShape3D" parent="BackPro__mReBody/@Area3D@69095"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0002943501, 0.02384745, 0.00038725138)
+shape = SubResource("BoxShape3D_38bcm")

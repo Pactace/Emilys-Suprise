@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8k081hj8gdam"
-path="res://.godot/imported/mGlassR_AlbGry.png-fb04c476626421ca7a2794b5c21ad317.ctex"
+path.s3tc="res://.godot/imported/mGlassR_AlbGry.png-fb04c476626421ca7a2794b5c21ad317.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrAfternoonteaset.Nin_NX_NVN/mGlassR_AlbGry.png"
-dest_files=["res://.godot/imported/mGlassR_AlbGry.png-fb04c476626421ca7a2794b5c21ad317.ctex"]
+dest_files=["res://.godot/imported/mGlassR_AlbGry.png-fb04c476626421ca7a2794b5c21ad317.s3tc.ctex"]
 
 [params]
 

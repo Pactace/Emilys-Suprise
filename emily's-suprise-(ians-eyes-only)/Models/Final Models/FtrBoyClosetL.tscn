@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://b3b03a24m8llq"]
+[gd_scene load_steps=14 format=4 uid="uid://b3b03a24m8llq"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_mewr5"]
+[ext_resource type="Material" uid="uid://cevehwf6s2cq8" path="res://Models/Final Models/FtrBoyClosetLTextures/mReBody0.tres" id="1_s8qho"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lewp"]
 resource_name = "mReBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w41ep")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s8qho"]
+size = Vector3(0.091881, 0.199298, 0.0859317)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mewr5"]
+size = Vector3(0.091881, 0.199298, 0.0859317)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqoca"]
 resource_name = "mGlassF"
@@ -116,10 +125,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_raya7")
 
 [node name="FtrBoyClosetL" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_mewr5")
+area_path = NodePath("Body_low__mReBody/@Area3D@68719")
 
 [node name="Body_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kjgbj")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_s8qho")
+
+[node name="@StaticBody3D@68717" type="StaticBody3D" parent="Body_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68716" type="CollisionShape3D" parent="Body_low__mReBody/@StaticBody3D@68717"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.099769615, -0.0039459467)
+shape = SubResource("BoxShape3D_s8qho")
+
+[node name="@Area3D@68719" type="Area3D" parent="Body_low__mReBody"]
+
+[node name="@CollisionShape3D@68718" type="CollisionShape3D" parent="Body_low__mReBody/@Area3D@68719"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.099769615, -0.0039459467)
+shape = SubResource("BoxShape3D_mewr5")
 
 [node name="WindowF_low__mGlassF" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1gvuc")

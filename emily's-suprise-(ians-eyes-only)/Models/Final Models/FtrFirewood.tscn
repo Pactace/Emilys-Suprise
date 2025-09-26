@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://j4ma41tfuv33"]
+[gd_scene load_steps=8 format=4 uid="uid://j4ma41tfuv33"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_en3yj"]
+[ext_resource type="Material" uid="uid://dhrsw1nwxo5j" path="res://Models/Final Models/FtrFirewoodTextures/mBody0.tres" id="1_x02ab"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3511"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e8n54")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x02ab"]
+size = Vector3(0.0623708, 0.0431492, 0.0693491)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_en3yj"]
+size = Vector3(0.0623708, 0.0431492, 0.0693491)
+
 [node name="FtrFirewood" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_en3yj")
+area_path = NodePath("FtrFireWood_01_low__mBody/@Area3D@69519")
 
 [node name="FtrFireWood_01_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1fro0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_x02ab")
+
+[node name="@StaticBody3D@69517" type="StaticBody3D" parent="FtrFireWood_01_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@69516" type="CollisionShape3D" parent="FtrFireWood_01_low__mBody/@StaticBody3D@69517"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0033874996, 0.021216566, -0.00020514801)
+shape = SubResource("BoxShape3D_x02ab")
+
+[node name="@Area3D@69519" type="Area3D" parent="FtrFireWood_01_low__mBody"]
+
+[node name="@CollisionShape3D@69518" type="CollisionShape3D" parent="FtrFireWood_01_low__mBody/@Area3D@69519"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0033874996, 0.021216566, -0.00020514801)
+shape = SubResource("BoxShape3D_en3yj")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dlkkfefx4c6ue"]
+
+[ext_resource type="Texture2D" uid="uid://b6mkpvvrxst66" path="res://Models/Final Models/FtrClockPendulumWallTextures/mBody_Alb.png" id="1_1al0w"]
+[ext_resource type="Texture2D" uid="uid://dfdvmc3g1x647" path="res://Models/Final Models/FtrClockPendulumWallTextures/mBody_Nrm.png" id="2_x1eaq"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_1al0w")
+normal_enabled = true
+normal_texture = ExtResource("2_x1eaq")

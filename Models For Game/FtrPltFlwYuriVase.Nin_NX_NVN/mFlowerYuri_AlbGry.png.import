@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd2iiyvosntj5"
-path="res://.godot/imported/mFlowerYuri_AlbGry.png-e752cffef3dea8bfeeefb683ce88ab0f.ctex"
+path.s3tc="res://.godot/imported/mFlowerYuri_AlbGry.png-e752cffef3dea8bfeeefb683ce88ab0f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPltFlwYuriVase.Nin_NX_NVN/mFlowerYuri_AlbGry.png"
-dest_files=["res://.godot/imported/mFlowerYuri_AlbGry.png-e752cffef3dea8bfeeefb683ce88ab0f.ctex"]
+dest_files=["res://.godot/imported/mFlowerYuri_AlbGry.png-e752cffef3dea8bfeeefb683ce88ab0f.s3tc.ctex"]
 
 [params]
 

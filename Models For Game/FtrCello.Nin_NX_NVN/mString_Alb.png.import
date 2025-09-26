@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brbslb5218wt2"
-path="res://.godot/imported/mString_Alb.png-ba9ae93aca1a2d562b21d99a8da9dd7d.ctex"
+path.s3tc="res://.godot/imported/mString_Alb.png-ba9ae93aca1a2d562b21d99a8da9dd7d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCello.Nin_NX_NVN/mString_Alb.png"
-dest_files=["res://.godot/imported/mString_Alb.png-ba9ae93aca1a2d562b21d99a8da9dd7d.ctex"]
+dest_files=["res://.godot/imported/mString_Alb.png-ba9ae93aca1a2d562b21d99a8da9dd7d.s3tc.ctex"]
 
 [params]
 

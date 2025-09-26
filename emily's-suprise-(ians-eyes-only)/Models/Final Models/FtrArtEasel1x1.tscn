@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://buhn15f6gb678"]
+[gd_scene load_steps=8 format=4 uid="uid://buhn15f6gb678"]
+
+[ext_resource type="Material" uid="uid://b7kaf065roq2n" path="res://Models/Final Models/FtrArtEasel1x1Textures/mBody0.tres" id="1_ey5x4"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hn5fu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1rug"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_faj35")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ey5x4"]
+size = Vector3(0.0837664, 0.144928, 0.0636151)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hn5fu"]
+size = Vector3(0.0837664, 0.144928, 0.0636151)
+
 [node name="FtrArtEasel1x1" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_hn5fu")
+area_path = NodePath("FtrArtEasel1x1__mBody/@Area3D@68335")
 
 [node name="FtrArtEasel1x1__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_cnyao")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_ey5x4")
+
+[node name="@StaticBody3D@68333" type="StaticBody3D" parent="FtrArtEasel1x1__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68332" type="CollisionShape3D" parent="FtrArtEasel1x1__mBody/@StaticBody3D@68333"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0031641014, 0.071689926, -0.003135752)
+shape = SubResource("BoxShape3D_ey5x4")
+
+[node name="@Area3D@68335" type="Area3D" parent="FtrArtEasel1x1__mBody"]
+
+[node name="@CollisionShape3D@68334" type="CollisionShape3D" parent="FtrArtEasel1x1__mBody/@Area3D@68335"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0031641014, 0.071689926, -0.003135752)
+shape = SubResource("BoxShape3D_hn5fu")

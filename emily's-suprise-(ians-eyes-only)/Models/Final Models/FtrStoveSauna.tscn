@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://cinq5d268g0hc"]
+[gd_scene load_steps=11 format=4 uid="uid://cinq5d268g0hc"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_17jq2"]
+[ext_resource type="Material" uid="uid://b6ptn8tvg2cl" path="res://Models/Final Models/FtrStoveSaunaTextures/mBody0.tres" id="1_23a30"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78fiy"]
 resource_name = "mBody"
@@ -39,6 +42,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_r8uo8")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_23a30"]
+size = Vector3(0.0707196, 0.125013, 0.0815466)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17jq2"]
+size = Vector3(0.0707196, 0.125013, 0.0815466)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf20j"]
 resource_name = "mGlass"
 vertex_color_use_as_albedo = true
@@ -72,10 +81,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8ymli")
 
 [node name="FtrStoveSauna" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_17jq2")
+area_path = NodePath("Cage_low__mBody/@Area3D@71083")
 
 [node name="Cage_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_818n6")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_23a30")
+
+[node name="@StaticBody3D@71081" type="StaticBody3D" parent="Cage_low__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71080" type="CollisionShape3D" parent="Cage_low__mBody/@StaticBody3D@71081"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9399754e-05, 0.06253506, 0.005040299)
+shape = SubResource("BoxShape3D_23a30")
+
+[node name="@Area3D@71083" type="Area3D" parent="Cage_low__mBody"]
+
+[node name="@CollisionShape3D@71082" type="CollisionShape3D" parent="Cage_low__mBody/@Area3D@71083"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9399754e-05, 0.06253506, 0.005040299)
+shape = SubResource("BoxShape3D_17jq2")
 
 [node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_u5wfv")

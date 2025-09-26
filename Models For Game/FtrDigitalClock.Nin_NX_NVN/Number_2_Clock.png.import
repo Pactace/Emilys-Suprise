@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2rjdtwwbrqy0"
-path="res://.godot/imported/Number_2_Clock.png-a5c6a5c7468e9255868a399e1e0ba97c.ctex"
+path.s3tc="res://.godot/imported/Number_2_Clock.png-a5c6a5c7468e9255868a399e1e0ba97c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrDigitalClock.Nin_NX_NVN/Number_2_Clock.png"
-dest_files=["res://.godot/imported/Number_2_Clock.png-a5c6a5c7468e9255868a399e1e0ba97c.ctex"]
+dest_files=["res://.godot/imported/Number_2_Clock.png-a5c6a5c7468e9255868a399e1e0ba97c.s3tc.ctex"]
 
 [params]
 

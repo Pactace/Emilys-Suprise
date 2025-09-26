@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qtya1snk2g5d"
-path="res://.godot/imported/mBody_Alb.png-38692a8a357066b8aa06c68abf0784c8.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-38692a8a357066b8aa06c68abf0784c8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrArtSundayOn.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-38692a8a357066b8aa06c68abf0784c8.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-38692a8a357066b8aa06c68abf0784c8.s3tc.ctex"]
 
 [params]
 

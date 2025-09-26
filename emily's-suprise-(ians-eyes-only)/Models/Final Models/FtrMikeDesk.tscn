@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://emosqjg1uyr1"]
+[gd_scene load_steps=8 format=4 uid="uid://emosqjg1uyr1"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_3x5ju"]
+[ext_resource type="Material" uid="uid://h72narfpc4su" path="res://Models/Final Models/FtrMikeDeskTextures/mBody0.tres" id="1_labow"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ljtgu"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0wd71")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_labow"]
+size = Vector3(0.0278344, 0.0537518, 0.030049)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3x5ju"]
+size = Vector3(0.0278344, 0.0537518, 0.030049)
+
 [node name="FtrMikeDesk" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_3x5ju")
+area_path = NodePath("base__mBody/@Area3D@70399")
 
 [node name="base__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ujy6c")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_labow")
+
+[node name="@StaticBody3D@70397" type="StaticBody3D" parent="base__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70396" type="CollisionShape3D" parent="base__mBody/@StaticBody3D@70397"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4999407e-06, 0.026999671, 0.0011072997)
+shape = SubResource("BoxShape3D_labow")
+
+[node name="@Area3D@70399" type="Area3D" parent="base__mBody"]
+
+[node name="@CollisionShape3D@70398" type="CollisionShape3D" parent="base__mBody/@Area3D@70399"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4999407e-06, 0.026999671, 0.0011072997)
+shape = SubResource("BoxShape3D_3x5ju")

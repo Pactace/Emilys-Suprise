@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://csljh530rh7ch"]
+[gd_scene load_steps=14 format=3 uid="uid://csljh530rh7ch"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_miv46"]
+[ext_resource type="Material" uid="uid://cdmaxxfese55u" path="res://Models/Final Models/FtrPltFlwHyacinthVaseTextures/mHyacinthVase0.tres" id="1_rcpmj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdfnk"]
 resource_name = "mHyacinthLeafGrd"
@@ -32,6 +35,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_20qml")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rcpmj"]
+size = Vector3(0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_miv46"]
+size = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6ng2"]
 resource_name = "mHyacinthPetalGrd"
@@ -99,10 +108,25 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_g2ugc")
 
 [node name="FtrPltFlwHyacinthVase" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_miv46")
+area_path = NodePath("Leaf52__mHyacinthLeafGrd/@Area3D@70783")
 
 [node name="Leaf52__mHyacinthLeafGrd" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_b6fcr")
 skeleton = NodePath("")
+
+[node name="@StaticBody3D@70781" type="StaticBody3D" parent="Leaf52__mHyacinthLeafGrd"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@70780" type="CollisionShape3D" parent="Leaf52__mHyacinthLeafGrd/@StaticBody3D@70781"]
+shape = SubResource("BoxShape3D_rcpmj")
+
+[node name="@Area3D@70783" type="Area3D" parent="Leaf52__mHyacinthLeafGrd"]
+
+[node name="@CollisionShape3D@70782" type="CollisionShape3D" parent="Leaf52__mHyacinthLeafGrd/@Area3D@70783"]
+shape = SubResource("BoxShape3D_miv46")
 
 [node name="PetalA2__mHyacinthPetalGrd" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_522q3")
@@ -111,3 +135,4 @@ skeleton = NodePath("")
 [node name="PltFlwHyacinthVase__mHyacinthVase" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_06exn")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_rcpmj")

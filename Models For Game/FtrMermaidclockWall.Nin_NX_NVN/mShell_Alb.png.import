@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4rjj3xc46ni3"
-path="res://.godot/imported/mShell_Alb.png-e372918af56db2b4e2cc9addd37c952c.ctex"
+path.s3tc="res://.godot/imported/mShell_Alb.png-e372918af56db2b4e2cc9addd37c952c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrMermaidclockWall.Nin_NX_NVN/mShell_Alb.png"
-dest_files=["res://.godot/imported/mShell_Alb.png-e372918af56db2b4e2cc9addd37c952c.ctex"]
+dest_files=["res://.godot/imported/mShell_Alb.png-e372918af56db2b4e2cc9addd37c952c.s3tc.ctex"]
 
 [params]
 

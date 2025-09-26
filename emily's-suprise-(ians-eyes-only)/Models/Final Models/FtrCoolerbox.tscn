@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://ddg3ley60ror0"]
+[gd_scene load_steps=8 format=4 uid="uid://ddg3ley60ror0"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_42irr"]
+[ext_resource type="Material" uid="uid://dkcxvpre0utbi" path="res://Models/Final Models/FtrCoolerboxTextures/mReBody0.tres" id="1_l0deu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4y6j"]
 resource_name = "mReBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jcmdy")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0deu"]
+size = Vector3(0.0816598, 0.0558959, 0.0676168)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42irr"]
+size = Vector3(0.0816598, 0.0558959, 0.0676168)
+
 [node name="FtrCoolerbox" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_42irr")
+area_path = NodePath("Bottle__mReBody/@Area3D@68991")
 
 [node name="Bottle__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_gjmqh")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_l0deu")
+
+[node name="@StaticBody3D@68989" type="StaticBody3D" parent="Bottle__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68988" type="CollisionShape3D" parent="Bottle__mReBody/@StaticBody3D@68989"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027952768, 0.0094564)
+shape = SubResource("BoxShape3D_l0deu")
+
+[node name="@Area3D@68991" type="Area3D" parent="Bottle__mReBody"]
+
+[node name="@CollisionShape3D@68990" type="CollisionShape3D" parent="Bottle__mReBody/@Area3D@68991"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027952768, 0.0094564)
+shape = SubResource("BoxShape3D_42irr")

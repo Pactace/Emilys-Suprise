@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://ct3uh3uh17hk0"]
+[gd_scene load_steps=8 format=4 uid="uid://ct3uh3uh17hk0"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_18xoh"]
+[ext_resource type="Material" uid="uid://cvltvd537j586" path="res://Models/Final Models/FtrBucketWoodTextures/mBody0.tres" id="1_qbmqs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eanp2"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qvv0x")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbmqs"]
+size = Vector3(0.0642445, 0.07682, 0.0584892)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_18xoh"]
+size = Vector3(0.0642445, 0.07682, 0.0584892)
+
 [node name="FtrBucketWood" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_18xoh")
+area_path = NodePath("FtrBucketWood__mBody/@Area3D@68791")
 
 [node name="FtrBucketWood__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_lxuo7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_qbmqs")
+
+[node name="@StaticBody3D@68789" type="StaticBody3D" parent="FtrBucketWood__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68788" type="CollisionShape3D" parent="FtrBucketWood__mBody/@StaticBody3D@68789"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.03841, 0)
+shape = SubResource("BoxShape3D_qbmqs")
+
+[node name="@Area3D@68791" type="Area3D" parent="FtrBucketWood__mBody"]
+
+[node name="@CollisionShape3D@68790" type="CollisionShape3D" parent="FtrBucketWood__mBody/@Area3D@68791"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2154064e-08, 0.03841, 0)
+shape = SubResource("BoxShape3D_18xoh")

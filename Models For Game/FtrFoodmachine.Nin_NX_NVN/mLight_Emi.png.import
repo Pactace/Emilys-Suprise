@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwpo5axji3spb"
-path="res://.godot/imported/mLight_Emi.png-b53c0af840fc12e288e0e69e11934cfe.ctex"
+path.s3tc="res://.godot/imported/mLight_Emi.png-b53c0af840fc12e288e0e69e11934cfe.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFoodmachine.Nin_NX_NVN/mLight_Emi.png"
-dest_files=["res://.godot/imported/mLight_Emi.png-b53c0af840fc12e288e0e69e11934cfe.ctex"]
+dest_files=["res://.godot/imported/mLight_Emi.png-b53c0af840fc12e288e0e69e11934cfe.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dblpvvs0i8b05"
-path="res://.godot/imported/mSeafood_Alb.png-53098f08e39813bde4815ec1028016cf.ctex"
+path.s3tc="res://.godot/imported/mSeafood_Alb.png-53098f08e39813bde4815ec1028016cf.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrPizzaSeafood.Nin_NX_NVN/mSeafood_Alb.png"
-dest_files=["res://.godot/imported/mSeafood_Alb.png-53098f08e39813bde4815ec1028016cf.ctex"]
+dest_files=["res://.godot/imported/mSeafood_Alb.png-53098f08e39813bde4815ec1028016cf.s3tc.ctex"]
 
 [params]
 

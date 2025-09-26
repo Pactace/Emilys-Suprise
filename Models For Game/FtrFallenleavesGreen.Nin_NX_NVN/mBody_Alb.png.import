@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bai3tsr50idci"
-path="res://.godot/imported/mBody_Alb.png-00fc1af57b1f2574a5a27ecc6514e0fe.ctex"
+path.s3tc="res://.godot/imported/mBody_Alb.png-00fc1af57b1f2574a5a27ecc6514e0fe.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrFallenleavesGreen.Nin_NX_NVN/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-00fc1af57b1f2574a5a27ecc6514e0fe.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-00fc1af57b1f2574a5a27ecc6514e0fe.s3tc.ctex"]
 
 [params]
 

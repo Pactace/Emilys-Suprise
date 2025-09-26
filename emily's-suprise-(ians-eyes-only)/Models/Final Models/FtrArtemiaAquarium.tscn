@@ -1,4 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://sl2vgfup2uu2"]
+[gd_scene load_steps=16 format=4 uid="uid://sl2vgfup2uu2"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4rvn0"]
+[ext_resource type="Material" uid="uid://brhhbayxpqi2r" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mBase0.tres" id="1_a2ixn"]
+[ext_resource type="Material" uid="uid://cib0ves4p42ol" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mGlassBack0.tres" id="2_4rvn0"]
+[ext_resource type="Material" uid="uid://b8aehsovvos14" path="res://Models/Final Models/FtrArtemiaAquariumTextures/mGlass0.tres" id="3_55n54"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er0gu"]
 resource_name = "mBase"
@@ -38,6 +43,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_i7se6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2ixn"]
+size = Vector3(0.0682271, 0.074, 0.0423767)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4rvn0"]
+size = Vector3(0.0682271, 0.074, 0.0423767)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiqpa"]
 resource_name = "mGlassBack"
@@ -114,15 +125,35 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s6jt6")
 
 [node name="FtrArtemiaAquarium" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_4rvn0")
+area_path = NodePath("Bottom__mBase/@Area3D@68343")
 
 [node name="Bottom__mBase" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4bntr")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_a2ixn")
+
+[node name="@StaticBody3D@68341" type="StaticBody3D" parent="Bottom__mBase"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@68340" type="CollisionShape3D" parent="Bottom__mBase/@StaticBody3D@68341"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, 0.037, -5.029142e-08)
+shape = SubResource("BoxShape3D_a2ixn")
+
+[node name="@Area3D@68343" type="Area3D" parent="Bottom__mBase"]
+
+[node name="@CollisionShape3D@68342" type="CollisionShape3D" parent="Bottom__mBase/@Area3D@68343"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8428774e-08, 0.037, -5.029142e-08)
+shape = SubResource("BoxShape3D_4rvn0")
 
 [node name="Inside__mGlassBack" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_exod2")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_4rvn0")
 
 [node name="outside__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_tenug")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_55n54")

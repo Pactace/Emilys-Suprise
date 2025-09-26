@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://cqw464et5yo62"]
+[gd_scene load_steps=8 format=4 uid="uid://cqw464et5yo62"]
+
+[ext_resource type="Material" uid="uid://d1bskgr78e83a" path="res://Models/Final Models/FtrStainlessTableTextures/mBody0.tres" id="1_82pmp"]
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_i2dt1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isk4x"]
 resource_name = "mBody"
@@ -39,8 +42,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_83hqi")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_82pmp"]
+size = Vector3(0.192111, 0.073, 0.0977514)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2dt1"]
+size = Vector3(0.192111, 0.073, 0.0977514)
+
 [node name="FtrStainlessTable" type="Node3D"]
+transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+script = ExtResource("1_i2dt1")
+area_path = NodePath("FtrStainlessTable__mBody/@Area3D@71039")
 
 [node name="FtrStainlessTable__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nvkrp")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_82pmp")
+
+[node name="@StaticBody3D@71037" type="StaticBody3D" parent="FtrStainlessTable__mBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@71036" type="CollisionShape3D" parent="FtrStainlessTable__mBody/@StaticBody3D@71037"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.0365, -0.0005351007)
+shape = SubResource("BoxShape3D_82pmp")
+
+[node name="@Area3D@71039" type="Area3D" parent="FtrStainlessTable__mBody"]
+
+[node name="@CollisionShape3D@71038" type="CollisionShape3D" parent="FtrStainlessTable__mBody/@Area3D@71039"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.685755e-08, 0.0365, -0.0005351007)
+shape = SubResource("BoxShape3D_i2dt1")

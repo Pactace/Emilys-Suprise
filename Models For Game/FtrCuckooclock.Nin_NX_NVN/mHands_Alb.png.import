@@ -3,15 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brxj2b3elunk1"
-path="res://.godot/imported/mHands_Alb.png-95fbf42f82e3ac00ccfb64e71a081f56.ctex"
+path.s3tc="res://.godot/imported/mHands_Alb.png-95fbf42f82e3ac00ccfb64e71a081f56.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models For Game/FtrCuckooclock.Nin_NX_NVN/mHands_Alb.png"
-dest_files=["res://.godot/imported/mHands_Alb.png-95fbf42f82e3ac00ccfb64e71a081f56.ctex"]
+dest_files=["res://.godot/imported/mHands_Alb.png-95fbf42f82e3ac00ccfb64e71a081f56.s3tc.ctex"]
 
 [params]
 
