@@ -100,9 +100,9 @@ func edit_object_position():
 	edit_ray.collide_with_areas = true
 	edit_ray.collide_with_bodies = false
 	var object_area = camera.get_world_3d().direct_space_state.intersect_ray(edit_ray)
-	if object_area:
+	if object_area and object_area.collider.get_parent().get_parent().get_script() != null:
 		possible_selected_object = object_area.collider.get_parent().get_parent()
-		if object_just_placed != possible_selected_object and possible_selected_object.name != "Room" and possible_selected_object.is_on_wall == is_wall:
+		if object_just_placed != possible_selected_object and possible_selected_object.is_on_wall == is_wall:
 			possible_selected_object.placement_yellow()
 			object_just_placed = null
 	else:
@@ -116,7 +116,7 @@ func rotate_target(target: Node3D, direction: int) -> void:
 		target.transform.basis = target.transform.basis * rotation_matrix_z
 
 func finalize_edit_object():
-	if possible_selected_object and possible_selected_object.name != "Room":
+	if possible_selected_object:
 		possible_selected_object.placed()
 	possible_selected_object = null
 	object_just_placed = null

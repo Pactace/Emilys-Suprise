@@ -56,11 +56,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		moved = true
 	
 	elif event.is_action_pressed("Accept") and selected_object:
-		var packed_scene: PackedScene = selected_object.get_meta("scene", null)
-		var room = get_parent().room
-		if packed_scene:
-			var instance = packed_scene.instantiate()
-			room.add_object(instance, is_wall)
+		if tab_name == "Wallpapers":
+			var room = get_parent().room
+			var wall_material: StandardMaterial3D = selected_object.get_meta("scene", null)
+			room.change_wallpaper(wall_material)
+		elif tab_name == "Flooring":
+			var room = get_parent().room
+			var floor_material: StandardMaterial3D = selected_object.get_meta("scene", null)
+			room.change_flooring(floor_material)
+		else:
+			var packed_scene: PackedScene = selected_object.get_meta("scene", null)
+			var room = get_parent().room
+			if packed_scene:
+				var instance = packed_scene.instantiate()
+				room.add_object(instance, is_wall)
 
 	if moved:
 		# Clamp col if the new row has fewer items

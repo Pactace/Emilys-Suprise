@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WallPaperInventory" load_steps=6 format=3 uid="uid://brpg1qdqmd6up"]
+
+[ext_resource type="Material" uid="uid://lesurscs6lkp" path="res://Floor and Wall Textures/Wall0/Wall0.tres" id="1_6fu5w"]
+[ext_resource type="Material" uid="uid://dn3tk8opsrabc" path="res://Floor and Wall Textures/Wall1/Wall1.tres" id="2_xdyvx"]
+[ext_resource type="Material" uid="uid://eabjxbeewau0" path="res://Floor and Wall Textures/Wall2/Wall2.tres" id="3_3b7dr"]
+[ext_resource type="Material" uid="uid://c34umel372q5e" path="res://Floor and Wall Textures/Wall3/Wall3.tres" id="4_gqh0u"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="5_s1v8u"]
+
+[resource]
+script = ExtResource("5_s1v8u")

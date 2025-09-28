@@ -19,6 +19,8 @@ There is also global variables that should be passed to the children here.
 @onready var edit_object = $EditObject
 @onready var room_resize = $RoomResize
 @onready var tab_select = $TabSelect
+@onready var resize_prompt = $ResizePrompt
+@onready var place_prompt = $PlaceObjectsPrompt
 
 #---Edit State Variables---#
 enum EditState {Edit_Objects, Size_Modify, Object_Select}
@@ -83,6 +85,9 @@ func switch_states():
 	tab_select.enabled() if current_state == EditState.Object_Select else tab_select.disabled()
 	
 	mouse.enabled() if current_state == EditState.Edit_Objects else mouse.disabled()
+	
+	resize_prompt.visible = true if current_state != EditState.Size_Modify else false
+	place_prompt.visible = true if current_state != EditState.Object_Select else false
 
 #this will tell us if the wall has been changed by the tab_select and we will send it from here to where its needed
 signal is_wall_change(state: bool)

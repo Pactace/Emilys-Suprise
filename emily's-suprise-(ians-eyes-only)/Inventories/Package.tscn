@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://chi74ew4vmi1s"]
+[gd_scene load_steps=8 format=3 uid="uid://chi74ew4vmi1s"]
 
 [ext_resource type="Script" uid="uid://l6avgntglvu7" path="res://Inventories/package.gd" id="1_l8sp0"]
 [ext_resource type="Resource" uid="uid://cfd7q6huh6g52" path="res://Inventories/FloorInventory.tres" id="2_hjnxw"]
 [ext_resource type="Resource" uid="uid://s3stjc66ixxb" path="res://Inventories/MasterInventory.tres" id="3_6u3od"]
+[ext_resource type="Texture2D" uid="uid://cplj5o01me0tm" path="res://UI_Overlay/Sprites/Navigation/Y__1_-removebg-preview.png" id="4_6u3od"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vpwgx"]
 
@@ -28,6 +29,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781465, 0.49132454)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CheckOpen"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475242, 0)
 shape = SubResource("BoxShape3D_l8sp0")
+
+[node name="ButtonPrompt" type="TextureRect" parent="."]
+visible = false
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 76.0
+offset_bottom = 83.0
+texture = ExtResource("4_6u3od")
+expand_mode = 1
 
 [connection signal="body_entered" from="CheckOpen" to="." method="_on_check_open_body_entered"]
 [connection signal="body_exited" from="CheckOpen" to="." method="_on_check_open_body_exited"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt6j24qhea4jy"]
+[gd_scene load_steps=8 format=3 uid="uid://dt6j24qhea4jy"]
 
 [ext_resource type="Script" uid="uid://bbjbt0uafg0xb" path="res://Levels/room.gd" id="1_phqny"]
+[ext_resource type="Material" uid="uid://lesurscs6lkp" path="res://Floor and Wall Textures/Wall0/Wall0.tres" id="2_2exox"]
 [ext_resource type="Material" uid="uid://beiedk3loanm4" path="res://Floor and Wall Textures/WoodFloor1/WoodFloor1.tres" id="2_8hqu4"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_oqiun"]
@@ -20,6 +21,7 @@ script = ExtResource("1_phqny")
 
 [node name="Back Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-16, 0, 0, 0, 8, -1.509958e-07, 0, 1.2079664e-06, 1, 0, 4, -8)
+material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
 
@@ -32,6 +34,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Left Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, -1, 0, 8, 0, 16, 0, -4.371139e-08, 8, 4, 0)
+material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
 
@@ -44,6 +47,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Right Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, 1, 0, 8, 0, -16, 0, -4.371139e-08, -8, 4, 0)
+material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
 
@@ -56,6 +60,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Front Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(16, 1.2079664e-06, -1.5099563e-07, -2.4159328e-06, 8, 3.9675377e-19, -2.41593e-06, -1.8239448e-13, -1, 0, 4, 8)
+material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
 

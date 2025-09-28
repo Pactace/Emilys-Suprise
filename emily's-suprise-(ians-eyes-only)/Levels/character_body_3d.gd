@@ -2,11 +2,14 @@ extends CharacterBody3D
 
 #---Player Variables---#
 @onready var emily_model = $EmilyAnimations
+@onready var emily_overlay = $EmilyOverlay
 signal play_walking()
 signal play_idle()
 var idle_or_walking = true
 @export var SPEED = 3.25
 var old_position
+
+
 
 #---Scene Variables---#
 @onready var camera: Camera3D = $"../Camera"
@@ -30,11 +33,13 @@ func switch_states():
 		visible = false
 		old_position = position
 		position = Vector3(0,-10, 0)
+		emily_overlay.visible = false
 	else:
 		current_state = PlayerState.Moving
 		ui_overlay.disabled()
 		visible = true
 		position = old_position
+		emily_overlay.visible = true
 	
 func walk_around_logic(delta: float):
 	var input_dir := Input.get_vector("Left", "Right", "Up", "Down")

@@ -6,12 +6,12 @@ extends Node3D
 @export var editable: bool = true
 @export var camera: Camera3D
 
-@onready var back_wall: Node3D = $"Back Wall"
-@onready var front_wall: Node3D = $"Front Wall"
-@onready var left_wall: Node3D = $"Left Wall"
-@onready var right_wall: Node3D = $"Right Wall"
-@onready var floor: Node3D = $"Floor"
-@onready var ceiling: Node3D = $"Ceiling"
+@onready var back_wall: MeshInstance3D = $"Back Wall"
+@onready var front_wall: MeshInstance3D = $"Front Wall"
+@onready var left_wall: MeshInstance3D = $"Left Wall"
+@onready var right_wall: MeshInstance3D = $"Right Wall"
+@onready var floor: MeshInstance3D = $"Floor"
+@onready var ceiling: MeshInstance3D = $"Ceiling"
 @onready var wall_nodes = $"Wall Nodes"
 @onready var floor_nodes = $"Floor Nodes"
 
@@ -112,6 +112,15 @@ func add_object_on_ground(instance: Node3D):
 	#finally we place the object.
 	instance.placed()
 	instance.visible = true
+
+func change_wallpaper(instance: StandardMaterial3D):
+	back_wall.material_override = instance
+	front_wall.material_override = instance
+	right_wall.material_override = instance
+	left_wall.material_override = instance
+	
+func change_flooring(instance: StandardMaterial3D):
+	floor.material_override = instance
 
 #this is a very mathy function tbh
 func add_object_on_wall(instance: Node3D):

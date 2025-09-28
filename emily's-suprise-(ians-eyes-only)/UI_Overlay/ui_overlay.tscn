@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://blqcb0l0orvyd"]
+[gd_scene load_steps=12 format=3 uid="uid://blqcb0l0orvyd"]
 
 [ext_resource type="Script" uid="uid://b8yqm27gxxu13" path="res://UI_Overlay/room_edit.gd" id="1_nj71v"]
 [ext_resource type="PackedScene" uid="uid://da7iilnykcq4j" path="res://UI_Overlay/Components/Room Resize.tscn" id="2_0hs0u"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://mtfj8vk0klca" path="res://UI_Overlay/Scripts/mouse_controller.gd" id="3_4h6r5"]
 [ext_resource type="PackedScene" uid="uid://kfopx43ychj1" path="res://UI_Overlay/Components/Tab Select.tscn" id="5_dgyqn"]
 [ext_resource type="PackedScene" uid="uid://ca7m56xpyjn3v" path="res://UI_Overlay/Components/Edit Object.tscn" id="6_a5xhx"]
+[ext_resource type="Texture2D" uid="uid://c4m6pix5q1kcw" path="res://UI_Overlay/Sprites/Navigation/Resize.png" id="7_f1uc1"]
+[ext_resource type="Texture2D" uid="uid://8tucvtod1kw3" path="res://UI_Overlay/Sprites/Navigation/MinusButton.png" id="8_fy1l1"]
+[ext_resource type="Texture2D" uid="uid://p1jd508medh5" path="res://UI_Overlay/Sprites/Navigation/PlaceFurniture.png" id="9_sqfwf"]
+[ext_resource type="Texture2D" uid="uid://bkwko0m458hly" path="res://UI_Overlay/Sprites/Navigation/PlusButton.png" id="10_6tyiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6oho"]
 size = Vector2(20, 21)
@@ -59,6 +63,51 @@ shape = SubResource("RectangleShape2D_e6oho")
 editor_description = "When in the Edit_Objects enum in the UiOverlay State machine this object deals with selecting and moving objects already in the scene."
 visible = false
 layout_mode = 1
+
+[node name="ResizePrompt" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 35.0
+offset_right = 113.0
+offset_bottom = 124.0
+texture = ExtResource("7_f1uc1")
+expand_mode = 1
+
+[node name="Button" type="TextureRect" parent="ResizePrompt"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74600005
+anchor_top = 0.71800005
+anchor_right = 0.74600005
+anchor_bottom = 0.71800005
+offset_left = -9.172005
+offset_top = -6.0560074
+offset_right = 30.827995
+offset_bottom = 33.943993
+texture = ExtResource("8_fy1l1")
+expand_mode = 1
+
+[node name="PlaceObjectsPrompt" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -123.0
+offset_top = 10.0
+offset_right = -23.0
+offset_bottom = 111.0
+grow_horizontal = 0
+texture = ExtResource("9_sqfwf")
+expand_mode = 1
+
+[node name="Button" type="TextureRect" parent="PlaceObjectsPrompt"]
+layout_mode = 0
+offset_left = -28.0
+offset_top = 57.0
+offset_right = 28.0
+offset_bottom = 105.0
+texture = ExtResource("10_6tyiu")
+expand_mode = 1
 
 [connection signal="is_wall_change" from="." to="EditObject" method="_on_ui_overlay_is_wall_change"]
 [connection signal="is_wall_change" from="TabSelect" to="." method="_on_tab_select_is_wall_change"]

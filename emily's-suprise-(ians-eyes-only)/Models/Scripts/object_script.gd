@@ -1,3 +1,4 @@
+class_name Furniture
 extends Node3D
 @export var area_path: NodePath
 @onready var area: Area3D = get_node(area_path)

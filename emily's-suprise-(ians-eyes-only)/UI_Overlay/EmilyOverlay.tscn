@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://crmpmlrfo6y0r"]
+
+[ext_resource type="Texture2D" uid="uid://cl13d23skgjc6" path="res://UI_Overlay/Sprites/Navigation/Y-removebg-preview.png" id="1_8h3ap"]
+
+[node name="EmilyOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 559.0
+offset_right = 1109.0
+offset_bottom = 618.0
+theme_override_font_sizes/font_size = 19
+text = "Press        to Enter/Exit Edit Mode"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 540.0
+offset_right = 901.0
+offset_bottom = 603.0
+texture = ExtResource("1_8h3ap")
+expand_mode = 1
