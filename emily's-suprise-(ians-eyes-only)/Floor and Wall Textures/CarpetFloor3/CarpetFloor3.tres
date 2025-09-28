@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bcgrvvil1ht4v"]
+
+[ext_resource type="Texture2D" uid="uid://cwfco0ikmdw8j" path="res://Floor and Wall Textures/CarpetFloor3/RoomTexFloorSimpleCarpet04_Alb.png" id="1_vq48t"]
+[ext_resource type="Texture2D" uid="uid://tqpt46itxpn0" path="res://Floor and Wall Textures/CarpetFloor3/RoomTexFloorSimpleCarpet04_Nrm.png" id="2_3hf5g"]
+
+[resource]
+albedo_texture = ExtResource("1_vq48t")
+normal_enabled = true
+normal_texture = ExtResource("2_3hf5g")
+uv1_triplanar = true
