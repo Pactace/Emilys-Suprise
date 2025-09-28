@@ -1,7 +1,11 @@
 extends CharacterBody3D
 
 #---Player Variables---#
-@export var SPEED = 5.0
+@onready var emily_model = $EmilyAnimations
+signal play_walking()
+signal play_idle()
+var idle_or_walking = true
+@export var SPEED = 3.25
 var old_position
 
 #---Scene Variables---#
@@ -37,6 +41,9 @@ func walk_around_logic(delta: float):
 
 	# --- Camera-relative movement ---
 	if input_dir != Vector2.ZERO:
+		if idle_or_walking:
+			play_walking.emit()
+			idle_or_walking = false
 		#First we need to get the camera axese.
 		var cam_forward = camera.global_transform.basis.z
 		var cam_right = camera.global_transform.basis.x
@@ -49,11 +56,16 @@ func walk_around_logic(delta: float):
 
 		#Movement direction will now be directly coorelated to camera direction
 		var move_dir = (cam_right * input_dir.x + cam_forward * input_dir.y).normalized()
-
+		
+		rotation.y = atan2(move_dir.x, move_dir.z)
 		velocity.x = move_dir.x * SPEED
 		velocity.z = move_dir.z * SPEED
 	else:
+		if !idle_or_walking:
+			play_idle.emit()
+			idle_or_walking = true
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		
 
 	move_and_slide()

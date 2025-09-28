@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://chi74ew4vmi1s"]
+[gd_scene load_steps=7 format=3 uid="uid://chi74ew4vmi1s"]
 
 [ext_resource type="Script" uid="uid://l6avgntglvu7" path="res://Inventories/package.gd" id="1_l8sp0"]
 [ext_resource type="Resource" uid="uid://cfd7q6huh6g52" path="res://Inventories/FloorInventory.tres" id="2_hjnxw"]
 [ext_resource type="Resource" uid="uid://s3stjc66ixxb" path="res://Inventories/MasterInventory.tres" id="3_6u3od"]
-[ext_resource type="PackedScene" uid="uid://gijaoggcriav" path="res://Models/Final Models/FtrMovingboxM.tscn" id="4_6u3od"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vpwgx"]
 
@@ -29,9 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781465, 0.49132454)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CheckOpen"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475242, 0)
 shape = SubResource("BoxShape3D_l8sp0")
-
-[node name="FtrMovingboxM" parent="." instance=ExtResource("4_6u3od")]
-transform = Transform3D(11.201598, 0, 0, 0, 20.465508, 0, 0, 0, 11.3341875, 0.082625866, 0.20890677, 0.05419886)
 
 [connection signal="body_entered" from="CheckOpen" to="." method="_on_check_open_body_entered"]
 [connection signal="body_exited" from="CheckOpen" to="." method="_on_check_open_body_exited"]

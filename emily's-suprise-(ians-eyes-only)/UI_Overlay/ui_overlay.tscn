@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://blqcb0l0orvyd"]
 
-[ext_resource type="Script" path="res://UI_Overlay/room_edit.gd" id="1_nj71v"]
+[ext_resource type="Script" uid="uid://b8yqm27gxxu13" path="res://UI_Overlay/room_edit.gd" id="1_nj71v"]
 [ext_resource type="PackedScene" uid="uid://da7iilnykcq4j" path="res://UI_Overlay/Components/Room Resize.tscn" id="2_0hs0u"]
 [ext_resource type="Texture2D" uid="uid://oshgb0l62w35" path="res://UI_Overlay/Sprites/Navigation/image-removebg-preview (1).png" id="2_psi8o"]
-[ext_resource type="Script" path="res://UI_Overlay/Scripts/mouse_controller.gd" id="3_4h6r5"]
+[ext_resource type="Script" uid="uid://mtfj8vk0klca" path="res://UI_Overlay/Scripts/mouse_controller.gd" id="3_4h6r5"]
 [ext_resource type="PackedScene" uid="uid://kfopx43ychj1" path="res://UI_Overlay/Components/Tab Select.tscn" id="5_dgyqn"]
 [ext_resource type="PackedScene" uid="uid://ca7m56xpyjn3v" path="res://UI_Overlay/Components/Edit Object.tscn" id="6_a5xhx"]
 

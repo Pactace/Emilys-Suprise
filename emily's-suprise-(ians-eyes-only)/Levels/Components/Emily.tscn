@@ -1,20 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8gxmac3vkh3n"]
 
-[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="1_qt8ib"]
+[ext_resource type="Script" uid="uid://c800a6ejyr3l3" path="res://Levels/character_body_3d.gd" id="1_qt8ib"]
+[ext_resource type="PackedScene" uid="uid://dmy5r6133pa4y" path="res://Emily/emily.tscn" id="2_cojlu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_lujw4"]
+radius = 0.3803711
 
 [node name="Emily" type="CharacterBody3D"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.90891, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_qt8ib")
-SPEED = 7.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7864078, 0, 0, 0, 1, -0.019368093, 0.20384979, 0)
 shape = SubResource("CapsuleShape3D_5v4x7")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_lujw4")
+[node name="EmilyAnimations" parent="." instance=ExtResource("2_cojlu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78416866, 0)
+
+[connection signal="play_idle" from="." to="EmilyAnimations" method="_on_emily_play_idle"]
+[connection signal="play_walking" from="." to="EmilyAnimations" method="_on_emily_play_walking"]

@@ -4,7 +4,7 @@ extends EditorScript
 var final_models := "res://Models/Final Models/"
 
 func _run():
-	attach_script()
+	add_icons_to_tab_container()
 		
 func cleanup():
 	var dir := DirAccess.open(final_models)
@@ -409,3 +409,19 @@ func change_size_of_object():
 		file_name = dir.get_next()
 
 	dir.list_dir_end()
+	
+func add_icons_to_tab_container():
+	var tab_container_path = "res://UI_Overlay/Components/Tab Select.tscn"
+	var loaded_scene: PackedScene = load(tab_container_path)
+	var scene_root: TabContainer = loaded_scene.instantiate()
+	
+	scene_root.set_tab_button_icon(0, load("res://UI_Overlay/Sprites/Navigation/FurnitureIcon.png"))
+	scene_root.set_tab_button_icon(1, load("res://UI_Overlay/Sprites/Navigation/WallHangableIcon.png"))
+	
+	var new_scene := PackedScene.new()
+	if new_scene.pack(scene_root) == OK:
+		var save_result = ResourceSaver.save(new_scene, tab_container_path)
+		if save_result != OK:
+			push_error("Failed to save scene: %s" % tab_container_path)
+	else:
+		push_error("Failed to pack scene: %s" % tab_container_path)

@@ -15,6 +15,22 @@ func disabled():
 
 func _ready() -> void:
 	current_tab = 0
+	var icon1 = load("res://UI_Overlay/Sprites/Navigation/FurnitureIcon-removebg-preview.png")
+	var icon2 = load("res://UI_Overlay/Sprites/Navigation/frame (1).png")
+	var icon3 = load("res://UI_Overlay/Sprites/Navigation/WallPaper-removebg-preview.png")
+	var icon4 = load("res://UI_Overlay/Sprites/Navigation/Flooring.webp")
+	var icon5 = load("res://UI_Overlay/Sprites/Navigation/TablePlacable-removebg-preview.png")
+	set_tab_icon(0, icon1)
+	set_tab_icon(1, icon5)
+	set_tab_icon(2, icon2)
+	set_tab_icon(3, icon3)
+	set_tab_icon(4, icon4)
+	set_tab_icon_max_width(0, 50)
+	set_tab_icon_max_width(1, 50)
+	set_tab_icon_max_width(2, 50)
+	set_tab_icon_max_width(3, 50)
+	set_tab_icon_max_width(4, 50)
+
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if visible:
