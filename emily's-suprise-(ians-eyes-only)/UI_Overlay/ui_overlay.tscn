@@ -1,12 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://blqcb0l0orvyd"]
+[gd_scene load_steps=17 format=3 uid="uid://blqcb0l0orvyd"]
 
 [ext_resource type="Script" uid="uid://b8yqm27gxxu13" path="res://UI_Overlay/room_edit.gd" id="1_nj71v"]
 [ext_resource type="PackedScene" uid="uid://da7iilnykcq4j" path="res://UI_Overlay/Components/Room Resize.tscn" id="2_0hs0u"]
 [ext_resource type="Texture2D" uid="uid://oshgb0l62w35" path="res://UI_Overlay/Sprites/Navigation/image-removebg-preview (1).png" id="2_psi8o"]
 [ext_resource type="Script" uid="uid://mtfj8vk0klca" path="res://UI_Overlay/Scripts/mouse_controller.gd" id="3_4h6r5"]
+[ext_resource type="Texture2D" uid="uid://dwkaad7lr70x7" path="res://UI_Overlay/Sprites/Navigation/D Pad Left.png" id="4_7klyh"]
+[ext_resource type="Texture2D" uid="uid://bj6xy0ui1q8ph" path="res://UI_Overlay/Sprites/Navigation/D Pad Right.png" id="5_cwljl"]
 [ext_resource type="PackedScene" uid="uid://kfopx43ychj1" path="res://UI_Overlay/Components/Tab Select.tscn" id="5_dgyqn"]
+[ext_resource type="Texture2D" uid="uid://cplj5o01me0tm" path="res://UI_Overlay/Sprites/Navigation/Y__1_-removebg-preview.png" id="6_0gfxg"]
 [ext_resource type="PackedScene" uid="uid://ca7m56xpyjn3v" path="res://UI_Overlay/Components/Edit Object.tscn" id="6_a5xhx"]
+[ext_resource type="Texture2D" uid="uid://c4cpavnmor4na" path="res://UI_Overlay/Sprites/Navigation/Screenshot__93_-removebg-preview__1_-removebg-preview.png" id="6_cwljl"]
 [ext_resource type="Texture2D" uid="uid://c4m6pix5q1kcw" path="res://UI_Overlay/Sprites/Navigation/Resize.png" id="7_f1uc1"]
+[ext_resource type="Texture2D" uid="uid://dmtc1kul4x2rq" path="res://UI_Overlay/Sprites/Navigation/Y__3_-removebg-preview.png" id="7_rljeo"]
 [ext_resource type="Texture2D" uid="uid://8tucvtod1kw3" path="res://UI_Overlay/Sprites/Navigation/MinusButton.png" id="8_fy1l1"]
 [ext_resource type="Texture2D" uid="uid://p1jd508medh5" path="res://UI_Overlay/Sprites/Navigation/PlaceFurniture.png" id="9_sqfwf"]
 [ext_resource type="Texture2D" uid="uid://bkwko0m458hly" path="res://UI_Overlay/Sprites/Navigation/PlusButton.png" id="10_6tyiu"]
@@ -29,6 +34,7 @@ grow_vertical = 2
 script = ExtResource("1_nj71v")
 
 [node name="RoomResize" parent="." instance=ExtResource("2_0hs0u")]
+visible = false
 layout_mode = 0
 offset_right = 585.0
 
@@ -39,6 +45,73 @@ offset_left = -312.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 85.0
+current_tab = 4
+
+[node name="TabSelectControls" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 877.0
+offset_top = 411.0
+offset_right = 1094.0
+offset_bottom = 623.0
+
+[node name="Navigate Tab" type="HBoxContainer" parent="TabSelectControls"]
+layout_mode = 2
+
+[node name="Left" type="TextureRect" parent="TabSelectControls/Navigate Tab"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_7klyh")
+expand_mode = 1
+
+[node name="Right" type="TextureRect" parent="TabSelectControls/Navigate Tab"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("5_cwljl")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TabSelectControls/Navigate Tab"]
+layout_mode = 2
+text = "Navigate Tabs"
+
+[node name="Navigate Objects" type="HBoxContainer" parent="TabSelectControls"]
+layout_mode = 2
+
+[node name="Select" type="TextureRect" parent="TabSelectControls/Navigate Objects"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("6_cwljl")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TabSelectControls/Navigate Objects"]
+layout_mode = 2
+text = "Navigate Objects"
+
+[node name="Select Object" type="HBoxContainer" parent="TabSelectControls"]
+layout_mode = 2
+
+[node name="Select" type="TextureRect" parent="TabSelectControls/Select Object"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("6_0gfxg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TabSelectControls/Select Object"]
+layout_mode = 2
+text = "Select Object"
+
+[node name="Go To Wall Node" type="HBoxContainer" parent="TabSelectControls"]
+layout_mode = 2
+
+[node name="Select" type="TextureRect" parent="TabSelectControls/Go To Wall Node"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("7_rljeo")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TabSelectControls/Go To Wall Node"]
+layout_mode = 2
+text = "Go to Edit Mode"
 
 [node name="Mouse" type="Marker2D" parent="."]
 visible = false

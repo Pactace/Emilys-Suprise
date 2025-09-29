@@ -27,7 +27,8 @@ var can_place: bool = false
 @onready var move_place = $Move_Place
 @onready var to_place_move_label = $Move_Place/Label
 @onready var change_colors = $Change_Colors
-@onready var leave_wall = $"Leave Wall"
+@onready var leave_wall = $"Delete_Leave Wall"
+@onready var leave_wall_label = $"Delete_Leave Wall/Label"
 
 func enabled():
 	visible = true
@@ -51,8 +52,13 @@ func _process(delta: float) -> void:
 	if visible:
 		if selected_object:
 			placing_object()
+			leave_wall.visible = true
+			leave_wall_label.text = "Delete Object"
 		else:
 			edit_object_position()
+		if is_wall && not selected_object:
+			leave_wall.visible = true
+			leave_wall_label.text = "Leave Wall"
 		
 func _unhandled_input(event: InputEvent) -> void:
 	if visible && possible_selected_object:
@@ -83,11 +89,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				camera.wall_update(is_wall)
 				
 	if event.is_action_pressed("Cancel"):
-		if is_wall == true:
-			is_wall = false
-			camera.wall_update(is_wall)
 		if selected_object:
-				selected_object.placed()
+				selected_object.free()
 				selected_object = null
 				possible_selected_object = null
 				triggers_to_rotate.visible = false
@@ -95,6 +98,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				change_colors.visible = false
 				leave_wall.visible = false
 				to_place_move_label.text = "To Select"
+		elif is_wall == true:
+			is_wall = false
+			camera.wall_update(is_wall)
 				
 
 #---Placing Functions--#

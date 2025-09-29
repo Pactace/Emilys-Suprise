@@ -99,15 +99,20 @@ func add_object_on_ground(instance: Node3D):
 			instance.position.x = colliding_object.position.x
 			instance.position.z = colliding_object.position.z
 			#Relocation math
-			instance.position += (colliding_object.scale * direction + instance.scale * direction)
+			instance.position += (5 * direction) #TEMP FIX
+			#instance.position += (colliding_object.scale * direction + instance.scale * direction)
 			#got to wait a second before checking placement
 			await get_tree().create_timer(0.02).timeout
 			if instance.check_placement():
 				break
+			if direction == directions.back():
+				print("Too many objects")
+				instance.queue_free()
 	#temporary fix,
-	if instance.check_placement() == false:
-		print("Too many objects")
-		instance.queue_free()
+	#if instance.check_placement() == false:
+		#print("Too many objects")
+		#instance.queue_free()
+		
 	#finally we place the object.
 	instance.placed()
 	instance.visible = true

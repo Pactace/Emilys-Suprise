@@ -9,6 +9,7 @@ func enabled():
 	visible = true
 	if camera.wall_view == true:
 		current_tab = 2
+		is_wall =  true
 	else:
 		current_tab = 0
 

@@ -8,8 +8,8 @@ var vertical_room_size: int = 0
 var horizontal_room_size: int = 0
 
 #Children
-@onready var vertical_room_size_slider = $HBoxContainer/VerticalSliderEdit
-@onready var horizontal_room_size_slider = $HBoxContainer2/HorizontalSliderEdit
+@onready var vertical_room_size_slider = $HBoxContainer/VBoxContainer/VerticalSliderEdit
+@onready var horizontal_room_size_slider = $HBoxContainer2/VBoxContainer/HorizontalSliderEdit
 
 func enabled():
 	visible = true

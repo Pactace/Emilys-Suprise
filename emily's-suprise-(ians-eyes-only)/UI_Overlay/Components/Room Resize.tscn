@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://da7iilnykcq4j"]
+[gd_scene load_steps=6 format=3 uid="uid://da7iilnykcq4j"]
 
 [ext_resource type="Script" uid="uid://cre63dwctwdju" path="res://UI_Overlay/Scripts/room_resize.gd" id="1_xbxfd"]
+[ext_resource type="Texture2D" uid="uid://domr8h3xvbax4" path="res://UI_Overlay/Sprites/Navigation/D Pad down.png" id="2_54sij"]
+[ext_resource type="Texture2D" uid="uid://vjsrnrvjfqpx" path="res://UI_Overlay/Sprites/Navigation/D Pad Up.png" id="3_vpuib"]
+[ext_resource type="Texture2D" uid="uid://dwkaad7lr70x7" path="res://UI_Overlay/Sprites/Navigation/D Pad Left.png" id="4_e5fo2"]
+[ext_resource type="Texture2D" uid="uid://bj6xy0ui1q8ph" path="res://UI_Overlay/Sprites/Navigation/D Pad Right.png" id="5_6smjk"]
 
 [node name="Room Resize" type="VBoxContainer"]
-visible = false
 offset_right = 338.0
 offset_bottom = 114.0
 script = ExtResource("1_xbxfd")
@@ -20,11 +23,28 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 text = "Vertical"
 
-[node name="VerticalSliderEdit" type="HSlider" parent="HBoxContainer"]
+[node name="DPad3" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("2_54sij")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VerticalSliderEdit" type="HSlider" parent="HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 max_value = 10.0
 tick_count = 10
+ticks_position = 3
+
+[node name="DPad4" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("3_vpuib")
+expand_mode = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -34,8 +54,25 @@ size_flags_stretch_ratio = 0.0
 layout_mode = 2
 text = "Horizontal"
 
-[node name="HorizontalSliderEdit" type="HSlider" parent="HBoxContainer2"]
+[node name="DPad2" type="TextureRect" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_e5fo2")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="HorizontalSliderEdit" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 max_value = 10.0
 tick_count = 10
+ticks_position = 3
+
+[node name="DPad" type="TextureRect" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("5_6smjk")
+expand_mode = 1

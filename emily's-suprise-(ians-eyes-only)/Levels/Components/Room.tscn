@@ -21,6 +21,7 @@ script = ExtResource("1_phqny")
 
 [node name="Back Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-16, 0, 0, 0, 8, -1.509958e-07, 0, 1.2079664e-06, 1, 0, 4, -8)
+layers = 65537
 material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
@@ -34,6 +35,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Left Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, -1, 0, 8, 0, 16, 0, -4.371139e-08, 8, 4, 0)
+layers = 65537
 material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
@@ -47,6 +49,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Right Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, 1, 0, 8, 0, -16, 0, -4.371139e-08, -8, 4, 0)
+layers = 65537
 material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
@@ -60,6 +63,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Front Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(16, 1.2079664e-06, -1.5099563e-07, -2.4159328e-06, 8, 3.9675377e-19, -2.41593e-06, -1.8239448e-13, -1, 0, 4, 8)
+layers = 65537
 material_override = ExtResource("2_2exox")
 mesh = SubResource("QuadMesh_oqiun")
 skeleton = NodePath("../..")
@@ -73,6 +77,7 @@ shape = SubResource("BoxShape3D_xfj0o")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
+layers = 65537
 mesh = SubResource("PlaneMesh_th2jy")
 surface_material_override/0 = ExtResource("2_8hqu4")
 
@@ -83,4 +88,5 @@ shape = SubResource("WorldBoundaryShape3D_32o0v")
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, -1, 1.2079664e-06, 0, -1.509958e-07, -8, 0, 8, 0)
+layers = 65537
 mesh = SubResource("PlaneMesh_th2jy")

@@ -21,6 +21,7 @@ There is also global variables that should be passed to the children here.
 @onready var tab_select = $TabSelect
 @onready var resize_prompt = $ResizePrompt
 @onready var place_prompt = $PlaceObjectsPrompt
+@onready var tab_select_prompt = $TabSelectControls
 
 #---Edit State Variables---#
 enum EditState {Edit_Objects, Size_Modify, Object_Select}
@@ -80,10 +81,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				
 			switch_states()
 		if event.is_action_pressed("Cancel"):
+			if camera.wall_view && current_state != EditState.Edit_Objects:
+				camera.wall_update(false)
 			current_state = EditState.Edit_Objects
 			switch_states()
-			if camera.wall_view:
-				camera.wall_update(false)
 				
 func switch_states():
 	edit_object.enabled() if current_state == EditState.Edit_Objects else edit_object.disabled()
@@ -95,6 +96,7 @@ func switch_states():
 	
 	resize_prompt.visible = true if current_state != EditState.Size_Modify else false
 	place_prompt.visible = true if current_state != EditState.Object_Select else false
+	tab_select_prompt.visible = true if current_state == EditState.Object_Select else false
 
 #this will tell us if the wall has been changed by the tab_select and we will send it from here to where its needed
 signal is_wall_change(state: bool)

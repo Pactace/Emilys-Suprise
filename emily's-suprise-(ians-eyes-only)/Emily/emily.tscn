@@ -349,6 +349,7 @@ bones/220/rotation = Quaternion(-0.70743436, 2.5270609e-05, 3.8174374e-05, 0.706
 bones/220/scale = Vector3(1.0000548, 1.000055, 1.0000551)
 
 [node name="Emily_Full" parent="rig/Skeleton3D" index="0"]
+layers = 131072
 material_override = SubResource("StandardMaterial3D_p1qku")
 
 [node name="AnimationPlayer" parent="." index="82"]

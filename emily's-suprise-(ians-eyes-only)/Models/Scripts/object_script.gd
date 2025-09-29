@@ -58,6 +58,8 @@ func check_placement() -> bool:
 func placed() -> void:
 	for child in get_children():
 		if child is MeshInstance3D:
+			if !is_on_wall:
+				child.set_layer_mask_value(16, true)
 			child.material_override = null
 
 func placement_red() -> void:

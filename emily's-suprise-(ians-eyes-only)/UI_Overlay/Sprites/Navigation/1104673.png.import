@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dme1v3vhug8fg"
-path.s3tc="res://.godot/imported/Y (2).png-6e066fe8871202fae1055cbc1bc36bc7.s3tc.ctex"
+uid="uid://cp6fr38jgkp4c"
+path.s3tc="res://.godot/imported/1104673.png-12e00a383778c4bdaafedf8e7fda2696.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://UI_Overlay/Sprites/Navigation/Y (2).png"
-dest_files=["res://.godot/imported/Y (2).png-6e066fe8871202fae1055cbc1bc36bc7.s3tc.ctex"]
+source_file="res://UI_Overlay/Sprites/Navigation/1104673.png"
+dest_files=["res://.godot/imported/1104673.png-12e00a383778c4bdaafedf8e7fda2696.s3tc.ctex"]
 
 [params]
 

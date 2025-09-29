@@ -9,7 +9,7 @@ radius = 0.3803711
 
 [node name="Emily" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-collision_layer = 7
+collision_layer = 131079
 collision_mask = 7
 script = ExtResource("1_qt8ib")
 
@@ -25,6 +25,18 @@ offset_left = 7.0
 offset_top = 2.0
 offset_right = 7.0
 offset_bottom = 2.0
+
+[node name="Top Light2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6613879, -0.083728604, 0, 0.083728604, 0.6613879, 0, 0.23004127, 1.9041957)
+layers = 131072
+light_energy = 0.4
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 0
+light_cull_mask = 4294049792
+shadow_caster_mask = 4294966272
+sky_mode = 1
 
 [connection signal="play_idle" from="." to="EmilyAnimations" method="_on_emily_play_idle"]
 [connection signal="play_walking" from="." to="EmilyAnimations" method="_on_emily_play_walking"]

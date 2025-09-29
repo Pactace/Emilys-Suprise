@@ -1,32 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwpmaxxdv730r"]
+[gd_scene load_steps=5 format=3 uid="uid://dwpmaxxdv730r"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_va61b"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="3_2b52x"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="5_2b52x"]
-[ext_resource type="PackedScene" uid="uid://chi74ew4vmi1s" path="res://Inventories/Package.tscn" id="5_gx12d"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5mk4"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_va61b"]
-sky_material = SubResource("ProceduralSkyMaterial_s5mk4")
-
-[sub_resource type="Environment" id="Environment_a4bbc"]
-background_mode = 2
-sky = SubResource("Sky_va61b")
-tonemap_mode = 2
-glow_enabled = true
 
 [node name="TestLevel" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_a4bbc")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_va61b")]
 camera = NodePath("../Camera")
@@ -41,9 +20,25 @@ script = ExtResource("3_2b52x")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 
-[node name="Package" parent="." instance=ExtResource("5_gx12d")]
-transform = Transform3D(1.61001, 0, 0, 0, 1.61001, 0, 0, 0, 1.61001, 5.38139, 0.0651696, -5.18095)
-
 [node name="Emily" parent="." instance=ExtResource("5_2b52x")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.8163109, 2.4449399, -0.13009134)
 SPEED = 5.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.782721, 0)
+layers = 65536
+light_energy = 16.0
+light_bake_mode = 1
+light_cull_mask = 4293984256
+omni_range = 23.405
+omni_attenuation = 1.824
+
+[node name="Top Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.013368826, 0.99991065, 0, -0.99991065, 0.013368826, 0, 14.021929, 0.048624754)
+layers = 131072
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+shadow_caster_mask = 4294082560
+directional_shadow_mode = 0
