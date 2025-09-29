@@ -52,6 +52,7 @@ size = Vector3(0.0770624, 0.093, 0.0749806)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_rt0g5")
 area_path = NodePath("box_low__mReBody/@Area3D@70027")
+object_type = 1
 
 [node name="box_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ak03k")

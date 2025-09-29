@@ -66,7 +66,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			rotate_object = true
 		elif event.is_action_pressed("Accept"):
 			#if we have selected the new place for the object that has already been confirmed we are going to place it and nullify it
-			if selected_object:
+			if selected_object and can_place:
 				selected_object.placed()
 				selected_object = null
 				possible_selected_object = null

@@ -94,6 +94,7 @@ size = Vector3(0.189826, 0.0735621, 0.0911995)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_f2612")
 area_path = NodePath("Leg_low__mReBody/@Area3D@69343")
+object_type = 1
 
 [node name="Cloth_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0ob0v")

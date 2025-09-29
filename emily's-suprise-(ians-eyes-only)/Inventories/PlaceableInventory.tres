@@ -1,24 +1,14 @@
 [gd_resource type="Resource" script_class="PlaceableInventory" load_steps=10 format=3 uid="uid://vqmevrc6lkkg"]
 
-[ext_resource type="Material" uid="uid://bly1dgml8swaf" path="res://Floor and Wall Textures/CarpetFloor0/CarpetFloor0.tres" id="1_n6j3g"]
-[ext_resource type="Material" uid="uid://dh5o705e0dmjt" path="res://Floor and Wall Textures/CarpetFloor1/CarpetFloor1.tres" id="2_3ojvw"]
-[ext_resource type="Material" uid="uid://dx7nunns73dmq" path="res://Floor and Wall Textures/CarpetFloor2/CarpetFloor2.tres" id="3_rwl6b"]
-[ext_resource type="Material" uid="uid://bcgrvvil1ht4v" path="res://Floor and Wall Textures/CarpetFloor3/CarpetFloor3.tres" id="4_7b8bh"]
-[ext_resource type="Material" uid="uid://dutwd6nr2mdln" path="res://Floor and Wall Textures/WoodFloor0/WoodFloor0.tres" id="5_nc8b7"]
-[ext_resource type="Material" uid="uid://beiedk3loanm4" path="res://Floor and Wall Textures/WoodFloor1/WoodFloor1.tres" id="6_pjwo2"]
-[ext_resource type="Material" uid="uid://bps4fd4pdju83" path="res://Floor and Wall Textures/WoodFloor2/WoodFloor2.tres" id="7_hok5u"]
-[ext_resource type="Material" uid="uid://drmqpjx43fv1a" path="res://Floor and Wall Textures/WoodFloor3/WoodFloor3.tres" id="8_e8f6n"]
+[ext_resource type="PackedScene" uid="uid://b7sy7ce66tst3" path="res://Models/Final Models/FtrPlantSucculents.tscn" id="1_3o7a7"]
+[ext_resource type="PackedScene" uid="uid://c1rig3p21mxsk" path="res://Models/Final Models/FtrPlantAnthurium.tscn" id="2_ba0gk"]
+[ext_resource type="PackedScene" uid="uid://df6v5owgrswvo" path="res://Models/Final Models/FtrPlantMonstera.tscn" id="3_rlq6p"]
+[ext_resource type="PackedScene" uid="uid://d35hopyqpeybh" path="res://Models/Final Models/FtrPlantTakumi.tscn" id="4_5nean"]
+[ext_resource type="PackedScene" uid="uid://bllvgmsvtiqdf" path="res://Models/Final Models/FtrPlantYamadoriyashi.tscn" id="5_0m5r3"]
+[ext_resource type="PackedScene" uid="uid://cetbt1meao461" path="res://Models/Final Models/FtrBall.tscn" id="6_xjxtg"]
+[ext_resource type="PackedScene" uid="uid://b2w2o6awt1j66" path="res://Models/Final Models/FtrChess.tscn" id="7_do37p"]
+[ext_resource type="PackedScene" uid="uid://5qc3ftc6ndh8" path="res://Models/Final Models/FtrCoffeecup.tscn" id="8_m82tm"]
 [ext_resource type="Script" uid="uid://c1pylar4wvhvo" path="res://Inventories/PlaceableInventory.gd" id="9_3o7a7"]
 
 [resource]
 script = ExtResource("9_3o7a7")
-objects = {
-"Flooring1": ExtResource("1_n6j3g"),
-"Flooring2": ExtResource("2_3ojvw"),
-"Flooring3": ExtResource("3_rwl6b"),
-"Flooring4": ExtResource("4_7b8bh"),
-"Flooring5": ExtResource("5_nc8b7"),
-"Flooring6": ExtResource("6_pjwo2"),
-"Flooring7": ExtResource("7_hok5u"),
-"Flooring8": ExtResource("8_e8f6n")
-}

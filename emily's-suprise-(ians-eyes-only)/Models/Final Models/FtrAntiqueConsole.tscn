@@ -52,6 +52,7 @@ size = Vector3(0.152801, 0.0876997, 0.0685042)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_piu14")
 area_path = NodePath("Base_low__mReBody/@Area3D@68263")
+object_type = 1
 
 [node name="Base_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2glhf")
