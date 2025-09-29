@@ -7,10 +7,14 @@ signal is_wall_change(state: bool)
 
 func enabled():
 	visible = true
-	current_tab = 0
+	if camera.wall_view == true:
+		current_tab = 2
+	else:
+		current_tab = 0
 
 func disabled():
 	visible =  false
+	is_wall = false
 	current_tab = 0
 
 func _ready() -> void:

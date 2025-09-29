@@ -90,7 +90,6 @@ func add_object_on_ground(instance: Node3D):
 		Vector3(-1, 0, 0),  # West
 		Vector3(-1, 0, 1)   # SouthWest
 	]
-	
 	#if it collides with something we are going go around the collision
 	var colliding_area = instance.area.get_overlapping_areas().front()
 	if colliding_area:
@@ -131,13 +130,12 @@ func add_object_on_wall(instance: Node3D):
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	query.collision_mask = 2
 	var result = space_state.intersect_ray(query)
-	
 	if result:
 		wall_nodes.add_child(instance)
 		instance.is_on_wall = true
 		if round(abs(result.normal.x)) == 1:
 			instance.is_horizontal = true
-		
+			
 		var basis = Basis.IDENTITY
 		basis.z = result.normal
 		basis.y = Vector3(0,1,0)
@@ -186,6 +184,7 @@ func add_object_on_wall(instance: Node3D):
 			instance.queue_free()
 		#finally we place the object.
 		instance.placed()
+		instance.scale = Vector3(28,28,28)
 		instance.visible = true
 
 # --- Make sure editor-set values apply at runtime ---

@@ -85,6 +85,7 @@ shadow_mesh = SubResource("ArrayMesh_mwhog")
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_0ma5v")
 area_path = NodePath("Can_low__mBody/@Area3D@70755")
+object_type = 2
 
 [node name="Can_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_d3sj0")

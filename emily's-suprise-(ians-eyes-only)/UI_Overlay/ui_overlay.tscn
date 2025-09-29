@@ -33,6 +33,7 @@ layout_mode = 0
 offset_right = 585.0
 
 [node name="TabSelect" parent="." instance=ExtResource("5_dgyqn")]
+visible = false
 layout_mode = 1
 offset_left = -312.0
 offset_top = 0.0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://qy8dry8dsf2"]
+[gd_scene load_steps=13 format=4 uid="uid://qy8dry8dsf2"]
 
 [ext_resource type="Material" uid="uid://dldhp8fg72qh2" path="res://Models/Final Models/FtrTV20inchWallTextures/mTv0.tres" id="1_cfpwx"]
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_o1kjl"]
 [ext_resource type="Material" uid="uid://cn0yeakqeog5v" path="res://Models/Final Models/FtrTV20inchWallTextures/mReBody0.tres" id="2_o1kjl"]
+[ext_resource type="PackedScene" uid="uid://c7y4q083k4p8o" path="res://Models/wall_ray.tscn" id="4_4tan8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yetv"]
 resource_name = "mTv"
@@ -110,3 +111,7 @@ shape = SubResource("BoxShape3D_cfpwx")
 [node name="@CollisionShape3D@71186" type="CollisionShape3D" parent="PartA_low__mReBody/@Area3D@71187"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.065145e-05, 0.00289095, 0.00996285)
 shape = SubResource("BoxShape3D_o1kjl")
+
+[node name="Wall Ray" type="RayCast3D" parent="." instance=ExtResource("4_4tan8")]
+target_position = Vector3(0, 0, 5)
+collision_mask = 2

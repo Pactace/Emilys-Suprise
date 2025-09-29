@@ -27,6 +27,7 @@ var can_place: bool = false
 @onready var move_place = $Move_Place
 @onready var to_place_move_label = $Move_Place/Label
 @onready var change_colors = $Change_Colors
+@onready var leave_wall = $"Leave Wall"
 
 func enabled():
 	visible = true
@@ -42,6 +43,7 @@ func disabled():
 		triggers_to_rotate.visible = false
 		move_place.visible = false
 		change_colors.visible = false
+		leave_wall.visible = false
 		to_place_move_label.text = "To Select"
 		
 
@@ -71,10 +73,28 @@ func _unhandled_input(event: InputEvent) -> void:
 				triggers_to_rotate.visible = false
 				move_place.visible = false
 				change_colors.visible = false
+				leave_wall.visible = false
 				to_place_move_label.text = "To Select"
 			#if thats not the case an instead there is a possible_selection we are hovering over we are going to select it
 			elif possible_selected_object && possible_selected_object.is_on_wall == is_wall:
 				selected_object = possible_selected_object
+			elif possible_selected_object and !is_wall and possible_selected_object.is_on_wall:
+				is_wall = true
+				camera.wall_update(is_wall)
+				
+	if event.is_action_pressed("Cancel"):
+		if is_wall == true:
+			is_wall = false
+			camera.wall_update(is_wall)
+		if selected_object:
+				selected_object.placed()
+				selected_object = null
+				possible_selected_object = null
+				triggers_to_rotate.visible = false
+				move_place.visible = false
+				change_colors.visible = false
+				leave_wall.visible = false
+				to_place_move_label.text = "To Select"
 				
 
 #---Placing Functions--#
@@ -96,6 +116,7 @@ func placing_object():
 				selected_object.basis = basis
 				previous_rid = collision.rid
 				wall_name = collision.collider.get_parent().name
+				selected_object.scale = Vector3(28, 28, 28)
 			
 			selected_object.transform.origin = collision.position
 			can_place = selected_object.check_placement()
@@ -124,24 +145,26 @@ func edit_object_position():
 		
 		#next we assign the new_possible_selected object and make the edit ui prompts show up
 		possible_selected_object = object_area.collider.get_parent().get_parent()
-		triggers_to_rotate.visible = true
-		move_place.visible = true
-		change_colors.visible = true
-		to_place_move_label.text = "To Select"
-		if object_just_placed != possible_selected_object and possible_selected_object.is_on_wall == is_wall:
+		if object_just_placed != possible_selected_object:
 			if old_possible_selected_object:
 				old_possible_selected_object.placed()
 			possible_selected_object.placement_yellow()
 			object_just_placed = null
+			triggers_to_rotate.visible = true if is_wall == false else false
+			leave_wall.visible = true if is_wall == true else false
+			move_place.visible = true
+			change_colors.visible = true
+			to_place_move_label.text = "To Select"
+			
 	else:
 		finalize_edit_object()
 
 func rotate_target(target: Node3D, direction: int) -> void:
-	if !is_wall:
+	if !target.is_on_wall:
 		target.rotation.y += deg_to_rad(90) * direction
-	else:
-		var rotation_matrix_z = Basis.from_euler(Vector3(0, 0, deg_to_rad(15) * -direction))
-		target.transform.basis = target.transform.basis * rotation_matrix_z
+	#else:
+		#var rotation_matrix_z = Basis.from_euler(Vector3(0, 0, deg_to_rad(15) * -direction))
+		#target.transform.basis = target.transform.basis * rotation_matrix_z
 
 func finalize_edit_object():
 	if possible_selected_object:
@@ -151,6 +174,7 @@ func finalize_edit_object():
 	triggers_to_rotate.visible = false
 	move_place.visible = false
 	change_colors.visible = false
+	leave_wall.visible = false
 	to_place_move_label.text = "To Select"
 
 #here we are just getting the wall state from the parent

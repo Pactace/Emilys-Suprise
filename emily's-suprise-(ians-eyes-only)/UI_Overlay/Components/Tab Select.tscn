@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://kfopx43ychj1"]
+[gd_scene load_steps=10 format=3 uid="uid://kfopx43ychj1"]
 
 [ext_resource type="Script" uid="uid://kjne6cxcnsb5" path="res://UI_Overlay/Scripts/tab_select.gd" id="1_6vvw0"]
 [ext_resource type="PackedScene" uid="uid://d1kinq37vuc3m" path="res://UI_Overlay/Components/Object Select.tscn" id="2_f6myi"]
-[ext_resource type="Resource" uid="uid://cfd7q6huh6g52" path="res://Inventories/FloorInventory.tres" id="3_yamwj"]
+[ext_resource type="Resource" uid="uid://cpkwi1ehar438" path="res://Inventories/FloorFurnitureInventory.tres" id="3_tnchv"]
+[ext_resource type="Resource" uid="uid://cfd7q6huh6g52" path="res://Inventories/WallInventory.tres" id="3_yamwj"]
 [ext_resource type="Resource" uid="uid://brpg1qdqmd6up" path="res://Inventories/WallPaperInventory.tres" id="4_2tsfa"]
 [ext_resource type="Resource" uid="uid://wtlw617uwwd" path="res://Inventories/FlooringInventory.tres" id="5_tnchv"]
 
@@ -57,7 +58,7 @@ script = ExtResource("1_6vvw0")
 visible = false
 layout_mode = 2
 tab_name = "FloorFurniture"
-inventory = ExtResource("3_yamwj")
+inventory = ExtResource("3_tnchv")
 metadata/_tab_index = 0
 
 [node name="ObjectSelect5" parent="." instance=ExtResource("2_f6myi")]
@@ -69,6 +70,7 @@ metadata/_tab_index = 1
 [node name="ObjectSelect2" parent="." instance=ExtResource("2_f6myi")]
 layout_mode = 2
 tab_name = "Wall Objects"
+inventory = ExtResource("3_yamwj")
 metadata/_tab_index = 2
 
 [node name="ObjectSelect3" parent="." instance=ExtResource("2_f6myi")]

@@ -38,7 +38,8 @@ func disabled():
 	current_state = EditState.Edit_Objects
 	mouse.disabled()
 	edit_object.disabled()
-	
+	tab_select.disabled()
+	room_resize.disabled()
 	
 	#the wall stuff
 	camera.wall_update(false)
@@ -78,10 +79,16 @@ func _unhandled_input(event: InputEvent) -> void:
 				current_state = EditState.Edit_Objects
 				
 			switch_states()
+		if event.is_action_pressed("Cancel"):
+			current_state = EditState.Edit_Objects
+			switch_states()
+			if camera.wall_view:
+				camera.wall_update(false)
 				
 func switch_states():
 	edit_object.enabled() if current_state == EditState.Edit_Objects else edit_object.disabled()
 	room_resize.enabled() if current_state == EditState.Size_Modify else room_resize.disabled()
+	camera.wall_update(false) if current_state == EditState.Size_Modify else camera.wall_update(camera.wall_view)
 	tab_select.enabled() if current_state == EditState.Object_Select else tab_select.disabled()
 	
 	mouse.enabled() if current_state == EditState.Edit_Objects else mouse.disabled()

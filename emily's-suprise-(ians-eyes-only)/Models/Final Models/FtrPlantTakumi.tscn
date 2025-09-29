@@ -52,6 +52,7 @@ size = Vector3(0.035394, 0.0444247, 0.035394)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_go3gq")
 area_path = NodePath("Body__mBody/@Area3D@70759")
+object_type = 2
 
 [node name="Body__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mk3na")

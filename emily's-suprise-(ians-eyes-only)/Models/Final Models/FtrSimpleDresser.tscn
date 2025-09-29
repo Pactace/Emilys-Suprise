@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_58dof"]
 [ext_resource type="Material" uid="uid://bftegb40pogps" path="res://Models/Final Models/FtrSimpleDresserTextures/mReBody0.tres" id="1_w76c5"]
-[ext_resource type="Material" uid="uid://b1ofnyicv8rpe" path="res://Models/Final Models/FtrSimpleDresserTextures/mMirror0.tres" id="2_58dof"]
+[ext_resource type="Material" uid="uid://cfmg81nr0ampf" path="res://Models/Final Models/FtrAntiqueDresserTextures/mMirror0.tres" id="3_58dof"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o35k2"]
 resource_name = "mReBody"
@@ -50,37 +50,42 @@ size = Vector3(0.0797392, 0.158285, 0.087557)
 [sub_resource type="BoxShape3D" id="BoxShape3D_58dof"]
 size = Vector3(0.0797392, 0.158285, 0.087557)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22lah"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7nk1q"]
 resource_name = "mMirror"
 vertex_color_use_as_albedo = true
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ttm56"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ql6dg"]
 _surfaces = [{
-"aabb": AABB(0, 0, 0, 0, 0, 0),
-"format": 34359738368,
+"aabb": AABB(-0.0224502, 0.0964057, -0.0287282, 0.0449004, 0.0556484, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "name": "mMirror",
-"primitive": 5,
+"primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 0,
-"vertex_data": PackedByteArray()
+"vertex_count": 4,
+"vertex_data": PackedByteArray("jOm3vFpwxT1hV+u8e+m3PBK0Gz5hV+u8e+m3PFpwxT1hV+u8jOm3vBK0Gz5hV+u8")
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_tau0y"]
-resource_name = "Miror_low__mMirror"
+[sub_resource type="ArrayMesh" id="ArrayMesh_j5c1e"]
+resource_name = "Mirror_low__mMirror"
 _surfaces = [{
-"aabb": AABB(0, 0, 0, 0, 0, 0),
-"format": 34359738368,
-"material": SubResource("StandardMaterial3D_22lah"),
+"aabb": AABB(-0.0224502, 0.0964057, -0.0287282, 0.0449004, 0.0556484, 1e-05),
+"attribute_data": PackedByteArray("6ujoPfr5eT/j4mI/wMDAPOPiYj/6+Xk/6ujoPcDAwDw="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_7nk1q"),
 "name": "mMirror",
-"primitive": 5,
+"primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 0,
-"vertex_data": PackedByteArray()
+"vertex_count": 4,
+"vertex_data": PackedByteArray("jOm3vFpwxT1hV+u8e+m3PBK0Gz5hV+u8e+m3PFpwxT1hV+u8jOm3vBK0Gz5hV+u8/3//f////7//f/9/////v/9//3////+//3//f////78=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ttm56")
+shadow_mesh = SubResource("ArrayMesh_ql6dg")
 
 [node name="FtrSimpleDresser" type="Node3D"]
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
@@ -106,7 +111,8 @@ shape = SubResource("BoxShape3D_w76c5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0791425, -0.006143097)
 shape = SubResource("BoxShape3D_58dof")
 
-[node name="Miror_low__mMirror" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_tau0y")
+[node name="Mirror_low__mMirror" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.4611528, 0, 0, 0, 1.2660168, 0, 0, 0, 1, 0, -0.039500136, -0.018014098)
+mesh = SubResource("ArrayMesh_j5c1e")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("2_58dof")
+surface_material_override/0 = ExtResource("3_58dof")

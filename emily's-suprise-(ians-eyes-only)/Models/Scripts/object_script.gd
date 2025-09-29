@@ -16,7 +16,6 @@ var overlapping = false
 var collision
 
 @export_enum("Normal", "Table", "Placeable on Table") var object_type: int
-	
 func _process(delta: float) -> void:
 	#this is just for some culling effects
 	if is_on_wall && camera && camera.basis.z != previous_cam_z:
@@ -47,23 +46,28 @@ func check_placement() -> bool:
 	
 func placed() -> void:
 	for child in get_children():
-		child.material_override = null
+		if child is MeshInstance3D:
+			child.material_override = null
 
 func placement_red() -> void:
 	for child in get_children():
-		child.material_override = red_mat
+		if child is MeshInstance3D:
+			child.material_override = red_mat
 	
 func placement_green() -> void:
 	for child in get_children():
-		child.material_override = green_mat
+		if child is MeshInstance3D:
+			child.material_override = green_mat
 
 func placement_yellow():
 	for child in get_children():
-		child.material_override = yellow_mat
+		if child is MeshInstance3D:
+			child.material_override = yellow_mat
 	
 func clear_material() -> void:
 	for child in get_children():
-		child.material_override = null
+		if child is MeshInstance3D:
+			child.material_override = null
 	
 func wall_move(forward: bool, horizontal: bool):
 	if is_on_wall and wall_ray.is_colliding() and is_horizontal == horizontal:
@@ -73,5 +77,5 @@ func wall_move(forward: bool, horizontal: bool):
 		if forward == false:
 			position = collision_point
 		else:
-			var position_offset = -mesh.scale.z
+			var position_offset = -area.scale.z * 2
 			position = collision_point + normal * position_offset

@@ -4,7 +4,7 @@ extends EditorScript
 var final_models := "res://Models/Final Models/"
 
 func _run():
-	add_icons_to_tab_container()
+	add_wall_ray_to_wall_objects()
 		
 func cleanup():
 	var dir := DirAccess.open(final_models)
@@ -425,3 +425,76 @@ func add_icons_to_tab_container():
 			push_error("Failed to save scene: %s" % tab_container_path)
 	else:
 		push_error("Failed to pack scene: %s" % tab_container_path)
+		
+func add_wall_ray_to_wall_objects():
+	var wall_ray_scene = preload("res://Models/wall_ray.tscn")
+
+	var wall_objects := {
+		# Clocks
+		"Regular Clock": "res://Models/Final Models/FtrClockWall.tscn",
+		"Boy Clock": "res://Models/Final Models/FtrBoyClockWall.tscn",
+		"Cuckoo Clock": "res://Models/Final Models/FtrCuckooclock.tscn",
+
+		# Pictures and frames
+		"Bromide Frame": "res://Models/Final Models/FtrBromideFrameWall.tscn",
+		"Plant Frame": "res://Models/Final Models/FtrPlantWall.tscn",
+		"Art 1": "res://Models/Final Models/FtrArtBarFB.tscn",
+		"Art 2": "res://Models/Final Models/FtrArtBirthVenus.tscn",
+		"Art 3": "res://Models/Final Models/FtrArtBlueBoy.tscn",
+		"Art 4": "res://Models/Final Models/FtrArtFightingTemeraire.tscn",
+		"Art 5": "res://Models/Final Models/FtrArtHunterSnow.tscn",
+		"Art 6": "res://Models/Final Models/FtrArtIsleOfDead.tscn",
+		"Art 7": "res://Models/Final Models/FtrArtKanagawaOki.tscn",
+		"Art 8": "res://Models/Final Models/FtrArtLasMeninas.tscn",
+		"Art 9": "res://Models/Final Models/FtrArtMilkmaidFake.tscn",
+		"Art 10": "res://Models/Final Models/FtrArtMonaLisa.tscn",
+		"Art 11": "res://Models/Final Models/FtrArtVitruvianMan.tscn",
+		"Art 12": "res://Models/Final Models/FtrArtSundayOn.tscn",
+
+		# Shelves
+		"Stuffy Shelf": "res://Models/Final Models/FtrDreamyShelfW.tscn",
+		"Hanging Shelf": "res://Models/Final Models/FtrHangingShelfCeiling.tscn",
+		"Iron Shelf": "res://Models/Final Models/FtrIronShelfW.tscn",
+		"Log Shelf": "res://Models/Final Models/FtrLogShelf.tscn",
+		"Wood Open Shelf": "res://Models/Final Models/FtrOpenshelfWood.tscn",
+		"Wood Box Shelf": "res://Models/Final Models/FtrSimpleShelfWall.tscn",
+		"Wood Shelf": "res://Models/Final Models/FtrWoodShelfWall.tscn",
+
+		# Misc
+		"Dried Flowers": "res://Models/Final Models/FtrDriedflowerWall.tscn",
+		"Fan Wall": "res://Models/Final Models/FtrFanRetroWall.tscn",
+		"Leaf Wall": "res://Models/Final Models/FtrLeafWall.tscn",
+		"TV 20 inch": "res://Models/Final Models/FtrTV20inchWall.tscn",
+		"TV 50 inch": "res://Models/Final Models/FtrTV50inchWall.tscn"
+	}
+
+	for name in wall_objects.keys():
+		var path = wall_objects[name]
+		print("Processing: ", name, " -> ", path)
+
+		var packed_scene: PackedScene = load(path)
+		if packed_scene == null:
+			push_error("Failed to load: %s" % path)
+			continue
+
+		var scene_root: Node3D = packed_scene.instantiate()
+		if scene_root == null:
+			push_error("Failed to instantiate scene: %s" % path)
+			continue
+
+		# Add wall_ray to root
+		var wall_ray_instance = wall_ray_scene.instantiate()
+		scene_root.add_child(wall_ray_instance)
+		wall_ray_instance.owner = scene_root
+
+		# Save updated scene
+		var updated_scene := PackedScene.new()
+		if updated_scene.pack(scene_root) != OK:
+			push_error("Failed to pack updated scene for: %s" % path)
+			continue
+
+		var result = ResourceSaver.save(updated_scene, path)
+		if result != OK:
+			push_error("Failed to save updated scene: %s" % path)
+		else:
+			print("✅ Added wall_ray to: ", name)

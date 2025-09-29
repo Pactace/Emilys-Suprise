@@ -94,6 +94,7 @@ size = Vector3(0.0640543, 0.0990755, 0.0640543)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_uv8v6")
 area_path = NodePath("FabricB_low__mReBody/@Area3D@69331")
+object_type = 2
 
 [node name="FabricA_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_gkdlj")

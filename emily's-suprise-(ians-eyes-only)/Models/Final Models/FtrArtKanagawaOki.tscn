@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://wtdhwel6oqle"]
+[gd_scene load_steps=13 format=4 uid="uid://wtdhwel6oqle"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_417ve"]
 [ext_resource type="Material" uid="uid://c84rxbg0sa0ev" path="res://Models/Final Models/FtrArtKanagawaOkiTextures/mBody0.tres" id="1_ycmqj"]
 [ext_resource type="Material" uid="uid://jmjntbe1bh3l" path="res://Models/Final Models/FtrArtKanagawaOkiTextures/mFrame0.tres" id="2_417ve"]
+[ext_resource type="PackedScene" uid="uid://c7y4q083k4p8o" path="res://Models/wall_ray.tscn" id="4_j44h6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahtce"]
 resource_name = "mBody"
@@ -114,3 +115,7 @@ shape = SubResource("BoxShape3D_417ve")
 mesh = SubResource("ArrayMesh_lmyyu")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_417ve")
+
+[node name="Wall Ray" type="RayCast3D" parent="." instance=ExtResource("4_j44h6")]
+target_position = Vector3(0, 0, 5)
+collision_mask = 2

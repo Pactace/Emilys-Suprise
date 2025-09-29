@@ -93,6 +93,7 @@ size = Vector3(0.0441797, 0.0185762, 0.04373)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_kyerm")
 area_path = NodePath("cup__mReBody/@Area3D@68963")
+object_type = 2
 
 [node name="Coffee__mCoffee" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_8uf8o")

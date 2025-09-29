@@ -8,3 +8,5 @@ resource_name = "mReBody3"
 albedo_texture = ExtResource("1_82f0e")
 normal_enabled = true
 normal_texture = ExtResource("2_ievhl")
+uv1_scale = Vector3(0.8, 0.8, 0.8)
+uv1_offset = Vector3(0.2, 0.13, 1)

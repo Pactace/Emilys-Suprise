@@ -52,6 +52,7 @@ size = Vector3(0.0524084, 0.0525073, 0.0525189)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_1gnjx")
 area_path = NodePath("FtrBall_low__mReBody/@Area3D@68527")
+object_type = 2
 
 [node name="FtrBall_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qcw8x")

@@ -52,6 +52,7 @@ size = Vector3(0.0714409, 0.0364339, 0.0695381)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_qq4lj")
 area_path = NodePath("BishopA_low__mReBody/@Area3D@68899")
+object_type = 2
 
 [node name="BishopA_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_frvwu")

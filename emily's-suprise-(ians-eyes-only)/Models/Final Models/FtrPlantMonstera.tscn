@@ -86,6 +86,7 @@ shadow_mesh = SubResource("ArrayMesh_em1if")
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_ueaix")
 area_path = NodePath("Base__mReBody/@Area3D@70743")
+object_type = 2
 
 [node name="Base__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_c66xm")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cb80x53jd37mj"]
+[gd_scene load_steps=8 format=3 uid="uid://cb80x53jd37mj"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_n2voe"]
+[ext_resource type="PackedScene" uid="uid://c7y4q083k4p8o" path="res://Models/wall_ray.tscn" id="2_d7x7e"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wp7ya"]
 
@@ -15,6 +16,7 @@ albedo_color = Color(0, 0.675215, 0.667728, 1)
 
 [node name="Large Object" type="Node3D"]
 script = ExtResource("1_n2voe")
+area_path = NodePath("MeshInstance3D/Area3D")
 object_type = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -40,9 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 0.0206109, -0.999788, 0, 0.999788, 0.0206109
 material_override = SubResource("StandardMaterial3D_n2voe")
 mesh = SubResource("PlaneMesh_d7x7e")
 
-[node name="Wall Ray" type="RayCast3D" parent="."]
+[node name="Wall Ray" parent="." instance=ExtResource("2_d7x7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
-target_position = Vector3(0, 0, 5)
-collision_mask = 2
 
 [connection signal="area_entered" from="MeshInstance3D/Area3D" to="." method="_on_area_3d_area_entered"]

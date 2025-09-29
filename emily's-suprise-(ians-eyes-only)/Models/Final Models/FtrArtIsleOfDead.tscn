@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://dn0fwm1e6bafq"]
+[gd_scene load_steps=13 format=4 uid="uid://dn0fwm1e6bafq"]
 
 [ext_resource type="Material" uid="uid://db34saykicfl2" path="res://Models/Final Models/FtrArtIsleOfDeadTextures/mFrame0.tres" id="1_r6n7v"]
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ynky5"]
 [ext_resource type="Material" uid="uid://l7spwwu4nr46" path="res://Models/Final Models/FtrArtIsleOfDeadTextures/mBody0.tres" id="2_ynky5"]
+[ext_resource type="PackedScene" uid="uid://c7y4q083k4p8o" path="res://Models/wall_ray.tscn" id="4_7w8c4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3y7u5"]
 resource_name = "mFrame"
@@ -114,3 +115,7 @@ shape = SubResource("BoxShape3D_r6n7v")
 [node name="@CollisionShape3D@68374" type="CollisionShape3D" parent="IsleDead__mBody/@Area3D@68375"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.003005)
 shape = SubResource("BoxShape3D_ynky5")
+
+[node name="Wall Ray" type="RayCast3D" parent="." instance=ExtResource("4_7w8c4")]
+target_position = Vector3(0, 0, 5)
+collision_mask = 2

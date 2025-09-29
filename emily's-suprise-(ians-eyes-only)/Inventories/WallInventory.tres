@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FloorInventory" load_steps=18 format=3 uid="uid://cfd7q6huh6g52"]
 
 [ext_resource type="PackedScene" uid="uid://pwl3gcid1sqt" path="res://Models/Final Models/FtrAntiqueBedW.tscn" id="1_5r6c5"]
-[ext_resource type="Script" uid="uid://dw0x1umjxboou" path="res://Inventories/FloorInventory.gd" id="1_dpl6x"]
+[ext_resource type="Script" uid="uid://dw0x1umjxboou" path="res://Inventories/WallInventory.gd" id="1_dpl6x"]
 [ext_resource type="PackedScene" uid="uid://cm4xotqh0amyl" path="res://Models/Final Models/FtrBeddesk.tscn" id="2_vh4ei"]
 [ext_resource type="PackedScene" uid="uid://bvaneaes8btho" path="res://Models/Final Models/FtrBabybed.tscn" id="3_n16lp"]
 [ext_resource type="PackedScene" uid="uid://bd4kspj1grwnk" path="res://Models/Final Models/FtrBoyBedS.tscn" id="4_57ijr"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://3tu4k8n1xxdq" path="res://Models/Final Models/FtrMermaidBedS.tscn" id="10_1queb"]
 [ext_resource type="PackedScene" uid="uid://dxpe030jekoj1" path="res://Models/Final Models/FtrRattanBedW.tscn" id="11_5lokc"]
 [ext_resource type="PackedScene" uid="uid://dgk6ycap7l7sk" path="res://Models/Final Models/FtrTapBedS.tscn" id="12_3c8ex"]
-[ext_resource type="PackedScene" uid="uid://0txn8daovkxe" path="res://Models/Final Models/FtrWoodenBedW.tscn" id="13_fpn8l"]
+[ext_resource type="PackedScene" path="res://Models/Final Models/FtrWoodenBedW.tscn" id="13_fpn8l"]
 [ext_resource type="PackedScene" uid="uid://ra516tdnp7me" path="res://Models/Final Models/FtrRattanChairS.tscn" id="14_2y4rf"]
 [ext_resource type="PackedScene" uid="uid://d2pon8oynvg3u" path="res://Models/Final Models/FtrRockingchair.tscn" id="15_eeyqr"]
 [ext_resource type="PackedScene" uid="uid://bmawv6h6swdld" path="res://Models/Final Models/FtrAntiqueChest.tscn" id="16_f37cj"]
