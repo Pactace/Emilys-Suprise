@@ -23,6 +23,11 @@ var object_just_placed: Node3D
 var rotate_object: bool = false
 var can_place: bool = false
 
+@onready var triggers_to_rotate = $Triggers_To_Rotate
+@onready var move_place = $Move_Place
+@onready var to_place_move_label = $Move_Place/Label
+@onready var change_colors = $Change_Colors
+
 func enabled():
 	visible = true
 
@@ -34,6 +39,10 @@ func disabled():
 		possible_selected_object.placed()
 		possible_selected_object = null
 		selected_object = null
+		triggers_to_rotate.visible = false
+		move_place.visible = false
+		change_colors.visible = false
+		to_place_move_label.text = "To Select"
 		
 
 func _process(delta: float) -> void:
@@ -59,6 +68,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				selected_object.placed()
 				selected_object = null
 				possible_selected_object = null
+				triggers_to_rotate.visible = false
+				move_place.visible = false
+				change_colors.visible = false
+				to_place_move_label.text = "To Select"
 			#if thats not the case an instead there is a possible_selection we are hovering over we are going to select it
 			elif possible_selected_object && possible_selected_object.is_on_wall == is_wall:
 				selected_object = possible_selected_object
@@ -68,6 +81,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func placing_object():
 	var query = create_ray()
 	query.collision_mask = (1 if !is_wall else 2)
+	to_place_move_label.text = "To Place"
 	
 	var collision = camera.get_world_3d().direct_space_state.intersect_ray(query)
 	if selected_object:
@@ -100,9 +114,23 @@ func edit_object_position():
 	edit_ray.collide_with_areas = true
 	edit_ray.collide_with_bodies = false
 	var object_area = camera.get_world_3d().direct_space_state.intersect_ray(edit_ray)
+	
+	#here we are checking if there is an object area and if that object area is an actual placable object
 	if object_area and object_area.collider.get_parent().get_parent().get_script() != null:
+		#here we check if the an old possible_selected_object is getting replaced with a new one
+		var old_possible_selected_object
+		if possible_selected_object:
+			old_possible_selected_object = possible_selected_object
+		
+		#next we assign the new_possible_selected object and make the edit ui prompts show up
 		possible_selected_object = object_area.collider.get_parent().get_parent()
+		triggers_to_rotate.visible = true
+		move_place.visible = true
+		change_colors.visible = true
+		to_place_move_label.text = "To Select"
 		if object_just_placed != possible_selected_object and possible_selected_object.is_on_wall == is_wall:
+			if old_possible_selected_object:
+				old_possible_selected_object.placed()
 			possible_selected_object.placement_yellow()
 			object_just_placed = null
 	else:
@@ -120,6 +148,10 @@ func finalize_edit_object():
 		possible_selected_object.placed()
 	possible_selected_object = null
 	object_just_placed = null
+	triggers_to_rotate.visible = false
+	move_place.visible = false
+	change_colors.visible = false
+	to_place_move_label.text = "To Select"
 
 #here we are just getting the wall state from the parent
 func _on_ui_overlay_is_wall_change(state: bool) -> void:

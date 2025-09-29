@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca7m56xpyjn3v"]
+[gd_scene load_steps=4 format=3 uid="uid://ca7m56xpyjn3v"]
 
-[ext_resource type="Script" path="res://UI_Overlay/Scripts/place_objects.gd" id="1_8wpsf"]
+[ext_resource type="Script" uid="uid://cshi1cp0u85p0" path="res://UI_Overlay/Scripts/place_objects.gd" id="1_8wpsf"]
+[ext_resource type="Texture2D" uid="uid://8rkgrm0hw7h8" path="res://UI_Overlay/Sprites/Navigation/Screenshot__92_-removebg-preview.png" id="2_f0afy"]
+[ext_resource type="Texture2D" uid="uid://cplj5o01me0tm" path="res://UI_Overlay/Sprites/Navigation/Y__1_-removebg-preview.png" id="3_tafk0"]
 
 [node name="EditObject" type="Control"]
 layout_mode = 3
@@ -10,3 +12,69 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8wpsf")
+
+[node name="Triggers_To_Rotate" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -293.0
+offset_top = -167.0
+offset_right = -160.0
+offset_bottom = -104.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_f0afy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Triggers_To_Rotate"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.523
+anchor_top = 0.5
+anchor_right = 0.523
+anchor_bottom = 0.5
+offset_left = 65.441
+offset_top = -10.5
+offset_right = 140.44101
+offset_bottom = 12.5
+text = "To Rotate"
+
+[node name="Move_Place" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78000003
+anchor_top = 0.823
+anchor_right = 0.78000003
+anchor_bottom = 0.823
+offset_left = -6.5600586
+offset_top = -19.304016
+offset_right = 64.43994
+offset_bottom = 51.695984
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_tafk0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Move_Place"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.225
+anchor_top = 0.5
+anchor_right = 1.225
+anchor_bottom = 0.5
+offset_left = 0.025001526
+offset_top = 1.5
+offset_right = 40.025
+offset_bottom = 24.5
+text = "To Select"
+
+[node name="Change_Colors" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
