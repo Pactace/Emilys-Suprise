@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwk5i1cxh7qsp"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-cba60216c744eea6d784caa9c052434e.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-cba60216c744eea6d784caa9c052434e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrEnamelCeilingTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-cba60216c744eea6d784caa9c052434e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-cba60216c744eea6d784caa9c052434e.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-cba60216c744eea6d784caa9c052434e.etc2.ctex"]
 
 [params]
 

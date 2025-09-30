@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://be2ok5ns5m5fq"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-3b58e19c8384bb2edd9ae68881e1eec4.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-3b58e19c8384bb2edd9ae68881e1eec4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCrsDinosaurTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-3b58e19c8384bb2edd9ae68881e1eec4.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-3b58e19c8384bb2edd9ae68881e1eec4.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-3b58e19c8384bb2edd9ae68881e1eec4.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0tbn6w7psvag"
 path.s3tc="res://.godot/imported/mReBody_Nrm4.png-b42f969b6fefd3afaef40a805f5aa930.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm4.png-b42f969b6fefd3afaef40a805f5aa930.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrChandelierCeilingLTextures/mReBody_Nrm4.png"
-dest_files=["res://.godot/imported/mReBody_Nrm4.png-b42f969b6fefd3afaef40a805f5aa930.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm4.png-b42f969b6fefd3afaef40a805f5aa930.s3tc.ctex", "res://.godot/imported/mReBody_Nrm4.png-b42f969b6fefd3afaef40a805f5aa930.etc2.ctex"]
 
 [params]
 

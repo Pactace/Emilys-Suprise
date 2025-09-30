@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjae7sdqki4co"
 path.s3tc="res://.godot/imported/mClockColon_Alb.png-f6a903ef9a77988e23e7466beb4fd330.s3tc.ctex"
+path.etc2="res://.godot/imported/mClockColon_Alb.png-f6a903ef9a77988e23e7466beb4fd330.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDigitalClockTextures/mClockColon_Alb.png"
-dest_files=["res://.godot/imported/mClockColon_Alb.png-f6a903ef9a77988e23e7466beb4fd330.s3tc.ctex"]
+dest_files=["res://.godot/imported/mClockColon_Alb.png-f6a903ef9a77988e23e7466beb4fd330.s3tc.ctex", "res://.godot/imported/mClockColon_Alb.png-f6a903ef9a77988e23e7466beb4fd330.etc2.ctex"]
 
 [params]
 

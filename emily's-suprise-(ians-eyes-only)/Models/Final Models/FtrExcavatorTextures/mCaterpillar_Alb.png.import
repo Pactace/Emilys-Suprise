@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cir2cgw6badhl"
 path.s3tc="res://.godot/imported/mCaterpillar_Alb.png-2a65b3cd86ce268103a5a03bcfcc4cdd.s3tc.ctex"
+path.etc2="res://.godot/imported/mCaterpillar_Alb.png-2a65b3cd86ce268103a5a03bcfcc4cdd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrExcavatorTextures/mCaterpillar_Alb.png"
-dest_files=["res://.godot/imported/mCaterpillar_Alb.png-2a65b3cd86ce268103a5a03bcfcc4cdd.s3tc.ctex"]
+dest_files=["res://.godot/imported/mCaterpillar_Alb.png-2a65b3cd86ce268103a5a03bcfcc4cdd.s3tc.ctex", "res://.godot/imported/mCaterpillar_Alb.png-2a65b3cd86ce268103a5a03bcfcc4cdd.etc2.ctex"]
 
 [params]
 

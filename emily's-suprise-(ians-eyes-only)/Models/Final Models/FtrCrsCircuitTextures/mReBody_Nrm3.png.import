@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ok6vhdrs87uy"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-e32bc8f7dcffd68c57b49a3b88f85c85.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-e32bc8f7dcffd68c57b49a3b88f85c85.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCrsCircuitTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-e32bc8f7dcffd68c57b49a3b88f85c85.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-e32bc8f7dcffd68c57b49a3b88f85c85.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-e32bc8f7dcffd68c57b49a3b88f85c85.etc2.ctex"]
 
 [params]
 

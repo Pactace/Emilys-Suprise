@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://byh8vif3wph00"
 path.s3tc="res://.godot/imported/mReBody_Alb6.png-ef96e3b3eb733461361b48d05235168a.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb6.png-ef96e3b3eb733461361b48d05235168a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWoodCeilingTextures/mReBody_Alb6.png"
-dest_files=["res://.godot/imported/mReBody_Alb6.png-ef96e3b3eb733461361b48d05235168a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb6.png-ef96e3b3eb733461361b48d05235168a.s3tc.ctex", "res://.godot/imported/mReBody_Alb6.png-ef96e3b3eb733461361b48d05235168a.etc2.ctex"]
 
 [params]
 

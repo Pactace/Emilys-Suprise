@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://710gt2r62mfo"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-7ba614fb0d8fad445bb922dc286b831c.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-7ba614fb0d8fad445bb922dc286b831c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGoldTrolleyTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-7ba614fb0d8fad445bb922dc286b831c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-7ba614fb0d8fad445bb922dc286b831c.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-7ba614fb0d8fad445bb922dc286b831c.etc2.ctex"]
 
 [params]
 

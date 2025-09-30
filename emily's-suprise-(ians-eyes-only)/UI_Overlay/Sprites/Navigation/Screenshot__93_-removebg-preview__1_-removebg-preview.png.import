@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4cpavnmor4na"
 path.s3tc="res://.godot/imported/Screenshot__93_-removebg-preview__1_-removebg-preview.png-3f324438c8ab503fadb96e5f431f7777.s3tc.ctex"
+path.etc2="res://.godot/imported/Screenshot__93_-removebg-preview__1_-removebg-preview.png-3f324438c8ab503fadb96e5f431f7777.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/Screenshot__93_-removebg-preview__1_-removebg-preview.png"
-dest_files=["res://.godot/imported/Screenshot__93_-removebg-preview__1_-removebg-preview.png-3f324438c8ab503fadb96e5f431f7777.s3tc.ctex"]
+dest_files=["res://.godot/imported/Screenshot__93_-removebg-preview__1_-removebg-preview.png-3f324438c8ab503fadb96e5f431f7777.s3tc.ctex", "res://.godot/imported/Screenshot__93_-removebg-preview__1_-removebg-preview.png-3f324438c8ab503fadb96e5f431f7777.etc2.ctex"]
 
 [params]
 

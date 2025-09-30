@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cahbwi2x8win8"
 path.s3tc="res://.godot/imported/mReBody_Alb5.png-dc0bc962f1e1ee229eca62993438012f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb5.png-dc0bc962f1e1ee229eca62993438012f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBottlePlasticTextures/mReBody_Alb5.png"
-dest_files=["res://.godot/imported/mReBody_Alb5.png-dc0bc962f1e1ee229eca62993438012f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb5.png-dc0bc962f1e1ee229eca62993438012f.s3tc.ctex", "res://.godot/imported/mReBody_Alb5.png-dc0bc962f1e1ee229eca62993438012f.etc2.ctex"]
 
 [params]
 

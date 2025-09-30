@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxafail6pcw23"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-2070b433e4ce4ab5da87e94f1468cc51.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-2070b433e4ce4ab5da87e94f1468cc51.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrOutdoorTableTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-2070b433e4ce4ab5da87e94f1468cc51.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-2070b433e4ce4ab5da87e94f1468cc51.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-2070b433e4ce4ab5da87e94f1468cc51.etc2.ctex"]
 
 [params]
 

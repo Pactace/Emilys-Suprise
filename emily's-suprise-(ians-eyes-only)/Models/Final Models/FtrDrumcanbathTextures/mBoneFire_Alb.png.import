@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctedypgt7y01q"
 path.s3tc="res://.godot/imported/mBoneFire_Alb.png-a83e294168ad9a3f414a7510ec51f1dc.s3tc.ctex"
+path.etc2="res://.godot/imported/mBoneFire_Alb.png-a83e294168ad9a3f414a7510ec51f1dc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDrumcanbathTextures/mBoneFire_Alb.png"
-dest_files=["res://.godot/imported/mBoneFire_Alb.png-a83e294168ad9a3f414a7510ec51f1dc.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBoneFire_Alb.png-a83e294168ad9a3f414a7510ec51f1dc.s3tc.ctex", "res://.godot/imported/mBoneFire_Alb.png-a83e294168ad9a3f414a7510ec51f1dc.etc2.ctex"]
 
 [params]
 

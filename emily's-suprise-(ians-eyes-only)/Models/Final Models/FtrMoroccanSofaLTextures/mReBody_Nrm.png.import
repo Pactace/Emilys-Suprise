@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpo3bxpl17cdr"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-b279d7f1d4ddd29b62344bf7731e01c4.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-b279d7f1d4ddd29b62344bf7731e01c4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMoroccanSofaLTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-b279d7f1d4ddd29b62344bf7731e01c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-b279d7f1d4ddd29b62344bf7731e01c4.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-b279d7f1d4ddd29b62344bf7731e01c4.etc2.ctex"]
 
 [params]
 

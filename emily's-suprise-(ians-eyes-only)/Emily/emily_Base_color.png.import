@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cca6ys6e0qmme"
 path.s3tc="res://.godot/imported/emily_Base_color.png-d9d223b5a22042e14013ef79f2a06b29.s3tc.ctex"
+path.etc2="res://.godot/imported/emily_Base_color.png-d9d223b5a22042e14013ef79f2a06b29.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Emily/emily_Base_color.png"
-dest_files=["res://.godot/imported/emily_Base_color.png-d9d223b5a22042e14013ef79f2a06b29.s3tc.ctex"]
+dest_files=["res://.godot/imported/emily_Base_color.png-d9d223b5a22042e14013ef79f2a06b29.s3tc.ctex", "res://.godot/imported/emily_Base_color.png-d9d223b5a22042e14013ef79f2a06b29.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1eref2no6dsy"
 path.s3tc="res://.godot/imported/mWater_Nrm1.png-097440c8fe9d82b4060c60c0dd94eea4.s3tc.ctex"
+path.etc2="res://.godot/imported/mWater_Nrm1.png-097440c8fe9d82b4060c60c0dd94eea4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGoTextures/mWater_Nrm1.png"
-dest_files=["res://.godot/imported/mWater_Nrm1.png-097440c8fe9d82b4060c60c0dd94eea4.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWater_Nrm1.png-097440c8fe9d82b4060c60c0dd94eea4.s3tc.ctex", "res://.godot/imported/mWater_Nrm1.png-097440c8fe9d82b4060c60c0dd94eea4.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkp2052snabk0"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-8a03a369cf80b728d31c3b542b6c53dc.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-8a03a369cf80b728d31c3b542b6c53dc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPianochairTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-8a03a369cf80b728d31c3b542b6c53dc.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-8a03a369cf80b728d31c3b542b6c53dc.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-8a03a369cf80b728d31c3b542b6c53dc.etc2.ctex"]
 
 [params]
 

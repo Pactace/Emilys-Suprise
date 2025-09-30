@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://7b3cb56jtu7n"
 path.s3tc="res://.godot/imported/mLiquid_Nrm.png-5e7366801b1fecc1294c8193e45cd98f.s3tc.ctex"
+path.etc2="res://.godot/imported/mLiquid_Nrm.png-5e7366801b1fecc1294c8193e45cd98f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSpiritlampTextures/mLiquid_Nrm.png"
-dest_files=["res://.godot/imported/mLiquid_Nrm.png-5e7366801b1fecc1294c8193e45cd98f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mLiquid_Nrm.png-5e7366801b1fecc1294c8193e45cd98f.s3tc.ctex", "res://.godot/imported/mLiquid_Nrm.png-5e7366801b1fecc1294c8193e45cd98f.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddslsf7tiyqey"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-663e4c9a5d4aaa0e771153ed9dfdec0b.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-663e4c9a5d4aaa0e771153ed9dfdec0b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtSunflowerTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-663e4c9a5d4aaa0e771153ed9dfdec0b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-663e4c9a5d4aaa0e771153ed9dfdec0b.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-663e4c9a5d4aaa0e771153ed9dfdec0b.etc2.ctex"]
 
 [params]
 

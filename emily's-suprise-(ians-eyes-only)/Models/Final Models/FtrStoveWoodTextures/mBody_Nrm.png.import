@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs5oxfqeffr2k"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-21dc4444287ee9898d849c1c18162baa.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-21dc4444287ee9898d849c1c18162baa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrStoveWoodTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-21dc4444287ee9898d849c1c18162baa.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-21dc4444287ee9898d849c1c18162baa.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-21dc4444287ee9898d849c1c18162baa.etc2.ctex"]
 
 [params]
 

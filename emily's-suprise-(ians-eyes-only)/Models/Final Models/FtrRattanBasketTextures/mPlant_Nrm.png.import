@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://mmjr2b8n82sn"
 path.s3tc="res://.godot/imported/mPlant_Nrm.png-05995115175e2288f45e6b852b9427da.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Nrm.png-05995115175e2288f45e6b852b9427da.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRattanBasketTextures/mPlant_Nrm.png"
-dest_files=["res://.godot/imported/mPlant_Nrm.png-05995115175e2288f45e6b852b9427da.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Nrm.png-05995115175e2288f45e6b852b9427da.s3tc.ctex", "res://.godot/imported/mPlant_Nrm.png-05995115175e2288f45e6b852b9427da.etc2.ctex"]
 
 [params]
 

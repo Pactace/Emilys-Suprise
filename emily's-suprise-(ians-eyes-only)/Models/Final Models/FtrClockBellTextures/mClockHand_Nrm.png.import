@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://4rb28jqn0e1g"
 path.s3tc="res://.godot/imported/mClockHand_Nrm.png-2768fbdc8479c13a68b91b7471a77119.s3tc.ctex"
+path.etc2="res://.godot/imported/mClockHand_Nrm.png-2768fbdc8479c13a68b91b7471a77119.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrClockBellTextures/mClockHand_Nrm.png"
-dest_files=["res://.godot/imported/mClockHand_Nrm.png-2768fbdc8479c13a68b91b7471a77119.s3tc.ctex"]
+dest_files=["res://.godot/imported/mClockHand_Nrm.png-2768fbdc8479c13a68b91b7471a77119.s3tc.ctex", "res://.godot/imported/mClockHand_Nrm.png-2768fbdc8479c13a68b91b7471a77119.etc2.ctex"]
 
 [params]
 

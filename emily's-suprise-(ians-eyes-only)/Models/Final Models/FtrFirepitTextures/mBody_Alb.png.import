@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://usbek063u6a3"
 path.s3tc="res://.godot/imported/mBody_Alb.png-b5160020ffe94a79bad76d9f9afcaea2.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-b5160020ffe94a79bad76d9f9afcaea2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFirepitTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-b5160020ffe94a79bad76d9f9afcaea2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-b5160020ffe94a79bad76d9f9afcaea2.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-b5160020ffe94a79bad76d9f9afcaea2.etc2.ctex"]
 
 [params]
 

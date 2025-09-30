@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq28o7ojryaif"
 path.s3tc="res://.godot/imported/mPlant_Alb.png-2d766d0f4a87055c5270bc5ad7dc3044.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Alb.png-2d766d0f4a87055c5270bc5ad7dc3044.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlanterPalmTextures/mPlant_Alb.png"
-dest_files=["res://.godot/imported/mPlant_Alb.png-2d766d0f4a87055c5270bc5ad7dc3044.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Alb.png-2d766d0f4a87055c5270bc5ad7dc3044.s3tc.ctex", "res://.godot/imported/mPlant_Alb.png-2d766d0f4a87055c5270bc5ad7dc3044.etc2.ctex"]
 
 [params]
 

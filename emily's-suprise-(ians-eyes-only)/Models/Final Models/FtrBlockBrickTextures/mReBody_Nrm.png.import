@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1i0qrenmdiwf"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-91b4f4de6ccb55957f7dc7271851f008.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-91b4f4de6ccb55957f7dc7271851f008.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBlockBrickTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-91b4f4de6ccb55957f7dc7271851f008.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-91b4f4de6ccb55957f7dc7271851f008.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-91b4f4de6ccb55957f7dc7271851f008.etc2.ctex"]
 
 [params]
 

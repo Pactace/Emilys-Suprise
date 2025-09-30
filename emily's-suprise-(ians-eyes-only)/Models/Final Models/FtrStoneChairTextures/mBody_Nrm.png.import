@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://m0t3mfyr18qm"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-cdf3dc2caff0bf55a1a614bdbc1c11d6.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-cdf3dc2caff0bf55a1a614bdbc1c11d6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrStoneChairTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-cdf3dc2caff0bf55a1a614bdbc1c11d6.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-cdf3dc2caff0bf55a1a614bdbc1c11d6.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-cdf3dc2caff0bf55a1a614bdbc1c11d6.etc2.ctex"]
 
 [params]
 

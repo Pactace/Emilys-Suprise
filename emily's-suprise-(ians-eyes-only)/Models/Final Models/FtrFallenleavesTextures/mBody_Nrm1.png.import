@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://tnprt1umdge1"
 path.s3tc="res://.godot/imported/mBody_Nrm1.png-f7452011bc54dc97da8c3e7827b5180b.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm1.png-f7452011bc54dc97da8c3e7827b5180b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFallenleavesTextures/mBody_Nrm1.png"
-dest_files=["res://.godot/imported/mBody_Nrm1.png-f7452011bc54dc97da8c3e7827b5180b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm1.png-f7452011bc54dc97da8c3e7827b5180b.s3tc.ctex", "res://.godot/imported/mBody_Nrm1.png-f7452011bc54dc97da8c3e7827b5180b.etc2.ctex"]
 
 [params]
 

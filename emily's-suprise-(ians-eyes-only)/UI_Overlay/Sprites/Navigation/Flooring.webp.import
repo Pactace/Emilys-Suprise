@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://rpaxq0kx82s5"
 path.s3tc="res://.godot/imported/Flooring.webp-d1a39fc6934d42175eb0298616be5128.s3tc.ctex"
+path.etc2="res://.godot/imported/Flooring.webp-d1a39fc6934d42175eb0298616be5128.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/Flooring.webp"
-dest_files=["res://.godot/imported/Flooring.webp-d1a39fc6934d42175eb0298616be5128.s3tc.ctex"]
+dest_files=["res://.godot/imported/Flooring.webp-d1a39fc6934d42175eb0298616be5128.s3tc.ctex", "res://.godot/imported/Flooring.webp-d1a39fc6934d42175eb0298616be5128.etc2.ctex"]
 
 [params]
 

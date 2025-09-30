@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://clv56463s65a2"
 path.s3tc="res://.godot/imported/mBody_Alb.png-ef02b92b677fb5710b23fc5cd1c06185.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-ef02b92b677fb5710b23fc5cd1c06185.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantshelfTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-ef02b92b677fb5710b23fc5cd1c06185.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-ef02b92b677fb5710b23fc5cd1c06185.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-ef02b92b677fb5710b23fc5cd1c06185.etc2.ctex"]
 
 [params]
 

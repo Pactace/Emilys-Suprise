@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwkaad7lr70x7"
 path.s3tc="res://.godot/imported/D Pad Left.png-c386bfd911c7618e63766ede5de7ba9a.s3tc.ctex"
+path.etc2="res://.godot/imported/D Pad Left.png-c386bfd911c7618e63766ede5de7ba9a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/D Pad Left.png"
-dest_files=["res://.godot/imported/D Pad Left.png-c386bfd911c7618e63766ede5de7ba9a.s3tc.ctex"]
+dest_files=["res://.godot/imported/D Pad Left.png-c386bfd911c7618e63766ede5de7ba9a.s3tc.ctex", "res://.godot/imported/D Pad Left.png-c386bfd911c7618e63766ede5de7ba9a.etc2.ctex"]
 
 [params]
 

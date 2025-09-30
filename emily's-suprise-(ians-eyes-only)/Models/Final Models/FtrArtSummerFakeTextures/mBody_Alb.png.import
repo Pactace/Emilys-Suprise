@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://12ve8wd3vlvk"
 path.s3tc="res://.godot/imported/mBody_Alb.png-104c82bb976cda8e82cc4c30e4a9ca1d.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-104c82bb976cda8e82cc4c30e4a9ca1d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtSummerFakeTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-104c82bb976cda8e82cc4c30e4a9ca1d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-104c82bb976cda8e82cc4c30e4a9ca1d.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-104c82bb976cda8e82cc4c30e4a9ca1d.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw6vaxfonjw2p"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-f354b44fc3091d0f2a325849ea1154e7.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-f354b44fc3091d0f2a325849ea1154e7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrOfficePapersTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-f354b44fc3091d0f2a325849ea1154e7.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-f354b44fc3091d0f2a325849ea1154e7.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-f354b44fc3091d0f2a325849ea1154e7.etc2.ctex"]
 
 [params]
 

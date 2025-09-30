@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dntjd1mjeoamv"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-10f97b8df6a8a6bf4f0aeb7781c6f20b.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-10f97b8df6a8a6bf4f0aeb7781c6f20b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRockingchairTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-10f97b8df6a8a6bf4f0aeb7781c6f20b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-10f97b8df6a8a6bf4f0aeb7781c6f20b.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-10f97b8df6a8a6bf4f0aeb7781c6f20b.etc2.ctex"]
 
 [params]
 

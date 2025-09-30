@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bypat7gsfqb2f"
 path.s3tc="res://.godot/imported/TablePlacable-removebg-preview.png-92fd4c6da980360be6091ed63e711469.s3tc.ctex"
+path.etc2="res://.godot/imported/TablePlacable-removebg-preview.png-92fd4c6da980360be6091ed63e711469.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/TablePlacable-removebg-preview.png"
-dest_files=["res://.godot/imported/TablePlacable-removebg-preview.png-92fd4c6da980360be6091ed63e711469.s3tc.ctex"]
+dest_files=["res://.godot/imported/TablePlacable-removebg-preview.png-92fd4c6da980360be6091ed63e711469.s3tc.ctex", "res://.godot/imported/TablePlacable-removebg-preview.png-92fd4c6da980360be6091ed63e711469.etc2.ctex"]
 
 [params]
 

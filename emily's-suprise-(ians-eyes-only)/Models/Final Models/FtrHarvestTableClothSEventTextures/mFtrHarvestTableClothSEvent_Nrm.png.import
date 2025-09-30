@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://clexi5425menv"
 path.s3tc="res://.godot/imported/mFtrHarvestTableClothSEvent_Nrm.png-b4e37e812c2e2b0ded15415468cb6332.s3tc.ctex"
+path.etc2="res://.godot/imported/mFtrHarvestTableClothSEvent_Nrm.png-b4e37e812c2e2b0ded15415468cb6332.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHarvestTableClothSEventTextures/mFtrHarvestTableClothSEvent_Nrm.png"
-dest_files=["res://.godot/imported/mFtrHarvestTableClothSEvent_Nrm.png-b4e37e812c2e2b0ded15415468cb6332.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestTableClothSEvent_Nrm.png-b4e37e812c2e2b0ded15415468cb6332.s3tc.ctex", "res://.godot/imported/mFtrHarvestTableClothSEvent_Nrm.png-b4e37e812c2e2b0ded15415468cb6332.etc2.ctex"]
 
 [params]
 

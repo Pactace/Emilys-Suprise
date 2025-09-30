@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv06801wj4c1l"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-4bad0b6b1ce0245e7a42e517ce8547be.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-4bad0b6b1ce0245e7a42e517ce8547be.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBucketWoodTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-4bad0b6b1ce0245e7a42e517ce8547be.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-4bad0b6b1ce0245e7a42e517ce8547be.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-4bad0b6b1ce0245e7a42e517ce8547be.etc2.ctex"]
 
 [params]
 

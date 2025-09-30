@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwnyy8puukexh"
 path.s3tc="res://.godot/imported/mGlass_Nrm.png-a673ee81eb8f9d57b806a3b17ca7bd28.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlass_Nrm.png-a673ee81eb8f9d57b806a3b17ca7bd28.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrKitchenwareTextures/mGlass_Nrm.png"
-dest_files=["res://.godot/imported/mGlass_Nrm.png-a673ee81eb8f9d57b806a3b17ca7bd28.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlass_Nrm.png-a673ee81eb8f9d57b806a3b17ca7bd28.s3tc.ctex", "res://.godot/imported/mGlass_Nrm.png-a673ee81eb8f9d57b806a3b17ca7bd28.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5eqndwl3m6dr"
 path.s3tc="res://.godot/imported/mReBody_Nrm4.png-e2e5e401dae8e3f82f55da66c1a23cd0.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm4.png-e2e5e401dae8e3f82f55da66c1a23cd0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBoxstoolTextures/mReBody_Nrm4.png"
-dest_files=["res://.godot/imported/mReBody_Nrm4.png-e2e5e401dae8e3f82f55da66c1a23cd0.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm4.png-e2e5e401dae8e3f82f55da66c1a23cd0.s3tc.ctex", "res://.godot/imported/mReBody_Nrm4.png-e2e5e401dae8e3f82f55da66c1a23cd0.etc2.ctex"]
 
 [params]
 

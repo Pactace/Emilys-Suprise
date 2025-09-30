@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgsar2f2wvjiy"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-cdcb5b9f64688821741a580ff6f4337f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-cdcb5b9f64688821741a580ff6f4337f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDreamyShelfTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-cdcb5b9f64688821741a580ff6f4337f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-cdcb5b9f64688821741a580ff6f4337f.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-cdcb5b9f64688821741a580ff6f4337f.etc2.ctex"]
 
 [params]
 

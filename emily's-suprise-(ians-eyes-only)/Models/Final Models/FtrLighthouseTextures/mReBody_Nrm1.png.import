@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://buig1haok5npx"
 path.s3tc="res://.godot/imported/mReBody_Nrm1.png-47f2fc0d92794e35006a839ed87e11df.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm1.png-47f2fc0d92794e35006a839ed87e11df.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLighthouseTextures/mReBody_Nrm1.png"
-dest_files=["res://.godot/imported/mReBody_Nrm1.png-47f2fc0d92794e35006a839ed87e11df.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm1.png-47f2fc0d92794e35006a839ed87e11df.s3tc.ctex", "res://.godot/imported/mReBody_Nrm1.png-47f2fc0d92794e35006a839ed87e11df.etc2.ctex"]
 
 [params]
 

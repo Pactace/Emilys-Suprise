@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c25p7opga326c"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-6fafd9d3b6d68de20e252ca50d6981d2.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-6fafd9d3b6d68de20e252ca50d6981d2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArcadegameFightTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-6fafd9d3b6d68de20e252ca50d6981d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-6fafd9d3b6d68de20e252ca50d6981d2.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-6fafd9d3b6d68de20e252ca50d6981d2.etc2.ctex"]
 
 [params]
 

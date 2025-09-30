@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fdtjw17h1rvj"
 path.s3tc="res://.godot/imported/mBody_Nrm1.png-d4921a9c1d58a49aa228d76d6ec6f6aa.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm1.png-d4921a9c1d58a49aa228d76d6ec6f6aa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGoldDharmaTextures/mBody_Nrm1.png"
-dest_files=["res://.godot/imported/mBody_Nrm1.png-d4921a9c1d58a49aa228d76d6ec6f6aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm1.png-d4921a9c1d58a49aa228d76d6ec6f6aa.s3tc.ctex", "res://.godot/imported/mBody_Nrm1.png-d4921a9c1d58a49aa228d76d6ec6f6aa.etc2.ctex"]
 
 [params]
 

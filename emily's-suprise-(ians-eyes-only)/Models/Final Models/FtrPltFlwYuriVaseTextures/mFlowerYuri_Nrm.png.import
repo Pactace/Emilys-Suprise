@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo3tag7t8gknp"
 path.s3tc="res://.godot/imported/mFlowerYuri_Nrm.png-420cbb4e713ce79be939f74a25ab8d90.s3tc.ctex"
+path.etc2="res://.godot/imported/mFlowerYuri_Nrm.png-420cbb4e713ce79be939f74a25ab8d90.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwYuriVaseTextures/mFlowerYuri_Nrm.png"
-dest_files=["res://.godot/imported/mFlowerYuri_Nrm.png-420cbb4e713ce79be939f74a25ab8d90.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFlowerYuri_Nrm.png-420cbb4e713ce79be939f74a25ab8d90.s3tc.ctex", "res://.godot/imported/mFlowerYuri_Nrm.png-420cbb4e713ce79be939f74a25ab8d90.etc2.ctex"]
 
 [params]
 

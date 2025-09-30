@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://p261j6n1nc4m"
 path.s3tc="res://.godot/imported/mReFabric_Nrm2.png-791601e7301041616c1008b293e2acc2.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Nrm2.png-791601e7301041616c1008b293e2acc2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDressupdollTextures/mReFabric_Nrm2.png"
-dest_files=["res://.godot/imported/mReFabric_Nrm2.png-791601e7301041616c1008b293e2acc2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Nrm2.png-791601e7301041616c1008b293e2acc2.s3tc.ctex", "res://.godot/imported/mReFabric_Nrm2.png-791601e7301041616c1008b293e2acc2.etc2.ctex"]
 
 [params]
 

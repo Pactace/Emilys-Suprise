@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dncl6y07gv6m0"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-e31b7b3eeb63d443a8b689c884fff4a7.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-e31b7b3eeb63d443a8b689c884fff4a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFestivaltopTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-e31b7b3eeb63d443a8b689c884fff4a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-e31b7b3eeb63d443a8b689c884fff4a7.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-e31b7b3eeb63d443a8b689c884fff4a7.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv2txvrmhlweq"
 path.s3tc="res://.godot/imported/mGlass_Nrm.png-99c1ff970b692c14b8a32df5d99840e7.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlass_Nrm.png-99c1ff970b692c14b8a32df5d99840e7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrAmeretroClockTextures/mGlass_Nrm.png"
-dest_files=["res://.godot/imported/mGlass_Nrm.png-99c1ff970b692c14b8a32df5d99840e7.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlass_Nrm.png-99c1ff970b692c14b8a32df5d99840e7.s3tc.ctex", "res://.godot/imported/mGlass_Nrm.png-99c1ff970b692c14b8a32df5d99840e7.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnodkbjt8kbbm"
 path.s3tc="res://.godot/imported/mGuard_Alb.png-ebbee7f03d35e57cc593c7bd3290d2e3.s3tc.ctex"
+path.etc2="res://.godot/imported/mGuard_Alb.png-ebbee7f03d35e57cc593c7bd3290d2e3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFanRetroTextures/mGuard_Alb.png"
-dest_files=["res://.godot/imported/mGuard_Alb.png-ebbee7f03d35e57cc593c7bd3290d2e3.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGuard_Alb.png-ebbee7f03d35e57cc593c7bd3290d2e3.s3tc.ctex", "res://.godot/imported/mGuard_Alb.png-ebbee7f03d35e57cc593c7bd3290d2e3.etc2.ctex"]
 
 [params]
 

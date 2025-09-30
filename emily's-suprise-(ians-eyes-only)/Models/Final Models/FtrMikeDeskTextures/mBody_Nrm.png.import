@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://du851utwqgbo8"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-59b1f739a771d53d742738147e805f3b.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-59b1f739a771d53d742738147e805f3b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMikeDeskTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-59b1f739a771d53d742738147e805f3b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-59b1f739a771d53d742738147e805f3b.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-59b1f739a771d53d742738147e805f3b.etc2.ctex"]
 
 [params]
 

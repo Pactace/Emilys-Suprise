@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://beovsy23ql7we"
 path.s3tc="res://.godot/imported/mShell_Alb.png-12e083d8d035f7e47c868fed8fe0ebef.s3tc.ctex"
+path.etc2="res://.godot/imported/mShell_Alb.png-12e083d8d035f7e47c868fed8fe0ebef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMermaidDresserTextures/mShell_Alb.png"
-dest_files=["res://.godot/imported/mShell_Alb.png-12e083d8d035f7e47c868fed8fe0ebef.s3tc.ctex"]
+dest_files=["res://.godot/imported/mShell_Alb.png-12e083d8d035f7e47c868fed8fe0ebef.s3tc.ctex", "res://.godot/imported/mShell_Alb.png-12e083d8d035f7e47c868fed8fe0ebef.etc2.ctex"]
 
 [params]
 

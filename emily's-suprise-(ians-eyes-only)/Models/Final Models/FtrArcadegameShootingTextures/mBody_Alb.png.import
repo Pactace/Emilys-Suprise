@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd0nqssk44qsr"
 path.s3tc="res://.godot/imported/mBody_Alb.png-3cb239bc88154b3b198aae51c6da910e.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-3cb239bc88154b3b198aae51c6da910e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArcadegameShootingTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-3cb239bc88154b3b198aae51c6da910e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-3cb239bc88154b3b198aae51c6da910e.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-3cb239bc88154b3b198aae51c6da910e.etc2.ctex"]
 
 [params]
 

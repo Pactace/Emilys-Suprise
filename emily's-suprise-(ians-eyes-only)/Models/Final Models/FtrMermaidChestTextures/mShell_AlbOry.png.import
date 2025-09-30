@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cths1t2g8ioi"
 path.s3tc="res://.godot/imported/mShell_AlbOry.png-6713f5f382e0a42e5665d73935a091a0.s3tc.ctex"
+path.etc2="res://.godot/imported/mShell_AlbOry.png-6713f5f382e0a42e5665d73935a091a0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMermaidChestTextures/mShell_AlbOry.png"
-dest_files=["res://.godot/imported/mShell_AlbOry.png-6713f5f382e0a42e5665d73935a091a0.s3tc.ctex"]
+dest_files=["res://.godot/imported/mShell_AlbOry.png-6713f5f382e0a42e5665d73935a091a0.s3tc.ctex", "res://.godot/imported/mShell_AlbOry.png-6713f5f382e0a42e5665d73935a091a0.etc2.ctex"]
 
 [params]
 

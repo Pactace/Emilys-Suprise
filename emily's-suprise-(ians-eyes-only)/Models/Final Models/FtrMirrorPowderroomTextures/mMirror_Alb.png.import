@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsooky8muw8vc"
 path.s3tc="res://.godot/imported/mMirror_Alb.png-0134b012ed374a15757a229987cfed21.s3tc.ctex"
+path.etc2="res://.godot/imported/mMirror_Alb.png-0134b012ed374a15757a229987cfed21.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMirrorPowderroomTextures/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-0134b012ed374a15757a229987cfed21.s3tc.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-0134b012ed374a15757a229987cfed21.s3tc.ctex", "res://.godot/imported/mMirror_Alb.png-0134b012ed374a15757a229987cfed21.etc2.ctex"]
 
 [params]
 

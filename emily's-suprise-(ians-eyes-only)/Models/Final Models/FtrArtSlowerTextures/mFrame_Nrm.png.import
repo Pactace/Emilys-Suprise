@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2mjmiy53r5db"
 path.s3tc="res://.godot/imported/mFrame_Nrm.png-97caed583f70f1d2f393b6721804db8d.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm.png-97caed583f70f1d2f393b6721804db8d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtSlowerTextures/mFrame_Nrm.png"
-dest_files=["res://.godot/imported/mFrame_Nrm.png-97caed583f70f1d2f393b6721804db8d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm.png-97caed583f70f1d2f393b6721804db8d.s3tc.ctex", "res://.godot/imported/mFrame_Nrm.png-97caed583f70f1d2f393b6721804db8d.etc2.ctex"]
 
 [params]
 

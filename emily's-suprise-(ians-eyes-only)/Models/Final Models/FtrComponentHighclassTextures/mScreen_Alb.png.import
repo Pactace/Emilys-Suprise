@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo755h7bsoxsa"
 path.s3tc="res://.godot/imported/mScreen_Alb.png-a6e72b88efd63def8f39c0f066e312de.s3tc.ctex"
+path.etc2="res://.godot/imported/mScreen_Alb.png-a6e72b88efd63def8f39c0f066e312de.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrComponentHighclassTextures/mScreen_Alb.png"
-dest_files=["res://.godot/imported/mScreen_Alb.png-a6e72b88efd63def8f39c0f066e312de.s3tc.ctex"]
+dest_files=["res://.godot/imported/mScreen_Alb.png-a6e72b88efd63def8f39c0f066e312de.s3tc.ctex", "res://.godot/imported/mScreen_Alb.png-a6e72b88efd63def8f39c0f066e312de.etc2.ctex"]
 
 [params]
 

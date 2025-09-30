@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vlgflq7lthqm"
 path.s3tc="res://.godot/imported/mReBody_Alb5.png-08d7d8705f1c8663b1167d1aa7b05d0f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb5.png-08d7d8705f1c8663b1167d1aa7b05d0f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWaterjugTextures/mReBody_Alb5.png"
-dest_files=["res://.godot/imported/mReBody_Alb5.png-08d7d8705f1c8663b1167d1aa7b05d0f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb5.png-08d7d8705f1c8663b1167d1aa7b05d0f.s3tc.ctex", "res://.godot/imported/mReBody_Alb5.png-08d7d8705f1c8663b1167d1aa7b05d0f.etc2.ctex"]
 
 [params]
 

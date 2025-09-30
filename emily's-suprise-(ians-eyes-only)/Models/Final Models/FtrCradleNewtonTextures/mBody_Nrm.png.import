@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://deu5wx7b7todc"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-33cf4695ff8f4c35ecd3d45e97b7a6df.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-33cf4695ff8f4c35ecd3d45e97b7a6df.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCradleNewtonTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-33cf4695ff8f4c35ecd3d45e97b7a6df.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-33cf4695ff8f4c35ecd3d45e97b7a6df.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-33cf4695ff8f4c35ecd3d45e97b7a6df.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://celv84ghivars"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-d8c8ad82f81811841d0fb4ef3b37ebf5.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-d8c8ad82f81811841d0fb4ef3b37ebf5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDrinkShelfWallTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-d8c8ad82f81811841d0fb4ef3b37ebf5.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-d8c8ad82f81811841d0fb4ef3b37ebf5.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-d8c8ad82f81811841d0fb4ef3b37ebf5.etc2.ctex"]
 
 [params]
 

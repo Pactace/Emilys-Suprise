@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1s0yf4o5hqio"
 path.s3tc="res://.godot/imported/mMumBody_Nrm.png-c0499c01a1f200afb3538f78901e33fe.s3tc.ctex"
+path.etc2="res://.godot/imported/mMumBody_Nrm.png-c0499c01a1f200afb3538f78901e33fe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwMumVaseTextures/mMumBody_Nrm.png"
-dest_files=["res://.godot/imported/mMumBody_Nrm.png-c0499c01a1f200afb3538f78901e33fe.s3tc.ctex"]
+dest_files=["res://.godot/imported/mMumBody_Nrm.png-c0499c01a1f200afb3538f78901e33fe.s3tc.ctex", "res://.godot/imported/mMumBody_Nrm.png-c0499c01a1f200afb3538f78901e33fe.etc2.ctex"]
 
 [params]
 

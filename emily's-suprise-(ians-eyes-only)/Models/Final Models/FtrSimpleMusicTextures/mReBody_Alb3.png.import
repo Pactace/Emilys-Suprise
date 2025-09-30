@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cobustk5hplnc"
 path.s3tc="res://.godot/imported/mReBody_Alb3.png-475eac1e97a025240413669f16eaa92b.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb3.png-475eac1e97a025240413669f16eaa92b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSimpleMusicTextures/mReBody_Alb3.png"
-dest_files=["res://.godot/imported/mReBody_Alb3.png-475eac1e97a025240413669f16eaa92b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb3.png-475eac1e97a025240413669f16eaa92b.s3tc.ctex", "res://.godot/imported/mReBody_Alb3.png-475eac1e97a025240413669f16eaa92b.etc2.ctex"]
 
 [params]
 

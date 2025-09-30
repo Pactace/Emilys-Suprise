@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce5esas6e5hmv"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-7d5c38463df1e7a7b84163ac5dd25389.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-7d5c38463df1e7a7b84163ac5dd25389.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrTissueboxTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-7d5c38463df1e7a7b84163ac5dd25389.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-7d5c38463df1e7a7b84163ac5dd25389.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-7d5c38463df1e7a7b84163ac5dd25389.etc2.ctex"]
 
 [params]
 

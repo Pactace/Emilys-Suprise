@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://7kqk5qbnh51x"
 path.s3tc="res://.godot/imported/mGlassB_Nrm.png-bdbb83c8dc4b7721520b358363f9cfea.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlassB_Nrm.png-bdbb83c8dc4b7721520b358363f9cfea.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDrinkingbirdTextures/mGlassB_Nrm.png"
-dest_files=["res://.godot/imported/mGlassB_Nrm.png-bdbb83c8dc4b7721520b358363f9cfea.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlassB_Nrm.png-bdbb83c8dc4b7721520b358363f9cfea.s3tc.ctex", "res://.godot/imported/mGlassB_Nrm.png-bdbb83c8dc4b7721520b358363f9cfea.etc2.ctex"]
 
 [params]
 

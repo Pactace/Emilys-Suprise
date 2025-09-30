@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bamel103aj66q"
 path.s3tc="res://.godot/imported/mReBody_Nrm8.png-524c0958a76be73ae4ff21373788212f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm8.png-524c0958a76be73ae4ff21373788212f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrKettleTextures/mReBody_Nrm8.png"
-dest_files=["res://.godot/imported/mReBody_Nrm8.png-524c0958a76be73ae4ff21373788212f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm8.png-524c0958a76be73ae4ff21373788212f.s3tc.ctex", "res://.godot/imported/mReBody_Nrm8.png-524c0958a76be73ae4ff21373788212f.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://lrnjawh1ids8"
 path.s3tc="res://.godot/imported/mFrame_Nrm.png-919167682f9905334a717266e706450e.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm.png-919167682f9905334a717266e706450e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtVitruvianManFakeTextures/mFrame_Nrm.png"
-dest_files=["res://.godot/imported/mFrame_Nrm.png-919167682f9905334a717266e706450e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm.png-919167682f9905334a717266e706450e.s3tc.ctex", "res://.godot/imported/mFrame_Nrm.png-919167682f9905334a717266e706450e.etc2.ctex"]
 
 [params]
 

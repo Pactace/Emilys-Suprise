@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://djim3f87gv5jf"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-e5536ed7a248536eaaa14cde8040bc96.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-e5536ed7a248536eaaa14cde8040bc96.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMomCakeTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-e5536ed7a248536eaaa14cde8040bc96.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-e5536ed7a248536eaaa14cde8040bc96.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-e5536ed7a248536eaaa14cde8040bc96.etc2.ctex"]
 
 [params]
 

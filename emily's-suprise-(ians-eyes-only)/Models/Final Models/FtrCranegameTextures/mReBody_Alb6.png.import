@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://36a6hu1si8e"
 path.s3tc="res://.godot/imported/mReBody_Alb6.png-8ef11a6878b749d070ae6fbf8c1145ef.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb6.png-8ef11a6878b749d070ae6fbf8c1145ef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCranegameTextures/mReBody_Alb6.png"
-dest_files=["res://.godot/imported/mReBody_Alb6.png-8ef11a6878b749d070ae6fbf8c1145ef.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb6.png-8ef11a6878b749d070ae6fbf8c1145ef.s3tc.ctex", "res://.godot/imported/mReBody_Alb6.png-8ef11a6878b749d070ae6fbf8c1145ef.etc2.ctex"]
 
 [params]
 

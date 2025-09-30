@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0v5ti3xxdxhe"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-dac379e96fd5d93971624de223b757e4.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-dac379e96fd5d93971624de223b757e4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantYuccaTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-dac379e96fd5d93971624de223b757e4.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-dac379e96fd5d93971624de223b757e4.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-dac379e96fd5d93971624de223b757e4.etc2.ctex"]
 
 [params]
 

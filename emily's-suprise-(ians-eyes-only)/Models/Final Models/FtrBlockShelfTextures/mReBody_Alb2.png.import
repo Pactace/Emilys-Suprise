@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://w1n20ejh13t5"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-67061d668e38b33e492b73fa28b646a7.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-67061d668e38b33e492b73fa28b646a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBlockShelfTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-67061d668e38b33e492b73fa28b646a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-67061d668e38b33e492b73fa28b646a7.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-67061d668e38b33e492b73fa28b646a7.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca7ko5t12ssfp"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-2e1fec7965ad92f42da93d5390f20fcd.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-2e1fec7965ad92f42da93d5390f20fcd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPopcornmachineTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-2e1fec7965ad92f42da93d5390f20fcd.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-2e1fec7965ad92f42da93d5390f20fcd.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-2e1fec7965ad92f42da93d5390f20fcd.etc2.ctex"]
 
 [params]
 

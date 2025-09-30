@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1n72lxasccun"
 path.s3tc="res://.godot/imported/FurnitureIcon.png-03668f4b455415c8481b3647d7fedfea.s3tc.ctex"
+path.etc2="res://.godot/imported/FurnitureIcon.png-03668f4b455415c8481b3647d7fedfea.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/FurnitureIcon.png"
-dest_files=["res://.godot/imported/FurnitureIcon.png-03668f4b455415c8481b3647d7fedfea.s3tc.ctex"]
+dest_files=["res://.godot/imported/FurnitureIcon.png-03668f4b455415c8481b3647d7fedfea.s3tc.ctex", "res://.godot/imported/FurnitureIcon.png-03668f4b455415c8481b3647d7fedfea.etc2.ctex"]
 
 [params]
 

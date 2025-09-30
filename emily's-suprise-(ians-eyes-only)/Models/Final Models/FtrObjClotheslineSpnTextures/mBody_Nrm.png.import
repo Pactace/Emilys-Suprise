@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6njpixl8164"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-48cbaa6fd34015cfb215546eda550b5e.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-48cbaa6fd34015cfb215546eda550b5e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrObjClotheslineSpnTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-48cbaa6fd34015cfb215546eda550b5e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-48cbaa6fd34015cfb215546eda550b5e.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-48cbaa6fd34015cfb215546eda550b5e.etc2.ctex"]
 
 [params]
 

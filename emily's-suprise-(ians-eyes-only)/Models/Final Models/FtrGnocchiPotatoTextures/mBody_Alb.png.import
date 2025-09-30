@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt7caqt53isei"
 path.s3tc="res://.godot/imported/mBody_Alb.png-7728c68f9087c79438d362d6ec6e4c8c.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-7728c68f9087c79438d362d6ec6e4c8c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGnocchiPotatoTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-7728c68f9087c79438d362d6ec6e4c8c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-7728c68f9087c79438d362d6ec6e4c8c.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-7728c68f9087c79438d362d6ec6e4c8c.etc2.ctex"]
 
 [params]
 

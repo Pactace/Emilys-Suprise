@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://t2n8ksv8kod8"
 path.s3tc="res://.godot/imported/mMonitor_Alb.4.png-1990f2a7e75922778a34051326eb7d91.s3tc.ctex"
+path.etc2="res://.godot/imported/mMonitor_Alb.4.png-1990f2a7e75922778a34051326eb7d91.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArcadegameShootingTextures/mMonitor_Alb.4.png"
-dest_files=["res://.godot/imported/mMonitor_Alb.4.png-1990f2a7e75922778a34051326eb7d91.s3tc.ctex"]
+dest_files=["res://.godot/imported/mMonitor_Alb.4.png-1990f2a7e75922778a34051326eb7d91.s3tc.ctex", "res://.godot/imported/mMonitor_Alb.4.png-1990f2a7e75922778a34051326eb7d91.etc2.ctex"]
 
 [params]
 

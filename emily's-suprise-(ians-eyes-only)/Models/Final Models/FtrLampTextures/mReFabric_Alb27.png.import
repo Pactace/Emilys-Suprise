@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkwl2dy8pdlqy"
 path.s3tc="res://.godot/imported/mReFabric_Alb27.png-8adba6b1b34d70228742c42da40acbb3.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb27.png-8adba6b1b34d70228742c42da40acbb3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLampTextures/mReFabric_Alb27.png"
-dest_files=["res://.godot/imported/mReFabric_Alb27.png-8adba6b1b34d70228742c42da40acbb3.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb27.png-8adba6b1b34d70228742c42da40acbb3.s3tc.ctex", "res://.godot/imported/mReFabric_Alb27.png-8adba6b1b34d70228742c42da40acbb3.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://k4umtqgrwlb"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-382db53f4f1182c2fbdded10037ebf51.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-382db53f4f1182c2fbdded10037ebf51.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrKitchenStoneTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-382db53f4f1182c2fbdded10037ebf51.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-382db53f4f1182c2fbdded10037ebf51.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-382db53f4f1182c2fbdded10037ebf51.etc2.ctex"]
 
 [params]
 

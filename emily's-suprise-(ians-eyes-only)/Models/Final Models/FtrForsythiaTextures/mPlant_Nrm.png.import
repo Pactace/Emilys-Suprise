@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv1b5pctng00v"
 path.s3tc="res://.godot/imported/mPlant_Nrm.png-c6ed622b44a2022a2bde1f0a3e17b327.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Nrm.png-c6ed622b44a2022a2bde1f0a3e17b327.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrForsythiaTextures/mPlant_Nrm.png"
-dest_files=["res://.godot/imported/mPlant_Nrm.png-c6ed622b44a2022a2bde1f0a3e17b327.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Nrm.png-c6ed622b44a2022a2bde1f0a3e17b327.s3tc.ctex", "res://.godot/imported/mPlant_Nrm.png-c6ed622b44a2022a2bde1f0a3e17b327.etc2.ctex"]
 
 [params]
 

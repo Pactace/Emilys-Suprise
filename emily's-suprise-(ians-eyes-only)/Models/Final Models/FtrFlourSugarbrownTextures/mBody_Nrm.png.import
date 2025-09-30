@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwaxhhyq0wcvx"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-9686a74ae44ae100734f89ae80698f65.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-9686a74ae44ae100734f89ae80698f65.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFlourSugarbrownTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-9686a74ae44ae100734f89ae80698f65.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-9686a74ae44ae100734f89ae80698f65.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-9686a74ae44ae100734f89ae80698f65.etc2.ctex"]
 
 [params]
 

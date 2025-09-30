@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://644ci8uqc2i8"
 path.s3tc="res://.godot/imported/mHandle_Alb.png-514e02b9cf1a5f1cad0a30250c27de49.s3tc.ctex"
+path.etc2="res://.godot/imported/mHandle_Alb.png-514e02b9cf1a5f1cad0a30250c27de49.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCandleTextures/mHandle_Alb.png"
-dest_files=["res://.godot/imported/mHandle_Alb.png-514e02b9cf1a5f1cad0a30250c27de49.s3tc.ctex"]
+dest_files=["res://.godot/imported/mHandle_Alb.png-514e02b9cf1a5f1cad0a30250c27de49.s3tc.ctex", "res://.godot/imported/mHandle_Alb.png-514e02b9cf1a5f1cad0a30250c27de49.etc2.ctex"]
 
 [params]
 

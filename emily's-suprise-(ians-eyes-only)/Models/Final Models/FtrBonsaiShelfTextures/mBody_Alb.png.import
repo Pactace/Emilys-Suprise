@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1umhxxdhexgh"
 path.s3tc="res://.godot/imported/mBody_Alb.png-2b161f90e72508895b39af58a9c3e88e.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-2b161f90e72508895b39af58a9c3e88e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBonsaiShelfTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-2b161f90e72508895b39af58a9c3e88e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-2b161f90e72508895b39af58a9c3e88e.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-2b161f90e72508895b39af58a9c3e88e.etc2.ctex"]
 
 [params]
 

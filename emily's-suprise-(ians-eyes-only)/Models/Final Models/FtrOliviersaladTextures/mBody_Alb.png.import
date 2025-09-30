@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce2mjgqvvvyri"
 path.s3tc="res://.godot/imported/mBody_Alb.png-413339fd01d107ebaa647d354064e696.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-413339fd01d107ebaa647d354064e696.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrOliviersaladTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-413339fd01d107ebaa647d354064e696.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-413339fd01d107ebaa647d354064e696.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-413339fd01d107ebaa647d354064e696.etc2.ctex"]
 
 [params]
 

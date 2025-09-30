@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cywwv3h6muhq1"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-068ace8f0c3d4b4039350c16dcbe2b05.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-068ace8f0c3d4b4039350c16dcbe2b05.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMermaidShelfTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-068ace8f0c3d4b4039350c16dcbe2b05.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-068ace8f0c3d4b4039350c16dcbe2b05.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-068ace8f0c3d4b4039350c16dcbe2b05.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://hr2revkft22u"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-a17ba026b74a296fd7f6a7c4b93c0bba.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-a17ba026b74a296fd7f6a7c4b93c0bba.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrStoneTableTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-a17ba026b74a296fd7f6a7c4b93c0bba.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-a17ba026b74a296fd7f6a7c4b93c0bba.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-a17ba026b74a296fd7f6a7c4b93c0bba.etc2.ctex"]
 
 [params]
 

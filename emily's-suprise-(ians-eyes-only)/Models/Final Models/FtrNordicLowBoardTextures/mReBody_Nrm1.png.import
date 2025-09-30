@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bato6kx6idyki"
 path.s3tc="res://.godot/imported/mReBody_Nrm1.png-f6a26cca7bcf7fc1af9c473c49e563a7.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm1.png-f6a26cca7bcf7fc1af9c473c49e563a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrNordicLowBoardTextures/mReBody_Nrm1.png"
-dest_files=["res://.godot/imported/mReBody_Nrm1.png-f6a26cca7bcf7fc1af9c473c49e563a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm1.png-f6a26cca7bcf7fc1af9c473c49e563a7.s3tc.ctex", "res://.godot/imported/mReBody_Nrm1.png-f6a26cca7bcf7fc1af9c473c49e563a7.etc2.ctex"]
 
 [params]
 

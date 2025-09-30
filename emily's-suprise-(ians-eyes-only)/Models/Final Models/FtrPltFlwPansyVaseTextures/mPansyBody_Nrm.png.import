@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vubd1805h7e2"
 path.s3tc="res://.godot/imported/mPansyBody_Nrm.png-fbba8d6a9baffd1ecd1d045c3d015c40.s3tc.ctex"
+path.etc2="res://.godot/imported/mPansyBody_Nrm.png-fbba8d6a9baffd1ecd1d045c3d015c40.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwPansyVaseTextures/mPansyBody_Nrm.png"
-dest_files=["res://.godot/imported/mPansyBody_Nrm.png-fbba8d6a9baffd1ecd1d045c3d015c40.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPansyBody_Nrm.png-fbba8d6a9baffd1ecd1d045c3d015c40.s3tc.ctex", "res://.godot/imported/mPansyBody_Nrm.png-fbba8d6a9baffd1ecd1d045c3d015c40.etc2.ctex"]
 
 [params]
 

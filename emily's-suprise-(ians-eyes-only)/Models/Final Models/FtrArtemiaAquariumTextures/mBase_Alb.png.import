@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckwnt8ebfbuck"
 path.s3tc="res://.godot/imported/mBase_Alb.png-8be63187a12e6e1655dee65500bdd0ac.s3tc.ctex"
+path.etc2="res://.godot/imported/mBase_Alb.png-8be63187a12e6e1655dee65500bdd0ac.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtemiaAquariumTextures/mBase_Alb.png"
-dest_files=["res://.godot/imported/mBase_Alb.png-8be63187a12e6e1655dee65500bdd0ac.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBase_Alb.png-8be63187a12e6e1655dee65500bdd0ac.s3tc.ctex", "res://.godot/imported/mBase_Alb.png-8be63187a12e6e1655dee65500bdd0ac.etc2.ctex"]
 
 [params]
 

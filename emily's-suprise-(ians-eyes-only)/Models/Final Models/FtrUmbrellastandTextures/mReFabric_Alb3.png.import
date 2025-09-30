@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdrmxr2d3ujar"
 path.s3tc="res://.godot/imported/mReFabric_Alb3.png-ed3a7baa5e5a985141b7e0a7f6515a96.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb3.png-ed3a7baa5e5a985141b7e0a7f6515a96.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrUmbrellastandTextures/mReFabric_Alb3.png"
-dest_files=["res://.godot/imported/mReFabric_Alb3.png-ed3a7baa5e5a985141b7e0a7f6515a96.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb3.png-ed3a7baa5e5a985141b7e0a7f6515a96.s3tc.ctex", "res://.godot/imported/mReFabric_Alb3.png-ed3a7baa5e5a985141b7e0a7f6515a96.etc2.ctex"]
 
 [params]
 

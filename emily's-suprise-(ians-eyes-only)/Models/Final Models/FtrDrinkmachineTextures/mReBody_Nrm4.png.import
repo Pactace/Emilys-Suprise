@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://rrv4trmuvdon"
 path.s3tc="res://.godot/imported/mReBody_Nrm4.png-f6c9ceb94f1f24011d2208bc9cdbd9a1.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm4.png-f6c9ceb94f1f24011d2208bc9cdbd9a1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDrinkmachineTextures/mReBody_Nrm4.png"
-dest_files=["res://.godot/imported/mReBody_Nrm4.png-f6c9ceb94f1f24011d2208bc9cdbd9a1.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm4.png-f6c9ceb94f1f24011d2208bc9cdbd9a1.s3tc.ctex", "res://.godot/imported/mReBody_Nrm4.png-f6c9ceb94f1f24011d2208bc9cdbd9a1.etc2.ctex"]
 
 [params]
 

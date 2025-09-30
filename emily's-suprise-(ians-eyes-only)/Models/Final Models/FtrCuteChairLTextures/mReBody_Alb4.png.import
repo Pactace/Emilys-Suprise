@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://pjjxj66aw0le"
 path.s3tc="res://.godot/imported/mReBody_Alb4.png-04feff19fa0d472cacc3a547d7e6e59c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb4.png-04feff19fa0d472cacc3a547d7e6e59c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCuteChairLTextures/mReBody_Alb4.png"
-dest_files=["res://.godot/imported/mReBody_Alb4.png-04feff19fa0d472cacc3a547d7e6e59c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb4.png-04feff19fa0d472cacc3a547d7e6e59c.s3tc.ctex", "res://.godot/imported/mReBody_Alb4.png-04feff19fa0d472cacc3a547d7e6e59c.etc2.ctex"]
 
 [params]
 

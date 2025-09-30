@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c56c5ebdvmdf0"
 path.s3tc="res://.godot/imported/mRing_Nrm.png-2e5351346e0aec6dc459f4b285fc84b9.s3tc.ctex"
+path.etc2="res://.godot/imported/mRing_Nrm.png-2e5351346e0aec6dc459f4b285fc84b9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFoodmachineTextures/mRing_Nrm.png"
-dest_files=["res://.godot/imported/mRing_Nrm.png-2e5351346e0aec6dc459f4b285fc84b9.s3tc.ctex"]
+dest_files=["res://.godot/imported/mRing_Nrm.png-2e5351346e0aec6dc459f4b285fc84b9.s3tc.ctex", "res://.godot/imported/mRing_Nrm.png-2e5351346e0aec6dc459f4b285fc84b9.etc2.ctex"]
 
 [params]
 

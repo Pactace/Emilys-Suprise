@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://buse2fxew0qix"
 path.s3tc="res://.godot/imported/mReBody_Nrm6.png-33648ff0c18b50ec5607eb5e60bc824a.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm6.png-33648ff0c18b50ec5607eb5e60bc824a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLightSimpleCeilingTextures/mReBody_Nrm6.png"
-dest_files=["res://.godot/imported/mReBody_Nrm6.png-33648ff0c18b50ec5607eb5e60bc824a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm6.png-33648ff0c18b50ec5607eb5e60bc824a.s3tc.ctex", "res://.godot/imported/mReBody_Nrm6.png-33648ff0c18b50ec5607eb5e60bc824a.etc2.ctex"]
 
 [params]
 

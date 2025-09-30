@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbj7wrd5p7bkr"
 path.s3tc="res://.godot/imported/mFrame_Nrm.png-8a63147e9785d89bf9efdc3309a32b5f.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm.png-8a63147e9785d89bf9efdc3309a32b5f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtSunflowerTextures/mFrame_Nrm.png"
-dest_files=["res://.godot/imported/mFrame_Nrm.png-8a63147e9785d89bf9efdc3309a32b5f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm.png-8a63147e9785d89bf9efdc3309a32b5f.s3tc.ctex", "res://.godot/imported/mFrame_Nrm.png-8a63147e9785d89bf9efdc3309a32b5f.etc2.ctex"]
 
 [params]
 

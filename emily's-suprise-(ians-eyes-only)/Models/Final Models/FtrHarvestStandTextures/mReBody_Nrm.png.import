@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cljbj5nrr5ta2"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-35580422b213523efbbafb96ec1f549a.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-35580422b213523efbbafb96ec1f549a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHarvestStandTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-35580422b213523efbbafb96ec1f549a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-35580422b213523efbbafb96ec1f549a.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-35580422b213523efbbafb96ec1f549a.etc2.ctex"]
 
 [params]
 

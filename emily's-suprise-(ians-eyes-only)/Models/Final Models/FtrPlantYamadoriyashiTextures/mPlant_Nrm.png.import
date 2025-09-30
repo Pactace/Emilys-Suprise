@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5w2x1ny88ds7"
 path.s3tc="res://.godot/imported/mPlant_Nrm.png-89b2b566c8c73b89b027a6413b4e3e9c.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Nrm.png-89b2b566c8c73b89b027a6413b4e3e9c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantYamadoriyashiTextures/mPlant_Nrm.png"
-dest_files=["res://.godot/imported/mPlant_Nrm.png-89b2b566c8c73b89b027a6413b4e3e9c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Nrm.png-89b2b566c8c73b89b027a6413b4e3e9c.s3tc.ctex", "res://.godot/imported/mPlant_Nrm.png-89b2b566c8c73b89b027a6413b4e3e9c.etc2.ctex"]
 
 [params]
 

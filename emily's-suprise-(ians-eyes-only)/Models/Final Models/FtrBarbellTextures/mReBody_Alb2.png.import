@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwmedwt5o4gyf"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-faadec738ca3110cb89b2a093d50c14b.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-faadec738ca3110cb89b2a093d50c14b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBarbellTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-faadec738ca3110cb89b2a093d50c14b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-faadec738ca3110cb89b2a093d50c14b.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-faadec738ca3110cb89b2a093d50c14b.etc2.ctex"]
 
 [params]
 

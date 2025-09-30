@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1u367r1y7xk7"
 path.s3tc="res://.godot/imported/RoomTexFloorSimple00_Alb.png-16efcd22b0466480d642bf7197af342c.s3tc.ctex"
+path.etc2="res://.godot/imported/RoomTexFloorSimple00_Alb.png-16efcd22b0466480d642bf7197af342c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Floor and Wall Textures/WoodFloor0/RoomTexFloorSimple00_Alb.png"
-dest_files=["res://.godot/imported/RoomTexFloorSimple00_Alb.png-16efcd22b0466480d642bf7197af342c.s3tc.ctex"]
+dest_files=["res://.godot/imported/RoomTexFloorSimple00_Alb.png-16efcd22b0466480d642bf7197af342c.s3tc.ctex", "res://.godot/imported/RoomTexFloorSimple00_Alb.png-16efcd22b0466480d642bf7197af342c.etc2.ctex"]
 
 [params]
 

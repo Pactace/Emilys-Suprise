@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs8msrq35j4e2"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-187323c22de635ebfe933cc9ffbb4e45.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-187323c22de635ebfe933cc9ffbb4e45.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDishwasherStainlessTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-187323c22de635ebfe933cc9ffbb4e45.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-187323c22de635ebfe933cc9ffbb4e45.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-187323c22de635ebfe933cc9ffbb4e45.etc2.ctex"]
 
 [params]
 

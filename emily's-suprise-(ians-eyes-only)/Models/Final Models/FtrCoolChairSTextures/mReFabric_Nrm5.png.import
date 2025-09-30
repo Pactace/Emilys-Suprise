@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt42kuhg1ssy7"
 path.s3tc="res://.godot/imported/mReFabric_Nrm5.png-b1c6421004744609d7cd65c7f40d2452.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Nrm5.png-b1c6421004744609d7cd65c7f40d2452.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCoolChairSTextures/mReFabric_Nrm5.png"
-dest_files=["res://.godot/imported/mReFabric_Nrm5.png-b1c6421004744609d7cd65c7f40d2452.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Nrm5.png-b1c6421004744609d7cd65c7f40d2452.s3tc.ctex", "res://.godot/imported/mReFabric_Nrm5.png-b1c6421004744609d7cd65c7f40d2452.etc2.ctex"]
 
 [params]
 

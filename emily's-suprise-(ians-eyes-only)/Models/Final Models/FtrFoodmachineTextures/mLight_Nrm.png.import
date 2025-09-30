@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://blm60txjdcuq"
 path.s3tc="res://.godot/imported/mLight_Nrm.png-dda974a68fa15ec3071a63fec5eb0040.s3tc.ctex"
+path.etc2="res://.godot/imported/mLight_Nrm.png-dda974a68fa15ec3071a63fec5eb0040.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFoodmachineTextures/mLight_Nrm.png"
-dest_files=["res://.godot/imported/mLight_Nrm.png-dda974a68fa15ec3071a63fec5eb0040.s3tc.ctex"]
+dest_files=["res://.godot/imported/mLight_Nrm.png-dda974a68fa15ec3071a63fec5eb0040.s3tc.ctex", "res://.godot/imported/mLight_Nrm.png-dda974a68fa15ec3071a63fec5eb0040.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cekmfocmp1xfl"
 path.s3tc="res://.godot/imported/mHanger_Alb.png-8f6c91922b9f27c540b2a9d536dc5737.s3tc.ctex"
+path.etc2="res://.godot/imported/mHanger_Alb.png-8f6c91922b9f27c540b2a9d536dc5737.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHangerBagTextures/mHanger_Alb.png"
-dest_files=["res://.godot/imported/mHanger_Alb.png-8f6c91922b9f27c540b2a9d536dc5737.s3tc.ctex"]
+dest_files=["res://.godot/imported/mHanger_Alb.png-8f6c91922b9f27c540b2a9d536dc5737.s3tc.ctex", "res://.godot/imported/mHanger_Alb.png-8f6c91922b9f27c540b2a9d536dc5737.etc2.ctex"]
 
 [params]
 

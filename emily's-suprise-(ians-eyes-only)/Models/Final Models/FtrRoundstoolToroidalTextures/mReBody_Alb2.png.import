@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqc60tdx48qpc"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-17c79933462f5d4aa5430f072d4ccd68.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-17c79933462f5d4aa5430f072d4ccd68.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRoundstoolToroidalTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-17c79933462f5d4aa5430f072d4ccd68.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-17c79933462f5d4aa5430f072d4ccd68.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-17c79933462f5d4aa5430f072d4ccd68.etc2.ctex"]
 
 [params]
 

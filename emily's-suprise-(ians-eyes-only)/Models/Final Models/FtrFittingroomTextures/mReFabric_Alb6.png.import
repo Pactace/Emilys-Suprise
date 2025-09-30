@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bikxon8ejclv7"
 path.s3tc="res://.godot/imported/mReFabric_Alb6.png-fc432725c5a5763ff0403a1f8ab135a6.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb6.png-fc432725c5a5763ff0403a1f8ab135a6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFittingroomTextures/mReFabric_Alb6.png"
-dest_files=["res://.godot/imported/mReFabric_Alb6.png-fc432725c5a5763ff0403a1f8ab135a6.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb6.png-fc432725c5a5763ff0403a1f8ab135a6.s3tc.ctex", "res://.godot/imported/mReFabric_Alb6.png-fc432725c5a5763ff0403a1f8ab135a6.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b708gtarjrytd"
 path.s3tc="res://.godot/imported/mBody_Alb.png-fa9b033f6c677ab6c837c1b2c9ca6954.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-fa9b033f6c677ab6c837c1b2c9ca6954.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHarvestTableClothSEventTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-fa9b033f6c677ab6c837c1b2c9ca6954.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-fa9b033f6c677ab6c837c1b2c9ca6954.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-fa9b033f6c677ab6c837c1b2c9ca6954.etc2.ctex"]
 
 [params]
 

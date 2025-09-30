@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4vgi8wm2josc"
 path.s3tc="res://.godot/imported/mBody_Alb.png-ae85d504de513b3b5e3cfff3eddd6fe0.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-ae85d504de513b3b5e3cfff3eddd6fe0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantCacaoTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-ae85d504de513b3b5e3cfff3eddd6fe0.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-ae85d504de513b3b5e3cfff3eddd6fe0.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-ae85d504de513b3b5e3cfff3eddd6fe0.etc2.ctex"]
 
 [params]
 

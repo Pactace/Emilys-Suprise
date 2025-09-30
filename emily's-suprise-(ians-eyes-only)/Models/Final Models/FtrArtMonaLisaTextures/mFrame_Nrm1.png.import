@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c58wxu75gyr8d"
 path.s3tc="res://.godot/imported/mFrame_Nrm1.png-309df403d02cd1405a9017ca1f7fbcfb.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm1.png-309df403d02cd1405a9017ca1f7fbcfb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtMonaLisaTextures/mFrame_Nrm1.png"
-dest_files=["res://.godot/imported/mFrame_Nrm1.png-309df403d02cd1405a9017ca1f7fbcfb.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm1.png-309df403d02cd1405a9017ca1f7fbcfb.s3tc.ctex", "res://.godot/imported/mFrame_Nrm1.png-309df403d02cd1405a9017ca1f7fbcfb.etc2.ctex"]
 
 [params]
 

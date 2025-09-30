@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp3s3ranngoy5"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-99d0d99a42b72bb9fe52f8777160c52d.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-99d0d99a42b72bb9fe52f8777160c52d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrClothesstandTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-99d0d99a42b72bb9fe52f8777160c52d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-99d0d99a42b72bb9fe52f8777160c52d.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-99d0d99a42b72bb9fe52f8777160c52d.etc2.ctex"]
 
 [params]
 

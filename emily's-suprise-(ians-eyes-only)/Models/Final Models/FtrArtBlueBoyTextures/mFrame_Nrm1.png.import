@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1jgiwl5kbrml"
 path.s3tc="res://.godot/imported/mFrame_Nrm1.png-0aa18eafb580ec85e464a2ba010828d2.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm1.png-0aa18eafb580ec85e464a2ba010828d2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtBlueBoyTextures/mFrame_Nrm1.png"
-dest_files=["res://.godot/imported/mFrame_Nrm1.png-0aa18eafb580ec85e464a2ba010828d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm1.png-0aa18eafb580ec85e464a2ba010828d2.s3tc.ctex", "res://.godot/imported/mFrame_Nrm1.png-0aa18eafb580ec85e464a2ba010828d2.etc2.ctex"]
 
 [params]
 

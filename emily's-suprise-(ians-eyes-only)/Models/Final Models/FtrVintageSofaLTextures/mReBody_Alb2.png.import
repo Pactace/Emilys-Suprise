@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c58n3hy2kgeht"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-a09613a95544c34b9c414768fb5a5b0c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-a09613a95544c34b9c414768fb5a5b0c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrVintageSofaLTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-a09613a95544c34b9c414768fb5a5b0c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-a09613a95544c34b9c414768fb5a5b0c.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-a09613a95544c34b9c414768fb5a5b0c.etc2.ctex"]
 
 [params]
 

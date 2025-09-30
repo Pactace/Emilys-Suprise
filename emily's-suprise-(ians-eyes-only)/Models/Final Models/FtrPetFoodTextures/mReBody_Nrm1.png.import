@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk0sr40d1gov"
 path.s3tc="res://.godot/imported/mReBody_Nrm1.png-d1f17925fb5fa3c0df867400aab2c5b9.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm1.png-d1f17925fb5fa3c0df867400aab2c5b9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPetFoodTextures/mReBody_Nrm1.png"
-dest_files=["res://.godot/imported/mReBody_Nrm1.png-d1f17925fb5fa3c0df867400aab2c5b9.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm1.png-d1f17925fb5fa3c0df867400aab2c5b9.s3tc.ctex", "res://.godot/imported/mReBody_Nrm1.png-d1f17925fb5fa3c0df867400aab2c5b9.etc2.ctex"]
 
 [params]
 

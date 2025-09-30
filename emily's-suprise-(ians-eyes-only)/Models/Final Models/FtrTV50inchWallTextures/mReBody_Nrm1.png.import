@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvl2gi4crnrdk"
 path.s3tc="res://.godot/imported/mReBody_Nrm1.png-13a09bf07e458751b35b244a3ddd3dca.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm1.png-13a09bf07e458751b35b244a3ddd3dca.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrTV50inchWallTextures/mReBody_Nrm1.png"
-dest_files=["res://.godot/imported/mReBody_Nrm1.png-13a09bf07e458751b35b244a3ddd3dca.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm1.png-13a09bf07e458751b35b244a3ddd3dca.s3tc.ctex", "res://.godot/imported/mReBody_Nrm1.png-13a09bf07e458751b35b244a3ddd3dca.etc2.ctex"]
 
 [params]
 

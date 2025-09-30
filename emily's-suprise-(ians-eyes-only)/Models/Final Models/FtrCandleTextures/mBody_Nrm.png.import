@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4eykf7ne0hl8"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-2c62863232a9e65c76849bf0abac51ae.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-2c62863232a9e65c76849bf0abac51ae.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCandleTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-2c62863232a9e65c76849bf0abac51ae.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-2c62863232a9e65c76849bf0abac51ae.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-2c62863232a9e65c76849bf0abac51ae.etc2.ctex"]
 
 [params]
 

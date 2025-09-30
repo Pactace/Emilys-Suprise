@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ggbbowfi2sgl"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-b49204f59ad912a300b5d3e11d0b8a3b.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-b49204f59ad912a300b5d3e11d0b8a3b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrShowerboothSquareTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-b49204f59ad912a300b5d3e11d0b8a3b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-b49204f59ad912a300b5d3e11d0b8a3b.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-b49204f59ad912a300b5d3e11d0b8a3b.etc2.ctex"]
 
 [params]
 

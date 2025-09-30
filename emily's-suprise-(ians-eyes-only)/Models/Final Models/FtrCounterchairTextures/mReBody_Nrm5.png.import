@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca52byomxpm6x"
 path.s3tc="res://.godot/imported/mReBody_Nrm5.png-3aca6e56c21fefcecdff5b6f463f5c1e.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm5.png-3aca6e56c21fefcecdff5b6f463f5c1e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCounterchairTextures/mReBody_Nrm5.png"
-dest_files=["res://.godot/imported/mReBody_Nrm5.png-3aca6e56c21fefcecdff5b6f463f5c1e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm5.png-3aca6e56c21fefcecdff5b6f463f5c1e.s3tc.ctex", "res://.godot/imported/mReBody_Nrm5.png-3aca6e56c21fefcecdff5b6f463f5c1e.etc2.ctex"]
 
 [params]
 

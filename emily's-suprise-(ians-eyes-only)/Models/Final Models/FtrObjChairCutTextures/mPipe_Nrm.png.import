@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://x3au2jcv3ee3"
 path.s3tc="res://.godot/imported/mPipe_Nrm.png-2c50467184251669ac158f947aeabeee.s3tc.ctex"
+path.etc2="res://.godot/imported/mPipe_Nrm.png-2c50467184251669ac158f947aeabeee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrObjChairCutTextures/mPipe_Nrm.png"
-dest_files=["res://.godot/imported/mPipe_Nrm.png-2c50467184251669ac158f947aeabeee.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPipe_Nrm.png-2c50467184251669ac158f947aeabeee.s3tc.ctex", "res://.godot/imported/mPipe_Nrm.png-2c50467184251669ac158f947aeabeee.etc2.ctex"]
 
 [params]
 

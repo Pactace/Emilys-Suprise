@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbw3a74s1usc5"
 path.s3tc="res://.godot/imported/mMirror_Alb.png-7b3fab69f20e6b0d21e0ebd1b54f94e8.s3tc.ctex"
+path.etc2="res://.godot/imported/mMirror_Alb.png-7b3fab69f20e6b0d21e0ebd1b54f94e8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRattanDresserTextures/mMirror_Alb.png"
-dest_files=["res://.godot/imported/mMirror_Alb.png-7b3fab69f20e6b0d21e0ebd1b54f94e8.s3tc.ctex"]
+dest_files=["res://.godot/imported/mMirror_Alb.png-7b3fab69f20e6b0d21e0ebd1b54f94e8.s3tc.ctex", "res://.godot/imported/mMirror_Alb.png-7b3fab69f20e6b0d21e0ebd1b54f94e8.etc2.ctex"]
 
 [params]
 

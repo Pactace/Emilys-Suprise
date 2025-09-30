@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhkssl86ep3fv"
 path.s3tc="res://.godot/imported/mFtrHarvestClocheEvent_Nrm.png-c6f839674ab60ab4ed81c8a2472cb368.s3tc.ctex"
+path.etc2="res://.godot/imported/mFtrHarvestClocheEvent_Nrm.png-c6f839674ab60ab4ed81c8a2472cb368.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHarvestClocheEventTextures/mFtrHarvestClocheEvent_Nrm.png"
-dest_files=["res://.godot/imported/mFtrHarvestClocheEvent_Nrm.png-c6f839674ab60ab4ed81c8a2472cb368.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestClocheEvent_Nrm.png-c6f839674ab60ab4ed81c8a2472cb368.s3tc.ctex", "res://.godot/imported/mFtrHarvestClocheEvent_Nrm.png-c6f839674ab60ab4ed81c8a2472cb368.etc2.ctex"]
 
 [params]
 

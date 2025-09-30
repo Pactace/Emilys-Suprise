@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dougputagvkf8"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-f85c920d4803a7ecb4e9c43d546d182c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-f85c920d4803a7ecb4e9c43d546d182c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBathHinokiTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-f85c920d4803a7ecb4e9c43d546d182c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-f85c920d4803a7ecb4e9c43d546d182c.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-f85c920d4803a7ecb4e9c43d546d182c.etc2.ctex"]
 
 [params]
 

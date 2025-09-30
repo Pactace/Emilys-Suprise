@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw4hm7cv4opvh"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-dd3b1777f61c9db606f68d385e6b97a6.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-dd3b1777f61c9db606f68d385e6b97a6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtNightWatchTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-dd3b1777f61c9db606f68d385e6b97a6.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-dd3b1777f61c9db606f68d385e6b97a6.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-dd3b1777f61c9db606f68d385e6b97a6.etc2.ctex"]
 
 [params]
 

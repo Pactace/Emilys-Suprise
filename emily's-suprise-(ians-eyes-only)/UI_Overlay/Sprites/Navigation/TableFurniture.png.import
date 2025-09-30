@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1doo6udsvffo"
 path.s3tc="res://.godot/imported/TableFurniture.png-c57bea6af36e0d058c2722c18945388c.s3tc.ctex"
+path.etc2="res://.godot/imported/TableFurniture.png-c57bea6af36e0d058c2722c18945388c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/TableFurniture.png"
-dest_files=["res://.godot/imported/TableFurniture.png-c57bea6af36e0d058c2722c18945388c.s3tc.ctex"]
+dest_files=["res://.godot/imported/TableFurniture.png-c57bea6af36e0d058c2722c18945388c.s3tc.ctex", "res://.godot/imported/TableFurniture.png-c57bea6af36e0d058c2722c18945388c.etc2.ctex"]
 
 [params]
 

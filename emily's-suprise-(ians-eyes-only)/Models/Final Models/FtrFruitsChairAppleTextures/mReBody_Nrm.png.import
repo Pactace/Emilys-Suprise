@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://depnm3h7m5ivj"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-5a27dad1da7a8d96acba19420d30e576.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-5a27dad1da7a8d96acba19420d30e576.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFruitsChairAppleTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-5a27dad1da7a8d96acba19420d30e576.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-5a27dad1da7a8d96acba19420d30e576.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-5a27dad1da7a8d96acba19420d30e576.etc2.ctex"]
 
 [params]
 

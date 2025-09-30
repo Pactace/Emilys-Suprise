@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cat8e27f4o3i8"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-6797ff3e0bc596aae51808711b3c8e42.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-6797ff3e0bc596aae51808711b3c8e42.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMikeBoneTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-6797ff3e0bc596aae51808711b3c8e42.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-6797ff3e0bc596aae51808711b3c8e42.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-6797ff3e0bc596aae51808711b3c8e42.etc2.ctex"]
 
 [params]
 

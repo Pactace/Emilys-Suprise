@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://btxc4ck3koedj"
 path.s3tc="res://.godot/imported/mReBody_Alb1.png-ec80477560b058a50c57091b513be01f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb1.png-ec80477560b058a50c57091b513be01f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrOpenshelfWoodTextures/mReBody_Alb1.png"
-dest_files=["res://.godot/imported/mReBody_Alb1.png-ec80477560b058a50c57091b513be01f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb1.png-ec80477560b058a50c57091b513be01f.s3tc.ctex", "res://.godot/imported/mReBody_Alb1.png-ec80477560b058a50c57091b513be01f.etc2.ctex"]
 
 [params]
 

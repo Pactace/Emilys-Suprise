@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c15pp3ogr2rfp"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-5ea4a7e54ccd293c728d8ca83ffda73a.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-5ea4a7e54ccd293c728d8ca83ffda73a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBucketsandsetVegetableTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-5ea4a7e54ccd293c728d8ca83ffda73a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-5ea4a7e54ccd293c728d8ca83ffda73a.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-5ea4a7e54ccd293c728d8ca83ffda73a.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvqbvsk1wdcn0"
 path.s3tc="res://.godot/imported/mReBody_Alb3.png-d371c177f439b7d3aba9042b4aebdbf1.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb3.png-d371c177f439b7d3aba9042b4aebdbf1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLogStoolSTextures/mReBody_Alb3.png"
-dest_files=["res://.godot/imported/mReBody_Alb3.png-d371c177f439b7d3aba9042b4aebdbf1.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb3.png-d371c177f439b7d3aba9042b4aebdbf1.s3tc.ctex", "res://.godot/imported/mReBody_Alb3.png-d371c177f439b7d3aba9042b4aebdbf1.etc2.ctex"]
 
 [params]
 

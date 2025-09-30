@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bateiv8d2qidk"
 path.s3tc="res://.godot/imported/mBody_Alb.png-62c8e58aee0c2f82c82ce5989c584b8a.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-62c8e58aee0c2f82c82ce5989c584b8a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMovingboxLTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-62c8e58aee0c2f82c82ce5989c584b8a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-62c8e58aee0c2f82c82ce5989c584b8a.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-62c8e58aee0c2f82c82ce5989c584b8a.etc2.ctex"]
 
 [params]
 

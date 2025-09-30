@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk83tjb251wff"
 path.s3tc="res://.godot/imported/mReBody_Alb1.png-6be75edd64a5aba44394b44e793232f4.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb1.png-6be75edd64a5aba44394b44e793232f4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrStoneovenTextures/mReBody_Alb1.png"
-dest_files=["res://.godot/imported/mReBody_Alb1.png-6be75edd64a5aba44394b44e793232f4.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb1.png-6be75edd64a5aba44394b44e793232f4.s3tc.ctex", "res://.godot/imported/mReBody_Alb1.png-6be75edd64a5aba44394b44e793232f4.etc2.ctex"]
 
 [params]
 

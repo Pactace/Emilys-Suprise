@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6ldea2k6jm0v"
 path.s3tc="res://.godot/imported/mPlant_Alb.png-9918196851e8a9e81154d59ea4908788.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Alb.png-9918196851e8a9e81154d59ea4908788.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPottedPlantTextures/mPlant_Alb.png"
-dest_files=["res://.godot/imported/mPlant_Alb.png-9918196851e8a9e81154d59ea4908788.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Alb.png-9918196851e8a9e81154d59ea4908788.s3tc.ctex", "res://.godot/imported/mPlant_Alb.png-9918196851e8a9e81154d59ea4908788.etc2.ctex"]
 
 [params]
 

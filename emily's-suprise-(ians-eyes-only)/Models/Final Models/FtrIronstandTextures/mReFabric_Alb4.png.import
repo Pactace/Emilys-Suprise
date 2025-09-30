@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckq3nlrkmdpq1"
 path.s3tc="res://.godot/imported/mReFabric_Alb4.png-cc829c02173794cd893a062b4a66db36.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb4.png-cc829c02173794cd893a062b4a66db36.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrIronstandTextures/mReFabric_Alb4.png"
-dest_files=["res://.godot/imported/mReFabric_Alb4.png-cc829c02173794cd893a062b4a66db36.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb4.png-cc829c02173794cd893a062b4a66db36.s3tc.ctex", "res://.godot/imported/mReFabric_Alb4.png-cc829c02173794cd893a062b4a66db36.etc2.ctex"]
 
 [params]
 

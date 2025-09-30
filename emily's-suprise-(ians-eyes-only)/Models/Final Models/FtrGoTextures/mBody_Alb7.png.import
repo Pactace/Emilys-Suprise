@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcxtc7nbfyoo3"
 path.s3tc="res://.godot/imported/mBody_Alb7.png-5ec4969e8cebf97f668c1cb09e98a33b.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb7.png-5ec4969e8cebf97f668c1cb09e98a33b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGoTextures/mBody_Alb7.png"
-dest_files=["res://.godot/imported/mBody_Alb7.png-5ec4969e8cebf97f668c1cb09e98a33b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb7.png-5ec4969e8cebf97f668c1cb09e98a33b.s3tc.ctex", "res://.godot/imported/mBody_Alb7.png-5ec4969e8cebf97f668c1cb09e98a33b.etc2.ctex"]
 
 [params]
 

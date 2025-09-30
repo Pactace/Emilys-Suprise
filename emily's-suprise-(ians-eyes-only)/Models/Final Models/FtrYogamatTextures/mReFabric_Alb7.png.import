@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cq25adfefisft"
 path.s3tc="res://.godot/imported/mReFabric_Alb7.png-cf78b9b7c475d1c81b820866bcce1be6.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb7.png-cf78b9b7c475d1c81b820866bcce1be6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrYogamatTextures/mReFabric_Alb7.png"
-dest_files=["res://.godot/imported/mReFabric_Alb7.png-cf78b9b7c475d1c81b820866bcce1be6.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb7.png-cf78b9b7c475d1c81b820866bcce1be6.s3tc.ctex", "res://.godot/imported/mReFabric_Alb7.png-cf78b9b7c475d1c81b820866bcce1be6.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bufcqhjmxioh"
 path.s3tc="res://.godot/imported/mFrame_Nrm.png-d1cc4900fb8a9dc19234000752cb2855.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm.png-d1cc4900fb8a9dc19234000752cb2855.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtBirthVenusTextures/mFrame_Nrm.png"
-dest_files=["res://.godot/imported/mFrame_Nrm.png-d1cc4900fb8a9dc19234000752cb2855.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm.png-d1cc4900fb8a9dc19234000752cb2855.s3tc.ctex", "res://.godot/imported/mFrame_Nrm.png-d1cc4900fb8a9dc19234000752cb2855.etc2.ctex"]
 
 [params]
 

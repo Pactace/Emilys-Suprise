@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8lgr5voljls2"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-4c11df6407f73c1d46702a01ed5f02da.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-4c11df6407f73c1d46702a01ed5f02da.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCushionCircleTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-4c11df6407f73c1d46702a01ed5f02da.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-4c11df6407f73c1d46702a01ed5f02da.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-4c11df6407f73c1d46702a01ed5f02da.etc2.ctex"]
 
 [params]
 

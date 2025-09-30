@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fpv8h2i3s07r"
 path.s3tc="res://.godot/imported/mReBody_Nrm4.png-4eb5214ba0c04737fd117836176bb6da.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm4.png-4eb5214ba0c04737fd117836176bb6da.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRattanLampTextures/mReBody_Nrm4.png"
-dest_files=["res://.godot/imported/mReBody_Nrm4.png-4eb5214ba0c04737fd117836176bb6da.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm4.png-4eb5214ba0c04737fd117836176bb6da.s3tc.ctex", "res://.godot/imported/mReBody_Nrm4.png-4eb5214ba0c04737fd117836176bb6da.etc2.ctex"]
 
 [params]
 

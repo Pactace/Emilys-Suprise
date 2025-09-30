@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://t6qi1eyr1j6f"
 path.s3tc="res://.godot/imported/mLight_Nrm.png-aadbc1464380ce60aa29df6e000b05e0.s3tc.ctex"
+path.etc2="res://.godot/imported/mLight_Nrm.png-aadbc1464380ce60aa29df6e000b05e0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrProjectorTextures/mLight_Nrm.png"
-dest_files=["res://.godot/imported/mLight_Nrm.png-aadbc1464380ce60aa29df6e000b05e0.s3tc.ctex"]
+dest_files=["res://.godot/imported/mLight_Nrm.png-aadbc1464380ce60aa29df6e000b05e0.s3tc.ctex", "res://.godot/imported/mLight_Nrm.png-aadbc1464380ce60aa29df6e000b05e0.etc2.ctex"]
 
 [params]
 

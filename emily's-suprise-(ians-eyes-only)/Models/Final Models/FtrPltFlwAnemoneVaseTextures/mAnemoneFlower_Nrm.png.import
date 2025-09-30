@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://hfmrnf12m6y7"
 path.s3tc="res://.godot/imported/mAnemoneFlower_Nrm.png-28b07953b95a81786ae657a7c78f47b9.s3tc.ctex"
+path.etc2="res://.godot/imported/mAnemoneFlower_Nrm.png-28b07953b95a81786ae657a7c78f47b9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwAnemoneVaseTextures/mAnemoneFlower_Nrm.png"
-dest_files=["res://.godot/imported/mAnemoneFlower_Nrm.png-28b07953b95a81786ae657a7c78f47b9.s3tc.ctex"]
+dest_files=["res://.godot/imported/mAnemoneFlower_Nrm.png-28b07953b95a81786ae657a7c78f47b9.s3tc.ctex", "res://.godot/imported/mAnemoneFlower_Nrm.png-28b07953b95a81786ae657a7c78f47b9.etc2.ctex"]
 
 [params]
 

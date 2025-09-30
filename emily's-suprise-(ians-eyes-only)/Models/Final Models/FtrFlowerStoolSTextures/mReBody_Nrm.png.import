@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dok4ygmhvegux"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-fa3e455f5e13b84e727a02cf5b15ed0a.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-fa3e455f5e13b84e727a02cf5b15ed0a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFlowerStoolSTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-fa3e455f5e13b84e727a02cf5b15ed0a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-fa3e455f5e13b84e727a02cf5b15ed0a.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-fa3e455f5e13b84e727a02cf5b15ed0a.etc2.ctex"]
 
 [params]
 

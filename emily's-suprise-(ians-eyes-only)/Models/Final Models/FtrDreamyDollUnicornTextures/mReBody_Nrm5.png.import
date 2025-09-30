@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cug16wax0rwwo"
 path.s3tc="res://.godot/imported/mReBody_Nrm5.png-960c504e56368cbc3c1c4faeedc9ae74.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm5.png-960c504e56368cbc3c1c4faeedc9ae74.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDreamyDollUnicornTextures/mReBody_Nrm5.png"
-dest_files=["res://.godot/imported/mReBody_Nrm5.png-960c504e56368cbc3c1c4faeedc9ae74.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm5.png-960c504e56368cbc3c1c4faeedc9ae74.s3tc.ctex", "res://.godot/imported/mReBody_Nrm5.png-960c504e56368cbc3c1c4faeedc9ae74.etc2.ctex"]
 
 [params]
 

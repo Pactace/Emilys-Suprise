@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtnivxa17pfos"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-89e48ef81e3443114dc09ab8152d7c16.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-89e48ef81e3443114dc09ab8152d7c16.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtPortraitCeciliaFakeTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-89e48ef81e3443114dc09ab8152d7c16.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-89e48ef81e3443114dc09ab8152d7c16.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-89e48ef81e3443114dc09ab8152d7c16.etc2.ctex"]
 
 [params]
 

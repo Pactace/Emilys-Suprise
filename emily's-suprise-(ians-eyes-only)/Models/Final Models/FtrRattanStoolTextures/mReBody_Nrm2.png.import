@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7c6i7im74gvd"
 path.s3tc="res://.godot/imported/mReBody_Nrm2.png-2b3e4e378c584706a6a41169972bdfdc.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm2.png-2b3e4e378c584706a6a41169972bdfdc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRattanStoolTextures/mReBody_Nrm2.png"
-dest_files=["res://.godot/imported/mReBody_Nrm2.png-2b3e4e378c584706a6a41169972bdfdc.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm2.png-2b3e4e378c584706a6a41169972bdfdc.s3tc.ctex", "res://.godot/imported/mReBody_Nrm2.png-2b3e4e378c584706a6a41169972bdfdc.etc2.ctex"]
 
 [params]
 

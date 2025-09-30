@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://de88tlnhsmxc0"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-0686bf495ed0d335cd0feefcc291531c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-0686bf495ed0d335cd0feefcc291531c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrKniferackWallTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-0686bf495ed0d335cd0feefcc291531c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-0686bf495ed0d335cd0feefcc291531c.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-0686bf495ed0d335cd0feefcc291531c.etc2.ctex"]
 
 [params]
 

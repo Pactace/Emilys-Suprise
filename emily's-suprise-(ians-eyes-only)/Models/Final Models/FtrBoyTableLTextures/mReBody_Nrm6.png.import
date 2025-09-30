@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqptkroh38rn1"
 path.s3tc="res://.godot/imported/mReBody_Nrm6.png-cc79332eeab0476ca4cc07449b2dfed1.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm6.png-cc79332eeab0476ca4cc07449b2dfed1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBoyTableLTextures/mReBody_Nrm6.png"
-dest_files=["res://.godot/imported/mReBody_Nrm6.png-cc79332eeab0476ca4cc07449b2dfed1.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm6.png-cc79332eeab0476ca4cc07449b2dfed1.s3tc.ctex", "res://.godot/imported/mReBody_Nrm6.png-cc79332eeab0476ca4cc07449b2dfed1.etc2.ctex"]
 
 [params]
 

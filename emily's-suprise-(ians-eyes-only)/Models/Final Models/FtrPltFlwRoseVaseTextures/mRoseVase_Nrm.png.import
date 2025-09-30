@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://du5lus2p8w078"
 path.s3tc="res://.godot/imported/mRoseVase_Nrm.png-5824f6a7048d1363ea52b952482e8635.s3tc.ctex"
+path.etc2="res://.godot/imported/mRoseVase_Nrm.png-5824f6a7048d1363ea52b952482e8635.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwRoseVaseTextures/mRoseVase_Nrm.png"
-dest_files=["res://.godot/imported/mRoseVase_Nrm.png-5824f6a7048d1363ea52b952482e8635.s3tc.ctex"]
+dest_files=["res://.godot/imported/mRoseVase_Nrm.png-5824f6a7048d1363ea52b952482e8635.s3tc.ctex", "res://.godot/imported/mRoseVase_Nrm.png-5824f6a7048d1363ea52b952482e8635.etc2.ctex"]
 
 [params]
 

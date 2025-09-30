@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsjnadu5tg83d"
 path.s3tc="res://.godot/imported/mReBody_Nrm4.png-0a345a00357de9cabe832c0d77115f37.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm4.png-0a345a00357de9cabe832c0d77115f37.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSconceWallTextures/mReBody_Nrm4.png"
-dest_files=["res://.godot/imported/mReBody_Nrm4.png-0a345a00357de9cabe832c0d77115f37.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm4.png-0a345a00357de9cabe832c0d77115f37.s3tc.ctex", "res://.godot/imported/mReBody_Nrm4.png-0a345a00357de9cabe832c0d77115f37.etc2.ctex"]
 
 [params]
 

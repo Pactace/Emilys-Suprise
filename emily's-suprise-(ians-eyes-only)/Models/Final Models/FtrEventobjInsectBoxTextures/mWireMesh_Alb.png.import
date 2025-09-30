@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctjx8teb8dsa3"
 path.s3tc="res://.godot/imported/mWireMesh_Alb.png-121e6e7f6e45ea5f4b232f2cea2e9647.s3tc.ctex"
+path.etc2="res://.godot/imported/mWireMesh_Alb.png-121e6e7f6e45ea5f4b232f2cea2e9647.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrEventobjInsectBoxTextures/mWireMesh_Alb.png"
-dest_files=["res://.godot/imported/mWireMesh_Alb.png-121e6e7f6e45ea5f4b232f2cea2e9647.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWireMesh_Alb.png-121e6e7f6e45ea5f4b232f2cea2e9647.s3tc.ctex", "res://.godot/imported/mWireMesh_Alb.png-121e6e7f6e45ea5f4b232f2cea2e9647.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7bswjhswcoes"
 path.s3tc="res://.godot/imported/mPlant_Nrm.png-53d93555ef753f56ac84728053c762a7.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Nrm.png-53d93555ef753f56ac84728053c762a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantMonsteraTextures/mPlant_Nrm.png"
-dest_files=["res://.godot/imported/mPlant_Nrm.png-53d93555ef753f56ac84728053c762a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Nrm.png-53d93555ef753f56ac84728053c762a7.s3tc.ctex", "res://.godot/imported/mPlant_Nrm.png-53d93555ef753f56ac84728053c762a7.etc2.ctex"]
 
 [params]
 

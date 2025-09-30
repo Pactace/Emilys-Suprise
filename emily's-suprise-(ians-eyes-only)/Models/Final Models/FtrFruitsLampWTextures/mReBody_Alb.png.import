@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dixm2pqqwf622"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-99f40112c0cebbe6cd8804f92cf33f90.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-99f40112c0cebbe6cd8804f92cf33f90.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFruitsLampWTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-99f40112c0cebbe6cd8804f92cf33f90.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-99f40112c0cebbe6cd8804f92cf33f90.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-99f40112c0cebbe6cd8804f92cf33f90.etc2.ctex"]
 
 [params]
 

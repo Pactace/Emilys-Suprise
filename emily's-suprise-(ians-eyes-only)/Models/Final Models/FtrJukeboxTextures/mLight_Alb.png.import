@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfmlcd5g3o1x7"
 path.s3tc="res://.godot/imported/mLight_Alb.png-872d078e6241a88a10d84ad31bedb47a.s3tc.ctex"
+path.etc2="res://.godot/imported/mLight_Alb.png-872d078e6241a88a10d84ad31bedb47a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrJukeboxTextures/mLight_Alb.png"
-dest_files=["res://.godot/imported/mLight_Alb.png-872d078e6241a88a10d84ad31bedb47a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mLight_Alb.png-872d078e6241a88a10d84ad31bedb47a.s3tc.ctex", "res://.godot/imported/mLight_Alb.png-872d078e6241a88a10d84ad31bedb47a.etc2.ctex"]
 
 [params]
 

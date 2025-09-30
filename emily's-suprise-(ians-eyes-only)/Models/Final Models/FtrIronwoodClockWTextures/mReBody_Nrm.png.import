@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://focch2c4v1od"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-da74d1821909e1e1b69efd38dcb9a87c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-da74d1821909e1e1b69efd38dcb9a87c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrIronwoodClockWTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-da74d1821909e1e1b69efd38dcb9a87c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-da74d1821909e1e1b69efd38dcb9a87c.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-da74d1821909e1e1b69efd38dcb9a87c.etc2.ctex"]
 
 [params]
 

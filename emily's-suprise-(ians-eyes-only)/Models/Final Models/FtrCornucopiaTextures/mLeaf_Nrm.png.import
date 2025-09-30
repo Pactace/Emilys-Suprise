@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://du3y8c81e08av"
 path.s3tc="res://.godot/imported/mLeaf_Nrm.png-b06e851a7b519142a06ec45d841e5deb.s3tc.ctex"
+path.etc2="res://.godot/imported/mLeaf_Nrm.png-b06e851a7b519142a06ec45d841e5deb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCornucopiaTextures/mLeaf_Nrm.png"
-dest_files=["res://.godot/imported/mLeaf_Nrm.png-b06e851a7b519142a06ec45d841e5deb.s3tc.ctex"]
+dest_files=["res://.godot/imported/mLeaf_Nrm.png-b06e851a7b519142a06ec45d841e5deb.s3tc.ctex", "res://.godot/imported/mLeaf_Nrm.png-b06e851a7b519142a06ec45d841e5deb.etc2.ctex"]
 
 [params]
 

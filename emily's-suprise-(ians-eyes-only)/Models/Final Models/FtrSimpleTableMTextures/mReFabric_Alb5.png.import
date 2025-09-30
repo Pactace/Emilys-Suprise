@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlfs1hp1pgomb"
 path.s3tc="res://.godot/imported/mReFabric_Alb5.png-ebe3a410c91108f53b277aa8e7bf9366.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb5.png-ebe3a410c91108f53b277aa8e7bf9366.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSimpleTableMTextures/mReFabric_Alb5.png"
-dest_files=["res://.godot/imported/mReFabric_Alb5.png-ebe3a410c91108f53b277aa8e7bf9366.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb5.png-ebe3a410c91108f53b277aa8e7bf9366.s3tc.ctex", "res://.godot/imported/mReFabric_Alb5.png-ebe3a410c91108f53b277aa8e7bf9366.etc2.ctex"]
 
 [params]
 

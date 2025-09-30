@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2u6f7d6xiyr5"
 path.s3tc="res://.godot/imported/mAlpha_Nrm.png-9dc2c614a22d3923202aabf6cba4f158.s3tc.ctex"
+path.etc2="res://.godot/imported/mAlpha_Nrm.png-9dc2c614a22d3923202aabf6cba4f158.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrExperimentsetTextures/mAlpha_Nrm.png"
-dest_files=["res://.godot/imported/mAlpha_Nrm.png-9dc2c614a22d3923202aabf6cba4f158.s3tc.ctex"]
+dest_files=["res://.godot/imported/mAlpha_Nrm.png-9dc2c614a22d3923202aabf6cba4f158.s3tc.ctex", "res://.godot/imported/mAlpha_Nrm.png-9dc2c614a22d3923202aabf6cba4f158.etc2.ctex"]
 
 [params]
 

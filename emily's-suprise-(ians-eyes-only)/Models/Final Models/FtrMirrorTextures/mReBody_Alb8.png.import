@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vcidaeo24gh4"
 path.s3tc="res://.godot/imported/mReBody_Alb8.png-ff5657a32ff28520a164a74a4757abf8.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb8.png-ff5657a32ff28520a164a74a4757abf8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMirrorTextures/mReBody_Alb8.png"
-dest_files=["res://.godot/imported/mReBody_Alb8.png-ff5657a32ff28520a164a74a4757abf8.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb8.png-ff5657a32ff28520a164a74a4757abf8.s3tc.ctex", "res://.godot/imported/mReBody_Alb8.png-ff5657a32ff28520a164a74a4757abf8.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://uhtomcr3phhn"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-2c74e99b832b8b573f98848d117d310f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-2c74e99b832b8b573f98848d117d310f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSewingmachineTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-2c74e99b832b8b573f98848d117d310f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-2c74e99b832b8b573f98848d117d310f.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-2c74e99b832b8b573f98848d117d310f.etc2.ctex"]
 
 [params]
 

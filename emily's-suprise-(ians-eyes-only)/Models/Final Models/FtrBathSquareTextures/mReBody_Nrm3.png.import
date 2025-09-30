@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://x0uesf4rh5yd"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-de0b4fd2c81ee59826f8eb707690ddaf.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-de0b4fd2c81ee59826f8eb707690ddaf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBathSquareTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-de0b4fd2c81ee59826f8eb707690ddaf.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-de0b4fd2c81ee59826f8eb707690ddaf.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-de0b4fd2c81ee59826f8eb707690ddaf.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://djthcscfftfog"
 path.s3tc="res://.godot/imported/mWindow_Nrm.png-4f038cc9d536f22f164278ec3464540b.s3tc.ctex"
+path.etc2="res://.godot/imported/mWindow_Nrm.png-4f038cc9d536f22f164278ec3464540b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWashingMachineTextures/mWindow_Nrm.png"
-dest_files=["res://.godot/imported/mWindow_Nrm.png-4f038cc9d536f22f164278ec3464540b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWindow_Nrm.png-4f038cc9d536f22f164278ec3464540b.s3tc.ctex", "res://.godot/imported/mWindow_Nrm.png-4f038cc9d536f22f164278ec3464540b.etc2.ctex"]
 
 [params]
 

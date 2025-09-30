@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdt3b7bxlq4lp"
 path.s3tc="res://.godot/imported/mReBody_Alb5.png-3b497e4414b12b3bbd6e2d7b83431e3f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb5.png-3b497e4414b12b3bbd6e2d7b83431e3f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMomCushionTextures/mReBody_Alb5.png"
-dest_files=["res://.godot/imported/mReBody_Alb5.png-3b497e4414b12b3bbd6e2d7b83431e3f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb5.png-3b497e4414b12b3bbd6e2d7b83431e3f.s3tc.ctex", "res://.godot/imported/mReBody_Alb5.png-3b497e4414b12b3bbd6e2d7b83431e3f.etc2.ctex"]
 
 [params]
 

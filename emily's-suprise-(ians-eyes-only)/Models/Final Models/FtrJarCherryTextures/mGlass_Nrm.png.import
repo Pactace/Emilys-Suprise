@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7fb4edqcjrtb"
 path.s3tc="res://.godot/imported/mGlass_Nrm.png-bac5f66edda57dcc12ff8b7299be591d.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlass_Nrm.png-bac5f66edda57dcc12ff8b7299be591d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrJarCherryTextures/mGlass_Nrm.png"
-dest_files=["res://.godot/imported/mGlass_Nrm.png-bac5f66edda57dcc12ff8b7299be591d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlass_Nrm.png-bac5f66edda57dcc12ff8b7299be591d.s3tc.ctex", "res://.godot/imported/mGlass_Nrm.png-bac5f66edda57dcc12ff8b7299be591d.etc2.ctex"]
 
 [params]
 

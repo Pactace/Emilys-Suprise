@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fgnihaleprxp"
 path.s3tc="res://.godot/imported/mFtrEventBalloon1_Nrm.png-49dfd4e6e0a5956ac496b66389313eef.s3tc.ctex"
+path.etc2="res://.godot/imported/mFtrEventBalloon1_Nrm.png-49dfd4e6e0a5956ac496b66389313eef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrEventBalloon1Textures/mFtrEventBalloon1_Nrm.png"
-dest_files=["res://.godot/imported/mFtrEventBalloon1_Nrm.png-49dfd4e6e0a5956ac496b66389313eef.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFtrEventBalloon1_Nrm.png-49dfd4e6e0a5956ac496b66389313eef.s3tc.ctex", "res://.godot/imported/mFtrEventBalloon1_Nrm.png-49dfd4e6e0a5956ac496b66389313eef.etc2.ctex"]
 
 [params]
 

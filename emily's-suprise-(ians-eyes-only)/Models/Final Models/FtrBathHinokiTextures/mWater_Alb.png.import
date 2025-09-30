@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctmesw654u7ay"
 path.s3tc="res://.godot/imported/mWater_Alb.png-d3ad01bb8e39134035ded10288fb174b.s3tc.ctex"
+path.etc2="res://.godot/imported/mWater_Alb.png-d3ad01bb8e39134035ded10288fb174b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBathHinokiTextures/mWater_Alb.png"
-dest_files=["res://.godot/imported/mWater_Alb.png-d3ad01bb8e39134035ded10288fb174b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWater_Alb.png-d3ad01bb8e39134035ded10288fb174b.s3tc.ctex", "res://.godot/imported/mWater_Alb.png-d3ad01bb8e39134035ded10288fb174b.etc2.ctex"]
 
 [params]
 

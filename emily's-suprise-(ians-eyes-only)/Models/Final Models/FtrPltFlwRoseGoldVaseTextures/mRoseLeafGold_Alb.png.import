@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckb4x1thm6ejj"
 path.s3tc="res://.godot/imported/mRoseLeafGold_Alb.png-bdacd67fd237d37f7b780c70f4a17e6e.s3tc.ctex"
+path.etc2="res://.godot/imported/mRoseLeafGold_Alb.png-bdacd67fd237d37f7b780c70f4a17e6e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwRoseGoldVaseTextures/mRoseLeafGold_Alb.png"
-dest_files=["res://.godot/imported/mRoseLeafGold_Alb.png-bdacd67fd237d37f7b780c70f4a17e6e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mRoseLeafGold_Alb.png-bdacd67fd237d37f7b780c70f4a17e6e.s3tc.ctex", "res://.godot/imported/mRoseLeafGold_Alb.png-bdacd67fd237d37f7b780c70f4a17e6e.etc2.ctex"]
 
 [params]
 

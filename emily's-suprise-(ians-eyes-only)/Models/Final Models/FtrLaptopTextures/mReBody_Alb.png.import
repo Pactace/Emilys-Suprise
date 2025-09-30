@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dah6mb4kp7oc8"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-f00370096e291555b145052fe543eace.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-f00370096e291555b145052fe543eace.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLaptopTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-f00370096e291555b145052fe543eace.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-f00370096e291555b145052fe543eace.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-f00370096e291555b145052fe543eace.etc2.ctex"]
 
 [params]
 

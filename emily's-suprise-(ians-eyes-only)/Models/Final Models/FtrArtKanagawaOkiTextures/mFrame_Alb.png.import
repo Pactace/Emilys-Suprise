@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://clxwx5ybxcojh"
 path.s3tc="res://.godot/imported/mFrame_Alb.png-dcc3cca310fdfb688b73b04a8a05aa86.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Alb.png-dcc3cca310fdfb688b73b04a8a05aa86.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtKanagawaOkiTextures/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-dcc3cca310fdfb688b73b04a8a05aa86.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-dcc3cca310fdfb688b73b04a8a05aa86.s3tc.ctex", "res://.godot/imported/mFrame_Alb.png-dcc3cca310fdfb688b73b04a8a05aa86.etc2.ctex"]
 
 [params]
 

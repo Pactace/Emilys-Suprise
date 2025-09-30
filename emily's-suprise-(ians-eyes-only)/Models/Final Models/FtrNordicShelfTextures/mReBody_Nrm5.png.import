@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dutd751kh14rg"
 path.s3tc="res://.godot/imported/mReBody_Nrm5.png-64eb44158878c2c110908eab0e0aa346.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm5.png-64eb44158878c2c110908eab0e0aa346.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrNordicShelfTextures/mReBody_Nrm5.png"
-dest_files=["res://.godot/imported/mReBody_Nrm5.png-64eb44158878c2c110908eab0e0aa346.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm5.png-64eb44158878c2c110908eab0e0aa346.s3tc.ctex", "res://.godot/imported/mReBody_Nrm5.png-64eb44158878c2c110908eab0e0aa346.etc2.ctex"]
 
 [params]
 

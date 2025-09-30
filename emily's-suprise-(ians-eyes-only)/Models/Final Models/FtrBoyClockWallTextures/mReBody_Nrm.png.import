@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bef51v6a67fvx"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-7030fc692f7ab4dbde9896ce3607617f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-7030fc692f7ab4dbde9896ce3607617f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBoyClockWallTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-7030fc692f7ab4dbde9896ce3607617f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-7030fc692f7ab4dbde9896ce3607617f.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-7030fc692f7ab4dbde9896ce3607617f.etc2.ctex"]
 
 [params]
 

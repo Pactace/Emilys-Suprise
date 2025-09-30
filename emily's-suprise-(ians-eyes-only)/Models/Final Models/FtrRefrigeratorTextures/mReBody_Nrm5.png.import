@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu1h7yqm1rgkj"
 path.s3tc="res://.godot/imported/mReBody_Nrm5.png-a3980478b5ac1fa096912c3d8b220c0c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm5.png-a3980478b5ac1fa096912c3d8b220c0c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRefrigeratorTextures/mReBody_Nrm5.png"
-dest_files=["res://.godot/imported/mReBody_Nrm5.png-a3980478b5ac1fa096912c3d8b220c0c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm5.png-a3980478b5ac1fa096912c3d8b220c0c.s3tc.ctex", "res://.godot/imported/mReBody_Nrm5.png-a3980478b5ac1fa096912c3d8b220c0c.etc2.ctex"]
 
 [params]
 

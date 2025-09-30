@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk8dp2w1gvdkp"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-41d36c1be8dce35973ca0295ae2e3c40.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-41d36c1be8dce35973ca0295ae2e3c40.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGoldBathSquareTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-41d36c1be8dce35973ca0295ae2e3c40.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-41d36c1be8dce35973ca0295ae2e3c40.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-41d36c1be8dce35973ca0295ae2e3c40.etc2.ctex"]
 
 [params]
 

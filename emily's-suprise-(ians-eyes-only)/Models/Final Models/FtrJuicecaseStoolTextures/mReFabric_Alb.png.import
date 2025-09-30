@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cptwl3551misg"
 path.s3tc="res://.godot/imported/mReFabric_Alb.png-4825b5f5a4b9454f5c6ffd5d24de7361.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb.png-4825b5f5a4b9454f5c6ffd5d24de7361.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrJuicecaseStoolTextures/mReFabric_Alb.png"
-dest_files=["res://.godot/imported/mReFabric_Alb.png-4825b5f5a4b9454f5c6ffd5d24de7361.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb.png-4825b5f5a4b9454f5c6ffd5d24de7361.s3tc.ctex", "res://.godot/imported/mReFabric_Alb.png-4825b5f5a4b9454f5c6ffd5d24de7361.etc2.ctex"]
 
 [params]
 

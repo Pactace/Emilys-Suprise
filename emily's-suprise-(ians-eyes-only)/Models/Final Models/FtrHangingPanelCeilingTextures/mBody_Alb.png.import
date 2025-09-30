@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvccpnoim6npa"
 path.s3tc="res://.godot/imported/mBody_Alb.png-df1f5aef01406754e11a1c12636f30eb.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-df1f5aef01406754e11a1c12636f30eb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHangingPanelCeilingTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-df1f5aef01406754e11a1c12636f30eb.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-df1f5aef01406754e11a1c12636f30eb.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-df1f5aef01406754e11a1c12636f30eb.etc2.ctex"]
 
 [params]
 

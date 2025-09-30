@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2txtxapiausx"
 path.s3tc="res://.godot/imported/mFrame_Alb1.png-9e92c430fe4a4c4dd147de8d1f93ff21.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Alb1.png-9e92c430fe4a4c4dd147de8d1f93ff21.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtRaijinTextures/mFrame_Alb1.png"
-dest_files=["res://.godot/imported/mFrame_Alb1.png-9e92c430fe4a4c4dd147de8d1f93ff21.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb1.png-9e92c430fe4a4c4dd147de8d1f93ff21.s3tc.ctex", "res://.godot/imported/mFrame_Alb1.png-9e92c430fe4a4c4dd147de8d1f93ff21.etc2.ctex"]
 
 [params]
 

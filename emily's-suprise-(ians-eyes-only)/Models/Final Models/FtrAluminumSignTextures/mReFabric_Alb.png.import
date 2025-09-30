@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvrgavsyeyf2r"
 path.s3tc="res://.godot/imported/mReFabric_Alb.png-7cc4f6cc811cf49f0656795001ee11ef.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb.png-7cc4f6cc811cf49f0656795001ee11ef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrAluminumSignTextures/mReFabric_Alb.png"
-dest_files=["res://.godot/imported/mReFabric_Alb.png-7cc4f6cc811cf49f0656795001ee11ef.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb.png-7cc4f6cc811cf49f0656795001ee11ef.s3tc.ctex", "res://.godot/imported/mReFabric_Alb.png-7cc4f6cc811cf49f0656795001ee11ef.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b05rr8w55ace1"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-f23da7de2b357d096839628e0c2625df.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-f23da7de2b357d096839628e0c2625df.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrChairTakumiTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-f23da7de2b357d096839628e0c2625df.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-f23da7de2b357d096839628e0c2625df.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-f23da7de2b357d096839628e0c2625df.etc2.ctex"]
 
 [params]
 

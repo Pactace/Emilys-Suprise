@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfx6ipxgsqdtx"
 path.s3tc="res://.godot/imported/mFrame_Alb.png-ea9308eedd3d4139441fe38f3e1cfd34.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Alb.png-ea9308eedd3d4139441fe38f3e1cfd34.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtStarryNightTextures/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-ea9308eedd3d4139441fe38f3e1cfd34.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-ea9308eedd3d4139441fe38f3e1cfd34.s3tc.ctex", "res://.godot/imported/mFrame_Alb.png-ea9308eedd3d4139441fe38f3e1cfd34.etc2.ctex"]
 
 [params]
 

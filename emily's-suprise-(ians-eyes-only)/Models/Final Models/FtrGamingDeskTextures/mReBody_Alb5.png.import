@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6b5jrt2k8i1v"
 path.s3tc="res://.godot/imported/mReBody_Alb5.png-830ba10368a60c0babc213eb0b977ccf.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb5.png-830ba10368a60c0babc213eb0b977ccf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrGamingDeskTextures/mReBody_Alb5.png"
-dest_files=["res://.godot/imported/mReBody_Alb5.png-830ba10368a60c0babc213eb0b977ccf.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb5.png-830ba10368a60c0babc213eb0b977ccf.s3tc.ctex", "res://.godot/imported/mReBody_Alb5.png-830ba10368a60c0babc213eb0b977ccf.etc2.ctex"]
 
 [params]
 

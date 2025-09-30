@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5k2pctgwhxba"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-72a7b8930644d3d55622a1fb5f76234e.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-72a7b8930644d3d55622a1fb5f76234e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrAmeretroClockTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-72a7b8930644d3d55622a1fb5f76234e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-72a7b8930644d3d55622a1fb5f76234e.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-72a7b8930644d3d55622a1fb5f76234e.etc2.ctex"]
 
 [params]
 

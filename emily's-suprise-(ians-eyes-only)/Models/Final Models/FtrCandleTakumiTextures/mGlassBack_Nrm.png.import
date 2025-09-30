@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0hhro5f5ynan"
 path.s3tc="res://.godot/imported/mGlassBack_Nrm.png-0f0c87ee4495967aa0d7ae547bce6ddf.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlassBack_Nrm.png-0f0c87ee4495967aa0d7ae547bce6ddf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCandleTakumiTextures/mGlassBack_Nrm.png"
-dest_files=["res://.godot/imported/mGlassBack_Nrm.png-0f0c87ee4495967aa0d7ae547bce6ddf.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Nrm.png-0f0c87ee4495967aa0d7ae547bce6ddf.s3tc.ctex", "res://.godot/imported/mGlassBack_Nrm.png-0f0c87ee4495967aa0d7ae547bce6ddf.etc2.ctex"]
 
 [params]
 

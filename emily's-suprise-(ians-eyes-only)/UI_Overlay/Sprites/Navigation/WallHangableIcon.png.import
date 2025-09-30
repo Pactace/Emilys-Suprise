@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu6vniyypuybb"
 path.s3tc="res://.godot/imported/WallHangableIcon.png-2fa770b49d6c3779891078d0e46912f9.s3tc.ctex"
+path.etc2="res://.godot/imported/WallHangableIcon.png-2fa770b49d6c3779891078d0e46912f9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/WallHangableIcon.png"
-dest_files=["res://.godot/imported/WallHangableIcon.png-2fa770b49d6c3779891078d0e46912f9.s3tc.ctex"]
+dest_files=["res://.godot/imported/WallHangableIcon.png-2fa770b49d6c3779891078d0e46912f9.s3tc.ctex", "res://.godot/imported/WallHangableIcon.png-2fa770b49d6c3779891078d0e46912f9.etc2.ctex"]
 
 [params]
 

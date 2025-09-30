@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3jplscuum5gx"
 path.s3tc="res://.godot/imported/mReBody_Nrm2.png-2176126ae6e2899aa67b20326c5c120a.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm2.png-2176126ae6e2899aa67b20326c5c120a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHangingShelfCeilingTextures/mReBody_Nrm2.png"
-dest_files=["res://.godot/imported/mReBody_Nrm2.png-2176126ae6e2899aa67b20326c5c120a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm2.png-2176126ae6e2899aa67b20326c5c120a.s3tc.ctex", "res://.godot/imported/mReBody_Nrm2.png-2176126ae6e2899aa67b20326c5c120a.etc2.ctex"]
 
 [params]
 

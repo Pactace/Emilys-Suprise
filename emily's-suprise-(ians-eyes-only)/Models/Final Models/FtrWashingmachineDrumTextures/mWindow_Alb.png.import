@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4q25p2o57vsu"
 path.s3tc="res://.godot/imported/mWindow_Alb.png-c38e630c94931ab2b4cfe0c46ce4f562.s3tc.ctex"
+path.etc2="res://.godot/imported/mWindow_Alb.png-c38e630c94931ab2b4cfe0c46ce4f562.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWashingmachineDrumTextures/mWindow_Alb.png"
-dest_files=["res://.godot/imported/mWindow_Alb.png-c38e630c94931ab2b4cfe0c46ce4f562.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWindow_Alb.png-c38e630c94931ab2b4cfe0c46ce4f562.s3tc.ctex", "res://.godot/imported/mWindow_Alb.png-c38e630c94931ab2b4cfe0c46ce4f562.etc2.ctex"]
 
 [params]
 

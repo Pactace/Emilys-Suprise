@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfl51i8c8an3j"
 path.s3tc="res://.godot/imported/mBody_Nrm.png-773abd7f4b755b1420ba284d28eb6794.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm.png-773abd7f4b755b1420ba284d28eb6794.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCoconutjuiceTextures/mBody_Nrm.png"
-dest_files=["res://.godot/imported/mBody_Nrm.png-773abd7f4b755b1420ba284d28eb6794.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm.png-773abd7f4b755b1420ba284d28eb6794.s3tc.ctex", "res://.godot/imported/mBody_Nrm.png-773abd7f4b755b1420ba284d28eb6794.etc2.ctex"]
 
 [params]
 

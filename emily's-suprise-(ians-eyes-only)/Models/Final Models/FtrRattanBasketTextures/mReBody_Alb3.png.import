@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drmrplr48idv1"
 path.s3tc="res://.godot/imported/mReBody_Alb3.png-458093aa824b96d9f2929d25e4013917.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb3.png-458093aa824b96d9f2929d25e4013917.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRattanBasketTextures/mReBody_Alb3.png"
-dest_files=["res://.godot/imported/mReBody_Alb3.png-458093aa824b96d9f2929d25e4013917.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb3.png-458093aa824b96d9f2929d25e4013917.s3tc.ctex", "res://.godot/imported/mReBody_Alb3.png-458093aa824b96d9f2929d25e4013917.etc2.ctex"]
 
 [params]
 

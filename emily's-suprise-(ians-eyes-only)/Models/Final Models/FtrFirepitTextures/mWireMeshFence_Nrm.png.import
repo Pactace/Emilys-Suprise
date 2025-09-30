@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8spb7g3landu"
 path.s3tc="res://.godot/imported/mWireMeshFence_Nrm.png-e00831809eeab3533543f6e985a7c965.s3tc.ctex"
+path.etc2="res://.godot/imported/mWireMeshFence_Nrm.png-e00831809eeab3533543f6e985a7c965.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFirepitTextures/mWireMeshFence_Nrm.png"
-dest_files=["res://.godot/imported/mWireMeshFence_Nrm.png-e00831809eeab3533543f6e985a7c965.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWireMeshFence_Nrm.png-e00831809eeab3533543f6e985a7c965.s3tc.ctex", "res://.godot/imported/mWireMeshFence_Nrm.png-e00831809eeab3533543f6e985a7c965.etc2.ctex"]
 
 [params]
 

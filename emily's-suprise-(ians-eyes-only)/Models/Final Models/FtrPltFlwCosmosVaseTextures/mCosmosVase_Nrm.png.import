@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7a0qnc1rxwa3"
 path.s3tc="res://.godot/imported/mCosmosVase_Nrm.png-720a88d9810e114a7a09ed033ce0339e.s3tc.ctex"
+path.etc2="res://.godot/imported/mCosmosVase_Nrm.png-720a88d9810e114a7a09ed033ce0339e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwCosmosVaseTextures/mCosmosVase_Nrm.png"
-dest_files=["res://.godot/imported/mCosmosVase_Nrm.png-720a88d9810e114a7a09ed033ce0339e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mCosmosVase_Nrm.png-720a88d9810e114a7a09ed033ce0339e.s3tc.ctex", "res://.godot/imported/mCosmosVase_Nrm.png-720a88d9810e114a7a09ed033ce0339e.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcj5iihqi4y3k"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-dcc9e501cec1fcc9c6a3c65c895994bb.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-dcc9e501cec1fcc9c6a3c65c895994bb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrRockinghorseTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-dcc9e501cec1fcc9c6a3c65c895994bb.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-dcc9e501cec1fcc9c6a3c65c895994bb.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-dcc9e501cec1fcc9c6a3c65c895994bb.etc2.ctex"]
 
 [params]
 

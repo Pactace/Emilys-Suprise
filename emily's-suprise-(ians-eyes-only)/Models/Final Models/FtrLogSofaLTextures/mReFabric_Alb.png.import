@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://kruyhqkf1om2"
 path.s3tc="res://.godot/imported/mReFabric_Alb.png-a037111c9736b94f9b13a6d2eb14e328.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb.png-a037111c9736b94f9b13a6d2eb14e328.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLogSofaLTextures/mReFabric_Alb.png"
-dest_files=["res://.godot/imported/mReFabric_Alb.png-a037111c9736b94f9b13a6d2eb14e328.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb.png-a037111c9736b94f9b13a6d2eb14e328.s3tc.ctex", "res://.godot/imported/mReFabric_Alb.png-a037111c9736b94f9b13a6d2eb14e328.etc2.ctex"]
 
 [params]
 

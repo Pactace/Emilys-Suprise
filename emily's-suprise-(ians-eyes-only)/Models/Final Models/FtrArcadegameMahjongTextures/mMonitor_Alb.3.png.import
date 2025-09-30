@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnhnc25ve1sje"
 path.s3tc="res://.godot/imported/mMonitor_Alb.3.png-dcfa782bad9e5d90d9c5e2c5091962be.s3tc.ctex"
+path.etc2="res://.godot/imported/mMonitor_Alb.3.png-dcfa782bad9e5d90d9c5e2c5091962be.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArcadegameMahjongTextures/mMonitor_Alb.3.png"
-dest_files=["res://.godot/imported/mMonitor_Alb.3.png-dcfa782bad9e5d90d9c5e2c5091962be.s3tc.ctex"]
+dest_files=["res://.godot/imported/mMonitor_Alb.3.png-dcfa782bad9e5d90d9c5e2c5091962be.s3tc.ctex", "res://.godot/imported/mMonitor_Alb.3.png-dcfa782bad9e5d90d9c5e2c5091962be.etc2.ctex"]
 
 [params]
 

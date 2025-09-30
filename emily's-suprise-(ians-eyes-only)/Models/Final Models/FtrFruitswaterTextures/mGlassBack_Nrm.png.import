@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmpsglbn4fbqd"
 path.s3tc="res://.godot/imported/mGlassBack_Nrm.png-1f9c5ff313979fadfd90ff4c8f20f446.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlassBack_Nrm.png-1f9c5ff313979fadfd90ff4c8f20f446.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFruitswaterTextures/mGlassBack_Nrm.png"
-dest_files=["res://.godot/imported/mGlassBack_Nrm.png-1f9c5ff313979fadfd90ff4c8f20f446.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Nrm.png-1f9c5ff313979fadfd90ff4c8f20f446.s3tc.ctex", "res://.godot/imported/mGlassBack_Nrm.png-1f9c5ff313979fadfd90ff4c8f20f446.etc2.ctex"]
 
 [params]
 

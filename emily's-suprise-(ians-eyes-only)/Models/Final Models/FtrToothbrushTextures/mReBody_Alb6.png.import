@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkw1eya8br8s3"
 path.s3tc="res://.godot/imported/mReBody_Alb6.png-fa4f6f53c7957fd765ad70b9d07e7882.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb6.png-fa4f6f53c7957fd765ad70b9d07e7882.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrToothbrushTextures/mReBody_Alb6.png"
-dest_files=["res://.godot/imported/mReBody_Alb6.png-fa4f6f53c7957fd765ad70b9d07e7882.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb6.png-fa4f6f53c7957fd765ad70b9d07e7882.s3tc.ctex", "res://.godot/imported/mReBody_Alb6.png-fa4f6f53c7957fd765ad70b9d07e7882.etc2.ctex"]
 
 [params]
 

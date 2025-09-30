@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm13vxl130q0o"
 path.s3tc="res://.godot/imported/mFtrEventLiveChair_Alb.png-e9b9830e4f36cb0d36f4c4f5c1271401.s3tc.ctex"
+path.etc2="res://.godot/imported/mFtrEventLiveChair_Alb.png-e9b9830e4f36cb0d36f4c4f5c1271401.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrEventLiveChairTextures/mFtrEventLiveChair_Alb.png"
-dest_files=["res://.godot/imported/mFtrEventLiveChair_Alb.png-e9b9830e4f36cb0d36f4c4f5c1271401.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFtrEventLiveChair_Alb.png-e9b9830e4f36cb0d36f4c4f5c1271401.s3tc.ctex", "res://.godot/imported/mFtrEventLiveChair_Alb.png-e9b9830e4f36cb0d36f4c4f5c1271401.etc2.ctex"]
 
 [params]
 

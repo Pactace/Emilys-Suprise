@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3qrrj5jjnyro"
 path.s3tc="res://.godot/imported/mFrame_Nrm.png-7f8271e54ca994c7739643a5cc325939.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Nrm.png-7f8271e54ca994c7739643a5cc325939.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtFightingTemeraireTextures/mFrame_Nrm.png"
-dest_files=["res://.godot/imported/mFrame_Nrm.png-7f8271e54ca994c7739643a5cc325939.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Nrm.png-7f8271e54ca994c7739643a5cc325939.s3tc.ctex", "res://.godot/imported/mFrame_Nrm.png-7f8271e54ca994c7739643a5cc325939.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxs8ugbnft7s8"
 path.s3tc="res://.godot/imported/mFrame_Alb.png-cc12efe2390fe5d228bfad808235a67e.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Alb.png-cc12efe2390fe5d228bfad808235a67e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtLasMeninasFakeTextures/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-cc12efe2390fe5d228bfad808235a67e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-cc12efe2390fe5d228bfad808235a67e.s3tc.ctex", "res://.godot/imported/mFrame_Alb.png-cc12efe2390fe5d228bfad808235a67e.etc2.ctex"]
 
 [params]
 

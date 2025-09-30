@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1bj8v4xmp8w6"
 path.s3tc="res://.godot/imported/mTv_Alb.png-175b7591ef20f539921df5f2429169ab.s3tc.ctex"
+path.etc2="res://.godot/imported/mTv_Alb.png-175b7591ef20f539921df5f2429169ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrTV20inchTextures/mTv_Alb.png"
-dest_files=["res://.godot/imported/mTv_Alb.png-175b7591ef20f539921df5f2429169ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/mTv_Alb.png-175b7591ef20f539921df5f2429169ab.s3tc.ctex", "res://.godot/imported/mTv_Alb.png-175b7591ef20f539921df5f2429169ab.etc2.ctex"]
 
 [params]
 

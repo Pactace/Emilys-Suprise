@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6mha5key2k08"
 path.s3tc="res://.godot/imported/mBody_Alb.png-f522e9c6daa1b477e2a76cb72e792a5c.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-f522e9c6daa1b477e2a76cb72e792a5c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFlourSugarTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-f522e9c6daa1b477e2a76cb72e792a5c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-f522e9c6daa1b477e2a76cb72e792a5c.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-f522e9c6daa1b477e2a76cb72e792a5c.etc2.ctex"]
 
 [params]
 

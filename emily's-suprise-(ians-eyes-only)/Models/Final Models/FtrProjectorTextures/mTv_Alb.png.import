@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgo7j8bxxtw00"
 path.s3tc="res://.godot/imported/mTv_Alb.png-1bf81ec0ff3625b4ce51ca3623796f4d.s3tc.ctex"
+path.etc2="res://.godot/imported/mTv_Alb.png-1bf81ec0ff3625b4ce51ca3623796f4d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrProjectorTextures/mTv_Alb.png"
-dest_files=["res://.godot/imported/mTv_Alb.png-1bf81ec0ff3625b4ce51ca3623796f4d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mTv_Alb.png-1bf81ec0ff3625b4ce51ca3623796f4d.s3tc.ctex", "res://.godot/imported/mTv_Alb.png-1bf81ec0ff3625b4ce51ca3623796f4d.etc2.ctex"]
 
 [params]
 

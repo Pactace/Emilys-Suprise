@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3hi8vlq0kgva"
 path.s3tc="res://.godot/imported/mReBody_Alb3.png-9ffa03ce0ad33e7d00e9763ee79c4b34.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb3.png-9ffa03ce0ad33e7d00e9763ee79c4b34.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrIrongardenChairTextures/mReBody_Alb3.png"
-dest_files=["res://.godot/imported/mReBody_Alb3.png-9ffa03ce0ad33e7d00e9763ee79c4b34.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb3.png-9ffa03ce0ad33e7d00e9763ee79c4b34.s3tc.ctex", "res://.godot/imported/mReBody_Alb3.png-9ffa03ce0ad33e7d00e9763ee79c4b34.etc2.ctex"]
 
 [params]
 

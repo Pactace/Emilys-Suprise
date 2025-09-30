@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl3vbphf46a5f"
 path.s3tc="res://.godot/imported/mTulipVase_Nrm.png-8d1554995ba3f5e9ba332ea0a2259561.s3tc.ctex"
+path.etc2="res://.godot/imported/mTulipVase_Nrm.png-8d1554995ba3f5e9ba332ea0a2259561.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwTulipVaseTextures/mTulipVase_Nrm.png"
-dest_files=["res://.godot/imported/mTulipVase_Nrm.png-8d1554995ba3f5e9ba332ea0a2259561.s3tc.ctex"]
+dest_files=["res://.godot/imported/mTulipVase_Nrm.png-8d1554995ba3f5e9ba332ea0a2259561.s3tc.ctex", "res://.godot/imported/mTulipVase_Nrm.png-8d1554995ba3f5e9ba332ea0a2259561.etc2.ctex"]
 
 [params]
 

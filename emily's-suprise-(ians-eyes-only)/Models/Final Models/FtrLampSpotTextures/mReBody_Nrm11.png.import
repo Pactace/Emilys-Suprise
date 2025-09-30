@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt5otrs6w1mbh"
 path.s3tc="res://.godot/imported/mReBody_Nrm11.png-dae7033059944e55a67350687b02d1d6.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm11.png-dae7033059944e55a67350687b02d1d6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLampSpotTextures/mReBody_Nrm11.png"
-dest_files=["res://.godot/imported/mReBody_Nrm11.png-dae7033059944e55a67350687b02d1d6.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm11.png-dae7033059944e55a67350687b02d1d6.s3tc.ctex", "res://.godot/imported/mReBody_Nrm11.png-dae7033059944e55a67350687b02d1d6.etc2.ctex"]
 
 [params]
 

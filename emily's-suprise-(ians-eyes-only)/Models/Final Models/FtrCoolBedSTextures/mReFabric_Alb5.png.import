@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt5copr05k7kg"
 path.s3tc="res://.godot/imported/mReFabric_Alb5.png-a962204dbf355a0a892f9af5b696ae2e.s3tc.ctex"
+path.etc2="res://.godot/imported/mReFabric_Alb5.png-a962204dbf355a0a892f9af5b696ae2e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCoolBedSTextures/mReFabric_Alb5.png"
-dest_files=["res://.godot/imported/mReFabric_Alb5.png-a962204dbf355a0a892f9af5b696ae2e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReFabric_Alb5.png-a962204dbf355a0a892f9af5b696ae2e.s3tc.ctex", "res://.godot/imported/mReFabric_Alb5.png-a962204dbf355a0a892f9af5b696ae2e.etc2.ctex"]
 
 [params]
 

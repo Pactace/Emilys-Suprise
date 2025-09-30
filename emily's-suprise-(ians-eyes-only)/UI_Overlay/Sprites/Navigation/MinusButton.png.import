@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8tucvtod1kw3"
 path.s3tc="res://.godot/imported/MinusButton.png-001c711859c8a3d7d708f60e7017d990.s3tc.ctex"
+path.etc2="res://.godot/imported/MinusButton.png-001c711859c8a3d7d708f60e7017d990.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/MinusButton.png"
-dest_files=["res://.godot/imported/MinusButton.png-001c711859c8a3d7d708f60e7017d990.s3tc.ctex"]
+dest_files=["res://.godot/imported/MinusButton.png-001c711859c8a3d7d708f60e7017d990.s3tc.ctex", "res://.godot/imported/MinusButton.png-001c711859c8a3d7d708f60e7017d990.etc2.ctex"]
 
 [params]
 

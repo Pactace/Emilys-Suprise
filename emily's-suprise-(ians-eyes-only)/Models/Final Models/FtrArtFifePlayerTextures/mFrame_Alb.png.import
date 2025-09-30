@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://w0m1nk0xv12f"
 path.s3tc="res://.godot/imported/mFrame_Alb.png-1c5b89ecbce75df5e971345677884bcb.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Alb.png-1c5b89ecbce75df5e971345677884bcb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtFifePlayerTextures/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-1c5b89ecbce75df5e971345677884bcb.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-1c5b89ecbce75df5e971345677884bcb.s3tc.ctex", "res://.godot/imported/mFrame_Alb.png-1c5b89ecbce75df5e971345677884bcb.etc2.ctex"]
 
 [params]
 

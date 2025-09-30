@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck8qw6thyye0f"
 path.s3tc="res://.godot/imported/mLight_Nrm.png-8c808dcde48c42b23954f5d6baf7976d.s3tc.ctex"
+path.etc2="res://.godot/imported/mLight_Nrm.png-8c808dcde48c42b23954f5d6baf7976d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCranegameTextures/mLight_Nrm.png"
-dest_files=["res://.godot/imported/mLight_Nrm.png-8c808dcde48c42b23954f5d6baf7976d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mLight_Nrm.png-8c808dcde48c42b23954f5d6baf7976d.s3tc.ctex", "res://.godot/imported/mLight_Nrm.png-8c808dcde48c42b23954f5d6baf7976d.etc2.ctex"]
 
 [params]
 

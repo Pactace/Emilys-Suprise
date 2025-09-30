@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlu4u5ffc16pn"
 path.s3tc="res://.godot/imported/mReBody_Nrm8.png-79a9a3822c89d6d7d15a324dbd84043b.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm8.png-79a9a3822c89d6d7d15a324dbd84043b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWashingMachineTextures/mReBody_Nrm8.png"
-dest_files=["res://.godot/imported/mReBody_Nrm8.png-79a9a3822c89d6d7d15a324dbd84043b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm8.png-79a9a3822c89d6d7d15a324dbd84043b.s3tc.ctex", "res://.godot/imported/mReBody_Nrm8.png-79a9a3822c89d6d7d15a324dbd84043b.etc2.ctex"]
 
 [params]
 

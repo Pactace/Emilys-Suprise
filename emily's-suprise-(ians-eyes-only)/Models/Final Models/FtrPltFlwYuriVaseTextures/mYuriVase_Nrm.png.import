@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://deeurg1t25vot"
 path.s3tc="res://.godot/imported/mYuriVase_Nrm.png-c99eceaffd24d33c0043f95bd5bb71ee.s3tc.ctex"
+path.etc2="res://.godot/imported/mYuriVase_Nrm.png-c99eceaffd24d33c0043f95bd5bb71ee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwYuriVaseTextures/mYuriVase_Nrm.png"
-dest_files=["res://.godot/imported/mYuriVase_Nrm.png-c99eceaffd24d33c0043f95bd5bb71ee.s3tc.ctex"]
+dest_files=["res://.godot/imported/mYuriVase_Nrm.png-c99eceaffd24d33c0043f95bd5bb71ee.s3tc.ctex", "res://.godot/imported/mYuriVase_Nrm.png-c99eceaffd24d33c0043f95bd5bb71ee.etc2.ctex"]
 
 [params]
 

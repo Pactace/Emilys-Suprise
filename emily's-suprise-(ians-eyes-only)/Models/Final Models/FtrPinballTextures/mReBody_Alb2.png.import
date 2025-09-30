@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2lhkq2wq52u1"
 path.s3tc="res://.godot/imported/mReBody_Alb2.png-683df96858f97856dfb3727ab29cf5aa.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb2.png-683df96858f97856dfb3727ab29cf5aa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPinballTextures/mReBody_Alb2.png"
-dest_files=["res://.godot/imported/mReBody_Alb2.png-683df96858f97856dfb3727ab29cf5aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb2.png-683df96858f97856dfb3727ab29cf5aa.s3tc.ctex", "res://.godot/imported/mReBody_Alb2.png-683df96858f97856dfb3727ab29cf5aa.etc2.ctex"]
 
 [params]
 

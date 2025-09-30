@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4jrijei54nbp"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-02faf39c03e27df0436185f9d62fb832.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-02faf39c03e27df0436185f9d62fb832.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrVaseCeladonTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-02faf39c03e27df0436185f9d62fb832.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-02faf39c03e27df0436185f9d62fb832.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-02faf39c03e27df0436185f9d62fb832.etc2.ctex"]
 
 [params]
 

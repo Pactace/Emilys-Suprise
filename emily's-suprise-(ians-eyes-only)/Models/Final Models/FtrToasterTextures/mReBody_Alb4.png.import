@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxt8kr4q0lkme"
 path.s3tc="res://.godot/imported/mReBody_Alb4.png-2ca962017f11d51fc721d1dbbd5bc6ef.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb4.png-2ca962017f11d51fc721d1dbbd5bc6ef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrToasterTextures/mReBody_Alb4.png"
-dest_files=["res://.godot/imported/mReBody_Alb4.png-2ca962017f11d51fc721d1dbbd5bc6ef.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb4.png-2ca962017f11d51fc721d1dbbd5bc6ef.s3tc.ctex", "res://.godot/imported/mReBody_Alb4.png-2ca962017f11d51fc721d1dbbd5bc6ef.etc2.ctex"]
 
 [params]
 

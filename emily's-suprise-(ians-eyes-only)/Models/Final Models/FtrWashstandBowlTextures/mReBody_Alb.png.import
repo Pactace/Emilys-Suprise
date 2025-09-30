@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://by153pcmbinrb"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-c5205e24f8f81a68dd6b671efa238a7f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-c5205e24f8f81a68dd6b671efa238a7f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWashstandBowlTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-c5205e24f8f81a68dd6b671efa238a7f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-c5205e24f8f81a68dd6b671efa238a7f.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-c5205e24f8f81a68dd6b671efa238a7f.etc2.ctex"]
 
 [params]
 

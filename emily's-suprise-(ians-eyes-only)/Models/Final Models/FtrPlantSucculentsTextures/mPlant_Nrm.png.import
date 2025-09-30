@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmk0t3688nw3l"
 path.s3tc="res://.godot/imported/mPlant_Nrm.png-38611b9a3cf430768ace9da3a9762468.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Nrm.png-38611b9a3cf430768ace9da3a9762468.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantSucculentsTextures/mPlant_Nrm.png"
-dest_files=["res://.godot/imported/mPlant_Nrm.png-38611b9a3cf430768ace9da3a9762468.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Nrm.png-38611b9a3cf430768ace9da3a9762468.s3tc.ctex", "res://.godot/imported/mPlant_Nrm.png-38611b9a3cf430768ace9da3a9762468.etc2.ctex"]
 
 [params]
 

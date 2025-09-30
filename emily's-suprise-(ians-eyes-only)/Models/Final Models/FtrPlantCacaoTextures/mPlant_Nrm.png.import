@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2e3pdtj7cq4n"
 path.s3tc="res://.godot/imported/mPlant_Nrm.png-3a1aaa5a511dd4291e1ccb4bd722e44a.s3tc.ctex"
+path.etc2="res://.godot/imported/mPlant_Nrm.png-3a1aaa5a511dd4291e1ccb4bd722e44a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPlantCacaoTextures/mPlant_Nrm.png"
-dest_files=["res://.godot/imported/mPlant_Nrm.png-3a1aaa5a511dd4291e1ccb4bd722e44a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mPlant_Nrm.png-3a1aaa5a511dd4291e1ccb4bd722e44a.s3tc.ctex", "res://.godot/imported/mPlant_Nrm.png-3a1aaa5a511dd4291e1ccb4bd722e44a.etc2.ctex"]
 
 [params]
 

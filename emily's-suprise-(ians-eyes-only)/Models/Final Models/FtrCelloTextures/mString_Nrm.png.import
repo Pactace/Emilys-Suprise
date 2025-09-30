@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds1siwa7op2ak"
 path.s3tc="res://.godot/imported/mString_Nrm.png-fb249aff8a5d2b65bd97518cffac25df.s3tc.ctex"
+path.etc2="res://.godot/imported/mString_Nrm.png-fb249aff8a5d2b65bd97518cffac25df.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCelloTextures/mString_Nrm.png"
-dest_files=["res://.godot/imported/mString_Nrm.png-fb249aff8a5d2b65bd97518cffac25df.s3tc.ctex"]
+dest_files=["res://.godot/imported/mString_Nrm.png-fb249aff8a5d2b65bd97518cffac25df.s3tc.ctex", "res://.godot/imported/mString_Nrm.png-fb249aff8a5d2b65bd97518cffac25df.etc2.ctex"]
 
 [params]
 

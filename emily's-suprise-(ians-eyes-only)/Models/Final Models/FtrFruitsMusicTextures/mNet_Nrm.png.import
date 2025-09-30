@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ph2xhdhh5pyf"
 path.s3tc="res://.godot/imported/mNet_Nrm.png-b251f613e5dfe1039b1d957ebcbc76d2.s3tc.ctex"
+path.etc2="res://.godot/imported/mNet_Nrm.png-b251f613e5dfe1039b1d957ebcbc76d2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFruitsMusicTextures/mNet_Nrm.png"
-dest_files=["res://.godot/imported/mNet_Nrm.png-b251f613e5dfe1039b1d957ebcbc76d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mNet_Nrm.png-b251f613e5dfe1039b1d957ebcbc76d2.s3tc.ctex", "res://.godot/imported/mNet_Nrm.png-b251f613e5dfe1039b1d957ebcbc76d2.etc2.ctex"]
 
 [params]
 

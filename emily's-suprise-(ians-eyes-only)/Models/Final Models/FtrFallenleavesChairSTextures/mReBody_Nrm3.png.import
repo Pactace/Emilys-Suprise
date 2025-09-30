@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqoolxgv6ggix"
 path.s3tc="res://.godot/imported/mReBody_Nrm3.png-61e9c632632f9a113f40869cd1ec541c.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm3.png-61e9c632632f9a113f40869cd1ec541c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFallenleavesChairSTextures/mReBody_Nrm3.png"
-dest_files=["res://.godot/imported/mReBody_Nrm3.png-61e9c632632f9a113f40869cd1ec541c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm3.png-61e9c632632f9a113f40869cd1ec541c.s3tc.ctex", "res://.godot/imported/mReBody_Nrm3.png-61e9c632632f9a113f40869cd1ec541c.etc2.ctex"]
 
 [params]
 

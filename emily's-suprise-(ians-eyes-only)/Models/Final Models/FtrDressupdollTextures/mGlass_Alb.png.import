@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmoqywd3rvega"
 path.s3tc="res://.godot/imported/mGlass_Alb.png-df1262de64c3fa1b4b24950db081c0be.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlass_Alb.png-df1262de64c3fa1b4b24950db081c0be.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDressupdollTextures/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-df1262de64c3fa1b4b24950db081c0be.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-df1262de64c3fa1b4b24950db081c0be.s3tc.ctex", "res://.godot/imported/mGlass_Alb.png-df1262de64c3fa1b4b24950db081c0be.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://co3tmmtu2odg8"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-08ab41417d4b800f861cbf7241c8db54.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-08ab41417d4b800f861cbf7241c8db54.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrAromadiffuserTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-08ab41417d4b800f861cbf7241c8db54.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-08ab41417d4b800f861cbf7241c8db54.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-08ab41417d4b800f861cbf7241c8db54.etc2.ctex"]
 
 [params]
 

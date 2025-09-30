@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://i4lc1wl8qol8"
 path.s3tc="res://.godot/imported/mFtrHarvestKitchenSEvent_Nrm.png-9cb05f8a2e0fca8e519d2cbe19a59dbf.s3tc.ctex"
+path.etc2="res://.godot/imported/mFtrHarvestKitchenSEvent_Nrm.png-9cb05f8a2e0fca8e519d2cbe19a59dbf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHarvestKitchenSEventTextures/mFtrHarvestKitchenSEvent_Nrm.png"
-dest_files=["res://.godot/imported/mFtrHarvestKitchenSEvent_Nrm.png-9cb05f8a2e0fca8e519d2cbe19a59dbf.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFtrHarvestKitchenSEvent_Nrm.png-9cb05f8a2e0fca8e519d2cbe19a59dbf.s3tc.ctex", "res://.godot/imported/mFtrHarvestKitchenSEvent_Nrm.png-9cb05f8a2e0fca8e519d2cbe19a59dbf.etc2.ctex"]
 
 [params]
 

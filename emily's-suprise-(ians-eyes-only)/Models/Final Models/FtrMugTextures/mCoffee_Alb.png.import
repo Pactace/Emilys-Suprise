@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj7ihalmpvx2w"
 path.s3tc="res://.godot/imported/mCoffee_Alb.png-e73db1ff1a389fe9e7693db277c57e9b.s3tc.ctex"
+path.etc2="res://.godot/imported/mCoffee_Alb.png-e73db1ff1a389fe9e7693db277c57e9b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMugTextures/mCoffee_Alb.png"
-dest_files=["res://.godot/imported/mCoffee_Alb.png-e73db1ff1a389fe9e7693db277c57e9b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mCoffee_Alb.png-e73db1ff1a389fe9e7693db277c57e9b.s3tc.ctex", "res://.godot/imported/mCoffee_Alb.png-e73db1ff1a389fe9e7693db277c57e9b.etc2.ctex"]
 
 [params]
 

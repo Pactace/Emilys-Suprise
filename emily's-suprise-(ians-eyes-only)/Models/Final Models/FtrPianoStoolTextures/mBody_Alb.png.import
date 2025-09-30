@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1lhijx1tl8d5"
 path.s3tc="res://.godot/imported/mBody_Alb.png-ed3b88956841a56fa90ebc42f0de1dd3.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb.png-ed3b88956841a56fa90ebc42f0de1dd3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPianoStoolTextures/mBody_Alb.png"
-dest_files=["res://.godot/imported/mBody_Alb.png-ed3b88956841a56fa90ebc42f0de1dd3.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb.png-ed3b88956841a56fa90ebc42f0de1dd3.s3tc.ctex", "res://.godot/imported/mBody_Alb.png-ed3b88956841a56fa90ebc42f0de1dd3.etc2.ctex"]
 
 [params]
 

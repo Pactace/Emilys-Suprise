@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8i8mswx38y26"
 path.s3tc="res://.godot/imported/mJelly_Alb.png-a6c8b4091c65c8c62b91018c349b5ac5.s3tc.ctex"
+path.etc2="res://.godot/imported/mJelly_Alb.png-a6c8b4091c65c8c62b91018c349b5ac5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrJellyCherryTextures/mJelly_Alb.png"
-dest_files=["res://.godot/imported/mJelly_Alb.png-a6c8b4091c65c8c62b91018c349b5ac5.s3tc.ctex"]
+dest_files=["res://.godot/imported/mJelly_Alb.png-a6c8b4091c65c8c62b91018c349b5ac5.s3tc.ctex", "res://.godot/imported/mJelly_Alb.png-a6c8b4091c65c8c62b91018c349b5ac5.etc2.ctex"]
 
 [params]
 

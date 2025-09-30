@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://boleegnytmtxr"
 path.s3tc="res://.godot/imported/mReBody_Nrm5.png-52a3e27a555c5b4f166d8c7f0fc86b40.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm5.png-52a3e27a555c5b4f166d8c7f0fc86b40.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSimpleChairSTextures/mReBody_Nrm5.png"
-dest_files=["res://.godot/imported/mReBody_Nrm5.png-52a3e27a555c5b4f166d8c7f0fc86b40.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm5.png-52a3e27a555c5b4f166d8c7f0fc86b40.s3tc.ctex", "res://.godot/imported/mReBody_Nrm5.png-52a3e27a555c5b4f166d8c7f0fc86b40.etc2.ctex"]
 
 [params]
 

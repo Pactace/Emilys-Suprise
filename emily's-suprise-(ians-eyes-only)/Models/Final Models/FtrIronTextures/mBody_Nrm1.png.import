@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn3sifypv1y6p"
 path.s3tc="res://.godot/imported/mBody_Nrm1.png-bc8f82fc8d0e76694946e2e5f97a99b2.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm1.png-bc8f82fc8d0e76694946e2e5f97a99b2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrIronTextures/mBody_Nrm1.png"
-dest_files=["res://.godot/imported/mBody_Nrm1.png-bc8f82fc8d0e76694946e2e5f97a99b2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm1.png-bc8f82fc8d0e76694946e2e5f97a99b2.s3tc.ctex", "res://.godot/imported/mBody_Nrm1.png-bc8f82fc8d0e76694946e2e5f97a99b2.etc2.ctex"]
 
 [params]
 

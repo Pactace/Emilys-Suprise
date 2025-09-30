@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drcgksumsfhfg"
 path.s3tc="res://.godot/imported/mMumVase_Nrm.png-e14e41e3a256d6e85c027a89060d7e67.s3tc.ctex"
+path.etc2="res://.godot/imported/mMumVase_Nrm.png-e14e41e3a256d6e85c027a89060d7e67.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrPltFlwMumVaseTextures/mMumVase_Nrm.png"
-dest_files=["res://.godot/imported/mMumVase_Nrm.png-e14e41e3a256d6e85c027a89060d7e67.s3tc.ctex"]
+dest_files=["res://.godot/imported/mMumVase_Nrm.png-e14e41e3a256d6e85c027a89060d7e67.s3tc.ctex", "res://.godot/imported/mMumVase_Nrm.png-e14e41e3a256d6e85c027a89060d7e67.etc2.ctex"]
 
 [params]
 

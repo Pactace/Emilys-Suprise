@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dokvgn15d04aw"
 path.s3tc="res://.godot/imported/mReBody_Nrm6.png-032c5bc071abd54cbdb6c6b24d1f8f9d.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm6.png-032c5bc071abd54cbdb6c6b24d1f8f9d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrWoodenBedSTextures/mReBody_Nrm6.png"
-dest_files=["res://.godot/imported/mReBody_Nrm6.png-032c5bc071abd54cbdb6c6b24d1f8f9d.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm6.png-032c5bc071abd54cbdb6c6b24d1f8f9d.s3tc.ctex", "res://.godot/imported/mReBody_Nrm6.png-032c5bc071abd54cbdb6c6b24d1f8f9d.etc2.ctex"]
 
 [params]
 

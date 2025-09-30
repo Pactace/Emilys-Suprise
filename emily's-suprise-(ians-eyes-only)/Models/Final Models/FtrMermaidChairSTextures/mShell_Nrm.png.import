@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2s1ws38n1uq3"
 path.s3tc="res://.godot/imported/mShell_Nrm.png-b105c934b6ed3858b73e7768c0c5663c.s3tc.ctex"
+path.etc2="res://.godot/imported/mShell_Nrm.png-b105c934b6ed3858b73e7768c0c5663c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMermaidChairSTextures/mShell_Nrm.png"
-dest_files=["res://.godot/imported/mShell_Nrm.png-b105c934b6ed3858b73e7768c0c5663c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mShell_Nrm.png-b105c934b6ed3858b73e7768c0c5663c.s3tc.ctex", "res://.godot/imported/mShell_Nrm.png-b105c934b6ed3858b73e7768c0c5663c.etc2.ctex"]
 
 [params]
 

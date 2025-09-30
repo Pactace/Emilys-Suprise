@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2sbcx06j2r17"
 path.s3tc="res://.godot/imported/mGlass_Nrm.png-4557ca2af4bec82a12d34bdaa9328a8e.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlass_Nrm.png-4557ca2af4bec82a12d34bdaa9328a8e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrShowerboothSquareTextures/mGlass_Nrm.png"
-dest_files=["res://.godot/imported/mGlass_Nrm.png-4557ca2af4bec82a12d34bdaa9328a8e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlass_Nrm.png-4557ca2af4bec82a12d34bdaa9328a8e.s3tc.ctex", "res://.godot/imported/mGlass_Nrm.png-4557ca2af4bec82a12d34bdaa9328a8e.etc2.ctex"]
 
 [params]
 

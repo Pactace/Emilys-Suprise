@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi3hfdqc5baa"
 path.s3tc="res://.godot/imported/mReBody_Nrm4.png-1fad24c8d92fa5b15ff3492001f0ac8b.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm4.png-1fad24c8d92fa5b15ff3492001f0ac8b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBabycarTextures/mReBody_Nrm4.png"
-dest_files=["res://.godot/imported/mReBody_Nrm4.png-1fad24c8d92fa5b15ff3492001f0ac8b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm4.png-1fad24c8d92fa5b15ff3492001f0ac8b.s3tc.ctex", "res://.godot/imported/mReBody_Nrm4.png-1fad24c8d92fa5b15ff3492001f0ac8b.etc2.ctex"]
 
 [params]
 

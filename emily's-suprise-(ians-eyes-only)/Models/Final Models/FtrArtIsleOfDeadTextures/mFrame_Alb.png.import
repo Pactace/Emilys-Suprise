@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://qwlcunii3pgd"
 path.s3tc="res://.godot/imported/mFrame_Alb.png-e78386306de28b33f3c9ebe77ed3f82a.s3tc.ctex"
+path.etc2="res://.godot/imported/mFrame_Alb.png-e78386306de28b33f3c9ebe77ed3f82a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtIsleOfDeadTextures/mFrame_Alb.png"
-dest_files=["res://.godot/imported/mFrame_Alb.png-e78386306de28b33f3c9ebe77ed3f82a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mFrame_Alb.png-e78386306de28b33f3c9ebe77ed3f82a.s3tc.ctex", "res://.godot/imported/mFrame_Alb.png-e78386306de28b33f3c9ebe77ed3f82a.etc2.ctex"]
 
 [params]
 

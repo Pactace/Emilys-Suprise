@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://7ol8k75xq1lv"
 path.s3tc="res://.godot/imported/mBody_Nrm1.png-a33e9f5932f3959b6c60b7efb981d62f.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Nrm1.png-a33e9f5932f3959b6c60b7efb981d62f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrArtPearlEarringTextures/mBody_Nrm1.png"
-dest_files=["res://.godot/imported/mBody_Nrm1.png-a33e9f5932f3959b6c60b7efb981d62f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Nrm1.png-a33e9f5932f3959b6c60b7efb981d62f.s3tc.ctex", "res://.godot/imported/mBody_Nrm1.png-a33e9f5932f3959b6c60b7efb981d62f.etc2.ctex"]
 
 [params]
 

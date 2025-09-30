@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drl62ws7uqu2"
 path.s3tc="res://.godot/imported/mBody_Alb3.png-9c06e84658e805b55798a5a1eda4493a.s3tc.ctex"
+path.etc2="res://.godot/imported/mBody_Alb3.png-9c06e84658e805b55798a5a1eda4493a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMoonTextures/mBody_Alb3.png"
-dest_files=["res://.godot/imported/mBody_Alb3.png-9c06e84658e805b55798a5a1eda4493a.s3tc.ctex"]
+dest_files=["res://.godot/imported/mBody_Alb3.png-9c06e84658e805b55798a5a1eda4493a.s3tc.ctex", "res://.godot/imported/mBody_Alb3.png-9c06e84658e805b55798a5a1eda4493a.etc2.ctex"]
 
 [params]
 

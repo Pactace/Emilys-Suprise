@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dea1qkykqg7fx"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-94cf2e5ad4c59c564b456f44d9a2f507.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-94cf2e5ad4c59c564b456f44d9a2f507.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFoodcanTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-94cf2e5ad4c59c564b456f44d9a2f507.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-94cf2e5ad4c59c564b456f44d9a2f507.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-94cf2e5ad4c59c564b456f44d9a2f507.etc2.ctex"]
 
 [params]
 

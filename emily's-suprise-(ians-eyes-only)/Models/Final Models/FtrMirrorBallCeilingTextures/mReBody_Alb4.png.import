@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://3jubdssqthkt"
 path.s3tc="res://.godot/imported/mReBody_Alb4.png-b9a29b9fcbd9c2f81f6d8fe9b1b9a3d3.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb4.png-b9a29b9fcbd9c2f81f6d8fe9b1b9a3d3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrMirrorBallCeilingTextures/mReBody_Alb4.png"
-dest_files=["res://.godot/imported/mReBody_Alb4.png-b9a29b9fcbd9c2f81f6d8fe9b1b9a3d3.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb4.png-b9a29b9fcbd9c2f81f6d8fe9b1b9a3d3.s3tc.ctex", "res://.godot/imported/mReBody_Alb4.png-b9a29b9fcbd9c2f81f6d8fe9b1b9a3d3.etc2.ctex"]
 
 [params]
 

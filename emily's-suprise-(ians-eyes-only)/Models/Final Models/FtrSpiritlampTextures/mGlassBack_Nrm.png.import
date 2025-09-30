@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://3sp5xl4vkqea"
 path.s3tc="res://.godot/imported/mGlassBack_Nrm.png-09cd03c55b116def5f9801bae4562adf.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlassBack_Nrm.png-09cd03c55b116def5f9801bae4562adf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSpiritlampTextures/mGlassBack_Nrm.png"
-dest_files=["res://.godot/imported/mGlassBack_Nrm.png-09cd03c55b116def5f9801bae4562adf.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlassBack_Nrm.png-09cd03c55b116def5f9801bae4562adf.s3tc.ctex", "res://.godot/imported/mGlassBack_Nrm.png-09cd03c55b116def5f9801bae4562adf.etc2.ctex"]
 
 [params]
 

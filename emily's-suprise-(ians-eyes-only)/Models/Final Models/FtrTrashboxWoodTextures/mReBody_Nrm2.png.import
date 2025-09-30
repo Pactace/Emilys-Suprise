@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bae8fontjkieh"
 path.s3tc="res://.godot/imported/mReBody_Nrm2.png-8eec67473b9e7590f0ed00e1fdab806e.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm2.png-8eec67473b9e7590f0ed00e1fdab806e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrTrashboxWoodTextures/mReBody_Nrm2.png"
-dest_files=["res://.godot/imported/mReBody_Nrm2.png-8eec67473b9e7590f0ed00e1fdab806e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm2.png-8eec67473b9e7590f0ed00e1fdab806e.s3tc.ctex", "res://.godot/imported/mReBody_Nrm2.png-8eec67473b9e7590f0ed00e1fdab806e.etc2.ctex"]
 
 [params]
 

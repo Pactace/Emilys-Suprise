@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://corbvfv3mkjbc"
 path.s3tc="res://.godot/imported/mReBody_Alb3.png-0f30909cc8bdb83a89ea2068e4398dc3.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb3.png-0f30909cc8bdb83a89ea2068e4398dc3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBookstandTextures/mReBody_Alb3.png"
-dest_files=["res://.godot/imported/mReBody_Alb3.png-0f30909cc8bdb83a89ea2068e4398dc3.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb3.png-0f30909cc8bdb83a89ea2068e4398dc3.s3tc.ctex", "res://.godot/imported/mReBody_Alb3.png-0f30909cc8bdb83a89ea2068e4398dc3.etc2.ctex"]
 
 [params]
 

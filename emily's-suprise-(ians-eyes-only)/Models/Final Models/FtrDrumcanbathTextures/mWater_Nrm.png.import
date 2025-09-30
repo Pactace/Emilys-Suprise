@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkbpv6xeoevpx"
 path.s3tc="res://.godot/imported/mWater_Nrm.png-f1a95cff21e62d280f4cab8c00c5cdc6.s3tc.ctex"
+path.etc2="res://.godot/imported/mWater_Nrm.png-f1a95cff21e62d280f4cab8c00c5cdc6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrDrumcanbathTextures/mWater_Nrm.png"
-dest_files=["res://.godot/imported/mWater_Nrm.png-f1a95cff21e62d280f4cab8c00c5cdc6.s3tc.ctex"]
+dest_files=["res://.godot/imported/mWater_Nrm.png-f1a95cff21e62d280f4cab8c00c5cdc6.s3tc.ctex", "res://.godot/imported/mWater_Nrm.png-f1a95cff21e62d280f4cab8c00c5cdc6.etc2.ctex"]
 
 [params]
 

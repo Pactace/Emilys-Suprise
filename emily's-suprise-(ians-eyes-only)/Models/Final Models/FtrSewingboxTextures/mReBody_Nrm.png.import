@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b75rqr8t7u8b0"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-3ff07d80c1fb3fbd4c4acf45ec427008.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-3ff07d80c1fb3fbd4c4acf45ec427008.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrSewingboxTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-3ff07d80c1fb3fbd4c4acf45ec427008.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-3ff07d80c1fb3fbd4c4acf45ec427008.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-3ff07d80c1fb3fbd4c4acf45ec427008.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://brjc4dlbt28cp"
 path.s3tc="res://.godot/imported/mGlassR_Nrm.png-41cf1bddad28f302f83ba9a7e0aba575.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlassR_Nrm.png-41cf1bddad28f302f83ba9a7e0aba575.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrJarPeachTextures/mGlassR_Nrm.png"
-dest_files=["res://.godot/imported/mGlassR_Nrm.png-41cf1bddad28f302f83ba9a7e0aba575.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlassR_Nrm.png-41cf1bddad28f302f83ba9a7e0aba575.s3tc.ctex", "res://.godot/imported/mGlassR_Nrm.png-41cf1bddad28f302f83ba9a7e0aba575.etc2.ctex"]
 
 [params]
 

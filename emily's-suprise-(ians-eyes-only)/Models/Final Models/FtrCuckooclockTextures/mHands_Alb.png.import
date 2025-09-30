@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://lpa3opdi4muk"
 path.s3tc="res://.godot/imported/mHands_Alb.png-c914ddf0ea9436cd4992264b88dbf106.s3tc.ctex"
+path.etc2="res://.godot/imported/mHands_Alb.png-c914ddf0ea9436cd4992264b88dbf106.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCuckooclockTextures/mHands_Alb.png"
-dest_files=["res://.godot/imported/mHands_Alb.png-c914ddf0ea9436cd4992264b88dbf106.s3tc.ctex"]
+dest_files=["res://.godot/imported/mHands_Alb.png-c914ddf0ea9436cd4992264b88dbf106.s3tc.ctex", "res://.godot/imported/mHands_Alb.png-c914ddf0ea9436cd4992264b88dbf106.etc2.ctex"]
 
 [params]
 

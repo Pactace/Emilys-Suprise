@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbr0pdy3hdaed"
 path.s3tc="res://.godot/imported/mReBody_Nrm.png-2de0ba52fe95d92a590853f6646fb4e2.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm.png-2de0ba52fe95d92a590853f6646fb4e2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFlowerSwagTextures/mReBody_Nrm.png"
-dest_files=["res://.godot/imported/mReBody_Nrm.png-2de0ba52fe95d92a590853f6646fb4e2.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm.png-2de0ba52fe95d92a590853f6646fb4e2.s3tc.ctex", "res://.godot/imported/mReBody_Nrm.png-2de0ba52fe95d92a590853f6646fb4e2.etc2.ctex"]
 
 [params]
 

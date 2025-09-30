@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkovo2uxst56x"
 path.s3tc="res://.godot/imported/mHanger_Nrm1.png-b6b9f4b31c29a2683f3061ab817b607c.s3tc.ctex"
+path.etc2="res://.godot/imported/mHanger_Nrm1.png-b6b9f4b31c29a2683f3061ab817b607c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrHangerAccessoryGlassTextures/mHanger_Nrm1.png"
-dest_files=["res://.godot/imported/mHanger_Nrm1.png-b6b9f4b31c29a2683f3061ab817b607c.s3tc.ctex"]
+dest_files=["res://.godot/imported/mHanger_Nrm1.png-b6b9f4b31c29a2683f3061ab817b607c.s3tc.ctex", "res://.godot/imported/mHanger_Nrm1.png-b6b9f4b31c29a2683f3061ab817b607c.etc2.ctex"]
 
 [params]
 

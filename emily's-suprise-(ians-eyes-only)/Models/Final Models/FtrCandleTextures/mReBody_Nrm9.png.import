@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://me6wvmf6qlur"
 path.s3tc="res://.godot/imported/mReBody_Nrm9.png-437b49e209588045792c502c647b1ea3.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm9.png-437b49e209588045792c502c647b1ea3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrCandleTextures/mReBody_Nrm9.png"
-dest_files=["res://.godot/imported/mReBody_Nrm9.png-437b49e209588045792c502c647b1ea3.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm9.png-437b49e209588045792c502c647b1ea3.s3tc.ctex", "res://.godot/imported/mReBody_Nrm9.png-437b49e209588045792c502c647b1ea3.etc2.ctex"]
 
 [params]
 

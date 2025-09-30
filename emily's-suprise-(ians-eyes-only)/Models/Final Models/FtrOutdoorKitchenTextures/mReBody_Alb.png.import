@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2cvnrhu2g2uo"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-62b11e4a0b0e1e601e25fac6d9422dfc.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-62b11e4a0b0e1e601e25fac6d9422dfc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrOutdoorKitchenTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-62b11e4a0b0e1e601e25fac6d9422dfc.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-62b11e4a0b0e1e601e25fac6d9422dfc.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-62b11e4a0b0e1e601e25fac6d9422dfc.etc2.ctex"]
 
 [params]
 

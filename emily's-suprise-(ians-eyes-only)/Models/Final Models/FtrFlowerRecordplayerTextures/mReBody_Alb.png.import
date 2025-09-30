@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqik1n5hydl7c"
 path.s3tc="res://.godot/imported/mReBody_Alb.png-068e2ba1a55b70426fc2da04f36a2a4f.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Alb.png-068e2ba1a55b70426fc2da04f36a2a4f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrFlowerRecordplayerTextures/mReBody_Alb.png"
-dest_files=["res://.godot/imported/mReBody_Alb.png-068e2ba1a55b70426fc2da04f36a2a4f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Alb.png-068e2ba1a55b70426fc2da04f36a2a4f.s3tc.ctex", "res://.godot/imported/mReBody_Alb.png-068e2ba1a55b70426fc2da04f36a2a4f.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1683l5v0iqdo"
 path.s3tc="res://.godot/imported/mGlass_Alb.png-cfd42918cb0bcc1afac46ddf63f7cadb.s3tc.ctex"
+path.etc2="res://.godot/imported/mGlass_Alb.png-cfd42918cb0bcc1afac46ddf63f7cadb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrLavalampTextures/mGlass_Alb.png"
-dest_files=["res://.godot/imported/mGlass_Alb.png-cfd42918cb0bcc1afac46ddf63f7cadb.s3tc.ctex"]
+dest_files=["res://.godot/imported/mGlass_Alb.png-cfd42918cb0bcc1afac46ddf63f7cadb.s3tc.ctex", "res://.godot/imported/mGlass_Alb.png-cfd42918cb0bcc1afac46ddf63f7cadb.etc2.ctex"]
 
 [params]
 

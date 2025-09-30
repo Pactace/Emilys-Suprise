@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://nlhx4gsh7p3c"
 path.s3tc="res://.godot/imported/mReBody_Nrm12.png-936780b8a5ae5566461b8e737cf144ff.s3tc.ctex"
+path.etc2="res://.godot/imported/mReBody_Nrm12.png-936780b8a5ae5566461b8e737cf144ff.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Final Models/FtrBabychairTextures/mReBody_Nrm12.png"
-dest_files=["res://.godot/imported/mReBody_Nrm12.png-936780b8a5ae5566461b8e737cf144ff.s3tc.ctex"]
+dest_files=["res://.godot/imported/mReBody_Nrm12.png-936780b8a5ae5566461b8e737cf144ff.s3tc.ctex", "res://.godot/imported/mReBody_Nrm12.png-936780b8a5ae5566461b8e737cf144ff.etc2.ctex"]
 
 [params]
 

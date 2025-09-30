@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbn7s7foyyevw"
 path.s3tc="res://.godot/imported/WallPaperIcon.png-f85c2c2f9f1f579659742318d41a7810.s3tc.ctex"
+path.etc2="res://.godot/imported/WallPaperIcon.png-f85c2c2f9f1f579659742318d41a7810.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://UI_Overlay/Sprites/Navigation/WallPaperIcon.png"
-dest_files=["res://.godot/imported/WallPaperIcon.png-f85c2c2f9f1f579659742318d41a7810.s3tc.ctex"]
+dest_files=["res://.godot/imported/WallPaperIcon.png-f85c2c2f9f1f579659742318d41a7810.s3tc.ctex", "res://.godot/imported/WallPaperIcon.png-f85c2c2f9f1f579659742318d41a7810.etc2.ctex"]
 
 [params]
 
