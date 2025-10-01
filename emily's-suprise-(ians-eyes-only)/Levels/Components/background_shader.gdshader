@@ -4,6 +4,7 @@ uniform sampler2D testure;
 uniform float tiling = 2.0;
 
 void sky() {
-	vec2 uv = vec2(SCREEN_UV.s * tiling + TIME * 0.05, SCREEN_UV.t * tiling * .5);
-	COLOR = texture(testure, uv).rgb;
+	//vec2 uv = vec2(SCREEN_UV.s * tiling + TIME * 0.05, SCREEN_UV.t * tiling * .5);
+	//COLOR = texture(testure, uv).rgb;
+	COLOR = vec3(SCREEN_UV.r, SCREEN_UV.g, 1.0);
 }
