@@ -1,9 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwpmaxxdv730r"]
+[gd_scene load_steps=10 format=3 uid="uid://dwpmaxxdv730r"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_va61b"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="3_2b52x"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="5_2b52x"]
+[ext_resource type="Shader" uid="uid://bta5vmjvyu01o" path="res://Levels/Components/background_shader.gdshader" id="5_gx12d"]
+[ext_resource type="Texture2D" uid="uid://cpl6yowmmp8ja" path="res://Levels/Components/AdobeStock_440388551_Preview.jpeg" id="6_2b52x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2b52x"]
+shader = ExtResource("5_gx12d")
+shader_parameter/testure = ExtResource("6_2b52x")
+shader_parameter/tiling = 2.0
+
+[sub_resource type="Sky" id="Sky_axehl"]
+sky_material = SubResource("ShaderMaterial_2b52x")
+process_mode = 3
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_08dqw"]
+background_mode = 2
+sky = SubResource("Sky_axehl")
+ambient_light_source = 2
+ambient_light_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
+ambient_light_energy = 1.1
 
 [node name="TestLevel" type="Node3D"]
 
@@ -42,3 +61,6 @@ light_bake_mode = 1
 shadow_enabled = true
 shadow_caster_mask = 4294082560
 directional_shadow_mode = 0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_08dqw")

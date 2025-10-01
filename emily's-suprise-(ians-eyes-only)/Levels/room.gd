@@ -63,6 +63,7 @@ func update_walls() -> void:
 # --- Runtime API (UI buttons etc.) ---
 func on_horizontal_change(size: int) -> void:
 	set_horizontal_size(size)
+	camera.CAMERA_FOV = size * 4
 
 func on_vertical_change(size: int) -> void:
 	set_vertical_size(size)

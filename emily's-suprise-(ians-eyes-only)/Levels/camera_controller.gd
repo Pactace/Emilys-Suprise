@@ -5,7 +5,7 @@ const CAMERA_HEIGHT := 10.0
 const CAMERA_DISTANCE := 15.0
 const CAMERA_TILT_ANGLE := deg_to_rad(-27.5)
 const CAMERA_SNAP_COUNT := 4
-
+var CAMERA_FOV = 0
 # --- Wall View Constants ---
 const WALL_VIEW_HEIGHT := 5.0
 const WALL_VIEW_POS := Vector3(0, WALL_VIEW_HEIGHT, 0)
@@ -73,9 +73,11 @@ func _apply_snap():
 func wall_update(enabled: bool) -> void:
 	wall_view = enabled
 	if wall_view:
+		fov = 75 + CAMERA_FOV
 		target_pos = WALL_VIEW_POS
 		rotation.x = WALL_VIEW_TILT
 		target_rot_y = snap_positions[snap_index]["rot"]
 	else:
+		fov = 75
 		rotation.x = CAMERA_TILT_ANGLE
 		target_pos = snap_positions[snap_index]["pos"]
