@@ -2,5 +2,8 @@
 
 [resource]
 transparency = 1
-depth_draw_mode = 1
-albedo_color = Color(1, 1, 0, 0.337255)
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0.862637, 0.862637, 0, 1)
+grow = true
+grow_amount = 0.002

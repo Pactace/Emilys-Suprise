@@ -5,6 +5,8 @@
 
 [resource]
 resource_name = "mReBody0"
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("1_fu8qr")
 normal_enabled = true
 normal_texture = ExtResource("2_ey4rh")

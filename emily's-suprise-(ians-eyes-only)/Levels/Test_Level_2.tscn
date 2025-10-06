@@ -1,28 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwpmaxxdv730r"]
+[gd_scene load_steps=5 format=3 uid="uid://dwpmaxxdv730r"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_va61b"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="3_2b52x"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="4_axehl"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="5_2b52x"]
-[ext_resource type="Shader" uid="uid://bta5vmjvyu01o" path="res://Levels/Components/background_shader.gdshader" id="5_gx12d"]
-[ext_resource type="Texture2D" uid="uid://cpl6yowmmp8ja" path="res://Levels/Components/AdobeStock_440388551_Preview.jpeg" id="6_2b52x"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2b52x"]
-shader = ExtResource("5_gx12d")
-shader_parameter/testure = ExtResource("6_2b52x")
-shader_parameter/tiling = 2.0
-
-[sub_resource type="Sky" id="Sky_axehl"]
-sky_material = SubResource("ShaderMaterial_2b52x")
-process_mode = 3
-radiance_size = 0
-
-[sub_resource type="Environment" id="Environment_08dqw"]
-background_mode = 2
-sky = SubResource("Sky_axehl")
-ambient_light_source = 2
-ambient_light_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
-ambient_light_energy = 1.1
 
 [node name="TestLevel" type="Node3D"]
 
@@ -40,27 +21,5 @@ camera = NodePath("../Camera")
 room = NodePath("../Room")
 
 [node name="Emily" parent="." instance=ExtResource("5_2b52x")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.8163109, 2.4449399, -0.13009134)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
 SPEED = 5.0
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.782721, 0)
-layers = 65536
-light_energy = 16.0
-light_bake_mode = 1
-light_cull_mask = 4293984256
-omni_range = 23.405
-omni_attenuation = 1.824
-
-[node name="Top Light" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.013368826, 0.99991065, 0, -0.99991065, 0.013368826, 0, 14.021929, 0.048624754)
-layers = 131072
-light_volumetric_fog_energy = 0.0
-light_specular = 0.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_caster_mask = 4294082560
-directional_shadow_mode = 0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_08dqw")

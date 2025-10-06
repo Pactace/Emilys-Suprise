@@ -91,11 +91,25 @@ func _apply_snap():
 
 		target_rot_x = WALL_VIEW_TILT
 	else:
-		target_pos = snap_positions[snap_index]["pos"]
+		var base_pos = snap_positions[snap_index]["pos"]
+		var position_effect_vertical = camera_wall_size_effect_vertical
+		var position_effect_horizontal = camera_wall_size_effect_horizontal
+
+		match snap_positions[snap_index]["name"]:
+			"front":
+				target_pos = base_pos + Vector3(0, 0, position_effect_horizontal)
+			"back":
+				target_pos = base_pos + Vector3(0, 0, -position_effect_horizontal)
+			"left":
+				target_pos = base_pos + Vector3(-position_effect_vertical, 0, 0)
+			"right":
+				target_pos = base_pos + Vector3(position_effect_vertical, 0, 0)
+
 		target_rot_x = CAMERA_TILT_ANGLE
 		target_fov = 75.0
 
 	target_rot_y = snap_positions[snap_index]["rot"]
+
 
 
 func wall_update(enabled: bool) -> void:
@@ -109,10 +123,10 @@ func wall_update(enabled: bool) -> void:
 		match snap_positions[snap_index]["name"]:
 			"front":
 				target_fov = 75 + fov_effect_vertical
-				target_pos = WALL_VIEW_POS + Vector3(0, 0, -position_effect_horizontal)
+				target_pos = WALL_VIEW_POS + Vector3(0, 0, -position_effect_horizontal - position_effect_vertical)
 			"back":
 				target_fov = 75 + fov_effect_vertical
-				target_pos = WALL_VIEW_POS + Vector3(0, 0, position_effect_horizontal)
+				target_pos = WALL_VIEW_POS + Vector3(0, 0, position_effect_horizontal + position_effect_horizontal)
 			"left":
 				target_fov = 75 + fov_effect_horizontal
 				target_pos = WALL_VIEW_POS + Vector3(position_effect_vertical, 0, 0)
@@ -122,8 +136,19 @@ func wall_update(enabled: bool) -> void:
 
 		target_rot_x = WALL_VIEW_TILT
 	else:
+		var base_pos = snap_positions[snap_index]["pos"]
+		var position_effect_vertical = camera_wall_size_effect_vertical
+		var position_effect_horizontal = camera_wall_size_effect_horizontal
+
+		match snap_positions[snap_index]["name"]:
+			"front":
+				target_pos = base_pos + Vector3(0, 0, position_effect_horizontal)
+			"back":
+				target_pos = base_pos + Vector3(0, 0, -position_effect_horizontal)
+			"left":
+				target_pos = base_pos + Vector3(-position_effect_vertical, 0, 0)
+			"right":
+				target_pos = base_pos + Vector3(position_effect_vertical, 0, 0)
+
 		target_fov = 75.0
 		target_rot_x = CAMERA_TILT_ANGLE
-		target_pos = snap_positions[snap_index]["pos"]
-
-	target_rot_y = snap_positions[snap_index]["rot"]

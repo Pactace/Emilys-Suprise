@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="WallPaperInventory" load_steps=10 format=3 uid="uid://wtlw617uwwd"]
+[gd_resource type="Resource" script_class="FlooringInventory" load_steps=10 format=3 uid="uid://wtlw617uwwd"]
 
 [ext_resource type="Material" uid="uid://bly1dgml8swaf" path="res://Floor and Wall Textures/CarpetFloor0/CarpetFloor0.tres" id="1_oro4j"]
 [ext_resource type="Material" uid="uid://dh5o705e0dmjt" path="res://Floor and Wall Textures/CarpetFloor1/CarpetFloor1.tres" id="2_mbvrh"]
@@ -12,3 +12,13 @@
 
 [resource]
 script = ExtResource("9_fm2d4")
+objects = {
+"Flooring1": ExtResource("1_oro4j"),
+"Flooring2": ExtResource("2_mbvrh"),
+"Flooring3": ExtResource("3_o3110"),
+"Flooring4": ExtResource("4_1810j"),
+"Flooring5": ExtResource("5_6u4g2"),
+"Flooring6": ExtResource("6_v04ae"),
+"Flooring7": ExtResource("7_gk6af"),
+"Flooring8": ExtResource("8_8h7iq")
+}

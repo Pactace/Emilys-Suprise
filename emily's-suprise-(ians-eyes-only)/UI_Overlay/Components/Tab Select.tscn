@@ -9,54 +9,70 @@
 [ext_resource type="Resource" uid="uid://wtlw617uwwd" path="res://Inventories/FlooringInventory.tres" id="5_tnchv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yamwj"]
-bg_color = Color(1, 0.85775596, 0.93177813, 1)
-border_width_left = 10
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 120.0
+bg_color = Color(1, 0.85882354, 0.93333334, 0.7294118)
+border_width_left = 20
 border_width_top = 10
-border_width_right = 10
+border_width_right = 20
 border_width_bottom = 10
-border_color = Color(0.92941177, 0.7411765, 0.7019608, 1)
+border_color = Color(0.92941177, 0.7411765, 0.7019608, 0.81960785)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-shadow_color = Color(0.50362134, 0.0089863, 0.4293662, 0.6)
+shadow_color = Color(0.503621, 0.0089863, 0.429366, 0.6)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tsfa"]
-bg_color = Color(0.7335416, 0.3956136, 0.34393993, 1)
+content_margin_left = 25.0
+content_margin_top = 10.0
+content_margin_right = 25.0
+content_margin_bottom = 0.0
+bg_color = Color(0.733542, 0.395614, 0.34394, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
-border_color = Color(0.5561057, 0.27776095, 0.23637927, 1)
+border_color = Color(0.556106, 0.277761, 0.236379, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnchv"]
-bg_color = Color(0.9833235, 0.94146925, 0.93310755, 1)
+content_margin_left = 25.0
+content_margin_top = 10.0
+content_margin_right = 25.0
+content_margin_bottom = 0.0
+bg_color = Color(0.983324, 0.941469, 0.933108, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
-border_color = Color(0.92941177, 0.7411765, 0.7019608, 1)
+border_color = Color(0.929412, 0.741176, 0.701961, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 
 [node name="TabContainer" type="TabContainer"]
+clip_contents = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -336.0
-offset_top = 1.0
-offset_right = -24.0
-offset_bottom = 86.0
+offset_left = 98.0
+offset_top = 12.0
+offset_right = 283.0
+offset_bottom = 143.0
 grow_horizontal = 0
+scale = Vector2(0.5, 1)
 theme_override_font_sizes/font_size = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_yamwj")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_2tsfa")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_tnchv")
-current_tab = 2
+current_tab = 0
+clip_tabs = false
+use_hidden_tabs_for_min_size = true
 script = ExtResource("1_6vvw0")
 
 [node name="ObjectSelect" parent="." instance=ExtResource("2_f6myi")]
-visible = false
+clip_contents = true
 layout_mode = 2
 tab_name = "FloorFurniture"
 inventory = ExtResource("3_tnchv")
@@ -64,12 +80,15 @@ metadata/_tab_index = 0
 
 [node name="ObjectSelect5" parent="." instance=ExtResource("2_f6myi")]
 visible = false
+clip_contents = true
 layout_mode = 2
 tab_name = "Table Placable"
 inventory = ExtResource("4_ibtlu")
 metadata/_tab_index = 1
 
 [node name="ObjectSelect2" parent="." instance=ExtResource("2_f6myi")]
+visible = false
+clip_contents = true
 layout_mode = 2
 tab_name = "Wall Objects"
 inventory = ExtResource("3_yamwj")
@@ -77,6 +96,7 @@ metadata/_tab_index = 2
 
 [node name="ObjectSelect3" parent="." instance=ExtResource("2_f6myi")]
 visible = false
+clip_contents = true
 layout_mode = 2
 tab_name = "Wallpapers"
 inventory = ExtResource("4_2tsfa")
@@ -84,6 +104,7 @@ metadata/_tab_index = 3
 
 [node name="ObjectSelect4" parent="." instance=ExtResource("2_f6myi")]
 visible = false
+clip_contents = true
 layout_mode = 2
 tab_name = "Flooring"
 inventory = ExtResource("5_tnchv")

@@ -34,7 +34,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="VerticalSliderEdit" type="HSlider" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 max_value = 10.0
 tick_count = 10
@@ -65,7 +65,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="HorizontalSliderEdit" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
-custom_minimum_size = Vector2(500, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 max_value = 10.0
 tick_count = 10

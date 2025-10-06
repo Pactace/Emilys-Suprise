@@ -12,3 +12,13 @@
 
 [resource]
 script = ExtResource("9_3o7a7")
+objects = {
+"Anthurium": ExtResource("2_ba0gk"),
+"Ball": ExtResource("6_xjxtg"),
+"Chess": ExtResource("7_do37p"),
+"Cup": ExtResource("8_m82tm"),
+"Monstera": ExtResource("3_rlq6p"),
+"Suculents": ExtResource("1_3o7a7"),
+"Takumi": ExtResource("4_5nean"),
+"Yamadoriyashi": ExtResource("5_0m5r3")
+}

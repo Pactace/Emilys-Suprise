@@ -1,0 +1,24 @@
+l1 = 1
+l2 = 2
+r1 = 0
+r2 = 9
+
+left_analog_up = w
+left_analog_down = s
+left_analog_left = a
+left_analog_right = d
+
+y = e
+a = m
+b = n
+x = l
+
+start = k
+select = l
+guide = l
+
+up = up
+down = down
+left = left
+right = right
+

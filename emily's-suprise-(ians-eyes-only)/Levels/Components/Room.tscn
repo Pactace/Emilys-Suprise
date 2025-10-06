@@ -1,16 +1,55 @@
-[gd_scene load_steps=8 format=3 uid="uid://dt6j24qhea4jy"]
+[gd_scene load_steps=14 format=3 uid="uid://dt6j24qhea4jy"]
 
 [ext_resource type="Script" uid="uid://bbjbt0uafg0xb" path="res://Levels/room.gd" id="1_phqny"]
 [ext_resource type="Material" uid="uid://lesurscs6lkp" path="res://Floor and Wall Textures/Wall0/Wall0.tres" id="2_2exox"]
 [ext_resource type="Material" uid="uid://beiedk3loanm4" path="res://Floor and Wall Textures/WoodFloor1/WoodFloor1.tres" id="2_8hqu4"]
+[ext_resource type="LightmapGIData" uid="uid://bmcgil4xjd8d5" path="res://Levels/Components/Room.lmbake" id="4_4vdsp"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_oqiun"]
+[sub_resource type="QuadMesh" id="QuadMesh_4vdsp"]
+lightmap_size_hint = Vector2i(7, 7)
+add_uv2 = true
+subdivide_width = 10
+subdivide_depth = 10
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xfj0o"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_th2jy"]
+[sub_resource type="QuadMesh" id="QuadMesh_5ac6h"]
+lightmap_size_hint = Vector2i(7, 7)
+add_uv2 = true
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="QuadMesh" id="QuadMesh_j5q0c"]
+lightmap_size_hint = Vector2i(7, 7)
+add_uv2 = true
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="QuadMesh" id="QuadMesh_oui00"]
+lightmap_size_hint = Vector2i(7, 7)
+add_uv2 = true
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2exox"]
+lightmap_size_hint = Vector2i(12, 12)
+add_uv2 = true
+subdivide_width = 20
+subdivide_depth = 20
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_32o0v"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4vdsp"]
+lightmap_size_hint = Vector2i(12, 12)
+add_uv2 = true
+
+[sub_resource type="Environment" id="Environment_4vdsp"]
+background_mode = 1
+background_energy_multiplier = 0.0
+ambient_light_source = 2
+ambient_light_color = Color(0.61339027, 0.61339027, 0.61339027, 1)
+ambient_light_energy = 1.2
+reflected_light_source = 1
 
 [node name="Room" type="Node3D"]
 script = ExtResource("1_phqny")
@@ -20,10 +59,10 @@ script = ExtResource("1_phqny")
 [node name="Floor Nodes" type="Node3D" parent="."]
 
 [node name="Back Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(-16, 0, 0, 0, 8, -1.509958e-07, 0, 1.2079664e-06, 1, 0, 4, -8)
-layers = 65537
+transform = Transform3D(-16, 0, 0, 0, 9, -1.509958e-07, 0, 1.3589622e-06, 1, 0, 4.5, -8)
+layers = 590337
 material_override = ExtResource("2_2exox")
-mesh = SubResource("QuadMesh_oqiun")
+mesh = SubResource("QuadMesh_4vdsp")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Back Wall"]
@@ -33,11 +72,18 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Back Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Back Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
+light_indirect_energy = 0.0
+spot_range = 24.241
+spot_attenuation = 0.5
+spot_angle = 77.72
+
 [node name="Left Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.993822e-07, 0, -1, 0, 8, 0, 16, 0, -4.371139e-08, 8, 4, 0)
+transform = Transform3D(-6.993822e-07, 0, -1, 0, 9, 0, 16, 0, -4.371139e-08, 8, 4.5, 0)
 layers = 65537
 material_override = ExtResource("2_2exox")
-mesh = SubResource("QuadMesh_oqiun")
+mesh = SubResource("QuadMesh_5ac6h")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Left Wall"]
@@ -47,11 +93,19 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Left Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Left Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
+layers = 65537
+light_indirect_energy = 0.0
+spot_range = 24.241
+spot_attenuation = 0.5
+spot_angle = 76.25
+
 [node name="Right Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.993822e-07, 0, 1, 0, 8, 0, -16, 0, -4.371139e-08, -8, 4, 0)
+transform = Transform3D(-6.993822e-07, 0, 1, 0, 9, 0, -16, 0, -4.371139e-08, -8, 4.5, 0)
 layers = 65537
 material_override = ExtResource("2_2exox")
-mesh = SubResource("QuadMesh_oqiun")
+mesh = SubResource("QuadMesh_j5q0c")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Right Wall"]
@@ -61,11 +115,18 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Right Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Right Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
+light_indirect_energy = 0.0
+spot_range = 24.241
+spot_attenuation = 0.5
+spot_angle = 82.11
+
 [node name="Front Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 1.2079664e-06, -1.5099563e-07, -2.4159328e-06, 8, 3.9675377e-19, -2.41593e-06, -1.8239448e-13, -1, 0, 4, 8)
-layers = 65537
+transform = Transform3D(16, 1.3589622e-06, -1.5099563e-07, -2.4159328e-06, 9, 3.358816e-19, -2.41593e-06, -2.0519434e-13, -1, 0, 4.5, 8)
+layers = 589825
 material_override = ExtResource("2_2exox")
-mesh = SubResource("QuadMesh_oqiun")
+mesh = SubResource("QuadMesh_oui00")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Front Wall"]
@@ -75,10 +136,17 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Front Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Front Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
+light_indirect_energy = 0.0
+spot_range = 24.241
+spot_attenuation = 0.5
+spot_angle = 77.45
+
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
-layers = 65537
-mesh = SubResource("PlaneMesh_th2jy")
+layers = 69633
+mesh = SubResource("PlaneMesh_2exox")
 surface_material_override/0 = ExtResource("2_8hqu4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
@@ -87,6 +155,21 @@ surface_material_override/0 = ExtResource("2_8hqu4")
 shape = SubResource("WorldBoundaryShape3D_32o0v")
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, -1, 1.2079664e-06, 0, -1.509958e-07, -8, 0, 8, 0)
+transform = Transform3D(8, 0, 0, 0, -1, 1.2079664e-06, 0, -1.509958e-07, -8, 0, 9.132709, 0)
 layers = 65537
-mesh = SubResource("PlaneMesh_th2jy")
+mesh = SubResource("PlaneMesh_4vdsp")
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+layers = 69633
+quality = 2
+supersampling = true
+supersampling_factor = 8.0
+bounces = 16
+bias = 1.0
+environment_mode = 3
+environment_custom_color = Color(0.7599466, 0.7559262, 0.76633763, 1)
+environment_custom_energy = 1.2
+light_data = ExtResource("4_4vdsp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4vdsp")

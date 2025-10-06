@@ -17,11 +17,15 @@ var collision
 var placable_location_found
 
 @export_enum("Normal", "Table", "Placeable on Table") var object_type: int
+
+func _ready() -> void:
+	camera = get_viewport().get_camera_3d()
+
 func _process(delta: float) -> void:
 	#this is just for some culling effects
 	if is_on_wall && camera && camera.basis.z != previous_cam_z:
 		var dot_product = -basis.z.dot(camera.basis.z)
-		if dot_product > 0.5:
+		if dot_product > 15:
 			visible = false
 		else: 
 			visible = true
@@ -60,27 +64,27 @@ func placed() -> void:
 		if child is MeshInstance3D:
 			if !is_on_wall:
 				child.set_layer_mask_value(16, true)
-			child.material_override = null
+			child.material_overlay = null
 
 func placement_red() -> void:
 	for child in get_children():
 		if child is MeshInstance3D:
-			child.material_override = red_mat
+			child.material_overlay = red_mat
 	
 func placement_green() -> void:
 	for child in get_children():
 		if child is MeshInstance3D:
-			child.material_override = green_mat
+			child.material_overlay = green_mat
 
 func placement_yellow():
 	for child in get_children():
 		if child is MeshInstance3D:
-			child.material_override = yellow_mat
+			child.material_overlay = yellow_mat
 	
 func clear_material() -> void:
 	for child in get_children():
 		if child is MeshInstance3D:
-			child.material_override = null
+			child.material_overlay = null
 	
 func wall_move(forward: bool, horizontal: bool):
 	if is_on_wall and wall_ray.is_colliding() and is_horizontal == horizontal:

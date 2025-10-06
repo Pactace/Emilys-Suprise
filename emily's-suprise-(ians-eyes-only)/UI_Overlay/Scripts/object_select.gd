@@ -106,10 +106,10 @@ func get_children_grid() -> Array:
 func highlight_selection(node: Control) -> void:
 	for child in get_children():
 		if child is Label:
-			child.add_theme_color_override("font_color", Color.WHITE)
+			child.add_theme_color_override("font_color", Color.WEB_MAROON)
 
 	if node is Label:
-		node.add_theme_color_override("font_color", Color.YELLOW)
+		node.add_theme_color_override("font_color", Color.BLACK)
 
 
 #this loads the dictionaries each object

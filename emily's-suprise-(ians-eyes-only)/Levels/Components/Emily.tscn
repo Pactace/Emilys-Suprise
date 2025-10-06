@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://crmpmlrfo6y0r" path="res://UI_Overlay/EmilyOverlay.tscn" id="3_yxvxl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
-radius = 0.3803711
+radius = 0.4
+height = 1.7
 
 [node name="Emily" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -14,29 +15,16 @@ collision_mask = 7
 script = ExtResource("1_qt8ib")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.7864078, 0, 0, 0, 1, -0.019368093, 0.20384979, 0)
 shape = SubResource("CapsuleShape3D_5v4x7")
 
 [node name="EmilyAnimations" parent="." instance=ExtResource("2_cojlu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78416866, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.784169, 0)
 
 [node name="EmilyOverlay" parent="." instance=ExtResource("3_yxvxl")]
-offset_left = 7.0
-offset_top = 2.0
-offset_right = 7.0
-offset_bottom = 2.0
-
-[node name="Top Light2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.6666667, 0, 0, 0, 0.6613879, -0.083728604, 0, 0.083728604, 0.6613879, 0, 0.23004127, 1.9041957)
-layers = 131072
-light_energy = 0.4
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 0.0
-light_specular = 0.0
-light_bake_mode = 0
-light_cull_mask = 4294049792
-shadow_caster_mask = 4294966272
-sky_mode = 1
+offset_left = -10.0
+offset_top = 45.0
+offset_right = -10.0
+offset_bottom = 45.0
 
 [connection signal="play_idle" from="." to="EmilyAnimations" method="_on_emily_play_idle"]
 [connection signal="play_walking" from="." to="EmilyAnimations" method="_on_emily_play_walking"]

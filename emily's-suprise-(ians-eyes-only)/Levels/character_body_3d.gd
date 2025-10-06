@@ -33,13 +33,13 @@ func switch_states():
 		visible = false
 		old_position = position
 		position = Vector3(0,-10, 0)
-		emily_overlay.visible = false
+		emily_model.visible = false
 	else:
 		current_state = PlayerState.Moving
 		ui_overlay.disabled()
 		visible = true
 		position = old_position
-		emily_overlay.visible = true
+		emily_model.visible = true
 	
 func walk_around_logic(delta: float):
 	var input_dir := Input.get_vector("Left", "Right", "Up", "Down")
