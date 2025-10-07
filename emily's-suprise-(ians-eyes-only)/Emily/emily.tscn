@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cshbifhdlt11a" path="res://Emily/emily_animations.gd" id="2_p1qku"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1qku"]
-shading_mode = 0
+shading_mode = 2
 diffuse_mode = 3
 albedo_texture = ExtResource("2_82ksn")
 
@@ -353,6 +353,7 @@ bones/220/scale = Vector3(1.00005, 1.00005, 1.00006)
 [node name="Emily_Full" parent="rig/Skeleton3D" index="0"]
 layers = 131072
 material_override = SubResource("StandardMaterial3D_p1qku")
+gi_mode = 2
 
 [node name="AnimationPlayer" parent="." index="82"]
 speed_scale = 0.7

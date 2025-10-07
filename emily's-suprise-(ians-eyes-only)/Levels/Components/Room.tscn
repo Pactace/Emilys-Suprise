@@ -72,12 +72,12 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Back Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Back Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
-light_indirect_energy = 0.0
-spot_range = 24.241
-spot_attenuation = 0.5
-spot_angle = 77.72
+[node name="OmniLight3D" type="OmniLight3D" parent="Back Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34234878, 2.5001154)
+light_color = Color(0.95434684, 0.94215727, 0.9153126, 1)
+light_energy = 1.5
+light_bake_mode = 1
+omni_range = 11.873407
 
 [node name="Left Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, -1, 0, 9, 0, 16, 0, -4.371139e-08, 8, 4.5, 0)
@@ -93,13 +93,12 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Left Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Left Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
-layers = 65537
-light_indirect_energy = 0.0
-spot_range = 24.241
-spot_attenuation = 0.5
-spot_angle = 76.25
+[node name="OmniLight3D2" type="OmniLight3D" parent="Left Wall"]
+transform = Transform3D(4.3711395e-08, -8.493513e-08, -1, 8.742278e-08, -1, 8.493514e-08, -1, -8.7422784e-08, -4.371139e-08, 0.0872334, 0.34234875, 3.7055302)
+light_color = Color(0.95434684, 0.94215727, 0.9153126, 1)
+light_energy = 1.5
+light_bake_mode = 1
+omni_range = 11.873407
 
 [node name="Right Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, 1, 0, 9, 0, -16, 0, -4.371139e-08, -8, 4.5, 0)
@@ -115,12 +114,12 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Right Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Right Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
-light_indirect_energy = 0.0
-spot_range = 24.241
-spot_attenuation = 0.5
-spot_angle = 82.11
+[node name="OmniLight3D3" type="OmniLight3D" parent="Right Wall"]
+transform = Transform3D(4.371138e-08, 8.4935145e-08, 1, 8.742278e-08, -1, 8.493514e-08, 1, 8.742277e-08, -4.371139e-08, -0.0872334, 0.34234875, 2.242609)
+light_color = Color(0.95434684, 0.94215727, 0.9153126, 1)
+light_energy = 1.5
+light_bake_mode = 1
+omni_range = 11.873407
 
 [node name="Front Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(16, 1.3589622e-06, -1.5099563e-07, -2.4159328e-06, 9, 3.358816e-19, -2.41593e-06, -2.0519434e-13, -1, 0, 4.5, 8)
@@ -136,12 +135,12 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Front Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_xfj0o")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Front Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-07, 8.460877)
-light_indirect_energy = 0.0
-spot_range = 24.241
-spot_attenuation = 0.5
-spot_angle = 77.45
+[node name="OmniLight3D4" type="OmniLight3D" parent="Front Wall"]
+transform = Transform3D(-1, -2.6844012e-07, -2.2967631e-06, -2.68437e-07, 1, -1.3589624e-06, 2.2967636e-06, -1.3589619e-06, -1, -0.07567199, 0.34234875, 1.2573552)
+light_color = Color(0.95434684, 0.94215727, 0.9153126, 1)
+light_energy = 1.5
+light_bake_mode = 1
+omni_range = 11.873407
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
@@ -155,7 +154,8 @@ surface_material_override/0 = ExtResource("2_8hqu4")
 shape = SubResource("WorldBoundaryShape3D_32o0v")
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, -1, 1.2079664e-06, 0, -1.509958e-07, -8, 0, 9.132709, 0)
+transform = Transform3D(8, 0, 0, 0, -1, 1.2079664e-06, 0, -1.509958e-07, -8, 0, 8.817201, 0)
+visible = false
 layers = 65537
 mesh = SubResource("PlaneMesh_4vdsp")
 
@@ -173,3 +173,8 @@ light_data = ExtResource("4_4vdsp")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_4vdsp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.20388097, 0.9789957, 0, -0.9789957, -0.20388097, 0, 4.747053, 0)
+light_color = Color(0.8183848, 0.7712086, 0.7228757, 1)
+light_energy = 3.0
