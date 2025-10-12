@@ -1,10 +1,48 @@
-[gd_resource type="Resource" script_class="WallPaperInventory" load_steps=6 format=3 uid="uid://brpg1qdqmd6up"]
+[gd_resource type="Resource" script_class="WallPaperInventory" load_steps=14 format=3 uid="uid://brpg1qdqmd6up"]
 
-[ext_resource type="Material" uid="uid://lesurscs6lkp" path="res://Floor and Wall Textures/Wall0/Wall0.tres" id="1_6fu5w"]
-[ext_resource type="Material" uid="uid://dn3tk8opsrabc" path="res://Floor and Wall Textures/Wall1/Wall1.tres" id="2_xdyvx"]
-[ext_resource type="Material" uid="uid://eabjxbeewau0" path="res://Floor and Wall Textures/Wall2/Wall2.tres" id="3_3b7dr"]
-[ext_resource type="Material" uid="uid://c34umel372q5e" path="res://Floor and Wall Textures/Wall3/Wall3.tres" id="4_gqh0u"]
+[ext_resource type="Texture2D" uid="uid://cqtdrgofs130p" path="res://Floor and Wall Textures/Wall0/RoomTexWallSimple00_Alb.png" id="1_s1v8u"]
+[ext_resource type="Texture2D" uid="uid://cc6g24wqngbxx" path="res://Floor and Wall Textures/Wall0/RoomTexWallSimple00_Nrm.png" id="2_xy7tx"]
+[ext_resource type="Texture2D" uid="uid://blnrngwtk6s7i" path="res://Floor and Wall Textures/Wall1/RoomTexWallSimple01_Alb.png" id="3_vigix"]
+[ext_resource type="Texture2D" uid="uid://dstvsoe1h3dru" path="res://Floor and Wall Textures/Wall1/RoomTexWallSimple01_Nrm.png" id="4_ddgx6"]
+[ext_resource type="Texture2D" uid="uid://b4duk7yybxt1t" path="res://Floor and Wall Textures/Wall2/RoomTexWallSimple02_Alb.png" id="5_6y0fa"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="5_s1v8u"]
+[ext_resource type="Texture2D" uid="uid://cb8eh5brqijhc" path="res://Floor and Wall Textures/Wall2/RoomTexWallSimple02_Nrm.png" id="6_m0nkn"]
+[ext_resource type="Texture2D" uid="uid://d1y64gc1t7i52" path="res://Floor and Wall Textures/Wall3/RoomTexWallSimple03_Alb.png" id="7_0ukr4"]
+[ext_resource type="Texture2D" uid="uid://hlrhtxjcqq4q" path="res://Floor and Wall Textures/Wall3/RoomTexWallSimple03_Nrm.png" id="8_rppvy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1th6c"]
+albedo_texture = ExtResource("1_s1v8u")
+normal_enabled = true
+normal_scale = 5.11
+normal_texture = ExtResource("2_xy7tx")
+uv1_scale = Vector3(0.125, 0.1, 0.125)
+uv1_offset = Vector3(0, 1, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2xqu"]
+albedo_texture = ExtResource("3_vigix")
+normal_enabled = true
+normal_texture = ExtResource("4_ddgx6")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_un6hv"]
+albedo_texture = ExtResource("5_6y0fa")
+normal_enabled = true
+normal_texture = ExtResource("6_m0nkn")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hglpw"]
+albedo_texture = ExtResource("7_0ukr4")
+normal_enabled = true
+normal_texture = ExtResource("8_rppvy")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [resource]
 script = ExtResource("5_s1v8u")

@@ -32,7 +32,7 @@ func switch_states():
 		ui_overlay.enabled()
 		visible = false
 		old_position = position
-		position = Vector3(0,-10, 0)
+		position.y = -10
 		emily_model.visible = false
 	else:
 		current_state = PlayerState.Moving

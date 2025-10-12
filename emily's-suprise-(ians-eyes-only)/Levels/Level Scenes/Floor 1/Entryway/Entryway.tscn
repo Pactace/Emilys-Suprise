@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhyodff7y2brl"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_4fi48"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_a1vnb"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_p0gwe"]
+[ext_resource type="Script" uid="uid://b60vddqp5mkgx" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="4_l6yyg"]
+[ext_resource type="Script" uid="uid://cf6mpls6jm2kf" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFlooringInventory.gd" id="5_n8xdo"]
+[ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_6st5h"]
+[ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_5tvfp"]
+[ext_resource type="Script" uid="uid://3qe3tqrdfmnn" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallPaperInventory.gd" id="8_28131"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_jyxhy"]
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera", "right_marker", "back_marker") instance=ExtResource("1_4fi48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)
+horizontal_size = -3
+vertical_size = 5
+editable = false
+camera = NodePath("../Camera")
+right_marker = NodePath("../Rigthwall Portal Marker")
+back_marker = NodePath("../Frontwall Portal Marker")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("2_a1vnb")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_p0gwe")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("4_l6yyg")
+flooring_inventory = ExtResource("5_n8xdo")
+placeable_inventory = ExtResource("6_6st5h")
+wall_furniture_inventory = ExtResource("7_5tvfp")
+wallpaper_inventory = ExtResource("8_28131")
+
+[node name="Emily" parent="." instance=ExtResource("9_jyxhy")]
+transform = Transform3D(-2.9999955, 0, -0.005183909, 0, 3, 0, 0.005183909, 0, -2.9999955, 0.4792348, 2.44494, 7.408112)
+SPEED = 5.0
+
+[node name="Frontwall Portal Marker" type="Marker3D" parent="."]
+transform = Transform3D(0.13605003, -4.3757433e-09, 1844.5222, 2.376272e-07, 1, 4.8096705e-13, -2.7147312, 8.7313204e-08, 92.43911, 0.28978086, 6.581973, 8.778415)
+
+[node name="Rigthwall Portal Marker" type="Marker3D" parent="."]
+transform = Transform3D(0.025026312, 7.557735e-09, -1.0616676, 7.54979e-08, -1, 1.2147392e-15, -0.4993733, -1.5080654e-07, -0.053205937, 0.3637104, 6.153596, 3.5044985)

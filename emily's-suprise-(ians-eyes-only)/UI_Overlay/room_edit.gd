@@ -23,6 +23,12 @@ There is also global variables that should be passed to the children here.
 @onready var place_prompt = $PlaceObjectsPrompt
 @onready var tab_select_prompt = $TabSelectControls
 
+@export var floor_furniture_inventory: GDScript
+@export var flooring_inventory: GDScript
+@export var placeable_inventory: GDScript
+@export var wall_furniture_inventory: GDScript
+@export var wallpaper_inventory: GDScript
+
 #---Edit State Variables---#
 enum EditState {Edit_Objects, Size_Modify, Object_Select}
 var current_state: EditState = EditState.Edit_Objects
@@ -45,7 +51,7 @@ func disabled():
 	#the wall stuff
 	camera.wall_update(false)
 	_on_tab_select_is_wall_change(false)
-	
+
 func _ready() -> void:
 	#global variables should be assigned by the parent.
 	edit_object.mouse = mouse
@@ -53,9 +59,11 @@ func _ready() -> void:
 	tab_select.room = room
 	tab_select.camera = camera
 	edit_object.camera = camera
+	assign_tab_select_inventories()
 	
 	#next we are going to switch states to the default edit object state
 	current_state = 0
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if visible:
@@ -102,3 +110,6 @@ func switch_states():
 signal is_wall_change(state: bool)
 func _on_tab_select_is_wall_change(state: bool) -> void:
 	is_wall_change.emit(state)
+
+func assign_tab_select_inventories():
+	tab_select.assign_inventory_scripts(floor_furniture_inventory, placeable_inventory,wall_furniture_inventory,wallpaper_inventory,flooring_inventory)

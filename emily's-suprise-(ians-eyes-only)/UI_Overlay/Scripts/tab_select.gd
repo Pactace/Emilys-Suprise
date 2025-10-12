@@ -5,6 +5,12 @@ var camera: Camera3D
 var is_wall: bool = false
 signal is_wall_change(state: bool)
 
+@onready var floor_furniture_tab = get_child(0)
+@onready var placeable_furniture_tab = get_child(1)
+@onready var wall_furniture_tab = get_child(2)
+@onready var wallpaper_tab = get_child(3)
+@onready var flooring_tab = get_child(4)
+
 func enabled():
 	visible = true
 	if camera.wall_view == true:
@@ -63,4 +69,16 @@ func update_is_wall_state() -> void:
 		
 func update_is_wall_camera(enabled: bool):
 	camera.wall_update(enabled)
+	
+func assign_inventory_scripts(floor_inventory: GDScript, placeable_inventory: GDScript, wall_inventory: GDScript, wallpaper_inventory: GDScript, flooring_inventory: GDScript):
+	if flooring_tab != null:
+		floor_furniture_tab.assign_inventory(floor_inventory)
+		placeable_furniture_tab.assign_inventory(placeable_inventory)
+		wall_furniture_tab.assign_inventory(wall_inventory)
+		wallpaper_tab.assign_inventory(wallpaper_inventory)
+		flooring_tab.assign_inventory(flooring_inventory)
+	else:
+		await get_tree().create_timer(0.02).timeout
+		print("hit")
+		assign_inventory_scripts(floor_inventory, placeable_inventory, wall_inventory, wallpaper_inventory, flooring_inventory)
 	

@@ -58,7 +58,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("Accept") and selected_object:
 		if tab_name == "Wallpapers":
 			var room = get_parent().room
-			var wall_material: StandardMaterial3D = selected_object.get_meta("scene", null)
+			var wall_material: ShaderMaterial = selected_object.get_meta("scene", null)
 			room.change_wallpaper(wall_material)
 		elif tab_name == "Flooring":
 			var room = get_parent().room
@@ -135,3 +135,7 @@ func _on_visibility_changed() -> void:
 	if inventory:
 		object_dict = inventory.objects
 		load_objects(object_dict)
+		
+func assign_inventory(inventory_script: GDScript):
+	inventory.set_script(inventory_script)
+	

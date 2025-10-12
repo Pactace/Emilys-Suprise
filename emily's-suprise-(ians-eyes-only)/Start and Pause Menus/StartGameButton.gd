@@ -1,8 +1,6 @@
-extends Button
+extends TextureButton
 
 
-func _ready() -> void:
-	grab_focus()
-
-func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Levels/Level Scenes/Floor 1/Entry Way.tscn")
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Accept") or event.is_action_pressed("+"):
+		print("moving to new scene")

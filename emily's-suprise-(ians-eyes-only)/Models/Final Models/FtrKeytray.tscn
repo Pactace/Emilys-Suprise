@@ -52,6 +52,7 @@ size = Vector3(0.0737911, 0.0131144, 0.0492221)
 transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
 script = ExtResource("1_0g2c5")
 area_path = NodePath("Antiquekeyring_low__mReBody/@Area3D@70143")
+object_type = 2
 
 [node name="Antiquekeyring_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kf2xv")

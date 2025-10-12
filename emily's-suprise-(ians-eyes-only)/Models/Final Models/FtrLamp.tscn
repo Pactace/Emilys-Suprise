@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://boj36mcoccdcv"]
+[gd_scene load_steps=12 format=4 uid="uid://uytp5w1naom8"]
 
 [ext_resource type="Material" uid="uid://ditfk7s8vpg0u" path="res://Models/Final Models/FtrLampTextures/mReBody0.tres" id="1_aku2d"]
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_g7k4g"]
