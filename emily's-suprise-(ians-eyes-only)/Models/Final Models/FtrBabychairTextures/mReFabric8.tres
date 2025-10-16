@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dfug17osleode"]
-
-[ext_resource type="Texture2D" uid="uid://bskdcodfwkfa0" path="res://Models/Final Models/FtrBabychairTextures/mReFabric_Alb8.png" id="1_2c7pq"]
-
-[resource]
-resource_name = "mReFabric8"
-albedo_texture = ExtResource("1_2c7pq")
-normal_enabled = true

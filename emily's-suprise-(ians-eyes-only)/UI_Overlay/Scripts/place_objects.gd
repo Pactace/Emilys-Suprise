@@ -122,7 +122,7 @@ func placing_object():
 				selected_object.basis = basis
 				previous_rid = collision.rid
 				wall_name = collision.collider.get_parent().name
-				selected_object.scale = Vector3(28, 28, 28)
+				if selected_object.name.contains("Ftr"): selected_object.scale = Vector3(28, 28, 28)
 			
 			selected_object.transform.origin = collision.position
 			can_place = selected_object.check_placement()

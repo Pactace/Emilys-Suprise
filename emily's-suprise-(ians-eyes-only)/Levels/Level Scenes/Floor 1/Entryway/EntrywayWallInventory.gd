@@ -3,6 +3,7 @@ class_name EntrywayWallInventory
 
 @export var objects := {
 	#clocks
+	"Round Mirror": preload("res://Models/Final Models/RoundWallMirror.tscn"),
 	"Regular Clock": preload("res://Models/Final Models/FtrClockWall.tscn"),
 	"Boy Clock": preload("res://Models/Final Models/FtrBoyClockWall.tscn"),
 	"Cuckoo Clock": preload("res://Models/Final Models/FtrCuckooclock.tscn"),
@@ -24,7 +25,6 @@ class_name EntrywayWallInventory
 	"Art 12": preload("res://Models/Final Models/FtrArtSundayOn.tscn"),
 	
 	#Shelfs
-	"Stuffy Shelf": preload("res://Models/Final Models/FtrDreamyShelfW.tscn"),
 	"Hanging Shelf": preload("res://Models/Final Models/FtrHangingShelfCeiling.tscn"),
 	"Iron Shelf": preload("res://Models/Final Models/FtrIronShelfW.tscn"),
 	"Log Shelf" : preload("res://Models/Final Models/FtrLogShelf.tscn"),
@@ -32,11 +32,6 @@ class_name EntrywayWallInventory
 	"Wood Box Shelf": preload("res://Models/Final Models/FtrSimpleShelfWall.tscn"),
 	"Wood Shelf" : preload("res://Models/Final Models/FtrWoodShelfWall.tscn"),
 	
-	#Misc
-	"Dried Flowers": preload("res://Models/Final Models/FtrDriedflowerWall.tscn"),
 	"Flower Swag": preload("res://Models/Final Models/FtrFlowerSwag.tscn"),
-	"Fan Wall" : preload("res://Models/Final Models/FtrFanRetroWall.tscn"),
 	"Leaf Wall": preload("res://Models/Final Models/FtrLeafWall.tscn"),
-	"TV 20 inch": preload("res://Models/Final Models/FtrTV20inchWall.tscn"),
-	"TV 50 inch": preload("res://Models/Final Models/FtrTV50inchWall.tscn"),
 	}

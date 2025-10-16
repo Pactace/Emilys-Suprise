@@ -4,192 +4,245 @@ extends EditorScript
 var final_models := "res://Models/Final Models/"
 
 func _run():
-	add_wall_ray_to_wall_objects()
-		
-func cleanup():
-	var dir := DirAccess.open(final_models)
+	var root_path := final_models
+	_traverse_folders(root_path)
+
+# --- Traverse folders recursively
+func _traverse_folders(path: String) -> void:
+	var dir := DirAccess.open(path)
 	if not dir:
-		push_error("Could not open: %s" % final_models)
+		push_error("Could not open: %s" % path)
 		return
-	
+
 	dir.list_dir_begin()
-	var file_name = dir.get_next()
+	var file_name := dir.get_next()
 	while file_name != "":
-		if file_name.ends_with(".fbx"):  
-			var file_path = final_models + file_name
-			print("Processing: ", file_path)
-			
-			var scene = load(file_path)
-			if scene:
-				var inst = scene.instantiate()
-				
-				# Delete any AnimationPlayer nodes
-				var anim_players = inst.get_children(true).filter(func(c): return c is AnimationPlayer)
-				for ap in anim_players:
-					ap.queue_free()
-					print("Removed AnimationPlayer from ", file_name)
-				
-				# Pack into a clean scene
-				var packed := PackedScene.new()
-				var ok := packed.pack(inst)
-				if ok == OK:
-					var save_path := final_models + file_name.get_basename() + ".tscn"
-					var err = ResourceSaver.save(packed, save_path)
-					if err == OK:
-						print("Saved scene:", save_path)
-					else:
-						push_error("Failed to save scene: %s" % save_path)
+		if dir.current_is_dir():
+			if file_name != "." and file_name != "..":
+				if file_name == "Textures":
+					var textures_path = path.path_join(file_name)
+					print("🧵 Found Textures folder:", textures_path)
+					create_materials(textures_path)
 				else:
-					push_error("Failed to pack scene: %s" % file_name)
-		
+					_traverse_folders(path.path_join(file_name))
+		else:
+			if file_name.ends_with(".glb"):
+				var glb_scene := path.path_join(file_name)
+				var tscn_path := glb_scene.replace(".glb", ".tscn")
+
+				if FileAccess.file_exists(tscn_path):
+					print("⏩ Skipping (already exists):", tscn_path)
+				else:
+					print("📦 Found GLB file:", glb_scene)
+					process_glb_scene(glb_scene, tscn_path)
 		file_name = dir.get_next()
+
 	dir.list_dir_end()
 
-func delete_fbx_files():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
+# --- Main conversion pipeline
+func process_glb_scene(scene_path: String, save_path: String):
+	# Load once
+	var scene := load(scene_path)
+	if not scene:
+		push_error("Could not load GLB: %s" % scene_path)
 		return
 	
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	while file_name != "":
-		if file_name.ends_with(".fbx.import"):
-			var file_path = final_models + file_name
-			var err = dir.remove(file_name)
-			if err == OK:
-				print("Deleted:", file_path)
-			else:
-				push_error("Failed to delete: %s" % file_path)
-		file_name = dir.get_next()
-	dir.list_dir_end()
+	var inst = scene.instantiate()
+	if not inst:
+		push_error("Could not instantiate: %s" % scene_path)
+		return
+
+	# Step 1: Reparent mesh instances
+	reparent_mesh_instances(inst)
+
+	# Step 2: Add collision and area boxes
+	add_areas_to_scene(inst)
 	
-func delete_animation_players():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
+	# Step 3: Attach the script and assign the area.
+	var object_script: Script = load("res://Models/Scripts/object_script.gd")
+	inst.set_script(object_script)
+
+	# 2. Find area node and store its NodePath (not the Node itself)
+	var area_node: Node = null
+	for i in range(inst.get_child_count()):
+		var child = inst.get_child(i)
+		if child.get_child_count() > 0:
+			area_node = child.get_child(1)
+			break
+	if area_node:
+		# Make sure your script has: @export var area_path: NodePath
+		inst.set("area_path", inst.get_path_to(area_node))
+		
+	# Step 4 resize so its correct	
+	inst.scale = Vector3(28,28,28)
+	
+	# Step 4 save the packages: Save final packed scene
+	var packed := PackedScene.new()
+	var ok := packed.pack(inst)
+	if ok == OK:
+		var err := ResourceSaver.save(packed, save_path)
+		if err == OK:
+			print("✅ Final scene saved:", save_path)
+			remove_glb_imports(scene_path)
+		else:
+			push_error("❌ Failed to save scene: %s" % save_path)
+	else:
+		push_error("❌ Failed to pack scene: %s" % scene_path)
+
+# --- Move mesh instances to root and remove Y_UP
+func reparent_mesh_instances(inst: Node3D):
+	if not inst.has_node("Y_UP"):
+		push_error("⚠️ No Y_UP node found, skipping reparent.")
 		return
 	
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	while file_name != "":
-		if file_name.ends_with(".tscn"):
-			var file_path = final_models + file_name
-			var packed_scene = load(file_path)
-			var scene_root = packed_scene.instantiate()
-			
-			if scene_root.has_node("AnimationPlayer"):
-				scene_root.get_node("AnimationPlayer").free()
-				var result = packed_scene.pack(scene_root)
-				result = ResourceSaver.save(packed_scene, file_path)
-		file_name = dir.get_next()
-	dir.list_dir_end()
-	
-func create_texture_folders():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
+	var skeleton_child : Node3D = inst.get_node("Y_UP").get_child(0).get_child(0)
+	if not skeleton_child:
+		push_error("⚠️ Invalid Y_UP structure.")
 		return
+
+	for child : Node3D in skeleton_child.get_children():
+		child.reparent(inst)
+
+	inst.get_node("Y_UP").free()
+	print("🧩 Reparented meshes and removed Y_UP.")
+
+# --- Add collision and area volumes
+func add_areas_to_scene(inst: Node3D):
+	print("➕ Adding collision and area shapes...")
+	var chosen_index := 0
+
+	# Pick correct mesh node
+	for i in range(inst.get_child_count()):
+		var child := inst.get_child(i)
+		if "mBody" in child.name and not "mReBody" in inst.get_child(chosen_index).name:
+			chosen_index = i
+		if "mReBody" in child.name:
+			chosen_index = i
+			break
+
+	var target := inst.get_child(chosen_index)
+	if not target or not (target is MeshInstance3D):
+		push_error("⚠️ Could not find valid MeshInstance3D.")
+		return
+
+	var bounds = target.get_aabb()
+	var center = bounds.get_center()
+	var half_size = bounds.size * 0.5
+
+	var box := BoxShape3D.new()
+	box.extents = half_size
+
+	# StaticBody3D
+	var static_body := StaticBody3D.new()
+	var static_shape := CollisionShape3D.new()
+	static_shape.shape = box.duplicate()
+	static_shape.position = center
+	static_body.add_child(static_shape)
+	target.add_child(static_body)
+	static_body.owner = inst
+	static_shape.owner = inst
+
+	# Area3D
+	var area_box := Area3D.new()
+	var area_shape := CollisionShape3D.new()
+	area_shape.shape = box.duplicate()
+	area_shape.position = center
+	area_box.add_child(area_shape)
+	target.add_child(area_box)
+	area_box.owner = inst
+	area_shape.owner = inst
+
+	print("✅ Added collision + area to:", target.name)
+
+func remove_glb_imports(glb_scene_path: String) -> void:
+	var dir_path := glb_scene_path.get_base_dir()
+	var file_name := glb_scene_path.get_file()
+
+	var dir := DirAccess.open(dir_path)
+	if dir:
+		var err := dir.remove(file_name)
+		if err == OK:
+			print("🗑️ Removed:", glb_scene_path)
+		else:
+			push_error("⚠️ Could not remove GLB: %s (error %d)" % [glb_scene_path, err])
+	else:
+		push_error("❌ Could not open directory: %s" % dir_path)
+		
+	var import_path = glb_scene_path.replace(".glb",".glb.import")
+	dir_path = import_path.get_base_dir()
+	file_name = import_path.get_file()
+
+	dir = DirAccess.open(dir_path)
+	if dir:
+		var err := dir.remove(file_name)
+		if err == OK:
+			print("🗑️ Removed:", glb_scene_path)
+		else:
+			push_error("⚠️ Could not remove GLB IMPORT: %s (error %d)" % [glb_scene_path, err])
+	else:
+		push_error("❌ Could not open directory: %s" % dir_path)
 	
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	
-	while file_name != "":
-		if file_name.ends_with(".tscn"):
-			var scene_name := file_name.get_basename()  # strips extension only
-			var texture_folder_path := final_models + scene_name + "Textures"
-			
-			# Create the folder if it doesn't already exist
-			if not DirAccess.dir_exists_absolute(texture_folder_path):
-				var result := DirAccess.make_dir_absolute(texture_folder_path)
+func create_materials(textures_path: String) -> void:
+	var tex_dir := DirAccess.open(textures_path)
+	if not tex_dir:
+		push_error("Could not open textures directory: %s" % textures_path)
+		return
+
+	tex_dir.list_dir_begin()
+	var tex_file := tex_dir.get_next()
+
+	while tex_file != "":
+		if tex_file.ends_with(".png") and tex_file.contains("Alb"):
+			# Extract base name and number
+			# e.g. "Leaf_Alb2.png" → base="Leaf", num="2"
+			var regex := RegEx.new()
+			regex.compile("^(.*?)_Alb(\\d*)\\.png$")
+			var match := regex.search(tex_file)
+
+			if match:
+				var base_name := match.get_string(1)
+				var number := match.get_string(2)
+				if number == "":
+					number = "0"  # No number means 0
+
+				var material_name := base_name + number
+				var save_path := textures_path.path_join(material_name + ".tres")
+
+				# Skip if already exists
+				if FileAccess.file_exists(save_path):
+					tex_file = tex_dir.get_next()
+					continue
+
+				# Create and configure material
+				var new_material := StandardMaterial3D.new()
+				new_material.resource_name = material_name
+
+				var alb_path := textures_path.path_join(tex_file)
+				new_material.albedo_texture = load(alb_path)
+
+				# Look for corresponding normal map
+				var nrm_file := "Nrm" + number + ".png"
+				var nrm_name := base_name + "_" + nrm_file
+				var nrm_path := textures_path.path_join(nrm_name)
+
+				if FileAccess.file_exists(nrm_path):
+					new_material.normal_enabled = true
+					new_material.normal_texture = load(nrm_path)
+				else:
+					print("⚠️ Missing normal for:", tex_file)
+
+				var result := ResourceSaver.save(new_material, save_path)
 				if result == OK:
-					print("Created folder:", texture_folder_path)
+					print("✅ Created material:", save_path)
 				else:
-					push_error("Failed to create folder: %s" % texture_folder_path)
-			else:
-				print("Folder already exists:", texture_folder_path)
+					push_error("Failed to save material: %s" % save_path)
 		
-		file_name = dir.get_next()
-	dir.list_dir_end()
+		tex_file = tex_dir.get_next()
 
-func delete_textures_in_folder():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
-		return
-	
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	
-	while file_name != "":
-		if dir.current_is_dir() and "Textures" in file_name:
-			var textures_path = final_models + file_name + "/"
-			var tex_dir := DirAccess.open(textures_path)
-			if tex_dir:
-				tex_dir.list_dir_begin()
-				var tex_file := tex_dir.get_next()
-				while tex_file != "":
-					# Skip subfolders and keep only files (like .png, .jpg, etc.)
-					if not tex_dir.current_is_dir():
-						var delete_path = textures_path + tex_file
-						var result := DirAccess.remove_absolute(delete_path)
-						if result == OK:
-							print("Deleted:", delete_path)
-						else:
-							push_error("Failed to delete: %s" % delete_path)
-					tex_file = tex_dir.get_next()
-				tex_dir.list_dir_end()
-		file_name = dir.get_next()
-	dir.list_dir_end()
-	
-func create_materials():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
-		return
-	
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	
-	while file_name != "":
-		if dir.current_is_dir() and "Textures" in file_name:
-			var textures_path = final_models + file_name + "/"
-			var tex_dir := DirAccess.open(textures_path)
-			if tex_dir:
-				tex_dir.list_dir_begin()
-				var tex_file := tex_dir.get_next()
-				while tex_file != "":
-					if(tex_file.ends_with(".png")):
-						var separator_char = "_"
-						var char_index = tex_file.find(separator_char)
-						if char_index != -1:
-							var part_before_char = tex_file.substr(0, char_index)
-							var number = tex_file.substr(tex_file.length()-5, 1)
-							var material_name = ""
-							if number.is_valid_int():
-								material_name = part_before_char + number
-							else:
-								material_name = part_before_char + "0"
-							
-							#if the tex_file is a Alb I am going to create the material and assigning the albedo to it
-							#if its a normal I am going to assign the normal to it.
-							if tex_file.contains("Alb"):
-								var save_path = textures_path + material_name + ".tres"
-								if !FileAccess.file_exists(save_path):
-									var new_material = StandardMaterial3D.new()
-									new_material.resource_name = material_name
-									var tex_path = textures_path + tex_file
-									new_material.albedo_texture = load(tex_path)
-									var nrm_path = tex_path.replace("Alb", "Nrm")
-									new_material.normal_enabled = true
-									new_material.normal_texture = load(nrm_path)
-									ResourceSaver.save(new_material, save_path)
-								
-					tex_file = tex_dir.get_next()
-				tex_dir.list_dir_end()
-		file_name = dir.get_next()
-	dir.list_dir_end()
-	
+	tex_dir.list_dir_end()
+
+
+		
 func assign_materials_to_objects():
 	var dir := DirAccess.open(final_models)
 	if not dir:
@@ -222,124 +275,6 @@ func assign_materials_to_objects():
 		file_name = dir.get_next()
 	dir.list_dir_end()
 
-func add_areas_to_object():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
-		return
-	
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	var counter := 0
-	
-	while file_name != "":
-		if counter < 11:
-			counter += 1
-			continue
-		if file_name.ends_with(".tscn"):
-			var file_path = final_models + file_name
-			var packed_scene: PackedScene = load(file_path)
-			var scene_root: Node = packed_scene.instantiate()
-			var chosen_index := 0
-
-			# Choose the correct mesh node
-			for i in range(scene_root.get_child_count()):
-				var child = scene_root.get_child(i)
-				if "mBody" in child.name and "mReBody" not in scene_root.get_child(chosen_index).name:
-					chosen_index = i
-				if "mReBody" in child.name:
-					chosen_index = i
-					break
-
-			var target: Node3D = scene_root.get_child(chosen_index)
-
-			# Compute bounding box (local space)
-			var bounds: AABB = target.get_aabb()
-			var center: Vector3 = bounds.get_center()
-			var half_size: Vector3 = bounds.size * 0.5
-
-			# Shared box shape
-			var box := BoxShape3D.new()
-			box.extents = half_size
-
-			# --- CollisionShape for StaticBody ---
-			var static_body := StaticBody3D.new()
-			var static_shape := CollisionShape3D.new()
-			static_shape.shape = box.duplicate()
-			static_shape.position = center
-			static_body.add_child(static_shape)
-			target.add_child(static_body)
-			static_body.owner = scene_root
-			static_shape.owner = scene_root
-
-			# --- Area3D + CollisionShape ---
-			var area_box := Area3D.new()
-			var area_shape := CollisionShape3D.new()
-			area_shape.shape = box.duplicate()
-			area_shape.position = center
-			area_box.add_child(area_shape)
-			target.add_child(area_box)
-			area_box.owner = scene_root
-			area_shape.owner = scene_root
-
-			# Save updated scene
-			var new_scene := PackedScene.new()
-			if new_scene.pack(scene_root) == OK:
-				var err := ResourceSaver.save(new_scene, file_path)
-				if err != OK:
-					push_error("Failed to save: %s" % file_path)
-			else:
-				push_error("Failed to pack: %s" % file_path)
-
-			counter += 1
-		file_name = dir.get_next()
-	
-	dir.list_dir_end()
-
-
-func attach_script():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
-		return
-
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-
-	while file_name != "":
-		if file_name.ends_with(".tscn"):
-			var file_path = final_models + file_name
-			var loaded_scene: PackedScene = load(file_path)
-			var scene_root: Node = loaded_scene.instantiate()
-
-			# 1. Attach the script
-			var object_script: Script = load("res://Models/Scripts/object_script.gd")
-			scene_root.set_script(object_script)
-
-			# 2. Find area node and store its NodePath (not the Node itself)
-			var area_node: Node = null
-			for i in range(scene_root.get_child_count()):
-				var child = scene_root.get_child(i)
-				if child.get_child_count() > 0:
-					area_node = child.get_child(1)
-					break
-			if area_node:
-				# Make sure your script has: @export var area_path: NodePath
-				scene_root.set("area_path", scene_root.get_path_to(area_node))
-
-			# 3. Pack into a NEW PackedScene
-			var new_scene := PackedScene.new()
-			if new_scene.pack(scene_root) == OK:
-				var save_result = ResourceSaver.save(new_scene, file_path)
-				if save_result != OK:
-					push_error("Failed to save scene: %s" % file_path)
-			else:
-				push_error("Failed to pack scene: %s" % file_path)
-				
-		file_name = dir.get_next()
-
-	dir.list_dir_end()
-	
 func change_collision_layers():
 	var dir := DirAccess.open(final_models)
 	if not dir:
@@ -380,51 +315,6 @@ func change_collision_layers():
 		file_name = dir.get_next()
 
 	dir.list_dir_end()
-	
-func change_size_of_object():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
-		return
-
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-
-	while file_name != "":
-		if file_name.ends_with(".tscn"):
-			var file_path = final_models + file_name
-			var loaded_scene: PackedScene = load(file_path)
-			var scene_root: Node = loaded_scene.instantiate()
-			
-			scene_root.scale = Vector3(28,28,28)
-
-			var new_scene := PackedScene.new()
-			if new_scene.pack(scene_root) == OK:
-				var save_result = ResourceSaver.save(new_scene, file_path)
-				if save_result != OK:
-					push_error("Failed to save scene: %s" % file_path)
-			else:
-				push_error("Failed to pack scene: %s" % file_path)
-				
-		file_name = dir.get_next()
-
-	dir.list_dir_end()
-	
-func add_icons_to_tab_container():
-	var tab_container_path = "res://UI_Overlay/Components/Tab Select.tscn"
-	var loaded_scene: PackedScene = load(tab_container_path)
-	var scene_root: TabContainer = loaded_scene.instantiate()
-	
-	scene_root.set_tab_button_icon(0, load("res://UI_Overlay/Sprites/Navigation/FurnitureIcon.png"))
-	scene_root.set_tab_button_icon(1, load("res://UI_Overlay/Sprites/Navigation/WallHangableIcon.png"))
-	
-	var new_scene := PackedScene.new()
-	if new_scene.pack(scene_root) == OK:
-		var save_result = ResourceSaver.save(new_scene, tab_container_path)
-		if save_result != OK:
-			push_error("Failed to save scene: %s" % tab_container_path)
-	else:
-		push_error("Failed to pack scene: %s" % tab_container_path)
 		
 func add_wall_ray_to_wall_objects():
 	var wall_ray_scene = preload("res://Models/wall_ray.tscn")

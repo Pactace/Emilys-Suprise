@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dsi4ssb8a1ao"]
-
-[ext_resource type="Texture2D" uid="uid://rsmqah8r6e2a" path="res://Models/Final Models/FtrDigitalClockTextures/Number_Alb.png" id="1_um051"]
-
-[resource]
-resource_name = "Number0"
-albedo_texture = ExtResource("1_um051")
-normal_enabled = true

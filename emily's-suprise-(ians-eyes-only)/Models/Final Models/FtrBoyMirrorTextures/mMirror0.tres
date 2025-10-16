@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://x6g4hb7761kb"]
-
-[ext_resource type="Texture2D" uid="uid://hsbv38ut0sba" path="res://Models/Final Models/FtrBoyMirrorTextures/mMirror_Alb.png" id="1_sa5nw"]
-
-[resource]
-resource_name = "mMirror0"
-albedo_texture = ExtResource("1_sa5nw")
-normal_enabled = true

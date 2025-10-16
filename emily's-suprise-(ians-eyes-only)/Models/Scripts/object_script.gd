@@ -60,31 +60,39 @@ func check_placement() -> bool:
 	return false
 	
 func placed() -> void:
-	for child in get_children():
-		if child is MeshInstance3D:
-			if !is_on_wall:
-				child.set_layer_mask_value(16, true)
-			child.material_overlay = null
+	_apply_to_meshes(self, func(mesh):
+		if !is_on_wall:
+			mesh.set_layer_mask_value(16, true)
+		mesh.material_overlay = null
+	)
 
 func placement_red() -> void:
-	for child in get_children():
-		if child is MeshInstance3D:
-			child.material_overlay = red_mat
-	
-func placement_green() -> void:
-	for child in get_children():
-		if child is MeshInstance3D:
-			child.material_overlay = green_mat
+	_apply_to_meshes(self, func(mesh):
+		mesh.material_overlay = red_mat
+	)
 
-func placement_yellow():
-	for child in get_children():
-		if child is MeshInstance3D:
-			child.material_overlay = yellow_mat
-	
+func placement_green() -> void:
+	_apply_to_meshes(self, func(mesh):
+		mesh.material_overlay = green_mat
+	)
+
+func placement_yellow() -> void:
+	_apply_to_meshes(self, func(mesh):
+		mesh.material_overlay = yellow_mat
+	)
+
 func clear_material() -> void:
-	for child in get_children():
+	_apply_to_meshes(self, func(mesh):
+		mesh.material_overlay = null
+	)
+
+# --- Helper function for recursion ---
+func _apply_to_meshes(node: Node, action: Callable) -> void:
+	for child in node.get_children():
 		if child is MeshInstance3D:
-			child.material_overlay = null
+			action.call(child)
+		else:
+			_apply_to_meshes(child, action)
 	
 func wall_move(forward: bool, horizontal: bool):
 	if is_on_wall and wall_ray.is_colliding() and is_horizontal == horizontal:

@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bhi4vgvdhcp1l"]
-
-[ext_resource type="Texture2D" uid="uid://ck4eg1m21ndr" path="res://Models/Final Models/FtrNordicSofaLTextures/mReFabric_Alb2.png" id="1_ugnqp"]
-
-[resource]
-resource_name = "mReFabric2"
-albedo_texture = ExtResource("1_ugnqp")
-normal_enabled = true

@@ -206,7 +206,7 @@ func add_object_on_wall(instance: Node3D):
 			instance.queue_free()
 		#finally we place the object.
 		instance.placed()
-		instance.scale = Vector3(28,28,28)
+		if instance.name.contains("Ftr"): instance.scale = Vector3(28,28,28)
 		instance.visible = true
 		
 func assign_markers():

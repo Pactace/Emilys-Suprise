@@ -164,7 +164,6 @@
 load_path = "res://.godot/imported/unscreen-147.png-9696cbdbbdab1bdd040c29273987fd0d.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3tglp"]
-load_path = "res://.godot/imported/unscreen-001.png-027a5d1284ae28928c2b1f4d6bc2fdb6.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rjhtr"]
 load_path = "res://.godot/imported/unscreen-002.png-3f42f3a35349d40e1c0229fba90e36fb.s3tc.ctex"

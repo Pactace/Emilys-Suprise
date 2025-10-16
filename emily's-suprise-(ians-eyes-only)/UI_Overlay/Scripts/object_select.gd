@@ -9,9 +9,12 @@ var selected_object: Control = null
 var selected_row: int = 0
 var selected_col: int = 0
 var can_navigate: bool = true
-var object_dict: Dictionary = {}   # local copy of the inventory
+var object_dict: Dictionary = {} 
+var inventory_set: bool =  false  # local copy of the inventory
 
 func _ready() -> void:
+	while !inventory_set:
+		await get_tree().create_timer(2).timeout
 	name = tab_name
 	
 	# Load from the resource
@@ -138,4 +141,5 @@ func _on_visibility_changed() -> void:
 		
 func assign_inventory(inventory_script: GDScript):
 	inventory.set_script(inventory_script)
+	inventory_set = true
 	

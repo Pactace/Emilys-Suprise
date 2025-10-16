@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b63artj0t0end"]
-
-[ext_resource type="Texture2D" uid="uid://cbi58j4yomqbi" path="res://Models/Final Models/FtrArcadegameFightTextures/mMonitor_Alb.1.png" id="1_yo6ek"]
-
-[resource]
-resource_name = "mMonitor1"
-albedo_texture = ExtResource("1_yo6ek")
-normal_enabled = true

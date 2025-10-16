@@ -30,6 +30,9 @@ texture={
 &"mipmaps/limit": 18,
 &"roughness/mode": 1
 }
+animation_library={
+&"nodes/import_as_skeleton_bones": true
+}
 
 [input]
 

@@ -1,7 +1,6 @@
 import os
 import shutil
 
-# ⚠️ Use raw strings to avoid escaping backslashes
 export_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\Models For Game"
 import_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\emily's-suprise-(ians-eyes-only)\Models\Final Models"
 

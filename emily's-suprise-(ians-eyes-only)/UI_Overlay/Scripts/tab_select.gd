@@ -79,6 +79,5 @@ func assign_inventory_scripts(floor_inventory: GDScript, placeable_inventory: GD
 		flooring_tab.assign_inventory(flooring_inventory)
 	else:
 		await get_tree().create_timer(0.02).timeout
-		print("hit")
 		assign_inventory_scripts(floor_inventory, placeable_inventory, wall_inventory, wallpaper_inventory, flooring_inventory)
 	
