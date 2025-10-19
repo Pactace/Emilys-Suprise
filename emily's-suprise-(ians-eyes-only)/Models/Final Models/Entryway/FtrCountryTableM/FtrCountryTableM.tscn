@@ -1,6 +1,19 @@
-[gd_scene load_steps=9 format=4 uid="uid://bam0oil1fvd63"]
+[gd_scene load_steps=22 format=4 uid="uid://c5gvy4as4jdgr"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_4gbuc"]
+[ext_resource type="Material" uid="uid://ca8x37m6ic5f" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody0.tres" id="2_jicj3"]
+[ext_resource type="Material" uid="uid://bokmbsakywrfo" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody1.tres" id="3_e1qsn"]
+[ext_resource type="Material" uid="uid://bm104x11kn3ni" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody2.tres" id="4_c2gmk"]
+[ext_resource type="Material" uid="uid://c2n2x6c3frq4y" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody3.tres" id="5_6b0jd"]
+[ext_resource type="Material" uid="uid://dcq0i3sh7cjd2" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody4.tres" id="6_f52h5"]
+[ext_resource type="Material" uid="uid://c03oiaapl4bhq" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody5.tres" id="7_rctsb"]
+[ext_resource type="Material" uid="uid://cop5ud5xwd5qu" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReBody6.tres" id="8_gh7ql"]
+[ext_resource type="Material" uid="uid://cp7g8s45bbpsj" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric0.tres" id="9_lga8g"]
+[ext_resource type="Material" uid="uid://bg5ataeniecxp" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric1.tres" id="10_l6x13"]
+[ext_resource type="Material" uid="uid://cx0px1ud035dd" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric2.tres" id="11_e6uay"]
+[ext_resource type="Material" uid="uid://c0yljr3m0be1l" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric3.tres" id="12_07ue8"]
+[ext_resource type="Material" uid="uid://dp723k5jegcop" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric4.tres" id="13_edi6l"]
+[ext_resource type="Material" uid="uid://c2ylf6abo2rrg" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric5.tres" id="14_v7yok"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iox4d"]
 
@@ -58,9 +71,13 @@ size = Vector3(20.0007, 8.5, 9.989386)
 size = Vector3(20.0007, 8.5, 9.989386)
 
 [node name="FtrCountryTableM" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_4gbuc")
-area_path = NodePath("TableApronBack_low__mReBody/@Area3D@43393")
+area_path = NodePath("TableApronBack_low__mReBody/@Area3D@44622")
+skins = {
+"mReBody": [ExtResource("2_jicj3"), ExtResource("3_e1qsn"), ExtResource("4_c2gmk"), ExtResource("5_6b0jd"), ExtResource("6_f52h5"), ExtResource("7_rctsb"), ExtResource("8_gh7ql")],
+"mReFabric": [ExtResource("9_lga8g"), ExtResource("10_l6x13"), ExtResource("11_e6uay"), ExtResource("12_07ue8"), ExtResource("13_edi6l"), ExtResource("14_v7yok")]
+}
 
 [node name="TableCloth_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_i1par")
@@ -70,14 +87,16 @@ skin = SubResource("Skin_jb2du")
 mesh = SubResource("ArrayMesh_w2djf")
 skin = SubResource("Skin_jb2du")
 
-[node name="@StaticBody3D@43391" type="StaticBody3D" parent="TableApronBack_low__mReBody"]
+[node name="@StaticBody3D@44620" type="StaticBody3D" parent="TableApronBack_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43390" type="CollisionShape3D" parent="TableApronBack_low__mReBody/@StaticBody3D@43391"]
+[node name="@CollisionShape3D@44619" type="CollisionShape3D" parent="TableApronBack_low__mReBody/@StaticBody3D@44620"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 0)
 shape = SubResource("BoxShape3D_4gbuc")
 
-[node name="@Area3D@43393" type="Area3D" parent="TableApronBack_low__mReBody"]
+[node name="@Area3D@44622" type="Area3D" parent="TableApronBack_low__mReBody"]
 
-[node name="@CollisionShape3D@43392" type="CollisionShape3D" parent="TableApronBack_low__mReBody/@Area3D@43393"]
+[node name="@CollisionShape3D@44621" type="CollisionShape3D" parent="TableApronBack_low__mReBody/@Area3D@44622"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 0)
 shape = SubResource("BoxShape3D_wmar2")

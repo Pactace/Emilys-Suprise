@@ -1,6 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://cae7v50wi8rpt"]
+[gd_scene load_steps=12 format=4 uid="uid://clgc1y8qb7oux"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_nl6ea"]
+[ext_resource type="Material" uid="uid://cpp5cebujpipx" path="res://Models/Final Models/Entryway/FtrCasablanca/Textures/mReBody0.tres" id="2_begyj"]
+[ext_resource type="Material" uid="uid://h1s16vwjnsmj" path="res://Models/Final Models/Entryway/FtrCasablanca/Textures/mReBody1.tres" id="3_llayh"]
+[ext_resource type="Material" uid="uid://ceyaxjfk2toig" path="res://Models/Final Models/Entryway/FtrCasablanca/Textures/mReBody2.tres" id="4_7dfm5"]
+[ext_resource type="Material" uid="uid://nf3v25co0ovo" path="res://Models/Final Models/Entryway/FtrCasablanca/Textures/mReBody3.tres" id="5_n0mib"]
+[ext_resource type="Material" uid="uid://c2etd3shpbc64" path="res://Models/Final Models/Entryway/FtrCasablanca/Textures/mReBody4.tres" id="6_qa7ui"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay80k"]
 
@@ -55,22 +60,27 @@ size = Vector3(8.735735, 9.922642, 9.149808)
 size = Vector3(8.735735, 9.922642, 9.149808)
 
 [node name="FtrCasablanca" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_nl6ea")
-area_path = NodePath("CasablancaA01Petal01_low__mReBody/@Area3D@43385")
+area_path = NodePath("CasablancaA01Petal01_low__mReBody/@Area3D@44614")
+skins = {
+"mReBody": [ExtResource("2_begyj"), ExtResource("3_llayh"), ExtResource("4_7dfm5"), ExtResource("5_n0mib"), ExtResource("6_qa7ui")]
+}
 
 [node name="CasablancaA01Petal01_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qtkv4")
 skin = SubResource("Skin_kknpi")
 
-[node name="@StaticBody3D@43383" type="StaticBody3D" parent="CasablancaA01Petal01_low__mReBody"]
+[node name="@StaticBody3D@44612" type="StaticBody3D" parent="CasablancaA01Petal01_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43382" type="CollisionShape3D" parent="CasablancaA01Petal01_low__mReBody/@StaticBody3D@43383"]
+[node name="@CollisionShape3D@44611" type="CollisionShape3D" parent="CasablancaA01Petal01_low__mReBody/@StaticBody3D@44612"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11886835, 4.961321, -0.16664505)
 shape = SubResource("BoxShape3D_nl6ea")
 
-[node name="@Area3D@43385" type="Area3D" parent="CasablancaA01Petal01_low__mReBody"]
+[node name="@Area3D@44614" type="Area3D" parent="CasablancaA01Petal01_low__mReBody"]
 
-[node name="@CollisionShape3D@43384" type="CollisionShape3D" parent="CasablancaA01Petal01_low__mReBody/@Area3D@43385"]
+[node name="@CollisionShape3D@44613" type="CollisionShape3D" parent="CasablancaA01Petal01_low__mReBody/@Area3D@44614"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11886835, 4.961321, -0.16664505)
 shape = SubResource("BoxShape3D_6c7yr")

@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://wluh8bnv1kfh"]
 
-[ext_resource type="Texture2D" uid="uid://byy3v6ehpjdfc" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody_Alb2.png" id="1_fh30t"]
-[ext_resource type="Texture2D" uid="uid://cqq1enn5sqm6i" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody_Nrm2.png" id="2_u364x"]
+[ext_resource type="Texture2D" uid="uid://bw620ejrsh7gy" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody_Alb2.png" id="1_fh30t"]
+[ext_resource type="Texture2D" uid="uid://dkv786sn57vi7" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody_Nrm2.png" id="2_u364x"]
 
 [resource]
 resource_name = "mReBody2"

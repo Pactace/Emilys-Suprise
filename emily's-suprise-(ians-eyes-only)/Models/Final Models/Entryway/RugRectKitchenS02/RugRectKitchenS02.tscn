@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://cy5usels4rsf1"]
+[gd_scene load_steps=8 format=4 uid="uid://c2vc6c5vdidrj"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_abr6s"]
+[ext_resource type="Material" uid="uid://c5r5tcncfa6s2" path="res://Models/Final Models/Entryway/RugRectKitchenS02/Textures/mMain0.tres" id="2_yfno7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5t6u"]
 
@@ -37,22 +38,27 @@ size = Vector3(20, 0.029999997, 10)
 size = Vector3(20, 0.029999997, 10)
 
 [node name="RugRectKitchenS02" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_abr6s")
-area_path = NodePath("Main__mMain/@Area3D@43481")
+area_path = NodePath("Main__mMain/@Area3D@44710")
+skins = {
+"mMain": [ExtResource("2_yfno7")]
+}
 
 [node name="Main__mMain" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dcxpy")
 skin = SubResource("Skin_4ujaj")
 
-[node name="@StaticBody3D@43479" type="StaticBody3D" parent="Main__mMain"]
+[node name="@StaticBody3D@44708" type="StaticBody3D" parent="Main__mMain"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43478" type="CollisionShape3D" parent="Main__mMain/@StaticBody3D@43479"]
+[node name="@CollisionShape3D@44707" type="CollisionShape3D" parent="Main__mMain/@StaticBody3D@44708"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034999996, 0)
 shape = SubResource("BoxShape3D_abr6s")
 
-[node name="@Area3D@43481" type="Area3D" parent="Main__mMain"]
+[node name="@Area3D@44710" type="Area3D" parent="Main__mMain"]
 
-[node name="@CollisionShape3D@43480" type="CollisionShape3D" parent="Main__mMain/@Area3D@43481"]
+[node name="@CollisionShape3D@44709" type="CollisionShape3D" parent="Main__mMain/@Area3D@44710"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034999996, 0)
 shape = SubResource("BoxShape3D_yfno7")

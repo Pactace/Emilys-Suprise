@@ -1,0 +1,352 @@
+[gd_scene load_steps=31 format=3 uid="uid://rktgnyhpt6vs"]
+
+[ext_resource type="AudioStream" uid="uid://cw5y12qqq7ukd" path="res://Start and Pause Menus/Car Slow Driving Sound Effect.mp3" id="5_nhk27"]
+[ext_resource type="Texture2D" uid="uid://b58mk1w50huit" path="res://Start and Pause Menus/DialogueBox-removebg-preview.png" id="9_k1b1d"]
+[ext_resource type="FontFile" uid="uid://cqbx7v2aqy45t" path="res://Start and Pause Menus/GUTHEN BLOOTS ALLCAPS.ttf" id="10_gij4t"]
+[ext_resource type="Script" uid="uid://crqiokocp2v4" path="res://Start and Pause Menus/DialogueBox.gd" id="10_u8aka"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="12_2iunp"]
+[ext_resource type="Texture2D" uid="uid://0tn67am0hfy0" path="res://UI_Overlay/Sprites/Navigation/Y__4_-removebg-preview.png" id="12_fsw08"]
+[ext_resource type="Texture2D" uid="uid://cv2vwfq0d6mde" path="res://Start and Pause Menus/103775-removebg-preview.png" id="13_2mq5b"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="13_fsw08"]
+[ext_resource type="AudioStream" uid="uid://cmyo74o4hijpp" path="res://Start and Pause Menus/Telephone Ring Pick Up Sound Effect.mp3" id="15_th7if"]
+[ext_resource type="Script" uid="uid://cmfufgpoeqwtn" path="res://Start and Pause Menus/phone_ring.gd" id="16_b5g35"]
+[ext_resource type="AudioStream" uid="uid://bwnpcadorr0ky" path="res://Start and Pause Menus/smooth-instrumental-jazz-music-349777.mp3" id="17_yqt50"]
+[ext_resource type="Texture2D" uid="uid://dvf10sckw0sx3" path="res://Start and Pause Menus/Logo Sprites/unscreen-146.png" id="145_j0qq6"]
+[ext_resource type="Texture2D" uid="uid://dq5mx2vt3ip17" path="res://Start and Pause Menus/Start Screen Items/sky_panorama.jpg" id="153_6ntu4"]
+[ext_resource type="PackedScene" uid="uid://40eyaqjeyi31" path="res://Start and Pause Menus/Start Screen Items/kei_truck.glb" id="154_almii"]
+[ext_resource type="Script" uid="uid://dajupj01yt4tn" path="res://Start and Pause Menus/Start Screen Items/kei_truck.gd" id="155_yxh7o"]
+[ext_resource type="Texture2D" uid="uid://ddqm82xvvodf0" path="res://Start and Pause Menus/Start Screen Items/Seamless-Black-Asphalt-Road-Texture.jpg" id="156_4hxqj"]
+[ext_resource type="Texture2D" uid="uid://bpa0lnvi5lm5h" path="res://Start and Pause Menus/Start Screen Items/3a8ea8abf1d716ecb1e83f2610278ab0.jpg" id="157_bj20s"]
+[ext_resource type="Shader" uid="uid://b0ui5i6joy73k" path="res://Start and Pause Menus/Neihborhood.gdshader" id="158_pfi5k"]
+[ext_resource type="Texture2D" uid="uid://ru5oo380rmr3" path="res://Start and Pause Menus/Start Screen Items/NW-logo-white-removebg-preview.png" id="159_ushsa"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kusrh"]
+panorama = ExtResource("153_6ntu4")
+
+[sub_resource type="Sky" id="Sky_vmr02"]
+sky_material = SubResource("PanoramaSkyMaterial_kusrh")
+
+[sub_resource type="Environment" id="Environment_3aeag"]
+background_mode = 1
+background_color = Color(0.41583976, 0.77546483, 0.87328005, 1)
+sky = SubResource("Sky_vmr02")
+sky_rotation = Vector3(-0.49741885, 3.0927234, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.9999998, 0.76563627, 0.67289627, 1)
+ambient_light_energy = 2.95
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ktha"]
+
+[sub_resource type="Shader" id="Shader_cy3y6"]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx, vertex_lighting;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+varying vec3 uv1_triplanar_pos;
+
+uniform float uv1_blend_sharpness : hint_range(0.0, 150.0, 0.001);
+varying vec3 uv1_power_normal;
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+uniform float scroll_speed : hint_range(0.0, 10.0, 0.01) = 0.5;
+
+void vertex() {
+	ROUGHNESS = roughness;
+
+	vec3 normal = NORMAL;
+
+	TANGENT = vec3(0.0, 0.0, -1.0) * abs(normal.x);
+	TANGENT += vec3(1.0, 0.0, 0.0) * abs(normal.y);
+	TANGENT += vec3(1.0, 0.0, 0.0) * abs(normal.z);
+	TANGENT = normalize(TANGENT);
+
+	BINORMAL = vec3(0.0, 1.0, 0.0) * abs(normal.x);
+	BINORMAL += vec3(0.0, 0.0, -1.0) * abs(normal.y);
+	BINORMAL += vec3(0.0, 1.0, 0.0) * abs(normal.z);
+	BINORMAL = normalize(BINORMAL);
+
+	// UV1 Triplanar: Enabled
+	uv1_power_normal = pow(abs(NORMAL), vec3(uv1_blend_sharpness));
+	uv1_triplanar_pos = VERTEX * uv1_scale + uv1_offset;
+	uv1_power_normal /= dot(uv1_power_normal, vec3(1.0));
+	uv1_triplanar_pos *= vec3(1.0, -1.0, 1.0);
+
+	//-------------------------------------
+	// 🚗 Scroll the road backward over time
+	//-------------------------------------
+	uv1_triplanar_pos.z -= TIME * 0.5;
+}
+
+vec4 triplanar_texture(sampler2D p_sampler, vec3 p_weights, vec3 p_triplanar_pos) {
+	vec4 samp = vec4(0.0);
+	samp += texture(p_sampler, p_triplanar_pos.xy) * p_weights.z;
+	samp += texture(p_sampler, p_triplanar_pos.xz) * p_weights.y;
+	samp += texture(p_sampler, p_triplanar_pos.zy * vec2(-1.0, 1.0)) * p_weights.x;
+	return samp;
+}
+
+void fragment() {
+	vec4 albedo_tex = triplanar_texture(texture_albedo, uv1_power_normal, uv1_triplanar_pos);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(triplanar_texture(texture_metallic, uv1_power_normal, uv1_triplanar_pos), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(triplanar_texture(texture_roughness, uv1_power_normal, uv1_triplanar_pos), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ktha"]
+render_priority = 0
+shader = SubResource("Shader_cy3y6")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("156_4hxqj")
+shader_parameter/albedo_texture_size = Vector2i(894, 894)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.385, -0.035, 5.77)
+shader_parameter/uv1_offset = Vector3(1.475, 0, 2)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scroll_speed = 1.0
+
+[sub_resource type="Shader" id="Shader_004qg"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.5.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx, unshaded;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+varying vec3 uv1_triplanar_pos;
+
+uniform float uv1_blend_sharpness : hint_range(0.0, 150.0, 0.001);
+varying vec3 uv1_power_normal;
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	vec3 normal = NORMAL;
+
+	TANGENT = vec3(0.0, 0.0, -1.0) * abs(normal.x);
+	TANGENT += vec3(1.0, 0.0, 0.0) * abs(normal.y);
+	TANGENT += vec3(1.0, 0.0, 0.0) * abs(normal.z);
+	TANGENT = normalize(TANGENT);
+
+	BINORMAL = vec3(0.0, 1.0, 0.0) * abs(normal.x);
+	BINORMAL += vec3(0.0, 0.0, -1.0) * abs(normal.y);
+	BINORMAL += vec3(0.0, 1.0, 0.0) * abs(normal.z);
+	BINORMAL = normalize(BINORMAL);
+
+	// UV1 Triplanar: Enabled
+	uv1_power_normal = pow(abs(NORMAL), vec3(uv1_blend_sharpness));
+	uv1_triplanar_pos = VERTEX * uv1_scale + uv1_offset;
+	uv1_power_normal /= dot(uv1_power_normal, vec3(1.0));
+	uv1_triplanar_pos *= vec3(1.0, -1.0, 1.0);
+	
+	uv1_triplanar_pos.z -= TIME * 0.7;
+}
+
+vec4 triplanar_texture(sampler2D p_sampler, vec3 p_weights, vec3 p_triplanar_pos) {
+	vec4 samp = vec4(0.0);
+	samp += texture(p_sampler, p_triplanar_pos.xy) * p_weights.z;
+	samp += texture(p_sampler, p_triplanar_pos.xz) * p_weights.y;
+	samp += texture(p_sampler, p_triplanar_pos.zy * vec2(-1.0, 1.0)) * p_weights.x;
+	return samp;
+}
+
+void fragment() {
+	vec4 albedo_tex = triplanar_texture(texture_albedo, uv1_power_normal, uv1_triplanar_pos);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(triplanar_texture(texture_metallic, uv1_power_normal, uv1_triplanar_pos), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(triplanar_texture(texture_roughness, uv1_power_normal, uv1_triplanar_pos), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3tglp"]
+render_priority = 0
+shader = SubResource("Shader_004qg")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("157_bj20s")
+shader_parameter/albedo_texture_size = Vector2i(736, 552)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.225, 1, 5.255)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cooxk"]
+render_priority = 0
+shader = ExtResource("158_pfi5k")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("159_ushsa")
+shader_parameter/albedo_texture_size = Vector2i(832, 300)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(1.62, 1.46, 0.35)
+shader_parameter/uv1_offset = Vector3(-0.025, 0.905, -0.63)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scroll_speed = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8aka"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mq5b"]
+shader = ExtResource("12_2iunp")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[node name="FirstCutscene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3aeag")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9217076, 0.38788566, 0, -0.38788566, 0.9217076, 0, 13.325942, 15.700893)
+
+[node name="Moving van" parent="." instance=ExtResource("154_almii")]
+transform = Transform3D(0.009843558, 0, 2.9999838, 0, 3, 0, -2.9999838, 0, 0.009843558, -30, 0, -2.515)
+script = ExtResource("155_yxh7o")
+speed = 7.0
+intensity = 0.05
+drive_speed = 3.0
+
+[node name="Sprite3D" type="Sprite3D" parent="Moving van"]
+transform = Transform3D(0.0013785453, 0, -1.0602517, 0, 0.19368565, 0, 0.15456478, 0, 0.00945626, -0.7807746, 0.8720552, 0.8797538)
+texture = ExtResource("145_j0qq6")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Moving van"]
+stream = ExtResource("5_nhk27")
+
+[node name="Road" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.087293886, 0, -119.40372, 0, 1, 0, 8.066745, 0, -1.2921213, 0, 0, 0.8509264)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("ShaderMaterial_7ktha")
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.511936e-07, -3.201234e-08, -119.41068, -3.4702263, 1.422507, -1.4572736e-06, 14.141014, 0.34908533, -5.0120493e-06, 4.0023003, 0.8247309, -16.581055)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("ShaderMaterial_3tglp")
+
+[node name="Neihborhood" type="MeshInstance3D" parent="."]
+transform = Transform3D(123.663574, 4.4118894e-16, -6.632469e-07, -5.392913e-06, -0.068224266, -15.137967, -3.687866e-07, 0.9976705, -1.0351884, 2.949213, 16.651346, -31.442314)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("ShaderMaterial_cooxk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.30800003
+anchor_right = 0.5
+anchor_bottom = 0.30800003
+offset_left = -272.0
+offset_top = -90.84001
+offset_right = 78.0
+offset_bottom = 90.15999
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_k1b1d")
+script = ExtResource("10_u8aka")
+start_delay = 3.5
+dialogue_typing_speed = 0.03
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 37.0
+offset_right = 328.0
+offset_bottom = 117.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_gij4t")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u8aka")
+bbcode_enabled = true
+text = "Its crazy the owner was very particular about you doing the interior for this project"
+
+[node name="ButtonPrompt" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 73.0
+offset_right = 351.0
+offset_bottom = 148.0
+texture = ExtResource("12_fsw08")
+expand_mode = 1
+
+[node name="ButtonPrompt2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = -28.0
+offset_right = 360.0
+offset_bottom = 47.0
+texture = ExtResource("13_2mq5b")
+expand_mode = 1
+flip_h = true
+
+[node name="PhoneRing" type="AudioStreamPlayer3D" parent="TextureRect"]
+stream = ExtResource("15_th7if")
+volume_db = 10.0
+script = ExtResource("16_b5g35")
+timer = 1.5
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2mq5b")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("13_fsw08")
+next_scene = "res://Start and Pause Menus/EnteringTheHouse.tscn"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("17_yqt50")
+autoplay = true
+parameters/looping = true

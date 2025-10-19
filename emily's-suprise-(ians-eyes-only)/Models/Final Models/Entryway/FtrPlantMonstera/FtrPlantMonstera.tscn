@@ -1,6 +1,13 @@
-[gd_scene load_steps=10 format=4 uid="uid://bnqer5fdq2fvc"]
+[gd_scene load_steps=17 format=4 uid="uid://c3q6wvirmrla5"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_2k216"]
+[ext_resource type="Material" uid="uid://csdwnkv735j8g" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mPlant0.tres" id="2_j7yuc"]
+[ext_resource type="Material" uid="uid://rdjg7d8ckteg" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mReBody0.tres" id="3_88ixi"]
+[ext_resource type="Material" uid="uid://b3xfhmhgc66ow" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mReBody1.tres" id="4_1wlwb"]
+[ext_resource type="Material" uid="uid://cpu6bvt7wbahw" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mReBody2.tres" id="5_m5eql"]
+[ext_resource type="Material" uid="uid://bekdpi4cyyqgm" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mReBody3.tres" id="6_eltc3"]
+[ext_resource type="Material" uid="uid://hx6brm733lc0" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mReBody4.tres" id="7_n5a7y"]
+[ext_resource type="Material" uid="uid://j4pto3epttda" path="res://Models/Final Models/Entryway/FtrPlantMonstera/Textures/mReBody5.tres" id="8_cp6ki"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yadqp"]
 
@@ -92,9 +99,13 @@ size = Vector3(4.486986, 16.51483, 5.947607)
 size = Vector3(4.486986, 16.51483, 5.947607)
 
 [node name="FtrPlantMonstera" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_2k216")
-area_path = NodePath("Base__mReBody/@Area3D@43437")
+area_path = NodePath("Base__mReBody/@Area3D@44666")
+skins = {
+"mPlant": [ExtResource("2_j7yuc")],
+"mReBody": [ExtResource("3_88ixi"), ExtResource("4_1wlwb"), ExtResource("5_m5eql"), ExtResource("6_eltc3"), ExtResource("7_n5a7y"), ExtResource("8_cp6ki")]
+}
 
 [node name="Leaf__mPlant" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_gdvn4")
@@ -104,14 +115,16 @@ skin = SubResource("Skin_6ts13")
 mesh = SubResource("ArrayMesh_n11nk")
 skin = SubResource("Skin_nued6")
 
-[node name="@StaticBody3D@43435" type="StaticBody3D" parent="Base__mReBody"]
+[node name="@StaticBody3D@44664" type="StaticBody3D" parent="Base__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43434" type="CollisionShape3D" parent="Base__mReBody/@StaticBody3D@43435"]
+[node name="@CollisionShape3D@44663" type="CollisionShape3D" parent="Base__mReBody/@StaticBody3D@44664"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.257415, -0.73031044)
 shape = SubResource("BoxShape3D_2k216")
 
-[node name="@Area3D@43437" type="Area3D" parent="Base__mReBody"]
+[node name="@Area3D@44666" type="Area3D" parent="Base__mReBody"]
 
-[node name="@CollisionShape3D@43436" type="CollisionShape3D" parent="Base__mReBody/@Area3D@43437"]
+[node name="@CollisionShape3D@44665" type="CollisionShape3D" parent="Base__mReBody/@Area3D@44666"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.257415, -0.73031044)
 shape = SubResource("BoxShape3D_pexyr")

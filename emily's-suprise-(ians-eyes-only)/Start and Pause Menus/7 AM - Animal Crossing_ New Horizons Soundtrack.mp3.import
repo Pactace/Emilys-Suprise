@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ceanrat68ki1u"
+path="res://.godot/imported/7 AM - Animal Crossing_ New Horizons Soundtrack.mp3-5544a4aef482b1ef697e788bebb9560e.mp3str"
+
+[deps]
+
+source_file="res://Start and Pause Menus/7 AM - Animal Crossing_ New Horizons Soundtrack.mp3"
+dest_files=["res://.godot/imported/7 AM - Animal Crossing_ New Horizons Soundtrack.mp3-5544a4aef482b1ef697e788bebb9560e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

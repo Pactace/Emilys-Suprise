@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dd6oyn61i7m5w"]
+
+[ext_resource type="Shader" uid="uid://b5gdj0gfoerb4" path="res://Levels/Components/Portal.gdshader" id="1_utorh"]
+[ext_resource type="Texture2D" uid="uid://b7eqhrf33lxsu" path="res://Floor and Wall Textures/Wall18/RoomTexWallCute01_Alb.png" id="2_f64n7"]
+[ext_resource type="Texture2D" uid="uid://clri0lug03mdj" path="res://Floor and Wall Textures/Wall18/RoomTexWallCute01_Nrm.png" id="3_jshpa"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_utorh")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 1.0
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_f64n7")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("3_jshpa")
+shader_parameter/normal_scale = 1.000000807500001
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.21, 0.08, 0.21)
+shader_parameter/uv1_offset = Vector3(0, 1.01, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)

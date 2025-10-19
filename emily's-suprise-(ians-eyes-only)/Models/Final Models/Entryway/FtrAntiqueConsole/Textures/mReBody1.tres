@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c7im1aseum6ho"]
 
-[ext_resource type="Texture2D" uid="uid://by4h8n0xetplp" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody_Alb1.png" id="1_6hp3u"]
-[ext_resource type="Texture2D" uid="uid://bqhllba4tel3y" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody_Nrm1.png" id="2_4fhjp"]
+[ext_resource type="Texture2D" uid="uid://7rxj8856kymp" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody_Alb1.png" id="1_6hp3u"]
+[ext_resource type="Texture2D" uid="uid://xsjj3kycldcv" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody_Nrm1.png" id="2_4fhjp"]
 
 [resource]
 resource_name = "mReBody1"

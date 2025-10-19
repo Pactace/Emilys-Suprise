@@ -1,7 +1,7 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cm2iim8cvlu7p"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://boa8ilaf7v58o"]
 
-[ext_resource type="Texture2D" uid="uid://xa7umdvh1yln" path="res://Models/Final Models/Entryway/FtrPlantSucculents/Textures/mBody_Alb.png" id="1_085tb"]
+[ext_resource type="Texture2D" uid="uid://dgmp6xra8qr7h" path="res://Models/Final Models/Entryway/FtrPlantSucculents/Textures/mBody_Alb.png" id="1_lyn31"]
 
 [resource]
 resource_name = "mBody0"
-albedo_texture = ExtResource("1_085tb")
+albedo_texture = ExtResource("1_lyn31")

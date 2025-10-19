@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw5y12qqq7ukd"
+path="res://.godot/imported/Car Slow Driving Sound Effect.mp3-b2fde85befe2075a3a8d3c8c7bd54783.mp3str"
+
+[deps]
+
+source_file="res://Start and Pause Menus/Car Slow Driving Sound Effect.mp3"
+dest_files=["res://.godot/imported/Car Slow Driving Sound Effect.mp3-b2fde85befe2075a3a8d3c8c7bd54783.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

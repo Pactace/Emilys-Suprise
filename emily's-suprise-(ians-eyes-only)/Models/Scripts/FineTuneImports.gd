@@ -23,18 +23,19 @@ func _traverse_folders(path: String) -> void:
 					var textures_path = path.path_join(file_name)
 					print("🧵 Found Textures folder:", textures_path)
 					create_materials(textures_path)
+					create_skins(textures_path)
 				else:
 					_traverse_folders(path.path_join(file_name))
 		else:
 			if file_name.ends_with(".glb"):
 				var glb_scene := path.path_join(file_name)
 				var tscn_path := glb_scene.replace(".glb", ".tscn")
-
 				if FileAccess.file_exists(tscn_path):
 					print("⏩ Skipping (already exists):", tscn_path)
 				else:
 					print("📦 Found GLB file:", glb_scene)
 					process_glb_scene(glb_scene, tscn_path)
+					change_collision_layers(tscn_path)
 		file_name = dir.get_next()
 
 	dir.list_dir_end()
@@ -73,10 +74,9 @@ func process_glb_scene(scene_path: String, save_path: String):
 		# Make sure your script has: @export var area_path: NodePath
 		inst.set("area_path", inst.get_path_to(area_node))
 		
-	# Step 4 resize so its correct	
-	inst.scale = Vector3(28,28,28)
+	inst.scale *= .3
 	
-	# Step 4 save the packages: Save final packed scene
+	# Step 5 save the packages: Save final packed scene
 	var packed := PackedScene.new()
 	var ok := packed.pack(inst)
 	if ok == OK:
@@ -240,81 +240,112 @@ func create_materials(textures_path: String) -> void:
 		tex_file = tex_dir.get_next()
 
 	tex_dir.list_dir_end()
-
-
 		
-func assign_materials_to_objects():
-	var dir := DirAccess.open(final_models)
+func create_skins(texture_path: String):
+	var skins := {}
+	
+	var dir := DirAccess.open(texture_path)
+	
 	if not dir:
-		push_error("Could not open: %s" % final_models)
+		push_error("Could not open: %s" % texture_path)
 		return
 	
 	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	var counter = 0
-	while file_name != "" and counter < 5:
-		if file_name.ends_with(".tscn"):
-			var file_path = final_models + file_name
-			var texture_path = file_path.replace(".tscn", "Textures")
-			print(texture_path)
-			var packed_scene = load(file_path)
-			var scene_root = packed_scene.instantiate()
-			for child in scene_root.get_children():
-				var separator_char = "__"
-				var char_index = child.name.find(separator_char)
-				var part_after_char = child.name.substr(char_index + 2, child.name.length())
-				var texture_name = part_after_char + "0.tres"
-				var material_path = texture_path + "/" + texture_name
-				var material = load(material_path)
-				child.set_surface_override_material(0, material)
-				
-				
-			var result = packed_scene.pack(scene_root)
-			result = ResourceSaver.save(packed_scene, file_path)
-			counter += 1
+	var file_name := dir.get_next()
+	while file_name != "":
+		if not dir.current_is_dir() and file_name.ends_with(".tres"):
+			# remove extension for prefix detection
+			var name_no_ext := file_name.get_basename()
+			
+			# derive prefix (base name without trailing digits)
+			var prefix := name_no_ext.strip_edges().rstrip("0123456789")
+			
+			# ensure the prefix exists in the dictionary
+			if not skins.has(prefix):
+				skins[prefix] = []
+			
+			# load actual resource and append it
+			var file_path = texture_path.path_join(file_name)
+			var mat = load(file_path)
+			if mat:
+				skins[prefix].append(mat)
+			else:
+				push_warning("Could not load: %s" % file_path)
+		
 		file_name = dir.get_next()
 	dir.list_dir_end()
-
-func change_collision_layers():
-	var dir := DirAccess.open(final_models)
-	if not dir:
-		push_error("Could not open: %s" % final_models)
+	
+	print("✅ Skins dictionary ready:", skins)
+	var folder_path := texture_path.get_base_dir()
+	var tscn_file = null
+	print(folder_path)
+	
+	dir = DirAccess.open(folder_path)
+	
+	dir.list_dir_begin()
+	file_name = dir.get_next()
+	while file_name != "":
+		if ".tscn" in file_name:
+			tscn_file = file_name
+			break
+		file_name = dir.get_next()
+	dir.list_dir_end()
+	folder_path = folder_path.path_join(tscn_file)
+	print(folder_path)
+	
+	# Load once
+	var scene := load(folder_path)
+	if not scene:
+		push_error("Could not load GLB: %s" % folder_path)
+		return
+	
+	var inst = scene.instantiate()
+	if not inst:
+		push_error("Could not instantiate: %s" % folder_path)
 		return
 
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
+	
+	inst.skins = skins
+	
+	# Step 5 save the packages: Save final packed scene
+	var packed := PackedScene.new()
+	var ok := packed.pack(inst)
+	if ok == OK:
+		var err := ResourceSaver.save(packed, folder_path)
+		if err == OK:
+			print("✅ Skins Saved:", folder_path)
+		else:
+			push_error("❌ Failed to save skins")
+	else:
+		push_error("❌ Failed to pack skins")
 
-	while file_name != "":
-		if file_name.ends_with(".tscn"):
-			var file_path = final_models + file_name
-			var loaded_scene: PackedScene = load(file_path)
-			var scene_root: Node = loaded_scene.instantiate()
-
-			var collision_node: StaticBody3D = null
-			for i in range(scene_root.get_child_count()):
-				var child = scene_root.get_child(i)
-				if child.get_child_count() > 0:
-					collision_node = child.get_child(0)
-					break
-			if collision_node:
-				collision_node.set_collision_layer_value(1, false)
-				collision_node.set_collision_layer_value(3, true)
-				collision_node.set_collision_layer_value(8, true)
-				collision_node.set_collision_mask_value(1, false)
-				collision_node.set_collision_mask_value(3, true)
-				collision_node.set_collision_mask_value(8, true)
-
-			var new_scene := PackedScene.new()
-			if new_scene.pack(scene_root) == OK:
-				var save_result = ResourceSaver.save(new_scene, file_path)
-				if save_result != OK:
-					push_error("Failed to save scene: %s" % file_path)
-			else:
-				push_error("Failed to pack scene: %s" % file_path)
-				
-		file_name = dir.get_next()
-
-	dir.list_dir_end()
+	
+func change_collision_layers(scene_root_path: String):
+	var scene := load(scene_root_path)
+	var inst = scene.instantiate()
+	var collision_node: StaticBody3D = null
+	for i in range(inst.get_child_count()):
+		var child = inst.get_child(i)
+		if child.get_child_count() > 0:
+			collision_node = child.get_child(0)
+			break
+	if collision_node:
+		collision_node.set_collision_layer_value(1, false)
+		collision_node.set_collision_layer_value(3, true)
+		collision_node.set_collision_layer_value(8, true)
+		collision_node.set_collision_mask_value(1, false)
+		collision_node.set_collision_mask_value(3, true)
+		collision_node.set_collision_mask_value(8, true)
+	var packed := PackedScene.new()
+	var ok := packed.pack(inst)
+	if ok == OK:
+		var err := ResourceSaver.save(packed, scene_root_path)
+		if err == OK:
+			print("✅ Final scene saved:")
+		else:
+			push_error("❌ Failed to save scene")
+	else:
+		push_error("❌ Failed to pack scene:")
 		
 func add_wall_ray_to_wall_objects():
 	var wall_ray_scene = preload("res://Models/wall_ray.tscn")

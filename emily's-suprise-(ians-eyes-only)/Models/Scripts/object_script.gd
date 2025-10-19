@@ -18,6 +18,8 @@ var placable_location_found
 
 @export_enum("Normal", "Table", "Placeable on Table") var object_type: int
 
+@export var skins = {}
+
 func _ready() -> void:
 	camera = get_viewport().get_camera_3d()
 

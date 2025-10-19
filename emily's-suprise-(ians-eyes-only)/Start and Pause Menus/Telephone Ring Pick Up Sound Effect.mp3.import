@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmyo74o4hijpp"
+path="res://.godot/imported/Telephone Ring Pick Up Sound Effect.mp3-c593d06686b028c6921474126ec07652.mp3str"
+
+[deps]
+
+source_file="res://Start and Pause Menus/Telephone Ring Pick Up Sound Effect.mp3"
+dest_files=["res://.godot/imported/Telephone Ring Pick Up Sound Effect.mp3-c593d06686b028c6921474126ec07652.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -195,4 +195,4 @@ def operation_steal_wall_papers():
             print(f"⚠️ Source folder not found: {src}")
 
 if __name__ == "__main__":
-    operation_steal_wall_papers()
+    items_from_list_retrieve()

@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://dyl362t0smkf6"]
+[gd_scene load_steps=12 format=4 uid="uid://c1enm26bopel3"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_evjsg"]
+[ext_resource type="Material" uid="uid://iotgqcrdqtdb" path="res://Models/Final Models/Entryway/FtrPlanterPalm/Textures/mBody0.tres" id="2_fgni6"]
+[ext_resource type="Material" uid="uid://cf3fcgjdacnn2" path="res://Models/Final Models/Entryway/FtrPlanterPalm/Textures/mPlant0.tres" id="3_74a3b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sof3b"]
 
@@ -80,23 +82,29 @@ bind/5/bone = -1
 bind/5/pose = Transform3D(7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0, 0, 1, 2.97, -0.1999997, -3.78)
 
 [node name="FtrPlanterPalm" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_evjsg")
-area_path = NodePath("coconut_low__mBody/@Area3D@43429")
+area_path = NodePath("coconut_low__mBody/@Area3D@44658")
+skins = {
+"mBody": [ExtResource("2_fgni6")],
+"mPlant": [ExtResource("3_74a3b")]
+}
 
 [node name="coconut_low__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_y4a1x")
 skin = SubResource("Skin_sf287")
 
-[node name="@StaticBody3D@43427" type="StaticBody3D" parent="coconut_low__mBody"]
+[node name="@StaticBody3D@44656" type="StaticBody3D" parent="coconut_low__mBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43426" type="CollisionShape3D" parent="coconut_low__mBody/@StaticBody3D@43427"]
+[node name="@CollisionShape3D@44655" type="CollisionShape3D" parent="coconut_low__mBody/@StaticBody3D@44656"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011675358, -0.04597807, 3.087861)
 shape = SubResource("BoxShape3D_evjsg")
 
-[node name="@Area3D@43429" type="Area3D" parent="coconut_low__mBody"]
+[node name="@Area3D@44658" type="Area3D" parent="coconut_low__mBody"]
 
-[node name="@CollisionShape3D@43428" type="CollisionShape3D" parent="coconut_low__mBody/@Area3D@43429"]
+[node name="@CollisionShape3D@44657" type="CollisionShape3D" parent="coconut_low__mBody/@Area3D@44658"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011675358, -0.04597807, 3.087861)
 shape = SubResource("BoxShape3D_8ic4x")
 

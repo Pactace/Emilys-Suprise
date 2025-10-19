@@ -1,6 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://dt14oq5w3hk5s"]
+[gd_scene load_steps=13 format=4 uid="uid://ii16vgqyfhix"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_kdmh2"]
+[ext_resource type="Material" uid="uid://bwx5rr05f6j26" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody0.tres" id="2_h5ql2"]
+[ext_resource type="Material" uid="uid://cjf2jtpu3ydms" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody1.tres" id="3_shivi"]
+[ext_resource type="Material" uid="uid://wluh8bnv1kfh" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody2.tres" id="4_8r5i2"]
+[ext_resource type="Material" uid="uid://bfui5vqvb8k84" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody3.tres" id="5_50gyg"]
+[ext_resource type="Material" uid="uid://r3ohq15kskxw" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody4.tres" id="6_a3ogh"]
+[ext_resource type="Material" uid="uid://bbjdiw0pbihfy" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody5.tres" id="7_22ea5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hisv"]
 
@@ -37,22 +43,27 @@ size = Vector3(9.200001, 7.306046, 9.200002)
 size = Vector3(9.200001, 7.306046, 9.200002)
 
 [node name="FtrIrongardenTable" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_kdmh2")
-area_path = NodePath("LegA_low__mReBody/@Area3D@43405")
+area_path = NodePath("LegA_low__mReBody/@Area3D@44634")
+skins = {
+"mReBody": [ExtResource("2_h5ql2"), ExtResource("3_shivi"), ExtResource("4_8r5i2"), ExtResource("5_50gyg"), ExtResource("6_a3ogh"), ExtResource("7_22ea5")]
+}
 
 [node name="LegA_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_c5kko")
 skin = SubResource("Skin_twcu3")
 
-[node name="@StaticBody3D@43403" type="StaticBody3D" parent="LegA_low__mReBody"]
+[node name="@StaticBody3D@44632" type="StaticBody3D" parent="LegA_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43402" type="CollisionShape3D" parent="LegA_low__mReBody/@StaticBody3D@43403"]
+[node name="@CollisionShape3D@44631" type="CollisionShape3D" parent="LegA_low__mReBody/@StaticBody3D@44632"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 3.653023, -9.536743e-07)
 shape = SubResource("BoxShape3D_kdmh2")
 
-[node name="@Area3D@43405" type="Area3D" parent="LegA_low__mReBody"]
+[node name="@Area3D@44634" type="Area3D" parent="LegA_low__mReBody"]
 
-[node name="@CollisionShape3D@43404" type="CollisionShape3D" parent="LegA_low__mReBody/@Area3D@43405"]
+[node name="@CollisionShape3D@44633" type="CollisionShape3D" parent="LegA_low__mReBody/@Area3D@44634"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 3.653023, -9.536743e-07)
 shape = SubResource("BoxShape3D_qph81")

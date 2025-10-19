@@ -1,0 +1,101 @@
+[gd_scene load_steps=20 format=3 uid="uid://o1v1tayx8jws"]
+
+[ext_resource type="Texture2D" uid="uid://dq5mx2vt3ip17" path="res://Start and Pause Menus/Start Screen Items/sky_panorama.jpg" id="1_q3mkv"]
+[ext_resource type="PackedScene" uid="uid://40eyaqjeyi31" path="res://Start and Pause Menus/Start Screen Items/kei_truck.glb" id="2_7tpsi"]
+[ext_resource type="Texture2D" uid="uid://dvf10sckw0sx3" path="res://Start and Pause Menus/Logo Sprites/unscreen-146.png" id="4_s07fs"]
+[ext_resource type="Texture2D" uid="uid://ddqm82xvvodf0" path="res://Start and Pause Menus/Start Screen Items/Seamless-Black-Asphalt-Road-Texture.jpg" id="5_arlok"]
+[ext_resource type="PackedScene" uid="uid://blux0jhsh80yn" path="res://Start and Pause Menus/TheHouse.fbx" id="6_nh0of"]
+[ext_resource type="Texture2D" uid="uid://bpa0lnvi5lm5h" path="res://Start and Pause Menus/Start Screen Items/3a8ea8abf1d716ecb1e83f2610278ab0.jpg" id="6_npcor"]
+[ext_resource type="AudioStream" uid="uid://bc1s7cdtxj2vv" path="res://Levels/Components/Door Open and Close - Sound Effect  Non copyright sound effects  TCW-SoundEffects.mp3" id="9_ata7l"]
+[ext_resource type="PackedScene" uid="uid://dmy5r6133pa4y" path="res://Emily/emily.tscn" id="9_didn8"]
+[ext_resource type="Script" uid="uid://4x7x53bh6ag7" path="res://Emily/emily_entering_house.gd" id="10_ata7l"]
+[ext_resource type="AudioStream" uid="uid://dn2cc04l7luh1" path="res://Start and Pause Menus/smooth-instrumental-jazz-music-360498.mp3" id="11_ggoiw"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="14_sx1r5"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="15_b7tps"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kusrh"]
+panorama = ExtResource("1_q3mkv")
+
+[sub_resource type="Sky" id="Sky_vmr02"]
+sky_material = SubResource("PanoramaSkyMaterial_kusrh")
+
+[sub_resource type="Environment" id="Environment_3aeag"]
+background_mode = 1
+background_color = Color(0.41583976, 0.77546483, 0.87328005, 1)
+sky = SubResource("Sky_vmr02")
+sky_rotation = Vector3(-0.49741885, 3.0927234, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.9999998, 0.76563627, 0.67289627, 1)
+ambient_light_energy = 2.95
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ktha"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q3mkv"]
+albedo_texture = ExtResource("5_arlok")
+uv1_scale = Vector3(0.265, 1, 5.055)
+uv1_offset = Vector3(0.46, 0, 0)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tpsi"]
+albedo_texture = ExtResource("6_npcor")
+uv1_scale = Vector3(0.36, 1, 3.93)
+uv1_triplanar = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mq5b"]
+shader = ExtResource("14_sx1r5")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[node name="EnteringTheHouse" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3aeag")
+
+[node name="Moving van" parent="." instance=ExtResource("2_7tpsi")]
+transform = Transform3D(0.009843558, 0, 2.9999838, 0, 3, 0, -2.9999838, 0, 0.009843558, -3.1834774, 0, -2.515)
+
+[node name="Sprite3D" type="Sprite3D" parent="Moving van"]
+transform = Transform3D(0.0013785453, 0, -1.0602517, 0, 0.19368565, 0, 0.15456478, 0, 0.00945626, -0.7807746, 0.8720552, 0.8797538)
+texture = ExtResource("4_s07fs")
+
+[node name="Road" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.087293886, 0, -119.40372, 0, 1, 0, 8.066745, 0, -1.2921213, 0, 0, 0.8509264)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("StandardMaterial3D_q3mkv")
+
+[node name="TheHouse" parent="." instance=ExtResource("6_nh0of")]
+transform = Transform3D(-4.371139e-06, 0, 100, 0, 100, 0, -100, 0, -4.371139e-06, -0.43748164, -0.81198645, -38.00306)
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.405776e-07, -3.1899717e-08, -119.41068, -0.7214799, 1.4576966, -2.3780894e-06, 14.261913, 0.07374169, -4.6463933e-06, 3.9764671, -0.983984, -19.940807)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("StandardMaterial3D_7tpsi")
+
+[node name="EmilyAnimations" parent="." instance=ExtResource("9_didn8")]
+transform = Transform3D(-2.1949158, 0, 0.14948054, 0, 2.2, 0, -0.14948054, 0, -2.1949158, -0.18613696, 0.0586493, -8.848671)
+script = ExtResource("10_ata7l")
+timer = 1.5
+
+[node name="Camera3D" type="Camera3D" parent="EmilyAnimations"]
+transform = Transform3D(-0.453495, 0.028374407, -0.012195894, 0, 0.17949471, 0.4176041, 0.030884407, 0.4166391, -0.1790799, 0.873333, 5.3150253, -1.6447113)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="EmilyAnimations"]
+transform = Transform3D(0.003281186, 0, 0.9999946, 0, 1, 0, -0.9999946, 0, 0.003281186, -3.1834774, 0, -2.515)
+stream = ExtResource("9_ata7l")
+volume_db = 6.0
+max_db = 6.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2mq5b")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("15_b7tps")
+next_scene = "res://Levels/Level Scenes/Floor 1/Entryway/Entryway.tscn"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.003281186, 0, 0.9999946, 0, 1, 0, -0.9999946, 0, 0.003281186, -3.1834774, 0, -2.515)
+stream = ExtResource("11_ggoiw")
+volume_db = 3.0
+autoplay = true

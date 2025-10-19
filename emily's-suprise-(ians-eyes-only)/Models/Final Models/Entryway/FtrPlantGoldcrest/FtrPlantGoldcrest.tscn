@@ -1,6 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://bjlhsjatjhhw7"]
+[gd_scene load_steps=12 format=4 uid="uid://c5qhl1rrkfixu"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6ehss"]
+[ext_resource type="Material" uid="uid://opg753h1m8ru" path="res://Models/Final Models/Entryway/FtrPlantGoldcrest/Textures/mReBody0.tres" id="2_k8sis"]
+[ext_resource type="Material" uid="uid://d0qupd24gnerj" path="res://Models/Final Models/Entryway/FtrPlantGoldcrest/Textures/mReBody1.tres" id="3_yj185"]
+[ext_resource type="Material" uid="uid://c7py7sdvg6rwa" path="res://Models/Final Models/Entryway/FtrPlantGoldcrest/Textures/mReBody2.tres" id="4_kio60"]
+[ext_resource type="Material" uid="uid://cjt1a8t2asurm" path="res://Models/Final Models/Entryway/FtrPlantGoldcrest/Textures/mReBody3.tres" id="5_m347b"]
+[ext_resource type="Material" uid="uid://crt848o7i1xpg" path="res://Models/Final Models/Entryway/FtrPlantGoldcrest/Textures/mReBody4.tres" id="6_kqua6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ir6e7"]
 
@@ -49,22 +54,27 @@ size = Vector3(9.1866665, 21.467363, 9.2710495)
 size = Vector3(9.1866665, 21.467363, 9.2710495)
 
 [node name="FtrPlantGoldcrest" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_6ehss")
-area_path = NodePath("Leaf01_low__mReBody/@Area3D@43433")
+area_path = NodePath("Leaf01_low__mReBody/@Area3D@44662")
+skins = {
+"mReBody": [ExtResource("2_k8sis"), ExtResource("3_yj185"), ExtResource("4_kio60"), ExtResource("5_m347b"), ExtResource("6_kqua6")]
+}
 
 [node name="Leaf01_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_40coc")
 skin = SubResource("Skin_r4h8t")
 
-[node name="@StaticBody3D@43431" type="StaticBody3D" parent="Leaf01_low__mReBody"]
+[node name="@StaticBody3D@44660" type="StaticBody3D" parent="Leaf01_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43430" type="CollisionShape3D" parent="Leaf01_low__mReBody/@StaticBody3D@43431"]
+[node name="@CollisionShape3D@44659" type="CollisionShape3D" parent="Leaf01_low__mReBody/@StaticBody3D@44660"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1254983, 10.731948, -0.06604433)
 shape = SubResource("BoxShape3D_6ehss")
 
-[node name="@Area3D@43433" type="Area3D" parent="Leaf01_low__mReBody"]
+[node name="@Area3D@44662" type="Area3D" parent="Leaf01_low__mReBody"]
 
-[node name="@CollisionShape3D@43432" type="CollisionShape3D" parent="Leaf01_low__mReBody/@Area3D@43433"]
+[node name="@CollisionShape3D@44661" type="CollisionShape3D" parent="Leaf01_low__mReBody/@Area3D@44662"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1254983, 10.731948, -0.06604433)
 shape = SubResource("BoxShape3D_ylxwm")

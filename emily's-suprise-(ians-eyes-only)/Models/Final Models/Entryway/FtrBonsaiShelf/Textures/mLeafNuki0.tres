@@ -1,7 +1,7 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bjpgoevf2gbf7"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cc6vlu2jcx11x"]
 
-[ext_resource type="Texture2D" uid="uid://b8eau00dulqn3" path="res://Models/Final Models/Entryway/FtrBonsaiShelf/Textures/mLeafNuki_Alb.png" id="1_2num8"]
+[ext_resource type="Texture2D" uid="uid://bkeytsqxe0ri7" path="res://Models/Final Models/Entryway/FtrBonsaiShelf/Textures/mLeafNuki_Alb.png" id="1_agi34"]
 
 [resource]
 resource_name = "mLeafNuki0"
-albedo_texture = ExtResource("1_2num8")
+albedo_texture = ExtResource("1_agi34")

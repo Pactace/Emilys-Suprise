@@ -1,6 +1,14 @@
-[gd_scene load_steps=9 format=4 uid="uid://fjacb6rnhyuq"]
+[gd_scene load_steps=17 format=4 uid="uid://wha3jo5wy45"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wfjr4"]
+[ext_resource type="Material" uid="uid://cpwminb072roa" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mBody0.tres" id="2_351gp"]
+[ext_resource type="Material" uid="uid://vydteo53txyo" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric0.tres" id="3_o3l8u"]
+[ext_resource type="Material" uid="uid://dxuyv4fb18t5g" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric1.tres" id="4_3sgc5"]
+[ext_resource type="Material" uid="uid://bbbmeeyto3lsc" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric2.tres" id="5_nmbvt"]
+[ext_resource type="Material" uid="uid://cktl6gu7qckhq" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric3.tres" id="6_iwnql"]
+[ext_resource type="Material" uid="uid://dsqxy2ewofwxi" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric4.tres" id="7_ws1nt"]
+[ext_resource type="Material" uid="uid://bdkfu26qmlcj5" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric5.tres" id="8_a5dbp"]
+[ext_resource type="Material" uid="uid://u2tc2uy0yt8a" path="res://Models/Final Models/Entryway/FtrLampDesk/Textures/mReFabric6.tres" id="9_pw105"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88rha"]
 
@@ -58,9 +66,13 @@ size = Vector3(4.161467, 7.466016, 4.347731)
 size = Vector3(4.161467, 7.466016, 4.347731)
 
 [node name="FtrLampDesk" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_wfjr4")
-area_path = NodePath("Mdl_Light__mBody/@Area3D@43409")
+area_path = NodePath("Mdl_Light__mBody/@Area3D@44638")
+skins = {
+"mBody": [ExtResource("2_351gp")],
+"mReFabric": [ExtResource("3_o3l8u"), ExtResource("4_3sgc5"), ExtResource("5_nmbvt"), ExtResource("6_iwnql"), ExtResource("7_ws1nt"), ExtResource("8_a5dbp"), ExtResource("9_pw105")]
+}
 
 [node name="ShadeFront__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jcrcv")
@@ -70,14 +82,16 @@ skin = SubResource("Skin_s6mny")
 mesh = SubResource("ArrayMesh_jfe04")
 skin = SubResource("Skin_s6mny")
 
-[node name="@StaticBody3D@43407" type="StaticBody3D" parent="Mdl_Light__mBody"]
+[node name="@StaticBody3D@44636" type="StaticBody3D" parent="Mdl_Light__mBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43406" type="CollisionShape3D" parent="Mdl_Light__mBody/@StaticBody3D@43407"]
+[node name="@CollisionShape3D@44635" type="CollisionShape3D" parent="Mdl_Light__mBody/@StaticBody3D@44636"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, 3.733008, -0.061032534)
 shape = SubResource("BoxShape3D_wfjr4")
 
-[node name="@Area3D@43409" type="Area3D" parent="Mdl_Light__mBody"]
+[node name="@Area3D@44638" type="Area3D" parent="Mdl_Light__mBody"]
 
-[node name="@CollisionShape3D@43408" type="CollisionShape3D" parent="Mdl_Light__mBody/@Area3D@43409"]
+[node name="@CollisionShape3D@44637" type="CollisionShape3D" parent="Mdl_Light__mBody/@Area3D@44638"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, 3.733008, -0.061032534)
 shape = SubResource("BoxShape3D_2nyq8")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://c4m7t4lbksnbq"]
+[gd_scene load_steps=12 format=4 uid="uid://bfvi1aocgf3tt"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ub02m"]
+[ext_resource type="Material" uid="uid://dmamlftidipwj" path="res://Models/Final Models/Entryway/FtrBonsaiShelf/Textures/mBody0.tres" id="2_hjre8"]
+[ext_resource type="Material" uid="uid://cc6vlu2jcx11x" path="res://Models/Final Models/Entryway/FtrBonsaiShelf/Textures/mLeafNuki0.tres" id="3_hf7gu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qkdy"]
 
@@ -92,9 +94,13 @@ size = Vector3(19.099998, 12.13577, 6.95411)
 size = Vector3(19.099998, 12.13577, 6.95411)
 
 [node name="FtrBonsaiShelf" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_ub02m")
-area_path = NodePath("cylinderPot_low__mBody/@Area3D@43381")
+area_path = NodePath("cylinderPot_low__mBody/@Area3D@44610")
+skins = {
+"mBody": [ExtResource("2_hjre8")],
+"mLeafNuki": [ExtResource("3_hf7gu")]
+}
 
 [node name="kaedeLeaf_A010__mLeafNuki" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rjdcc")
@@ -104,14 +110,16 @@ skin = SubResource("Skin_sj8oi")
 mesh = SubResource("ArrayMesh_yceaj")
 skin = SubResource("Skin_cq5yn")
 
-[node name="@StaticBody3D@43379" type="StaticBody3D" parent="cylinderPot_low__mBody"]
+[node name="@StaticBody3D@44608" type="StaticBody3D" parent="cylinderPot_low__mBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43378" type="CollisionShape3D" parent="cylinderPot_low__mBody/@StaticBody3D@43379"]
+[node name="@CollisionShape3D@44607" type="CollisionShape3D" parent="cylinderPot_low__mBody/@StaticBody3D@44608"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 6.067885, 0)
 shape = SubResource("BoxShape3D_ub02m")
 
-[node name="@Area3D@43381" type="Area3D" parent="cylinderPot_low__mBody"]
+[node name="@Area3D@44610" type="Area3D" parent="cylinderPot_low__mBody"]
 
-[node name="@CollisionShape3D@43380" type="CollisionShape3D" parent="cylinderPot_low__mBody/@Area3D@43381"]
+[node name="@CollisionShape3D@44609" type="CollisionShape3D" parent="cylinderPot_low__mBody/@Area3D@44610"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 6.067885, 0)
 shape = SubResource("BoxShape3D_ys4un")

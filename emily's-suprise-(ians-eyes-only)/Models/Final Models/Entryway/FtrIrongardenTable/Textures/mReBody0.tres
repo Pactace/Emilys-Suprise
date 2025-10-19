@@ -1,7 +1,7 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bt07hednmay48"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwx5rr05f6j26"]
 
-[ext_resource type="Texture2D" uid="uid://cdwkkjhyqmh2a" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody_Alb.png" id="1_bb4in"]
+[ext_resource type="Texture2D" uid="uid://nrkm7061jjqm" path="res://Models/Final Models/Entryway/FtrIrongardenTable/Textures/mReBody_Alb.png" id="1_hxu6q"]
 
 [resource]
 resource_name = "mReBody0"
-albedo_texture = ExtResource("1_bb4in")
+albedo_texture = ExtResource("1_hxu6q")

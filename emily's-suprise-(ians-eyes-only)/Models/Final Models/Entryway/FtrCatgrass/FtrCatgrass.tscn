@@ -1,6 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://bntban7f8txe8"]
+[gd_scene load_steps=12 format=4 uid="uid://sbs2ctlitf8o"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_y83xm"]
+[ext_resource type="Material" uid="uid://bt1drgirf2jhy" path="res://Models/Final Models/Entryway/FtrCatgrass/Textures/mReBody0.tres" id="2_kt4t6"]
+[ext_resource type="Material" uid="uid://b07y5lmh05jjw" path="res://Models/Final Models/Entryway/FtrCatgrass/Textures/mReBody1.tres" id="3_qbrp2"]
+[ext_resource type="Material" uid="uid://s8wucq6myosf" path="res://Models/Final Models/Entryway/FtrCatgrass/Textures/mReBody2.tres" id="4_uywx4"]
+[ext_resource type="Material" uid="uid://daaka1u3ypkhu" path="res://Models/Final Models/Entryway/FtrCatgrass/Textures/mReBody3.tres" id="5_ayl2c"]
+[ext_resource type="Material" uid="uid://b2vhtelh6jqhs" path="res://Models/Final Models/Entryway/FtrCatgrass/Textures/mReBody4.tres" id="6_pq782"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_so3ij"]
 
@@ -49,22 +54,27 @@ size = Vector3(3.62725, 5.743483, 3.779296)
 size = Vector3(3.62725, 5.743483, 3.779296)
 
 [node name="FtrCatgrass" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_y83xm")
-area_path = NodePath("CatGrass__mReBody/@Area3D@43389")
+area_path = NodePath("CatGrass__mReBody/@Area3D@44618")
+skins = {
+"mReBody": [ExtResource("2_kt4t6"), ExtResource("3_qbrp2"), ExtResource("4_uywx4"), ExtResource("5_ayl2c"), ExtResource("6_pq782")]
+}
 
 [node name="CatGrass__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_wsixb")
 skin = SubResource("Skin_kai6t")
 
-[node name="@StaticBody3D@43387" type="StaticBody3D" parent="CatGrass__mReBody"]
+[node name="@StaticBody3D@44616" type="StaticBody3D" parent="CatGrass__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43386" type="CollisionShape3D" parent="CatGrass__mReBody/@StaticBody3D@43387"]
+[node name="@CollisionShape3D@44615" type="CollisionShape3D" parent="CatGrass__mReBody/@StaticBody3D@44616"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006407976, 2.8717415, -0.022526026)
 shape = SubResource("BoxShape3D_y83xm")
 
-[node name="@Area3D@43389" type="Area3D" parent="CatGrass__mReBody"]
+[node name="@Area3D@44618" type="Area3D" parent="CatGrass__mReBody"]
 
-[node name="@CollisionShape3D@43388" type="CollisionShape3D" parent="CatGrass__mReBody/@Area3D@43389"]
+[node name="@CollisionShape3D@44617" type="CollisionShape3D" parent="CatGrass__mReBody/@Area3D@44618"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006407976, 2.8717415, -0.022526026)
 shape = SubResource("BoxShape3D_ctt78")

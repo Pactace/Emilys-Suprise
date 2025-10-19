@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwnpcadorr0ky"
+path="res://.godot/imported/smooth-instrumental-jazz-music-349777.mp3-ff74fb7688783e6f31ec719fa76ddee1.mp3str"
+
+[deps]
+
+source_file="res://Start and Pause Menus/smooth-instrumental-jazz-music-349777.mp3"
+dest_files=["res://.godot/imported/smooth-instrumental-jazz-music-349777.mp3-ff74fb7688783e6f31ec719fa76ddee1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,22 @@
-[gd_scene load_steps=9 format=4 uid="uid://cup5vyktudum1"]
+[gd_scene load_steps=25 format=4 uid="uid://dxiwe3qqt2yqb"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_qsxop"]
+[ext_resource type="Material" uid="uid://b225p8hq8308r" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody0.tres" id="2_51igu"]
+[ext_resource type="Material" uid="uid://5blb5jq7yxt" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody1.tres" id="3_u17r4"]
+[ext_resource type="Material" uid="uid://bykdjxf83r22i" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody2.tres" id="4_2gip2"]
+[ext_resource type="Material" uid="uid://6nvda4d1bv14" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody3.tres" id="5_quqca"]
+[ext_resource type="Material" uid="uid://cm3u7tkt5wyhk" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody4.tres" id="6_pyv2v"]
+[ext_resource type="Material" uid="uid://b1w6uskc0ai6l" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody5.tres" id="7_vsawh"]
+[ext_resource type="Material" uid="uid://bnwcp1ign7ja2" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody6.tres" id="8_7wjxj"]
+[ext_resource type="Material" uid="uid://c3gf4yju8w4o1" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReBody7.tres" id="9_iyvfs"]
+[ext_resource type="Material" uid="uid://dvwqdslgd7xbj" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric0.tres" id="10_cypl2"]
+[ext_resource type="Material" uid="uid://cp1k13yyl4cwd" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric1.tres" id="11_l2ba8"]
+[ext_resource type="Material" uid="uid://d2rf4d7g1nv1w" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric2.tres" id="12_v3yqb"]
+[ext_resource type="Material" uid="uid://cc2pavnqoxwni" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric3.tres" id="13_sqd0x"]
+[ext_resource type="Material" uid="uid://dyiuq75k56fk1" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric4.tres" id="14_va0ap"]
+[ext_resource type="Material" uid="uid://siobfnurnkgv" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric5.tres" id="15_puj5y"]
+[ext_resource type="Material" uid="uid://dfnr7dm1k0i1j" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric6.tres" id="16_6tp8m"]
+[ext_resource type="Material" uid="uid://d0dbwylkcm7m7" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric7.tres" id="17_egscs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcfld"]
 
@@ -58,9 +74,13 @@ size = Vector3(9.840805, 8.508112, 9.890138)
 size = Vector3(9.840805, 8.508112, 9.890138)
 
 [node name="FtrRoundTableClothS" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_qsxop")
-area_path = NodePath("StandA_low__mReBody/@Area3D@43457")
+area_path = NodePath("StandA_low__mReBody/@Area3D@44686")
+skins = {
+"mReBody": [ExtResource("2_51igu"), ExtResource("3_u17r4"), ExtResource("4_2gip2"), ExtResource("5_quqca"), ExtResource("6_pyv2v"), ExtResource("7_vsawh"), ExtResource("8_7wjxj"), ExtResource("9_iyvfs")],
+"mReFabric": [ExtResource("10_cypl2"), ExtResource("11_l2ba8"), ExtResource("12_v3yqb"), ExtResource("13_sqd0x"), ExtResource("14_va0ap"), ExtResource("15_puj5y"), ExtResource("16_6tp8m"), ExtResource("17_egscs")]
+}
 
 [node name="TableCrossB_fr_low__mReFabric" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1hdqx")
@@ -70,14 +90,16 @@ skin = SubResource("Skin_xkehj")
 mesh = SubResource("ArrayMesh_sy107")
 skin = SubResource("Skin_xkehj")
 
-[node name="@StaticBody3D@43455" type="StaticBody3D" parent="StandA_low__mReBody"]
+[node name="@StaticBody3D@44684" type="StaticBody3D" parent="StandA_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43454" type="CollisionShape3D" parent="StandA_low__mReBody/@StaticBody3D@43455"]
+[node name="@CollisionShape3D@44683" type="CollisionShape3D" parent="StandA_low__mReBody/@StaticBody3D@44684"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002096653, 4.254056, 0.010313034)
 shape = SubResource("BoxShape3D_qsxop")
 
-[node name="@Area3D@43457" type="Area3D" parent="StandA_low__mReBody"]
+[node name="@Area3D@44686" type="Area3D" parent="StandA_low__mReBody"]
 
-[node name="@CollisionShape3D@43456" type="CollisionShape3D" parent="StandA_low__mReBody/@Area3D@43457"]
+[node name="@CollisionShape3D@44685" type="CollisionShape3D" parent="StandA_low__mReBody/@Area3D@44686"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002096653, 4.254056, 0.010313034)
 shape = SubResource("BoxShape3D_gnq6v")

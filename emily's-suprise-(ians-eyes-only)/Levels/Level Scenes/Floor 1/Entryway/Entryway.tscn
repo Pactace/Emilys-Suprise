@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhyodff7y2brl"]
+[gd_scene load_steps=12 format=3 uid="uid://bhyodff7y2brl"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_4fi48"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_a1vnb"]
@@ -7,7 +7,15 @@
 [ext_resource type="Script" uid="uid://cf6mpls6jm2kf" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFlooringInventory.gd" id="5_n8xdo"]
 [ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_6st5h"]
 [ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_5tvfp"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="9_a1vnb"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_jyxhy"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="10_p0gwe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l6yyg"]
+shader = ExtResource("9_a1vnb")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
 
 [node name="TestLevel" type="Node3D"]
 
@@ -44,3 +52,11 @@ transform = Transform3D(0.13605003, -4.3757433e-09, 1844.5222, 2.376272e-07, 1, 
 
 [node name="Rigthwall Portal Marker" type="Marker3D" parent="."]
 transform = Transform3D(0.025026312, 7.557735e-09, -1.0616676, 7.54979e-08, -1, 1.2147392e-15, -0.4993733, -1.5080654e-07, -0.053205937, 0.3637104, 6.153596, 3.5044985)
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_l6yyg")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("10_p0gwe")
+next_scene = "res://Start and Pause Menus/First Cutscene.tscn"

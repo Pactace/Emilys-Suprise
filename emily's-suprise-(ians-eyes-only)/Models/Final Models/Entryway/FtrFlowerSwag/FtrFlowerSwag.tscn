@@ -1,6 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://cmkwjusb64gd8"]
+[gd_scene load_steps=14 format=4 uid="uid://27ajeenctff6"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_wkolm"]
+[ext_resource type="Material" uid="uid://c4q0jshacbbpy" path="res://Models/Final Models/Entryway/FtrFlowerSwag/Textures/mReBody0.tres" id="2_k7aqf"]
+[ext_resource type="Material" uid="uid://h63ganfnrw" path="res://Models/Final Models/Entryway/FtrFlowerSwag/Textures/mReBody1.tres" id="3_e1x3m"]
+[ext_resource type="Material" uid="uid://bsmct2ec8dbsh" path="res://Models/Final Models/Entryway/FtrFlowerSwag/Textures/mReBody2.tres" id="4_hys6g"]
+[ext_resource type="Material" uid="uid://vaebcbkkelk1" path="res://Models/Final Models/Entryway/FtrFlowerSwag/Textures/mReBody3.tres" id="5_konsc"]
+[ext_resource type="Material" uid="uid://drclb8cu7eibc" path="res://Models/Final Models/Entryway/FtrFlowerSwag/Textures/mReBody4.tres" id="6_pn5jf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_276p0"]
 
@@ -59,23 +64,28 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [node name="FtrFlowerSwag" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_wkolm")
-area_path = NodePath("FlowerLMid1_low__mReBody/@Area3D@43397")
+area_path = NodePath("FlowerLMid1_low__mReBody/@Area3D@44626")
+skins = {
+"mReBody": [ExtResource("2_k7aqf"), ExtResource("3_e1x3m"), ExtResource("4_hys6g"), ExtResource("5_konsc"), ExtResource("6_pn5jf")]
+}
 
 [node name="FlowerLMid1_low__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_agf5v")
 skin = SubResource("Skin_a5ql8")
 
-[node name="@StaticBody3D@43395" type="StaticBody3D" parent="FlowerLMid1_low__mReBody"]
+[node name="@StaticBody3D@44624" type="StaticBody3D" parent="FlowerLMid1_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43394" type="CollisionShape3D" parent="FlowerLMid1_low__mReBody/@StaticBody3D@43395"]
+[node name="@CollisionShape3D@44623" type="CollisionShape3D" parent="FlowerLMid1_low__mReBody/@StaticBody3D@44624"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14217806, -1.1155734, 1.7681116)
 shape = SubResource("BoxShape3D_wkolm")
 
-[node name="@Area3D@43397" type="Area3D" parent="FlowerLMid1_low__mReBody"]
+[node name="@Area3D@44626" type="Area3D" parent="FlowerLMid1_low__mReBody"]
 
-[node name="@CollisionShape3D@43396" type="CollisionShape3D" parent="FlowerLMid1_low__mReBody/@Area3D@43397"]
+[node name="@CollisionShape3D@44625" type="CollisionShape3D" parent="FlowerLMid1_low__mReBody/@Area3D@44626"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14217806, -1.1155734, 1.7681116)
 shape = SubResource("BoxShape3D_03jw6")
 

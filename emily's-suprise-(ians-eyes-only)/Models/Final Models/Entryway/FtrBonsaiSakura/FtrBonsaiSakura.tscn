@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://cyo8hy7g30v5n"]
+[gd_scene load_steps=12 format=4 uid="uid://cs08wxuw5cakb"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fd8fn"]
+[ext_resource type="Material" uid="uid://d4yltx3snp0c" path="res://Models/Final Models/Entryway/FtrBonsaiSakura/Textures/mBody0.tres" id="2_d3xkn"]
+[ext_resource type="Material" uid="uid://bk6w1omexo6g7" path="res://Models/Final Models/Entryway/FtrBonsaiSakura/Textures/mFlowerNuki0.tres" id="3_idcn2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7a55r"]
 
@@ -80,23 +82,29 @@ bind/5/bone = -1
 bind/5/pose = Transform3D(7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0, 0, 1, -4.280202, -3.2314628e-07, 0)
 
 [node name="FtrBonsaiSakura" type="Node3D"]
-transform = Transform3D(28, 0, 0, 0, 28, 0, 0, 0, 28, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_fd8fn")
-area_path = NodePath("Flowerpot__mBody/@Area3D@43377")
+area_path = NodePath("Flowerpot__mBody/@Area3D@44606")
+skins = {
+"mBody": [ExtResource("2_d3xkn")],
+"mFlowerNuki": [ExtResource("3_idcn2")]
+}
 
 [node name="Flowerpot__mBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ilu0o")
 skin = SubResource("Skin_srgwq")
 
-[node name="@StaticBody3D@43375" type="StaticBody3D" parent="Flowerpot__mBody"]
+[node name="@StaticBody3D@44604" type="StaticBody3D" parent="Flowerpot__mBody"]
+collision_layer = 132
+collision_mask = 132
 
-[node name="@CollisionShape3D@43374" type="CollisionShape3D" parent="Flowerpot__mBody/@StaticBody3D@43375"]
+[node name="@CollisionShape3D@44603" type="CollisionShape3D" parent="Flowerpot__mBody/@StaticBody3D@44604"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4971316, 3.7004275, 0)
 shape = SubResource("BoxShape3D_fd8fn")
 
-[node name="@Area3D@43377" type="Area3D" parent="Flowerpot__mBody"]
+[node name="@Area3D@44606" type="Area3D" parent="Flowerpot__mBody"]
 
-[node name="@CollisionShape3D@43376" type="CollisionShape3D" parent="Flowerpot__mBody/@Area3D@43377"]
+[node name="@CollisionShape3D@44605" type="CollisionShape3D" parent="Flowerpot__mBody/@Area3D@44606"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4971316, 3.7004275, 0)
 shape = SubResource("BoxShape3D_tkrt5")
 

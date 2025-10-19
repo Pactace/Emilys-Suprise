@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://babav58s2pasb"]
 
-[ext_resource type="Texture2D" uid="uid://cayjqlb3nw1nu" path="res://Models/Final Models/Entryway/FtrPlantAnthurium/Textures/mReBody_Alb1.png" id="1_ygedc"]
-[ext_resource type="Texture2D" uid="uid://dc7cx2783dqpd" path="res://Models/Final Models/Entryway/FtrPlantAnthurium/Textures/mReBody_Nrm1.png" id="2_8dsjy"]
+[ext_resource type="Texture2D" uid="uid://kjqk0s5qqn60" path="res://Models/Final Models/Entryway/FtrPlantAnthurium/Textures/mReBody_Alb1.png" id="1_ygedc"]
+[ext_resource type="Texture2D" uid="uid://bwio7hvvbsgt6" path="res://Models/Final Models/Entryway/FtrPlantAnthurium/Textures/mReBody_Nrm1.png" id="2_8dsjy"]
 
 [resource]
 resource_name = "mReBody1"

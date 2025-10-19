@@ -1,24 +1,6 @@
-[gd_resource type="Resource" script_class="PlaceableInventory" load_steps=10 format=3 uid="uid://vqmevrc6lkkg"]
+[gd_resource type="Resource" script_class="PlaceableInventory" load_steps=2 format=3 uid="uid://vqmevrc6lkkg"]
 
-[ext_resource type="PackedScene" uid="uid://b7sy7ce66tst3" path="res://Models/Final Models/FtrPlantSucculents.tscn" id="1_3o7a7"]
-[ext_resource type="PackedScene" uid="uid://c1rig3p21mxsk" path="res://Models/Final Models/FtrPlantAnthurium.tscn" id="2_ba0gk"]
-[ext_resource type="PackedScene" uid="uid://df6v5owgrswvo" path="res://Models/Final Models/FtrPlantMonstera.tscn" id="3_rlq6p"]
-[ext_resource type="PackedScene" uid="uid://d35hopyqpeybh" path="res://Models/Final Models/FtrPlantTakumi.tscn" id="4_5nean"]
-[ext_resource type="PackedScene" uid="uid://bllvgmsvtiqdf" path="res://Models/Final Models/FtrPlantYamadoriyashi.tscn" id="5_0m5r3"]
-[ext_resource type="PackedScene" uid="uid://cetbt1meao461" path="res://Models/Final Models/FtrBall.tscn" id="6_xjxtg"]
-[ext_resource type="PackedScene" uid="uid://b2w2o6awt1j66" path="res://Models/Final Models/FtrChess.tscn" id="7_do37p"]
-[ext_resource type="PackedScene" uid="uid://5qc3ftc6ndh8" path="res://Models/Final Models/FtrCoffeecup.tscn" id="8_m82tm"]
 [ext_resource type="Script" uid="uid://c1pylar4wvhvo" path="res://Inventories/PlaceableInventory.gd" id="9_3o7a7"]
 
 [resource]
 script = ExtResource("9_3o7a7")
-objects = {
-"Anthurium": ExtResource("2_ba0gk"),
-"Ball": ExtResource("6_xjxtg"),
-"Chess": ExtResource("7_do37p"),
-"Cup": ExtResource("8_m82tm"),
-"Monstera": ExtResource("3_rlq6p"),
-"Suculents": ExtResource("1_3o7a7"),
-"Takumi": ExtResource("4_5nean"),
-"Yamadoriyashi": ExtResource("5_0m5r3")
-}

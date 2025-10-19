@@ -1,6 +1,5 @@
-[gd_scene load_steps=320 format=3 uid="uid://7cb17t34q70s"]
+[gd_scene load_steps=325 format=3 uid="uid://7cb17t34q70s"]
 
-[ext_resource type="Script" uid="uid://crkjvkqxrmn8k" path="res://Start and Pause Menus/StartGameButton.gd" id="1_ds28e"]
 [ext_resource type="Texture2D" uid="uid://dq5mx2vt3ip17" path="res://Start and Pause Menus/Start Screen Items/sky_panorama.jpg" id="2_gwdmu"]
 [ext_resource type="Texture2D" uid="uid://wui2e62ed06m" path="res://Start and Pause Menus/Logo Sprites/unscreen-002.png" id="4_rcnsd"]
 [ext_resource type="Texture2D" uid="uid://cs3620frbi7gx" path="res://Start and Pause Menus/Logo Sprites/unscreen-003.png" id="5_cmnnw"]
@@ -150,15 +149,20 @@
 [ext_resource type="Texture2D" uid="uid://beawfb8pmh4oa" path="res://Start and Pause Menus/Logo Sprites/unscreen-147.png" id="149_1s5uq"]
 [ext_resource type="Texture2D" uid="uid://ctxe0yodcqdkx" path="res://Start and Pause Menus/Logo Sprites/unscreen-148.png" id="150_4syqf"]
 [ext_resource type="Texture2D" uid="uid://dthu63dd6vxaa" path="res://Start and Pause Menus/Logo Sprites/unscreen-149.png" id="151_82mvq"]
-[ext_resource type="Texture2D" uid="uid://wpjfpktyi80a" path="res://Start and Pause Menus/Start Screen Items/START-removebg-preview.png" id="152_cmnnw"]
 [ext_resource type="Texture2D" uid="uid://7drxytxucnsw" path="res://Start and Pause Menus/Logo Sprites/unscreen-150.png" id="152_naff8"]
 [ext_resource type="Script" uid="uid://bu20h5t28ecjh" path="res://Start and Pause Menus/logo.gd" id="153_rcnsd"]
+[ext_resource type="AudioStream" uid="uid://cw5y12qqq7ukd" path="res://Start and Pause Menus/Car Slow Driving Sound Effect.mp3" id="154_xa53g"]
 [ext_resource type="PackedScene" uid="uid://40eyaqjeyi31" path="res://Start and Pause Menus/Start Screen Items/kei_truck.glb" id="155_cy3y6"]
 [ext_resource type="Script" uid="uid://dajupj01yt4tn" path="res://Start and Pause Menus/Start Screen Items/kei_truck.gd" id="156_3tglp"]
 [ext_resource type="Texture2D" uid="uid://ddqm82xvvodf0" path="res://Start and Pause Menus/Start Screen Items/Seamless-Black-Asphalt-Road-Texture.jpg" id="156_7ktha"]
 [ext_resource type="Texture2D" uid="uid://bpa0lnvi5lm5h" path="res://Start and Pause Menus/Start Screen Items/3a8ea8abf1d716ecb1e83f2610278ab0.jpg" id="157_cooxk"]
 [ext_resource type="Texture2D" uid="uid://ru5oo380rmr3" path="res://Start and Pause Menus/Start Screen Items/NW-logo-white-removebg-preview.png" id="157_y3qrq"]
 [ext_resource type="Shader" uid="uid://b0ui5i6joy73k" path="res://Start and Pause Menus/Neihborhood.gdshader" id="158_004qg"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="160_rjhtr"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="161_xa53g"]
+[ext_resource type="FontFile" uid="uid://dgj13jke6l6" path="res://Start and Pause Menus/MeetCute.otf" id="162_sn473"]
+[ext_resource type="Script" uid="uid://clk6n2qmpqg4t" path="res://Start and Pause Menus/start.gd" id="163_8uh72"]
+[ext_resource type="AudioStream" uid="uid://dn2cc04l7luh1" path="res://Start and Pause Menus/smooth-instrumental-jazz-music-360498.mp3" id="163_sn473"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_004qg"]
 load_path = "res://.godot/imported/unscreen-147.png-9696cbdbbdab1bdd040c29273987fd0d.s3tc.ctex"
@@ -1736,53 +1740,19 @@ shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/scroll_speed = 1.0
 
-[node name="MainMenu" type="Node3D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sn473"]
+shader = ExtResource("160_rjhtr")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
 
-[node name="TitleCard" type="Label" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -297.0
-offset_top = -93.0
-offset_right = 294.0
-offset_bottom = -28.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 47
-text = "Emily's Interior Design Co."
-metadata/_edit_use_anchors_ = true
+[node name="MainMenu" type="Node3D"]
 
 [node name="Logo" type="AnimatedSprite2D" parent="."]
 position = Vector2(320, 137)
 sprite_frames = SubResource("SpriteFrames_cll2x")
 speed_scale = 5.0
 script = ExtResource("153_rcnsd")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 275.00003
-offset_top = 392.0
-offset_right = 315.00003
-offset_bottom = 432.0
-scale = Vector2(2.8071666, 1.0144564)
-
-[node name="TextureButton" type="TextureButton" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 174.0
-offset_top = 268.0
-offset_right = 174.0
-offset_bottom = 268.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.4746656, 0.59938467)
-texture_normal = ExtResource("152_cmnnw")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("1_ds28e")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3aeag")
@@ -1801,6 +1771,10 @@ drive_speed = 3.0
 transform = Transform3D(0.0013785453, 0, -1.0602517, 0, 0.19368565, 0, 0.15456478, 0, 0.00945626, -0.7807746, 0.8720552, 0.8797538)
 texture = ExtResource("148_q3h2b")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Moving van"]
+stream = ExtResource("154_xa53g")
+volume_db = 3.0
+
 [node name="Road" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.087293886, 0, -119.40372, 0, 1, 0, 8.066745, 0, -1.2921213, 0, 0, 0.8509264)
 mesh = SubResource("PlaneMesh_7ktha")
@@ -1816,4 +1790,36 @@ transform = Transform3D(123.663574, 4.4118894e-16, -6.632469e-07, -5.392913e-06,
 mesh = SubResource("PlaneMesh_7ktha")
 surface_material_override/0 = SubResource("ShaderMaterial_cooxk")
 
-[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_sn473")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("161_xa53g")
+next_scene = "res://Start and Pause Menus/First Cutscene.tscn"
+
+[node name="Start" type="RichTextLabel" parent="."]
+visible = false
+custom_minimum_size = Vector2(500, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -86.0
+offset_right = 250.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("162_sn473")
+theme_override_font_sizes/normal_font_size = 30
+text = "Press A to Start"
+horizontal_alignment = 1
+script = ExtResource("163_8uh72")
+blink_speed = 1.2
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("163_sn473")
+autoplay = true
+parameters/looping = true
