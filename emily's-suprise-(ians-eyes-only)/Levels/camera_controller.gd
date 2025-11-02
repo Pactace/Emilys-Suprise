@@ -45,6 +45,7 @@ func _ready():
 	target_rot_y = rotation.y
 	target_rot_x = rotation.x
 	target_fov = fov
+	_apply_snap()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Camera Snap Left"):

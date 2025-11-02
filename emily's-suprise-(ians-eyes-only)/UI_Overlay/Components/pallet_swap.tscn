@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://ng6rdia0lxwc"]
+
+[ext_resource type="Script" uid="uid://4lbdum2olipm" path="res://UI_Overlay/Components/pallet_swap.gd" id="1_j1x5i"]
+[ext_resource type="Script" uid="uid://c3x8o46cdc1cm" path="res://UI_Overlay/Components/Color_Selector.gd" id="2_ei81b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ei81b"]
+
+[node name="PalletSwap" type="Panel"]
+custom_minimum_size = Vector2(100, 75)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.9865776, 1)
+theme_override_styles/panel = SubResource("StyleBoxTexture_ei81b")
+script = ExtResource("1_j1x5i")
+skin_num = 5
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 147.0
+offset_bottom = 77.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_ei81b")
+
+[node name="Left Arrow" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "^"
+
+[node name="Number" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Right Arrow" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "v"

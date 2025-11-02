@@ -9,8 +9,7 @@
 [ext_resource type="Resource" uid="uid://wtlw617uwwd" path="res://Inventories/FlooringInventory.tres" id="5_tnchv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yamwj"]
-content_margin_left = 0.0
-content_margin_top = 0.0
+content_margin_top = 13.0
 content_margin_right = 0.0
 content_margin_bottom = 120.0
 bg_color = Color(1, 0.85882354, 0.93333334, 0.7294118)
@@ -56,10 +55,10 @@ clip_contents = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 98.0
+offset_left = -11.0
 offset_top = 12.0
-offset_right = 283.0
-offset_bottom = 143.0
+offset_right = 282.0
+offset_bottom = 245.0
 grow_horizontal = 0
 scale = Vector2(0.5, 1)
 theme_override_font_sizes/font_size = 1

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpl6yowmmp8ja"
-path.s3tc="res://.godot/imported/AdobeStock_440388551_Preview.jpeg-ed76afcb7f3d3728a093c8a403d14d5c.s3tc.ctex"
-path.etc2="res://.godot/imported/AdobeStock_440388551_Preview.jpeg-ed76afcb7f3d3728a093c8a403d14d5c.etc2.ctex"
+uid="uid://b56rrvdfc6l0s"
+path.s3tc="res://.godot/imported/images.jpg-3efc907101be9c15167600df86b6fcf1.s3tc.ctex"
+path.etc2="res://.godot/imported/images.jpg-3efc907101be9c15167600df86b6fcf1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Levels/Components/AdobeStock_440388551_Preview.jpeg"
-dest_files=["res://.godot/imported/AdobeStock_440388551_Preview.jpeg-ed76afcb7f3d3728a093c8a403d14d5c.s3tc.ctex", "res://.godot/imported/AdobeStock_440388551_Preview.jpeg-ed76afcb7f3d3728a093c8a403d14d5c.etc2.ctex"]
+source_file="res://Start and Pause Menus/Start Screen Items/images.jpg"
+dest_files=["res://.godot/imported/images.jpg-3efc907101be9c15167600df86b6fcf1.s3tc.ctex", "res://.godot/imported/images.jpg-3efc907101be9c15167600df86b6fcf1.etc2.ctex"]
 
 [params]
 

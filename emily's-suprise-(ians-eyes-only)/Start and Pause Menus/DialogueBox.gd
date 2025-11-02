@@ -15,7 +15,7 @@ var fade_in_progress := 0.0
 var dialogue_lines = [
 	"Yooooo, it's me your favorite person!",
 	"Calling you while you're on the road.",
-	"You're heading to [color=red]THE HOUSE[/color] today, right?",
+	"You're heading to your next project today, right?",
 	"Crazy thing, the owner specifically asked for you to handle the interior for this project.",
 	"I guess they just fell in love with your style. ;)",
 	"They've got good taste I suppose.",

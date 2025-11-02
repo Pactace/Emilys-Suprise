@@ -29,9 +29,11 @@ var can_place: bool = false
 @onready var change_colors = $Change_Colors
 @onready var leave_wall = $"Delete_Leave Wall"
 @onready var leave_wall_label = $"Delete_Leave Wall/Label"
+@onready var pallet_swap = $PalletSwap
 
 func enabled():
 	visible = true
+	pallet_swap.visible = false
 
 func disabled():
 	visible = false
@@ -45,6 +47,7 @@ func disabled():
 		move_place.visible = false
 		change_colors.visible = false
 		leave_wall.visible = false
+		pallet_swap.visible = false
 		to_place_move_label.text = "To Select"
 		
 
@@ -87,7 +90,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif possible_selected_object and !is_wall and possible_selected_object.is_on_wall:
 				is_wall = true
 				camera.wall_update(is_wall)
-				
+		elif event.is_action_pressed("Toggle Colors & Spacing"):
+			if pallet_swap.visible == false:
+				pallet_swap.instance = possible_selected_object
+				pallet_swap.enabled()
+			else:
+				pallet_swap.disabled()
+					
 	if event.is_action_pressed("Cancel"):
 		if selected_object:
 				selected_object.free()

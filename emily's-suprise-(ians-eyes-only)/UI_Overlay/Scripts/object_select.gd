@@ -105,14 +105,18 @@ func get_children_grid() -> Array:
 	return grid
 
 
-# Reset all labels and highlight the active one
 func highlight_selection(node: Control) -> void:
-	for child in get_children():
-		if child is Label:
-			child.add_theme_color_override("font_color", Color.WEB_MAROON)
+	var unselected_style: StyleBox = load("res://UI_Overlay/Components/unselected_container_object.tres")
+	var selected_style: StyleBox   = load("res://UI_Overlay/Components/selected_container_object.tres")
 
-	if node is Label:
-		node.add_theme_color_override("font_color", Color.BLACK)
+	for child in get_children():
+		if child is Panel:
+			# Reset all panels to unselected
+			child.add_theme_stylebox_override("panel", unselected_style)
+
+	if node is Panel:
+		# Apply selected style
+		node.add_theme_stylebox_override("panel", selected_style)
 
 
 #this loads the dictionaries each object
@@ -121,12 +125,24 @@ func load_objects(dict: Dictionary) -> void:
 		child.queue_free()
 
 	for key in dict.keys():
-		var new_item = Label.new()
-		new_item.text = key
-		new_item.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		new_item.set_meta("scene", dict[key])
+		var panel = Panel.new()
+		panel.custom_minimum_size = Vector2(125,62.5)
+		# Load and assign a StyleBox
+		var stylebox: StyleBox = load("res://UI_Overlay/Components/unselected_container_object.tres")
+		if stylebox:
+			panel.add_theme_stylebox_override("panel", stylebox)  # 'panel' is usually the correct type for Panel
+		else:
+			print("Failed to load StyleBox: ", key)
+		var icon = TextureRect.new()
+		icon.texture = load(key)
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.size = Vector2(100,50)
+		icon.position = Vector2(12.5,10)
+		icon.custom_minimum_size = Vector2(100,50)
+		panel.add_child(icon)
+		panel.set_meta("scene", dict[key])
 		
-		add_child(new_item)
+		add_child(panel)
 
 
 #here we are changing this is_wall state

@@ -15,16 +15,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !exit:
 		if frame > 40:
-			stop()
 			frame = 40
 			start.visible = true
+			
 	else:
-		if frame == 0:
-			stop()
-			visible = false
+		stop()
+		visible = false
+		start.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Accept") && start.visible == true:
-		visible = false
 		moving_van.speed_away()
-		start.visible = false
+		exit = true

@@ -22,6 +22,10 @@ var placable_location_found
 
 func _ready() -> void:
 	camera = get_viewport().get_camera_3d()
+	for child : MeshInstance3D in get_children():
+		for skin in skins:
+			if skin in child.name:
+				child.material_override = skins.get(skin)[0]
 
 func _process(delta: float) -> void:
 	#this is just for some culling effects
@@ -106,3 +110,6 @@ func wall_move(forward: bool, horizontal: bool):
 		else:
 			var position_offset = -area.scale.z * 2
 			position = collision_point + normal * position_offset
+			
+func change_colors(mesh_index: int, new_material: StandardMaterial3D):
+	get_child(mesh_index).material_override = new_material
