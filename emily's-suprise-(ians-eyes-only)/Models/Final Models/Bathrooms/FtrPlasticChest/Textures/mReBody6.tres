@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bf7dhfhspeunm"]
+
+[ext_resource type="Texture2D" uid="uid://dcvvx7lb84sd" path="res://Models/Final Models/Bathrooms/FtrPlasticChest/Textures/mReBody_Alb6.png" id="1_8bg5n"]
+[ext_resource type="Texture2D" uid="uid://dhxy6tq0gcde6" path="res://Models/Final Models/Bathrooms/FtrPlasticChest/Textures/mReBody_Nrm6.png" id="2_klp37"]
+
+[resource]
+resource_name = "mReBody6"
+albedo_texture = ExtResource("1_8bg5n")
+normal_enabled = true
+normal_texture = ExtResource("2_klp37")

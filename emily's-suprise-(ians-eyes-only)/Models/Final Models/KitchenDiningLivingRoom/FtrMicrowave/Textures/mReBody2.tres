@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dixgfb418rixk"]
+
+[ext_resource type="Texture2D" uid="uid://blwtki2m3vtvu" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrMicrowave/Textures/mReBody_Alb2.png" id="1_xyhg5"]
+[ext_resource type="Texture2D" uid="uid://dhvbqaq2uq5e6" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrMicrowave/Textures/mReBody_Nrm2.png" id="2_d4qds"]
+
+[resource]
+resource_name = "mReBody2"
+albedo_texture = ExtResource("1_xyhg5")
+normal_enabled = true
+normal_texture = ExtResource("2_d4qds")

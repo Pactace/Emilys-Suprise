@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bk2plk8oi5748"]
+
+[ext_resource type="Texture2D" uid="uid://ct1iu15nbccfj" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrComponentHighclass/Textures/mScreen_Alb.png" id="1_hbiak"]
+
+[resource]
+resource_name = "mScreen0"
+albedo_texture = ExtResource("1_hbiak")

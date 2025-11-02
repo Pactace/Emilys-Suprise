@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dvwqdslgd7xbj"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cqsvngok6qgdl"]
 
-[ext_resource type="Texture2D" uid="uid://cvginlq1l2y2o" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric_Alb.png" id="1_71ebs"]
+[ext_resource type="Texture2D" uid="uid://ev0bcjhaxitm" path="res://Models/Final Models/Entryway/FtrRoundTableClothS/Textures/mReFabric_Alb.png" id="1_71ebs"]
 
 [resource]
 resource_name = "mReFabric0"

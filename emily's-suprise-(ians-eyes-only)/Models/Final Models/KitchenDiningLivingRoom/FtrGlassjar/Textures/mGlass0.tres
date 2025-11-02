@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://k77rfsvg2kir"]
+
+[ext_resource type="Texture2D" uid="uid://cr7ifhd0ngxf1" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrGlassjar/Textures/mGlass_Alb.png" id="1_hqhxv"]
+
+[resource]
+resource_name = "mGlass0"
+albedo_texture = ExtResource("1_hqhxv")

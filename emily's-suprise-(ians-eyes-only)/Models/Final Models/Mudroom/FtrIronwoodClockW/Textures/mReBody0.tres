@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dnbf6dtw1qiu0"]
+
+[ext_resource type="Texture2D" uid="uid://be4h7v8b1bvun" path="res://Models/Final Models/Mudroom/FtrIronwoodClockW/Textures/mReBody_Alb.png" id="1_rdufr"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_rdufr")

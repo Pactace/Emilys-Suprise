@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dnqp21v8bq7ly"]
+
+[ext_resource type="Texture2D" uid="uid://ca57edkialyi5" path="res://Models/Final Models/Bedrooms/FtrCrsHelicopter/Textures/mReBody_Alb2.png" id="1_q6s77"]
+[ext_resource type="Texture2D" uid="uid://rsnvuvfdimrx" path="res://Models/Final Models/Bedrooms/FtrCrsHelicopter/Textures/mReBody_Nrm2.png" id="2_2vgd1"]
+
+[resource]
+resource_name = "mReBody2"
+albedo_texture = ExtResource("1_q6s77")
+normal_enabled = true
+normal_texture = ExtResource("2_2vgd1")

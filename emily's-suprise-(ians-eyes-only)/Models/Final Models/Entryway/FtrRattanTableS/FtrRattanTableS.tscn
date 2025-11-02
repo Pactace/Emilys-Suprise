@@ -1,12 +1,12 @@
-[gd_scene load_steps=15 format=4 uid="uid://b8cvr87hkci3s"]
+[gd_scene load_steps=15 format=4 uid="uid://cnow47jiotwu2"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_sfcs6"]
-[ext_resource type="Material" uid="uid://w6yhiqv2wpcu" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody0.tres" id="2_d0k8x"]
-[ext_resource type="Material" uid="uid://ckcomlvmm3ui0" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody1.tres" id="3_xx6g7"]
-[ext_resource type="Material" uid="uid://dk0kyan07rpmy" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody2.tres" id="4_g2ekc"]
-[ext_resource type="Material" uid="uid://dwtlrn8wqyhlx" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody3.tres" id="5_xgrc1"]
-[ext_resource type="Material" uid="uid://cbi8524ir0yfw" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody4.tres" id="6_85ind"]
-[ext_resource type="Material" uid="uid://bnykwobsdr3qb" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody5.tres" id="7_gnmkm"]
+[ext_resource type="Material" uid="uid://dkb0sbix562tx" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody0.tres" id="2_d0k8x"]
+[ext_resource type="Material" uid="uid://bay1fq0vo3flk" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody1.tres" id="3_xx6g7"]
+[ext_resource type="Material" uid="uid://bychyarhs4si8" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody2.tres" id="4_g2ekc"]
+[ext_resource type="Material" uid="uid://ccwqn2es7jwy4" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody3.tres" id="5_xgrc1"]
+[ext_resource type="Material" uid="uid://tdneridmelqk" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody4.tres" id="6_85ind"]
+[ext_resource type="Material" uid="uid://d8jx8tww64tj" path="res://Models/Final Models/Entryway/FtrRattanTableS/Textures/mReBody5.tres" id="7_gnmkm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1erwq"]
 
@@ -36,10 +36,10 @@ bind/0/name = &"Root"
 bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_sfcs6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6iwr"]
 size = Vector3(9.416001, 7.2599998, 9.416004)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_n6iwr"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vaqlf"]
 size = Vector3(9.416001, 7.2599998, 9.416004)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3i38"]
@@ -65,7 +65,7 @@ blend_shape_mode = 0
 [node name="FtrRattanTableS" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_sfcs6")
-area_path = NodePath("rL01__mReBody/@Area3D@44682")
+area_path = NodePath("rL01__mReBody/@Area3D@257594")
 skins = {
 "mReBody": [ExtResource("2_d0k8x"), ExtResource("3_xx6g7"), ExtResource("4_g2ekc"), ExtResource("5_xgrc1"), ExtResource("6_85ind"), ExtResource("7_gnmkm")]
 }
@@ -74,19 +74,19 @@ skins = {
 mesh = SubResource("ArrayMesh_2hicx")
 skin = SubResource("Skin_uytml")
 
-[node name="@StaticBody3D@44680" type="StaticBody3D" parent="rL01__mReBody"]
+[node name="@StaticBody3D@257592" type="StaticBody3D" parent="rL01__mReBody"]
 collision_layer = 132
 collision_mask = 132
 
-[node name="@CollisionShape3D@44679" type="CollisionShape3D" parent="rL01__mReBody/@StaticBody3D@44680"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 3.6299999, -9.536743e-07)
-shape = SubResource("BoxShape3D_sfcs6")
-
-[node name="@Area3D@44682" type="Area3D" parent="rL01__mReBody"]
-
-[node name="@CollisionShape3D@44681" type="CollisionShape3D" parent="rL01__mReBody/@Area3D@44682"]
+[node name="@CollisionShape3D@257591" type="CollisionShape3D" parent="rL01__mReBody/@StaticBody3D@257592"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 3.6299999, -9.536743e-07)
 shape = SubResource("BoxShape3D_n6iwr")
+
+[node name="@Area3D@257594" type="Area3D" parent="rL01__mReBody"]
+
+[node name="@CollisionShape3D@257593" type="CollisionShape3D" parent="rL01__mReBody/@Area3D@257594"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7683716e-07, 3.6299999, -9.536743e-07)
+shape = SubResource("BoxShape3D_vaqlf")
 
 [node name="glass__mGlass" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_m3q30")

@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cx0px1ud035dd"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2kxak0uoa2lk"]
 
-[ext_resource type="Texture2D" uid="uid://bqux268tfkv66" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric_Alb2.png" id="1_uwuco"]
+[ext_resource type="Texture2D" uid="uid://cdu05rhil1qg2" path="res://Models/Final Models/Entryway/FtrCountryTableM/Textures/mReFabric_Alb2.png" id="1_uwuco"]
 
 [resource]
 resource_name = "mReFabric2"

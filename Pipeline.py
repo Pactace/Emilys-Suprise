@@ -3,11 +3,12 @@ import glob
 import subprocess
 import pygltflib
 import shutil
+import time
 
 # === Paths ===
 import_request_list = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\Assets_I_Will_Steal.txt"
 export_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\ACNH_2.0.0_Exported_Model_DAE+PNG\model"
-import_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\emily's-suprise-(ians-eyes-only)\Models\Final Models\Entryway"
+import_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\emily's-suprise-(ians-eyes-only)\Models\Final Models\Rugs"
 
 # Path to COLLADA2GLTF executable
 collada_converter = "COLLADA2GLTF"  # <-- change this
@@ -104,7 +105,7 @@ def items_from_list_retrieve():
     """
     with open(import_request_list, "r") as file:
         for line in file:
-            item =  line.strip()
+            item = line.strip()
             dae_path = ""
             icon_path = ""
             textures = []
@@ -116,7 +117,7 @@ def items_from_list_retrieve():
                     main_file_contents = os.listdir(match)
                     for content in main_file_contents:
                         if 'dae' in content:
-                            dae_path =  os.path.join(match, content)
+                            dae_path = os.path.join(match, content)
                         else:
                             textures.append(os.path.join(match, content))
                     
@@ -132,8 +133,7 @@ def items_from_list_retrieve():
                 elif 'DIY' not in match:
                     main_file_contents = os.listdir(match)
                     for content in main_file_contents:
-                            textures.append(os.path.join(match, content))
-
+                        textures.append(os.path.join(match, content))
 
             # Process item
             if dae_path:
@@ -143,6 +143,9 @@ def items_from_list_retrieve():
                 export_textures(item, textures, icon_path)
             else:
                 print(f"❌ No DAE found for {item}")
+            
+            # Delay before the next item
+            time.sleep(1)
 
 
 def operation_steal_wall_papers():

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccrl5hth01j63"]
+
+[ext_resource type="Texture2D" uid="uid://cn32mumrax2ct" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrSimpleChairS/Textures/mReFabric_Alb6.png" id="1_6pfaq"]
+
+[resource]
+resource_name = "mReFabric6"
+albedo_texture = ExtResource("1_6pfaq")

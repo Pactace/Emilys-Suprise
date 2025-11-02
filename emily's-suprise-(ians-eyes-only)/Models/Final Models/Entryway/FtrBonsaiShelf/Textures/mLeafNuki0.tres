@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cc6vlu2jcx11x"]
-
-[ext_resource type="Texture2D" uid="uid://bkeytsqxe0ri7" path="res://Models/Final Models/Entryway/FtrBonsaiShelf/Textures/mLeafNuki_Alb.png" id="1_agi34"]
-
-[resource]
-resource_name = "mLeafNuki0"
-albedo_texture = ExtResource("1_agi34")

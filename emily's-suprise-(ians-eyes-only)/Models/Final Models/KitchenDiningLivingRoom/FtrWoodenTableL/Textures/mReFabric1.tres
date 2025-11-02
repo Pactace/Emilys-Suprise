@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://daga658354msd"]
+
+[ext_resource type="Texture2D" uid="uid://c0j8mv17rj3mb" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrWoodenTableL/Textures/mReFabric_Alb1.png" id="1_nxmql"]
+
+[resource]
+resource_name = "mReFabric1"
+albedo_texture = ExtResource("1_nxmql")

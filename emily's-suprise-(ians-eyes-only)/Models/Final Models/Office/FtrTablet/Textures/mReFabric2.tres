@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://sc8hgeweaxfw"]
+
+[ext_resource type="Texture2D" uid="uid://brg0ekae4r247" path="res://Models/Final Models/Office/FtrTablet/Textures/mReFabric_Alb2.png" id="1_w47kp"]
+
+[resource]
+resource_name = "mReFabric2"
+albedo_texture = ExtResource("1_w47kp")

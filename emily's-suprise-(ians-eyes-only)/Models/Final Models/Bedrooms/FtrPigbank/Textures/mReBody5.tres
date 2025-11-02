@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://xnvr1rfca8ah"]
+
+[ext_resource type="Texture2D" uid="uid://b1u0adv4n7agq" path="res://Models/Final Models/Bedrooms/FtrPigbank/Textures/mReBody_Alb5.png" id="1_yphly"]
+[ext_resource type="Texture2D" uid="uid://ohwa5jm1osxy" path="res://Models/Final Models/Bedrooms/FtrPigbank/Textures/mReBody_Nrm5.png" id="2_q3xbb"]
+
+[resource]
+resource_name = "mReBody5"
+albedo_texture = ExtResource("1_yphly")
+normal_enabled = true
+normal_texture = ExtResource("2_q3xbb")

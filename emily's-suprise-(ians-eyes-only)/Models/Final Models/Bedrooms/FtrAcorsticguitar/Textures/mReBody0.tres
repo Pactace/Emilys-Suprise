@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2vvu1dlf1p4l"]
+
+[ext_resource type="Texture2D" uid="uid://chqer1cnp5x6c" path="res://Models/Final Models/Bedrooms/FtrAcorsticguitar/Textures/mReBody_Alb.png" id="1_nblkx"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_nblkx")

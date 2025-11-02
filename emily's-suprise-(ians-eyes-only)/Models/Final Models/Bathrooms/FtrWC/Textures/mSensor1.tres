@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c8tdsmy550sr4"]
+
+[ext_resource type="Texture2D" uid="uid://ba4bu427uarb8" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mSensor_Alb1.png" id="1_ilxlp"]
+[ext_resource type="Texture2D" uid="uid://uoagd6nba831" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mSensor_Nrm1.png" id="2_hve6b"]
+
+[resource]
+resource_name = "mSensor1"
+albedo_texture = ExtResource("1_ilxlp")
+normal_enabled = true
+normal_texture = ExtResource("2_hve6b")

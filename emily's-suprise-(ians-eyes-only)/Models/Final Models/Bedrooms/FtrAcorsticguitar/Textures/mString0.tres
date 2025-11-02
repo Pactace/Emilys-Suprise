@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://1k8vw3t2cwi"]
+
+[ext_resource type="Texture2D" uid="uid://bkaj3iyk1iqef" path="res://Models/Final Models/Bedrooms/FtrAcorsticguitar/Textures/mString_Alb.png" id="1_noko4"]
+
+[resource]
+resource_name = "mString0"
+albedo_texture = ExtResource("1_noko4")

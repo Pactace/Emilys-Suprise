@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://q52u23jmcs4o"]
+
+[ext_resource type="Texture2D" uid="uid://b52slm18mwh7p" path="res://Models/Final Models/Bedrooms/FtrAcorsticguitar/Textures/mReBody_Alb4.png" id="1_2fjah"]
+[ext_resource type="Texture2D" uid="uid://srpoq0luhl7d" path="res://Models/Final Models/Bedrooms/FtrAcorsticguitar/Textures/mReBody_Nrm4.png" id="2_dlctu"]
+
+[resource]
+resource_name = "mReBody4"
+albedo_texture = ExtResource("1_2fjah")
+normal_enabled = true
+normal_texture = ExtResource("2_dlctu")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c1mr1dtssn2dy"]
+
+[ext_resource type="Texture2D" uid="uid://dpan1y1aw6uiw" path="res://Models/Final Models/Tower/FtrJapanSword/Textures/mReBody_Alb2.png" id="1_6eh78"]
+[ext_resource type="Texture2D" uid="uid://34c2uhvbo68c" path="res://Models/Final Models/Tower/FtrJapanSword/Textures/mReBody_Nrm2.png" id="2_qbkht"]
+
+[resource]
+resource_name = "mReBody2"
+albedo_texture = ExtResource("1_6eh78")
+normal_enabled = true
+normal_texture = ExtResource("2_qbkht")

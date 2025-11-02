@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bk0d5j5hkh3h1"]
+
+[ext_resource type="Texture2D" uid="uid://bbwo7xl5gvrpe" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrBoxsofa/Textures/mReBody_Alb8.png" id="1_agbg6"]
+[ext_resource type="Texture2D" uid="uid://bn7nc4vjs34m6" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrBoxsofa/Textures/mReBody_Nrm8.png" id="2_u74vy"]
+
+[resource]
+resource_name = "mReBody8"
+albedo_texture = ExtResource("1_agbg6")
+normal_enabled = true
+normal_texture = ExtResource("2_u74vy")

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cn5t5lsf8j0sn"]
+
+[ext_resource type="Texture2D" uid="uid://dserg70avs8pa" path="res://Models/Final Models/Bedrooms/FtrSwitch/Textures/mRefFtrMonitor_Alb.png" id="1_ohvof"]
+
+[resource]
+resource_name = "mRefFtrMonitor0"
+albedo_texture = ExtResource("1_ohvof")

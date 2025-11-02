@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://kd3c856qrd3x"]
+
+[ext_resource type="Texture2D" uid="uid://d0t17jci0qqgr" path="res://Models/Final Models/Bathrooms/FtrWashstand/Textures/mReBody_Alb3.png" id="1_d8yka"]
+[ext_resource type="Texture2D" uid="uid://ca06jeld1wo6l" path="res://Models/Final Models/Bathrooms/FtrWashstand/Textures/mReBody_Nrm3.png" id="2_a1cum"]
+
+[resource]
+resource_name = "mReBody3"
+albedo_texture = ExtResource("1_d8yka")
+normal_enabled = true
+normal_texture = ExtResource("2_a1cum")

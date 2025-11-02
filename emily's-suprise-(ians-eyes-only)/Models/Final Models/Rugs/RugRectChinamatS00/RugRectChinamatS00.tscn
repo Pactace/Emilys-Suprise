@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=4 uid="uid://bnrw6hcrr65qt"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fum2f"]
+[ext_resource type="Material" uid="uid://bjci7i211m6g2" path="res://Models/Final Models/Rugs/RugRectChinamatS00/Textures/mMain0.tres" id="2_qj3kf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgy7b"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4jriy"]
+resource_name = "RugRectChinamatS00_Main__mMain"
+_surfaces = [{
+"aabb": AABB(-10, 0.02, -5, 20, 0.029999997, 10),
+"attribute_data": PackedByteArray("9CD2PLw8PD/0IPY8AP//Poiwhz68PDw/9CD2PIiGhz73Gnc/ivCJPoiwhz6Ihoc+Af//PoaIhz68Jzw/hoiHPvlOeD+GiIc++U54P4AAAD8B//8+vDw8P7wnPD+8PDw/+U54P7w8PD+NUA49uwc7P7wnPD+7Bzs/jVAOPQD//z6NUA49ivCJPvcadz+AAAA/9xp3P7sHOz+IsIc+uwc7P4iwhz6K8Ik+iLCHPgD//z4B//8+uwc7PwH//z6K8Ik+Af//PgD//z68Jzw/gAAAP7wnPD+K8Ik+"),
+"bone_aabbs": [AABB(-10, 0.02, -5, 20, 0.029999997, 10.00001)],
+"format": 34359745559,
+"index_count": 120,
+"index_data": PackedByteArray("AAANAAIAAAABAA0AAgANABMADQABAA8ADQAPABMAAgATAAoAAQADAA8ADwADABAAAwAFABAAEAAUAA8AEAAFABQAEwAPABUADwAUABUACgATABYAEwAVABYACgAWAAsAFAAFABcAFQAUABgAFgAVABgAGAAUABcAFwAFAAYAFgAYAA4ACwAWAA4ACwAOAAwADgAYABkAGAAXABkADAAOABIADgAZABIAEgARAAwAEgAZABEADAARAAkAEQAIAAkABAAIABEABAAHAAgAGQAaABEAEQAaAAQAGgAHAAQAGQAXABoAGgAGAAcAFwAGABoA"),
+"lods": [0.095860995, PackedByteArray("AAANAAIAAgANAAoAAAABAA0ACgANAA4ACgAOAAsADQABAA8AAQADAA8ADwADABAAAwAFABAADwAEAA0AEAAEAA8AEAAFAAQADQAEAA4ABAAFAAYABAAGAAcABAAHAAgACwAOAAwABAAIABEADgAEABEAEQAIAAkADAARAAkAEgAOABEADAAOABIAEgARAAwA"), 16.73243, PackedByteArray("AAABAAIAAgABAAMAAwAEAAIAAwAFAAQABAAFAAYABAAGAAcABAAHAAgABAAIAAkAAgAEAAkACgACAAkACgAJAAsACwAJAAwA")],
+"material": SubResource("StandardMaterial3D_dgy7b"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAA"),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 27,
+"vertex_data": PackedByteArray("AAAgwQrXozwAAKBAAAAgwQrXozwAAAAAAACgwArXozwAAKBAAAAgwQrXozwAAKDAZ2YeQczMTD3PzJzAAACgwArXozwAAKDAAAAAAArXozwAAKDAAACgQArXozwAAKDAAAAgQQrXozwAAKDAAAAgQQrXozwAAAAAAAAAAArXozwAAKBAAACgQArXozwAAKBAAAAgQQrXozwAAKBAZ2YewczMTD3NzJxAAACgQMzMTD3NzJxAZ2YewczMTD0AAAAAZ2YewczMTD3PzJzAZ2YeQczMTD0AAAAAZ2YeQczMTD3NzJxAAACgwMzMTD3NzJxAAACgwMzMTD3PzJzAAACgwMzMTD0AAAAAAAAAAMzMTD3NzJxAAAAAAMzMTD3PzJzAAAAAAMzMTD0AAAAAAACgQMzMTD0AAAAAAACgQMzMTD3PzJzAOnF14jDvU8hpYmniaeLKzv9/aeL///+/dWI68VfvZ8j4gQL/AP9rv5Wd///+//+/lZ3///7//r+Vnf//////v4mdOvFM76S3lZ1p4mniNLH/f2ni////v/9/aeL///+/xI514lfvl7cCfwX+AP+AwP9/P/////+/QH8//z//XsAGfgL//v5+wL6AP/8//5+//IAF/v7+gL//fz//////v76A//////+//3///////7//fz//////v76A///+//6//3///////7//f///////v76A//////+/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="Skin" id="Skin_cd6e2"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qj3kf"]
+size = Vector3(20, 0.029999997, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s5wm8"]
+size = Vector3(20, 0.029999997, 10)
+
+[node name="RugRectChinamatS00" type="Node3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+script = ExtResource("1_fum2f")
+area_path = NodePath("Main__mMain/@Area3D@258286")
+skins = {
+"mMain": [ExtResource("2_qj3kf")]
+}
+
+[node name="Main__mMain" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_4jriy")
+skin = SubResource("Skin_cd6e2")
+
+[node name="@StaticBody3D@258284" type="StaticBody3D" parent="Main__mMain"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="@CollisionShape3D@258283" type="CollisionShape3D" parent="Main__mMain/@StaticBody3D@258284"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034999996, 0)
+shape = SubResource("BoxShape3D_qj3kf")
+
+[node name="@Area3D@258286" type="Area3D" parent="Main__mMain"]
+
+[node name="@CollisionShape3D@258285" type="CollisionShape3D" parent="Main__mMain/@Area3D@258286"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034999996, 0)
+shape = SubResource("BoxShape3D_s5wm8")

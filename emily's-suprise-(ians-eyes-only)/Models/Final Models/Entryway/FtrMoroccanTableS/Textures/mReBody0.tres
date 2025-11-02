@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cwmfg8ba1j6hb"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://borqfwtfiuioq"]
 
-[ext_resource type="Texture2D" uid="uid://dl7inw4ndecba" path="res://Models/Final Models/Entryway/FtrMoroccanTableS/Textures/mReBody_Alb.png" id="1_dahhk"]
+[ext_resource type="Texture2D" uid="uid://cdarhxiy7deoo" path="res://Models/Final Models/Entryway/FtrMoroccanTableS/Textures/mReBody_Alb.png" id="1_dahhk"]
 
 [resource]
 resource_name = "mReBody0"

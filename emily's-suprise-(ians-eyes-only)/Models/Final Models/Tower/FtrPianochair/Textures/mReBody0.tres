@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://qskkbxuhhjk7"]
+
+[ext_resource type="Texture2D" uid="uid://bp0m53gyq1nwn" path="res://Models/Final Models/Tower/FtrPianochair/Textures/mReBody_Alb.png" id="1_h7udk"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_h7udk")

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://o77u7b2me7mm"]
+
+[ext_resource type="Texture2D" uid="uid://b3ce2dyl2wtef" path="res://Models/Final Models/Bathrooms/FtrWashstand/Textures/mMirror_Alb.png" id="1_72wg8"]
+
+[resource]
+resource_name = "mMirror0"
+albedo_texture = ExtResource("1_72wg8")

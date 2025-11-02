@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://drgcsblfo4n5t"]
+[gd_scene load_steps=10 format=4 uid="uid://c6vdgsqtwnbla"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vcf26"]
-[ext_resource type="Material" uid="uid://5j775gjn8sde" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody0.tres" id="2_ju4tl"]
-[ext_resource type="Material" uid="uid://c7im1aseum6ho" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody1.tres" id="3_jj1qh"]
-[ext_resource type="Material" uid="uid://wjac4oou5jq2" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody2.tres" id="4_fk58s"]
+[ext_resource type="Material" uid="uid://dijmj802jocq8" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody0.tres" id="2_ju4tl"]
+[ext_resource type="Material" uid="uid://b4rhlg8f84l3c" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody1.tres" id="3_jj1qh"]
+[ext_resource type="Material" uid="uid://jlcc1kiyi6bh" path="res://Models/Final Models/Entryway/FtrAntiqueConsole/Textures/mReBody2.tres" id="4_fk58s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pedxr"]
 

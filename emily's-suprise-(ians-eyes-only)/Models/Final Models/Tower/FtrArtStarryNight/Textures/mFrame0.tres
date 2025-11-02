@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ctiyxfqnwhgu7"]
+
+[ext_resource type="Texture2D" uid="uid://bgnopfci8ca78" path="res://Models/Final Models/Tower/FtrArtStarryNight/Textures/mFrame_Alb.png" id="1_fno4x"]
+
+[resource]
+resource_name = "mFrame0"
+albedo_texture = ExtResource("1_fno4x")

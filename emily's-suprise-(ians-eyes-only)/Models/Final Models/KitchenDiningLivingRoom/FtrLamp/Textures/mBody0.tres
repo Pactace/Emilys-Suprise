@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bnbs5qq5oq6tf"]
+
+[ext_resource type="Texture2D" uid="uid://cby3ifq561nqy" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrLamp/Textures/mBody_Alb.png" id="1_hpmmp"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_hpmmp")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d365hwlolnm45"]
+
+[ext_resource type="Texture2D" uid="uid://c73ti5ysi7r10" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrLamp/Textures/mReBody_Alb18.png" id="1_tca13"]
+[ext_resource type="Texture2D" uid="uid://bhraxfyhnyji0" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrLamp/Textures/mReBody_Nrm18.png" id="2_ivj03"]
+
+[resource]
+resource_name = "mReBody18"
+albedo_texture = ExtResource("1_tca13")
+normal_enabled = true
+normal_texture = ExtResource("2_ivj03")

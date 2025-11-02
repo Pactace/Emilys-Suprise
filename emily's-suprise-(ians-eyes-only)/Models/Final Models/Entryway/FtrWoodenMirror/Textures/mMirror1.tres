@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c0lrieryvp42s"]
+
+[ext_resource type="Texture2D" uid="uid://c38w6gifbw2px" path="res://Models/Final Models/Entryway/FtrWoodenMirror/Textures/mMirror_Alb1.png" id="1_ul4la"]
+
+[resource]
+resource_name = "mMirror1"
+albedo_texture = ExtResource("1_ul4la")

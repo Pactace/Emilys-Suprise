@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://baser6ttskhba"]
+
+[ext_resource type="Texture2D" uid="uid://babfluba6ddn0" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mSensor_Alb.png" id="1_tvkva"]
+
+[resource]
+resource_name = "mSensor0"
+albedo_texture = ExtResource("1_tvkva")

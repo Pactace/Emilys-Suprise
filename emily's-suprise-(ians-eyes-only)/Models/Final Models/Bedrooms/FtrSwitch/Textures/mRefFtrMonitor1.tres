@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://blep1lymaoaml"]
+
+[ext_resource type="Texture2D" uid="uid://dlwsxhdles44o" path="res://Models/Final Models/Bedrooms/FtrSwitch/Textures/mRefFtrMonitor_Alb1.png" id="1_2vgba"]
+[ext_resource type="Texture2D" uid="uid://baq3biwmgk570" path="res://Models/Final Models/Bedrooms/FtrSwitch/Textures/mRefFtrMonitor_Nrm1.png" id="2_04doc"]
+
+[resource]
+resource_name = "mRefFtrMonitor1"
+albedo_texture = ExtResource("1_2vgba")
+normal_enabled = true
+normal_texture = ExtResource("2_04doc")

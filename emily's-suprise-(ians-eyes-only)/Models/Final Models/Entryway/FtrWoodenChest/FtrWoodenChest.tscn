@@ -1,14 +1,14 @@
-[gd_scene load_steps=15 format=4 uid="uid://d0plcxmmqawqy"]
+[gd_scene load_steps=15 format=4 uid="uid://jo052gepl1oy"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_sdk1b"]
-[ext_resource type="Material" uid="uid://0tou5fue86c3" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody0.tres" id="2_wkicf"]
-[ext_resource type="Material" uid="uid://buyff7odybkg7" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody1.tres" id="3_w4w4g"]
-[ext_resource type="Material" uid="uid://dcdibbgq2ca37" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody2.tres" id="4_u2704"]
-[ext_resource type="Material" uid="uid://did6t2b3vnrak" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody3.tres" id="5_4f4up"]
-[ext_resource type="Material" uid="uid://bdyqren3xdc0h" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody4.tres" id="6_uqie4"]
-[ext_resource type="Material" uid="uid://cd1gslnpsqj6b" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody5.tres" id="7_31ooe"]
-[ext_resource type="Material" uid="uid://b3v2l0kdqfbdb" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody6.tres" id="8_t3bdd"]
-[ext_resource type="Material" uid="uid://dwpb6lm0nbdet" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody7.tres" id="9_1hbiv"]
+[ext_resource type="Material" uid="uid://cyrqsxv10o8e5" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody0.tres" id="2_wkicf"]
+[ext_resource type="Material" uid="uid://cd4c3wrvivpqr" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody1.tres" id="3_w4w4g"]
+[ext_resource type="Material" uid="uid://jtiyckcqcbsw" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody2.tres" id="4_u2704"]
+[ext_resource type="Material" uid="uid://dm2i8imsww8yf" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody3.tres" id="5_4f4up"]
+[ext_resource type="Material" uid="uid://rvjqgfufjvi0" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody4.tres" id="6_uqie4"]
+[ext_resource type="Material" uid="uid://d06h5fow6v6ta" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody5.tres" id="7_31ooe"]
+[ext_resource type="Material" uid="uid://g4vqihrb62x1" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody6.tres" id="8_t3bdd"]
+[ext_resource type="Material" uid="uid://ddcnqupcve5wn" path="res://Models/Final Models/Entryway/FtrWoodenChest/Textures/mReBody7.tres" id="9_1hbiv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dolh"]
 
@@ -41,16 +41,16 @@ bind/1/name = &"Chest"
 bind/1/bone = -1
 bind/1/pose = Transform3D(7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -3.5, -2.5, -2.642427e-07)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_sdk1b"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_wignt"]
 size = Vector3(16.659412, 9.100384, 7.9925323)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wignt"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_o6qpj"]
 size = Vector3(16.659412, 9.100384, 7.9925323)
 
 [node name="FtrWoodenChest" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_sdk1b")
-area_path = NodePath("body__mReBody/@Area3D@44698")
+area_path = NodePath("body__mReBody/@Area3D@257606")
 skins = {
 "mReBody": [ExtResource("2_wkicf"), ExtResource("3_w4w4g"), ExtResource("4_u2704"), ExtResource("5_4f4up"), ExtResource("6_uqie4"), ExtResource("7_31ooe"), ExtResource("8_t3bdd"), ExtResource("9_1hbiv")]
 }
@@ -59,16 +59,16 @@ skins = {
 mesh = SubResource("ArrayMesh_aqxf7")
 skin = SubResource("Skin_d6pob")
 
-[node name="@StaticBody3D@44696" type="StaticBody3D" parent="body__mReBody"]
+[node name="@StaticBody3D@257604" type="StaticBody3D" parent="body__mReBody"]
 collision_layer = 132
 collision_mask = 132
 
-[node name="@CollisionShape3D@44695" type="CollisionShape3D" parent="body__mReBody/@StaticBody3D@44696"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.550192, -0.3422401)
-shape = SubResource("BoxShape3D_sdk1b")
-
-[node name="@Area3D@44698" type="Area3D" parent="body__mReBody"]
-
-[node name="@CollisionShape3D@44697" type="CollisionShape3D" parent="body__mReBody/@Area3D@44698"]
+[node name="@CollisionShape3D@257603" type="CollisionShape3D" parent="body__mReBody/@StaticBody3D@257604"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.550192, -0.3422401)
 shape = SubResource("BoxShape3D_wignt")
+
+[node name="@Area3D@257606" type="Area3D" parent="body__mReBody"]
+
+[node name="@CollisionShape3D@257605" type="CollisionShape3D" parent="body__mReBody/@Area3D@257606"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.550192, -0.3422401)
+shape = SubResource("BoxShape3D_o6qpj")

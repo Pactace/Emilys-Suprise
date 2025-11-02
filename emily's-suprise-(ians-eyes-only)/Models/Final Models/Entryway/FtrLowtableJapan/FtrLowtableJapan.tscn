@@ -1,12 +1,12 @@
-[gd_scene load_steps=13 format=4 uid="uid://dpcd4au13h7m3"]
+[gd_scene load_steps=13 format=4 uid="uid://clwjavud6oyql"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_vcxdt"]
-[ext_resource type="Material" uid="uid://d2kjkciydtp4w" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody0.tres" id="2_fbk1i"]
-[ext_resource type="Material" uid="uid://jv6l4wmtgkxy" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody1.tres" id="3_83h0n"]
-[ext_resource type="Material" uid="uid://pfbstctisecp" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody2.tres" id="4_ssmnn"]
-[ext_resource type="Material" uid="uid://xpoqyb8q8a7n" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody3.tres" id="5_fr00b"]
-[ext_resource type="Material" uid="uid://do0o272il3guf" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody4.tres" id="6_dfpt4"]
-[ext_resource type="Material" uid="uid://bbeaby6ddwvve" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody5.tres" id="7_w3pi5"]
+[ext_resource type="Material" uid="uid://bxorsg5yqavjn" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody0.tres" id="2_fbk1i"]
+[ext_resource type="Material" uid="uid://chcxbio8thsfn" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody1.tres" id="3_83h0n"]
+[ext_resource type="Material" uid="uid://bf0y662lsctju" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody2.tres" id="4_ssmnn"]
+[ext_resource type="Material" uid="uid://bpq2eyq8ma55j" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody3.tres" id="5_fr00b"]
+[ext_resource type="Material" uid="uid://c05q6cws72kp0" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody4.tres" id="6_dfpt4"]
+[ext_resource type="Material" uid="uid://da0n2m1byxxrq" path="res://Models/Final Models/Entryway/FtrLowtableJapan/Textures/mReBody5.tres" id="7_w3pi5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wqcr"]
 
@@ -36,16 +36,16 @@ bind/0/name = &"Root"
 bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vcxdt"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fy81g"]
 size = Vector3(17.977028, 5.199703, 9.157162)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fy81g"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dg7x6"]
 size = Vector3(17.977028, 5.199703, 9.157162)
 
 [node name="FtrLowtableJapan" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_vcxdt")
-area_path = NodePath("LowtableJapan_low__mReBody/@Area3D@44646")
+area_path = NodePath("LowtableJapan_low__mReBody/@Area3D@257582")
 skins = {
 "mReBody": [ExtResource("2_fbk1i"), ExtResource("3_83h0n"), ExtResource("4_ssmnn"), ExtResource("5_fr00b"), ExtResource("6_dfpt4"), ExtResource("7_w3pi5")]
 }
@@ -54,16 +54,16 @@ skins = {
 mesh = SubResource("ArrayMesh_kvloo")
 skin = SubResource("Skin_7rapb")
 
-[node name="@StaticBody3D@44644" type="StaticBody3D" parent="LowtableJapan_low__mReBody"]
+[node name="@StaticBody3D@257580" type="StaticBody3D" parent="LowtableJapan_low__mReBody"]
 collision_layer = 132
 collision_mask = 132
 
-[node name="@CollisionShape3D@44643" type="CollisionShape3D" parent="LowtableJapan_low__mReBody/@StaticBody3D@44644"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5998516, 0)
-shape = SubResource("BoxShape3D_vcxdt")
-
-[node name="@Area3D@44646" type="Area3D" parent="LowtableJapan_low__mReBody"]
-
-[node name="@CollisionShape3D@44645" type="CollisionShape3D" parent="LowtableJapan_low__mReBody/@Area3D@44646"]
+[node name="@CollisionShape3D@257579" type="CollisionShape3D" parent="LowtableJapan_low__mReBody/@StaticBody3D@257580"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5998516, 0)
 shape = SubResource("BoxShape3D_fy81g")
+
+[node name="@Area3D@257582" type="Area3D" parent="LowtableJapan_low__mReBody"]
+
+[node name="@CollisionShape3D@257581" type="CollisionShape3D" parent="LowtableJapan_low__mReBody/@Area3D@257582"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5998516, 0)
+shape = SubResource("BoxShape3D_dg7x6")

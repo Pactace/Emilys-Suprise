@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dvy0cro3c5k7t"]
+
+[ext_resource type="Texture2D" uid="uid://dvp0l5vhqdl02" path="res://Models/Final Models/Rugs/RugRectDotL00/Textures/mMain_Alb.png" id="1_88eg8"]
+
+[resource]
+resource_name = "mMain0"
+albedo_texture = ExtResource("1_88eg8")

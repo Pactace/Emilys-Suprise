@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bq47tf54kpct2"]
+
+[ext_resource type="Texture2D" uid="uid://g2pikdjkvjvk" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrDrainerbasket/Textures/mGlassR_Alb.png" id="1_83x4w"]
+
+[resource]
+resource_name = "mGlassR0"
+albedo_texture = ExtResource("1_83x4w")

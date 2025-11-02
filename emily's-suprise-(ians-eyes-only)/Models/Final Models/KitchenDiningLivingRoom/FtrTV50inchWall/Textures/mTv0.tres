@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c52jlifov3mj6"]
+
+[ext_resource type="Texture2D" uid="uid://cl47tpqimbwxo" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrTV50inchWall/Textures/mTv_Alb.png" id="1_assky"]
+
+[resource]
+resource_name = "mTv0"
+albedo_texture = ExtResource("1_assky")

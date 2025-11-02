@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3ii3a4xs11ey"]
+
+[ext_resource type="Texture2D" uid="uid://o3llupnfrucw" path="res://Models/Final Models/Office/FtrBonsaiShelf/Textures/mLeafNuki_Alb.png" id="1_ath24"]
+
+[resource]
+resource_name = "mLeafNuki0"
+albedo_texture = ExtResource("1_ath24")

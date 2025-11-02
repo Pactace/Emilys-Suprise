@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://bv1pe8g1pvejy"]
+[gd_scene load_steps=10 format=4 uid="uid://ceinhf1ss3w1w"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_sh3gr"]
-[ext_resource type="Texture2D" uid="uid://6g56joxq62dd" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/FtrAlumiwoodtable_icon.png" id="2_kw63x"]
-[ext_resource type="Material" uid="uid://dkehiouidat62" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/mReBody0.tres" id="2_mvpe8"]
-[ext_resource type="Material" uid="uid://bu1f4tnt63pdy" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/mReBody1.tres" id="3_kw63x"]
-[ext_resource type="Material" uid="uid://dophbfoepcxuq" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/mReBody2.tres" id="4_apwjc"]
+[ext_resource type="Material" uid="uid://cjyy05upbbspo" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/mReBody0.tres" id="2_mvpe8"]
+[ext_resource type="Material" uid="uid://casf57lrxae7" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/mReBody1.tres" id="3_kw63x"]
+[ext_resource type="Material" uid="uid://dymf65q1gwxe4" path="res://Models/Final Models/Entryway/FtrAlumiwoodtable/Textures/mReBody2.tres" id="4_apwjc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lenrm"]
 
@@ -44,7 +43,6 @@ size = Vector3(9.199998, 7.3, 9.199997)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_sh3gr")
 area_path = NodePath("boardRing_low__mReBody/@Area3D@35620")
-icon = ExtResource("2_kw63x")
 skins = {
 "mReBody": [ExtResource("2_mvpe8"), ExtResource("3_kw63x"), ExtResource("4_apwjc")]
 }

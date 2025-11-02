@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dkq77upx5n1qi"]
+
+[ext_resource type="Texture2D" uid="uid://c0vx4k0udbabp" path="res://Models/Final Models/Office/FtrOfficeCabinet/Textures/mReBody_Alb.png" id="1_nxgle"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_nxgle")

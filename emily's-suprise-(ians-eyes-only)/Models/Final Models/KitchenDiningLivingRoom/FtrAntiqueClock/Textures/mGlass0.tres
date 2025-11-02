@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cj6oadtdv6716"]
+
+[ext_resource type="Texture2D" uid="uid://nhcao7fu4k3p" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrAntiqueClock/Textures/mGlass_Alb.png" id="1_dum06"]
+
+[resource]
+resource_name = "mGlass0"
+albedo_texture = ExtResource("1_dum06")
