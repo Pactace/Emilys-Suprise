@@ -1,15 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhyodff7y2brl"]
+[gd_scene load_steps=15 format=3 uid="uid://bhyodff7y2brl"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_4fi48"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_a1vnb"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_p0gwe"]
 [ext_resource type="Script" uid="uid://b60vddqp5mkgx" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="4_l6yyg"]
-[ext_resource type="Script" uid="uid://cf6mpls6jm2kf" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFlooringInventory.gd" id="5_n8xdo"]
+[ext_resource type="Script" uid="uid://c1pylar4wvhvo" path="res://Inventories/PlaceableInventory.gd" id="5_n8xdo"]
 [ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_6st5h"]
 [ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_5tvfp"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_6st5h"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="9_a1vnb"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_jyxhy"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="10_p0gwe"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_l6yyg"]
+[ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_n8xdo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l6yyg"]
 shader = ExtResource("9_a1vnb")
@@ -41,10 +44,10 @@ floor_furniture_inventory = ExtResource("4_l6yyg")
 flooring_inventory = ExtResource("5_n8xdo")
 placeable_inventory = ExtResource("6_6st5h")
 wall_furniture_inventory = ExtResource("7_5tvfp")
-wallpaper_inventory = ExtResource("7_5tvfp")
+wallpaper_inventory = ExtResource("8_6st5h")
 
 [node name="Emily" parent="." instance=ExtResource("9_jyxhy")]
-transform = Transform3D(-2.9999955, 0, -0.005183909, 0, 3, 0, 0.005183909, 0, -2.9999955, 0.4792348, 2.44494, 7.408112)
+transform = Transform3D(-2.9999955, 0, -0.005183909, 0, 3, 0, 0.005183909, 0, -2.9999955, 0.4792348, 2.7857938, 7.408112)
 SPEED = 5.0
 
 [node name="Frontwall Portal Marker" type="Marker3D" parent="."]
@@ -59,4 +62,21 @@ offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("10_p0gwe")
-next_scene = "res://Start and Pause Menus/First Cutscene.tscn"
+
+[node name="OfficeDoor" parent="." instance=ExtResource("12_l6yyg")]
+transform = Transform3D(1, 0, 0, 0, 0.9941573, 0, 0, 0, 1, 4.999753, 3.6350203, 5.679259)
+
+[node name="BathroomDoor" parent="." instance=ExtResource("12_l6yyg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.999753, 3.7863307, -8.596058)
+
+[node name="FrontDoor" parent="." instance=ExtResource("12_l6yyg")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.1843195, 3.7506723, 12.730399)
+
+[node name="SittingRoomOpenEntrance" parent="." instance=ExtResource("13_n8xdo")]
+transform = Transform3D(5, 0, 0, 0, 10.001308, 0, 0, 0, 4.3248663, -7.572127, 4.3713913, 3.4985917)
+visible = false
+
+[node name="LivingDiningKitchenEntrance" parent="." instance=ExtResource("13_n8xdo")]
+transform = Transform3D(-2.1855693e-07, 0, 9.12171, 0, 9.511113, 0, -4.9999995, 0, -3.987226e-07, 0.20046902, 4.769101, -15.785944)
+visible = false
+next_scene = "res://Levels/Level Scenes/Floor 1/TripleThreat/TripleThreat.tscn"

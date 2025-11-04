@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3 uid="uid://saa7vohmdwkb"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_rfmqt"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_ob45l"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_e5blo"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="4_q0062"]
+[ext_resource type="Script" uid="uid://d0mfgarj1ikjd" path="res://Levels/Level Scenes/Floor 1/TripleThreat/TripleThreatFloorFurnitureInventory.gd" id="4_ts17t"]
+[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_k038g"]
+[ext_resource type="Script" uid="uid://c2wcrpp40i2r7" path="res://Levels/Level Scenes/Floor 1/TripleThreat/TripleThreatPlaceableInventory.gd" id="6_q8nyd"]
+[ext_resource type="Script" uid="uid://d1ea25o1exwu1" path="res://Levels/Level Scenes/Floor 1/TripleThreat/TripleThreatWallInventory.gd" id="7_8yvwq"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_byokw"]
+
+[node name="TripleThreat" type="Node3D"]
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_rfmqt")]
+horizontal_size = 30
+vertical_size = 4
+camera = NodePath("../Camera")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("2_ob45l")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_e5blo")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("4_ts17t")
+flooring_inventory = ExtResource("5_k038g")
+placeable_inventory = ExtResource("6_q8nyd")
+wall_furniture_inventory = ExtResource("7_8yvwq")
+wallpaper_inventory = ExtResource("8_byokw")
+
+[node name="Emily" parent="." instance=ExtResource("4_q0062")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
+SPEED = 5.0

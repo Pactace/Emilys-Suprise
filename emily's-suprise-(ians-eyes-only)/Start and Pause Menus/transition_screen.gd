@@ -7,6 +7,7 @@ var enter := true
 var exit := false
 
 func _ready() -> void:
+	reveal_speed = 1.0
 	# Make sure the shader has the correct screen dimensions
 	material.set_shader_parameter("screen_width", get_viewport_rect().size.x)
 	material.set_shader_parameter("screen_height", get_viewport_rect().size.y)
@@ -29,4 +30,5 @@ func _process(delta: float) -> void:
 			material.set_shader_parameter("circle_size", circle_size)
 		else:
 			exit = false  # stop when fully hidden
-			get_tree().change_scene_to_file(next_scene)
+			if next_scene:
+				get_tree().change_scene_to_file(next_scene)

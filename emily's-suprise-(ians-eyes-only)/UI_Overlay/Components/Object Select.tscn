@@ -1,13 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://d1kinq37vuc3m"]
 
-[ext_resource type="Script" path="res://UI_Overlay/Scripts/object_select.gd" id="1_jj6v6"]
+[ext_resource type="Script" uid="uid://bjxspq8t38aol" path="res://UI_Overlay/Scripts/object_select.gd" id="1_jj6v6"]
 
-[node name="ObjectSelect" type="GridContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ScrollContainer" type="ScrollContainer"]
+custom_minimum_size = Vector2(100, 400)
+
+[node name="ObjectSelect" type="GridContainer" parent="."]
+layout_mode = 2
 columns = 4
 script = ExtResource("1_jj6v6")
 tab_name = "Fart"

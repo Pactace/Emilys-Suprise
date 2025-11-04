@@ -9,8 +9,6 @@ var idle_or_walking = true
 @export var SPEED = 3.25
 var old_position
 
-
-
 #---Scene Variables---#
 @onready var camera: Camera3D = $"../Camera"
 @onready var ui_overlay: Control = $"../UiOverlay"

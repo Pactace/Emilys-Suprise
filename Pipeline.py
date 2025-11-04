@@ -150,33 +150,37 @@ def items_from_list_retrieve():
 
 def operation_steal_wall_papers():
     wall_papers_to_steal = [
-        "RoomTexWallDot01",
-        "RoomTexWallPanelMold00",
-        "RoomTexWallDot00",
-        "RoomTexWallMud02",
-        "RoomTexWallBoard00",
-        "RoomTexWallPanelMold03",
-        "RoomTexWallCountry03",
-        "RoomTexWallPanelMold02",
-        "RoomTexWallCute03",
-        "RoomTexWallCute00",
-        "RoomTexWallCute01",
-        "RoomTexWallCute02",
-        "RoomTexWallHall01",
-        "RoomTexWallMud03",
-        "RoomTexWallHall00",
-        "RoomTexWallStripe03",
-        "RoomTexWallPanelMold01",
-        "RoomTexWallCountry02",
-        "RoomTexWallHall03",
-        "RoomTexWallCountry00",
-        "RoomTexWallArtDeco00"
+        "RoomTexFloorConcrete00",
+        "RoomTexWallConcrete00"
+
+
+        # "RoomTexWallDot01",
+        # "RoomTexWallPanelMold00",
+        # "RoomTexWallDot00",
+        # "RoomTexWallMud02",
+        # "RoomTexWallBoard00",
+        # "RoomTexWallPanelMold03",
+        # "RoomTexWallCountry03",
+        # "RoomTexWallPanelMold02",
+        # "RoomTexWallCute03",
+        # "RoomTexWallCute00",
+        # "RoomTexWallCute01",
+        # "RoomTexWallCute02",
+        # "RoomTexWallHall01",
+        # "RoomTexWallMud03",
+        # "RoomTexWallHall00",
+        # "RoomTexWallStripe03",
+        # "RoomTexWallPanelMold01",
+        # "RoomTexWallCountry02",
+        # "RoomTexWallHall03",
+        # "RoomTexWallCountry00",
+        # "RoomTexWallArtDeco00"
     ]
 
     base_src = "C:/Users/ianth/OneDrive/Desktop/untitled/ACNH_2.0.0_Exported_Model_DAE+PNG/Model"
     base_dest = "C:/Users/ianth/OneDrive/Desktop/untitled/Emilys-Suprise/emily's-suprise-(ians-eyes-only)/Floor and Wall Textures"
 
-    wall_num = 8
+    wall_num = 2
 
     for wall_paper in wall_papers_to_steal:
         src = f"{base_src}/{wall_paper}.Nin_NX_NVN"
@@ -198,4 +202,4 @@ def operation_steal_wall_papers():
             print(f"⚠️ Source folder not found: {src}")
 
 if __name__ == "__main__":
-    items_from_list_retrieve()
+    operation_steal_wall_papers()

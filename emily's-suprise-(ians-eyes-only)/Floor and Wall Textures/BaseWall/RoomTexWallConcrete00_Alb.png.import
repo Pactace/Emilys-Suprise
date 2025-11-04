@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://31iwsjy5tqce"
-path.s3tc="res://.godot/imported/RoomTexWallPanelMold03_Nrm.png-d1d010b392644e6bf7d9f7a3533eff0f.s3tc.ctex"
-path.etc2="res://.godot/imported/RoomTexWallPanelMold03_Nrm.png-d1d010b392644e6bf7d9f7a3533eff0f.etc2.ctex"
+uid="uid://chfa3xq6k3xv8"
+path.s3tc="res://.godot/imported/RoomTexWallConcrete00_Alb.png-f39249ddf65cb0e69660337b4e1d63bf.s3tc.ctex"
+path.etc2="res://.godot/imported/RoomTexWallConcrete00_Alb.png-f39249ddf65cb0e69660337b4e1d63bf.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Floor and Wall Textures/Wall13/RoomTexWallPanelMold03_Nrm.png"
-dest_files=["res://.godot/imported/RoomTexWallPanelMold03_Nrm.png-d1d010b392644e6bf7d9f7a3533eff0f.s3tc.ctex", "res://.godot/imported/RoomTexWallPanelMold03_Nrm.png-d1d010b392644e6bf7d9f7a3533eff0f.etc2.ctex"]
+source_file="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Alb.png"
+dest_files=["res://.godot/imported/RoomTexWallConcrete00_Alb.png-f39249ddf65cb0e69660337b4e1d63bf.s3tc.ctex", "res://.godot/imported/RoomTexWallConcrete00_Alb.png-f39249ddf65cb0e69660337b4e1d63bf.etc2.ctex"]
 
 [params]
 

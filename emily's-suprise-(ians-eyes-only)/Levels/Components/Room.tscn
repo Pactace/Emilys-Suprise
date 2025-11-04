@@ -1,13 +1,16 @@
-[gd_scene load_steps=20 format=3 uid="uid://dt6j24qhea4jy"]
+[gd_scene load_steps=25 format=3 uid="uid://dt6j24qhea4jy"]
 
 [ext_resource type="Script" uid="uid://bbjbt0uafg0xb" path="res://Levels/room.gd" id="1_phqny"]
-[ext_resource type="Material" uid="uid://dt2e1l745fiq2" path="res://Floor and Wall Textures/Wall26/Wall26.tres" id="2_5ac6h"]
 [ext_resource type="Material" uid="uid://beiedk3loanm4" path="res://Floor and Wall Textures/WoodFloor1/WoodFloor1.tres" id="2_8hqu4"]
+[ext_resource type="Material" uid="uid://lesurscs6lkp" path="res://Floor and Wall Textures/Wall0/Wall0.tres" id="2_te737"]
 [ext_resource type="LightmapGIData" uid="uid://bmcgil4xjd8d5" path="res://Levels/Components/Room.lmbake" id="4_4vdsp"]
 [ext_resource type="Script" uid="uid://ct77e2ihsm2l0" path="res://Levels/Level Scenes/Floor 1/portal.gd" id="4_oui00"]
-[ext_resource type="Material" uid="uid://drmqpjx43fv1a" path="res://Floor and Wall Textures/WoodFloor3/WoodFloor3.tres" id="4_r5wgo"]
+[ext_resource type="Shader" uid="uid://b5gdj0gfoerb4" path="res://Levels/Components/Portal.gdshader" id="4_ye3xi"]
+[ext_resource type="Texture2D" uid="uid://chfa3xq6k3xv8" path="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Alb.png" id="5_gq585"]
+[ext_resource type="Texture2D" uid="uid://drq18wyuhp0d7" path="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Nrm.png" id="6_2tqhj"]
+[ext_resource type="Material" uid="uid://bejwmmst724do" path="res://Floor and Wall Textures/BaseFloor/BaseFloor.tres" id="7_l8u4e"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_4vdsp"]
+[sub_resource type="QuadMesh" id="QuadMesh_5ac6h"]
 lightmap_size_hint = Vector2i(7, 7)
 add_uv2 = true
 subdivide_width = 50
@@ -34,17 +37,59 @@ albedo_color = Color(1, 1, 1, 0.40784314)
 material = SubResource("StandardMaterial3D_r5wgo")
 orientation = 1
 
-[sub_resource type="QuadMesh" id="QuadMesh_5ac6h"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tskct"]
+render_priority = 0
+shader = ExtResource("4_ye3xi")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("5_gq585")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("6_2tqhj")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_r5wgo"]
 lightmap_size_hint = Vector2i(7, 7)
 add_uv2 = true
 subdivide_width = 50
 subdivide_depth = 50
 
-[sub_resource type="QuadMesh" id="QuadMesh_j5q0c"]
+[sub_resource type="QuadMesh" id="QuadMesh_ye3xi"]
 lightmap_size_hint = Vector2i(7, 7)
 add_uv2 = true
 subdivide_width = 50
 subdivide_depth = 50
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_quvo3"]
+render_priority = 0
+shader = ExtResource("4_ye3xi")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("5_gq585")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("6_2tqhj")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gq585"]
 size = Vector2(1, 1)
@@ -82,8 +127,8 @@ script = ExtResource("1_phqny")
 [node name="Back Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-16, 0, 0, 0, 9, -1.509958e-07, 0, 1.3589622e-06, 1, 0, 4.5, -8)
 layers = 590337
-material_override = ExtResource("2_5ac6h")
-mesh = SubResource("QuadMesh_4vdsp")
+material_override = ExtResource("2_te737")
+mesh = SubResource("QuadMesh_5ac6h")
 skeleton = NodePath("../..")
 script = ExtResource("4_oui00")
 
@@ -103,7 +148,7 @@ light_bake_mode = 1
 omni_range = 11.873407
 
 [node name="Fade away" type="Node3D" parent="Back Wall"]
-transform = Transform3D(1, 1.9363519e-21, 0, 6.1201874e-21, 1, -4.061523e-19, 0, -1.2048197e-17, 1, -0.0670699, -8.940697e-08, 1.4305115e-06)
+transform = Transform3D(1, -6.1201874e-21, 0, 6.1201874e-21, 1, 0, 0, 0, 1, 0.0064974725, -8.940697e-08, 3.4809113e-05)
 visible = false
 
 [node name="White" type="MeshInstance3D" parent="Back Wall/Fade away"]
@@ -206,11 +251,14 @@ transform = Transform3D(0.399936, -9.437238e-09, -1.1211254e-08, 1.0735764e-07, 
 mesh = SubResource("QuadMesh_te737")
 skeleton = NodePath("../../..")
 
+[node name="Marker3D" type="Marker3D" parent="Back Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064974725, 5.9604645e-08, 2.4787164)
+
 [node name="Left Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, -1, 0, 9, 0, 16, 0, -4.371139e-08, 8, 4.5, 0)
 layers = 65537
-material_override = ExtResource("2_5ac6h")
-mesh = SubResource("QuadMesh_5ac6h")
+material_override = SubResource("ShaderMaterial_tskct")
+mesh = SubResource("QuadMesh_r5wgo")
 skeleton = NodePath("../..")
 script = ExtResource("4_oui00")
 
@@ -335,8 +383,8 @@ skeleton = NodePath("../../..")
 [node name="Right Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.993822e-07, 0, 1, 0, 9, 0, -16, 0, -4.371139e-08, -8, 4.5, 0)
 layers = 65537
-material_override = ExtResource("2_5ac6h")
-mesh = SubResource("QuadMesh_j5q0c")
+material_override = ExtResource("2_te737")
+mesh = SubResource("QuadMesh_ye3xi")
 skeleton = NodePath("../..")
 script = ExtResource("4_oui00")
 
@@ -461,7 +509,7 @@ skeleton = NodePath("../../..")
 [node name="Front Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(16, 1.3589622e-06, -1.5099563e-07, -2.4159328e-06, 9, 3.358816e-19, -2.41593e-06, -2.0519434e-13, -1, 0, 4.5, 8)
 layers = 589825
-material_override = ExtResource("2_5ac6h")
+material_override = SubResource("ShaderMaterial_quvo3")
 mesh = SubResource("PlaneMesh_gq585")
 skeleton = NodePath("../..")
 script = ExtResource("4_oui00")
@@ -587,7 +635,7 @@ skeleton = NodePath("../../..")
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
 layers = 69633
-material_override = ExtResource("4_r5wgo")
+material_override = ExtResource("7_l8u4e")
 mesh = SubResource("PlaneMesh_2exox")
 surface_material_override/0 = ExtResource("2_8hqu4")
 
@@ -598,6 +646,7 @@ shape = SubResource("WorldBoundaryShape3D_32o0v")
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, -1, 1.2079664e-06, 0, -1.509958e-07, -8, 0, 8.817201, 0.010361195)
+visible = false
 layers = 65537
 mesh = SubResource("PlaneMesh_2tqhj")
 

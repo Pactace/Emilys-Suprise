@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3 uid="uid://od07wa1x07oy"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_d8h7c"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_vhvfq"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_2vxks"]
+[ext_resource type="Script" uid="uid://dx4y6b6trwnkn" path="res://Levels/Level Scenes/Floor 1/Mudroom/MudroomFurnitureInventory.gd" id="4_f2isk"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="4_qeajn"]
+[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_dtavy"]
+[ext_resource type="Script" uid="uid://50qqp0iev3x3" path="res://Levels/Level Scenes/Floor 1/Mudroom/MudroomPlaceableInventory.gd" id="6_vuije"]
+[ext_resource type="Script" uid="uid://gujp4mnc2eq0" path="res://Levels/Level Scenes/Floor 1/Mudroom/MudroomWallInventory.gd" id="7_im2xh"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_i5x0f"]
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_d8h7c")]
+horizontal_size = -2
+vertical_size = -2
+camera = NodePath("../Camera")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("2_vhvfq")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_2vxks")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("4_f2isk")
+flooring_inventory = ExtResource("5_dtavy")
+placeable_inventory = ExtResource("6_vuije")
+wall_furniture_inventory = ExtResource("7_im2xh")
+wallpaper_inventory = ExtResource("8_i5x0f")
+
+[node name="Emily" parent="." instance=ExtResource("4_qeajn")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
+SPEED = 5.0

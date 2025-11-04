@@ -2,7 +2,7 @@
 extends MeshInstance3D
 
 @onready var fade_away = $"Fade away"
-var marker: Marker3D
+@export var marker: Marker3D
 var old_probe_position = Vector3.ZERO
 
 func _physics_process(delta):

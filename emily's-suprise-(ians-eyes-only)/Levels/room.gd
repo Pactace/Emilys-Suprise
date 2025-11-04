@@ -217,6 +217,8 @@ func assign_markers():
 
 # --- Make sure editor-set values apply at runtime ---
 func _ready() -> void:
+	change_wallpaper(preload("res://Floor and Wall Textures/BaseWall/BaseWall.tres"))
+	change_flooring(preload("res://Floor and Wall Textures/BaseFloor/BaseFloor.tres"))
 	update_walls()
 	assign_markers()
 	camera.camera_wall_size_effect_vertical = horizontal_size

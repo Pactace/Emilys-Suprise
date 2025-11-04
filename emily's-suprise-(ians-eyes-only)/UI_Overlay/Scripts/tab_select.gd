@@ -5,11 +5,11 @@ var camera: Camera3D
 var is_wall: bool = false
 signal is_wall_change(state: bool)
 
-@onready var floor_furniture_tab = get_child(0)
-@onready var placeable_furniture_tab = get_child(1)
-@onready var wall_furniture_tab = get_child(2)
-@onready var wallpaper_tab = get_child(3)
-@onready var flooring_tab = get_child(4)
+@onready var floor_furniture_tab = get_child(0).get_child(0)
+@onready var placeable_furniture_tab = get_child(1).get_child(0)
+@onready var wall_furniture_tab = get_child(2).get_child(0)
+@onready var wallpaper_tab = get_child(3).get_child(0)
+@onready var flooring_tab = get_child(4).get_child(0)
 
 func enabled():
 	visible = true

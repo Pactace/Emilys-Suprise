@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpuf71mcq07a3"]
+
+[ext_resource type="Script" uid="uid://bbw6tjtyc87ns" path="res://Levels/Components/open_entrance.gd" id="1_l5yd1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6st5h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5yd1"]
+
+[node name="SittingRoomOpenEntrance" type="Node3D"]
+script = ExtResource("1_l5yd1")
+
+[node name="OpenEntrance" type="StaticBody3D" parent="."]
+collision_layer = 131072
+collision_mask = 131072
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OpenEntrance"]
+shape = SubResource("BoxShape3D_6st5h")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_l5yd1")

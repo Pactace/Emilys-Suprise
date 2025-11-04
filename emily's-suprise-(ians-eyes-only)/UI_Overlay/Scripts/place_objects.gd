@@ -170,7 +170,6 @@ func edit_object_position():
 			move_place.visible = true
 			change_colors.visible = true
 			to_place_move_label.text = "To Select"
-			
 	else:
 		finalize_edit_object()
 
