@@ -62,3 +62,12 @@ next_door = "MasterBedroomDoor"
 
 [node name="Marker3D" type="Marker3D" parent="Doors/StairsideHallwayDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)
+
+[node name="MasterBathroomDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_u58h4")]
+transform = Transform3D(-0.021622978, 0, 0.9997662, 0, 0.9941573, 0, -0.9997662, 0, -0.021622978, 0.17126083, 3.6350203, -10.930112)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Master Bathroom/MasterBathroom.tscn"
+next_door = "MasterBedroomDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/MasterBathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)

@@ -37,7 +37,6 @@ size = 8.0
 script = ExtResource("2_661pq")
 
 [node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_rmygr")]
-visible = true
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_ylwwq")
@@ -82,9 +81,9 @@ next_door = "StairsideHallwayDoor"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
 
 [node name="LibraryDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
-transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, -14.827733, 3.786, 0)
+transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, -14.827733, 3.8917673, 0)
 marker = NodePath("Marker3D")
-next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bedroom 3/Kids Bedroom 3.tscn"
+next_scene = "res://Levels/Level Scenes/Floor 2/Library Second Floor/Library.tscn"
 next_door = "StairsideHallwayDoor"
 
 [node name="Marker3D" type="Marker3D" parent="Doors/LibraryDoor"]
@@ -111,7 +110,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8040652, 0, 0.0013613701)
 [node name="TerraceDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
 transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 0, 3.786, 4.7492833)
 marker = NodePath("Marker3D")
-next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bedroom 3/Kids Bedroom 3.tscn"
+next_scene = "res://Levels/Level Scenes/Floor 2/Terrace/Terrace.tscn"
 next_door = "StairsideHallwayDoor"
 
 [node name="Marker3D" type="Marker3D" parent="Doors/TerraceDoor"]

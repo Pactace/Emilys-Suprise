@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://saa7vohmdwkb"]
+[gd_scene load_steps=16 format=3 uid="uid://saa7vohmdwkb"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_rfmqt"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_ob45l"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="11_q8nyd"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="12_8yvwq"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="13_byokw"]
+[ext_resource type="PackedScene" uid="uid://d234bnlpcpjd4" path="res://Levels/Components/stairs.tscn" id="14_byokw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uphnt"]
 shader = ExtResource("12_8yvwq")
@@ -101,3 +102,47 @@ next_door = "LivingDiningKitchenEntrance"
 
 [node name="Marker3D" type="Marker3D" parent="Doors/StairsideLibraryEntrance"]
 transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, 5.3290705e-15, 0, 1, -1.0709682, -0.34839004, 9.685755e-08)
+
+[node name="Stairs" parent="Doors" instance=ExtResource("14_byokw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.880564, -0.12406576, -16.420166)
+
+[node name="MeshInstance3D5" parent="Doors/Stairs" index="4"]
+visible = false
+
+[node name="StaticBody3D" parent="Doors/Stairs/MeshInstance3D5" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="Doors/Stairs/MeshInstance3D5/StaticBody3D" index="0"]
+visible = false
+
+[node name="MeshInstance3D6" parent="Doors/Stairs" index="5"]
+visible = false
+
+[node name="StaticBody3D" parent="Doors/Stairs/MeshInstance3D6" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="Doors/Stairs/MeshInstance3D6/StaticBody3D" index="0"]
+visible = false
+
+[node name="MeshInstance3D7" parent="Doors/Stairs" index="6"]
+visible = false
+
+[node name="StaticBody3D" parent="Doors/Stairs/MeshInstance3D7" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="Doors/Stairs/MeshInstance3D7/StaticBody3D" index="0"]
+visible = false
+
+[node name="MeshInstance3D8" parent="Doors/Stairs" index="7"]
+visible = false
+
+[node name="StaticBody3D" parent="Doors/Stairs/MeshInstance3D8" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="Doors/Stairs/MeshInstance3D8/StaticBody3D" index="0"]
+visible = false
+
+[node name="MeshInstance3D9" parent="Doors/Stairs" index="8"]
+visible = false
+
+[editable path="Doors/Stairs"]
