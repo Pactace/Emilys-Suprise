@@ -1,5 +1,7 @@
 extends Area3D
 
+var door
+
 func _on_body_entered(body: Node3D) -> void:
 	# Safely get the body's parent
 	var parent = body.get_parent()
@@ -9,7 +11,20 @@ func _on_body_entered(body: Node3D) -> void:
 		var script_path = parent.get_script().resource_path
 		match script_path.get_file():
 			"door.gd":
+				door = parent
 				print("door:", parent.name)
 			"open_entrance.gd":
+				door = parent
 				print("open_entrance:", parent.name)
-				parent.enter_portal()
+	else:
+		print(body)
+
+func _on_body_exited(body: Node3D) -> void:
+	door = null
+
+func _unhandled_input(event: InputEvent) -> void:
+	if door:
+		if event.is_action_pressed("Accept"):
+			print("hit")
+			door.enter_portal()
+	

@@ -4,9 +4,11 @@ var camera: Camera3D
 var previous_cam_z = Vector3(0, 0, 1)
 var standard_material: StandardMaterial3D
 @onready var mesh = $Mesh
-@onready var transition_screen = $"../TransitionScreen"
+@onready var transition_screen = $"../../TransitionScreen"
+@export var marker: Marker3D
+@export var next_scene: String
+@export var next_door: String
 
-@export_file("*.tscn") var connected_door: String
 
 func _ready() -> void:
 	camera = get_viewport().get_camera_3d()
@@ -23,4 +25,7 @@ func _process(delta: float) -> void:
 		previous_cam_z = camera.basis.z
 		
 func enter_portal():
+	GameSingleton.door_name = next_door
 	transition_screen.exit = true
+	transition_screen.enter = false
+	transition_screen.next_scene = next_scene

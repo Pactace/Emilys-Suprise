@@ -24,6 +24,7 @@ editor_description = "This control node acts as the state machine between the ov
 
 Open code for details
 "
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

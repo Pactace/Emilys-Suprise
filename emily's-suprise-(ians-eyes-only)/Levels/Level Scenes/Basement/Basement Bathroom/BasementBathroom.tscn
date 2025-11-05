@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=3 uid="uid://dg0oo5yxh1y0q"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_1pj1x"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_urga3"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_115x3"]
+[ext_resource type="Script" uid="uid://dxadwcv434igo" path="res://Levels/Level Scenes/Floor 1/Bathroom/BathroomFurnitureInventory.gd" id="4_2qkfs"]
+[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_bgp2m"]
+[ext_resource type="Script" uid="uid://7t87cckj33g7" path="res://Levels/Level Scenes/Floor 1/Bathroom/BathroomPlaceableInventory.gd" id="6_l2qhe"]
+[ext_resource type="Script" uid="uid://b0wxcwniqaaj8" path="res://Levels/Level Scenes/Floor 1/Bathroom/BathroomWallInventory.gd" id="7_yvm32"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_l4f3b"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_ijxu5"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="10_vaqta"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="11_go1ub"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="12_6d7ar"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aj1ts"]
+shader = ExtResource("11_go1ub")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_1pj1x")]
+horizontal_size = -2
+vertical_size = -2
+camera = NodePath("../Camera")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("2_urga3")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_115x3")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("4_2qkfs")
+flooring_inventory = ExtResource("5_bgp2m")
+placeable_inventory = ExtResource("6_l2qhe")
+wall_furniture_inventory = ExtResource("7_yvm32")
+wallpaper_inventory = ExtResource("8_l4f3b")
+
+[node name="Emily" parent="." instance=ExtResource("9_ijxu5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
+SPEED = 5.0
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="BasementDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("10_vaqta")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.9941573, 0, 1, 0, -4.371139e-08, -0.36592293, 3.6350203, 5.9370785)
+marker = NodePath("Marker3D2")
+next_scene = "res://Levels/Level Scenes/Basement/Main basement room/MainBasementRoom.tscn"
+next_door = "BathroomDoor"
+
+[node name="Marker3D2" type="Marker3D" parent="Doors/BasementDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1152344, -1.7735261, 0)
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_aj1ts")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("12_6d7ar")

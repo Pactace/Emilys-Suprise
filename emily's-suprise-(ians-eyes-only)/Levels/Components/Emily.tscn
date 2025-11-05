@@ -32,8 +32,8 @@ offset_bottom = 45.0
 
 [node name="DoorChecker" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4197074, 0.43555635)
-collision_layer = 131072
-collision_mask = 131072
+collision_layer = 196608
+collision_mask = 196608
 script = ExtResource("4_u4i3l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorChecker"]
@@ -43,3 +43,4 @@ shape = SubResource("BoxShape3D_yxvxl")
 [connection signal="play_idle" from="." to="EmilyAnimations" method="_on_emily_play_idle"]
 [connection signal="play_walking" from="." to="EmilyAnimations" method="_on_emily_play_walking"]
 [connection signal="body_entered" from="DoorChecker" to="DoorChecker" method="_on_body_entered"]
+[connection signal="body_exited" from="DoorChecker" to="DoorChecker" method="_on_body_exited"]

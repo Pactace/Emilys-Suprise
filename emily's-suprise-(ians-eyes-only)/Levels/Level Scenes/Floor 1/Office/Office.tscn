@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjxs34ym5tx0b"]
+[gd_scene load_steps=14 format=3 uid="uid://bjxs34ym5tx0b"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_dsa6o"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_kxbm0"]
@@ -9,6 +9,15 @@
 [ext_resource type="Script" uid="uid://cnbynmtdt7fs6" path="res://Levels/Level Scenes/Floor 1/Office/OfficePlaceableInventory.gd" id="6_lnkvp"]
 [ext_resource type="Script" uid="uid://bs352hrmb2mdn" path="res://Levels/Level Scenes/Floor 1/Office/OfficeWallInventory.gd" id="7_vkxss"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_uuuj3"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="10_0s067"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="11_vkxss"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="12_uuuj3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
+shader = ExtResource("11_vkxss")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
 
 [node name="TestLevel" type="Node3D"]
 
@@ -35,3 +44,21 @@ wallpaper_inventory = ExtResource("8_uuuj3")
 [node name="Emily" parent="." instance=ExtResource("4_b8qfg")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
 SPEED = 5.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c1lj7")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("12_uuuj3")
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="EntrywayDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("10_0s067")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.9941573, 0, 8.742278e-08, 0, -1, -8.617355, 3.6350203, 0.4303012)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 1/Entryway/Entryway.tscn"
+next_door = "OfficeDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/EntrywayDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)

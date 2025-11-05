@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=3 uid="uid://d2lhvb2b8qy12"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_t12ee"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_qbw2l"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_wphau"]
+[ext_resource type="Script" uid="uid://c44c7vv1o0jha" path="res://Levels/Level Scenes/Floor 1/Office/OfficeFloorFurnitureInventory.gd" id="4_sb4w7"]
+[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_5bgw6"]
+[ext_resource type="Script" uid="uid://cnbynmtdt7fs6" path="res://Levels/Level Scenes/Floor 1/Office/OfficePlaceableInventory.gd" id="6_r23w8"]
+[ext_resource type="Script" uid="uid://bs352hrmb2mdn" path="res://Levels/Level Scenes/Floor 1/Office/OfficeWallInventory.gd" id="7_k5tg4"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_4ed8t"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_tm45h"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="10_bqg5j"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_s0l1h"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_cd57o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
+shader = ExtResource("10_bqg5j")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_t12ee")]
+horizontal_size = 1
+vertical_size = 1
+camera = NodePath("../Camera")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("2_qbw2l")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_wphau")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("4_sb4w7")
+flooring_inventory = ExtResource("5_5bgw6")
+placeable_inventory = ExtResource("6_r23w8")
+wall_furniture_inventory = ExtResource("7_k5tg4")
+wallpaper_inventory = ExtResource("8_4ed8t")
+
+[node name="Emily" parent="." instance=ExtResource("9_tm45h")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
+SPEED = 5.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c1lj7")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("11_s0l1h")
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="StairsideHallwayDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_cd57o")]
+transform = Transform3D(0.0019198023, 0, -0.9999983, 0, 0.9941573, 0, 0.9999983, 0, 0.0019198023, -0.27939796, 3.6350203, 8.934681)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Libraryside Hallway/LibrarysideHallway.tscn"
+next_door = "Kid2BedroomDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/StairsideHallwayDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)

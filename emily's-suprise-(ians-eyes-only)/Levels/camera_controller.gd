@@ -1,5 +1,6 @@
 extends Camera3D
 
+@export var triplethreat = false
 var center = Vector3(0,0,0)
 var new_center_bool = false
 # --- Camera Snap Constants ---
@@ -89,17 +90,17 @@ func _apply_snap():
 
 		match snap_positions[snap_index]["name"]:
 			"front":
-				target_fov = 75 + fov_effect_vertical
-				target_pos = WALL_VIEW_POS + Vector3(0, 0, -position_effect_horizontal)
+				target_fov = 75 + (fov_effect_vertical if !triplethreat else 0)
+				target_pos = WALL_VIEW_POS + (Vector3(0, 0, -position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"back":
-				target_fov = 75 + fov_effect_vertical
-				target_pos = WALL_VIEW_POS + Vector3(0, 0, position_effect_horizontal)
+				target_fov = 75 + (fov_effect_vertical if !triplethreat else 0)
+				target_pos = WALL_VIEW_POS + (Vector3(0, 0, position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"left":
-				target_fov = 75 + fov_effect_horizontal
-				target_pos = WALL_VIEW_POS + Vector3(position_effect_vertical, 0, 0)
+				target_fov = 75 + (fov_effect_horizontal if !triplethreat else 0)
+				target_pos = WALL_VIEW_POS + (Vector3(position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 			"right":
-				target_fov = 75 + fov_effect_horizontal
-				target_pos = WALL_VIEW_POS + Vector3(-position_effect_vertical, 0, 0)
+				target_fov = 75 + (fov_effect_horizontal if !triplethreat else 0)
+				target_pos = WALL_VIEW_POS + (Vector3(-position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 
 		target_rot_x = WALL_VIEW_TILT
 	else:
@@ -109,13 +110,13 @@ func _apply_snap():
 
 		match snap_positions[snap_index]["name"]:
 			"front":
-				target_pos = base_pos + Vector3(0, 0, position_effect_horizontal)
+				target_pos = base_pos + (Vector3(0, 0, position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"back":
-				target_pos = base_pos + Vector3(0, 0, -position_effect_horizontal)
+				target_pos = base_pos + (Vector3(0, 0, -position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"left":
-				target_pos = base_pos + Vector3(-position_effect_vertical, 0, 0)
+				target_pos = base_pos + (Vector3(-position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 			"right":
-				target_pos = base_pos + Vector3(position_effect_vertical, 0, 0)
+				target_pos = base_pos + (Vector3(position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 
 		target_rot_x = CAMERA_TILT_ANGLE
 		target_fov = 75.0
@@ -129,6 +130,7 @@ func wall_update(enabled: bool) -> void:
 	if center != Vector3.ZERO:
 		center_based_wall_update()
 		return
+
 	if wall_view:
 		var fov_effect_horizontal = camera_wall_size_effect_horizontal * 4
 		var fov_effect_vertical = camera_wall_size_effect_vertical * 4
@@ -137,19 +139,20 @@ func wall_update(enabled: bool) -> void:
 
 		match snap_positions[snap_index]["name"]:
 			"front":
-				target_fov = 75 + fov_effect_vertical
-				target_pos = WALL_VIEW_POS + Vector3(0, 0, -position_effect_horizontal)
+				target_fov = 75 + (fov_effect_vertical if !triplethreat else 10)
+				target_pos = WALL_VIEW_POS + (Vector3(0, 0, -position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"back":
-				target_fov = 75 + fov_effect_vertical
-				target_pos = WALL_VIEW_POS + Vector3(0, 0, position_effect_horizontal)
+				target_fov = 75 + (fov_effect_vertical if !triplethreat else 10)
+				target_pos = WALL_VIEW_POS + (Vector3(0, 0, position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"left":
-				target_fov = 75 + fov_effect_horizontal
-				target_pos = WALL_VIEW_POS + Vector3(position_effect_vertical, 0, 0)
+				target_fov = 75 + (fov_effect_horizontal if !triplethreat else 10)
+				target_pos = WALL_VIEW_POS + (Vector3(position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 			"right":
-				target_fov = 75 + fov_effect_horizontal
-				target_pos = WALL_VIEW_POS + Vector3(-position_effect_vertical, 0, 0)
+				target_fov = 75 + (fov_effect_horizontal if !triplethreat else 10)
+				target_pos = WALL_VIEW_POS + (Vector3(-position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 
 		target_rot_x = WALL_VIEW_TILT
+
 	else:
 		var base_pos = snap_positions[snap_index]["pos"]
 		var position_effect_vertical = camera_wall_size_effect_vertical
@@ -157,13 +160,13 @@ func wall_update(enabled: bool) -> void:
 
 		match snap_positions[snap_index]["name"]:
 			"front":
-				target_pos = base_pos + Vector3(0, 0, position_effect_horizontal)
+				target_pos = base_pos + (Vector3(0, 0, position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"back":
-				target_pos = base_pos + Vector3(0, 0, -position_effect_horizontal)
+				target_pos = base_pos + (Vector3(0, 0, -position_effect_horizontal) if !triplethreat else Vector3.ZERO)
 			"left":
-				target_pos = base_pos + Vector3(-position_effect_vertical, 0, 0)
+				target_pos = base_pos + (Vector3(-position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 			"right":
-				target_pos = base_pos + Vector3(position_effect_vertical, 0, 0)
+				target_pos = base_pos + (Vector3(position_effect_vertical, 0, 0) if !triplethreat else Vector3.ZERO)
 
 		target_rot_x = CAMERA_TILT_ANGLE
 		target_fov = 75.0

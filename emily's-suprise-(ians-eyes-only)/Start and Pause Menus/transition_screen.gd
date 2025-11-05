@@ -7,12 +7,12 @@ var enter := true
 var exit := false
 
 func _ready() -> void:
-	reveal_speed = 1.0
 	# Make sure the shader has the correct screen dimensions
 	material.set_shader_parameter("screen_width", get_viewport_rect().size.x)
 	material.set_shader_parameter("screen_height", get_viewport_rect().size.y)
 	material.set_shader_parameter("circle_size", circle_size)
 	enter = true
+	exit = false
 
 func _process(delta: float) -> void:
 	# ENTER ANIMATION (growing circle)

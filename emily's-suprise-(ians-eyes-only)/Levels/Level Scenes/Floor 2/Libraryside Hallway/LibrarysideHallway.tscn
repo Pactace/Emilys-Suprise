@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4gjnwif717r2"]
+
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_jwms0"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_661pq"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_rmygr"]
+[ext_resource type="Script" uid="uid://b60vddqp5mkgx" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="4_ylwwq"]
+[ext_resource type="Script" uid="uid://c1pylar4wvhvo" path="res://Inventories/PlaceableInventory.gd" id="5_o1h8i"]
+[ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_poxb7"]
+[ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_jr44v"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_dse0l"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_3o1kg"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="10_lrmfw"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_1n3ex"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_v3fxy"]
+[ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_ufueg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l6yyg"]
+shader = ExtResource("10_lrmfw")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera", "left_marker") instance=ExtResource("1_jwms0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)
+horizontal_size = 7
+vertical_size = -3
+editable = false
+camera = NodePath("../Camera")
+left_marker = NodePath("../Marker3D")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("2_661pq")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_rmygr")]
+visible = true
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("4_ylwwq")
+flooring_inventory = ExtResource("5_o1h8i")
+placeable_inventory = ExtResource("6_poxb7")
+wall_furniture_inventory = ExtResource("7_jr44v")
+wallpaper_inventory = ExtResource("8_dse0l")
+
+[node name="Emily" parent="." instance=ExtResource("9_3o1kg")]
+transform = Transform3D(-2.9999955, 0, -0.005183909, 0, 3, 0, 0.005183909, 0, -2.9999955, 0.4792348, 2.945517, -1.6696191)
+SPEED = 5.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_l6yyg")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("11_1n3ex")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(2.7, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0.21544218)
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="StairsideHallwayEntrance" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("13_ufueg")]
+transform = Transform3D(4.9999995, 0, 0, 0, 9.511113, 0, 0, 0, 9.12171, 18.627026, 4.769101, 0.08607483)
+visible = false
+next_scene = "res://Levels/Level Scenes/Floor 2/Stairside Hallway/StairsideHallway.tscn"
+marker = NodePath("Marker3D")
+next_door = "LibraryHallwayEntrance"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/StairsideHallwayEntrance"]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 0, 0, 1, -1.1859648, -0.12754318, -1.7695129e-08)
+
+[node name="Kid3BedroomDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
+transform = Transform3D(-0.010681145, 0, 0.9999431, 0, 1, 0, -0.9999431, 0, -0.010681145, -10, 3.786, -4.777)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bedroom 3/Kids Bedroom 3.tscn"
+next_door = "StairsideHallwayDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/Kid3BedroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
+
+[node name="LibraryDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
+transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, -14.827733, 3.786, 0)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bedroom 3/Kids Bedroom 3.tscn"
+next_door = "StairsideHallwayDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/LibraryDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
+
+[node name="Kid2BedroomDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
+transform = Transform3D(-0.010681145, 0, 0.9999431, 0, 1, 0, -0.9999431, 0, -0.010681145, 10, 3.77, -4.819)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bedroom 2/Kids Bedroom 2.tscn"
+next_door = "StairsideHallwayDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/Kid2BedroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
+
+[node name="KidBathroom" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
+transform = Transform3D(-0.010681145, 0, 0.9999431, 0, 1, 0, -0.9999431, 0, -0.010681145, 0, 3.64, -4.819)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bathroom/KidsBathroom.tscn"
+next_door = "StairsideHallwayDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/KidBathroom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8040652, 0, 0.0013613701)
+
+[node name="TerraceDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_v3fxy")]
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 0, 3.786, 4.7492833)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Kids Bedroom 3/Kids Bedroom 3.tscn"
+next_door = "StairsideHallwayDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/TerraceDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
