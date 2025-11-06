@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dgcjtfd51ve2j"]
+
+[ext_resource type="Texture2D" uid="uid://b6jobf3gufmd0" path="res://Models/Final Models/WindowsAndPictures/OblongFrameTextures/classicalpainting_with_bgc__1_-removebg-preview.png" id="1_ihnmx"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_ihnmx")
+normal_enabled = true
+uv1_scale = Vector3(0.5, 1, 0.5)
+uv1_offset = Vector3(0.51, 0, 0.475)
+uv1_triplanar = true
