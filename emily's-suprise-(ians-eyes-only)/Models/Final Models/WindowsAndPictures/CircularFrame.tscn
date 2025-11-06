@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=3 uid="uid://brim0jifesm7y"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_hysqh"]
+[ext_resource type="Material" uid="uid://df5w8hsdce81" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Frame0.tres" id="2_61rwe"]
+[ext_resource type="Material" uid="uid://dgyqf5nw2pxfh" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Frame1.tres" id="3_gi0m4"]
+[ext_resource type="Material" uid="uid://b3htp0kg55htj" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Frame2.tres" id="4_yyeg2"]
+[ext_resource type="Material" uid="uid://diyf1k1s5f0u8" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Frame3.tres" id="5_ots5f"]
+[ext_resource type="Material" uid="uid://bj5wx0sotd2c" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Picture0.tres" id="6_u1qjc"]
+[ext_resource type="Material" uid="uid://nwmwkfcyn3xr" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Picture1.tres" id="7_nb1o0"]
+[ext_resource type="Material" uid="uid://cbo8dv43uqoww" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Picture2.tres" id="8_w6mf6"]
+[ext_resource type="ArrayMesh" uid="uid://doc4mtnwrvd1l" path="res://Models/Final Models/WindowsAndPictures/CircularFrame.obj" id="9_cnfm8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pyx02"]
+size = Vector3(0.7, 0.7, 0.2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
+
+[node name="SquareFrame" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.4420253)
+script = ExtResource("1_hysqh")
+area_path = NodePath("CircularFrame/Area3D")
+skins = {
+"Frame": [ExtResource("2_61rwe"), ExtResource("3_gi0m4"), ExtResource("4_yyeg2"), ExtResource("5_ots5f")],
+"Pictures": [ExtResource("6_u1qjc"), ExtResource("7_nb1o0"), ExtResource("8_w6mf6")]
+}
+
+[node name="CircularFrame" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5857424, -1.2033037, -0.021892488)
+material_override = ExtResource("5_ots5f")
+mesh = ExtResource("9_cnfm8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CircularFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.632773, 0.9725466, 0)
+collision_layer = 132
+collision_mask = 132
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CircularFrame/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
+shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Area3D" type="Area3D" parent="CircularFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.632773, 0.9725466, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CircularFrame/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
+shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Picture" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2813836, 0, 0, 0, -1.036085e-08, -0.25910053, 0, 0.23702863, -1.13256435e-08, 0.01828599, 0, 0.04884234)
+material_override = ExtResource("8_w6mf6")
+mesh = SubResource("PlaneMesh_pa6mt")

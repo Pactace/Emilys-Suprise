@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://nwmwkfcyn3xr"]
+
+[ext_resource type="Texture2D" uid="uid://w4205p4qtx23" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/Jesus-removebg-preview_cropped.png" id="1_rg6c3"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_rg6c3")

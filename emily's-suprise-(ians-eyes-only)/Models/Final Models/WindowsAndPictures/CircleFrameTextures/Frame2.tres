@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b3htp0kg55htj"]
+
+[ext_resource type="Texture2D" uid="uid://b5hcag88jm7b2" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/CircularFrame_initialShadingGroup_BaseColor.png" id="1_rqdgc"]
+[ext_resource type="Texture2D" uid="uid://d0s5v6otlukgn" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/CircularFrame_initialShadingGroup_Normal.png" id="2_pflni"]
+
+[resource]
+albedo_texture = ExtResource("1_rqdgc")
+normal_enabled = true
+normal_texture = ExtResource("2_pflni")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bt6kfd7qn4l6a"]
+
+[ext_resource type="Texture2D" uid="uid://bwkvm85ul8fji" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Untitled_design_2_with_bgc-removebg-preview.png" id="1_rp2vv"]
+
+[resource]
+transparency = 1
+blend_mode = 4
+albedo_texture = ExtResource("1_rp2vv")
+normal_enabled = true

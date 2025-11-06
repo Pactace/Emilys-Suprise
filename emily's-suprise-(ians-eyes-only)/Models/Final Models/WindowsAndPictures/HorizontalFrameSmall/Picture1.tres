@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c6obkh506x2uy"]
+
+[ext_resource type="Texture2D" uid="uid://cahc5i3tyyckb" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/landscape_cropped.jpg" id="1_admfs"]
+
+[resource]
+albedo_texture = ExtResource("1_admfs")
+normal_enabled = true

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://da5qdm0msxy3q"]
+
+[ext_resource type="Texture2D" uid="uid://i6ejfugeitey" path="res://Models/Final Models/WindowsAndPictures/HexagonalFrameTextures/Terrarium-removebg-preview_75x75.png" id="1_lmbo3"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_lmbo3")

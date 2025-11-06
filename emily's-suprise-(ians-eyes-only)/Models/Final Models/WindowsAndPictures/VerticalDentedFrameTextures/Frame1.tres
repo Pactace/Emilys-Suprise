@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://mj7ar70lvb8h"]
+
+[ext_resource type="Texture2D" uid="uid://dxvwq51d5bya7" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/VerticalDentedFrame_initialShadingGroup_BaseColor (1).png" id="1_ctvhh"]
+[ext_resource type="Texture2D" uid="uid://ccg47ja75iioc" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/VerticalDentedFrame_initialShadingGroup_Normal.png" id="2_wpe58"]
+
+[resource]
+albedo_texture = ExtResource("1_ctvhh")
+normal_enabled = true
+normal_texture = ExtResource("2_wpe58")

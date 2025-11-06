@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bj5wx0sotd2c"]
+
+[ext_resource type="Texture2D" uid="uid://l5f5wxhueen1" path="res://Models/Final Models/WindowsAndPictures/CircleFrameTextures/landscape-removebg-preview_112x112.png" id="1_engsb"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_engsb")

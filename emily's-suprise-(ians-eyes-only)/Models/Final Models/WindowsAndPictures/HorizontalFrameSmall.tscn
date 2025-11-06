@@ -1,0 +1,54 @@
+[gd_scene load_steps=14 format=3 uid="uid://cwnjl2bl3fmdx"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_6ijny"]
+[ext_resource type="Material" uid="uid://bb2kpbj0gvi5q" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Frame0.tres" id="2_6em3l"]
+[ext_resource type="Material" uid="uid://b76ndb3153ved" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Frame1.tres" id="3_hle2b"]
+[ext_resource type="Material" uid="uid://ncc26ouwk54p" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Frame2.tres" id="4_ee053"]
+[ext_resource type="Material" uid="uid://bwnhdalc53dl4" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Frame3.tres" id="5_ndqt8"]
+[ext_resource type="Material" uid="uid://ce6k1uvwlhibh" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Picture0.tres" id="6_q5lf6"]
+[ext_resource type="Material" uid="uid://c6obkh506x2uy" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Picture1.tres" id="7_2cmk6"]
+[ext_resource type="Material" uid="uid://dnguodpwdrity" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Picture2.tres" id="8_kjwxg"]
+[ext_resource type="ArrayMesh" uid="uid://bgt5a0a7r5n0k" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameLarge.obj" id="9_kjwxg"]
+[ext_resource type="Texture2D" uid="uid://k76ddrenc7c" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/Jesus_with_bgc.png" id="10_ujqvv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pyx02"]
+size = Vector3(4, 2.5, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mip2m"]
+albedo_texture = ExtResource("10_ujqvv")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
+
+[node name="SquareFrame" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4420253)
+script = ExtResource("1_6ijny")
+skins = {
+"Frame": [ExtResource("2_6em3l"), ExtResource("3_hle2b"), ExtResource("4_ee053"), ExtResource("5_ndqt8")],
+"Pictures": [ExtResource("6_q5lf6"), ExtResource("7_2cmk6"), ExtResource("8_kjwxg")]
+}
+
+[node name="HorizontalFrameLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5483711, -1.7318698, 0.22491002)
+material_override = ExtResource("4_ee053")
+mesh = ExtResource("9_kjwxg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="HorizontalFrameLarge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.649129, 3.2701306, 0)
+collision_layer = 132
+collision_mask = 132
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HorizontalFrameLarge/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6550474, 0.34501153, 0)
+shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Area3D" type="Area3D" parent="HorizontalFrameLarge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.649129, 3.2701306, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HorizontalFrameLarge/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7185917, 0.40869492, 0)
+shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Picture" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.90414643, 0, 0, 0, -1.0927847e-08, -0.56866497, 0, 0.25, -2.4857135e-08, -0.03582412, 0.078552485, 0.16833922)
+material_override = SubResource("StandardMaterial3D_mip2m")
+mesh = SubResource("PlaneMesh_pa6mt")

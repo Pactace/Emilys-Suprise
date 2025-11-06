@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ce6k1uvwlhibh"]
+
+[ext_resource type="Texture2D" uid="uid://bncqagaue8umt" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall/temple.jpg" id="1_wfatu"]
+
+[resource]
+albedo_texture = ExtResource("1_wfatu")
+normal_enabled = true

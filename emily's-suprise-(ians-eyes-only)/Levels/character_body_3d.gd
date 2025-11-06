@@ -27,7 +27,7 @@ func _ready() -> void:
 		var door = get_node_or_null(door_path)
 		
 		if door:
-			print("Found door:", door.name)
+			#print("Found door:", door.name)
 			global_position = door.marker.global_position
 			global_rotation.y = door.global_rotation.y - deg_to_rad(90)
 		else:
@@ -37,7 +37,6 @@ func _ready() -> void:
 
 	# --- If this is a triple threat room, do a little startup step ---
 	if camera.triplethreat:
-		print("TripleThreat active — Emily takes a small step forward.")
 		triplethreat_step_done = false  # reset the flag
 
 

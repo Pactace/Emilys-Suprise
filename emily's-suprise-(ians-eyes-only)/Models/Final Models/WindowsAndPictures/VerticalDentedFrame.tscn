@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=3 uid="uid://diflqc2mhdorh"]
+
+[ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ckq3a"]
+[ext_resource type="Material" uid="uid://b1q68m16ymt74" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Frame0.tres" id="2_ckq3a"]
+[ext_resource type="Material" uid="uid://mj7ar70lvb8h" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Frame1.tres" id="3_uadw5"]
+[ext_resource type="Material" uid="uid://dia3fb21ohken" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Frame2.tres" id="4_ouwaa"]
+[ext_resource type="Material" uid="uid://dm3jeepc1tc1d" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Frame3.tres" id="5_lq7st"]
+[ext_resource type="Material" uid="uid://c0715fhe3yrm8" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Picture0.tres" id="6_jakam"]
+[ext_resource type="Material" uid="uid://bt6kfd7qn4l6a" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Picture1.tres" id="7_a7yhl"]
+[ext_resource type="Material" uid="uid://dxgt2kx0a0cdm" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Picture2.tres" id="8_qgarb"]
+[ext_resource type="ArrayMesh" uid="uid://bhmntkll63t6b" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrame.obj" id="9_ckq3a"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pyx02"]
+size = Vector3(0.75, 0.75, 0.2)
+
+[node name="SquareFrame" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.4420253)
+script = ExtResource("1_ckq3a")
+area_path = NodePath("VerticalDentedFrame/Area3D")
+skins = {
+"Frame": [ExtResource("2_ckq3a"), ExtResource("3_uadw5"), ExtResource("4_ouwaa"), ExtResource("5_lq7st")],
+"Pictures": [ExtResource("6_jakam"), ExtResource("7_a7yhl"), ExtResource("8_qgarb")]
+}
+
+[node name="Picture" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25725058, 0, 0, 0, -1.0927843e-08, -0.36238033, 0, 0.2499999, -1.5840147e-08, 0.03707391, 0.018725216, 0.04884234)
+material_override = ExtResource("6_jakam")
+mesh = SubResource("PlaneMesh_pa6mt")
+
+[node name="VerticalDentedFrame" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.4916582, -0.48139918, 0.060056627)
+material_override = ExtResource("2_ckq3a")
+mesh = ExtResource("9_ckq3a")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="VerticalDentedFrame"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.4203243, 0.58872604, 0.14761686)
+collision_layer = 132
+collision_mask = 132
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VerticalDentedFrame/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
+shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Area3D" type="Area3D" parent="VerticalDentedFrame"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.4203243, 0.58872604, 0.14761686)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VerticalDentedFrame/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
+shape = SubResource("BoxShape3D_pyx02")

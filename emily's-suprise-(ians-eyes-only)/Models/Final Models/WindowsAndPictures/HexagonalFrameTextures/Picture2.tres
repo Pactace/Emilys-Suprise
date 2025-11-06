@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://pb7xtsqtpb0y"]
+
+[ext_resource type="Texture2D" uid="uid://rxvohmxh3c05" path="res://Models/Final Models/WindowsAndPictures/HexagonalFrameTextures/CoolWhite-removebg-preview_75x75.png" id="1_17b5y"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_17b5y")
