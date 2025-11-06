@@ -38,6 +38,7 @@ size = 8.0
 script = ExtResource("2_a1vnb")
 
 [node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_p0gwe")]
+visible = false
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_l6yyg")

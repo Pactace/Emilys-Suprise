@@ -108,10 +108,15 @@ func _handle_accept_action() -> void:
 		room.change_flooring(floor_material)
 	else:
 		var packed_scene: PackedScene = selected_object.get_meta("scene", null)
-		var room = get_parent().get_parent().room
+		#var room = get_parent().get_parent().room
+		
 		if packed_scene:
-			var instance = packed_scene.instantiate()
-			room.add_object(instance, is_wall)
+			#this is godless but it works
+			#var instance = packed_scene.instantiate()
+			get_parent().get_parent().get_parent().get_child(4).assign_selected_object(packed_scene, is_wall)
+			get_parent().get_parent().get_parent().current_state = get_parent().get_parent().get_parent().EditState.Edit_Objects
+			get_parent().get_parent().get_parent().switch_states()
+			#room.add_object(instance, is_wall)
 
 
 # Build a 2D array from GridContainer’s children

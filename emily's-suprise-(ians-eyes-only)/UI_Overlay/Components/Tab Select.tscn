@@ -117,8 +117,7 @@ metadata/_tab_index = 4
 tab_name = "Flooring"
 inventory = ExtResource("5_tnchv")
 
-[connection signal="is_wall_change" from="." to="ObjectSelect" method="_on_tab_container_is_wall_change"]
-[connection signal="is_wall_change" from="." to="ObjectSelect2" method="_on_tab_container_is_wall_change"]
+[connection signal="is_wall_change" from="." to="ObjectSelect2/ObjectSelect" method="_on_tab_container_is_wall_change"]
 [connection signal="visibility_changed" from="ObjectSelect" to="ObjectSelect" method="_on_visibility_changed"]
 
 [editable path="ObjectSelect"]

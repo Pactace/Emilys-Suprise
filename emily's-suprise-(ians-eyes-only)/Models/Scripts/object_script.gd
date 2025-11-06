@@ -55,7 +55,6 @@ func check_placement() -> bool:
 			position.y = result.position.y
 			placement_green()
 			return true
-			
 	var overlaps = area.get_overlapping_areas()
 	if overlaps.is_empty():
 		placement_green()

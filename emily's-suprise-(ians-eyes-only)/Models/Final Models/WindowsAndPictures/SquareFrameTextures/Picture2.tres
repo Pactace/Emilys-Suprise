@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bpsu1o45vbu3c"]
+
+[ext_resource type="Texture2D" uid="uid://ddqbueju5fsmw" path="res://Models/Final Models/WindowsAndPictures/SquareFrameTextures/kellaso_1_103x103.png" id="1_ejxbb"]
+
+[resource]
+albedo_texture = ExtResource("1_ejxbb")
+normal_enabled = true

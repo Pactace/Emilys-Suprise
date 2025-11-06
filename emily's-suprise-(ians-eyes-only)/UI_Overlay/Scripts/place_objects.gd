@@ -17,6 +17,8 @@ var edit_ray : PhysicsRayQueryParameters3D
 var previous_rid: RID
 
 #---Object Variables---#
+var spawned_object: PackedScene = null
+var spawned_object_is_wall: bool = false
 var possible_selected_object: Node3D
 var selected_object: Node3D
 var object_just_placed: Node3D
@@ -34,6 +36,16 @@ var can_place: bool = false
 func enabled():
 	visible = true
 	pallet_swap.visible = false
+	if spawned_object:
+		var instance = spawned_object.instantiate()
+		get_parent().add_child(instance)
+		instance.is_on_wall = spawned_object_is_wall
+		instance.area = instance.get_node(instance.area_path)
+		possible_selected_object = instance
+		selected_object = possible_selected_object
+		spawned_object = null
+		spawned_object_is_wall = false
+		mouse.position = Vector2(325, 250)
 
 func disabled():
 	visible = false
@@ -131,7 +143,7 @@ func placing_object():
 				selected_object.basis = basis
 				previous_rid = collision.rid
 				wall_name = collision.collider.get_parent().name
-				if selected_object.name.contains("Ftr"): selected_object.scale = Vector3(28, 28, 28)
+				if selected_object.name.contains("Ftr"): selected_object.scale = Vector3(0.2, 0.2, 0.2)
 			
 			selected_object.transform.origin = collision.position
 			can_place = selected_object.check_placement()
@@ -194,3 +206,8 @@ func finalize_edit_object():
 #here we are just getting the wall state from the parent
 func _on_ui_overlay_is_wall_change(state: bool) -> void:
 	is_wall = state
+	
+func assign_selected_object(object: PackedScene, is_wall: bool):
+	spawned_object = object
+	spawned_object_is_wall = is_wall
+	

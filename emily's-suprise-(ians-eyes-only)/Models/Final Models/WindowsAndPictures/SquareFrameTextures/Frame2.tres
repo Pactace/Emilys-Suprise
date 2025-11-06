@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bk8ugw7jfgust"]
+
+[ext_resource type="Texture2D" uid="uid://dqd85b7u7ciun" path="res://Models/Final Models/WindowsAndPictures/SquareFrameTextures/SquareFrame_initialShadingGroup_BaseColor (2).png" id="1_t65jm"]
+[ext_resource type="Texture2D" uid="uid://muoifaodsyim" path="res://Models/Final Models/WindowsAndPictures/SquareFrameTextures/SquareFrame_initialShadingGroup_Normal (1).png" id="2_o5bae"]
+
+[resource]
+albedo_texture = ExtResource("1_t65jm")
+normal_enabled = true
+normal_texture = ExtResource("2_o5bae")
