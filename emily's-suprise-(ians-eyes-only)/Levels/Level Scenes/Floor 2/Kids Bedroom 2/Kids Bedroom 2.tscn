@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_t12ee"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_qbw2l"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_wphau"]
-[ext_resource type="Script" uid="uid://c44c7vv1o0jha" path="res://Levels/Level Scenes/Floor 1/Office/OfficeFloorFurnitureInventory.gd" id="4_sb4w7"]
+[ext_resource type="Script" uid="uid://brn0yqf7yycca" path="res://Levels/Level Scenes/Floor 2/Master Bedroom/BedroomFloorFurnitureInventory.gd" id="4_cws14"]
 [ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_5bgw6"]
-[ext_resource type="Script" uid="uid://cnbynmtdt7fs6" path="res://Levels/Level Scenes/Floor 1/Office/OfficePlaceableInventory.gd" id="6_r23w8"]
-[ext_resource type="Script" uid="uid://bs352hrmb2mdn" path="res://Levels/Level Scenes/Floor 1/Office/OfficeWallInventory.gd" id="7_k5tg4"]
+[ext_resource type="Script" uid="uid://spdjxvbe6he0" path="res://Levels/Level Scenes/Floor 2/Master Bedroom/BedroomPlaceableInventory.gd" id="6_o8qm2"]
+[ext_resource type="Script" uid="uid://tuchiq8ajf0q" path="res://Levels/Level Scenes/Floor 2/Master Bedroom/BedroomWallInventory.gd" id="7_t0swv"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_4ed8t"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_tm45h"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="10_bqg5j"]
@@ -35,10 +35,10 @@ script = ExtResource("2_qbw2l")
 [node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_wphau")]
 camera = NodePath("../Camera")
 room = NodePath("../Room")
-floor_furniture_inventory = ExtResource("4_sb4w7")
+floor_furniture_inventory = ExtResource("4_cws14")
 flooring_inventory = ExtResource("5_5bgw6")
-placeable_inventory = ExtResource("6_r23w8")
-wall_furniture_inventory = ExtResource("7_k5tg4")
+placeable_inventory = ExtResource("6_o8qm2")
+wall_furniture_inventory = ExtResource("7_t0swv")
 wallpaper_inventory = ExtResource("8_4ed8t")
 
 [node name="Emily" parent="." instance=ExtResource("9_tm45h")]

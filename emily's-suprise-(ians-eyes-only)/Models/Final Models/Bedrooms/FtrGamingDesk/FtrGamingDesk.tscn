@@ -110,6 +110,7 @@ mesh = SubResource("ArrayMesh_2c874")
 skin = SubResource("Skin_ee467")
 
 [node name="desctop_01_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
 mesh = SubResource("ArrayMesh_swqvb")
 skin = SubResource("Skin_ee467")
 
