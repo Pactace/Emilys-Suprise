@@ -24,10 +24,10 @@ There is also global variables that should be passed to the children here.
 @onready var tab_select_prompt = $TabSelectControls
 
 @export var floor_furniture_inventory: GDScript
-@export var flooring_inventory: GDScript
+var flooring_inventory: GDScript = load("res://Inventories/FlooringInventory.gd")
 @export var placeable_inventory: GDScript
 @export var wall_furniture_inventory: GDScript
-@export var wallpaper_inventory: GDScript
+@export var wallpaper_inventory: GDScript 
 
 #---Edit State Variables---#
 enum EditState {Edit_Objects, Size_Modify, Object_Select}

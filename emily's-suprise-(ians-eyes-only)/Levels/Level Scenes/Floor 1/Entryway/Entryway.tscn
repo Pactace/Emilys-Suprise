@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bhyodff7y2brl"]
+[gd_scene load_steps=16 format=3 uid="uid://bhyodff7y2brl"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_4fi48"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_a1vnb"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_p0gwe"]
 [ext_resource type="Script" uid="uid://b60vddqp5mkgx" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="4_l6yyg"]
-[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_5tvfp"]
 [ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_6st5h"]
 [ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_5tvfp"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_6st5h"]
@@ -43,7 +42,6 @@ script = ExtResource("2_a1vnb")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_l6yyg")
-flooring_inventory = ExtResource("5_5tvfp")
 placeable_inventory = ExtResource("6_6st5h")
 wall_furniture_inventory = ExtResource("7_5tvfp")
 wallpaper_inventory = ExtResource("8_6st5h")

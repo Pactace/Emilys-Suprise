@@ -1,58 +1,8 @@
-[gd_scene load_steps=35 format=4 uid="uid://lks7otx5u6ux"]
+[gd_scene load_steps=9 format=4 uid="uid://lks7otx5u6ux"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_yl4qi"]
 [ext_resource type="Material" uid="uid://mpicarbs2ob2" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody0.tres" id="2_hbllw"]
 [ext_resource type="Material" uid="uid://1oxn677jo821" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody1.tres" id="3_rk4j3"]
-[ext_resource type="Material" uid="uid://cyo2hxicyff4t" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody10.tres" id="4_jnd67"]
-[ext_resource type="Material" uid="uid://dd37y3figsoc1" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody11.tres" id="5_d4dsg"]
-[ext_resource type="Material" uid="uid://crdsh8orn1fiq" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody12.tres" id="6_3l6ay"]
-[ext_resource type="Material" uid="uid://bdoj5on8a3dv8" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody13.tres" id="7_8h2vh"]
-[ext_resource type="Material" uid="uid://br1ap1idsrc3l" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody14.tres" id="8_nfmnr"]
-[ext_resource type="Material" uid="uid://bakstx1a4ur4r" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody15.tres" id="9_qam5f"]
-[ext_resource type="Material" uid="uid://bnclypexv3pue" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody16.tres" id="10_on4kq"]
-[ext_resource type="Material" uid="uid://dy06857khn025" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody17.tres" id="11_3jjxf"]
-[ext_resource type="Material" uid="uid://bke8hbxvmawqr" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody18.tres" id="12_vhka8"]
-[ext_resource type="Material" uid="uid://o604e8o1boy6" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody19.tres" id="13_1qb4r"]
-[ext_resource type="Material" uid="uid://cenyugeigtaoo" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody2.tres" id="14_41m8l"]
-[ext_resource type="Material" uid="uid://bdw81rqm4es52" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody3.tres" id="15_i58fq"]
-[ext_resource type="Material" uid="uid://cidlxb4rdfaqh" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody4.tres" id="16_baied"]
-[ext_resource type="Material" uid="uid://iax8xyps0fwg" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody5.tres" id="17_0mee0"]
-[ext_resource type="Material" uid="uid://cpxtm4fdv6rct" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody6.tres" id="18_k6120"]
-[ext_resource type="Material" uid="uid://c6lh2hr3av1u1" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody7.tres" id="19_08ibl"]
-[ext_resource type="Material" uid="uid://5qdvpia5v5jm" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody8.tres" id="20_pyfyt"]
-[ext_resource type="Material" uid="uid://ob7a7xi0v4qv" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReBody9.tres" id="21_34nxy"]
-[ext_resource type="Material" uid="uid://cxvfamf3mldtp" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReFabric0.tres" id="22_x0fnc"]
-[ext_resource type="Material" uid="uid://dvxcle2t42gve" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReFabric1.tres" id="23_evkv2"]
-[ext_resource type="Material" uid="uid://cpkneei2yuksf" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReFabric2.tres" id="24_c1i6g"]
-[ext_resource type="Material" uid="uid://6xj2rg3jymkd" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReFabric3.tres" id="25_ntkej"]
-[ext_resource type="Material" uid="uid://cy5gheg5d1gew" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrRefrigerator/Textures/mReFabric4.tres" id="26_4ymvk"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_femkr"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_a7wxb"]
-resource_name = "FtrRefrigerator_Sticker__mReFabric"
-_surfaces = [{
-"aabb": AABB(-2.177265, 9.984792, 3.371234, 5.889029, 5.8890276, 1e-05),
-"attribute_data": PackedByteArray("wMDAPPr5eT/AwMA8wMDAPPr5eT/6+Xk/+vl5P8DAwDw="),
-"bone_aabbs": [AABB(-2.177265, 9.984792, 3.371234, 5.889029, 5.8890276, 1.001358e-05)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_femkr"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("S1gLwLXBH0FMwldAT1gLwCr7fUFQwldAi41tQLbBH0FMwldAho1tQCr7fUFQwldA/3//f/7//7//f/9/////v/9//3////+//3//f////78=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_wcuau"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Closet_R"
-bind/0/bone = -1
-bind/0/pose = Transform3D(-1, -1.504815e-07, 6.305879e-08, 6.305879e-08, -1.192093e-07, 0.99999994, -1.504815e-07, 0.99999994, -1.192093e-07, 3.717062, -2.482235, -9.999998)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4g54"]
 
@@ -96,13 +46,8 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_yl4qi")
 area_path = NodePath("Body__mReBody/@Area3D@257910")
 skins = {
-"mReBody": [ExtResource("2_hbllw"), ExtResource("3_rk4j3"), ExtResource("4_jnd67"), ExtResource("5_d4dsg"), ExtResource("6_3l6ay"), ExtResource("7_8h2vh"), ExtResource("8_nfmnr"), ExtResource("9_qam5f"), ExtResource("10_on4kq"), ExtResource("11_3jjxf"), ExtResource("12_vhka8"), ExtResource("13_1qb4r"), ExtResource("14_41m8l"), ExtResource("15_i58fq"), ExtResource("16_baied"), ExtResource("17_0mee0"), ExtResource("18_k6120"), ExtResource("19_08ibl"), ExtResource("20_pyfyt"), ExtResource("21_34nxy")],
-"mReFabric": [ExtResource("22_x0fnc"), ExtResource("23_evkv2"), ExtResource("24_c1i6g"), ExtResource("25_ntkej"), ExtResource("26_4ymvk")]
+"mReBody": [ExtResource("2_hbllw"), ExtResource("3_rk4j3")]
 }
-
-[node name="Sticker__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_a7wxb")
-skin = SubResource("Skin_wcuau")
 
 [node name="Body__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ertmu")

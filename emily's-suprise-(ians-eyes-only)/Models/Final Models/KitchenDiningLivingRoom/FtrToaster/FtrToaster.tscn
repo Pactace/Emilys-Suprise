@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://be57ljuxqu6oq"]
+[gd_scene load_steps=13 format=4 uid="uid://be57ljuxqu6oq"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_gr2v7"]
 [ext_resource type="Material" uid="uid://bbpilyq1usaby" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrToaster/Textures/mReBody0.tres" id="2_ois37"]
@@ -45,43 +45,36 @@ bind/3/name = &"Toaster_04"
 bind/3/bone = -1
 bind/3/pose = Transform3D(7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0, 0, 1, -4.337697, -2.113941e-08, 0.4520377)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ois37"]
+size = Vector3(4.5602818, 5.6501884, 4.300714)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cneu4"]
+size = Vector3(4.5602818, 5.6501884, 4.300714)
+
 [node name="FtrToaster" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_gr2v7")
+area_path = NodePath("body_low__mReBody/_Area3D_257774")
 skins = {
 "mReBody": [ExtResource("2_ois37"), ExtResource("3_cneu4"), ExtResource("4_qrge4"), ExtResource("5_wih3g"), ExtResource("6_qjxrw"), ExtResource("7_a2ffd")]
 }
 
-[node name="Skeleton3D" type="Skeleton3D" parent="."]
-bones/0/name = "Toaster01"
-bones/0/parent = -1
-bones/0/rest = Transform3D(7.54979e-08, -1, 0, 1, 7.54979e-08, 0, 0, 0, 1, 0, 0.28, 0)
-bones/0/enabled = true
-bones/0/position = Vector3(0, 0.28, 0)
-bones/0/rotation = Quaternion(0, 0, 0.70710677, 0.70710677)
-bones/0/scale = Vector3(1, 1, 1)
-bones/1/name = "Toaster_04"
-bones/1/parent = 0
-bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.057697, 0, -0.4520377)
-bones/1/enabled = true
-bones/1/position = Vector3(4.057697, 0, -0.4520377)
-bones/1/rotation = Quaternion(0, 0, 0, 1)
-bones/1/scale = Vector3(1, 1, 1)
-bones/2/name = "Toaster_03"
-bones/2/parent = 0
-bones/2/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.057697, 0, 0.47571132)
-bones/2/enabled = true
-bones/2/position = Vector3(4.057697, 0, 0.47571132)
-bones/2/rotation = Quaternion(0, 0, 0, 1)
-bones/2/scale = Vector3(1, 1, 1)
-bones/3/name = "Handle"
-bones/3/parent = 0
-bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.951754, -2.474874, 0)
-bones/3/enabled = true
-bones/3/position = Vector3(2.951754, -2.474874, 0)
-bones/3/rotation = Quaternion(0, 0, 0, 1)
-bones/3/scale = Vector3(1, 1, 1)
-
-[node name="body_low__mReBody" type="MeshInstance3D" parent="Skeleton3D"]
+[node name="body_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_3uno2")
 skin = SubResource("Skin_03dkg")
+skeleton = NodePath("")
+
+[node name="_StaticBody3D_257772" type="StaticBody3D" parent="body_low__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="_CollisionShape3D_257771" type="CollisionShape3D" parent="body_low__mReBody/_StaticBody3D_257772"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036931038, 3.06297, 0.0013380051)
+shape = SubResource("BoxShape3D_ois37")
+
+[node name="_Area3D_257774" type="Area3D" parent="body_low__mReBody"]
+
+[node name="_CollisionShape3D_257773" type="CollisionShape3D" parent="body_low__mReBody/_Area3D_257774"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036931038, 3.06297, 0.0013380051)
+shape = SubResource("BoxShape3D_cneu4")
