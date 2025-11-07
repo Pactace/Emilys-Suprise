@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cdsmu58ugat2r"]
+
+[ext_resource type="Texture2D" uid="uid://cgj38j7u1pmf5" path="res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame/Jesus_cropped.png" id="1_cjree"]
+
+[resource]
+albedo_texture = ExtResource("1_cjree")

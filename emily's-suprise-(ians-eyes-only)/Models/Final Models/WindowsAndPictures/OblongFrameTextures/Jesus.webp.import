@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq2lkda30uwh4"
-path.s3tc="res://.godot/imported/landscape.jpg-8b2001b87554145aa8f24444e5546306.s3tc.ctex"
-path.etc2="res://.godot/imported/landscape.jpg-8b2001b87554145aa8f24444e5546306.etc2.ctex"
+uid="uid://cbw5t8nwt2s5o"
+path.s3tc="res://.godot/imported/Jesus.webp-fa6893a3580fd4f6d93fc62accf767dc.s3tc.ctex"
+path.etc2="res://.godot/imported/Jesus.webp-fa6893a3580fd4f6d93fc62accf767dc.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame/landscape.jpg"
-dest_files=["res://.godot/imported/landscape.jpg-8b2001b87554145aa8f24444e5546306.s3tc.ctex", "res://.godot/imported/landscape.jpg-8b2001b87554145aa8f24444e5546306.etc2.ctex"]
+source_file="res://Models/Final Models/WindowsAndPictures/OblongFrameTextures/Jesus.webp"
+dest_files=["res://.godot/imported/Jesus.webp-fa6893a3580fd4f6d93fc62accf767dc.s3tc.ctex", "res://.godot/imported/Jesus.webp-fa6893a3580fd4f6d93fc62accf767dc.etc2.ctex"]
 
 [params]
 

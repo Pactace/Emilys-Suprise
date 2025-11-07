@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhxb0bodkkwdh"]
+
+[ext_resource type="Texture2D" uid="uid://b7d66aw2v3b2g" path="res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame/landscape_1_cropped_1_cropped.jpg" id="1_507q1"]
+
+[resource]
+albedo_texture = ExtResource("1_507q1")

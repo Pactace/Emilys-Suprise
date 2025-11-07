@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4no3wfw13020"]
+
+[ext_resource type="Texture2D" uid="uid://8xb0lllvm40e" path="res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame/VerticalSuperSkinnyFrame_initialShadingGroup_BaseColor (2).png" id="1_du0ay"]
+
+[resource]
+albedo_texture = ExtResource("1_du0ay")
+normal_enabled = true
