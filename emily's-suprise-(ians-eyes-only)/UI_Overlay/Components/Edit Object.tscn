@@ -108,6 +108,7 @@ offset_bottom = 10.5
 text = "To Leave Wall"
 
 [node name="PalletSwap" parent="." instance=ExtResource("5_vx0wu")]
+visible = false
 layout_mode = 1
 offset_left = -50.0
 offset_top = -75.0

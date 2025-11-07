@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ci1un4nkj8jcr"]
+[gd_scene load_steps=24 format=3 uid="uid://ci1un4nkj8jcr"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_ff714"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_worjo"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d234bnlpcpjd4" path="res://Levels/Components/stairs.tscn" id="13_fu6ma"]
 [ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_ucgt1"]
 [ext_resource type="Texture2D" uid="uid://ck2ncogjlvp0w" path="res://Levels/Components/Gemini_Generated_Image_ftd4rgftd4rgftd4-removebg-preview.png" id="14_fu6ma"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="16_rplpx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
 shader = ExtResource("10_cuxab")
@@ -129,5 +130,7 @@ shape = SubResource("BoxShape3D_ucgt1")
 transform = Transform3D(-0.041640576, 0, 2.267066, 0, 0.99999994, 0, -3.9368763, 0, -0.023978854, -7.463511, 0.050822258, -1.1345842)
 material_override = SubResource("StandardMaterial3D_0muj8")
 mesh = SubResource("PlaneMesh_yx40g")
+
+[node name="MusicPlayer" parent="." instance=ExtResource("16_rplpx")]
 
 [editable path="Stairs"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dvf10sckw0sx3" path="res://Start and Pause Menus/Logo Sprites/unscreen-146.png" id="4_s07fs"]
 [ext_resource type="Texture2D" uid="uid://ddqm82xvvodf0" path="res://Start and Pause Menus/Start Screen Items/Seamless-Black-Asphalt-Road-Texture.jpg" id="5_arlok"]
 [ext_resource type="Texture2D" uid="uid://bpa0lnvi5lm5h" path="res://Start and Pause Menus/Start Screen Items/3a8ea8abf1d716ecb1e83f2610278ab0.jpg" id="6_npcor"]
-[ext_resource type="AudioStream" uid="uid://bc1s7cdtxj2vv" path="res://Levels/Components/Door Open and Close - Sound Effect  Non copyright sound effects  TCW-SoundEffects.mp3" id="9_ata7l"]
+[ext_resource type="AudioStream" uid="uid://bc1s7cdtxj2vv" path="res://Levels/Components/SoundEffects/Door Open and Close - Sound Effect  Non copyright sound effects  TCW-SoundEffects.mp3" id="9_ata7l"]
 [ext_resource type="PackedScene" uid="uid://dmy5r6133pa4y" path="res://Emily/emily.tscn" id="9_didn8"]
 [ext_resource type="Script" uid="uid://4x7x53bh6ag7" path="res://Emily/emily_entering_house.gd" id="10_ata7l"]
 [ext_resource type="AudioStream" uid="uid://dn2cc04l7luh1" path="res://Start and Pause Menus/smooth-instrumental-jazz-music-360498.mp3" id="11_ggoiw"]

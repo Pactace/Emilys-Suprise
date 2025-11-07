@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8gxmac3vkh3n"]
+[gd_scene load_steps=8 format=3 uid="uid://b8gxmac3vkh3n"]
 
 [ext_resource type="Script" uid="uid://c800a6ejyr3l3" path="res://Levels/character_body_3d.gd" id="1_qt8ib"]
 [ext_resource type="PackedScene" uid="uid://dmy5r6133pa4y" path="res://Emily/emily.tscn" id="2_cojlu"]
 [ext_resource type="PackedScene" uid="uid://crmpmlrfo6y0r" path="res://UI_Overlay/EmilyOverlay.tscn" id="3_yxvxl"]
 [ext_resource type="Script" uid="uid://doeueoppgmu6n" path="res://Levels/Components/door_checker.gd" id="4_u4i3l"]
+[ext_resource type="AudioStream" uid="uid://4g7obuagiic7" path="res://Levels/Components/SoundEffects/Cute feet walking in squish of sound effects to listen-[AudioTrimmer.com].mp3" id="5_873d3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5v4x7"]
 radius = 0.4
@@ -17,6 +18,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 collision_layer = 131079
 collision_mask = 131079
 script = ExtResource("1_qt8ib")
+SPEED = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_5v4x7")
@@ -39,6 +41,13 @@ script = ExtResource("4_u4i3l")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorChecker"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16087535, 0.24451017)
 shape = SubResource("BoxShape3D_yxvxl")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 0, -0.7379862, 0)
+stream = ExtResource("5_873d3")
+volume_db = 45.247
+unit_size = 8.75
+parameters/looping = true
 
 [connection signal="play_idle" from="." to="EmilyAnimations" method="_on_emily_play_idle"]
 [connection signal="play_walking" from="." to="EmilyAnimations" method="_on_emily_play_walking"]

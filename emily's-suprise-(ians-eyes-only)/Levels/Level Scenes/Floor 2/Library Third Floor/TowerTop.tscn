@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://tdw8pesr6ixa"]
+[gd_scene load_steps=22 format=3 uid="uid://tdw8pesr6ixa"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_1lgtj"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_h11kn"]
@@ -12,6 +12,7 @@
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="10_ysu2o"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_trxfi"]
 [ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_co04d"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="14_8om22"]
 [ext_resource type="Texture2D" uid="uid://ck2ncogjlvp0w" path="res://Levels/Components/Gemini_Generated_Image_ftd4rgftd4rgftd4-removebg-preview.png" id="15_gc6es"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
@@ -102,3 +103,5 @@ shape = SubResource("BoxShape3D_ucgt1")
 transform = Transform3D(3.9370966, 0, 0, 0, 0.99999994, 0, 0, 0, 2.2671928, 0.5147238, 0.050822258, -5.7532783)
 material_override = SubResource("StandardMaterial3D_0muj8")
 mesh = SubResource("PlaneMesh_yx40g")
+
+[node name="MusicPlayer" parent="." instance=ExtResource("14_8om22")]

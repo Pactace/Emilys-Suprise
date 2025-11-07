@@ -11,4 +11,4 @@ func _on_emily_play_idle() -> void:
 
 func _on_emily_play_walking() -> void:
 	anim_player.play("rigAction")
-	anim_player.speed_scale = 2.0
+	anim_player.speed_scale = 1.7

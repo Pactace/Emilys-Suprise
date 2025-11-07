@@ -3,6 +3,7 @@ extends CharacterBody3D
 #---Player Variables---#
 @onready var emily_model = $EmilyAnimations
 @onready var emily_overlay = $EmilyOverlay
+@onready var audioplayer = $AudioStreamPlayer3D
 signal play_walking()
 signal play_idle()
 var idle_or_walking = true
@@ -76,6 +77,7 @@ func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
 	# --- Camera-relative movement ---
 	if input_dir != Vector2.ZERO:
 		if idle_or_walking:
+			audioplayer.play(.15)
 			play_walking.emit()
 			idle_or_walking = false
 
@@ -92,6 +94,7 @@ func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
 		rotation.y = atan2(move_dir.x, move_dir.z)
 		velocity.x = move_dir.x * SPEED
 		velocity.z = move_dir.z * SPEED
+		
 
 		if global_position.x > 15 and !new_center_bool:
 			camera.set_center(Vector3(25,0,0))
@@ -104,6 +107,7 @@ func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
 			new_center_bool = false
 	else:
 		if !idle_or_walking:
+			audioplayer.stop()
 			play_idle.emit()
 			idle_or_walking = true
 		velocity.x = move_toward(velocity.x, 0, SPEED)

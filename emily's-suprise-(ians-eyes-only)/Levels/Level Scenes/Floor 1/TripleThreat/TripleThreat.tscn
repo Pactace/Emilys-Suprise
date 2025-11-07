@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://saa7vohmdwkb"]
+[gd_scene load_steps=17 format=3 uid="uid://saa7vohmdwkb"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_rfmqt"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_ob45l"]
@@ -14,6 +14,7 @@
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="12_8yvwq"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="13_byokw"]
 [ext_resource type="PackedScene" uid="uid://d234bnlpcpjd4" path="res://Levels/Components/stairs.tscn" id="14_byokw"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="15_uphnt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uphnt"]
 shader = ExtResource("12_8yvwq")
@@ -144,5 +145,7 @@ visible = false
 
 [node name="MeshInstance3D9" parent="Doors/Stairs" index="8"]
 visible = false
+
+[node name="MusicPlayer" parent="." instance=ExtResource("15_uphnt")]
 
 [editable path="Doors/Stairs"]

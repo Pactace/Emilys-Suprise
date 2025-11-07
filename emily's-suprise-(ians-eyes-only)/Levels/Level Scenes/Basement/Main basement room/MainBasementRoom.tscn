@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dws7gyb2ii3ij"]
+[gd_scene load_steps=16 format=3 uid="uid://dws7gyb2ii3ij"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_3tijn"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_r4nof"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_et47c"]
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_laok4"]
 [ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_7pc3q"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="14_7pc3q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rddnt"]
 shader = ExtResource("5_2ypeo")
@@ -77,3 +78,5 @@ next_door = "DownstairsDoor"
 
 [node name="Marker3D" type="Marker3D" parent="Doors/TripleThreatEntrance"]
 transform = Transform3D(1, 0, 1.7763568e-14, 0, 0.9999996, 0, -7.1054274e-15, 0, 1, -1.0081341, -0.124272436, -0.50844395)
+
+[node name="MusicPlayer" parent="." instance=ExtResource("14_7pc3q")]

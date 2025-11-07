@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dg0oo5yxh1y0q"]
+[gd_scene load_steps=15 format=3 uid="uid://dg0oo5yxh1y0q"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_1pj1x"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_urga3"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="10_vaqta"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="11_go1ub"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="12_6d7ar"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="13_6d7ar"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aj1ts"]
 shader = ExtResource("11_go1ub")
@@ -62,3 +63,5 @@ offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("12_6d7ar")
+
+[node name="MusicPlayer" parent="." instance=ExtResource("13_6d7ar")]

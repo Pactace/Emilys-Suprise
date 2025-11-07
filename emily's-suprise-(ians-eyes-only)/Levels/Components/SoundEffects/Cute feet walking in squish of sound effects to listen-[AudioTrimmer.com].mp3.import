@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4g7obuagiic7"
+path="res://.godot/imported/Cute feet walking in squish of sound effects to listen-[AudioTrimmer.com].mp3-687dda92c5db0ecb0f34ab0869bf974e.mp3str"
+
+[deps]
+
+source_file="res://Levels/Components/SoundEffects/Cute feet walking in squish of sound effects to listen-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Cute feet walking in squish of sound effects to listen-[AudioTrimmer.com].mp3-687dda92c5db0ecb0f34ab0869bf974e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
