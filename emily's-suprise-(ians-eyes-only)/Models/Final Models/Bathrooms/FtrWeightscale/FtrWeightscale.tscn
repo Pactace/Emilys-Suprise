@@ -14,33 +14,6 @@
 [ext_resource type="Material" uid="uid://dp721po05jfqf" path="res://Models/Final Models/Bathrooms/FtrWeightscale/Textures/mReFabric3.tres" id="12_32g5e"]
 [ext_resource type="Material" uid="uid://clrn8ha14ir8g" path="res://Models/Final Models/Bathrooms/FtrWeightscale/Textures/mReFabric4.tres" id="13_0mo3d"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubjfc"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_2obo4"]
-resource_name = "FtrWeightscale_plate_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(-2.808498, 1.163221, -2.587496, 5.6169996, 1e-05, 5.175),
-"attribute_data": PackedByteArray("l0AXPOoFaj+gwB8987ZyP6oAqzzvJ28/hziIPfVUdT+gAJ464+JiP8fgxz327XU/AAAAANwXWz+wpK4+jlyLPrVstj6KsIw+qGCnPoYchj6mySQ/irCMPgAAAADg0FQ9pBajPvgAez6hAqI+6MhoPucDZz/27XU/qK0oP45ciz6i8KE+zGhNPqLwoT4A4XU9mfqYPrAgIT2gOqE+wHBHPZ3QnT6gwCc9w4BEPLAgIT2QAJE7sFA0PQAAgD/cF1s/rE8sP4Ychj4BsX8/4+JiP+/4bj/1VHU//qJ9P+oFaj/2A3Y/87ZyP/ynej/vJ28/AACAP+DQVD2udC4/+AB7PrD+Lj/oyGg+rwcvP8xoTT6vBy8/AOF1PbSCMz+wICE9rmIvP8BwRz2yFzE/oMAnPf3ofD+wICE9ANx+P8AAND0="),
-"bone_aabbs": [AABB(-2.808498, 1.163221, -2.587496, 5.6169996, 1.0967255e-05, 5.175)],
-"format": 34359745559,
-"index_count": 114,
-"index_data": PackedByteArray("AAABAAIAAQAAAAMAAAAEAAMAAwAEAAUABAAGAAUABwAFAAYACAAFAAcABgAJAAcACAAKAAUACwAJAAYADAAJAAsADAALAA0ABQAKAA4ACgAPAA4ADQALABAAEAALABEACwASABEAEQASABMAEwASABQAFQASAAsACwAWABUADgAPABcAFwAPABgADgAXABkAGgAOABkAGQAbABoAGwAcABoAGwAdABwAFwAYAB4AHgAYAB8AHwAgAB4AIAAhAB4AIQAiAB4AIwAeACIAIgAkACMAIwAkACUAJgAeACMAHgAmACcA"),
-"material": SubResource("StandardMaterial3D_ubjfc"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("TG0wwHXklD/a4RRALLklwG3klD/9FSFA9z0swHXklD/fFhxAE9UbwG3klD+kwiRAak8zwHXklD8j3ApAM6gQwG3klD+mmSVAbr4zwHXklD/H1P8/3npkv5fklD9DyKO/tqNOv5fklD8D7KG/2ON4v5fklD9OJ6u/tqNOP5fklD8D7KG/br4zwJ/klD+hECHAfXiCv5fklD9gPre/UP2Dv5fklD89C8S/M6gQQG3klD+qmSVA3npkP5fklD9DyKO/WRaEv5fklD9wQte/8BSEv5/klD/+KB7ACKqQv5/klD+JmSXAahWFv5/klD8UPCLAh9+Jv5/klD+BBCXA/G4vwJ/klD+JmSXAjScywJ/klD8+6iPAf74zQHXklD/H1P8/2ON4P5fklD9OJ6u/bk8zQHXklD8e3ApAE9UbQG3klD+gwiRATG0wQHXklD/S4RRALLklQG3klD/5FSFA9z0sQHXklD/bFhxAf74zQKjklD+hECHAfXiCP5fklD9gPre/UP2DP5fklD89C8S/WRaEP5fklD9wQte/8BSEP5/klD/+KB7ACKqQP5/klD+JmSXAahWFP5/klD8UPCLAh9+JP5/klD+BBCXAtmcvQKjklD+JmSXAmiQyQKjklD+38SPA/3//////AcD/f/////8AwP9//////wDA/3////3//7//f/////8AwP9////+//+//3///////7//f/////8CwP9//////wHA/3///////7//f///+f//v/9//////wDA/3//////AMD/f/////8CwP9///////+//3////f//7//f///+///v/9////6//+//3////v//7//f///7P//v/9////7//+//3//////AcD/f/////8SwP9////+//+//3////7//7//f///+///v/9///////+//3////n//7//f////f//v/9////9//+//3//////AMD/f////P//v/9////3//+//3//////AMD/f/////8BwP9//////wDA/3//////CMD/f/////8BwP9///////+//3//////BcA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_mrq83"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0g34"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mwyh5"]
@@ -62,11 +35,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_mrq83"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_cshlv"]
 size = Vector3(6.113382, 1.1632302, 5.680768)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jawrw"]
 size = Vector3(6.113382, 1.1632302, 5.680768)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubjfc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2obo4"]
+resource_name = "FtrWeightscale_plate_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(-2.808498, 1.163221, -2.587496, 5.6169996, 1e-05, 5.175),
+"attribute_data": PackedByteArray("l0AXPOoFaj+gwB8987ZyP6oAqzzvJ28/hziIPfVUdT+gAJ464+JiP8fgxz327XU/AAAAANwXWz+wpK4+jlyLPrVstj6KsIw+qGCnPoYchj6mySQ/irCMPgAAAADg0FQ9pBajPvgAez6hAqI+6MhoPucDZz/27XU/qK0oP45ciz6i8KE+zGhNPqLwoT4A4XU9mfqYPrAgIT2gOqE+wHBHPZ3QnT6gwCc9w4BEPLAgIT2QAJE7sFA0PQAAgD/cF1s/rE8sP4Ychj4BsX8/4+JiP+/4bj/1VHU//qJ9P+oFaj/2A3Y/87ZyP/ynej/vJ28/AACAP+DQVD2udC4/+AB7PrD+Lj/oyGg+rwcvP8xoTT6vBy8/AOF1PbSCMz+wICE9rmIvP8BwRz2yFzE/oMAnPf3ofD+wICE9ANx+P8AAND0="),
+"bone_aabbs": [AABB(-2.808498, 1.163221, -2.587496, 5.6169996, 1.0967255e-05, 5.175)],
+"format": 34359745559,
+"index_count": 114,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAAAEAAMAAwAEAAUABAAGAAUABwAFAAYACAAFAAcABgAJAAcACAAKAAUACwAJAAYADAAJAAsADAALAA0ABQAKAA4ACgAPAA4ADQALABAAEAALABEACwASABEAEQASABMAEwASABQAFQASAAsACwAWABUADgAPABcAFwAPABgADgAXABkAGgAOABkAGQAbABoAGwAcABoAGwAdABwAFwAYAB4AHgAYAB8AHwAgAB4AIAAhAB4AIQAiAB4AIwAeACIAIgAkACMAIwAkACUAJgAeACMAHgAmACcA"),
+"material": SubResource("StandardMaterial3D_ubjfc"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("TG0wwHXklD/a4RRALLklwG3klD/9FSFA9z0swHXklD/fFhxAE9UbwG3klD+kwiRAak8zwHXklD8j3ApAM6gQwG3klD+mmSVAbr4zwHXklD/H1P8/3npkv5fklD9DyKO/tqNOv5fklD8D7KG/2ON4v5fklD9OJ6u/tqNOP5fklD8D7KG/br4zwJ/klD+hECHAfXiCv5fklD9gPre/UP2Dv5fklD89C8S/M6gQQG3klD+qmSVA3npkP5fklD9DyKO/WRaEv5fklD9wQte/8BSEv5/klD/+KB7ACKqQv5/klD+JmSXAahWFv5/klD8UPCLAh9+Jv5/klD+BBCXA/G4vwJ/klD+JmSXAjScywJ/klD8+6iPAf74zQHXklD/H1P8/2ON4P5fklD9OJ6u/bk8zQHXklD8e3ApAE9UbQG3klD+gwiRATG0wQHXklD/S4RRALLklQG3klD/5FSFA9z0sQHXklD/bFhxAf74zQKjklD+hECHAfXiCP5fklD9gPre/UP2DP5fklD89C8S/WRaEP5fklD9wQte/8BSEP5/klD/+KB7ACKqQP5/klD+JmSXAahWFP5/klD8UPCLAh9+JP5/klD+BBCXAtmcvQKjklD+JmSXAmiQyQKjklD+38SPA/3//////AcD/f/////8AwP9//////wDA/3////3//7//f/////8AwP9////+//+//3///////7//f/////8CwP9//////wHA/3///////7//f///+f//v/9//////wDA/3//////AMD/f/////8CwP9///////+//3////f//7//f///+///v/9////6//+//3////v//7//f///7P//v/9////7//+//3//////AcD/f/////8SwP9////+//+//3////7//7//f///+///v/9///////+//3////n//7//f////f//v/9////9//+//3//////AMD/f////P//v/9////3//+//3//////AMD/f/////8BwP9//////wDA/3//////CMD/f/////8BwP9///////+//3//////BcA=")
+}]
+blend_shape_mode = 0
 
 [node name="FtrWeightscale" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -77,11 +77,8 @@ skins = {
 "mReFabric": [ExtResource("9_ynfga"), ExtResource("10_m6osv"), ExtResource("11_ekev8"), ExtResource("12_32g5e"), ExtResource("13_0mo3d")]
 }
 
-[node name="plate_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_2obo4")
-skin = SubResource("Skin_mrq83")
-
 [node name="body01_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_mwyh5")
 skin = SubResource("Skin_mrq83")
 
@@ -98,3 +95,7 @@ shape = SubResource("BoxShape3D_cshlv")
 [node name="@CollisionShape3D@256969" type="CollisionShape3D" parent="body01_low__mReBody/@Area3D@256970"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58161396, 0)
 shape = SubResource("BoxShape3D_jawrw")
+
+[node name="plate_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_2obo4")
+skin = SubResource("Skin_mrq83")

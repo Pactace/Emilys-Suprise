@@ -22,13 +22,14 @@ albedo_texture = ExtResource("10_ujqvv")
 [node name="SquareFrame" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4420253)
 script = ExtResource("1_6ijny")
+area_path = NodePath("HorizontalFrameLarge/Area3D")
 skins = {
 "Frame": [ExtResource("2_6em3l"), ExtResource("3_hle2b"), ExtResource("4_ee053"), ExtResource("5_ndqt8")],
 "Pictures": [ExtResource("6_q5lf6"), ExtResource("7_2cmk6"), ExtResource("8_kjwxg")]
 }
 
 [node name="HorizontalFrameLarge" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5483711, -1.7318698, 0.22491002)
+transform = Transform3D(3.7739055, 0, 0, 0, 2.96539, 0, 0, 0, 4.411269, 11.616729, -10.973634, 1.1031165)
 material_override = ExtResource("4_ee053")
 mesh = ExtResource("9_kjwxg")
 
@@ -49,6 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7185917, 0.40869492, 0)
 shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.90414643, 0, 0, 0, -1.0927847e-08, -0.56866497, 0, 0.25, -2.4857135e-08, -0.03582412, 0.078552485, 0.16833922)
+transform = Transform3D(6.8243265, 0, 0, 0, -9.641135e-08, -3.3726258, 0, 2.2056348, -1.4742216e-07, -0.340477, -0.23641777, 0.60401845)
 material_override = SubResource("StandardMaterial3D_mip2m")
 mesh = SubResource("PlaneMesh_pa6mt")

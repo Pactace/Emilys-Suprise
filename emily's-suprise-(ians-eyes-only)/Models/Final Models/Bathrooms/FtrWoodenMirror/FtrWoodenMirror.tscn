@@ -84,10 +84,12 @@ skins = {
 }
 
 [node name="mirror_low__mMirror" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.32905835, 0, 0, 0, 0.9999998, 0, 0.40247318, 0)
 mesh = SubResource("ArrayMesh_x444j")
 skin = SubResource("Skin_abv64")
 
 [node name="back_partsA_low_1__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.32905835, 0, 0, 0, 0.9999998, 0, 0.40247318, 0)
 mesh = SubResource("ArrayMesh_sxsts")
 skin = SubResource("Skin_abv64")
 

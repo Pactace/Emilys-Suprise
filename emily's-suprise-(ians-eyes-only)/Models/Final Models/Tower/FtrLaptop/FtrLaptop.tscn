@@ -15,33 +15,6 @@
 [ext_resource type="Material" uid="uid://47kmb5yonlmb" path="res://Models/Final Models/Tower/FtrLaptop/Textures/mReFabric4.tres" id="13_01st6"]
 [ext_resource type="Material" uid="uid://dmwmjdb7ee4lk" path="res://Models/Final Models/Tower/FtrLaptop/Textures/mReFabric5.tres" id="14_5f5r3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1md7l"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ffkvu"]
-resource_name = "FtrLaptop_Screen_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(-3.047517, 0.7280498, -3.222516, 6.095034, 3.1071992, 1.4489111),
-"attribute_data": PackedByteArray("//5+P8jHRz+BgIA7yMdHP//+fj/c4GA+gYCAO9zgYD4="),
-"bone_aabbs": [AABB(-3.047517, 0.7280498, -3.222516, 6.095044, 3.1071992, 1.4489211)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_1md7l"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("hQpDQHlhOj99BeO/hQpDwHlhOj99BeO/hQpDQLh0dUC0PU7AhQpDwLR0dUC0PU7A/3+3qP///7//f7eo////v/9/t6j///+//3+3qP7//78=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_7smkc"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bga71"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_laeqd"]
@@ -63,11 +36,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_7smkc"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_tpcd6"]
 size = Vector3(6.614244, 4.286854, 6.422091)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4xhuj"]
 size = Vector3(6.614244, 4.286854, 6.422091)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1md7l"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ffkvu"]
+resource_name = "FtrLaptop_Screen_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(-3.047517, 0.7280498, -3.222516, 6.095034, 3.1071992, 1.4489111),
+"attribute_data": PackedByteArray("//5+P8jHRz+BgIA7yMdHP//+fj/c4GA+gYCAO9zgYD4="),
+"bone_aabbs": [AABB(-3.047517, 0.7280498, -3.222516, 6.095044, 3.1071992, 1.4489211)],
+"format": 34359745559,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_1md7l"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("hQpDQHlhOj99BeO/hQpDwHlhOj99BeO/hQpDQLh0dUC0PU7AhQpDwLR0dUC0PU7A/3+3qP///7//f7eo////v/9/t6j///+//3+3qP7//78=")
+}]
+blend_shape_mode = 0
 
 [node name="FtrLaptop" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -78,11 +78,8 @@ skins = {
 "mReFabric": [ExtResource("9_d6cy0"), ExtResource("10_if8dv"), ExtResource("11_vu4bg"), ExtResource("12_jdkjh"), ExtResource("13_01st6"), ExtResource("14_5f5r3")]
 }
 
-[node name="Screen_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_ffkvu")
-skin = SubResource("Skin_7smkc")
-
 [node name="BodyBottom_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_laeqd")
 skin = SubResource("Skin_7smkc")
 
@@ -99,3 +96,7 @@ shape = SubResource("BoxShape3D_tpcd6")
 [node name="@CollisionShape3D@258581" type="CollisionShape3D" parent="BodyBottom_low__mReBody/@Area3D@258582"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.143427, -0.3661716)
 shape = SubResource("BoxShape3D_4xhuj")
+
+[node name="Screen_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ffkvu")
+skin = SubResource("Skin_7smkc")

@@ -10,10 +10,10 @@
 [ext_resource type="Material" uid="uid://cqgipb6ya0ahf" path="res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame/Picture2.tres" id="8_teb5m"]
 [ext_resource type="ArrayMesh" uid="uid://dugi4f18qjfmj" path="res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame.obj" id="9_iyk0s"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_pyx02"]
 size = Vector3(0.2, 0.4, 0.2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
 
 [node name="SquareFrame" type="Node3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.4420253)
@@ -24,13 +24,8 @@ skins = {
 "Pictures": [ExtResource("6_77py1"), ExtResource("7_1t12u"), ExtResource("8_teb5m")]
 }
 
-[node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.08140704, 0, 0, 0, -1.0927843e-08, -0.20079371, 0, 0.2499999, -8.776972e-09, -0.0074010193, 0.004161328, 0.2040723)
-material_override = ExtResource("6_77py1")
-mesh = SubResource("PlaneMesh_pa6mt")
-
 [node name="VerticalSuperSkinnyFrame" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.0637827, -0.32685122, 0.19937658)
+transform = Transform3D(18.101072, 0, 0, 0, 24.798601, 0, 0, 0, 18.948984, 38.867027, -15.634531, 0.11274548)
 material_override = ExtResource("5_4mmue")
 mesh = ExtResource("9_iyk0s")
 
@@ -49,3 +44,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.2140713, 0.18536377, 0.0781
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VerticalSuperSkinnyFrame/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
 shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Picture" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.9471095, 0, 0, 0, -4.1414316e-07, -9.958803, 0, 9.474492, -4.3531313e-07, 0.087875366, 0.7827625, 0.29070342)
+material_override = ExtResource("6_77py1")
+mesh = SubResource("PlaneMesh_pa6mt")

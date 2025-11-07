@@ -10,10 +10,10 @@
 [ext_resource type="Material" uid="uid://dxgt2kx0a0cdm" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrameTextures/Picture2.tres" id="8_qgarb"]
 [ext_resource type="ArrayMesh" uid="uid://bhmntkll63t6b" path="res://Models/Final Models/WindowsAndPictures/VerticalDentedFrame.obj" id="9_ckq3a"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_pyx02"]
 size = Vector3(0.75, 0.75, 0.2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
 
 [node name="SquareFrame" type="Node3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.4420253)
@@ -24,13 +24,8 @@ skins = {
 "Pictures": [ExtResource("6_jakam"), ExtResource("7_a7yhl"), ExtResource("8_qgarb")]
 }
 
-[node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.25725058, 0, 0, 0, -1.0927843e-08, -0.36238033, 0, 0.2499999, -1.5840147e-08, 0.03707391, 0.018725216, 0.04884234)
-material_override = ExtResource("6_jakam")
-mesh = SubResource("PlaneMesh_pa6mt")
-
 [node name="VerticalDentedFrame" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.4916582, -0.48139918, 0.060056627)
+transform = Transform3D(13.159165, 0, 0, 0, 13.331326, 0, 0, 0, 5.4403844, 39.37695, -14.808603, 0.61113775)
 material_override = ExtResource("2_ckq3a")
 mesh = ExtResource("9_ckq3a")
 
@@ -49,3 +44,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.4203243, 0.58872604, 0.1476
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VerticalDentedFrame/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
 shape = SubResource("BoxShape3D_pyx02")
+
+[node name="Picture" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.4711027, 0, 0, 0, -1.18903365e-07, -9.66202, 0, 2.7201915, -4.223403e-07, 0.69538116, -1.473958, 0.48911765)
+material_override = ExtResource("6_jakam")
+mesh = SubResource("PlaneMesh_pa6mt")

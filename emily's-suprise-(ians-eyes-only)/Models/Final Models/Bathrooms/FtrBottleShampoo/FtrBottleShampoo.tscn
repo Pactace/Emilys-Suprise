@@ -14,34 +14,6 @@
 [ext_resource type="Material" uid="uid://qmnyqygoq8gx" path="res://Models/Final Models/Bathrooms/FtrBottleShampoo/Textures/mReFabric3.tres" id="12_goa2a"]
 [ext_resource type="Material" uid="uid://bxv7is03s0bgt" path="res://Models/Final Models/Bathrooms/FtrBottleShampoo/Textures/mReFabric4.tres" id="13_cl5h3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy5n3"]
-vertex_color_use_as_albedo = true
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_de62s"]
-resource_name = "FtrBottleShampoo_shampoo_Label___mReFabric"
-_surfaces = [{
-"aabb": AABB(-1.238658, 0.7940128, 0.7628835, 2.4426599, 2.7159603, 0.71127254),
-"attribute_data": PackedByteArray("UKpG//5pfj8AgdM7AACAPwAAAABQqkb//ml+P/5Yfj8AAIA/AACAP1CqRv/gPWE/AIHTO+PiYj8AAAAAUKpG/+A9YT/+WH4/4+JiPwAAgD9Qqkb/sJ4wPwCB0zuzsTE/AAAAAFCqRv+wnjA//lh+P7OxMT8AAIA/UKpG/4AAAD8AgdM7gYAAPwAAAABQqkb/gAAAP/5Yfj+BgAA/AACAP1CqRv+fwp4+AIHTO56cnD4AAAAAUKpG/5/Cnj7+WH4/npycPgAAgD9Qqkb/8RD2PQCB0zvq6Og9AAAAAFCqRv/xEPY9/lh+P+ro6D0AAIA/UKpG/8sAyzsAgdM7AAAAAAAAAABQqkb/ywDLO/5Yfj8AAAAAAACAPw=="),
-"bone_aabbs": [AABB(-1.238658, 0.7940128, 0.7628835, 2.4426699, 2.7159703, 0.71127254)],
-"format": 34359745599,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQADAAIAAgADAAQAAwAFAAQABAAFAAYABQAHAAYABgAHAAgABwAJAAgACAAJAAoACQALAAoACgALAAwACwANAAwA"),
-"material": SubResource("StandardMaterial3D_yy5n3"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 14,
-"vertex_data": PackedByteArray("vRyaP2ajYEBcTEM/vRyaP2xESz9cTEM/HNOBP2ajYECC/4U/HNOBP2xESz+C/4U/cnwKP2ajYEBCeq4/cnwKP2xESz9Ceq4/x/KNvGajYEAlsbw/x/KNvGxESz8lsbw/n1sTv2ajYEA5eq4/n1sTv2xESz85eq4/r0KGv2ajYECC/4U/r0KGv2xESz+C/4U/WIyev2ajYEBVTEM/WIyev2xESz9VTEM/ucz/f///XOa5zP9///9c5s68/3///2bezrz/f///Zt6Npf9////G0o2l/3///8bS/3//f////7//f/9/////v3Fa/39w2v+/cVr/f3Da/78wQ/9/MMP/vzBD/38ww/+/RTP/f0Sz/79FM/9/RLP/vw==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_d4p8u"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5xpm"]
 vertex_color_use_as_albedo = true
 
@@ -80,6 +52,34 @@ size = Vector3(3.056319, 6.359422, 2.917757)
 [sub_resource type="BoxShape3D" id="BoxShape3D_1cwy3"]
 size = Vector3(3.056319, 6.359422, 2.917757)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy5n3"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_de62s"]
+resource_name = "FtrBottleShampoo_shampoo_Label___mReFabric"
+_surfaces = [{
+"aabb": AABB(-1.238658, 0.7940128, 0.7628835, 2.4426599, 2.7159603, 0.71127254),
+"attribute_data": PackedByteArray("UKpG//5pfj8AgdM7AACAPwAAAABQqkb//ml+P/5Yfj8AAIA/AACAP1CqRv/gPWE/AIHTO+PiYj8AAAAAUKpG/+A9YT/+WH4/4+JiPwAAgD9Qqkb/sJ4wPwCB0zuzsTE/AAAAAFCqRv+wnjA//lh+P7OxMT8AAIA/UKpG/4AAAD8AgdM7gYAAPwAAAABQqkb/gAAAP/5Yfj+BgAA/AACAP1CqRv+fwp4+AIHTO56cnD4AAAAAUKpG/5/Cnj7+WH4/npycPgAAgD9Qqkb/8RD2PQCB0zvq6Og9AAAAAFCqRv/xEPY9/lh+P+ro6D0AAIA/UKpG/8sAyzsAgdM7AAAAAAAAAABQqkb/ywDLO/5Yfj8AAAAAAACAPw=="),
+"bone_aabbs": [AABB(-1.238658, 0.7940128, 0.7628835, 2.4426699, 2.7159703, 0.71127254)],
+"format": 34359745599,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAgADAAQAAwAFAAQABAAFAAYABQAHAAYABgAHAAgABwAJAAgACAAJAAoACQALAAoACgALAAwACwANAAwA"),
+"material": SubResource("StandardMaterial3D_yy5n3"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("vRyaP2ajYEBcTEM/vRyaP2xESz9cTEM/HNOBP2ajYECC/4U/HNOBP2xESz+C/4U/cnwKP2ajYEBCeq4/cnwKP2xESz9Ceq4/x/KNvGajYEAlsbw/x/KNvGxESz8lsbw/n1sTv2ajYEA5eq4/n1sTv2xESz85eq4/r0KGv2ajYECC/4U/r0KGv2xESz+C/4U/WIyev2ajYEBVTEM/WIyev2xESz9VTEM/ucz/f///XOa5zP9///9c5s68/3///2bezrz/f///Zt6Npf9////G0o2l/3///8bS/3//f////7//f/9/////v3Fa/39w2v+/cVr/f3Da/78wQ/9/MMP/vzBD/38ww/+/RTP/f0Sz/79FM/9/RLP/vw==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="Skin" id="Skin_d4p8u"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [node name="FtrBottleShampoo" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_ar8ur")
@@ -89,11 +89,8 @@ skins = {
 "mReFabric": [ExtResource("9_w1y7q"), ExtResource("10_wspbu"), ExtResource("11_pooxg"), ExtResource("12_goa2a"), ExtResource("13_cl5h3")]
 }
 
-[node name="shampoo_Label___mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_de62s")
-skin = SubResource("Skin_d4p8u")
-
 [node name="shampoo_Botol___mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ycmn8")
 skin = SubResource("Skin_a0bcv")
 
@@ -110,3 +107,7 @@ shape = SubResource("BoxShape3D_5p3bu")
 [node name="@CollisionShape3D@256893" type="CollisionShape3D" parent="shampoo_Botol___mReBody/@Area3D@256894"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08660948, 3.179711, 0.0048274994)
 shape = SubResource("BoxShape3D_1cwy3")
+
+[node name="shampoo_Label___mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_de62s")
+skin = SubResource("Skin_d4p8u")

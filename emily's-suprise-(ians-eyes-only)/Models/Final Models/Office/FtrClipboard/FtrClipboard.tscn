@@ -17,34 +17,6 @@
 [ext_resource type="Material" uid="uid://cmxyt0j41sge4" path="res://Models/Final Models/Office/FtrClipboard/Textures/mReFabric6.tres" id="15_46ljh"]
 [ext_resource type="Material" uid="uid://5ipkaocp5d51" path="res://Models/Final Models/Office/FtrClipboard/Textures/mReFabric7.tres" id="16_g8nl1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vge1p"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_nomr3"]
-resource_name = "FtrClipboard_paper_back__mReFabric"
-_surfaces = [{
-"aabb": AABB(-2, 0.1415838, -2.756328, 4, 0.1311723, 5.512656),
-"attribute_data": PackedByteArray("jYwMPgAAgD+NjAw+AACAP93cXD8AAAAA3dxcPwAAAACNjAw+AAAAAI2MDD4AAAAA3dxcPwAAgD/d3Fw/AACAP93cXD8AAIA/3dxcPwAAgD+NjAw+AACAP42MDD4AAIA/3dxcPwAAAADd3Fw/AAAAAI2MDD4AAAAAjYwMPgAAAACNjAw+wL8/P42MDD7Avz8/3dxcP8C/Pz/d3Fw/wL8/P93cXD/Avz8/3dxcP8C/Pz+NjAw+wL8/P42MDD7Avz8/3dxcP4CAAD/d3Fw/gIAAP42MDD6AgAA/jYwMPoCAAD/d3Fw/4N9fP93cXD/g318/jYwMPuDfXz+NjAw+4N9fP42MDD7g318/jYwMPuDfXz/d3Fw/4N9fP93cXD/g318/jYwMPoCAAD+NjAw+gIAAP93cXD+AgAA/3dxcP4CAAD8="),
-"bone_aabbs": [AABB(-2, 0.1415838, -2.756328, 4, 0.13118231, 5.512666)],
-"format": 34359745591,
-"index_count": 48,
-"index_data": PackedByteArray("AgAMAAEADQAMAAIADQAJAAwACAAJAA0ACAAOAAkADwAOAAgADwADAA4AAAADAA8ABQAQAAQABAAQABEAEAALABEAEQALAAoACwASAAoACgASABMAEgAHABMAEwAHAAYA"),
-"lods": [0.11027459, PackedByteArray("CAABAAIACAAJAAEAAAAJAAgAAAADAAkABAAFAAoABQALAAoACgALAAYACwAHAAYA"), 0.6275951, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABQAHAAYA")],
-"material": SubResource("StandardMaterial3D_vge1p"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 20,
-"vertex_data": PackedByteArray("AAAAwLCmiz6uZzBAAAAAQFj7ED6uZzDAAAAAwFj7ED6uZzDAAAAAQLCmiz6uZzBAAAAAQLCmiz6uZzBAAAAAwLCmiz6uZzBAAAAAQFj7ED6uZzDAAAAAwFj7ED6uZzDAAAAAwFj7ED6uZ7A/AAAAQFj7ED6uZ7A/AAAAQFj7ED6uZ7A/AAAAwFj7ED6uZ7A/AAAAQFj7ED4AAAAAAAAAwFj7ED4AAAAAAAAAQMCpMT7CTQRAAAAAwMCpMT7CTQRAAAAAwMCpMT7CTQRAAAAAQMCpMT7CTQRAAAAAwFj7ED4AAAAAAAAAQFj7ED4AAAAA/38jEP///z//fwAA////P/9/AAD///8//38jEP///z8ikP//////vyKQ//////+//3///////7//f///////v/9/7wL///8//3/vAv///z/vgv//////v++C//////+//38AAP///z//fwAA////P/9/Bwv///8//38HC////z8Hi///////vweL//////+//3///////7//f///////vw==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_inu6h"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2p15"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_j7lrm"]
@@ -66,11 +38,39 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_inu6h"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_3xmhr"]
 size = Vector3(4.966604, 0.36283267, 6.563138)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_erfjl"]
 size = Vector3(4.966604, 0.36283267, 6.563138)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vge1p"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nomr3"]
+resource_name = "FtrClipboard_paper_back__mReFabric"
+_surfaces = [{
+"aabb": AABB(-2, 0.1415838, -2.756328, 4, 0.1311723, 5.512656),
+"attribute_data": PackedByteArray("jYwMPgAAgD+NjAw+AACAP93cXD8AAAAA3dxcPwAAAACNjAw+AAAAAI2MDD4AAAAA3dxcPwAAgD/d3Fw/AACAP93cXD8AAIA/3dxcPwAAgD+NjAw+AACAP42MDD4AAIA/3dxcPwAAAADd3Fw/AAAAAI2MDD4AAAAAjYwMPgAAAACNjAw+wL8/P42MDD7Avz8/3dxcP8C/Pz/d3Fw/wL8/P93cXD/Avz8/3dxcP8C/Pz+NjAw+wL8/P42MDD7Avz8/3dxcP4CAAD/d3Fw/gIAAP42MDD6AgAA/jYwMPoCAAD/d3Fw/4N9fP93cXD/g318/jYwMPuDfXz+NjAw+4N9fP42MDD7g318/jYwMPuDfXz/d3Fw/4N9fP93cXD/g318/jYwMPoCAAD+NjAw+gIAAP93cXD+AgAA/3dxcP4CAAD8="),
+"bone_aabbs": [AABB(-2, 0.1415838, -2.756328, 4, 0.13118231, 5.512666)],
+"format": 34359745591,
+"index_count": 48,
+"index_data": PackedByteArray("AgAMAAEADQAMAAIADQAJAAwACAAJAA0ACAAOAAkADwAOAAgADwADAA4AAAADAA8ABQAQAAQABAAQABEAEAALABEAEQALAAoACwASAAoACgASABMAEgAHABMAEwAHAAYA"),
+"lods": [0.11027459, PackedByteArray("CAABAAIACAAJAAEAAAAJAAgAAAADAAkABAAFAAoABQALAAoACgALAAYACwAHAAYA"), 0.6275951, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABQAHAAYA")],
+"material": SubResource("StandardMaterial3D_vge1p"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAwLCmiz6uZzBAAAAAQFj7ED6uZzDAAAAAwFj7ED6uZzDAAAAAQLCmiz6uZzBAAAAAQLCmiz6uZzBAAAAAwLCmiz6uZzBAAAAAQFj7ED6uZzDAAAAAwFj7ED6uZzDAAAAAwFj7ED6uZ7A/AAAAQFj7ED6uZ7A/AAAAQFj7ED6uZ7A/AAAAwFj7ED6uZ7A/AAAAQFj7ED4AAAAAAAAAwFj7ED4AAAAAAAAAQMCpMT7CTQRAAAAAwMCpMT7CTQRAAAAAwMCpMT7CTQRAAAAAQMCpMT7CTQRAAAAAwFj7ED4AAAAAAAAAQFj7ED4AAAAA/38jEP///z//fwAA////P/9/AAD///8//38jEP///z8ikP//////vyKQ//////+//3///////7//f///////v/9/7wL///8//3/vAv///z/vgv//////v++C//////+//38AAP///z//fwAA////P/9/Bwv///8//38HC////z8Hi///////vweL//////+//3///////7//f///////vw==")
+}]
+blend_shape_mode = 0
 
 [node name="FtrClipboard" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -81,11 +81,8 @@ skins = {
 "mReFabric": [ExtResource("9_cxxsk"), ExtResource("10_lyr7p"), ExtResource("11_7e5cl"), ExtResource("12_um3jm"), ExtResource("13_mi35q"), ExtResource("14_esloh"), ExtResource("15_46ljh"), ExtResource("16_g8nl1")]
 }
 
-[node name="paper_back__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_nomr3")
-skin = SubResource("Skin_inu6h")
-
 [node name="Folder02__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_j7lrm")
 skin = SubResource("Skin_inu6h")
 
@@ -102,3 +99,7 @@ shape = SubResource("BoxShape3D_3xmhr")
 [node name="@CollisionShape3D@258089" type="CollisionShape3D" parent="Folder02__mReBody/@Area3D@258090"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027996778, 0.14346868, -0.03954506)
 shape = SubResource("BoxShape3D_erfjl")
+
+[node name="paper_back__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_nomr3")
+skin = SubResource("Skin_inu6h")

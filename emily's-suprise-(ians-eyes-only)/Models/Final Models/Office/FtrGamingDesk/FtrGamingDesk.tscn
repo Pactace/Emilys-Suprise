@@ -18,53 +18,6 @@
 [ext_resource type="Material" uid="uid://3qey3wrogqfi" path="res://Models/Final Models/Office/FtrGamingDesk/Textures/mReFabric6.tres" id="16_k713q"]
 [ext_resource type="Material" uid="uid://bdbxv3g5nudma" path="res://Models/Final Models/Office/FtrGamingDesk/Textures/mReFabric7.tres" id="17_htrs7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77cwl"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_gdi0i"]
-resource_name = "FtrGamingDesk_monitorA_screen_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(-9.29171, 9.820188, -2.549483, 18.602833, 8.881263, 2.534456),
-"attribute_data": PackedByteArray("gYAAPOHgYD+BgAA8jIsLP/z8/D7h4GA//Pz8PoyLCz+CgQE/4eBgP4KBAT+Miws///19P+HgYD///X0/jIsLP4KBAT/k5OQ+goEBP/jw8D3//X0/5OTkPv/9fT/48PA9gYAAPOTk5D6BgAA8+PDwPfz8/D7k5OQ+/Pz8Pvjw8D0="),
-"bone_aabbs": [AABB(-9.29171, 9.820188, -2.549483, 18.602833, 8.881263, 2.534456)],
-"format": 34359745559,
-"index_count": 24,
-"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8A"),
-"material": SubResource("StandardMaterial3D_77cwl"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 16,
-"vertex_data": PackedByteArray("wmhLwH0fHUG7KiPAwmhLwAkFYkG7KiPAwmhLQH0fHUG7KiPAwmhLQAkFYkG7KiPAahZdQH0fHUFhqCDAahZdQAkFYkFhqCDAXPoUQX0fHUH/LiG9XPoUQQkFYkH/LiG92KoUwX0fHUGDM3a82KoUwQkFYkGDM3a8Gy5cwH0fHUF15B/AGy5cwAkFYkF15B/AwmhLwJlTZkH6CiPAwmhLwJKclUH6CiPAwmhLQJlTZkH6CiPAwmhLQJKclUH6CiPA/3//f////7//f/9/////v/9//3////+//3//f////7/7Wf9/+tn/v/tZ/3/62f+/+1n/f/rZ/7/7Wf9/+tn/vzSm/3///xnTNKb/f///GdM0pv9///8Z0zSm/3///xnT/3//f////7//f/9/////v/9//3////+//3//f////78=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_vhc11"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8khv3"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_dwn3c"]
-resource_name = "FtrGamingDesk_desctop_glass_low__mGlass"
-_surfaces = [{
-"aabb": AABB(5.2250004, 0.2, -1.9499999, 1e-05, 6.0000005, 5.650001),
-"attribute_data": PackedByteArray("+fh4PwAAgD/h4OA8AACAP/n4eD8AAAAA4eDgPAAAAAA="),
-"bone_aabbs": [AABB(5.2250004, 0.2, -1.9499999, 1.001358e-05, 6.0000005, 5.650011)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_8khv3"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("NDOnQM3MTD7RzGxANDOnQM3MTD6Zmfm/NDOnQGdmxkDRzGxANDOnQGdmxkCZmfm/AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//78=")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yxym"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_12brj"]
@@ -86,11 +39,58 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_vhc11"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_pfw08"]
 size = Vector3(19.499325, 18.837349, 9.981723)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oknv8"]
 size = Vector3(19.499325, 18.837349, 9.981723)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77cwl"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gdi0i"]
+resource_name = "FtrGamingDesk_monitorA_screen_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(-9.29171, 9.820188, -2.549483, 18.602833, 8.881263, 2.534456),
+"attribute_data": PackedByteArray("gYAAPOHgYD+BgAA8jIsLP/z8/D7h4GA//Pz8PoyLCz+CgQE/4eBgP4KBAT+Miws///19P+HgYD///X0/jIsLP4KBAT/k5OQ+goEBP/jw8D3//X0/5OTkPv/9fT/48PA9gYAAPOTk5D6BgAA8+PDwPfz8/D7k5OQ+/Pz8Pvjw8D0="),
+"bone_aabbs": [AABB(-9.29171, 9.820188, -2.549483, 18.602833, 8.881263, 2.534456)],
+"format": 34359745559,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8A"),
+"material": SubResource("StandardMaterial3D_77cwl"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("wmhLwH0fHUG7KiPAwmhLwAkFYkG7KiPAwmhLQH0fHUG7KiPAwmhLQAkFYkG7KiPAahZdQH0fHUFhqCDAahZdQAkFYkFhqCDAXPoUQX0fHUH/LiG9XPoUQQkFYkH/LiG92KoUwX0fHUGDM3a82KoUwQkFYkGDM3a8Gy5cwH0fHUF15B/AGy5cwAkFYkF15B/AwmhLwJlTZkH6CiPAwmhLwJKclUH6CiPAwmhLQJlTZkH6CiPAwmhLQJKclUH6CiPA/3//f////7//f/9/////v/9//3////+//3//f////7/7Wf9/+tn/v/tZ/3/62f+/+1n/f/rZ/7/7Wf9/+tn/vzSm/3///xnTNKb/f///GdM0pv9///8Z0zSm/3///xnT/3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8khv3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dwn3c"]
+resource_name = "FtrGamingDesk_desctop_glass_low__mGlass"
+_surfaces = [{
+"aabb": AABB(5.2250004, 0.2, -1.9499999, 1e-05, 6.0000005, 5.650001),
+"attribute_data": PackedByteArray("+fh4PwAAgD/h4OA8AACAP/n4eD8AAAAA4eDgPAAAAAA="),
+"bone_aabbs": [AABB(5.2250004, 0.2, -1.9499999, 1.001358e-05, 6.0000005, 5.650011)],
+"format": 34359745559,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_8khv3"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("NDOnQM3MTD7RzGxANDOnQM3MTD6Zmfm/NDOnQGdmxkDRzGxANDOnQGdmxkCZmfm/AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//78=")
+}]
+blend_shape_mode = 0
 
 [node name="FtrGamingDesk" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -101,15 +101,8 @@ skins = {
 "mReFabric": [ExtResource("10_htpsd"), ExtResource("11_a2d27"), ExtResource("12_f4ten"), ExtResource("13_qycjc"), ExtResource("14_8so5b"), ExtResource("15_tnixd"), ExtResource("16_k713q"), ExtResource("17_htrs7")]
 }
 
-[node name="monitorA_screen_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_gdi0i")
-skin = SubResource("Skin_vhc11")
-
-[node name="desctop_glass_low__mGlass" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_dwn3c")
-skin = SubResource("Skin_vhc11")
-
 [node name="desctop_01_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_12brj")
 skin = SubResource("Skin_vhc11")
 
@@ -126,3 +119,11 @@ shape = SubResource("BoxShape3D_pfw08")
 [node name="@CollisionShape3D@258121" type="CollisionShape3D" parent="desctop_01_low__mReBody/@Area3D@258122"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.418674, 0.041974545)
 shape = SubResource("BoxShape3D_oknv8")
+
+[node name="monitorA_screen_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_gdi0i")
+skin = SubResource("Skin_vhc11")
+
+[node name="desctop_glass_low__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_dwn3c")
+skin = SubResource("Skin_vhc11")

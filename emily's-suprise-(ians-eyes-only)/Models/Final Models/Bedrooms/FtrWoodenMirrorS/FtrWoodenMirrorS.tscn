@@ -11,6 +11,33 @@
 [ext_resource type="Material" uid="uid://g4fldvs5n7il" path="res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/Textures/mReBody6.tres" id="9_m6c47"]
 [ext_resource type="Material" uid="uid://tryqgaa0t2f6" path="res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/Textures/mReBody7.tres" id="10_yeynd"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04nsp"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xt0b0"]
+resource_name = "FtrWoodenMirrorS_Mdl_Mirror__mMirror"
+_surfaces = [{
+"aabb": AABB(-1.671499, 1.246829, -0.4749432, 3.342998, 3.707532, 0.99343026),
+"attribute_data": PackedByteArray("ubi4Pff2dj+5uLg94ODgPOnnZz/39nY/6ednP+Dg4Dw="),
+"bone_aabbs": [AABB(-1.671499, 1.246829, -0.4749432, 3.342998, 3.707532, 0.9934403)],
+"format": 34359745559,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_04nsp"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("rvPVvxiYnz+SuwQ/rvPVvyCKnkDBK/O+rvPVPxiYnz+SuwQ/rvPVPyCKnkDBK/O+/3/8mv///7//f/ya////v/9//Jr///+//3/8mv///78=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="Skin" id="Skin_4lx4l"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68pfa"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pm4e4"]
@@ -32,38 +59,11 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="Skin" id="Skin_4lx4l"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_emdew"]
 size = Vector3(5.636434, 5.521289, 1.8598366)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n7nb"]
 size = Vector3(5.636434, 5.521289, 1.8598366)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04nsp"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_xt0b0"]
-resource_name = "FtrWoodenMirrorS_Mdl_Mirror__mMirror"
-_surfaces = [{
-"aabb": AABB(-1.671499, 1.246829, -0.4749432, 3.342998, 3.707532, 0.99343026),
-"attribute_data": PackedByteArray("ubi4Pff2dj+5uLg94ODgPOnnZz/39nY/6ednP+Dg4Dw="),
-"bone_aabbs": [AABB(-1.671499, 1.246829, -0.4749432, 3.342998, 3.707532, 0.9934403)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_04nsp"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("rvPVvxiYnz+SuwQ/rvPVvyCKnkDBK/O+rvPVPxiYnz+SuwQ/rvPVPyCKnkDBK/O+/3/8mv///7//f/ya////v/9//Jr///+//3/8mv///78=")
-}]
-blend_shape_mode = 0
 
 [node name="FtrWoodenMirrorS" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -73,6 +73,11 @@ skins = {
 "mMirror": [ExtResource("2_r2ujf")],
 "mReBody": [ExtResource("3_5om2p"), ExtResource("4_yu7ao"), ExtResource("5_xhxdi"), ExtResource("6_7oh5k"), ExtResource("7_xdjhd"), ExtResource("8_xs70p"), ExtResource("9_m6c47"), ExtResource("10_yeynd")]
 }
+
+[node name="Mdl_Mirror__mMirror" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_xt0b0")
+skin = SubResource("Skin_4lx4l")
 
 [node name="Mdl_back__mReBody" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_pm4e4")
@@ -91,7 +96,3 @@ shape = SubResource("BoxShape3D_emdew")
 [node name="@CollisionShape3D@257281" type="CollisionShape3D" parent="Mdl_back__mReBody/@Area3D@257282"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7606444, 5.9604645e-08)
 shape = SubResource("BoxShape3D_8n7nb")
-
-[node name="Mdl_Mirror__mMirror" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_xt0b0")
-skin = SubResource("Skin_4lx4l")

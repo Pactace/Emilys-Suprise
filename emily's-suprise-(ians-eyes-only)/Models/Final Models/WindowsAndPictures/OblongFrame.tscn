@@ -16,8 +16,9 @@ size = Vector3(2, 1.5, 0.2)
 [sub_resource type="PlaneMesh" id="PlaneMesh_pa6mt"]
 
 [node name="SquareFrame" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4420253)
+transform = Transform3D(47.903625, 0, 0, 0, 41.885567, 0, 0, 0, 6.046164, 0, 0, -0.4420253)
 script = ExtResource("1_7b6h3")
+area_path = NodePath("OblongFrame/Area3D")
 skins = {
 "Frame": [ExtResource("2_x0pjr"), ExtResource("3_7b6h3"), ExtResource("4_pmsaj"), ExtResource("5_5iwvn")],
 "Pictures": [ExtResource("6_pcoko"), ExtResource("7_r23ky"), ExtResource("8_ygwxf")]

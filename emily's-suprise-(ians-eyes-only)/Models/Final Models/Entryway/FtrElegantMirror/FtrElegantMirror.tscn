@@ -75,10 +75,12 @@ skins = {
 }
 
 [node name="Mirror_low__mMirror" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.1891253, 0, 0, 0, 1.5845214, 0, 0, 0, 0.99999976, 0, 0, 0)
 mesh = SubResource("ArrayMesh_b2maq")
 skin = SubResource("Skin_1q2a4")
 
 [node name="Flame_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.1891253, 0, 0, 0, 1.5845214, 0, 0, 0, 0.99999976, 0, 0, 0)
 mesh = SubResource("ArrayMesh_qej8m")
 skin = SubResource("Skin_1q2a4")
 

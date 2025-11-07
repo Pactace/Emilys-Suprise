@@ -15,33 +15,6 @@
 [ext_resource type="Material" uid="uid://cux18ep8o3xvr" path="res://Models/Final Models/Tower/FtrOpenshelfWood/Textures/mReFabric3.tres" id="13_8mai6"]
 [ext_resource type="Material" uid="uid://d2eck6wjhyvpo" path="res://Models/Final Models/Tower/FtrOpenshelfWood/Textures/mReFabric4.tres" id="14_mcld8"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2l3q"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_2gqi8"]
-resource_name = "FtrOpenshelfWood_Photo__mReFabric"
-_surfaces = [{
-"aabb": AABB(-1.318836, 6.430153, -0.1052426, 2.637672, 2.970377, 1.3851106),
-"attribute_data": PackedByteArray("ycjIPQAAAADn5mY/AAAAAMnIyD0AAIA/5+ZmPwAAgD8="),
-"bone_aabbs": [AABB(-1.318836, 6.430153, -0.1052426, 2.637672, 2.9703865, 1.3851106)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_b2l3q"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("ns+ov5JoFkFvide9ns+oP5JoFkFvide9ns+ov9DDzUC30qM/ns+oP9DDzUC30qM//3+3qP///7//f7eo////v/9/t6j///+//3+3qP///78=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_a1tus"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dl2a"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_koppd"]
@@ -63,11 +36,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_a1tus"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_r72gk"]
 size = Vector3(20, 11.5, 6)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fd0uq"]
 size = Vector3(20, 11.5, 6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2l3q"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2gqi8"]
+resource_name = "FtrOpenshelfWood_Photo__mReFabric"
+_surfaces = [{
+"aabb": AABB(-1.318836, 6.430153, -0.1052426, 2.637672, 2.970377, 1.3851106),
+"attribute_data": PackedByteArray("ycjIPQAAAADn5mY/AAAAAMnIyD0AAIA/5+ZmPwAAgD8="),
+"bone_aabbs": [AABB(-1.318836, 6.430153, -0.1052426, 2.637672, 2.9703865, 1.3851106)],
+"format": 34359745559,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_b2l3q"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("ns+ov5JoFkFvide9ns+oP5JoFkFvide9ns+ov9DDzUC30qM/ns+oP9DDzUC30qM//3+3qP///7//f7eo////v/9/t6j///+//3+3qP///78=")
+}]
+blend_shape_mode = 0
 
 [node name="FtrOpenshelfWood" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -78,11 +78,8 @@ skins = {
 "mReFabric": [ExtResource("10_7av0x"), ExtResource("11_1sc22"), ExtResource("12_1ec4b"), ExtResource("13_8mai6"), ExtResource("14_mcld8")]
 }
 
-[node name="Photo__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_2gqi8")
-skin = SubResource("Skin_a1tus")
-
 [node name="Book1_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_koppd")
 skin = SubResource("Skin_a1tus")
 
@@ -99,3 +96,7 @@ shape = SubResource("BoxShape3D_r72gk")
 [node name="@CollisionShape3D@258597" type="CollisionShape3D" parent="Book1_low__mReBody/@Area3D@258598"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.75, 0)
 shape = SubResource("BoxShape3D_fd0uq")
+
+[node name="Photo__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_2gqi8")
+skin = SubResource("Skin_a1tus")

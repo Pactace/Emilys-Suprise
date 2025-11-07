@@ -98,12 +98,14 @@ skins = {
 }
 
 [node name="Frame" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, 0, 0.08806756)
+transform = Transform3D(-1.0704504e-06, 0, 27.91533, 0, 28.758314, 0, -24.489052, 0, -1.2202178e-06, -0.11847183, 0, 0.120147)
 material_override = ExtResource("2_fp3i6")
 mesh = SubResource("ArrayMesh_qx8si")
 skeleton = NodePath("")
 
 [node name="StaticBody" type="StaticBody3D" parent="Frame"]
+collision_layer = 132
+collision_mask = 132
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Frame/StaticBody"]
 shape = SubResource("BoxShape3D_y2b5d")
@@ -114,7 +116,7 @@ shape = SubResource("BoxShape3D_y2b5d")
 shape = SubResource("BoxShape3D_y2b5d")
 
 [node name="BackPane" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, -8.742278e-08, -0.5, 0, 2, -2.1855694e-08, 0.01828599, 0, 0.08236177)
+transform = Transform3D(6.978831, 0, 0, 0, -1.0704509e-06, -7.1895766, 0, 24.489063, -3.1426643e-07, 0.13675782, 0, 0.050282344)
 material_override = SubResource("StandardMaterial3D_muh0k")
 mesh = SubResource("PlaneMesh_pa6mt")
 

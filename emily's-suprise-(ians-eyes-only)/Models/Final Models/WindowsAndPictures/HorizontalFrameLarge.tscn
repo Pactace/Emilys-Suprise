@@ -18,13 +18,14 @@ size = Vector3(4, 2.5, 0.2)
 [node name="SquareFrame" type="Node3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.4420253)
 script = ExtResource("1_j3jvi")
+area_path = NodePath("HorizontalFrameLarge/Area3D")
 skins = {
 "Frame": [ExtResource("2_v64xa"), ExtResource("3_l0r56"), ExtResource("4_a1xhb"), ExtResource("5_a8raq")],
 "Pictures": [ExtResource("6_f10rv"), ExtResource("7_k7bh3"), ExtResource("8_rub8c")]
 }
 
 [node name="HorizontalFrameLarge" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5483711, -1.7318698, 0.22491002)
+transform = Transform3D(8.898879, 0, 0, 0, 8.24871, 0, 0, 0, 8.258945, 27.973324, -29.507278, 2.4259326)
 material_override = ExtResource("2_v64xa")
 mesh = ExtResource("9_de383")
 
@@ -45,6 +46,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7185917, 0.40869492, 0)
 shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.90414643, 0, 0, 0, -1.0927847e-08, -0.56866497, 0, 0.25, -2.4857135e-08, -0.03582412, 0.078552485, 0.16833922)
+transform = Transform3D(16.091784, 0, 0, 0, -1.8050504e-07, -9.3815, 0, 4.1294746, -4.1007843e-07, -0.22180462, 0.36001492, 1.4915023)
 material_override = ExtResource("8_rub8c")
 mesh = SubResource("PlaneMesh_pa6mt")

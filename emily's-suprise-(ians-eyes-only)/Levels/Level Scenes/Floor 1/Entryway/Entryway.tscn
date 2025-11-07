@@ -86,7 +86,7 @@ next_door = "EntrywayDoor"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1995726, 0, 0)
 
 [node name="FrontDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_l6yyg")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.1843195, 3.7506723, 12.719878)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3.751, 12.72)
 marker = NodePath("Marker3D2")
 
 [node name="Marker3D2" type="Marker3D" parent="Doors/FrontDoor"]
@@ -114,6 +114,3 @@ transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 0, 0, 1, -1.0142045, -0.1
 
 [node name="MusicPlayer" parent="." instance=ExtResource("14_6st5h")]
 stream = ExtResource("15_5tvfp")
-volume_db = -9.395
-max_db = -8.415
-autoplay = false

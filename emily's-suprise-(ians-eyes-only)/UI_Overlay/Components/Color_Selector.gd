@@ -4,6 +4,12 @@ var mesh_skins = []
 var num_of_skins: int
 var instance: Node3D
 var mesh_index: int
+var count: int
+
+func enable():
+	var count: int = get_child(1).text.to_int()
+	count = 1
+	get_child(1).text = str(count)
 
 func increase():
 	var count: int = get_child(1).text.to_int()

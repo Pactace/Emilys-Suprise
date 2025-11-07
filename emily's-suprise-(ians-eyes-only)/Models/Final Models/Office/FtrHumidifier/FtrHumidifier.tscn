@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://ca4dtjryndhtx"]
+[gd_scene load_steps=14 format=4 uid="uid://ca4dtjryndhtx"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_h06h7"]
 [ext_resource type="Material" uid="uid://cux1ch7q7ff1m" path="res://Models/Final Models/Office/FtrHumidifier/Textures/mReBody0.tres" id="2_n42kx"]
@@ -41,29 +41,35 @@ bind/1/name = &"Root"
 bind/1/bone = -1
 bind/1/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n42kx"]
+size = Vector3(5, 8, 5)
+
 [node name="FtrHumidifier" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_h06h7")
+area_path = NodePath("case_low__mReBody/StaticBody3D2")
 skins = {
 "mReBody": [ExtResource("2_n42kx"), ExtResource("3_5nnve"), ExtResource("4_gg548"), ExtResource("5_t4bbf"), ExtResource("6_im433"), ExtResource("7_vvu5f"), ExtResource("8_lbufq"), ExtResource("9_h4aut")]
 }
 
-[node name="Skeleton3D" type="Skeleton3D" parent="."]
-bones/0/name = "Root"
-bones/0/parent = -1
-bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-bones/0/enabled = true
-bones/0/position = Vector3(0, 0, 0)
-bones/0/rotation = Quaternion(0, 0, 0, 1)
-bones/0/scale = Vector3(1, 1, 1)
-bones/1/name = "Dial"
-bones/1/parent = 0
-bones/1/rest = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 0, 0.9814219, 2)
-bones/1/enabled = true
-bones/1/position = Vector3(0, 0.9814219, 2)
-bones/1/rotation = Quaternion(0, -0.7071067, 0, 0.7071068)
-bones/1/scale = Vector3(1, 1, 1)
-
-[node name="case_low__mReBody" type="MeshInstance3D" parent="Skeleton3D"]
+[node name="case_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_if0n2")
 skin = SubResource("Skin_68owy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="case_low__mReBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.705026, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="case_low__mReBody/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5762372, 0)
+shape = SubResource("BoxShape3D_n42kx")
+
+[node name="StaticBody3D2" type="Area3D" parent="case_low__mReBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.705026, 0)
+collision_layer = 132
+collision_mask = 132
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="case_low__mReBody/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5762372, 0)
+shape = SubResource("BoxShape3D_n42kx")

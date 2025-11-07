@@ -9,33 +9,6 @@
 [ext_resource type="Material" uid="uid://caafrym1xlrrp" path="res://Models/Final Models/Office/FtrCartoonistset/Textures/mReFabric1.tres" id="7_tqy4k"]
 [ext_resource type="Material" uid="uid://dyu4awlaeh1kx" path="res://Models/Final Models/Office/FtrCartoonistset/Textures/mReFabric2.tres" id="8_5jrri"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wo64"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ylggg"]
-resource_name = "FtrCartoonistset_Paper2_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(-3.019299, 0.8531981, -4.284178, 5.462674, 1.0479288, 7.456398),
-"attribute_data": PackedByteArray("hogIPqakJD+GiAg+uLa2PoOAgDympCQ/g4CAPLi2tj7a2Vk/gICAO9rZWT/+/X0/mJgYPoCAgDuYmBg+/v19Pw=="),
-"bone_aabbs": [AABB(-3.019299, 0.8531981, -4.284178, 5.4626837, 1.0479288, 7.456398)],
-"format": 34359745559,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcA"),
-"material": SubResource("StandardMaterial3D_8wo64"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("QmAcQJXU7z/g14LA7WAvwCFY8z/8F4nALT8XQF1Pyj9uMwDAAoI0wOnSzT+iswzAQmAcQJXU7z/g14LA/YQKQDFrWj+nBUtA7WAvwCFY8z/8F4nAMjxBwDxyYT9uhT5Av48AAMLwFgK/jwAAwvAWAr+PAADC8BYCv48AAMLwFgL/fz7wufqsv/9/PvC4+qy//38+8Lj6rL//fz7wufqsvw==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_p7uir"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rhd4"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qqln1"]
@@ -57,11 +30,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_p7uir"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_g44i8"]
 size = Vector3(8.800001, 3.0783799, 7.833164)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eb833"]
 size = Vector3(8.800001, 3.0783799, 7.833164)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wo64"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ylggg"]
+resource_name = "FtrCartoonistset_Paper2_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(-3.019299, 0.8531981, -4.284178, 5.462674, 1.0479288, 7.456398),
+"attribute_data": PackedByteArray("hogIPqakJD+GiAg+uLa2PoOAgDympCQ/g4CAPLi2tj7a2Vk/gICAO9rZWT/+/X0/mJgYPoCAgDuYmBg+/v19Pw=="),
+"bone_aabbs": [AABB(-3.019299, 0.8531981, -4.284178, 5.4626837, 1.0479288, 7.456398)],
+"format": 34359745559,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcA"),
+"material": SubResource("StandardMaterial3D_8wo64"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("QmAcQJXU7z/g14LA7WAvwCFY8z/8F4nALT8XQF1Pyj9uMwDAAoI0wOnSzT+iswzAQmAcQJXU7z/g14LA/YQKQDFrWj+nBUtA7WAvwCFY8z/8F4nAMjxBwDxyYT9uhT5Av48AAMLwFgK/jwAAwvAWAr+PAADC8BYCv48AAMLwFgL/fz7wufqsv/9/PvC4+qy//38+8Lj6rL//fz7wufqsvw==")
+}]
+blend_shape_mode = 0
 
 [node name="FtrCartoonistset" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -72,11 +72,8 @@ skins = {
 "mReFabric": [ExtResource("6_ltlsf"), ExtResource("7_tqy4k"), ExtResource("8_5jrri")]
 }
 
-[node name="Paper2_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_ylggg")
-skin = SubResource("Skin_p7uir")
-
 [node name="Eraser_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_qqln1")
 skin = SubResource("Skin_p7uir")
 
@@ -93,3 +90,7 @@ shape = SubResource("BoxShape3D_g44i8")
 [node name="@CollisionShape3D@258081" type="CollisionShape3D" parent="Eraser_low__mReBody/@Area3D@258082"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4305115e-06, 1.5391898, -0.08067989)
 shape = SubResource("BoxShape3D_eb833")
+
+[node name="Paper2_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ylggg")
+skin = SubResource("Skin_p7uir")

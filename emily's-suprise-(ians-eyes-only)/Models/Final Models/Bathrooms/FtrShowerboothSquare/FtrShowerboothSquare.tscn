@@ -1,7 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://v84fhvkkfyuw"]
+[gd_scene load_steps=14 format=4 uid="uid://v84fhvkkfyuw"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_v1k8r"]
-[ext_resource type="Material" uid="uid://dkbg8m27me8ra" path="res://Models/Final Models/Bathrooms/FtrShowerboothSquare/Textures/mGlass0.tres" id="2_siqke"]
 [ext_resource type="Material" uid="uid://bmq7htnood0xo" path="res://Models/Final Models/Bathrooms/FtrShowerboothSquare/Textures/mMirror0.tres" id="3_sd3uf"]
 [ext_resource type="Material" uid="uid://cya8aeexpof7p" path="res://Models/Final Models/Bathrooms/FtrShowerboothSquare/Textures/mReBody0.tres" id="4_nhbs3"]
 [ext_resource type="Material" uid="uid://djtarhu4rx22n" path="res://Models/Final Models/Bathrooms/FtrShowerboothSquare/Textures/mReBody1.tres" id="5_6oytk"]
@@ -36,26 +35,6 @@ bind/0/name = &"Root"
 bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cr227"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_emkf5"]
-resource_name = "FtrShowerboothSquare_Glass__mGlass"
-_surfaces = [{
-"aabb": AABB(-4.579299, 1.5849899, 5.307133, 9.158597, 17.85639, 1e-05),
-"attribute_data": PackedByteArray("h4YGPwAAgD/NzMw+AAAAAIeGBj8AAAAAzczMPgAAgD+/vLw+AAAAAL+8vD4AAIA/xcBAPAAAAADFwEA8AACAPw=="),
-"bone_aabbs": [AABB(-4.579299, 1.5849899, 5.307133, 9.1586075, 17.85639, 1.001358e-05)],
-"format": 34359745559,
-"index_count": 18,
-"index_data": PackedByteArray("AAABAAIAAwABAAAAAwAEAAEABQAEAAMABQAGAAQABwAGAAUA"),
-"material": SubResource("StandardMaterial3D_cr227"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("nImSQPPgyj8J1KlASgkXQPKHm0EL1KlAnImSQPKHm0EL1KlASgkXQPPgyj8J1KlAE7rpP/KHm0EL1KlAE7rpP/Pgyj8J1KlAnomSwPKHm0EL1KlAnomSwPPgyj8J1KlA/3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////vw==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyi47"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ytlj3"]
@@ -88,17 +67,12 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_v1k8r")
 area_path = NodePath("BigShower_low__mReBody/@Area3D@256930")
 skins = {
-"mGlass": [ExtResource("2_siqke")],
 "mMirror": [ExtResource("3_sd3uf")],
 "mReBody": [ExtResource("4_nhbs3"), ExtResource("5_6oytk"), ExtResource("6_isauf"), ExtResource("7_5g037")]
 }
 
 [node name="Mirror_low__mMirror" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_4yduc")
-skin = SubResource("Skin_fp7b3")
-
-[node name="Glass__mGlass" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_emkf5")
 skin = SubResource("Skin_fp7b3")
 
 [node name="BigShower_low__mReBody" type="MeshInstance3D" parent="."]

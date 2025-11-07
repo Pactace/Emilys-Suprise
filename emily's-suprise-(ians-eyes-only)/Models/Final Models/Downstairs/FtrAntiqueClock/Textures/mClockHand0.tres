@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bpdlgjqp8w5dw"]
-
-[ext_resource type="Texture2D" uid="uid://bhknccb0ybkuo" path="res://Models/Final Models/Downstairs/FtrAntiqueClock/Textures/mClockHand_Alb.png" id="1_dkx8v"]
-
-[resource]
-resource_name = "mClockHand0"
-albedo_texture = ExtResource("1_dkx8v")

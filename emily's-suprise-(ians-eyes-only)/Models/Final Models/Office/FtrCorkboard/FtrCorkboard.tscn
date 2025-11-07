@@ -36,26 +36,6 @@ bind/0/name = &"Root"
 bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvsnc"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_0qxhs"]
-resource_name = "FtrCorkboard_mycard_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(0.9444915, -1.240189, 0.5, 3.8698068, 3.8698058, 1e-05),
-"attribute_data": PackedByteArray("3MBZPPwMfD/cwFk8wMBDPPxkfD/8DHw//GR8P8DAQzw="),
-"bone_aabbs": [AABB(0.9444915, -1.240189, 0.5, 3.8698068, 3.8698058, 1.001358e-05)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_pvsnc"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("MspxP6A1db8AAAA/zAidP6VLKEAAAAA/zQWRQIO+nr8AAAA/uw6aQM05FkAAAAA//3//f6j2U7v/f/9/qPZTu/9//3+o9lO7/3//f6j2U7s=")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65qoi"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gqkfy"]
@@ -83,6 +63,26 @@ size = Vector3(15.625, 9.375, 1.1490601)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxlon"]
 size = Vector3(15.625, 9.375, 1.1490601)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvsnc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0qxhs"]
+resource_name = "FtrCorkboard_mycard_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(0.9444915, -1.240189, 0.5, 3.8698068, 3.8698058, 1e-05),
+"attribute_data": PackedByteArray("3MBZPPwMfD/cwFk8wMBDPPxkfD/8DHw//GR8P8DAQzw="),
+"bone_aabbs": [AABB(0.9444915, -1.240189, 0.5, 3.8698068, 3.8698058, 1.001358e-05)],
+"format": 34359745559,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_pvsnc"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("MspxP6A1db8AAAA/zAidP6VLKEAAAAA/zQWRQIO+nr8AAAA/uw6aQM05FkAAAAA//3//f6j2U7v/f/9/qPZTu/9//3+o9lO7/3//f6j2U7s=")
+}]
+blend_shape_mode = 0
+
 [node name="FtrCorkboard" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_w4snr")
@@ -97,11 +97,8 @@ skins = {
 mesh = SubResource("ArrayMesh_jj7vr")
 skin = SubResource("Skin_di6b6")
 
-[node name="mycard_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_0qxhs")
-skin = SubResource("Skin_di6b6")
-
 [node name="board_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gqkfy")
 skin = SubResource("Skin_di6b6")
 
@@ -118,3 +115,7 @@ shape = SubResource("BoxShape3D_xg1tk")
 [node name="@CollisionShape3D@258097" type="CollisionShape3D" parent="board_low__mReBody/@Area3D@258098"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.56319284)
 shape = SubResource("BoxShape3D_pxlon")
+
+[node name="mycard_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_0qxhs")
+skin = SubResource("Skin_di6b6")

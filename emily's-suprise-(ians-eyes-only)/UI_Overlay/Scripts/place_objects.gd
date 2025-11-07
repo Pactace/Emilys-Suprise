@@ -24,6 +24,7 @@ var selected_object: Node3D
 var object_just_placed: Node3D
 var rotate_object: bool = false
 var can_place: bool = false
+var in_cache: bool = false
 
 @onready var triggers_to_rotate = $Triggers_To_Rotate
 @onready var move_place = $Move_Place
@@ -37,16 +38,8 @@ func enabled():
 	visible = true
 	pallet_swap.visible = false
 	if spawned_object:
-		var instance = spawned_object.instantiate()
-		get_parent().add_child(instance)
-		instance.is_on_wall = spawned_object_is_wall
-		instance.area = instance.get_node(instance.area_path)
-		possible_selected_object = instance
-		selected_object = possible_selected_object
-		spawned_object = null
-		spawned_object_is_wall = false
-		mouse.position = Vector2(325, 250)
-
+		_handle_spawned_object()
+	
 func disabled():
 	visible = false
 	edit_ray = null
@@ -127,7 +120,7 @@ func _unhandled_input(event: InputEvent) -> void:
 #---Placing Functions--#
 func placing_object():
 	var query = create_ray()
-	query.collision_mask = (1 if !is_wall else 2)
+	query.collision_mask = (1 if !selected_object.is_on_wall else 2)
 	to_place_move_label.text = "To Place"
 	
 	var collision = camera.get_world_3d().direct_space_state.intersect_ray(query)
@@ -135,7 +128,7 @@ func placing_object():
 		if collision:
 			selected_object.visible = true
 			
-			if is_wall and collision.rid != previous_rid:
+			if selected_object.is_on_wall: #and collision.rid != previous_rid:
 				var basis = Basis.IDENTITY
 				basis.z = collision.normal
 				basis.y = Vector3(0,1,0)
@@ -143,9 +136,7 @@ func placing_object():
 				selected_object.basis = basis
 				previous_rid = collision.rid
 				wall_name = collision.collider.get_parent().name
-				if selected_object.name.contains("Ftr"): selected_object.scale = Vector3(0.2, 0.2, 0.2)
-				else:
-					selected_object.scale = Vector3(3,3,3)
+				selected_object.scale = Vector3(0.2, 0.2, 0.2) 
 			
 			selected_object.transform.origin = collision.position
 			can_place = selected_object.check_placement()
@@ -209,7 +200,25 @@ func finalize_edit_object():
 func _on_ui_overlay_is_wall_change(state: bool) -> void:
 	is_wall = state
 	
-func assign_selected_object(object: PackedScene, is_wall: bool):
+func assign_selected_object(object: PackedScene, is_wall: bool, in_resource_cache: bool):
 	spawned_object = object
 	spawned_object_is_wall = is_wall
+	in_cache = in_resource_cache
+	
+	
+func _handle_spawned_object():
+		var instance = spawned_object.instantiate()
+		get_parent().get_parent().add_child(instance)
+		instance.is_on_wall = spawned_object_is_wall
+		instance.area = instance.get_node(instance.area_path)
+		possible_selected_object = instance
+		selected_object = possible_selected_object
+		spawned_object = null
+		spawned_object_is_wall = false
+		print(selected_object.name)
+		if instance.is_on_wall:
+			selected_object.scale = Vector3(0.2, 0.2, 0.2) 
+		else:
+			selected_object.scale = Vector3(0.3, 0.3, 0.3) 
+		mouse.position = Vector2(325, 250)
 	

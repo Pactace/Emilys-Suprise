@@ -25,7 +25,7 @@ skins = {
 }
 
 [node name="HexagonalFrame" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3097212, 0.2409668, 0.040923953)
+transform = Transform3D(10.690741, 0, 0, 0, 11.6059065, 0, 0, 0, 16.113756, 34.52069, 3.522059, 1.3642435)
 material_override = ExtResource("4_fut4v")
 mesh = ExtResource("9_1i0oe")
 
@@ -46,6 +46,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
 shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.42243937, 0, 0, 0, -1.0927847e-08, -0.39180958, 0, 0.25, -1.712654e-08, 0.01828599, -0.041235983, 0.04884234)
+transform = Transform3D(4.51619, 0, 0, 0, -1.7608866e-07, -4.5473037, 0, 4.0284395, -1.9876897e-07, -0.66719055, 0.24684012, 1.4918382)
 material_override = ExtResource("6_20lie")
 mesh = SubResource("PlaneMesh_pa6mt")

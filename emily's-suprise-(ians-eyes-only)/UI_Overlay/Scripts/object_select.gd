@@ -3,8 +3,8 @@ extends GridContainer
 @export var tab_name: String = ""
 @export var nav_delay: float = 0.2  # seconds between moves
 @export var inventory: Resource     # assign .tres in Inspector
-@export var visible_rows: int = 5  # number of rows visible at a time
-@export var row_height: int = 60   # pixel height per row (adjust if needed)
+@export var visible_rows: int = 5   # number of rows visible at a time
+@export var row_height: int = 60    # pixel height per row (adjust if needed)
 
 var is_wall: bool = false
 var selected_object: Control = null
@@ -14,6 +14,8 @@ var can_navigate: bool = true
 var object_dict: Dictionary = {}
 var inventory_set: bool = false
 var scroll_container: ScrollContainer
+var resource_cache := {}  # cache for loaded scenes/materials
+var in_reasource_cache := false
 
 
 func _ready() -> void:
@@ -68,21 +70,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		_handle_accept_action()
 
 	if moved:
-		# Clamp col in case new row has fewer items
 		selected_col = clamp(selected_col, 0, grid[selected_row].size() - 1)
 		selected_object = grid[selected_row][selected_col]
 		highlight_selection(selected_object)
-		
-		# Keep selected row visible within 6-row window
 		_update_scroll_position(row_count)
-		
-		# Delay navigation to prevent overshooting
+
 		can_navigate = false
 		await get_tree().create_timer(nav_delay).timeout
 		can_navigate = true
 
 
-# Keep selection visible by adjusting scroll dynamically
 func _update_scroll_position(row_count: int) -> void:
 	if not scroll_container:
 		return
@@ -98,28 +95,31 @@ func _update_scroll_position(row_count: int) -> void:
 
 
 func _handle_accept_action() -> void:
+	var parent_root = get_parent().get_parent().get_parent()
+	var room = get_parent().get_parent().room
+
 	if tab_name == "Wallpapers":
-		var room = get_parent().get_parent().room
-		var wall_material: ShaderMaterial = selected_object.get_meta("scene", null)
-		room.change_wallpaper(wall_material)
+		var wall_path: String = selected_object.get_meta("scene_path", "")
+		if wall_path != "":
+			var wall_material: ShaderMaterial = get_resource(wall_path)
+			room.change_wallpaper(wall_material)
+
 	elif tab_name == "Flooring":
-		var room = get_parent().get_parent().room
-		var floor_material: StandardMaterial3D = selected_object.get_meta("scene", null)
+		var floor_material: StandardMaterial3D = selected_object.get_meta("scene_path", "")
 		room.change_flooring(floor_material)
+
 	else:
-		var packed_scene: PackedScene = selected_object.get_meta("scene", null)
-		#var room = get_parent().get_parent().room
-		
-		if packed_scene:
-			#this is godless but it works
-			#var instance = packed_scene.instantiate()
-			get_parent().get_parent().get_parent().get_child(4).assign_selected_object(packed_scene, is_wall)
-			get_parent().get_parent().get_parent().current_state = get_parent().get_parent().get_parent().EditState.Edit_Objects
-			get_parent().get_parent().get_parent().switch_states()
-			#room.add_object(instance, is_wall)
+		var scene_path: String = selected_object.get_meta("scene_path", "")
+		if scene_path != "":
+			var packed_scene: PackedScene = get_resource(scene_path)
+			if packed_scene:
+				parent_root.get_child(4).assign_selected_object(packed_scene, is_wall, in_reasource_cache)
+				parent_root.current_state = parent_root.EditState.Edit_Objects
+				parent_root.switch_states()
+	in_reasource_cache = false
 
 
-# Build a 2D array from GridContainer’s children
+# Utility: 2D array from GridContainer children
 func get_children_grid() -> Array:
 	var cols: int = max(columns, 1)
 	var children := get_children()
@@ -138,7 +138,7 @@ func get_children_grid() -> Array:
 
 func highlight_selection(node: Control) -> void:
 	var unselected_style: StyleBox = load("res://UI_Overlay/Components/unselected_container_object.tres")
-	var selected_style: StyleBox   = load("res://UI_Overlay/Components/selected_container_object.tres")
+	var selected_style: StyleBox = load("res://UI_Overlay/Components/selected_container_object.tres")
 
 	for child in get_children():
 		if child is Panel:
@@ -158,6 +158,7 @@ func load_objects(dict: Dictionary) -> void:
 		var stylebox: StyleBox = load("res://UI_Overlay/Components/unselected_container_object.tres")
 		if stylebox:
 			panel.add_theme_stylebox_override("panel", stylebox)
+
 		var icon = TextureRect.new()
 		icon.texture = load(key)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
@@ -165,8 +166,23 @@ func load_objects(dict: Dictionary) -> void:
 		icon.position = Vector2(12.5, 10)
 		icon.custom_minimum_size = Vector2(100, 50)
 		panel.add_child(icon)
-		panel.set_meta("scene", dict[key])
+
+		# Store path instead of preloaded scene
+		panel.set_meta("scene_path", dict[key])
+
 		add_child(panel)
+
+
+# Cached resource loader (saves memory + avoids reloading)
+func get_resource(path: String) -> Resource:
+	if path == "":
+		return null
+	if resource_cache.has(path):
+		in_reasource_cache = true
+		return resource_cache[path]
+	var res = load(path)
+	resource_cache[path] = res
+	return res
 
 
 func _on_tab_container_is_wall_change(state: bool) -> void:

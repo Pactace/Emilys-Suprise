@@ -13,33 +13,6 @@
 [ext_resource type="Material" uid="uid://04akje7krymm" path="res://Models/Final Models/Office/FtrDesktopPC/Textures/mReFabric5.tres" id="11_m555a"]
 [ext_resource type="Material" uid="uid://bomh6tx48hb6" path="res://Models/Final Models/Office/FtrDesktopPC/Textures/mReFabric6.tres" id="12_5ycp6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_at4it"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_2nsnt"]
-resource_name = "FtrDesktopPC_display_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(-2.001139, 1.570731, -0.4018296, 6.227298, 3.91076, 1e-05),
-"attribute_data": PackedByteArray("AAAAANHQUD8AAAAAvLw8PgAAgD/R0FA/AACAP7y8PD4="),
-"bone_aabbs": [AABB(-2.001139, 1.570731, -0.4018296, 6.227298, 3.91076, 1.001358e-05)],
-"format": 34359745559,
-"index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
-"material": SubResource("StandardMaterial3D_at4it"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("qRIAwLcNyT+cvM2+qRIAwGBor0CcvM2+sjyHQLcNyT+cvM2+sjyHQGBor0CcvM2+/3//f////7//f/9/////v/9//3////+//3//f////78=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_tbb0k"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmtq8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_h5dy0"]
@@ -61,11 +34,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_tbb0k"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ju8s1"]
 size = Vector3(8.676558, 5.726672, 5.528769)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a6g7r"]
 size = Vector3(8.676558, 5.726672, 5.528769)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_at4it"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2nsnt"]
+resource_name = "FtrDesktopPC_display_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(-2.001139, 1.570731, -0.4018296, 6.227298, 3.91076, 1e-05),
+"attribute_data": PackedByteArray("AAAAANHQUD8AAAAAvLw8PgAAgD/R0FA/AACAP7y8PD4="),
+"bone_aabbs": [AABB(-2.001139, 1.570731, -0.4018296, 6.227298, 3.91076, 1.001358e-05)],
+"format": 34359745559,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgABAAMA"),
+"material": SubResource("StandardMaterial3D_at4it"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("qRIAwLcNyT+cvM2+qRIAwGBor0CcvM2+sjyHQLcNyT+cvM2+sjyHQGBor0CcvM2+/3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
 
 [node name="FtrDesktopPC" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -76,11 +76,8 @@ skins = {
 "mReFabric": [ExtResource("6_olu3v"), ExtResource("7_knfyx"), ExtResource("8_iriwe"), ExtResource("9_j2i3x"), ExtResource("10_g67m7"), ExtResource("11_m555a"), ExtResource("12_5ycp6")]
 }
 
-[node name="display_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_2nsnt")
-skin = SubResource("Skin_tbb0k")
-
 [node name="PC1_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_h5dy0")
 skin = SubResource("Skin_tbb0k")
 
@@ -97,3 +94,7 @@ shape = SubResource("BoxShape3D_ju8s1")
 [node name="@CollisionShape3D@258101" type="CollisionShape3D" parent="PC1_low__mReBody/@Area3D@258102"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15538883, 2.863336, 0.3355794)
 shape = SubResource("BoxShape3D_a6g7r")
+
+[node name="display_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_2nsnt")
+skin = SubResource("Skin_tbb0k")

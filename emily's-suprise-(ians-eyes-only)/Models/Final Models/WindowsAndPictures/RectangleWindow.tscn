@@ -110,13 +110,15 @@ skins = {
 }
 
 [node name="Frame" type="MeshInstance3D" parent="."]
-transform = Transform3D(100, 0, 0, 0, -1.1920931e-05, 100, 0, -100, -1.1920931e-05, 0, -0.4459117, 0.22399944)
+transform = Transform3D(1810.8813, 0, 0, 0, -0.00015101796, 1584.4147, 0, -1266.8301, -0.00018887698, -0.27413929, -9.006528, 0.10604656)
 material_override = ExtResource("2_2q8as")
 mesh = SubResource("ArrayMesh_4isqa")
 skeleton = NodePath("")
 
 [node name="StaticBody" type="StaticBody3D" parent="Frame"]
 transform = Transform3D(-8.7422775e-10, 0, 0.02, 0.02, -2.3841862e-09, 8.7422775e-10, 2.3841862e-09, 0.02, 1.0421609e-16, 0, -0.00088067644, 0.006738456)
+collision_layer = 132
+collision_mask = 132
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Frame/StaticBody"]
 shape = SubResource("BoxShape3D_y2b5d")
@@ -128,7 +130,7 @@ transform = Transform3D(-8.7422775e-10, 0, 0.02, 0.02, -2.3841862e-09, 8.7422775
 shape = SubResource("BoxShape3D_y2b5d")
 
 [node name="BackPane" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.41453135, 0, 0, 0, -8.742278e-08, -0.60425967, 0, 2, -2.6413028e-08, 0.032046556, 0.14564276, 0.2442171)
+transform = Transform3D(7.5066705, 0, 0, 0, -1.1074986e-06, -9.573974, 0, 25.33662, -4.1849162e-07, 0.30618584, 0.36614275, 0.36216995)
 material_override = SubResource("StandardMaterial3D_muh0k")
 mesh = SubResource("PlaneMesh_pa6mt")
 

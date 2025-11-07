@@ -31,10 +31,13 @@ func _process(delta: float) -> void:
 	#this is just for some culling effects
 	if is_on_wall && camera && camera.basis.z != previous_cam_z:
 		var dot_product = -basis.z.dot(camera.basis.z)
-		if dot_product > 15:
+		if dot_product > .1:
 			visible = false
+			area.get_child(0).set_deferred("disabled",true)
+
 		else: 
 			visible = true
+			area.get_child(0).set_deferred("disabled",false)
 		previous_cam_z = camera.basis.z
 
 #We want to check if there are things in the way of our placement
