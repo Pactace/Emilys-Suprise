@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://saa7vohmdwkb"]
+[gd_scene load_steps=17 format=3 uid="uid://saa7vohmdwkb"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_rfmqt"]
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_uphnt"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_ob45l"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_e5blo"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="4_q0062"]
@@ -22,6 +23,8 @@ shader_parameter/screen_width = 0.0
 shader_parameter/screen_height = 0.0
 
 [node name="TripleThreat" type="Node3D"]
+script = ExtResource("1_uphnt")
+room_name = "TipleThreat"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera", "front_marker", "back_marker") instance=ExtResource("1_rfmqt")]
 horizontal_size = 15

@@ -19,13 +19,16 @@ var placable_location_found
 @export_enum("Normal", "Table", "Placeable on Table", "Rug") var object_type: int
 
 @export var skins = {}
+var selected_skins = {}
 
 func _ready() -> void:
 	camera = get_viewport().get_camera_3d()
 	for child : MeshInstance3D in get_children():
-		for skin in skins:
-			if skin in child.name:
-				child.material_override = skins.get(skin)[0]
+			for skin in skins:
+				if skin in child.name:
+					child.material_override = skins.get(skin)[0]
+	for key in selected_skins.keys():
+		change_colors(int(key), int(selected_skins.get(key)))
 
 func _process(delta: float) -> void:
 	#this is just for some culling effects
@@ -126,5 +129,8 @@ func wall_move(forward: bool, horizontal: bool):
 			var position_offset = -area.scale.z * 2
 			position = collision_point + normal * position_offset
 			
-func change_colors(mesh_index: int, new_material: StandardMaterial3D):
-	get_child(mesh_index).material_override = new_material
+func change_colors(mesh_index: int, skin_index: int):
+	var child_mesh = skins.keys()[mesh_index]
+	get_child(mesh_index).material_override = skins.get(child_mesh)[skin_index]
+	selected_skins.erase(str(mesh_index))
+	selected_skins[mesh_index] = skin_index

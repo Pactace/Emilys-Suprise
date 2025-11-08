@@ -20,6 +20,8 @@ extends Node3D
 @onready var ceiling: MeshInstance3D = $"Ceiling"
 @onready var wall_nodes = $"Wall Nodes"
 @onready var floor_nodes = $"Floor Nodes"
+var wallpaper: String =  "res://Floor and Wall Textures/BaseWall/BaseWall.tres"
+var flooring: String = "res://Floor and Wall Textures/BaseFloor/BaseFloor.tres"
 
 
 var forward: bool = false
@@ -78,7 +80,7 @@ func on_vertical_change(size: int) -> void:
 	camera.camera_wall_size_effect_horizontal = size
 	camera._apply_snap()
 
-func change_wallpaper(instance: ShaderMaterial):
+func change_wallpaper(instance: ShaderMaterial, instance_path: String):
 	back_wall.material_override = instance.duplicate()
 	front_wall.material_override = instance.duplicate()
 	right_wall.material_override = instance.duplicate()
@@ -89,9 +91,11 @@ func change_wallpaper(instance: ShaderMaterial):
 	front_wall.jiggle_marker()
 	right_wall.jiggle_marker()
 	left_wall.jiggle_marker()
+	wallpaper = instance_path
 	
-func change_flooring(instance: StandardMaterial3D):
+func change_flooring(instance: StandardMaterial3D, instance_path: String):
 	floor.material_override = instance
+	flooring = instance_path
 		
 func assign_markers():
 	front_wall.marker = front_marker
@@ -101,8 +105,8 @@ func assign_markers():
 
 # --- Make sure editor-set values apply at runtime ---
 func _ready() -> void:
-	change_wallpaper(preload("res://Floor and Wall Textures/BaseWall/BaseWall.tres"))
-	change_flooring(preload("res://Floor and Wall Textures/BaseFloor/BaseFloor.tres"))
+	change_wallpaper(load(wallpaper), wallpaper)
+	change_flooring(load(flooring), flooring)
 	update_walls()
 	assign_markers()
 	camera.camera_wall_size_effect_vertical = horizontal_size

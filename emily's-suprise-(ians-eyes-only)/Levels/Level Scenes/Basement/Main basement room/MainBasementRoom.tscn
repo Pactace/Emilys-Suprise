@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dws7gyb2ii3ij"]
+[gd_scene load_steps=16 format=3 uid="uid://dws7gyb2ii3ij"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_3tijn"]
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_7pc3q"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_r4nof"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_m77n5"]
 [ext_resource type="Script" uid="uid://cnmhvbvoq1odt" path="res://Levels/Level Scenes/Basement/Main basement room/BasementFloorFurnitureInventory.gd" id="4_07e8k"]
@@ -21,6 +22,8 @@ shader_parameter/screen_width = 0.0
 shader_parameter/screen_height = 0.0
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_7pc3q")
+room_name = "Basement"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera", "back_marker") instance=ExtResource("1_3tijn")]
 horizontal_size = 6

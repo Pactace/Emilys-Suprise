@@ -1,0 +1,154 @@
+[gd_scene load_steps=23 format=3]
+
+[ext_resource type="Script" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_556vp"]
+[ext_resource type="PackedScene" path="res://Levels/Components/Room.tscn" id="2_601p0"]
+[ext_resource type="Script" path="res://Levels/room.gd" id="3_5j24u"]
+[ext_resource type="Script" path="res://Levels/camera_controller.gd" id="4_is2ge"]
+[ext_resource type="PackedScene" path="res://UI_Overlay/ui_overlay.tscn" id="5_u26b2"]
+[ext_resource type="Script" path="res://UI_Overlay/room_edit.gd" id="6_vj27r"]
+[ext_resource type="Script" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="7_gcoaj"]
+[ext_resource type="Script" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="8_4thnl"]
+[ext_resource type="Script" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="9_oixwg"]
+[ext_resource type="Script" path="res://Inventories/WallPaperInventory.gd" id="10_n0rmn"]
+[ext_resource type="PackedScene" path="res://Levels/Components/Emily.tscn" id="11_ahj1v"]
+[ext_resource type="Script" path="res://Levels/character_body_3d.gd" id="12_s57p3"]
+[ext_resource type="Shader" path="res://Start and Pause Menus/Transition.gdshader" id="13_wihid"]
+[ext_resource type="Script" path="res://Start and Pause Menus/transition_screen.gd" id="14_b3cy2"]
+[ext_resource type="PackedScene" path="res://Models/Final Models/TransitionPieces/door.tscn" id="15_8yb8r"]
+[ext_resource type="Script" path="res://Models/Final Models/TransitionPieces/door.gd" id="16_76mb6"]
+[ext_resource type="PackedScene" path="res://Levels/Components/open_entrance.tscn" id="17_vd4sv"]
+[ext_resource type="Script" path="res://Levels/Components/open_entrance.gd" id="18_wyqb1"]
+[ext_resource type="PackedScene" path="res://Levels/Components/music_player.tscn" id="19_a67wr"]
+[ext_resource type="AudioStream" path="res://Levels/Components/10PM-8AM.mp3" id="20_excoi"]
+[ext_resource type="Script" path="res://Levels/Components/music_player.gd" id="21_ovep5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l6yyg"]
+shader = ExtResource("13_wihid")
+shader_parameter/circle_size = -0.016594999999999648
+shader_parameter/screen_width = 640.0
+shader_parameter/screen_height = 480.0
+
+[node name="TestLevel" type="Node3D"]
+script = ExtResource("1_556vp")
+room_name = "Entryway"
+
+[node name="Room" type="Node3D" parent="." node_paths=PackedStringArray("camera", "right_marker", "back_marker") instance=ExtResource("2_601p0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)
+script = ExtResource("3_5j24u")
+horizontal_size = -3
+vertical_size = 5
+editable = false
+camera = NodePath("../Camera")
+right_marker = NodePath("../Rigthwall Portal Marker")
+back_marker = NodePath("../Frontwall Portal Marker")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8870111, 0.46174878, 0, -0.46174878, 0.8870111, 0, 10, 19.999998)
+visible = false
+current = true
+size = 8.0
+script = ExtResource("4_is2ge")
+
+[node name="UiOverlay" type="Control" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("5_u26b2")]
+editor_description = "This control node acts as the state machine between the overlay ui elements during runtime.
+
+Open code for details
+"
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_vj27r")
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("7_gcoaj")
+placeable_inventory = ExtResource("8_4thnl")
+wall_furniture_inventory = ExtResource("9_oixwg")
+wallpaper_inventory = ExtResource("10_n0rmn")
+
+[node name="Emily" type="CharacterBody3D" parent="." instance=ExtResource("11_ahj1v")]
+transform = Transform3D(-2.9999998, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -2.9999998, 3.4479778, 3.0508678, 8.380354)
+collision_layer = 131079
+collision_mask = 131079
+script = ExtResource("12_s57p3")
+SPEED = 5.0
+
+[node name="Frontwall Portal Marker" type="Marker3D" parent="."]
+transform = Transform3D(0.13605003, -4.3757433e-09, 1844.5222, 2.376272e-07, 1, 4.8096705e-13, -2.7147312, 8.7313204e-08, 92.43911, 0.22755861, 6.581973, 8.778415)
+
+[node name="Rigthwall Portal Marker" type="Marker3D" parent="."]
+transform = Transform3D(0.025026312, 7.557735e-09, -1.0616676, 7.54979e-08, -1, 1.2147392e-15, -0.4993733, -1.5080654e-07, -0.053205937, 0.3637104, 6.153596, 3.5044985)
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_l6yyg")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("14_b3cy2")
+next_scene = "res://Levels/Level Scenes/Floor 1/Office/Office.tscn"
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="OfficeDoor" type="Node3D" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("15_8yb8r")]
+transform = Transform3D(1, 0, 0, 0, 0.9941573, 0, 0, 0, 1, 4.999753, 3.6350203, 5.679259)
+script = ExtResource("16_76mb6")
+marker = NodePath("Marker3D2")
+next_scene = "res://Levels/Level Scenes/Floor 1/Office/Office.tscn"
+next_door = "EntrywayDoor"
+
+[node name="Marker3D2" type="Marker3D" parent="Doors/OfficeDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1152344, 0, 0)
+
+[node name="BathroomDoor" type="Node3D" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("15_8yb8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.999753, 3.7863307, -8.596058)
+script = ExtResource("16_76mb6")
+marker = NodePath("Marker3D2")
+next_scene = "res://Levels/Level Scenes/Floor 1/Bathroom/Bathroom.tscn"
+next_door = "EntrywayDoor"
+
+[node name="Marker3D2" type="Marker3D" parent="Doors/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1995726, 0, 0)
+
+[node name="FrontDoor" type="Node3D" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("15_8yb8r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3.751, 12.72)
+script = ExtResource("16_76mb6")
+marker = NodePath("Marker3D2")
+
+[node name="Marker3D2" type="Marker3D" parent="Doors/FrontDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2892256, -1.1309271, 5.9604645e-08)
+
+[node name="SittingRoomOpenEntrance" type="Node3D" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("17_vd4sv")]
+transform = Transform3D(-5, 0, -3.780918e-07, 0, 10.001308, 0, 4.371139e-07, 0, -4.3248663, -7.572127, 4.3713913, 3.4985917)
+visible = false
+script = ExtResource("18_wyqb1")
+next_scene = "res://Levels/Level Scenes/Floor 1/Sitting Room/SittingRoom.tscn"
+marker = NodePath("Marker3D")
+next_door = "EntrywayEntrance"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/SittingRoomOpenEntrance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.4210855e-14, 0, 1, -0.81364906, -0.101080775, -1.7881393e-07)
+
+[node name="LivingDiningKitchenEntrance" type="Node3D" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("17_vd4sv")]
+transform = Transform3D(-2.1855693e-07, 0, 9.12171, 0, 9.511113, 0, -4.9999995, 0, -3.987226e-07, 0.20046902, 4.769101, -15.785944)
+visible = false
+script = ExtResource("18_wyqb1")
+next_scene = "res://Levels/Level Scenes/Floor 1/TripleThreat/TripleThreat.tscn"
+marker = NodePath("Marker3D")
+next_door = "EntrywayEntrance"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/LivingDiningKitchenEntrance"]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 0, 0, 1, -1.0142045, -0.1496377, -2.4214387e-08)
+
+[node name="MusicPlayer" type="AudioStreamPlayer3D" parent="." instance=ExtResource("19_a67wr")]
+stream = ExtResource("20_excoi")
+attenuation_model = 3
+max_db = -8.415
+parameters/looping = true
+script = ExtResource("21_ovep5")
+
+[connection signal="is_wall_change" from="UiOverlay" to="UiOverlay/EditObject" method="_on_ui_overlay_is_wall_change"]
+[connection signal="play_idle" from="Emily" to="Emily/EmilyAnimations" method="_on_emily_play_idle"]
+[connection signal="play_walking" from="Emily" to="Emily/EmilyAnimations" method="_on_emily_play_walking"]

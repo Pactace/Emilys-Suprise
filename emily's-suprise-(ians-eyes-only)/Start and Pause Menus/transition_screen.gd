@@ -23,12 +23,17 @@ func _process(delta: float) -> void:
 		else:
 			enter = false  # stop when fully revealed
 
-	# EXIT ANIMATION (shrinking circle)
 	if exit:
 		if circle_size > 0.0:
 			circle_size -= delta * reveal_speed
 			material.set_shader_parameter("circle_size", circle_size)
 		else:
-			exit = false  # stop when fully hidden
-			if next_scene:
+			exit = false
+			if get_tree().current_scene.has_method("save_state"):
+				get_tree().current_scene.save_state()
+			else:
+				push_warning("Current scene has no save_state() method.")
+			
+			if next_scene != "":
+				await get_tree().create_timer(0.2).timeout  # small buffer
 				get_tree().change_scene_to_file(next_scene)

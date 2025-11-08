@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://cnd2806hamy4f"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_e3hhm"]
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_jsqsp"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_0wk1v"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_gcycx"]
 [ext_resource type="Script" uid="uid://brn0yqf7yycca" path="res://Levels/Level Scenes/Floor 2/Master Bedroom/BedroomFloorFurnitureInventory.gd" id="4_7j683"]
-[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_lmjr5"]
 [ext_resource type="Script" uid="uid://spdjxvbe6he0" path="res://Levels/Level Scenes/Floor 2/Master Bedroom/BedroomPlaceableInventory.gd" id="6_jsqsp"]
 [ext_resource type="Script" uid="uid://tuchiq8ajf0q" path="res://Levels/Level Scenes/Floor 2/Master Bedroom/BedroomWallInventory.gd" id="7_26cmq"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_4fr1a"]
@@ -21,6 +21,8 @@ shader_parameter/screen_width = 0.0
 shader_parameter/screen_height = 0.0
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_jsqsp")
+room_name = "KidsBedroom3"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_e3hhm")]
 horizontal_size = 1
@@ -37,7 +39,6 @@ script = ExtResource("2_0wk1v")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_7j683")
-flooring_inventory = ExtResource("5_lmjr5")
 placeable_inventory = ExtResource("6_jsqsp")
 wall_furniture_inventory = ExtResource("7_26cmq")
 wallpaper_inventory = ExtResource("8_4fr1a")

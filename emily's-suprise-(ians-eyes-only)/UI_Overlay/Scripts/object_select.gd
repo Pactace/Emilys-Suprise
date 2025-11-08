@@ -102,11 +102,13 @@ func _handle_accept_action() -> void:
 		var wall_path: String = selected_object.get_meta("scene_path", "")
 		if wall_path != "":
 			var wall_material: ShaderMaterial = get_resource(wall_path)
-			room.change_wallpaper(wall_material)
+			room.change_wallpaper(wall_material, wall_path)
 
 	elif tab_name == "Flooring":
-		var floor_material: StandardMaterial3D = selected_object.get_meta("scene_path", "")
-		room.change_flooring(floor_material)
+		var floor_path: String = selected_object.get_meta("scene_path", "")
+		if floor_path != "":
+			var floor_material: StandardMaterial3D = get_resource(floor_path)
+			room.change_flooring(floor_material, floor_path)
 
 	else:
 		var scene_path: String = selected_object.get_meta("scene_path", "")
