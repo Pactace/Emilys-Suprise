@@ -42,6 +42,9 @@ func _process(delta: float) -> void:
 
 #We want to check if there are things in the way of our placement
 func check_placement() -> bool:
+	if object_type == 3:
+		placement_green()
+		return true
 	if object_type == 2:
 		var ray_start = global_transform.origin + Vector3(0, 10, 0) # Start above the object
 		var ray_end = global_transform.origin + Vector3(0, -10, 0) # End below the object
@@ -54,7 +57,7 @@ func check_placement() -> bool:
 		query.collide_with_areas = true
 		query.exclude = [area.get_rid()] # Exclude the object itself if needed
 		var result = space_state.intersect_ray(query)
-		if result and result.collider.get_parent().get_parent().object_type == 1:
+		if result and "object_type" in result.collider.get_parent().get_parent() and result.collider.get_parent().get_parent().object_type == 1:
 			position.y = result.position.y
 			placement_green()
 			return true
@@ -62,6 +65,16 @@ func check_placement() -> bool:
 	if overlaps.is_empty():
 		placement_green()
 		return true
+	else:
+		var non_rug_found := false
+		for overlap in overlaps:
+			var object = overlap.get_parent().get_parent()
+			if "object_type" in object and object.object_type != 3:
+				non_rug_found = true
+				break
+		if non_rug_found == false:
+			placement_green()
+			return true
 
 
 	placement_red()

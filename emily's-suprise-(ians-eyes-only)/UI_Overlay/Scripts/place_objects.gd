@@ -165,7 +165,7 @@ func edit_object_position():
 		
 		#next we assign the new_possible_selected object and make the edit ui prompts show up
 		possible_selected_object = object_area.collider.get_parent().get_parent()
-		if object_just_placed != possible_selected_object:
+		if object_just_placed != possible_selected_object && "room_name" not in possible_selected_object:
 			if old_possible_selected_object:
 				old_possible_selected_object.placed()
 			possible_selected_object.placement_yellow()
@@ -180,7 +180,7 @@ func edit_object_position():
 
 func rotate_target(target: Node3D, direction: int) -> void:
 	if !target.is_on_wall:
-		target.rotation.y += deg_to_rad(90) * direction
+		target.rotation.y += deg_to_rad(15) * direction
 	#else:
 		#var rotation_matrix_z = Basis.from_euler(Vector3(0, 0, deg_to_rad(15) * -direction))
 		#target.transform.basis = target.transform.basis * rotation_matrix_z
