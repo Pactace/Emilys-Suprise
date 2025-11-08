@@ -4,34 +4,6 @@
 [ext_resource type="Material" uid="uid://dgkfin5it1s5e" path="res://Models/Final Models/Downstairs/FtrKaraoke/Textures/mBody0.tres" id="2_xoxtd"]
 [ext_resource type="Material" uid="uid://wii80t0oxeim" path="res://Models/Final Models/Downstairs/FtrKaraoke/Textures/mMonitor0.tres" id="3_tjjx0"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peral"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_04hoa"]
-resource_name = "FtrKaraoke_Monitor_low__mMonitor"
-_surfaces = [{
-"aabb": AABB(-3.260072, 11.07277, 2.694652, 6.520144, 4.430129, 0.32748485),
-"attribute_data": PackedByteArray("n4AcPsA4tz2sgC08wCi2Pc2AzTuICIs9s8CxPsA4tz3+yvw+iAiLPfqS+j7AKLY9mACXO7AwOj0Ao/0+sDA6Pc2AzTvAoLw8/sr8PsCgvDyfgBw+AAC+OqyALTwAAQI7s8CxPgAAvjr6kvo+AAECO5pgGD6QoI09ljgXPrAwOj220LM+kKCNPbNitD6wMDo9mmAYPsBAsjy20LM+wECyPA=="),
-"bone_aabbs": [AABB(-3.260072, 11.07277, 2.694652, 6.520144, 4.430129, 0.32748485)],
-"format": 34359745559,
-"index_count": 72,
-"index_data": PackedByteArray("AAABAA4ADgABAAIADgADAAAADgACAA8ADwACAAYAEAADAA4ADwAQAA4AAwAQAAUABgAIAA8ABQAQAAQAEAARAAQAEQAQAA8ABAARAAcAEQAJAAcADwAIABIAEgARAA8ACAALABIAEgALAAoAEwARABIAEwAJABEACgATABIAEwANAAkADAATAAoADAANABMA"),
-"lods": [0.12988606, PackedByteArray("AAABAAIAAgADAAAABAADAAIAAwAEAAUABgAEAAIABwAEAAYACAAHAAYACQAHAAgACgAJAAgACAALAAoADAAJAAoADAANAAkA")],
-"material": SubResource("StandardMaterial3D_peral"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 20,
-"vertex_data": PackedByteArray("pzulvxEqMUFkri9ADY5LwCeUMUEudSxAyTtPwP6JQkHCMjNApzulPxEqMUFkri9AyTtPQP6JQkHCMjNADY5LQCeUMUEudSxABaVQwP6aVEFY/zVABaVQQP6aVEFY/zVAyTtPwP2rZkHCMjNAyTtPQP2rZkHCMjNApzulv+ALeEFkri9ADY5LwE+ed0EudSxApzulP+ALeEFkri9ADY5LQE+ed0EudSxAahasvwmFQUGTcDtA5/+tv/6aVEGxakFAahasPwmFQUGTcDtA5/+tP/6aVEGxakFAahasv/KwZ0GTcDtAahasP/KwZ0GTcDtAN32pbpn84r96erZwmfkOwKV4+HTN9xHAx4Kpbsb/ssFZh/h02v/mu4SFtnDg/8y8PXb/fzz2/7/Bif9////gxKV4BovN9+2/WYcGi9r/F8Q3fVWRmPwbwHp6SI+Z+fC/x4JVkcX/TL6EhUiP4f8xw0J8PnPJ+/a/8nr/f/H6/7+8gz5z7f8awgyF/3/+/3i9QnzAjMn7CMC8g8CM7f/kvQ==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_yldaw"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3knp"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6a3pi"]
@@ -53,11 +25,39 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_yldaw"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_1fwfv"]
 size = Vector3(9.474485, 16.31585, 7.500604)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xoxtd"]
 size = Vector3(9.474485, 16.31585, 7.500604)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peral"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_04hoa"]
+resource_name = "FtrKaraoke_Monitor_low__mMonitor"
+_surfaces = [{
+"aabb": AABB(-3.260072, 11.07277, 2.694652, 6.520144, 4.430129, 0.32748485),
+"attribute_data": PackedByteArray("n4AcPsA4tz2sgC08wCi2Pc2AzTuICIs9s8CxPsA4tz3+yvw+iAiLPfqS+j7AKLY9mACXO7AwOj0Ao/0+sDA6Pc2AzTvAoLw8/sr8PsCgvDyfgBw+AAC+OqyALTwAAQI7s8CxPgAAvjr6kvo+AAECO5pgGD6QoI09ljgXPrAwOj220LM+kKCNPbNitD6wMDo9mmAYPsBAsjy20LM+wECyPA=="),
+"bone_aabbs": [AABB(-3.260072, 11.07277, 2.694652, 6.520144, 4.430129, 0.32748485)],
+"format": 34359745559,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAA4ADgABAAIADgADAAAADgACAA8ADwACAAYAEAADAA4ADwAQAA4AAwAQAAUABgAIAA8ABQAQAAQAEAARAAQAEQAQAA8ABAARAAcAEQAJAAcADwAIABIAEgARAA8ACAALABIAEgALAAoAEwARABIAEwAJABEACgATABIAEwANAAkADAATAAoADAANABMA"),
+"lods": [0.12988606, PackedByteArray("AAABAAIAAgADAAAABAADAAIAAwAEAAUABgAEAAIABwAEAAYACAAHAAYACQAHAAgACgAJAAgACAALAAoADAAJAAoADAANAAkA")],
+"material": SubResource("StandardMaterial3D_peral"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("pzulvxEqMUFkri9ADY5LwCeUMUEudSxAyTtPwP6JQkHCMjNApzulPxEqMUFkri9AyTtPQP6JQkHCMjNADY5LQCeUMUEudSxABaVQwP6aVEFY/zVABaVQQP6aVEFY/zVAyTtPwP2rZkHCMjNAyTtPQP2rZkHCMjNApzulv+ALeEFkri9ADY5LwE+ed0EudSxApzulP+ALeEFkri9ADY5LQE+ed0EudSxAahasvwmFQUGTcDtA5/+tv/6aVEGxakFAahasPwmFQUGTcDtA5/+tP/6aVEGxakFAahasv/KwZ0GTcDtAahasP/KwZ0GTcDtAN32pbpn84r96erZwmfkOwKV4+HTN9xHAx4Kpbsb/ssFZh/h02v/mu4SFtnDg/8y8PXb/fzz2/7/Bif9////gxKV4BovN9+2/WYcGi9r/F8Q3fVWRmPwbwHp6SI+Z+fC/x4JVkcX/TL6EhUiP4f8xw0J8PnPJ+/a/8nr/f/H6/7+8gz5z7f8awgyF/3/+/3i9QnzAjMn7CMC8g8CM7f/kvQ==")
+}]
+blend_shape_mode = 0
 
 [node name="FtrKaraoke" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -68,11 +68,8 @@ skins = {
 "mMonitor": [ExtResource("3_tjjx0")]
 }
 
-[node name="Monitor_low__mMonitor" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_04hoa")
-skin = SubResource("Skin_yldaw")
-
 [node name="AnalogCable1_low__mBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_6a3pi")
 skin = SubResource("Skin_yldaw")
 
@@ -89,3 +86,7 @@ shape = SubResource("BoxShape3D_1fwfv")
 [node name="@CollisionShape3D@257405" type="CollisionShape3D" parent="AnalogCable1_low__mBody/@Area3D@257406"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22227049, 8.157925, -0.29804397)
 shape = SubResource("BoxShape3D_xoxtd")
+
+[node name="Monitor_low__mMonitor" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_04hoa")
+skin = SubResource("Skin_yldaw")

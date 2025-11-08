@@ -1,56 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://c4mfcdb8u1csm"]
+[gd_scene load_steps=17 format=4 uid="uid://c4mfcdb8u1csm"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_y8eiu"]
+[ext_resource type="Material" uid="uid://dfbupmw22x0bv" path="res://Models/Final Models/Downstairs/FtrArcadegameFight/Textures/mBody0 (2).tres" id="2_j2ip7"]
 [ext_resource type="Material" uid="uid://b5hwrd7yl4ei8" path="res://Models/Final Models/Downstairs/FtrArcadegameFight/Textures/mBody0.tres" id="2_p7nmh"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5rdt"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_cht15"]
-resource_name = "FtrArcadegameFight_Monitor_low__mMonitor"
-_surfaces = [{
-"aabb": AABB(-3.327485, 9.318054, -0.49683, 6.654971, 4.5528955, 1.906299),
-"attribute_data": PackedByteArray("/s59P92HXD/KsEk/3M1cP/45fT+/9z4/gQ0BP9wiXT/9iXw/hdMFP5gAljyGEwc/kICSPL84QD/iqGE+3YldP4dgiTzeyV0/lYCWPKSapD77/Xs/ohyiPt/EYD6YlBc+l+CWPJhQFz6BHwA/mKwWPscOSD+UrBQ++4Z7P5BUEj7H8kY/vCQ9P8ixRj+FmwU/xndGP6QcpD6B5AA/vmU9P4CaAD+E+gQ/gFoAP6ZCpT7p8Gg+poalPu0Yaj6GUAY/7FhrPr7aPT8="),
-"bone_aabbs": [AABB(-3.327485, 9.318054, -0.49683, 6.6549807, 4.5528955, 1.9062991)],
-"format": 34359745559,
-"index_count": 96,
-"index_data": PackedByteArray("AAABAAIAAgABABAAAQADABAAEAAEAAIAEQAEABAAEQASAAQABAASAAoAEAATABEAEAADABMACgAOAA8AEgAOAAoAEgANAA4AEQATABQAFAASABEAFQANABIAFQASABQAFQAWAA0AFAAWABUADQAWAAsAFgAJAAsACwAJAAwAFgAFAAkAFwAWABQAFwAFABYAFAATABcAFwAYAAUAFwATABgAEwADABgABQAYAAYAGAADAAcAGAAHAAYABgAHAAgA"),
-"lods": [0.1589445, PackedByteArray("AAABAAIAAQADAAIAAgADAAQABAADAAUABQADAAYABgADAAcABgAHAAgABQAJAAQABAAJAAoACwAJAAwADQAJAAsACgAJAA0ACgANAA4ACgAOAA8A")],
-"material": SubResource("StandardMaterial3D_m5rdt"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 25,
-"vertex_data": PackedByteArray("iPVUQMAWFUFYrqs/mML3P3FxFUF8K7A/FK5UQHl1IUFZNZY/AAAAAKO7FUF7abQ/7x5UQLmIOEFUiCw/7x5UwLmIOEFUiCw/EK5UwHl1IUFZNZY/mML3v3FxFUF8K7A/hPVUwMAWFUFYrqs/3JtTwEH9TEH846s93JtTQEH9TEH446s9f5/1v+SlXUHmJOi+mddSwNuWXUGAYP6+AAAAAGnvXUG0682+d5/1P+SlXUHmJOi+mddSQNuWXUGAYP6+p87vP9HXIkFbsp4/KGXwP/d1OUGXJUc/OGXwP0OQTUHi6FI+AAAAABElI0GHMaM/G6oBuEgzOkGDOlI/AAAAABC7TUEFr3w+OGXwv0OQTUHb6FI+KGXwv/d1OUGXJUc/ns7vv9HXIkFbsp4/ioTRkxz9MLwqg5WSrf02vQCG6pqn/BG7/3/okUH/rb9PhwKi3Pvbua94AqJR9IfB/nnqmuX2G8HUfJWSZvuNwHR70ZNL+dnAd3nXqf30e8GHhtep//tEunZ8FbDf+aXA53pZrjT3GcH/f1SyG/+6v4iDFbCp/cC8F4VZrsX8abv0g4GafP2fvKmEhKIj/fm7H4Qzq1D9S7z/f4CaNv+vv/9/0qMr/7K//38vrSD/t7/fezOrDvnOwFV7hKKZ+N3ACnyBmhH6qsA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_iegy6"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c52q"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ihxkg"]
-resource_name = "FtrArcadegameFight_Grass__mGlass"
-_surfaces = [{
-"aabb": AABB(-3.342728, 9.355823, -0.39583862, 6.685456, 4.669327, 1.9579316),
-"attribute_data": PackedByteArray("/s59P92HXD/KsEk/3M1cP/45fT+/9z4/gQ0BP9wiXT/9iXw/hdMFP5gAljyGEwc/kICSPL84QD/iqGE+3YldP4dgiTzeyV0/lYCWPKSapD77/Xs/ohyiPt/EYD6YlBc+l+CWPJhQFz6BHwA/mKwWPscOSD+UrBQ++4Z7P5BUEj7H8kY/vCQ9P8ixRj+FmwU/xndGP6QcpD6B5AA/vmU9P4CaAD+E+gQ/gFoAP6ZCpT7p8Gg+poalPu0Yaj6GUAY/7FhrPr7aPT8="),
-"bone_aabbs": [AABB(-3.342728, 9.355823, -0.39583862, 6.685456, 4.669327, 1.9579316)],
-"format": 34359745559,
-"index_count": 96,
-"index_data": PackedByteArray("AAABAAIAAgABABAAAQADABAAEAAEAAIAEQAEABAAEQASAAQABAASAAoAEAATABEAEAADABMACgAOAA8AEgAOAAoAEgANAA4AEQATABQAFAASABEAFQANABIAFQASABQAFQAWAA0AFAAWABUADQAWAAsAFgAJAAsACwAJAAwAFgAFAAkAFwAWABQAFwAFABYAFAATABcAFwAYAAUAFwATABgAEwADABgABQAYAAYAGAADAAcAGAAHAAYABgAHAAgA"),
-"lods": [0.1611729, PackedByteArray("AAABAAIAAQADAAIAAgADAAQABAADAAUABQADAAYABgADAAcABgAHAAgABQAJAAQABAAJAAoACwAJAAwADQAJAAsACgAJAA0ACgANAA4ACgAOAA8A")],
-"material": SubResource("StandardMaterial3D_6c52q"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 25,
-"vertex_data": PackedByteArray("yuJVQHOxFUHK+b4/dSL5P6D5FUGvlMM/Qe9VQJtmIkF2h6g/AAAAADsvFkGq8sc/qd5VQGArOkFYKEw/qd5VwGArOkFaKEw/Qe9VwJtmIkF2h6g/dSL5v6D5FUG4lMM/xeJVwHOxFUHK+b4/7nlVwOYuT0GhPUU+7nlVQOYuT0GaPUU+lnr4vw0VYEE4wLS+5q1UwIb+X0FVq8q+AAAAAANnYEHCy5q+lnr4Pw0VYEE4wLS+5q1UQIb+X0Fcq8q+kKPxP326I0F/ErE/TgjzP4YPO0GqOWc/OUfzPwLDT0HsJ6E+AAAAAKP1I0EfvbU//ZLdtgnEO0FL3nI/AAAAAALxT0HZM7Y+QUfzvwLDT0HsJ6E+Tgjzv4YPO0GqOWc/kKPxv326I0F/ErE/iIQylHr9Vbwng/GSCf5cvQCGG5sH/TG7/39Ikjz/rL9NhySiC/zpubF4JKJx9GzB/nkbmyr358DXfPGSt/tbwHZ7MpSa+abAd3mpqfj0g8GHhqmp6/tBunZ8FbDW+bHA53pZrib3LMH/fzeyG/+6v4iDFbCP/bu8F4VZrp78Yrv0g7Sazv27vKmEs6Jb/Qi8H4Qzq1P9S7z/f9OaMf+uv/9/0qMm/7G//38QrR7/tr/fezOrEfnLwFV7s6K7+L7ACny0mk76fcA=")
-}]
-blend_shape_mode = 0
+[ext_resource type="Material" uid="uid://dnwnuftgrkxgl" path="res://Models/Final Models/Downstairs/FtrArcadegameFight/Textures/mBody0 (3).tres" id="3_x7mcd"]
+[ext_resource type="Texture2D" uid="uid://cirihbghwuuji" path="res://Models/Final Models/Downstairs/FtrArcadegameShooting/Textures/mMonitor_Alb.0.png" id="4_j2ip7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3u64h"]
 
@@ -73,29 +27,78 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_iegy6"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_p7nmh"]
 size = Vector3(9.427954, 18.05134, 9.650482)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1nkai"]
 size = Vector3(9.427954, 18.05134, 9.650482)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5rdt"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cht15"]
+resource_name = "FtrArcadegameFight_Monitor_low__mMonitor"
+_surfaces = [{
+"aabb": AABB(-3.327485, 9.318054, -0.49683, 6.654971, 4.5528955, 1.906299),
+"attribute_data": PackedByteArray("/s59P92HXD/KsEk/3M1cP/45fT+/9z4/gQ0BP9wiXT/9iXw/hdMFP5gAljyGEwc/kICSPL84QD/iqGE+3YldP4dgiTzeyV0/lYCWPKSapD77/Xs/ohyiPt/EYD6YlBc+l+CWPJhQFz6BHwA/mKwWPscOSD+UrBQ++4Z7P5BUEj7H8kY/vCQ9P8ixRj+FmwU/xndGP6QcpD6B5AA/vmU9P4CaAD+E+gQ/gFoAP6ZCpT7p8Gg+poalPu0Yaj6GUAY/7FhrPr7aPT8="),
+"bone_aabbs": [AABB(-3.327485, 9.318054, -0.49683, 6.6549807, 4.5528955, 1.9062991)],
+"format": 34359745559,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAgABABAAAQADABAAEAAEAAIAEQAEABAAEQASAAQABAASAAoAEAATABEAEAADABMACgAOAA8AEgAOAAoAEgANAA4AEQATABQAFAASABEAFQANABIAFQASABQAFQAWAA0AFAAWABUADQAWAAsAFgAJAAsACwAJAAwAFgAFAAkAFwAWABQAFwAFABYAFAATABcAFwAYAAUAFwATABgAEwADABgABQAYAAYAGAADAAcAGAAHAAYABgAHAAgA"),
+"lods": [0.1589445, PackedByteArray("AAABAAIAAQADAAIAAgADAAQABAADAAUABQADAAYABgADAAcABgAHAAgABQAJAAQABAAJAAoACwAJAAwADQAJAAsACgAJAA0ACgANAA4ACgAOAA8A")],
+"material": SubResource("StandardMaterial3D_m5rdt"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 25,
+"vertex_data": PackedByteArray("iPVUQMAWFUFYrqs/mML3P3FxFUF8K7A/FK5UQHl1IUFZNZY/AAAAAKO7FUF7abQ/7x5UQLmIOEFUiCw/7x5UwLmIOEFUiCw/EK5UwHl1IUFZNZY/mML3v3FxFUF8K7A/hPVUwMAWFUFYrqs/3JtTwEH9TEH846s93JtTQEH9TEH446s9f5/1v+SlXUHmJOi+mddSwNuWXUGAYP6+AAAAAGnvXUG0682+d5/1P+SlXUHmJOi+mddSQNuWXUGAYP6+p87vP9HXIkFbsp4/KGXwP/d1OUGXJUc/OGXwP0OQTUHi6FI+AAAAABElI0GHMaM/G6oBuEgzOkGDOlI/AAAAABC7TUEFr3w+OGXwv0OQTUHb6FI+KGXwv/d1OUGXJUc/ns7vv9HXIkFbsp4/ioTRkxz9MLwqg5WSrf02vQCG6pqn/BG7/3/okUH/rb9PhwKi3Pvbua94AqJR9IfB/nnqmuX2G8HUfJWSZvuNwHR70ZNL+dnAd3nXqf30e8GHhtep//tEunZ8FbDf+aXA53pZrjT3GcH/f1SyG/+6v4iDFbCp/cC8F4VZrsX8abv0g4GafP2fvKmEhKIj/fm7H4Qzq1D9S7z/f4CaNv+vv/9/0qMr/7K//38vrSD/t7/fezOrDvnOwFV7hKKZ+N3ACnyBmhH6qsA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hmus"]
+albedo_texture = ExtResource("4_j2ip7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c52q"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ihxkg"]
+resource_name = "FtrArcadegameFight_Grass__mGlass"
+_surfaces = [{
+"aabb": AABB(-3.342728, 9.355823, -0.39583862, 6.685456, 4.669327, 1.9579316),
+"attribute_data": PackedByteArray("/s59P92HXD/KsEk/3M1cP/45fT+/9z4/gQ0BP9wiXT/9iXw/hdMFP5gAljyGEwc/kICSPL84QD/iqGE+3YldP4dgiTzeyV0/lYCWPKSapD77/Xs/ohyiPt/EYD6YlBc+l+CWPJhQFz6BHwA/mKwWPscOSD+UrBQ++4Z7P5BUEj7H8kY/vCQ9P8ixRj+FmwU/xndGP6QcpD6B5AA/vmU9P4CaAD+E+gQ/gFoAP6ZCpT7p8Gg+poalPu0Yaj6GUAY/7FhrPr7aPT8="),
+"bone_aabbs": [AABB(-3.342728, 9.355823, -0.39583862, 6.685456, 4.669327, 1.9579316)],
+"format": 34359745559,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAgABABAAAQADABAAEAAEAAIAEQAEABAAEQASAAQABAASAAoAEAATABEAEAADABMACgAOAA8AEgAOAAoAEgANAA4AEQATABQAFAASABEAFQANABIAFQASABQAFQAWAA0AFAAWABUADQAWAAsAFgAJAAsACwAJAAwAFgAFAAkAFwAWABQAFwAFABYAFAATABcAFwAYAAUAFwATABgAEwADABgABQAYAAYAGAADAAcAGAAHAAYABgAHAAgA"),
+"lods": [0.1611729, PackedByteArray("AAABAAIAAQADAAIAAgADAAQABAADAAUABQADAAYABgADAAcABgAHAAgABQAJAAQABAAJAAoACwAJAAwADQAJAAsACgAJAA0ACgANAA4ACgAOAA8A")],
+"material": SubResource("StandardMaterial3D_6c52q"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 25,
+"vertex_data": PackedByteArray("yuJVQHOxFUHK+b4/dSL5P6D5FUGvlMM/Qe9VQJtmIkF2h6g/AAAAADsvFkGq8sc/qd5VQGArOkFYKEw/qd5VwGArOkFaKEw/Qe9VwJtmIkF2h6g/dSL5v6D5FUG4lMM/xeJVwHOxFUHK+b4/7nlVwOYuT0GhPUU+7nlVQOYuT0GaPUU+lnr4vw0VYEE4wLS+5q1UwIb+X0FVq8q+AAAAAANnYEHCy5q+lnr4Pw0VYEE4wLS+5q1UQIb+X0Fcq8q+kKPxP326I0F/ErE/TgjzP4YPO0GqOWc/OUfzPwLDT0HsJ6E+AAAAAKP1I0EfvbU//ZLdtgnEO0FL3nI/AAAAAALxT0HZM7Y+QUfzvwLDT0HsJ6E+Tgjzv4YPO0GqOWc/kKPxv326I0F/ErE/iIQylHr9Vbwng/GSCf5cvQCGG5sH/TG7/39Ikjz/rL9NhySiC/zpubF4JKJx9GzB/nkbmyr358DXfPGSt/tbwHZ7MpSa+abAd3mpqfj0g8GHhqmp6/tBunZ8FbDW+bHA53pZrib3LMH/fzeyG/+6v4iDFbCP/bu8F4VZrp78Yrv0g7Sazv27vKmEs6Jb/Qi8H4Qzq1P9S7z/f9OaMf+uv/9/0qMm/7G//38QrR7/tr/fezOrEfnLwFV7s6K7+L7ACny0mk76fcA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3f8xq"]
+transparency = 1
+albedo_color = Color(0.6313726, 1, 1, 0.5764706)
+
 [node name="FtrArcadegameFight" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_y8eiu")
 area_path = NodePath("Body_low__mBody/@Area3D@257302")
 skins = {
-"mBody": [ExtResource("2_p7nmh")]
+"mBody": [ExtResource("2_j2ip7"), ExtResource("3_x7mcd"), ExtResource("2_p7nmh")]
 }
 
-[node name="Monitor_low__mMonitor" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_cht15")
-skin = SubResource("Skin_iegy6")
-
-[node name="Grass__mGlass" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_ihxkg")
-skin = SubResource("Skin_iegy6")
-
 [node name="Body_low__mBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_h0gnw")
 skin = SubResource("Skin_iegy6")
 
@@ -112,3 +115,13 @@ shape = SubResource("BoxShape3D_p7nmh")
 [node name="@CollisionShape3D@257301" type="CollisionShape3D" parent="Body_low__mBody/@Area3D@257302"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.02567, -0.0078077316)
 shape = SubResource("BoxShape3D_1nkai")
+
+[node name="Monitor_low__mMonitor" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_cht15")
+skin = SubResource("Skin_iegy6")
+surface_material_override/0 = SubResource("StandardMaterial3D_2hmus")
+
+[node name="Grass__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ihxkg")
+skin = SubResource("Skin_iegy6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3f8xq")

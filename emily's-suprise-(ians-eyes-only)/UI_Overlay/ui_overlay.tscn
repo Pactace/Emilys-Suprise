@@ -117,6 +117,7 @@ text = "Go to Edit Mode"
 visible = false
 position = Vector2(325, 300)
 script = ExtResource("3_4h6r5")
+SPEED = 150.0
 
 [node name="Mouse" type="TextureRect" parent="Mouse"]
 offset_left = -17.0

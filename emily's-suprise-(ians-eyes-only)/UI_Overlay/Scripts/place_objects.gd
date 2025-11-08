@@ -136,7 +136,7 @@ func placing_object():
 				selected_object.basis = basis
 				previous_rid = collision.rid
 				wall_name = collision.collider.get_parent().name
-				selected_object.scale = Vector3(0.2, 0.2, 0.2) 
+				selected_object.scale = Vector3(0.3, 0.3, 0.3) 
 			
 			selected_object.transform.origin = collision.position
 			can_place = selected_object.check_placement()
@@ -217,7 +217,7 @@ func _handle_spawned_object():
 		spawned_object_is_wall = false
 		print(selected_object.name)
 		if instance.is_on_wall:
-			selected_object.scale = Vector3(0.2, 0.2, 0.2) 
+			selected_object.scale = Vector3(0.3, 0.3, 0.3) 
 		else:
 			selected_object.scale = Vector3(0.3, 0.3, 0.3) 
 		mouse.position = Vector2(325, 250)

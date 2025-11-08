@@ -11,5 +11,8 @@ class_name EntrywayPlaceableInventory
 	"res://Models/Final Models/Plants/FtrPlantAnthurium/Textures/FtrPlantAnthurium_icon.png": "res://Models/Final Models/Plants/FtrPlantAnthurium/FtrPlantAnthurium.tscn",
 	"res://Models/Final Models/Plants/FtrBonsaiSakura/Textures/FtrBonsaiSakura_icon.png" :"res://Models/Final Models/Plants/FtrBonsaiSakura/FtrBonsaiSakura.tscn",
 	"res://Models/Final Models/Plants/FtrStandflower/Textures/FtrStandflower_icon.png" :"res://Models/Final Models/Plants/FtrStandflower/FtrStandflower.tscn",
-	"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/Textures/FtrWoodenMirrorS_icon.png":"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/FtrWoodenMirrorS.tscn"
+	"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/Textures/FtrWoodenMirrorS_icon.png":"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/FtrWoodenMirrorS.tscn",
+	"res://Models/Final Models/Downstairs/FtrRattanLamp/Textures/FtrRattanLamp_icon.png": "res://Models/Final Models/Downstairs/FtrRattanLamp/FtrRattanLamp.tscn",
+	"res://Models/Final Models/Downstairs/FtrLampDesk/Textures/FtrLampDesk_icon.png": "res://Models/Final Models/Downstairs/FtrLampDesk/FtrLampDesk.tscn",
+
 	}

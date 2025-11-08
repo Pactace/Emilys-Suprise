@@ -14,5 +14,11 @@ class_name OfficePlaceableInventory
 	"res://Models/Final Models/Office/FtrDesktopPC/Textures/FtrDesktopPC_icon.png": "res://Models/Final Models/Office/FtrDesktopPC/FtrDesktopPC.tscn",
 	"res://Models/Final Models/Office/FtrDocument/Textures/FtrDocument_icon.png": "res://Models/Final Models/Office/FtrDocument/FtrDocument.tscn",
 	"res://Models/Final Models/Office/FtrCartoonistset/Textures/FtrCartoonistset_icon.png": "res://Models/Final Models/Office/FtrCartoonistset/FtrCartoonistset.tscn",
+	"res://Models/Final Models/Downstairs/FtrRattanLamp/Textures/FtrRattanLamp_icon.png": "res://Models/Final Models/Downstairs/FtrRattanLamp/FtrRattanLamp.tscn",
+	"res://Models/Final Models/Downstairs/FtrLampDesk/Textures/FtrLampDesk_icon.png": "res://Models/Final Models/Downstairs/FtrLampDesk/FtrLampDesk.tscn",
+
+
 	#this no work "res://Models/Final Models/Office/FtrHumidifier/Textures/FtrHumidifier_icon.png": "res://Models/Final Models/Office/FtrHumidifier/FtrHumidifier.tscn",
+			#default placeable inventory:
+
 }

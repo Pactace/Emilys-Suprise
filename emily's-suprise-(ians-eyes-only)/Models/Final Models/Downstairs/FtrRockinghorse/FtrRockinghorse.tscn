@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dnffwcwsyvael"]
+[gd_scene load_steps=13 format=4 uid="uid://dnffwcwsyvael"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_yeylu"]
 [ext_resource type="Material" uid="uid://cf4uhit13a603" path="res://Models/Final Models/Downstairs/FtrRockinghorse/Textures/mReBody0.tres" id="2_adkna"]
@@ -36,22 +36,36 @@ bind/0/name = &"Rockinghorse_joint"
 bind/0/bone = -1
 bind/0/pose = Transform3D(7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0, 0, 1, -0.4142952, -3.1278418e-08, 0)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_adkna"]
+size = Vector3(9.427954, 18.05134, 9.650482)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jhq85"]
+size = Vector3(9.427954, 18.05134, 9.650482)
+
 [node name="FtrRockinghorse" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_yeylu")
+area_path = NodePath("Chair__mReBody/_Area3D_257302")
 skins = {
 "mReBody": [ExtResource("2_adkna"), ExtResource("3_jhq85"), ExtResource("4_pfurx"), ExtResource("5_ml0ws"), ExtResource("6_pydyd"), ExtResource("7_5c0xc")]
 }
 
-[node name="Skeleton3D" type="Skeleton3D" parent="."]
-bones/0/name = "Rockinghorse_joint"
-bones/0/parent = -1
-bones/0/rest = Transform3D(7.54979e-08, -1, 0, 1, 7.54979e-08, 0, 0, 0, 1, 0, 0.4142952, 0)
-bones/0/enabled = true
-bones/0/position = Vector3(0, 0.4142952, 0)
-bones/0/rotation = Quaternion(0, 0, 0.70710677, 0.70710677)
-bones/0/scale = Vector3(1, 1, 1)
-
-[node name="Chair__mReBody" type="MeshInstance3D" parent="Skeleton3D"]
+[node name="Chair__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_nriis")
 skin = SubResource("Skin_vn7nt")
+skeleton = NodePath("")
+
+[node name="_StaticBody3D_257300" type="StaticBody3D" parent="Chair__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="_CollisionShape3D_257299" type="CollisionShape3D" parent="Chair__mReBody/_StaticBody3D_257300"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.02567, -0.0078077316)
+shape = SubResource("BoxShape3D_adkna")
+
+[node name="_Area3D_257302" type="Area3D" parent="Chair__mReBody"]
+
+[node name="_CollisionShape3D_257301" type="CollisionShape3D" parent="Chair__mReBody/_Area3D_257302"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.02567, -0.0078077316)
+shape = SubResource("BoxShape3D_jhq85")

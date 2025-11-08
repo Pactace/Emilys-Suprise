@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dws7gyb2ii3ij"]
+[gd_scene load_steps=15 format=3 uid="uid://dws7gyb2ii3ij"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_3tijn"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_r4nof"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cnmhvbvoq1odt" path="res://Levels/Level Scenes/Basement/Main basement room/BasementFloorFurnitureInventory.gd" id="4_07e8k"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="4_r0xth"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="5_2ypeo"]
-[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_nsvil"]
 [ext_resource type="Script" uid="uid://dmw6livhilqfj" path="res://Levels/Level Scenes/Basement/Main basement room/BasementPlaceableInventory.gd" id="6_laok4"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="6_q5csk"]
 [ext_resource type="Script" uid="uid://di0gphhfyli2i" path="res://Levels/Level Scenes/Basement/Main basement room/BasementWallInventory.gd" id="7_7pc3q"]
@@ -39,7 +38,6 @@ script = ExtResource("2_r4nof")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_07e8k")
-flooring_inventory = ExtResource("5_nsvil")
 placeable_inventory = ExtResource("6_laok4")
 wall_furniture_inventory = ExtResource("7_7pc3q")
 wallpaper_inventory = ExtResource("8_et47c")

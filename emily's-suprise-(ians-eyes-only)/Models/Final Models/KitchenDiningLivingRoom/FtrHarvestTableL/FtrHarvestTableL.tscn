@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dhdgn2u5bihfp"]
+[gd_scene load_steps=10 format=4 uid="uid://dhdgn2u5bihfp"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_mr7tq"]
 [ext_resource type="Material" uid="uid://dy61xsj2ha62n" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrHarvestTableL/Textures/mReBody0.tres" id="2_y05g4"]
@@ -39,43 +39,36 @@ bind/2/name = &"Wind_1_L"
 bind/2/bone = -1
 bind/2/pose = Transform3D(-1.192093e-07, -0.99999994, 6.305879e-08, -0.99999994, -1.192093e-07, 1.504815e-07, -1.504815e-07, -6.305879e-08, -1, 7.999998, -9.999998, -1.000345e-06)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y05g4"]
+size = Vector3(18.797558, 8.1, 16.685883)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mbidn"]
+size = Vector3(18.797558, 8.1, 16.685883)
+
 [node name="FtrHarvestTableL" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_mr7tq")
+area_path = NodePath("Cloth_low1__mReBody/_Area3D_257878")
 skins = {
 "mReBody": [ExtResource("2_y05g4"), ExtResource("3_mbidn"), ExtResource("4_quab4")]
 }
 
-[node name="Skeleton3D" type="Skeleton3D" parent="."]
-bones/0/name = "Root"
-bones/0/parent = -1
-bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-bones/0/enabled = true
-bones/0/position = Vector3(0, 0, 0)
-bones/0/rotation = Quaternion(0, 0, 0, 1)
-bones/0/scale = Vector3(1, 1, 1)
-bones/1/name = "Wind"
-bones/1/parent = 0
-bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-bones/1/enabled = true
-bones/1/position = Vector3(0, 0, 0)
-bones/1/rotation = Quaternion(0, 0, 0, 1)
-bones/1/scale = Vector3(1, 1, 1)
-bones/2/name = "Wind_1_R"
-bones/2/parent = 1
-bones/2/rest = Transform3D(7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0, 0, 1, 9.866106, 8.036049, 0)
-bones/2/enabled = true
-bones/2/position = Vector3(9.866106, 8.036049, 0)
-bones/2/rotation = Quaternion(0, 0, -0.70710677, 0.70710677)
-bones/2/scale = Vector3(1, 1, 1)
-bones/3/name = "Wind_1_L"
-bones/3/parent = 1
-bones/3/rest = Transform3D(1.192093e-07, -1, -1.504816e-07, -1, 1.192093e-07, -6.305878e-08, 6.305878e-08, 1.504816e-07, -1, -10, 8, 0)
-bones/3/enabled = true
-bones/3/position = Vector3(-10, 8, 0)
-bones/3/rotation = Quaternion(0.7071068, -0.7071067, -3.090863e-08, 7.549792e-08)
-bones/3/scale = Vector3(1, 1, 1)
-
-[node name="Cloth_low1__mReBody" type="MeshInstance3D" parent="Skeleton3D"]
+[node name="Cloth_low1__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_w81bg")
 skin = SubResource("Skin_mew8i")
+skeleton = NodePath("")
+
+[node name="_StaticBody3D_257876" type="StaticBody3D" parent="Cloth_low1__mReBody"]
+collision_layer = 132
+collision_mask = 132
+
+[node name="_CollisionShape3D_257875" type="CollisionShape3D" parent="Cloth_low1__mReBody/_StaticBody3D_257876"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024999619, 4.05, -9.536743e-07)
+shape = SubResource("BoxShape3D_y05g4")
+
+[node name="_Area3D_257878" type="Area3D" parent="Cloth_low1__mReBody"]
+
+[node name="_CollisionShape3D_257877" type="CollisionShape3D" parent="Cloth_low1__mReBody/_Area3D_257878"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024999619, 4.05, -9.536743e-07)
+shape = SubResource("BoxShape3D_mbidn")

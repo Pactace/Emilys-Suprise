@@ -4,4 +4,6 @@
 
 [resource]
 resource_name = "mGlass0"
+transparency = 1
+albedo_color = Color(0.55284965, 0.8393449, 0.38749042, 0.5921569)
 albedo_texture = ExtResource("1_6uafi")

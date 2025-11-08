@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6mfrr5p1cay2"]
-
-[ext_resource type="Texture2D" uid="uid://jwrum8516gtb" path="res://Models/Final Models/Bedrooms/FtrLampDesk/Textures/mReFabric_Alb4.png" id="1_3w3vw"]
-
-[resource]
-resource_name = "mReFabric4"
-albedo_texture = ExtResource("1_3w3vw")

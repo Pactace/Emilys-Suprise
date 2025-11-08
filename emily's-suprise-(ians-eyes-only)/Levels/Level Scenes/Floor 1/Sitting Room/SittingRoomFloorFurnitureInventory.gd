@@ -29,5 +29,9 @@ class_name SittingRoomFurnitureInventory
 	"res://Models/Final Models/Tower/FtrSofaL/Textures/FtrSofaL_icon.png": "res://Models/Final Models/Tower/FtrSofaL/FtrSofaL.tscn",
 	"res://Models/Final Models/Tower/FtrMomCushion/Textures/FtrMomCushion_icon.png": "res://Models/Final Models/Tower/FtrMomCushion/FtrMomCushion.tscn",
 	"res://Models/Final Models/Tower/FtrCountryChairS/Textures/FtrCountryChairS_icon.png": "res://Models/Final Models/Tower/FtrCountryChairS/FtrCountryChairS.tscn",
-	"res://Models/Final Models/Tower/FtrRattanChairS/Textures/FtrRattanChairS_icon.png": "res://Models/Final Models/Tower/FtrRattanChairS/FtrRattanChairS.tscn"
+	"res://Models/Final Models/Tower/FtrRattanChairS/Textures/FtrRattanChairS_icon.png": "res://Models/Final Models/Tower/FtrRattanChairS/FtrRattanChairS.tscn",
+	"res://Models/Final Models/Downstairs/FtrCushionJapan/Textures/FtrCushionJapan_icon.png": "res://Models/Final Models/Downstairs/FtrCushionJapan/FtrCushionJapan.tscn",
+	"res://Models/Final Models/Downstairs/FtrCushionJapanPile/Textures/FtrCushionJapanPile_icon.png": "res://Models/Final Models/Downstairs/FtrCushionJapanPile/FtrCushionJapanPile.tscn",
+	"res://Models/Final Models/Downstairs/FtrColorBoxShelfSide/Textures/FtrColorBoxShelfSide_icon.png": "res://Models/Final Models/Downstairs/FtrColorBoxShelfSide/FtrColorBoxShelfSide.tscn",
+	"res://Models/Final Models/Downstairs/FtrRailroad/Textures/FtrRailroad_icon.png": "res://Models/Final Models/Downstairs/FtrRailroad/FtrRailroad.tscn",
 }

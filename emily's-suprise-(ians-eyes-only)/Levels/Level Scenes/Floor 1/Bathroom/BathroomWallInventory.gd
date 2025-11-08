@@ -6,6 +6,7 @@ class_name BathroomWallInventory
 	"res://Models/Final Models/Bathrooms/FtrShowerWall/Textures/FtrShowerWall_icon.png": "res://Models/Final Models/Bathrooms/FtrShowerWall/FtrShowerWall.tscn",
 	"res://Models/Final Models/Bathrooms/FtrMacrametapestry/Textures/FtrMacrametapestry_icon.png": "res://Models/Final Models/Bathrooms/FtrMacrametapestry/FtrMacrametapestry.tscn",
 	
+	#Default wall inventory 
 	"res://Models/Final Models/Bedrooms/FtrSconceWall/Textures/FtrSconceWall_icon.png": "res://Models/Final Models/Bedrooms/FtrSconceWall/FtrSconceWall.tscn",
 	"res://Models/Final Models/Tower/FtrArtStarryNight/Textures/mBody_Alb.png": "res://Models/Final Models/Tower/FtrArtStarryNight/FtrArtStarryNight.tscn",
 	"res://Models/Final Models/Plants/FtrPlanterPalm/Textures/FtrPlanterPalm_icon.png" : "res://Models/Final Models/Plants/FtrPlanterPalm/FtrPlanterPalm.tscn",

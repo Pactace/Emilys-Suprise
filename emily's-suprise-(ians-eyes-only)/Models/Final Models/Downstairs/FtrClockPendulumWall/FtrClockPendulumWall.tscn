@@ -1,34 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://c021lkkqgpbso"]
+[gd_scene load_steps=12 format=4 uid="uid://c021lkkqgpbso"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_33een"]
 [ext_resource type="Material" uid="uid://b2kihxojnyn7u" path="res://Models/Final Models/Downstairs/FtrClockPendulumWall/Textures/mBody0.tres" id="2_w0fye"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_035p8"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_lpr2t"]
-resource_name = "FtrClockPendulumWall_Glass_low__mGlass"
-_surfaces = [{
-"aabb": AABB(-1.929489, -3.924774, 2.077538, 3.858978, 7.895103, 0.44088507),
-"attribute_data": PackedByteArray("+fh4P9zaWj/Ew0M/7urqPvn4eD/u6uo+xMNDP/79fT+Qjg4/3NpaP5CODj/u6uo+iokJP5SUFD6YmJg+jpCQPt7e3j7AsDA9mJiYPkCAADySkhI/jpCQPqqoKD7AsDA9iokJP9LU1D6BgIA9lJQUPt7e3j6FhAQ/4eDgPI6QkD6YmJg+jo0NP4GAgD3S1NQ+qqgoPoWEBD8="),
-"bone_aabbs": [AABB(-1.929489, -3.924774, 2.077538, 3.8589778, 7.895103, 0.44088507)],
-"format": 34359745559,
-"index_count": 48,
-"index_data": PackedByteArray("AAABAAIAAwABAAAAAwAEAAEAAQAEAAUABgAHAAgACAAHAAkACgAHAAYACQAHAAsADAAHAAoACwAHAA0ADgAHAAwADQAHAA8AEAAHAA4ADwAHABEAEgAHABAAEQAHABIA"),
-"material": SubResource("StandardMaterial3D_035p8"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 19,
-"vertex_data": PackedByteArray("FaqJP8oZTcBi9gRAAAAAAOP7kr9i9gRAFaqJP+P7kr9i9gRAAAAAAH8ve8Bi9gRAFaqJv8oZTcBi9gRAFaqJv/z7kr9i9gRA3uLVP4VbQEDYLSFAAAAAACSdAkDYLSFAdfl2P5OObUDYLSFAAAAAAN8ZfkDYLSFAf/n2PySdAkDYLSFAdfl2v5OObUDYLSFA3uLVP4y9iT/YLSFA3uLVv4VbQEDYLSFAdfl2P71dvT7YLSFAf/n2vySdAkDYLSFAAAAAAPAM5D3YLSFA3uLVv4y9iT/YLSFAdfl2v71dvT7YLSFA/3//f3z/QMD/f/9//v//v/9//3////+//3//f////7//f/9/fP+9v/9//3/+//+//3//f6f/KsD/f/9/////v/9//3+l/9K//3//f////7//f/9/////v/9//3+l/yvA/3//f/z+fr//f/9/p//Tv/9//39v/7e//3//f////7//f/9/////v/9//3/8/oDA/3//f2//R8A=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_1ud5t"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2267"]
 
@@ -73,6 +46,37 @@ size = Vector3(5.728052, 9.809732, 2.627405)
 [sub_resource type="BoxShape3D" id="BoxShape3D_503jd"]
 size = Vector3(5.728052, 9.809732, 2.627405)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_035p8"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lpr2t"]
+resource_name = "FtrClockPendulumWall_Glass_low__mGlass"
+_surfaces = [{
+"aabb": AABB(-1.929489, -3.924774, 2.077538, 3.858978, 7.895103, 0.44088507),
+"attribute_data": PackedByteArray("+fh4P9zaWj/Ew0M/7urqPvn4eD/u6uo+xMNDP/79fT+Qjg4/3NpaP5CODj/u6uo+iokJP5SUFD6YmJg+jpCQPt7e3j7AsDA9mJiYPkCAADySkhI/jpCQPqqoKD7AsDA9iokJP9LU1D6BgIA9lJQUPt7e3j6FhAQ/4eDgPI6QkD6YmJg+jo0NP4GAgD3S1NQ+qqgoPoWEBD8="),
+"bone_aabbs": [AABB(-1.929489, -3.924774, 2.077538, 3.8589778, 7.895103, 0.44088507)],
+"format": 34359745559,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAwAEAAEAAQAEAAUABgAHAAgACAAHAAkACgAHAAYACQAHAAsADAAHAAoACwAHAA0ADgAHAAwADQAHAA8AEAAHAA4ADwAHABEAEgAHABAAEQAHABIA"),
+"material": SubResource("StandardMaterial3D_035p8"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 19,
+"vertex_data": PackedByteArray("FaqJP8oZTcBi9gRAAAAAAOP7kr9i9gRAFaqJP+P7kr9i9gRAAAAAAH8ve8Bi9gRAFaqJv8oZTcBi9gRAFaqJv/z7kr9i9gRA3uLVP4VbQEDYLSFAAAAAACSdAkDYLSFAdfl2P5OObUDYLSFAAAAAAN8ZfkDYLSFAf/n2PySdAkDYLSFAdfl2v5OObUDYLSFA3uLVP4y9iT/YLSFA3uLVv4VbQEDYLSFAdfl2P71dvT7YLSFAf/n2vySdAkDYLSFAAAAAAPAM5D3YLSFA3uLVv4y9iT/YLSFAdfl2v71dvT7YLSFA/3//f3z/QMD/f/9//v//v/9//3////+//3//f////7//f/9/fP+9v/9//3/+//+//3//f6f/KsD/f/9/////v/9//3+l/9K//3//f////7//f/9/////v/9//3+l/yvA/3//f/z+fr//f/9/p//Tv/9//39v/7e//3//f////7//f/9/////v/9//3/8/oDA/3//f2//R8A=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="Skin" id="Skin_1ud5t"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0fye"]
+transparency = 1
+albedo_color = Color(0.6313726, 1, 1, 0.5764706)
+
 [node name="FtrClockPendulumWall" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_33een")
@@ -81,11 +85,8 @@ skins = {
 "mBody": [ExtResource("2_w0fye")]
 }
 
-[node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_lpr2t")
-skin = SubResource("Skin_1ud5t")
-
 [node name="Dial_low__mBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_6lb42")
 skin = SubResource("Skin_78qqf")
 
@@ -102,3 +103,8 @@ shape = SubResource("BoxShape3D_w0fye")
 [node name="@CollisionShape3D@257341" type="CollisionShape3D" parent="Dial_low__mBody/@Area3D@257342"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3137025)
 shape = SubResource("BoxShape3D_503jd")
+
+[node name="Glass_low__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_lpr2t")
+skin = SubResource("Skin_1ud5t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w0fye")

@@ -63,12 +63,14 @@ func switch_states():
 		old_position = position
 		position.y = -10
 		emily_model.visible = false
+		audioplayer.stop()
 	else:
 		current_state = PlayerState.Moving
 		ui_overlay.disabled()
 		visible = true
 		position = old_position
 		emily_model.visible = true
+		
 
 
 func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
@@ -95,16 +97,16 @@ func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
 		velocity.x = move_dir.x * SPEED
 		velocity.z = move_dir.z * SPEED
 		
-
-		if global_position.x > 15 and !new_center_bool:
-			camera.set_center(Vector3(25,0,0))
-			new_center_bool = true
-		elif global_position.x < -15 and !new_center_bool:
-			camera.set_center(Vector3(-25,0,0))
-			new_center_bool = true
-		elif global_position.x < 15 and global_position.x > -15 and new_center_bool:
-			camera.set_center(Vector3(1,0,0))
-			new_center_bool = false
+		if camera.triplethreat:
+			if global_position.x > 7 and !new_center_bool:
+				camera.set_center(Vector3(10,0,0))
+				new_center_bool = true
+			elif global_position.x < -7 and !new_center_bool:
+				camera.set_center(Vector3(-10,0,0))
+				new_center_bool = true
+			elif global_position.x < 7 and global_position.x > -7 and new_center_bool:
+				camera.set_center(Vector3(1,0,0))
+				new_center_bool = false
 	else:
 		if !idle_or_walking:
 			audioplayer.stop()
