@@ -25,12 +25,13 @@ skins = {
 }
 
 [node name="HexagonalFrame" type="MeshInstance3D" parent="."]
-transform = Transform3D(10.690741, 0, 0, 0, 11.6059065, 0, 0, 0, 16.113756, 34.52069, 3.522059, 1.3642435)
+transform = Transform3D(7.0951486, 0, 0, 0, 7.3312397, 0, 0, 0, 10.1536045, 23.137913, 1.9190435, 1.387841)
 material_override = ExtResource("4_fut4v")
 mesh = ExtResource("9_1i0oe")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="HexagonalFrame"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.0981464, -0.6646292, 0.10572839)
+visible = false
 collision_layer = 132
 collision_mask = 132
 
@@ -40,12 +41,13 @@ shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Area3D" type="Area3D" parent="HexagonalFrame"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.0981464, -0.6646292, 0.10572839)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HexagonalFrame/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
 shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.51619, 0, 0, 0, -1.7608866e-07, -4.5473037, 0, 4.0284395, -1.9876897e-07, -0.66719055, 0.24684012, 1.4918382)
+transform = Transform3D(2.9972703, 0, 0, 0, -1.1095703e-07, -2.8724492, 0, 2.5384014, -1.2555874e-07, -0.215312, -0.14985275, 1.468241)
 material_override = ExtResource("6_20lie")
 mesh = SubResource("PlaneMesh_pa6mt")

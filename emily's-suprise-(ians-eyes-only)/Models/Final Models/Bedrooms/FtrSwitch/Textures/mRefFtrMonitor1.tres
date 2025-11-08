@@ -5,6 +5,7 @@
 
 [resource]
 resource_name = "mRefFtrMonitor1"
+albedo_color = Color(0, 0, 0, 1)
 albedo_texture = ExtResource("1_2vgba")
 normal_enabled = true
 normal_texture = ExtResource("2_04doc")

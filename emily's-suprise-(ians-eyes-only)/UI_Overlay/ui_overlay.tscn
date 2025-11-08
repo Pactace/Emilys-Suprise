@@ -140,6 +140,7 @@ visible = false
 layout_mode = 1
 
 [node name="ResizePrompt" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 37.0
 offset_top = 35.0

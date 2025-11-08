@@ -4,7 +4,9 @@ class_name SittingRoomPlaceableInventory
 @export var objects := {
 		"res://Models/Final Models/Tower/FtrJapanSword/Textures/FtrJapanSword_icon.png": "res://Models/Final Models/Tower/FtrJapanSword/FtrJapanSword.tscn",
 		"res://Models/Final Models/Downstairs/FtrBoardgame/Textures/FtrBoardgame_icon.png": "res://Models/Final Models/Downstairs/FtrBoardgame/FtrBoardgame.tscn",
-		
+		"res://Models/Final Models/Bedrooms/FtrBookstand/Textures/FtrBookstand_icon.png": "res://Models/Final Models/Bedrooms/FtrBookstand/FtrBookstand.tscn",
+		"res://Models/Final Models/Bedrooms/FtrStudySet/Textures/FtrStudySet_icon.png": "res://Models/Final Models/Bedrooms/FtrStudySet/FtrStudySet.tscn",
+
 		#default placable_inventory
 		"res://Models/Final Models/Plants/FtrCatgrass/Textures/FtrCatgrass_icon.png": "res://Models/Final Models/Plants/FtrCatgrass/FtrCatgrass.tscn",
 		"res://Models/Final Models/Plants/FtrPlantGoldcrest/Textures/FtrPlantGoldcrest_icon.png": "res://Models/Final Models/Plants/FtrPlantGoldcrest/FtrPlantGoldcrest.tscn",

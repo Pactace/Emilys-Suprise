@@ -11,33 +11,6 @@
 [ext_resource type="Material" uid="uid://btmu7usfqratr" path="res://Models/Final Models/Downstairs/FtrLogShelf/Textures/mReFabric3.tres" id="9_t4nwm"]
 [ext_resource type="Material" uid="uid://dqypgve37ib1l" path="res://Models/Final Models/Downstairs/FtrLogShelf/Textures/mReFabric4.tres" id="10_unaaf"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1fln"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_qwnd0"]
-resource_name = "FtrLogShelf_lunchmat_low__mReFabric"
-_surfaces = [{
-"aabb": AABB(0.1024246, 7.466324, -2.99957, 8.220974, 1e-05, 5.99914),
-"attribute_data": PackedByteArray("AAAAAACGfz+PAJA7/y1/PwAAAAD3UXc/8ABwOvi9dz+SwJM8/3l/P6OAojwAAIA/zqBLPgCGfz/LJEw+/oB9PwAAAADEnkQ/AAAAAMTzQz/4lvg+wwlDP/lE+D7EsEI/tjS2PgCGfz+2zrU+/6l+P6iAJz8Ahn8/qJwnP//Qfj/P8k0/AIZ/P88lTj/+z30//0l/P9b4VT8AaX8/1NJTP/meeD8AzX8/+H14P/6+fT8AAIA/+Tt5PwAAgD/3C3c//0l/PwCGfz/9DH4//F18P/9Jfz+KFwo//RF+P4iwCD/4EPY+g5ICP/aG9T6CxAI/AAAAAPxi/T6EgIM7/pL9Pv1a/T6C1IM+/YD8PoachT4AAAAAhkCGPoAAhDqG/Ic+/0l/P4bSgj7+4X0/glyCPupsaj4A/G866MBqPoCBzDuM6Aw/APxvOowhDD+AwBo8xcDCPAD8bzrRgNE8AIHeOwAAAAAAIfg80wDWOpDAEz0AAAAAAPxvOtQA1TvAgEk8ygVKPwD8bzrJ90g/AAAAAPt4ej8AAEw6+hF6PwCAhDv/SX8/wODsPP8Gfz+AMAY9/0l/PwD8bzr/5X0/gAApPA=="),
-"bone_aabbs": [AABB(0.1024246, 7.466324, -2.99957, 8.220974, 1.001358e-05, 5.99914)],
-"format": 34359745591,
-"index_count": 87,
-"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAQABAAFAAMABQAGAAMABQAHAAYABQAIAAcABQAJAAgACAAJAAoACgAJAAsACwAMAAoABQANAAkABAAOAAUADgANAAUADwAOAAQADgAQAA0ADwARAA4ADgARABAADQAQABIAEwAQABEAEwAUABAAEwARABUAFQARABYAFgAXABUAFAAYABAAGAASABAAGAAZABIAEgAZABoAGQAbABoA"),
-"material": SubResource("StandardMaterial3D_l1fln"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 28,
-"vertex_data": PackedByteArray("fyIFPiDs7kD03T1AfvLRPSDs7kABpzJA/3+DPiDs7kDYKz9AJLbdPyDs7kA/HzxA/cPRPSDs7kCkNMk/nsWCQCDs7kCkNMk/7blAQCDs7kD7eD5ACB6vQCDs7kD0+D9Ae7LWQCDs7kBkIj9AyL4EQSDs7kA4uwBAMhcBQSDs7kBXtT9ASPQEQSDs7kDxuTVAwfEDQSDs7kCesT1A6UMEQSDs7kDwpXg+iK2BQCDs7kDNBYY9AnUUPiDs7kDs2Wa9VZKFQCDs7kDvc7i/fegCPiDs7kDvc7i/TmIEQSDs7kDvc7i/R8YAQCDs7kBXlT/AMCqUQCDs7kAKMT3AgZSsPiDs7kD0+D/A/uoOPiDs7kABvTTAflM4PiDs7kAR4D3AScfSQCDs7kCoqD/AP6cCQSDs7kDS+zzApCwFQSDs7kDOwzHAKp8EQSDs7kAMcTrA/3///4zt/7//f///qP//v/9////V/f+//3///4///7//f/////8kwP9///8s//+//3///x39/7//f/////9YwP9//////yDA/3//////B8D/f/////9Jwf9//////ynC/3//////P8j/f///3v//v/9///9v//+//3////j+/7//f///jP//v/9///8z//+//3///6z+/7//f///Bf//v/9//////17A/3//////JcL/f/////+Uwv9//////wvL/3///23//7//f///6PX/v/9///9r9P+//3///x/h/78=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_l1ogb"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmndf"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ixkwd"]
@@ -59,11 +32,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_l1ogb"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_evctb"]
 size = Vector3(18.802073, 11.047309, 8.12094)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tr77o"]
 size = Vector3(18.802073, 11.047309, 8.12094)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1fln"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qwnd0"]
+resource_name = "FtrLogShelf_lunchmat_low__mReFabric"
+_surfaces = [{
+"aabb": AABB(0.1024246, 7.466324, -2.99957, 8.220974, 1e-05, 5.99914),
+"attribute_data": PackedByteArray("AAAAAACGfz+PAJA7/y1/PwAAAAD3UXc/8ABwOvi9dz+SwJM8/3l/P6OAojwAAIA/zqBLPgCGfz/LJEw+/oB9PwAAAADEnkQ/AAAAAMTzQz/4lvg+wwlDP/lE+D7EsEI/tjS2PgCGfz+2zrU+/6l+P6iAJz8Ahn8/qJwnP//Qfj/P8k0/AIZ/P88lTj/+z30//0l/P9b4VT8AaX8/1NJTP/meeD8AzX8/+H14P/6+fT8AAIA/+Tt5PwAAgD/3C3c//0l/PwCGfz/9DH4//F18P/9Jfz+KFwo//RF+P4iwCD/4EPY+g5ICP/aG9T6CxAI/AAAAAPxi/T6EgIM7/pL9Pv1a/T6C1IM+/YD8PoachT4AAAAAhkCGPoAAhDqG/Ic+/0l/P4bSgj7+4X0/glyCPupsaj4A/G866MBqPoCBzDuM6Aw/APxvOowhDD+AwBo8xcDCPAD8bzrRgNE8AIHeOwAAAAAAIfg80wDWOpDAEz0AAAAAAPxvOtQA1TvAgEk8ygVKPwD8bzrJ90g/AAAAAPt4ej8AAEw6+hF6PwCAhDv/SX8/wODsPP8Gfz+AMAY9/0l/PwD8bzr/5X0/gAApPA=="),
+"bone_aabbs": [AABB(0.1024246, 7.466324, -2.99957, 8.220974, 1.001358e-05, 5.99914)],
+"format": 34359745591,
+"index_count": 87,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAQABAAFAAMABQAGAAMABQAHAAYABQAIAAcABQAJAAgACAAJAAoACgAJAAsACwAMAAoABQANAAkABAAOAAUADgANAAUADwAOAAQADgAQAA0ADwARAA4ADgARABAADQAQABIAEwAQABEAEwAUABAAEwARABUAFQARABYAFgAXABUAFAAYABAAGAASABAAGAAZABIAEgAZABoAGQAbABoA"),
+"material": SubResource("StandardMaterial3D_l1fln"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAA=="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("fyIFPiDs7kD03T1AfvLRPSDs7kABpzJA/3+DPiDs7kDYKz9AJLbdPyDs7kA/HzxA/cPRPSDs7kCkNMk/nsWCQCDs7kCkNMk/7blAQCDs7kD7eD5ACB6vQCDs7kD0+D9Ae7LWQCDs7kBkIj9AyL4EQSDs7kA4uwBAMhcBQSDs7kBXtT9ASPQEQSDs7kDxuTVAwfEDQSDs7kCesT1A6UMEQSDs7kDwpXg+iK2BQCDs7kDNBYY9AnUUPiDs7kDs2Wa9VZKFQCDs7kDvc7i/fegCPiDs7kDvc7i/TmIEQSDs7kDvc7i/R8YAQCDs7kBXlT/AMCqUQCDs7kAKMT3AgZSsPiDs7kD0+D/A/uoOPiDs7kABvTTAflM4PiDs7kAR4D3AScfSQCDs7kCoqD/AP6cCQSDs7kDS+zzApCwFQSDs7kDOwzHAKp8EQSDs7kAMcTrA/3///4zt/7//f///qP//v/9////V/f+//3///4///7//f/////8kwP9///8s//+//3///x39/7//f/////9YwP9//////yDA/3//////B8D/f/////9Jwf9//////ynC/3//////P8j/f///3v//v/9///9v//+//3////j+/7//f///jP//v/9///8z//+//3///6z+/7//f///Bf//v/9//////17A/3//////JcL/f/////+Uwv9//////wvL/3///23//7//f///6PX/v/9///9r9P+//3///x/h/78=")
+}]
+blend_shape_mode = 0
 
 [node name="FtrLogShelf" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -74,11 +74,8 @@ skins = {
 "mReFabric": [ExtResource("6_2kikr"), ExtResource("7_j5e1l"), ExtResource("8_rbaax"), ExtResource("9_t4nwm"), ExtResource("10_unaaf")]
 }
 
-[node name="lunchmat_low__mReFabric" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_qwnd0")
-skin = SubResource("Skin_l1ogb")
-
 [node name="Bord__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ixkwd")
 skin = SubResource("Skin_l1ogb")
 
@@ -95,3 +92,7 @@ shape = SubResource("BoxShape3D_evctb")
 [node name="@CollisionShape3D@257421" type="CollisionShape3D" parent="Bord__mReBody/@Area3D@257422"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011961937, 5.5075846, 0.052002907)
 shape = SubResource("BoxShape3D_tr77o")
+
+[node name="lunchmat_low__mReFabric" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_qwnd0")
+skin = SubResource("Skin_l1ogb")

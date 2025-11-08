@@ -25,12 +25,13 @@ skins = {
 }
 
 [node name="VerticalSuperSkinnyFrame" type="MeshInstance3D" parent="."]
-transform = Transform3D(18.101072, 0, 0, 0, 24.798601, 0, 0, 0, 18.948984, 38.867027, -15.634531, 0.11274548)
+transform = Transform3D(11.588131, 0, 0, 0, 14.201066, 0, 0, 0, 14.77941, 24.83264, -8.447583, 0.13232459)
 material_override = ExtResource("5_4mmue")
 mesh = ExtResource("9_iyk0s")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="VerticalSuperSkinnyFrame"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.2140713, 0.18536377, 0.07814503)
+visible = false
 collision_layer = 132
 collision_mask = 132
 
@@ -43,9 +44,10 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.2140713, 0.18536377, 0.0781
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VerticalSuperSkinnyFrame/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.178259, 0.24520153, 0)
+visible = false
 shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.9471095, 0, 0, 0, -4.1414316e-07, -9.958803, 0, 9.474492, -4.3531313e-07, 0.087875366, 0.7827625, 0.29070342)
+transform = Transform3D(1.886711, 0, 0, 0, -3.2301426e-07, -5.7029676, 0, 7.389705, -2.4928465e-07, 0.006603241, 0.95387745, 0.2711243)
 material_override = ExtResource("6_77py1")
 mesh = SubResource("PlaneMesh_pa6mt")

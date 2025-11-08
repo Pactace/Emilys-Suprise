@@ -102,7 +102,7 @@ func switch_states():
 	
 	mouse.enabled() if current_state == EditState.Edit_Objects else mouse.disabled()
 	
-	resize_prompt.visible = true if current_state != EditState.Size_Modify else false
+	#resize_prompt.visible = true if current_state != EditState.Size_Modify else false
 	place_prompt.visible = true if current_state != EditState.Object_Select else false
 	tab_select_prompt.visible = true if current_state == EditState.Object_Select else false
 

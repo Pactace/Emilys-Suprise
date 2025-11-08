@@ -17,6 +17,8 @@ class_name OfficePlaceableInventory
 	"res://Models/Final Models/Downstairs/FtrRattanLamp/Textures/FtrRattanLamp_icon.png": "res://Models/Final Models/Downstairs/FtrRattanLamp/FtrRattanLamp.tscn",
 	"res://Models/Final Models/Downstairs/FtrLampDesk/Textures/FtrLampDesk_icon.png": "res://Models/Final Models/Downstairs/FtrLampDesk/FtrLampDesk.tscn",
 
+	"res://Models/Final Models/Bedrooms/FtrStudySet/Textures/FtrStudySet_icon.png": "res://Models/Final Models/Bedrooms/FtrStudySet/FtrStudySet.tscn",
+
 
 	#this no work "res://Models/Final Models/Office/FtrHumidifier/Textures/FtrHumidifier_icon.png": "res://Models/Final Models/Office/FtrHumidifier/FtrHumidifier.tscn",
 			#default placeable inventory:

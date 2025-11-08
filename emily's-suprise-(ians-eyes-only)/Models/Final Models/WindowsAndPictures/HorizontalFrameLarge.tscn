@@ -7,7 +7,7 @@
 [ext_resource type="Material" uid="uid://cjyvcjnkr5nyg" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameLargeTextures/Frame3.tres" id="5_a8raq"]
 [ext_resource type="Material" uid="uid://dy2h4bhonne0" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameLargeTextures/Picture0.tres" id="6_f10rv"]
 [ext_resource type="Material" uid="uid://cw4hfqaoq2ve0" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameLargeTextures/Picture1.tres" id="7_k7bh3"]
-[ext_resource type="Material" uid="uid://btfkui7h60jl3" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameLargeTextures/Picture2.tres" id="8_rub8c"]
+[ext_resource type="Material" uid="uid://bbefjaoji7pv3" path="res://Models/Final Models/Downstairs/FtrTV50inchWall/Textures/mTv0.tres" id="8_v64xa"]
 [ext_resource type="ArrayMesh" uid="uid://bgt5a0a7r5n0k" path="res://Models/Final Models/WindowsAndPictures/HorizontalFrameLarge.obj" id="9_de383"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pyx02"]
@@ -21,16 +21,17 @@ script = ExtResource("1_j3jvi")
 area_path = NodePath("HorizontalFrameLarge/Area3D")
 skins = {
 "Frame": [ExtResource("2_v64xa"), ExtResource("3_l0r56"), ExtResource("4_a1xhb"), ExtResource("5_a8raq")],
-"Pictures": [ExtResource("6_f10rv"), ExtResource("7_k7bh3"), ExtResource("8_rub8c")]
+"Pictures": [ExtResource("6_f10rv"), ExtResource("7_k7bh3"), ExtResource("8_v64xa")]
 }
 
 [node name="HorizontalFrameLarge" type="MeshInstance3D" parent="."]
-transform = Transform3D(8.898879, 0, 0, 0, 8.24871, 0, 0, 0, 8.258945, 27.973324, -29.507278, 2.4259326)
+transform = Transform3D(4.753217, 0, 0, 0, 4.534123, 0, 0, 0, 4.030798, 15.2496395, -16.299263, 1.1888669)
 material_override = ExtResource("2_v64xa")
 mesh = ExtResource("9_de383")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="HorizontalFrameLarge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.649129, 3.2701306, 0)
+visible = false
 collision_layer = 132
 collision_mask = 132
 
@@ -40,12 +41,13 @@ shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Area3D" type="Area3D" parent="HorizontalFrameLarge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.649129, 3.2701306, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HorizontalFrameLarge/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7185917, 0.40869492, 0)
 shape = SubResource("BoxShape3D_pyx02")
 
 [node name="Picture" type="MeshInstance3D" parent="."]
-transform = Transform3D(16.091784, 0, 0, 0, -1.8050504e-07, -9.3815, 0, 4.1294746, -4.1007843e-07, -0.22180462, 0.36001492, 1.4915023)
-material_override = ExtResource("8_rub8c")
+transform = Transform3D(8.595211, 0, 0, 0, -8.809591e-08, -5.1567917, 0, 2.0154, -2.2541055e-07, 0.18958807, 0.11809158, 0.73281574)
+material_override = ExtResource("8_v64xa")
 mesh = SubResource("PlaneMesh_pa6mt")

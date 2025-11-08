@@ -80,7 +80,7 @@ size = Vector3(8.682298, 26.6637, 6.969838)
 size = Vector3(8.682298, 26.6637, 6.969838)
 
 [node name="FtrAntiqueClock" type="Node3D"]
-transform = Transform3D(0.2337955, 0, 0, 0, 0.25394732, 0, 0, 0, 0.25466138, 0, 0, 0)
+transform = Transform3D(0.15510027, 0, 0, 0, 0.13194187, 0, 0, 0, 0.18765487, 0, 0, 0)
 script = ExtResource("1_hx3c5")
 area_path = NodePath("MoonPhase_low__mReBody/@Area3D@256994")
 skins = {

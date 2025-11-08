@@ -14,5 +14,5 @@ class_name EntrywayPlaceableInventory
 	"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/Textures/FtrWoodenMirrorS_icon.png":"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/FtrWoodenMirrorS.tscn",
 	"res://Models/Final Models/Downstairs/FtrRattanLamp/Textures/FtrRattanLamp_icon.png": "res://Models/Final Models/Downstairs/FtrRattanLamp/FtrRattanLamp.tscn",
 	"res://Models/Final Models/Downstairs/FtrLampDesk/Textures/FtrLampDesk_icon.png": "res://Models/Final Models/Downstairs/FtrLampDesk/FtrLampDesk.tscn",
-
+	"res://Models/Final Models/Bedrooms/FtrElegantLamp/Textures/FtrElegantLamp_icon.png": "res://Models/Final Models/Bedrooms/FtrElegantLamp/FtrElegantLamp.tscn",
 	}
