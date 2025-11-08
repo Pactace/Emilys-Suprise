@@ -44,6 +44,7 @@ size = Vector3(16.340235, 15.01923, 8.590206)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_dvbwi")
 area_path = NodePath("FtrStudyDesk__mReBody/@Area3D@258642")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_yrtss"), ExtResource("3_bpe47"), ExtResource("4_fbcks"), ExtResource("5_18eax")]
 }

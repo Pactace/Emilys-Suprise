@@ -69,6 +69,7 @@ size = Vector3(7.973924, 15.82854, 8.755701)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_bnxk8")
 area_path = NodePath("Body_low__mReBody/@Area3D@258630")
+object_type = 1
 skins = {
 "mMirror": [ExtResource("2_fonol")],
 "mReBody": [ExtResource("3_qft5m"), ExtResource("4_x875c"), ExtResource("5_d001o"), ExtResource("6_tg2ou"), ExtResource("7_2k50o"), ExtResource("8_qq5m2"), ExtResource("9_iki2o"), ExtResource("10_7v077")]

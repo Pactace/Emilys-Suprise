@@ -45,6 +45,7 @@ size = Vector3(8.6, 11.5, 5.700005)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_04hlc")
 area_path = NodePath("blkShelfBack_low__mReBody/@Area3D@257034")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_qplrn"), ExtResource("3_m5l7j"), ExtResource("4_3n7pw"), ExtResource("5_smuvv"), ExtResource("6_dsu3r")]
 }

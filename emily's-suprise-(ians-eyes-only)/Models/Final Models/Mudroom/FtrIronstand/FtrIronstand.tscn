@@ -67,6 +67,7 @@ size = Vector3(8.824778, 11.88839, 5)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_3ijum")
 area_path = NodePath("Button_low__mBody/@Area3D@258022")
+object_type = 1
 skins = {
 "mBody": [ExtResource("2_ti1g3")],
 "mReFabric": [ExtResource("3_agtk2"), ExtResource("4_y7for"), ExtResource("5_g35xi"), ExtResource("6_7ri7p"), ExtResource("7_8m316")]

@@ -62,6 +62,7 @@ size = Vector3(14.984601, 19.638748, 9.919355)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_2cnuy")
 area_path = NodePath("Anemone1Meshibe01_low__mReBody/@Area3D@258234")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_8o0qv"), ExtResource("3_g3npr"), ExtResource("4_i8kuw"), ExtResource("5_x4v2p"), ExtResource("6_ee27a"), ExtResource("7_5pyjb"), ExtResource("8_50g3l")]
 }

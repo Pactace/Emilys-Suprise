@@ -48,6 +48,7 @@ size = Vector3(8.266394, 8.6, 7.758931)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_3b2io")
 area_path = NodePath("backbarA_low__mReBody/@Area3D@258646")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_n5u60"), ExtResource("3_rufo2"), ExtResource("4_y55bw"), ExtResource("5_x3vpt"), ExtResource("6_bx7x5"), ExtResource("7_5hxm6"), ExtResource("8_stmu4"), ExtResource("9_84cam")]
 }

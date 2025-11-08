@@ -46,6 +46,7 @@ size = Vector3(17.977028, 5.199703, 9.157162)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_rxeie")
 area_path = NodePath("LowtableJapan_low__mReBody/@Area3D@257430")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_8w18a"), ExtResource("3_ehi8y"), ExtResource("4_5mg2w"), ExtResource("5_0ll7i"), ExtResource("6_bv11s"), ExtResource("7_xp6gl")]
 }

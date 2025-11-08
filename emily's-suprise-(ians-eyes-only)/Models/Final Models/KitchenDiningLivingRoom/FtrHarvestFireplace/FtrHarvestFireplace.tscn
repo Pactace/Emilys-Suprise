@@ -48,6 +48,7 @@ size = Vector3(18.024494, 11.13816, 10.030613)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_louje")
 area_path = NodePath("Brick__mReBody/@Area3D@257794")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_uubmk"), ExtResource("3_cklp4")]
 }

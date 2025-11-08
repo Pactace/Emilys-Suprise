@@ -5,7 +5,7 @@ var final_models := "res://Models/Final Models/"
 
 func _run():
 	var root_path := final_models
-	_traverse_folders(root_path)
+	_traverse_folders_to_change_type(root_path)
 
 # --- Traverse folders recursively
 func _traverse_folders(path: String) -> void:
@@ -419,3 +419,62 @@ func add_wall_ray_to_wall_objects():
 			push_error("Failed to save updated scene: %s" % path)
 		else:
 			print("✅ Added wall_ray to: ", name)
+			
+			
+func _traverse_folders_to_change_type(path: String) -> void:
+	var dir := DirAccess.open(path)
+	if not dir:
+		push_error("Could not open: %s" % path)
+		return
+
+	dir.list_dir_begin()
+	var file_name := dir.get_next()
+	while file_name != "":
+		var full_path := path.path_join(file_name)
+		if dir.current_is_dir():
+			if file_name not in [".", "..", "Textures", ".import"]:
+				_traverse_folders_to_change_type(full_path)
+		else:
+			if file_name.ends_with(".tscn"):
+				if FileAccess.file_exists(full_path):
+					_change_to_table(full_path, file_name)
+		file_name = dir.get_next()
+	dir.list_dir_end()
+
+	dir.list_dir_end()
+	
+func _change_to_table(path: String, file_name: String) -> void:
+	var keywords := [
+		"table", "desk", "cabinet", "shelf", "upright",
+		"stand", "chest", "dresser", "cupboard", "kitchen",
+		"console", "lowboard", "fireplace", "tray"
+	]
+	var antikeywords := [
+		"chair", "window", "tablet"
+	]
+	
+	var lower_name := file_name.to_lower()
+
+	# Skip if any antikeyword appears in the name
+	for anti in antikeywords:
+		if anti in lower_name:
+			return
+	
+	# Check for desired keywords
+	for keyword in keywords:
+		if keyword in lower_name:
+			var scene := load(path)
+			var inst = scene.instantiate()
+			
+			inst.object_type = 2
+			# Step 5 save the packages: Save final packed scene
+			var packed := PackedScene.new()
+			var ok := packed.pack(inst)
+			if ok == OK:
+				var err := ResourceSaver.save(packed, path)
+				if err == OK:
+					print("✅ Final scene saved:", path)
+				else:
+					push_error("❌ Failed to save scene: %s" % path)
+			else:
+				push_error("❌ Failed to pack scene: %s" % path)

@@ -97,6 +97,7 @@ size = Vector3(19.099998, 12.13577, 6.95411)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_cy1p1")
 area_path = NodePath("cylinderPot_low__mBody/@Area3D@258190")
+object_type = 1
 skins = {
 "mBody": [ExtResource("2_54n11")],
 "mLeafNuki": [ExtResource("3_312li")]

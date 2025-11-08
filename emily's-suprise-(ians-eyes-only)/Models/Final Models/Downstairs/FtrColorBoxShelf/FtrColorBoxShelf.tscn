@@ -93,6 +93,7 @@ blend_shape_mode = 0
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_qwulo")
 area_path = NodePath("Backboard_low__mReBody/@Area3D@257346")
+object_type = 1
 skins = {
 "mReBody": [ExtResource("2_583o3"), ExtResource("3_avhj8"), ExtResource("4_inhs6"), ExtResource("5_bv2tv"), ExtResource("6_2uraq"), ExtResource("7_jcavl"), ExtResource("8_5piva"), ExtResource("9_mayp0"), ExtResource("10_ixl77"), ExtResource("11_2jn76"), ExtResource("12_e08wx"), ExtResource("13_gxsq5"), ExtResource("14_ms8md"), ExtResource("15_k7xlj"), ExtResource("16_1owlg"), ExtResource("17_26fhj")],
 "mReFabric": [ExtResource("18_sbsxq"), ExtResource("19_k6ayw"), ExtResource("20_6g6sp"), ExtResource("21_hdmso"), ExtResource("22_8c2iq"), ExtResource("23_bfnp5"), ExtResource("24_2xhd1"), ExtResource("25_gphc3"), ExtResource("26_juwxw"), ExtResource("27_4g704"), ExtResource("28_cycys"), ExtResource("29_6owry"), ExtResource("30_s7i4d"), ExtResource("31_21j7l"), ExtResource("32_hxp5e"), ExtResource("33_ccopl")]
