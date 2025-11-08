@@ -57,6 +57,7 @@ size = Vector3(3.62725, 5.743483, 3.779296)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_lmkw6")
 area_path = NodePath("CatGrass__mReBody/@Area3D@258086")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_qfecr"), ExtResource("3_fnyix"), ExtResource("4_xj318"), ExtResource("5_tvglx"), ExtResource("6_ccjiv")]
 }

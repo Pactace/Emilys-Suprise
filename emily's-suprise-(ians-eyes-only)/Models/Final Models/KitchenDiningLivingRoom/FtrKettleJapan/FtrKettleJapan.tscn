@@ -41,6 +41,7 @@ size = Vector3(5.165508, 7.156879, 6.550851)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_tclcl")
 area_path = NodePath("FtrKettleJapan__mBody/@Area3D@257814")
+object_type = 2
 skins = {
 "mBody": [ExtResource("2_7invn")]
 }

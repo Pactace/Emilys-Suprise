@@ -85,6 +85,7 @@ bind/5/pose = Transform3D(7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0, 0, 1, -4.280
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_xxu1r")
 area_path = NodePath("Flowerpot__mBody/@Area3D@258186")
+object_type = 2
 skins = {
 "mBody": [ExtResource("2_gpxiv")],
 "mFlowerNuki": [ExtResource("3_ec17m")]

@@ -437,7 +437,7 @@ func _traverse_folders_to_change_type(path: String) -> void:
 		else:
 			if file_name.ends_with(".tscn"):
 				if FileAccess.file_exists(full_path):
-					_change_to_table(full_path, file_name)
+					_change_to_table_placeable(full_path, file_name)
 		file_name = dir.get_next()
 	dir.list_dir_end()
 
@@ -466,7 +466,7 @@ func _change_to_table(path: String, file_name: String) -> void:
 			var scene := load(path)
 			var inst = scene.instantiate()
 			
-			inst.object_type = 2
+			inst.object_type = 1
 			# Step 5 save the packages: Save final packed scene
 			var packed := PackedScene.new()
 			var ok := packed.pack(inst)
@@ -478,3 +478,98 @@ func _change_to_table(path: String, file_name: String) -> void:
 					push_error("❌ Failed to save scene: %s" % path)
 			else:
 				push_error("❌ Failed to pack scene: %s" % path)
+
+func _change_to_table_placeable(path: String, file_name: String) -> void:
+	# All valid .tscn file paths you provided
+	var valid_paths := [
+		"res://Models/Final Models/Downstairs/FtrRattanLamp/FtrRattanLamp.tscn",
+		"res://Models/Final Models/Downstairs/FtrLampDesk/FtrLampDesk.tscn",
+		"res://Models/Final Models/Downstairs/FtrTV50inch/FtrTV50inch.tscn",
+		"res://Models/Final Models/Downstairs/FtrTV20inch/FtrTV20inch.tscn",
+		"res://Models/Final Models/Downstairs/FtrOwlClock/FtrOwlClock.tscn",
+		"res://Models/Final Models/Downstairs/FtrChess/FtrChess.tscn",
+		"res://Models/Final Models/Downstairs/FtrBoardgame/FtrBoardgame.tscn",
+		"res://Models/Final Models/Plants/FtrCatgrass/FtrCatgrass.tscn",
+		"res://Models/Final Models/Plants/FtrPlantGoldcrest/FtrPlantGoldcrest.tscn",
+		"res://Models/Final Models/Plants/FtrPlantYamadoriyashi/FtrPlantYamadoriyashi.tscn",
+		"res://Models/Final Models/Plants/FtrPlantMonstera/FtrPlantMonstera.tscn",
+		"res://Models/Final Models/Plants/FtrPlantTakumi/FtrPlantTakumi.tscn",
+		"res://Models/Final Models/Plants/FtrPlantSucculents/FtrPlantSucculents.tscn",
+		"res://Models/Final Models/Plants/FtrPlantAnthurium/FtrPlantAnthurium.tscn",
+		"res://Models/Final Models/Plants/FtrBonsaiSakura/FtrBonsaiSakura.tscn",
+		"res://Models/Final Models/Plants/FtrStandflower/FtrStandflower.tscn",
+		"res://Models/Final Models/Bathrooms/FtrBottleShampoo/FtrBottleShampoo.tscn",
+		"res://Models/Final Models/Bathrooms/FtrRattanBasket/FtrRattanBasket.tscn",
+		"res://Models/Final Models/Bathrooms/FtrToothbrush/FtrToothbrush.tscn",
+		"res://Models/Final Models/Bathrooms/FtrWoodenMirror/FtrWoodenMirror.tscn",
+		"res://Models/Final Models/Office/FtrCatgrass/FtrCatgrass.tscn",
+		"res://Models/Final Models/Office/FtrPlantGoldcrest/FtrPlantGoldcrest.tscn",
+		"res://Models/Final Models/Office/FtrPlantMonstera/FtrPlantMonstera.tscn",
+		"res://Models/Final Models/Office/FtrPlantAnthurium/FtrPlantAnthurium.tscn",
+		"res://Models/Final Models/Office/FtrClipboard/FtrClipboard.tscn",
+		"res://Models/Final Models/Office/FtrDesktopPC/FtrDesktopPC.tscn",
+		"res://Models/Final Models/Office/FtrDocument/FtrDocument.tscn",
+		"res://Models/Final Models/Office/FtrCartoonistset/FtrCartoonistset.tscn",
+		"res://Models/Final Models/Office/FtrHumidifier/FtrHumidifier.tscn",
+		"res://Models/Final Models/Bedrooms/FtrWoodenMirrorS/FtrWoodenMirrorS.tscn",
+		"res://Models/Final Models/Bedrooms/FtrElegantLamp/FtrElegantLamp.tscn",
+		"res://Models/Final Models/Bedrooms/FtrStudySet/FtrStudySet.tscn",
+		"res://Models/Final Models/Bedrooms/FtrBookstand/FtrBookstand.tscn",
+		"res://Models/Final Models/Bedrooms/FtrCrsHelicopter/FtrCrsHelicopter.tscn",
+		"res://Models/Final Models/Bedrooms/FtrBearS/FtrBearS.tscn",
+		"res://Models/Final Models/Bedrooms/FtrPandaS/FtrPandaS.tscn",
+		"res://Models/Final Models/Bedrooms/FtrBaseball/FtrBaseball.tscn",
+		"res://Models/Final Models/Bedrooms/FtrCrsDollhouse/FtrCrsDollhouse.tscn",
+		"res://Models/Final Models/Bedrooms/FtrDreamyDollBear/FtrDreamyDollBear.tscn",
+		"res://Models/Final Models/Bedrooms/FtrDreamyDollRabbit/FtrDreamyDollRabbit.tscn",
+		"res://Models/Final Models/Bedrooms/FtrDreamyDollUnicorn/FtrDreamyDollUnicorn.tscn",
+		"res://Models/Final Models/Bedrooms/FtrColorfulMirror/FtrColorfulMirror.tscn",
+		"res://Models/Final Models/Bedrooms/FtrClockBell/FtrClockBell.tscn",
+		"res://Models/Final Models/Bedrooms/FtrSwitch/FtrSwitch.tscn",
+		"res://Models/Final Models/Bedrooms/FtrPigbank/FtrPigbank.tscn",
+		"res://Models/Final Models/Bedrooms/FtrPaintset/FtrPaintset.tscn",
+		"res://Models/Final Models/Bedrooms/FtrCrsDogtoy/FtrCrsDogtoy.tscn",
+		"res://Models/Final Models/Bedrooms/FtrMusicboxWood/FtrMusicboxWood.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrDecorativeplate/FtrDecorativeplate.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrPotteryjug/FtrPotteryjug.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrKitchenware/FtrKitchenware.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrSugermilk/FtrSugermilk.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrCuttingboard/FtrCuttingboard.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrDrainerbasket/FtrDrainerbasket.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrFruitbasket/FtrFruitbasket.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrGlassjar/FtrGlassjar.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrFruitswater/FtrFruitswater.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrKettleJapan/FtrKettleJapan.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrMicrowave/FtrMicrowave.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrStockpot/FtrStockpot.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrHarvestEnamelpod/FtrHarvestEnamelpod.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrMixer/FtrMixer.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrToaster/FtrToaster.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrSeasoning/FtrSeasoning.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrGoldCandlestand/FtrGoldCandlestand.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrGlasscandle/FtrGlasscandle.tscn",
+		"res://Models/Final Models/KitchenDiningLivingRoom/FtrCandleTakumi/FtrCandleTakumi.tscn",
+		"res://Models/Final Models/Tower/FtrJapanSword/FtrJapanSword.tscn"
+	]
+
+	if path not in valid_paths:
+		return
+	
+	var scene := load(path)
+	if scene == null:
+		push_error("❌ Could not load scene: %s" % path)
+		return
+	
+	var inst = scene.instantiate()
+	inst.object_type = 2
+	
+	var packed := PackedScene.new()
+	var ok := packed.pack(inst)
+	if ok == OK:
+		var err := ResourceSaver.save(packed, path)
+		if err == OK:
+			print("✅ Final scene saved:", path)
+		else:
+			push_error("❌ Failed to save scene: %s" % path)
+	else:
+		push_error("❌ Failed to pack scene: %s" % path)

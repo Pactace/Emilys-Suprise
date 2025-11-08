@@ -79,6 +79,7 @@ blend_shape_mode = 0
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_b1x0e")
 area_path = NodePath("Part1_low__mReBody/@Area3D@257522")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_c43wi"), ExtResource("3_qpqw7"), ExtResource("4_5olxi"), ExtResource("5_gaxio"), ExtResource("6_hn7uq"), ExtResource("7_40hcr"), ExtResource("8_c6cma"), ExtResource("9_72c8n"), ExtResource("10_cgjvh"), ExtResource("11_axii7"), ExtResource("12_2ydkt"), ExtResource("13_s3nbr"), ExtResource("14_vvbos"), ExtResource("15_neba4"), ExtResource("16_a516n"), ExtResource("17_tbq1w")],
 "mTv": [ExtResource("18_n6a0h"), ExtResource("19_a7e33")]

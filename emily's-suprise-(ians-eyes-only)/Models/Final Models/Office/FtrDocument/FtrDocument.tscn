@@ -47,6 +47,7 @@ size = Vector3(9.229437, 0.2990216, 6.532669)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_vycvt")
 area_path = NodePath("Back__mReFabric/@Area3D@258106")
+object_type = 2
 skins = {
 "mReFabric": [ExtResource("2_kwog4"), ExtResource("3_gx750"), ExtResource("4_o1lfw"), ExtResource("5_23mev"), ExtResource("6_f2pdk"), ExtResource("7_be3jl"), ExtResource("8_3oucx")]
 }

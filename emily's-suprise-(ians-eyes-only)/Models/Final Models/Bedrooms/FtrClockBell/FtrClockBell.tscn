@@ -103,6 +103,7 @@ albedo_color = Color(0.6313726, 1, 1, 0.5764706)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_dfd11")
 area_path = NodePath("ClockBell1_low__mReBody/@Area3D@257046")
+object_type = 2
 skins = {
 "mClockHand": [ExtResource("2_s3sax")],
 "mReBody": [ExtResource("3_jwebi"), ExtResource("4_5tgd1"), ExtResource("5_620vy"), ExtResource("6_vcba3"), ExtResource("7_jtole"), ExtResource("8_sttys"), ExtResource("9_p2vy1"), ExtResource("10_0tx5f")]

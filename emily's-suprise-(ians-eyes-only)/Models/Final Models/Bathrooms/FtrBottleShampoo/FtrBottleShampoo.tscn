@@ -84,6 +84,7 @@ bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_ar8ur")
 area_path = NodePath("shampoo_Botol___mReBody/@Area3D@256894")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_5ophv"), ExtResource("3_i2rw5"), ExtResource("4_7tqlr"), ExtResource("5_2hko5"), ExtResource("6_3b0j4"), ExtResource("7_0h2lq"), ExtResource("8_53tcj")],
 "mReFabric": [ExtResource("9_w1y7q"), ExtResource("10_wspbu"), ExtResource("11_pooxg"), ExtResource("12_goa2a"), ExtResource("13_cl5h3")]

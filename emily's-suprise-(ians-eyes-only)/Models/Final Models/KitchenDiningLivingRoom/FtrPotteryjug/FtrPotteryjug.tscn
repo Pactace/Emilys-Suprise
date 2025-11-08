@@ -46,6 +46,7 @@ size = Vector3(4.795343, 5.4626675, 3.232804)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_gbjrc")
 area_path = NodePath("Potteryjug_low__mReBody/@Area3D@257898")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_anoa3"), ExtResource("3_vypho"), ExtResource("4_dvtot"), ExtResource("5_pjhyp"), ExtResource("6_hv8r3"), ExtResource("7_ydjfs")]
 }

@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://djurkw26lfwwt"]
+[gd_scene load_steps=10 format=4 uid="uid://djurkw26lfwwt"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_eqob7"]
 [ext_resource type="Material" uid="uid://d3fw5cqhx1fyg" path="res://Models/Final Models/Rugs/RugRectBathmatS00/Textures/mMain0.tres" id="2_vaf80"]
+[ext_resource type="Material" uid="uid://7k3hlaxrsql6" path="res://Models/Final Models/Rugs/RugRectBathmatS01/Textures/mMain0.tres" id="3_hs2xa"]
+[ext_resource type="Material" uid="uid://d1pby6q2q6h25" path="res://Models/Final Models/Rugs/RugRectBathmatS02/Textures/mMain0.tres" id="4_pmhpc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1mek"]
 
@@ -41,8 +43,9 @@ size = Vector3(15.972783, 0.029999997, 9.978785)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_eqob7")
 area_path = NodePath("Edge__mMain/@Area3D@258254")
+object_type = 3
 skins = {
-"mMain": [ExtResource("2_vaf80")]
+"mMain": [ExtResource("2_vaf80"), ExtResource("3_hs2xa"), ExtResource("4_pmhpc")]
 }
 
 [node name="Edge__mMain" type="MeshInstance3D" parent="."]

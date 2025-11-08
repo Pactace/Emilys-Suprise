@@ -41,8 +41,9 @@ size = Vector3(16, 0.03000002, 9.999115)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_fl1cf")
 area_path = NodePath("Main__mMain/@Area3D@258238")
+object_type = 3
 skins = {
-"mMain": [ExtResource("2_8ct7d")]
+"mMain": [ExtResource("2_8ct7d"), null]
 }
 
 [node name="Main__mMain" type="MeshInstance3D" parent="."]

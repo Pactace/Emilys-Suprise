@@ -56,6 +56,7 @@ bind/5/pose = Transform3D(2.715149e-07, -0.2424362, 0.97016734, 8.3208526e-08, 0
 [node name="FtrCrsDogtoy" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_ctx73")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_twejo"), ExtResource("3_2c8bt"), ExtResource("4_5uyct"), ExtResource("5_oo7pm"), ExtResource("6_mta33"), ExtResource("7_d566s"), ExtResource("8_qrbna"), ExtResource("9_ttach")]
 }

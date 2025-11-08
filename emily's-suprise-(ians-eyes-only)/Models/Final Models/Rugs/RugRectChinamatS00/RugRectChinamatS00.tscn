@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://bnrw6hcrr65qt"]
+[gd_scene load_steps=9 format=4 uid="uid://bnrw6hcrr65qt"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_fum2f"]
 [ext_resource type="Material" uid="uid://bjci7i211m6g2" path="res://Models/Final Models/Rugs/RugRectChinamatS00/Textures/mMain0.tres" id="2_qj3kf"]
+[ext_resource type="Material" uid="uid://dqv4y1dfrh6u8" path="res://Models/Final Models/Rugs/RugRectChinamatS01/Textures/mMain0.tres" id="3_s5wm8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgy7b"]
 
@@ -41,8 +42,9 @@ size = Vector3(20, 0.029999997, 10)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_fum2f")
 area_path = NodePath("Main__mMain/@Area3D@258286")
+object_type = 3
 skins = {
-"mMain": [ExtResource("2_qj3kf")]
+"mMain": [ExtResource("2_qj3kf"), ExtResource("3_s5wm8")]
 }
 
 [node name="Main__mMain" type="MeshInstance3D" parent="."]

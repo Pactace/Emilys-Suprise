@@ -41,6 +41,7 @@ size = Vector3(39.99588, 0.029999997, 39.991188)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_sdl2s")
 area_path = NodePath("Edge__mMain/@Area3D@258442")
+object_type = 3
 skins = {
 "mMain": [ExtResource("2_6pkbg")]
 }

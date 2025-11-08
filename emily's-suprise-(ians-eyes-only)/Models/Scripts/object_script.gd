@@ -16,7 +16,7 @@ var overlapping = false
 var collision
 var placable_location_found
 
-@export_enum("Normal", "Table", "Placeable on Table") var object_type: int
+@export_enum("Normal", "Table", "Placeable on Table", "Rug") var object_type: int
 
 @export var skins = {}
 

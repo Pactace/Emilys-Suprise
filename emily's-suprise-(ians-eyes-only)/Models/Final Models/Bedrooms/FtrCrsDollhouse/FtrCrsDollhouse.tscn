@@ -47,6 +47,7 @@ size = Vector3(8.711447, 9.838346, 7.522113)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_bxvf0")
 area_path = NodePath("BalconyFence_low__mReBody/@Area3D@257074")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_2yt16"), ExtResource("3_hylju"), ExtResource("4_tqqyh"), ExtResource("5_756o4"), ExtResource("6_5kiee"), ExtResource("7_gsihe"), ExtResource("8_0lw4v")]
 }

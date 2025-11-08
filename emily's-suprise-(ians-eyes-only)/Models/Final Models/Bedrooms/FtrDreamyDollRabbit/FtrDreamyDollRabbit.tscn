@@ -46,6 +46,7 @@ size = Vector3(5.96757, 9.531065, 5.9692926)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_1eljf")
 area_path = NodePath("Ear_low__mReBody/@Area3D@257106")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_jwd1j"), ExtResource("3_slblb"), ExtResource("4_7i0r0"), ExtResource("5_smv5l"), ExtResource("6_3eo5r"), ExtResource("7_sle80")]
 }

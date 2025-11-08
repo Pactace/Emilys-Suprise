@@ -105,6 +105,7 @@ blend_shape_mode = 0
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_c8wvu")
 area_path = NodePath("candle00_low_1__mBody/@Area3D@257666")
+object_type = 2
 skins = {
 "mBody": [ExtResource("2_lhri7")],
 "mHandle": [ExtResource("3_lq71l")]

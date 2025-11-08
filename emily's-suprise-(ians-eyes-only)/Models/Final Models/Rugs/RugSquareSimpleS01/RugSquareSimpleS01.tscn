@@ -1,7 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://bemlgeglhivx"]
+[gd_scene load_steps=14 format=4 uid="uid://bemlgeglhivx"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_dfiq4"]
 [ext_resource type="Material" uid="uid://mfdn7fy6js4f" path="res://Models/Final Models/Rugs/RugSquareSimpleS01/Textures/mMain0.tres" id="2_3h0i3"]
+[ext_resource type="Material" uid="uid://dk3wee47n2gmi" path="res://Models/Final Models/Rugs/RugSquareSimpleS02/Textures/mMain0.tres" id="3_ltn18"]
+[ext_resource type="Material" uid="uid://dgj8xa64rgg3l" path="res://Models/Final Models/Rugs/RugSquareSimpleS03/Textures/mMain0.tres" id="4_gwumw"]
+[ext_resource type="Material" uid="uid://v3xc8jpdsfsx" path="res://Models/Final Models/Rugs/RugSquareSimpleS04/Textures/mMain0.tres" id="5_ktpho"]
+[ext_resource type="Material" uid="uid://dmod0xujuxaep" path="res://Models/Final Models/Rugs/RugSquareSimpleS05/Textures/mMain0.tres" id="6_twtvj"]
+[ext_resource type="Material" uid="uid://wyedu17gaarr" path="res://Models/Final Models/Rugs/RugSquareSimpleS06/Textures/mMain0.tres" id="7_kewe0"]
+[ext_resource type="Material" uid="uid://te1mk63gotsm" path="res://Models/Final Models/Rugs/RugSquareSimpleS07/Textures/mMain0.tres" id="8_a7rin"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0lql6"]
 
@@ -41,8 +47,9 @@ size = Vector3(20, 0.029999997, 20)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_dfiq4")
 area_path = NodePath("Edge__mMain/@Area3D@258498")
+object_type = 3
 skins = {
-"mMain": [ExtResource("2_3h0i3")]
+"mMain": [ExtResource("2_3h0i3"), ExtResource("3_ltn18"), ExtResource("4_gwumw"), ExtResource("5_ktpho"), ExtResource("6_twtvj"), ExtResource("7_kewe0"), ExtResource("8_a7rin")]
 }
 
 [node name="Edge__mMain" type="MeshInstance3D" parent="."]

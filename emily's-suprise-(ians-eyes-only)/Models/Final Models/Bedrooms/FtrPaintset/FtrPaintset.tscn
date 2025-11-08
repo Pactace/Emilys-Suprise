@@ -68,6 +68,7 @@ blend_shape_mode = 0
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_acyf6")
 area_path = NodePath("Watercolor_Pen01_low__mReBody/@Area3D@257186")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_6ryp7"), ExtResource("3_dnu5i"), ExtResource("4_ptvhx"), ExtResource("5_2q436")],
 "mReFabric": [ExtResource("6_5h2wm"), ExtResource("7_avfjc"), ExtResource("8_ewggx"), ExtResource("9_3nfyj")]
