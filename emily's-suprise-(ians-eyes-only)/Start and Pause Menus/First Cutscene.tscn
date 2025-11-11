@@ -1,15 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://rktgnyhpt6vs"]
+[gd_scene load_steps=25 format=3 uid="uid://rktgnyhpt6vs"]
 
 [ext_resource type="AudioStream" uid="uid://cw5y12qqq7ukd" path="res://Start and Pause Menus/Car Slow Driving Sound Effect.mp3" id="5_nhk27"]
-[ext_resource type="Texture2D" uid="uid://b58mk1w50huit" path="res://Start and Pause Menus/DialogueBox-removebg-preview.png" id="9_k1b1d"]
-[ext_resource type="FontFile" uid="uid://cqbx7v2aqy45t" path="res://Start and Pause Menus/GUTHEN BLOOTS ALLCAPS.ttf" id="10_gij4t"]
-[ext_resource type="Script" uid="uid://crqiokocp2v4" path="res://Start and Pause Menus/DialogueBox.gd" id="10_u8aka"]
+[ext_resource type="PackedScene" uid="uid://b7bx5bnmslkmm" path="res://Start and Pause Menus/Start Screen Items/cc0_free_cardboard_box.glb" id="6_fsw08"]
+[ext_resource type="PackedScene" uid="uid://bw0t6tqmfbfuh" path="res://Levels/Components/Notification.tscn" id="10_2iunp"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="12_2iunp"]
-[ext_resource type="Texture2D" uid="uid://0tn67am0hfy0" path="res://UI_Overlay/Sprites/Navigation/Y__4_-removebg-preview.png" id="12_fsw08"]
-[ext_resource type="Texture2D" uid="uid://cv2vwfq0d6mde" path="res://Start and Pause Menus/103775-removebg-preview.png" id="13_2mq5b"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="13_fsw08"]
-[ext_resource type="AudioStream" uid="uid://cmyo74o4hijpp" path="res://Start and Pause Menus/Telephone Ring Pick Up Sound Effect.mp3" id="15_th7if"]
-[ext_resource type="Script" uid="uid://cmfufgpoeqwtn" path="res://Start and Pause Menus/phone_ring.gd" id="16_b5g35"]
 [ext_resource type="AudioStream" uid="uid://bwnpcadorr0ky" path="res://Start and Pause Menus/smooth-instrumental-jazz-music-349777.mp3" id="17_yqt50"]
 [ext_resource type="Texture2D" uid="uid://dvf10sckw0sx3" path="res://Start and Pause Menus/Logo Sprites/unscreen-146.png" id="145_j0qq6"]
 [ext_resource type="Texture2D" uid="uid://dq5mx2vt3ip17" path="res://Start and Pause Menus/Start Screen Items/sky_panorama.jpg" id="153_6ntu4"]
@@ -239,8 +234,6 @@ shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/scroll_speed = 1.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8aka"]
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2mq5b"]
 shader = ExtResource("12_2iunp")
 shader_parameter/circle_size = 0.0
@@ -269,6 +262,93 @@ texture = ExtResource("145_j0qq6")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Moving van"]
 stream = ExtResource("5_nhk27")
 
+[node name="Sketchfab_Scene" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000005, 0, -4.656613e-10, 0, 0.5982886, -0.43371952, 0.6733605, 0.0014228821)
+
+[node name="Sketchfab_Scene2" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000006, 0, -4.656613e-10, 0, 0.5982886, -0.43506896, 0.6733606, -0.40985107)
+
+[node name="Sketchfab_Scene3" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000007, 0, -4.656613e-10, 0, 0.5982886, -0.43639615, 0.67336065, -0.8143282)
+
+[node name="Sketchfab_Scene4" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000008, 0, -4.656613e-10, 0, 0.5982886, -0.43761984, 0.67336076, -1.1872711)
+
+[node name="Sketchfab_Scene5" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.000001, 0, -4.656613e-10, 0, 0.5982886, 0.056618154, 0.6733608, -1.1888933)
+
+[node name="Sketchfab_Scene6" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000011, 0, -4.656613e-10, 0, 0.5982886, 0.05780542, 0.6733609, -0.8270569)
+
+[node name="Sketchfab_Scene7" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000012, 0, -4.656613e-10, 0, 0.5982886, 0.058810353, 0.673361, -0.5207834)
+
+[node name="Sketchfab_Scene8" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000013, 0, -4.656613e-10, 0, 0.5982886, 0.060399234, 0.67336106, -0.0365448)
+
+[node name="Sketchfab_Scene9" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.0000018, 0, -0.67101353, 0, -0.018187365, 0.50827116, 0.6733613, -0.038017273)
+
+[node name="Sketchfab_Scene10" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.0000019, 0, -0.67101365, 0, -0.018187366, 0.50639194, 0.67336136, -0.6107178)
+
+[node name="Sketchfab_Scene11" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.000002, 0, -0.6710137, 0, -0.018187368, 0.5046274, 0.6733615, -1.1485033)
+
+[node name="Sketchfab_Scene12" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000006, 0, -4.656613e-10, 0, 0.5982886, -0.43371952, 1.1722727, 0.0014228821)
+
+[node name="Sketchfab_Scene13" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000007, 0, -4.656613e-10, 0, 0.5982886, -0.43506896, 1.1722728, -0.40985107)
+
+[node name="Sketchfab_Scene14" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000008, 0, -4.656613e-10, 0, 0.5982886, -0.43639615, 1.1722728, -0.8143282)
+
+[node name="Sketchfab_Scene15" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.000001, 0, -4.656613e-10, 0, 0.5982886, -0.43761984, 1.1722729, -1.1872711)
+
+[node name="Sketchfab_Scene16" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000011, 0, -4.656613e-10, 0, 0.5982886, 0.056618154, 1.172273, -1.1888943)
+
+[node name="Sketchfab_Scene17" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000012, 0, -4.656613e-10, 0, 0.5982886, 0.05780542, 1.172273, -0.8270569)
+
+[node name="Sketchfab_Scene18" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000013, 0, -4.656613e-10, 0, 0.5982886, 0.058810353, 1.1722732, -0.5207844)
+
+[node name="Sketchfab_Scene19" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000014, 0, -4.656613e-10, 0, 0.5982886, 0.060399234, 1.1722733, -0.036545753)
+
+[node name="Sketchfab_Scene20" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.0000019, 0, -0.67101365, 0, -0.018187366, 0.50827116, 1.1722735, -0.038018227)
+
+[node name="Sketchfab_Scene21" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.000002, 0, -0.6710137, 0, -0.018187368, 0.50639194, 1.1722735, -0.6107187)
+
+[node name="Sketchfab_Scene22" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(-0.020407552, 0, 0.59801215, 0, 1.0000021, 0, -0.6710138, 0, -0.01818737, 0.5046274, 1.1722736, -1.1485043)
+
+[node name="Sketchfab_Scene23" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000007, 0, -4.656613e-10, 0, 0.5982886, -0.43371952, 1.6806335, 0.0014228821)
+
+[node name="Sketchfab_Scene24" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000008, 0, -4.656613e-10, 0, 0.5982886, -0.43506896, 1.6806338, -0.40985107)
+
+[node name="Sketchfab_Scene25" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.000001, 0, -4.656613e-10, 0, 0.5982886, -0.43639615, 1.6806338, -0.8143282)
+
+[node name="Sketchfab_Scene26" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000011, 0, -4.656613e-10, 0, 0.5982886, -0.43761984, 1.6806338, -1.1872711)
+
+[node name="Sketchfab_Scene27" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000012, 0, -4.656613e-10, 0, 0.5982886, 0.056618154, 1.6806339, -1.1888943)
+
+[node name="Sketchfab_Scene28" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000013, 0, -4.656613e-10, 0, 0.5982886, 0.05780542, 1.6806339, -0.8270569)
+
+[node name="Sketchfab_Scene29" parent="Moving van" instance=ExtResource("6_fsw08")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000014, 0, -4.656613e-10, 0, 0.5982886, 0.058810353, 1.680634, -0.52078533)
+
 [node name="Road" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.087293886, 0, -119.40372, 0, 1, 0, 8.066745, 0, -1.2921213, 0, 0, 0.8509264)
 mesh = SubResource("PlaneMesh_7ktha")
@@ -284,59 +364,7 @@ transform = Transform3D(123.663574, 4.4118894e-16, -6.632469e-07, -5.392913e-06,
 mesh = SubResource("PlaneMesh_7ktha")
 surface_material_override/0 = SubResource("ShaderMaterial_cooxk")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.30800003
-anchor_right = 0.5
-anchor_bottom = 0.30800003
-offset_left = -272.0
-offset_top = -90.84001
-offset_right = 78.0
-offset_bottom = 90.15999
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_k1b1d")
-script = ExtResource("10_u8aka")
-start_delay = 3.5
-dialogue_typing_speed = 0.03
-
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
-layout_mode = 0
-offset_left = 28.0
-offset_top = 37.0
-offset_right = 328.0
-offset_bottom = 117.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("10_gij4t")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_u8aka")
-bbcode_enabled = true
-text = "Its crazy the owner was very particular about you doing the interior for this project"
-
-[node name="ButtonPrompt" type="TextureRect" parent="TextureRect"]
-layout_mode = 0
-offset_left = 276.0
-offset_top = 73.0
-offset_right = 351.0
-offset_bottom = 148.0
-texture = ExtResource("12_fsw08")
-expand_mode = 1
-
-[node name="ButtonPrompt2" type="TextureRect" parent="TextureRect"]
-layout_mode = 0
-offset_left = 285.0
-offset_top = -28.0
-offset_right = 360.0
-offset_bottom = 47.0
-texture = ExtResource("13_2mq5b")
-expand_mode = 1
-flip_h = true
-
-[node name="PhoneRing" type="AudioStreamPlayer3D" parent="TextureRect"]
-stream = ExtResource("15_th7if")
-volume_db = 10.0
-script = ExtResource("16_b5g35")
-timer = 1.5
+[node name="TextureRect" parent="." instance=ExtResource("10_2iunp")]
 
 [node name="TransitionScreen" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_2mq5b")

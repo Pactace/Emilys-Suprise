@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://dfqobpj6ykstn"]
 
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_cfqjv"]
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_nwbtq"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_b0kqb"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_qby6k"]
 [ext_resource type="Script" uid="uid://b60vddqp5mkgx" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="4_5s5n3"]
-[ext_resource type="Script" uid="uid://c1pylar4wvhvo" path="res://Inventories/PlaceableInventory.gd" id="5_s5wom"]
 [ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_3hiwp"]
 [ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_cbqe7"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_bv6gs"]
@@ -21,6 +21,8 @@ shader_parameter/screen_width = 0.0
 shader_parameter/screen_height = 0.0
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_cfqjv")
+room_name = "StairsideHallway"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera", "right_marker", "back_marker") instance=ExtResource("1_nwbtq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)
@@ -41,7 +43,6 @@ script = ExtResource("2_b0kqb")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_5s5n3")
-flooring_inventory = ExtResource("5_s5wom")
 placeable_inventory = ExtResource("6_3hiwp")
 wall_furniture_inventory = ExtResource("7_cbqe7")
 wallpaper_inventory = ExtResource("8_bv6gs")

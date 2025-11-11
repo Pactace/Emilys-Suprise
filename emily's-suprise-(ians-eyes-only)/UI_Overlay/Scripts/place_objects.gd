@@ -33,7 +33,7 @@ var in_cache: bool = false
 @onready var leave_wall = $"Delete_Leave Wall"
 @onready var leave_wall_label = $"Delete_Leave Wall/Label"
 @onready var pallet_swap = $PalletSwap
-
+@onready var pallet_swap_icon = $PalletSwapIcon
 func enabled():
 	visible = true
 	pallet_swap.visible = false
@@ -53,6 +53,7 @@ func disabled():
 		change_colors.visible = false
 		leave_wall.visible = false
 		pallet_swap.visible = false
+		pallet_swap_icon.visible = false
 		to_place_move_label.text = "To Select"
 		
 
@@ -99,8 +100,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			if pallet_swap.visible == false:
 				pallet_swap.instance = possible_selected_object
 				pallet_swap.enabled()
+				pallet_swap_icon.visible = true
 			else:
 				pallet_swap.disabled()
+				pallet_swap_icon.visible = false
 					
 	if event.is_action_pressed("Cancel"):
 		if selected_object:

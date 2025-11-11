@@ -4,6 +4,7 @@ extends Node3D
 @onready var transition_screen = $"../../TransitionScreen"
 @export var marker: Marker3D
 @export var next_door: String
+@export var unlocked_day: int
 
 func enter_portal():
 	GameSingleton.door_name = next_door

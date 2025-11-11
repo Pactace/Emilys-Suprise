@@ -31,6 +31,7 @@ func _process(delta: float) -> void:
 			exit = false
 			if get_tree().current_scene.has_method("save_state"):
 				get_tree().current_scene.save_state()
+				$"../UiOverlay".clear_cache()
 			else:
 				push_warning("Current scene has no save_state() method.")
 			

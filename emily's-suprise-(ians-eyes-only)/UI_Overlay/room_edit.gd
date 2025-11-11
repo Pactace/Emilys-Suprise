@@ -113,3 +113,6 @@ func _on_tab_select_is_wall_change(state: bool) -> void:
 
 func assign_tab_select_inventories():
 	tab_select.assign_inventory_scripts(floor_furniture_inventory, placeable_inventory,wall_furniture_inventory,wallpaper_inventory,flooring_inventory)
+
+func clear_cache():
+	tab_select.clear_caches()

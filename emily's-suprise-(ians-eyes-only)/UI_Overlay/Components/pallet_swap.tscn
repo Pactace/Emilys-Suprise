@@ -3,7 +3,10 @@
 [ext_resource type="Script" uid="uid://4lbdum2olipm" path="res://UI_Overlay/Components/pallet_swap.gd" id="1_j1x5i"]
 [ext_resource type="Script" uid="uid://c3x8o46cdc1cm" path="res://UI_Overlay/Components/Color_Selector.gd" id="2_ei81b"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ei81b"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei81b"]
+bg_color = Color(0.9313586, 0.39003178, 0.5302199, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
 
 [node name="PalletSwap" type="Panel"]
 custom_minimum_size = Vector2(100, 75)
@@ -18,7 +21,7 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.9865776, 1)
-theme_override_styles/panel = SubResource("StyleBoxTexture_ei81b")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ei81b")
 script = ExtResource("1_j1x5i")
 skin_num = 5
 

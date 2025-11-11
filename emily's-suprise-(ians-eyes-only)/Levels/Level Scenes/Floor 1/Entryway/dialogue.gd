@@ -1,7 +1,6 @@
 extends TextureRect
 
 @onready var dialogue = $RichTextLabel
-@onready var moving_van = $"../Moving van"
 
 @export var pop_duration: float = 0.3
 @export var pop_overshoot: float = 1.15
@@ -12,7 +11,18 @@ var time_passed := 0.0
 var fade_in_progress := 0.0
 @export var blink_speed := 3.0
 
-var dialogue_lines = [
+@export var dialogue_lines = [
+	"Yooooo, it's me your favorite person!",
+	"Calling you while you're on the road.",
+	"You're heading to your next project today, right?",
+	"Crazy thing, the owner specifically asked for you to handle the interior for this project.",
+	"I guess they just fell in love with your style. ;)",
+	"They've got good taste I suppose.",
+	"hehe",
+	"Anyways, they say they want it done in about a month, so it might be a bit of a challenge.",
+	"But you've got this. I know you'll do wonderfully, darling.",
+	"Have fun! Tell me how it goes, okay?",
+	"I love you!"
 ]
 
 var elapsed := 0.0
@@ -28,19 +38,17 @@ var type_timer := 0.0
 
 
 func _ready():
-	dialogue_lines = GameSingleton.lines
 	visible = false
 	scale = Vector2.ZERO
 	dialogue.visible = false
 	dialogue.text = dialogue_lines[dialogue_index]
 	dialogue.visible_characters = 0
+	started = true
 
 func _process(delta):
-	elapsed += delta
 
 	# Start after delay
-	if not started and elapsed >= start_delay:
-		started = true
+	if started:
 		visible = true
 		animating_in = true
 		pop_timer = 0.0
@@ -83,7 +91,7 @@ func _process(delta):
 		if t >= 1.0:
 			visible = false
 			animating_out = false
-			moving_van.speed_away()
+			started = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Accept") and dialogue_start:

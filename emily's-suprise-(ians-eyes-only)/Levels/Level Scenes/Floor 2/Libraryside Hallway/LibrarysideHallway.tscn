@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://c4gjnwif717r2"]
 
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_607x7"]
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_jwms0"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="2_607x7"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_661pq"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_rmygr"]
 [ext_resource type="Script" uid="uid://b60vddqp5mkgx" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayFloorFurnitureInventory.gd" id="4_ylwwq"]
-[ext_resource type="Script" uid="uid://c1pylar4wvhvo" path="res://Inventories/PlaceableInventory.gd" id="5_o1h8i"]
 [ext_resource type="Script" uid="uid://tnve8j1cs6nr" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayPlaceableInventory.gd" id="6_poxb7"]
 [ext_resource type="Script" uid="uid://tduoqx2ctvep" path="res://Levels/Level Scenes/Floor 1/Entryway/EntrywayWallInventory.gd" id="7_jr44v"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_dse0l"]
@@ -22,6 +22,8 @@ shader_parameter/screen_width = 0.0
 shader_parameter/screen_height = 0.0
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_607x7")
+room_name = "LibrarySideHallway"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera", "left_marker") instance=ExtResource("1_jwms0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)
@@ -30,8 +32,6 @@ vertical_size = -3
 editable = false
 camera = NodePath("../Camera")
 left_marker = NodePath("../Marker3D")
-
-[node name="MusicPlayer" parent="Room" instance=ExtResource("2_607x7")]
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
@@ -43,7 +43,6 @@ script = ExtResource("2_661pq")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_ylwwq")
-flooring_inventory = ExtResource("5_o1h8i")
 placeable_inventory = ExtResource("6_poxb7")
 wall_furniture_inventory = ExtResource("7_jr44v")
 wallpaper_inventory = ExtResource("8_dse0l")
@@ -118,3 +117,6 @@ next_door = "StairsideHallwayDoor"
 
 [node name="Marker3D" type="Marker3D" parent="Doors/TerraceDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
+
+[node name="MusicPlayer" parent="." instance=ExtResource("2_607x7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)

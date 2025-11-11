@@ -1,10 +1,10 @@
 [gd_scene load_steps=24 format=3 uid="uid://ci1un4nkj8jcr"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_ff714"]
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_rplpx"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_worjo"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_5jav2"]
 [ext_resource type="Script" uid="uid://ctkrwale6kuue" path="res://Levels/Level Scenes/Floor 1/Sitting Room/SittingRoomFloorFurnitureInventory.gd" id="4_rplpx"]
-[ext_resource type="Script" uid="uid://cyg27bhlruqgq" path="res://Inventories/FlooringInventory.gd" id="5_f2urs"]
 [ext_resource type="Script" uid="uid://bkf5014bgqwmp" path="res://Levels/Level Scenes/Floor 1/Sitting Room/SittingRoomPlaceableInventory.gd" id="6_yx40g"]
 [ext_resource type="Script" uid="uid://clhn0v830uf82" path="res://Levels/Level Scenes/Floor 1/Sitting Room/SittingRoomWallInventory.gd" id="7_0muj8"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_r0bjh"]
@@ -47,6 +47,8 @@ blend_mode = 3
 albedo_texture = SubResource("GradientTexture1D_yx40g")
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_rplpx")
+room_name = "Library"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_ff714")]
 horizontal_size = 2
@@ -63,7 +65,6 @@ script = ExtResource("2_worjo")
 camera = NodePath("../Camera")
 room = NodePath("../Room")
 floor_furniture_inventory = ExtResource("4_rplpx")
-flooring_inventory = ExtResource("5_f2urs")
 placeable_inventory = ExtResource("6_yx40g")
 wall_furniture_inventory = ExtResource("7_0muj8")
 wallpaper_inventory = ExtResource("8_r0bjh")

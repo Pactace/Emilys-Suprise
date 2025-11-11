@@ -25,8 +25,8 @@ script = ExtResource("1_r6x8p")
 room_name = "GuestBathroom"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_qqcxl")]
-horizontal_size = -2
-vertical_size = -2
+horizontal_size = -4
+vertical_size = -4
 camera = NodePath("../Camera")
 
 [node name="Camera" type="Camera3D" parent="."]
@@ -57,7 +57,7 @@ script = ExtResource("12_r6x8p")
 [node name="Doors" type="Node3D" parent="."]
 
 [node name="EntrywayDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("10_geo2t")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.9941573, 0, 8.742278e-08, 0, -1, -5.7492504, 3.6350203, -0.13832188)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.9941573, 0, 8.742278e-08, 0, -1, -3.8896222, 3.6350203, -0.13832188)
 marker = NodePath("Marker3D")
 next_scene = "res://Levels/Level Scenes/Floor 1/Entryway/Entryway.tscn"
 next_door = "BathroomDoor"

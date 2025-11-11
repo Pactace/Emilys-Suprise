@@ -20,17 +20,18 @@ func enabled():
 		
 
 	# --- Duplicate based on instance children ---
-	for i in range(instance.skins.size() - 1):
-		var duplicate_child = skin_modifier.duplicate()
-		verticalcontainer.add_child(duplicate_child)
-		
-	for child in verticalcontainer.get_children():
-		child.get_child(1).text = str(1)
-	print(instance.skins.keys())
-	var key = instance.skins.keys()[child_selected]
-	verticalcontainer.get_child(child_selected).instance = instance
-	verticalcontainer.get_child(child_selected).mesh_skins = instance.skins[key]
-	verticalcontainer.get_child(child_selected).num_of_skins = instance.skins[key].size()
+	if "skins" in instance:
+		for i in range(instance.skins.size() - 1):
+			var duplicate_child = skin_modifier.duplicate()
+			verticalcontainer.add_child(duplicate_child)
+			
+		for child in verticalcontainer.get_children():
+			child.get_child(1).text = str(1)
+		print(instance.skins.keys())
+		var key = instance.skins.keys()[child_selected]
+		verticalcontainer.get_child(child_selected).instance = instance
+		verticalcontainer.get_child(child_selected).mesh_skins = instance.skins[key]
+		verticalcontainer.get_child(child_selected).num_of_skins = instance.skins[key].size()
 	
 	
 

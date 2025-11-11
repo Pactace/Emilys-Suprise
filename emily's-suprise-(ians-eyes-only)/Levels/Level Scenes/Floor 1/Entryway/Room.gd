@@ -4,7 +4,8 @@ class_name RoomSaveSystem
 @export var room_name: String = "default_room"
 @export var exclude_scenes: Array[String] = [
 	"res://Levels/Components/Emily.tscn",
-	"res://Levels/Components/music_player.tscn"
+	"res://Levels/Components/music_player.tscn",
+	"res://Levels/Components/stairs.tscn"
 ]  # Permanent children that shouldn't be saved
 
 func _ready():

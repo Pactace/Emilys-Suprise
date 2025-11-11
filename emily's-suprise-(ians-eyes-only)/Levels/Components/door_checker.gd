@@ -24,7 +24,7 @@ func _on_body_exited(body: Node3D) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if door:
-		if event.is_action_pressed("Accept"):
-			print("hit")
+		if event.is_action_pressed("Accept") && door.unlocked_day <= GameSingleton.current_time.day:
+			print(GameSingleton.current_time.day)
 			door.enter_portal()
 	

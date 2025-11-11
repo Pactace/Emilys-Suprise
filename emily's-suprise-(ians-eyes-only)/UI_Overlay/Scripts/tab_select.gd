@@ -80,4 +80,11 @@ func assign_inventory_scripts(floor_inventory: GDScript, placeable_inventory: GD
 	else:
 		await get_tree().create_timer(0.02).timeout
 		assign_inventory_scripts(floor_inventory, placeable_inventory, wall_inventory, wallpaper_inventory, flooring_inventory)
+
+func clear_caches():
+	floor_furniture_tab.clear_cache()
+	placeable_furniture_tab.clear_cache()
+	wall_furniture_tab.clear_cache()
+	wallpaper_tab.clear_cache()
+	flooring_tab.clear_cache()
 	

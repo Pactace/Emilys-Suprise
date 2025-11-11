@@ -153,8 +153,15 @@ func highlight_selection(node: Control) -> void:
 func load_objects(dict: Dictionary) -> void:
 	for child in get_children():
 		child.queue_free()
-
+	
+	var count :int 
+	if tab_name == "Wallpapers":
+		count = GameSingleton.current_time.day - 7
+	var i := 0
 	for key in dict.keys():
+		i+=1
+		if count && i > count:
+			break
 		var panel = Panel.new()
 		panel.custom_minimum_size = Vector2(125, 62.5)
 		var stylebox: StyleBox = load("res://UI_Overlay/Components/unselected_container_object.tres")
@@ -200,3 +207,11 @@ func _on_visibility_changed() -> void:
 func assign_inventory(inventory_script: GDScript):
 	inventory.set_script(inventory_script)
 	inventory_set = true
+	
+func clear_cache() -> void:
+	for key in resource_cache.keys():
+		var res = resource_cache[key]
+		if res is Resource:
+			res = null  # helps release references
+	resource_cache.clear()
+	print("🧹 Resource cache cleared.")
