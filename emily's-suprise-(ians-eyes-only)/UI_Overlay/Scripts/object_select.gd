@@ -70,6 +70,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_handle_accept_action()
 
 	if moved:
+		get_parent().get_parent().get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_ui_switch()
 		selected_col = clamp(selected_col, 0, grid[selected_row].size() - 1)
 		selected_object = grid[selected_row][selected_col]
 		highlight_selection(selected_object)
@@ -118,6 +119,8 @@ func _handle_accept_action() -> void:
 				parent_root.get_child(4).assign_selected_object(packed_scene, is_wall, in_reasource_cache)
 				parent_root.current_state = parent_root.EditState.Edit_Objects
 				parent_root.switch_states()
+				get_parent().get_parent().get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_spawn_object()
+
 	in_reasource_cache = false
 
 

@@ -77,7 +77,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif current_state == EditState.Object_Select:
 				tab_select.disabled()
 				current_state = EditState.Edit_Objects
-			
+				
+			get_parent().get_node_or_null("SoundEffectPlayer").play_switch_ui()
 			switch_states()
 				
 		if event.is_action_pressed("-"):

@@ -38,10 +38,10 @@ bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vom8e"]
-size = Vector3(18, 11.905278, 8.472421)
+size = Vector3(18, 6.75, 8.472)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ia7ya"]
-size = Vector3(18, 11.905278, 8.472421)
+size = Vector3(18, 6.75, 8.472)
 
 [node name="FtrCountryKitchen" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -61,11 +61,11 @@ collision_layer = 132
 collision_mask = 132
 
 [node name="@CollisionShape3D@257715" type="CollisionShape3D" parent="Body_low__mReBody/@StaticBody3D@257716"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9520802, 0.04167652)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 4.0679693, 0.04167652)
 shape = SubResource("BoxShape3D_vom8e")
 
 [node name="@Area3D@257718" type="Area3D" parent="Body_low__mReBody"]
 
 [node name="@CollisionShape3D@257717" type="CollisionShape3D" parent="Body_low__mReBody/@Area3D@257718"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9520802, 0.04167652)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 4.130906, 0.04167652)
 shape = SubResource("BoxShape3D_ia7ya")

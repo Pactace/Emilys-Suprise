@@ -32,10 +32,10 @@ bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gj32e"]
-size = Vector3(16.3836, 9.941783, 9.128069)
+size = Vector3(16.384, 6.75, 9.128)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1cv62"]
-size = Vector3(16.3836, 9.941783, 9.128069)
+size = Vector3(16.384, 6.75, 9.128)
 
 [node name="FtrKitchenStainless" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -55,11 +55,11 @@ collision_layer = 132
 collision_mask = 132
 
 [node name="@CollisionShape3D@257827" type="CollisionShape3D" parent="Board01_low__mBody/@StaticBody3D@257828"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9708915, -0.43553638)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 4.3105383, -0.43553635)
 shape = SubResource("BoxShape3D_gj32e")
 
 [node name="@Area3D@257830" type="Area3D" parent="Board01_low__mBody"]
 
 [node name="@CollisionShape3D@257829" type="CollisionShape3D" parent="Board01_low__mBody/@Area3D@257830"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9708915, -0.43553638)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 4.418181, -0.43553635)
 shape = SubResource("BoxShape3D_1cv62")

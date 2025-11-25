@@ -130,57 +130,145 @@ func _update_dialogue_lines() -> void:
 		]
 	if day == 13:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Hello my dear :3",
+			"I loved spending yesterday with you, my darling.",
+			"I’m definitely missing you a ton right now.",
+			"Anyways, we have a bit of an update on how things are going to work now.",
+			"I’ve talked to the owners of the house, and they’ve said they will be giving you pieces of paper for each room you unlock to help guide you in their creation.",
+			"There also have been minor improvements to the game that I hope you enjoy, my dear.",
+			"I do it all for you.",
+			"Never fear though, with the new changes I will still be calling you every day to tell you all the wonderful things I love about you.",
+			"Anyways, my dear, there should be a few new features for you to try out today and something big for tomorrow.",
+			"Anyways, I love you madly and I hope you have a good day!"
 		]
-	if day == 14:
+
+	elif day == 14:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Hello again, sweetness.",
+			"I hope you’re having a great day off today!",
+			"Today’s a big day!",
+			"Today you unlock the TRIPLETHREAT.",
+			"At least that’s what I call it — you’ll see why in just a moment.",
+			"It’s straight on as you enter the building.",
+			"Anyways, today I wanted to talk about your brilliant wit.",
+			"You know you’re the only girl that’s made me giggle and cackle so consistently with your wonderful jokes and your silliness?",
+			"You’re like the funniest person in the world, I guess :3",
+			"Anyways, I love you tons, my dear. Have a great day!"
 		]
-	if day == 15:
+
+	elif day == 15:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"It’s SATURDAYYYYY!",
+			"You know what that means.",
+			"COUSIN GAME NIGHHHHHT!!!",
+			"Very exciting stuff.",
+			"That’s one of my favorite parts about you, you know?",
+			"I love how close you are with your family.",
+			"I love how they love you and you love them.",
+			"I want a family like that with you, my dear.",
+			"Anyways, I can’t wait to see you today!",
+			"I love you!"
 		]
-	if day == 16:
+
+	elif day == 16:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Hello my beautiful gorgeous woman!",
+			"I hope you’ve had a good Sunday so far!",
+			"Today is a pretty chill day again — just a new wallpaper.",
+			"Do you know what one of my favorite parts about you is?",
+			"Your spirituality!",
+			"I love how we read scriptures together.",
+			"I love our trips to the temple.",
+			"(Especially seeing you so beautiful across the altar.)",
+			"I love our prayers.",
+			"And our spiritual discussions.",
+			"I love holding your hand in church :3",
+			"Anyways, I can’t wait to see you today, my darling woman!",
+			"Have a good Sunday!"
 		]
+
 	if day == 17:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Hello Darling! I hope you are having a good day today!",
+			"You know something that is interesting",
+			"Recently I have been thinking about that one hang out we had",
+			"The one where you just hung out with me while I studied for my precalc test",
+			"We got food and just chilled while listening to music",
+			"It was snowing outside",
+			"That was almost 3 years ago",
+			"Absolutely insane",
+			"But I enjoyed that moment",
+			"As I enjoy every moment with you now dearest",
+			"Have a good day my love!",
+			"I love you!"
 		]
 	if day == 18:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Morning sweetcheeks!",
+			"I hope you are having a good day!",
+			"I'm missing you like crazy most definetly",
+			"I can't believe I have to wait until friday",
+			"Anyways I want to tell you one of the things I love most about you",
+			"Your wonderful patience",
+			"I love how calm you are, and reasonable",
+			"You are such a blessing in my life",
+			"I feel like you are just so easy to talk to",
+			"Anyways my love I think door by the kitchen should be open today",
+			"You should go check it out",
+			"I love you so much",
+			"And I am so grateful for you!"
 		]
 	if day == 19:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Heyyyyy baby!",
+			"Hope you had fun decortating the downstairs for the owner's kids yesterday",
+			"I am sure they are goingt to love it as their own little space",
+			"Anyways my love I just wanted to recite a little poem for you today",
+			"I have a ray of sunshine",
+			"To brighten up my cloudy days",
+			"She brings me lots of smiles",
+			"with her woundrous rays",
+			"She is my own sweet woman",
+			"The one I call my own",
+			"With this dear sweet woman",
+			"I want to build my home",
+			"May my love be happy",
+			"As happy my love makes me",
+			"So hand in hand we'll journey on",
+			"In love's warm light eternally.",
+			"-Truly yours,",
+			"-Ian",
+			"I love you darling"
 		]
 	if day == 20:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Hello my sweet woman!",
+			"I hope today is as beautiful as you are!",
+			"Today you get another wonderful stinkyyyyyyy bathroom to decorate",
+			"I hope your ready! :3",
+			"Anyways my love I have a rather 'personal' complement today",
+			"So if your showing this to a family member or whatever, best not show them this part",
+			"They gone?",
+			"Well then today I wanted to tell you how much I love those beautiful hips of yours",
+			"I love how they just fit in my hand when I pull you close",
+			"I love how you move them",
+			"You are so unbelievably sexy and your hips are so unbelievably wonderful",
+			"Anyways I hope you liked that spicier comment ;3",
+			"Have a great day"
 		]
 	if day == 21:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Helloooo gorgeous!",
+			"Hope you have been having a great day!",
+			"Remember that time when we first hung out after your mission?",
+			"Goofing off in the MOA",
+			"You dying everytime it was your turn when we played Super Mario World",
+			"Getting dinner and laughing",
+			"Talking about the type of people wanted in our future relationships",
+			"Realizing we were those people...",
+			"Im glad I took a break from my drinking to hang out with you",
+			"You ended up being my dream woman",
+			"Have a good day my love"
 	]
 	if day == 22:
 		lines = [

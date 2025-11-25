@@ -33,9 +33,11 @@ var in_cache: bool = false
 @onready var leave_wall = $"Delete_Leave Wall"
 @onready var leave_wall_label = $"Delete_Leave Wall/Label"
 @onready var pallet_swap = $PalletSwap
-@onready var pallet_swap_icon = $PalletSwapIcon
+@onready var pallet_swap_icon = $Pallete_swap_icon
+
 func enabled():
 	visible = true
+	pallet_swap_icon.visible = false
 	pallet_swap.visible = false
 	if spawned_object:
 		_handle_spawned_object()
@@ -44,7 +46,7 @@ func disabled():
 	visible = false
 	edit_ray = null
 	is_wall = false
-	if possible_selected_object or selected_object:
+	if (possible_selected_object and "placed" in possible_selected_object) or (selected_object and "placed" in selected_object):
 		possible_selected_object.placed()
 		possible_selected_object = null
 		selected_object = null
@@ -73,15 +75,18 @@ func _unhandled_input(event: InputEvent) -> void:
 	if visible && possible_selected_object:
 		if event.is_action_pressed("Rotate Left") && rotate_object:
 			rotate_target(possible_selected_object, -1)
+			get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_rotate_object()
 			rotate_object = false
 		elif event.is_action_pressed("Rotate Right") && rotate_object:
 			rotate_target(possible_selected_object, 1)
+			get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_rotate_object()
 			rotate_object = false
 		elif event.is_action_released("Rotate Left") or event.is_action_released("Rotate Right"):
 			rotate_object = true
 		elif event.is_action_pressed("Accept"):
 			#if we have selected the new place for the object that has already been confirmed we are going to place it and nullify it
 			if selected_object and can_place:
+				get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_place_object()
 				selected_object.placed()
 				selected_object = null
 				possible_selected_object = null
@@ -93,17 +98,21 @@ func _unhandled_input(event: InputEvent) -> void:
 			#if thats not the case an instead there is a possible_selection we are hovering over we are going to select it
 			elif possible_selected_object && possible_selected_object.is_on_wall == is_wall:
 				selected_object = possible_selected_object
+				get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_select_object()
 			elif possible_selected_object and !is_wall and possible_selected_object.is_on_wall:
+				get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_select_object()
 				is_wall = true
 				camera.wall_update(is_wall)
 		elif event.is_action_pressed("Toggle Colors & Spacing"):
 			if pallet_swap.visible == false:
 				pallet_swap.instance = possible_selected_object
 				pallet_swap.enabled()
-				pallet_swap_icon.visible = true
+				get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_switch_ui()
+				pallet_swap_icon.visible = false
 			else:
 				pallet_swap.disabled()
-				pallet_swap_icon.visible = false
+				get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_switch_ui()
+				pallet_swap_icon.visible = true
 					
 	if event.is_action_pressed("Cancel"):
 		if selected_object:
@@ -115,6 +124,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				change_colors.visible = false
 				leave_wall.visible = false
 				to_place_move_label.text = "To Select"
+				get_parent().get_parent().get_node_or_null("SoundEffectPlayer").play_delete_object()
 		elif is_wall == true:
 			is_wall = false
 			camera.wall_update(is_wall)
@@ -165,11 +175,13 @@ func edit_object_position():
 		var old_possible_selected_object
 		if possible_selected_object:
 			old_possible_selected_object = possible_selected_object
+		if pallet_swap.visible == false:
+			pallet_swap_icon.visible = true
 		
 		#next we assign the new_possible_selected object and make the edit ui prompts show up
 		possible_selected_object = object_area.collider.get_parent().get_parent()
 		if object_just_placed != possible_selected_object && "room_name" not in possible_selected_object:
-			if old_possible_selected_object:
+			if old_possible_selected_object and "placed" in old_possible_selected_object:
 				old_possible_selected_object.placed()
 			possible_selected_object.placement_yellow()
 			object_just_placed = null
@@ -189,9 +201,11 @@ func rotate_target(target: Node3D, direction: int) -> void:
 		#target.transform.basis = target.transform.basis * rotation_matrix_z
 
 func finalize_edit_object():
-	if possible_selected_object:
+	if possible_selected_object and "placed" in possible_selected_object:
 		possible_selected_object.placed()
 	possible_selected_object = null
+	pallet_swap.disabled()
+	pallet_swap_icon.visible = false
 	object_just_placed = null
 	triggers_to_rotate.visible = false
 	move_place.visible = false

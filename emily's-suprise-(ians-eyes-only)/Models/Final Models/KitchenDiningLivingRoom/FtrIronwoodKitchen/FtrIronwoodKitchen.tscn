@@ -36,10 +36,10 @@ bind/0/bone = -1
 bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_how2t"]
-size = Vector3(18.9, 11.166139, 9.015273)
+size = Vector3(18.9, 7.7534795, 9.015273)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ubgjt"]
-size = Vector3(18.9, 11.166139, 9.015273)
+size = Vector3(18.9, 7.7520146, 9.015273)
 
 [node name="FtrIronwoodKitchen" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -59,11 +59,11 @@ collision_layer = 132
 collision_mask = 132
 
 [node name="@CollisionShape3D@257799" type="CollisionShape3D" parent="box1_low__mReBody/@StaticBody3D@257800"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5830703, 0.35763645)
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 3.8767402, 0.3576364)
 shape = SubResource("BoxShape3D_how2t")
 
 [node name="@Area3D@257802" type="Area3D" parent="box1_low__mReBody"]
 
 [node name="@CollisionShape3D@257801" type="CollisionShape3D" parent="box1_low__mReBody/@Area3D@257802"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5830703, 0.35763645)
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 3.8760073, 0.3576364)
 shape = SubResource("BoxShape3D_ubgjt")

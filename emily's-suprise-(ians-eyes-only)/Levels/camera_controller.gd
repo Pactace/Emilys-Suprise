@@ -1,6 +1,7 @@
 extends Camera3D
 
 @export var triplethreat = false
+@onready var sound_effect_player = $"../SoundEffectPlayer"
 var center = Vector3(0,0,0)
 var new_center_bool = false
 # --- Camera Snap Constants ---
@@ -50,8 +51,10 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Camera Snap Left"):
+		sound_effect_player.play_rotate_room()
 		snap_left()
 	elif Input.is_action_just_pressed("Camera Snap Right"):
+		sound_effect_player.play_rotate_room()
 		snap_right()
 
 	# Smooth transitions

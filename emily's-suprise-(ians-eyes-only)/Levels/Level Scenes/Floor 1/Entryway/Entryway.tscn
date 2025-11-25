@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bhyodff7y2brl"]
+[gd_scene load_steps=18 format=3 uid="uid://bhyodff7y2brl"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_4fi48"]
 [ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_5tvfp"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_n8xdo"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="14_6st5h"]
 [ext_resource type="AudioStream" uid="uid://c3sn8rr2p5kuw" path="res://Levels/Components/10-12AM.mp3" id="15_5tvfp"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="16_28131"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l6yyg"]
 shader = ExtResource("9_a1vnb")
@@ -114,10 +115,12 @@ visible = false
 next_scene = "res://Levels/Level Scenes/Floor 1/TripleThreat/TripleThreat.tscn"
 marker = NodePath("Marker3D")
 next_door = "EntrywayEntrance"
-unlocked_day = 30
+unlocked_day = 13
 
 [node name="Marker3D" type="Marker3D" parent="Doors/LivingDiningKitchenEntrance"]
 transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 0, 0, 1, -1.0142045, -0.1496377, -2.4214387e-08)
 
 [node name="MusicPlayer" parent="." instance=ExtResource("14_6st5h")]
 stream = ExtResource("15_5tvfp")
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("16_28131")]

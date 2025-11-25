@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fu6wu3vumv2"
+path="res://.godot/imported/Wind Up Gear Clicks 02 Sound Effect  SFX Free for Non-Profit Projects-[AudioTrimmer.com].mp3-f7a406224b5341bc458434c225507063.mp3str"
+
+[deps]
+
+source_file="res://Levels/Components/SoundEffects/Wind Up Gear Clicks 02 Sound Effect  SFX Free for Non-Profit Projects-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Wind Up Gear Clicks 02 Sound Effect  SFX Free for Non-Profit Projects-[AudioTrimmer.com].mp3-f7a406224b5341bc458434c225507063.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

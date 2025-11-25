@@ -1,35 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://ng6rdia0lxwc"]
+[gd_scene load_steps=5 format=3 uid="uid://ng6rdia0lxwc"]
 
 [ext_resource type="Script" uid="uid://4lbdum2olipm" path="res://UI_Overlay/Components/pallet_swap.gd" id="1_j1x5i"]
 [ext_resource type="Script" uid="uid://c3x8o46cdc1cm" path="res://UI_Overlay/Components/Color_Selector.gd" id="2_ei81b"]
+[ext_resource type="FontFile" uid="uid://dgj13jke6l6" path="res://Start and Pause Menus/MeetCute.otf" id="3_2u5nr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei81b"]
 bg_color = Color(0.9313586, 0.39003178, 0.5302199, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
 
 [node name="PalletSwap" type="Panel"]
-custom_minimum_size = Vector2(100, 75)
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
+custom_minimum_size = Vector2(250, 75)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -118.0
+offset_right = 250.0
+offset_bottom = -43.0
+grow_vertical = 2
 scale = Vector2(0.9865776, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ei81b")
 script = ExtResource("1_j1x5i")
 skin_num = 5
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 25.0
-offset_right = 147.0
-offset_bottom = 77.0
+offset_top = 2.5
+offset_right = 246.306
+offset_bottom = 79.5
+scale = Vector2(1, 0.88)
 theme_override_constants/separation = 30
 alignment = 1
 
@@ -44,7 +48,9 @@ text = "^"
 
 [node name="Number" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2u5nr")
 text = "1"
+horizontal_alignment = 1
 
 [node name="Right Arrow" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2

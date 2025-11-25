@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://saa7vohmdwkb"]
+[gd_scene load_steps=18 format=3 uid="uid://saa7vohmdwkb"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_rfmqt"]
 [ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_uphnt"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="13_byokw"]
 [ext_resource type="PackedScene" uid="uid://d234bnlpcpjd4" path="res://Levels/Components/stairs.tscn" id="14_byokw"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="15_uphnt"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="16_0jklm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uphnt"]
 shader = ExtResource("12_8yvwq")
@@ -24,7 +25,7 @@ shader_parameter/screen_height = 0.0
 
 [node name="TripleThreat" type="Node3D"]
 script = ExtResource("1_uphnt")
-room_name = "TipleThreat"
+room_name = "TripleThreat"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera", "front_marker", "back_marker") instance=ExtResource("1_rfmqt")]
 horizontal_size = 15
@@ -82,6 +83,7 @@ transform = Transform3D(-4.371139e-08, 0, -0.8713786, 0, 0.9941573, 0, 1, 0, -3.
 marker = NodePath("Marker3D")
 next_scene = "res://Levels/Level Scenes/Floor 1/Sitting Room/SittingRoom.tscn"
 next_door = "TripleThreatDoor"
+unlocked_day = 30
 
 [node name="Marker3D" type="Marker3D" parent="Doors/SittingRoomDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4026585, -0.8424101, 0)
@@ -91,6 +93,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.9941573, 0, 1, 0, -4.371139e-
 marker = NodePath("Marker3D")
 next_scene = "res://Levels/Level Scenes/Basement/Main basement room/MainBasementRoom.tscn"
 next_door = "TripleThreatEntrance"
+unlocked_day = 30
 
 [node name="Marker3D" type="Marker3D" parent="Doors/DownstairsDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4026585, -1.829011, 0)
@@ -101,6 +104,7 @@ visible = false
 next_scene = "res://Levels/Level Scenes/Floor 2/Stairside Hallway/StairsideHallway.tscn"
 marker = NodePath("Marker3D")
 next_door = "LivingDiningKitchenEntrance"
+unlocked_day = 30
 
 [node name="Marker3D" type="Marker3D" parent="Doors/StairsideLibraryEntrance"]
 transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, 5.3290705e-15, 0, 1, -1.0709682, -0.34839004, 9.685755e-08)
@@ -148,5 +152,7 @@ visible = false
 visible = false
 
 [node name="MusicPlayer" parent="." instance=ExtResource("15_uphnt")]
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("16_0jklm")]
 
 [editable path="Doors/Stairs"]

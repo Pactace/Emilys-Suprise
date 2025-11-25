@@ -66,6 +66,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.9941573, 0, -1, 0, -4.371139e-
 marker = NodePath("Marker3D2")
 next_scene = "res://Levels/Level Scenes/Basement/Basement Bathroom/BasementBathroom.tscn"
 next_door = "BasementDoor"
+unlocked_day = 20
 
 [node name="Marker3D2" type="Marker3D" parent="Doors/BathroomDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.115233, -1.620007, 0.29028797)

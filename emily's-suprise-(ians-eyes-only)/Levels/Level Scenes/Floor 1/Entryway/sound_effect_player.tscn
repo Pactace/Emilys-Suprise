@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://de5xpctb4vxuq"]
+
+[ext_resource type="Script" uid="uid://d2bqudlwhuqbm" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.gd" id="1_bno6h"]
+
+[node name="SoundEffectPlayer" type="AudioStreamPlayer3D"]
+attenuation_model = 3
+pitch_scale = 0.01
+script = ExtResource("1_bno6h")

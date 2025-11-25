@@ -2,8 +2,8 @@ extends Resource
 class_name OfficeWallInventory
 
 @export var objects := {
-		"res://Models/Final Models/Office/FtrCorkboard/Textures/FtrCorkboard_icon.png": "res://Models/Final Models/Office/FtrCorkboard/FtrCorkboard.tscn",
-		"res://Models/Final Models/Office/FtrPlantWall/Textures/FtrPlantWall_icon.png": "res://Models/Final Models/Office/FtrPlantWall/FtrPlantWall.tscn",
+	"res://Models/Final Models/Office/FtrCorkboard/Textures/FtrCorkboard_icon.png": "res://Models/Final Models/Office/FtrCorkboard/FtrCorkboard.tscn",
+	"res://Models/Final Models/Office/FtrPlantWall/Textures/FtrPlantWall_icon.png": "res://Models/Final Models/Office/FtrPlantWall/FtrPlantWall.tscn",
 		
 	#Default wall inventory 
 	"res://Models/Final Models/Bedrooms/FtrSconceWall/Textures/FtrSconceWall_icon.png": "res://Models/Final Models/Bedrooms/FtrSconceWall/FtrSconceWall.tscn",
@@ -11,18 +11,17 @@ class_name OfficeWallInventory
 	"res://Models/Final Models/Plants/FtrPlanterPalm/Textures/FtrPlanterPalm_icon.png" : "res://Models/Final Models/Plants/FtrPlanterPalm/FtrPlanterPalm.tscn",
 
 	#windows and Pictures
-	"circlewindow": "res://Models/Final Models/WindowsAndPictures/CircleWindow.tscn",
-	"doublewindow": "res://Models/Final Models/WindowsAndPictures/DoubleWindow.tscn",
-	"Kitchen window": "res://Models/Final Models/WindowsAndPictures/KitchenWindow.tscn",
-	"Rectangle Window": "res://Models/Final Models/WindowsAndPictures/RectangleWindow.tscn",
-	"SemiCircleWindow": "res://Models/Final Models/WindowsAndPictures/SemiCircleWindow.tscn",
-	"SquareWindow": "res://Models/Final Models/WindowsAndPictures/SquareWindow.tscn",
-	"VerticalDentedFrame" : "res://Models/Final Models/WindowsAndPictures/VerticalDentedFrame.tscn",
-	"VerticalSuperSkinnyFrame" : "res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame.tscn",
-	"circlepicture": "res://Models/Final Models/WindowsAndPictures/CircularFrame.tscn",
-	"Horizontal frame large": "res://Models/Final Models/WindowsAndPictures/HorizontalFrameLarge.tscn",
-	"Hexagonal frame": "res://Models/Final Models/WindowsAndPictures/HexagonalFrame.tscn",
-	"Horizontal frame small": "res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall.tscn",
-	#wont work I will just dup the circle if I have time "Oblong Frame" :"res://Models/Final Models/WindowsAndPictures/OblongFrame.tscn",
-	"SquareFrame": "res://Models/Final Models/WindowsAndPictures/SquareFrame.tscn",
+	"res://Models/Final Models/WindowsAndPictures/CircleWindow_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/CircleWindow.tscn",
+	"res://Models/Final Models/WindowsAndPictures/DoubleWindow_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/DoubleWindow.tscn",
+	"res://Models/Final Models/WindowsAndPictures/KitchenWindow_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/KitchenWindow.tscn",
+	"res://Models/Final Models/WindowsAndPictures/RectangleWindow_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/RectangleWindow.tscn",
+	"res://Models/Final Models/WindowsAndPictures/SemiCircleWindow_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/SemiCircleWindow.tscn",
+	"res://Models/Final Models/WindowsAndPictures/SquareWindow_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/SquareWindow.tscn",
+	"res://Models/Final Models/WindowsAndPictures/CircularFrame_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/CircularFrame.tscn",
+	"res://Models/Final Models/WindowsAndPictures/HexagonalFrame_icon-removebg-preview.png": "res://Models/Final Models/WindowsAndPictures/HexagonalFrame.tscn",
+	"res://Models/Final Models/WindowsAndPictures/HorizontalFrameLarge_icon-removebg-preview.png": "res://Models/Final Models/WindowsAndPictures/HorizontalFrameLarge.tscn",
+	"res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall_icon-removebg-preview.png": "res://Models/Final Models/WindowsAndPictures/HorizontalFrameSmall.tscn",
+	"res://Models/Final Models/WindowsAndPictures/SquareFrame_icon-removebg-preview.png": "res://Models/Final Models/WindowsAndPictures/SquareFrame.tscn",
+	"res://Models/Final Models/WindowsAndPictures/VerticalDentedFrame_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/VerticalDentedFrame.tscn",
+	"res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinny_icon-removebg-preview.png" : "res://Models/Final Models/WindowsAndPictures/VerticalSuperSkinnyFrame.tscn",
 }

@@ -5,7 +5,8 @@ class_name RoomSaveSystem
 @export var exclude_scenes: Array[String] = [
 	"res://Levels/Components/Emily.tscn",
 	"res://Levels/Components/music_player.tscn",
-	"res://Levels/Components/stairs.tscn"
+	"res://Levels/Components/stairs.tscn",
+	"res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn"
 ]  # Permanent children that shouldn't be saved
 
 func _ready():
@@ -77,13 +78,35 @@ func save_state():
 # LOAD
 # ============================
 func _load_saved_state():
+	# --- Create loading image dynamically ---
+	var loading_tex := preload("res://Start and Pause Menus/Loading..._cropped.png")  # your .jpg path
+	var loading_rect := TextureRect.new()
+	loading_rect.texture = loading_tex
+	loading_rect.stretch_mode = TextureRect.STRETCH_SCALE
+	loading_rect.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	loading_rect.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	loading_rect.anchor_left = 0
+	loading_rect.anchor_top = 0
+	loading_rect.anchor_right = 1
+	loading_rect.anchor_bottom = 1
+	loading_rect.modulate.a = 1.0  # fully visible
+
+	# Put it on top of everything
+	var canvas_layer := CanvasLayer.new()
+	canvas_layer.layer = 100  # ensures it's on top
+	canvas_layer.add_child(loading_rect)
+	get_tree().root.add_child(canvas_layer)
+	
+	await get_tree().process_frame  # allow one frame to render it
 	var json_path = "user://%s_room.json" % room_name
 	
 	if FileAccess.file_exists(json_path):
 		print("✅ Found JSON save for", room_name)
 		_load_json_objects(json_path)
+		canvas_layer.queue_free()  # remove once finished
 	else:
 		print("⚠️ No saved data for", room_name, "- starting fresh.")
+		canvas_layer.queue_free()  #
 
 func _load_json_objects(path: String):
 	var file = FileAccess.open(path, FileAccess.READ)

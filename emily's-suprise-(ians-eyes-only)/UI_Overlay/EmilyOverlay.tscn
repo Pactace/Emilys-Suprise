@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://crmpmlrfo6y0r"]
+[gd_scene load_steps=6 format=3 uid="uid://crmpmlrfo6y0r"]
 
 [ext_resource type="Texture2D" uid="uid://b54govinn1ani" path="res://UI_Overlay/Sprites/Navigation/output-onlinepngtools (2).png" id="1_8h3ap"]
+[ext_resource type="Script" uid="uid://cfcsrkl1knuw5" path="res://UI_Overlay/clipboard.gd" id="2_cx2r4"]
+[ext_resource type="Texture2D" uid="uid://cfqimmw6uxn2q" path="res://UI_Overlay/images-removebg-preview.png" id="2_utj12"]
+[ext_resource type="FontFile" uid="uid://dgj13jke6l6" path="res://Start and Pause Menus/MeetCute.otf" id="3_cx2r4"]
+[ext_resource type="Texture2D" uid="uid://bjf4fk26eu36d" path="res://UI_Overlay/Components/X-removebg-preview.png" id="5_wm7r6"]
 
 [node name="EmilyOverlay" type="Control"]
 layout_mode = 3
@@ -27,3 +31,69 @@ offset_right = 124.0
 offset_bottom = 426.0
 texture = ExtResource("1_8h3ap")
 expand_mode = 1
+
+[node name="Clipboard2" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_cx2r4")
+
+[node name="Clipboard" type="TextureRect" parent="Clipboard2"]
+layout_mode = 0
+offset_left = -90.0
+offset_top = -5.0
+offset_right = 310.0
+offset_bottom = 395.0
+texture = ExtResource("2_utj12")
+
+[node name="Precursor" type="Label" parent="Clipboard2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 72.0
+offset_right = 187.0
+offset_bottom = 189.0
+scale = Vector2(1.0387571, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cx2r4")
+horizontal_alignment = 1
+
+[node name="Line" type="Label" parent="Clipboard2"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 201.0
+offset_right = 183.0
+offset_bottom = 318.0
+scale = Vector2(1.1187563, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "-----------------------"
+horizontal_alignment = 1
+
+[node name="Requirement" type="Label" parent="Clipboard2"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 239.0
+offset_right = 187.0
+offset_bottom = 316.0
+scale = Vector2(1.0387566, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cx2r4")
+horizontal_alignment = 1
+
+[node name="ClipboardIcon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 54.00001
+offset_right = 231.0
+offset_bottom = 279.0
+scale = Vector2(0.3599986, 0.28000003)
+texture = ExtResource("2_utj12")
+
+[node name="TextureRect" type="TextureRect" parent="ClipboardIcon"]
+layout_mode = 0
+offset_left = 83.33366
+offset_top = -75.00003
+offset_right = 583.3337
+offset_bottom = 424.99997
+scale = Vector2(0.37026328, 0.4710011)
+texture = ExtResource("5_wm7r6")

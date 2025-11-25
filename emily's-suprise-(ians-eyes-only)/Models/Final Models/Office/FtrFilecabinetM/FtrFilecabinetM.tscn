@@ -1,36 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://5qynk3r26nis"]
+[gd_scene load_steps=13 format=4 uid="uid://5qynk3r26nis"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_uhyuw"]
 [ext_resource type="Material" uid="uid://ch1qeqgo4by1" path="res://Models/Final Models/Office/FtrFilecabinetM/Textures/mReBody0.tres" id="2_15vcl"]
 [ext_resource type="Material" uid="uid://duwf5rjfe10nx" path="res://Models/Final Models/Office/FtrFilecabinetM/Textures/mReBody1.tres" id="3_epcy6"]
 [ext_resource type="Material" uid="uid://vmtdbcmy8hwp" path="res://Models/Final Models/Office/FtrFilecabinetM/Textures/mReBody2.tres" id="4_em6n0"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehrm5"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_k6pni"]
-resource_name = "FtrFilecabinetM_glass_low__mGlass"
-_surfaces = [{
-"aabb": AABB(-3.694697, 0.6485057, 2.18449, 7.339676, 8.505394, 0.39525986),
-"attribute_data": PackedByteArray("6ujoPvv6ej/x8HA9+/p6P+ro6D6AoKA88fBwPYCgoDzw728/+/p6P4uKCj/7+no/8O9vP4CgoDyLigo/gKCgPA=="),
-"bone_aabbs": [AABB(-3.694697, 0.6485057, 2.18449, 7.339676, 8.505394, 0.39525986)],
-"format": 34359745559,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcA"),
-"material": SubResource("StandardMaterial3D_ehrm5"),
-"primitive": 3,
-"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("Beg9vXgEJj+vzgtA6nVswHgEJj+vzgtABeg9vWB2EkGvzgtA6nVswGB2EkGvzgtAVkdpQHgEJj+fGiVAT9Bbu3gEJj+fGiVAVkdpQGB2EkGfGiVAT9Bbu2B2EkGfGiVA/3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////vw==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="Skin" id="Skin_ip165"]
-resource_name = "Skin"
-bind_count = 1
-bind/0/name = &"Root"
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh302"]
 
@@ -53,11 +26,42 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="Skin" id="Skin_ip165"]
+resource_name = "Skin"
+bind_count = 1
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_f8a05"]
 size = Vector3(8.740599, 9.673672, 6.105739)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pr8sh"]
 size = Vector3(8.740599, 9.673672, 6.105739)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehrm5"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k6pni"]
+resource_name = "FtrFilecabinetM_glass_low__mGlass"
+_surfaces = [{
+"aabb": AABB(-3.694697, 0.6485057, 2.18449, 7.339676, 8.505394, 0.39525986),
+"attribute_data": PackedByteArray("6ujoPvv6ej/x8HA9+/p6P+ro6D6AoKA88fBwPYCgoDzw728/+/p6P4uKCj/7+no/8O9vP4CgoDyLigo/gKCgPA=="),
+"bone_aabbs": [AABB(-3.694697, 0.6485057, 2.18449, 7.339676, 8.505394, 0.39525986)],
+"format": 34359745559,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcA"),
+"material": SubResource("StandardMaterial3D_ehrm5"),
+"primitive": 3,
+"skin_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA//8AAAAAAAA="),
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("Beg9vXgEJj+vzgtA6nVswHgEJj+vzgtABeg9vWB2EkGvzgtA6nVswGB2EkGvzgtAVkdpQHgEJj+fGiVAT9Bbu3gEJj+fGiVAVkdpQGB2EkGfGiVAT9Bbu2B2EkGfGiVA/3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////vw==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15vcl"]
+transparency = 1
+albedo_color = Color(0.28627452, 1, 1, 0.32941177)
 
 [node name="FtrFilecabinetM" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -68,11 +72,8 @@ skins = {
 "mReBody": [ExtResource("2_15vcl"), ExtResource("3_epcy6"), ExtResource("4_em6n0")]
 }
 
-[node name="glass_low__mGlass" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_k6pni")
-skin = SubResource("Skin_ip165")
-
 [node name="body_low__mReBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gaeb4")
 skin = SubResource("Skin_ip165")
 
@@ -89,3 +90,8 @@ shape = SubResource("BoxShape3D_f8a05")
 [node name="@CollisionShape3D@258113" type="CollisionShape3D" parent="body_low__mReBody/@Area3D@258114"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019498825, 4.8413544, -0.05257845)
 shape = SubResource("BoxShape3D_pr8sh")
+
+[node name="glass_low__mGlass" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_k6pni")
+skin = SubResource("Skin_ip165")
+surface_material_override/0 = SubResource("StandardMaterial3D_15vcl")

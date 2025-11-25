@@ -70,12 +70,25 @@ func check_placement() -> bool:
 		return true
 	else:
 		var non_rug_found := false
+		#as per emily's request wall objects will not interact with floor objects and viseversa.
+		var wall_and_floor_overlap := false
 		for overlap in overlaps:
 			var object = overlap.get_parent().get_parent()
 			if "object_type" in object and object.object_type != 3:
 				non_rug_found = true
 				break
 		if non_rug_found == false:
+			placement_green()
+			return true
+		
+		for overlap in overlaps:
+			var object = overlap.get_parent().get_parent()
+			if "is_on_wall" in object and object.is_on_wall == is_on_wall:
+				print(object.is_on_wall)
+				print(is_on_wall)
+				wall_and_floor_overlap = true
+				break
+		if wall_and_floor_overlap == false:
 			placement_green()
 			return true
 
@@ -91,19 +104,22 @@ func placed() -> void:
 	)
 
 func placement_red() -> void:
-	_apply_to_meshes(self, func(mesh):
-		mesh.material_overlay = red_mat
-	)
+	if "Ftr" in name:
+		_apply_to_meshes(self, func(mesh):
+				mesh.material_overlay = red_mat
+		)
 
 func placement_green() -> void:
-	_apply_to_meshes(self, func(mesh):
-		mesh.material_overlay = green_mat
-	)
+	if "Ftr" in name:
+		_apply_to_meshes(self, func(mesh):
+				mesh.material_overlay = green_mat
+		)
 
 func placement_yellow() -> void:
-	_apply_to_meshes(self, func(mesh):
-		mesh.material_overlay = yellow_mat
-	)
+	if "Ftr" in name:
+		_apply_to_meshes(self, func(mesh):
+				mesh.material_overlay = yellow_mat
+		)
 
 func clear_material() -> void:
 	_apply_to_meshes(self, func(mesh):

@@ -16,6 +16,7 @@ var triplethreat_step_done = false  # 👈 new flag
 @onready var camera: Camera3D = $"../Camera"
 @onready var ui_overlay: Control = $"../UiOverlay"
 
+
 enum PlayerState {Moving, Editing}
 var current_state: PlayerState = PlayerState.Moving
 
