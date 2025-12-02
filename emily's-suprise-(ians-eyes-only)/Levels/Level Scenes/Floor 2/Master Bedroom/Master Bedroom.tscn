@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bin44tmbx5uya"]
+[gd_scene load_steps=16 format=3 uid="uid://bin44tmbx5uya"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_fu83h"]
 [ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_lp73y"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_1gyvd"]
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_u58h4"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="13_lp73y"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="14_xfl0t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
 shader = ExtResource("10_7243k")
@@ -75,3 +76,5 @@ next_door = "MasterBedroomDoor"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)
 
 [node name="MusicPlayer" parent="." instance=ExtResource("13_lp73y")]
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("14_xfl0t")]

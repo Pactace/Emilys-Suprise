@@ -1,18 +1,108 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6mylkvp3lpcr"]
+[gd_scene load_steps=27 format=3 uid="uid://c6mylkvp3lpcr"]
 
 [ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_0uec8"]
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_tktxi"]
 [ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="2_ssnot"]
+[ext_resource type="Shader" uid="uid://b5gdj0gfoerb4" path="res://Levels/Components/Portal.gdshader" id="3_2htpw"]
 [ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="3_qu3ce"]
-[ext_resource type="Script" uid="uid://c44c7vv1o0jha" path="res://Levels/Level Scenes/Floor 1/Office/OfficeFloorFurnitureInventory.gd" id="4_483yh"]
-[ext_resource type="Script" uid="uid://cnbynmtdt7fs6" path="res://Levels/Level Scenes/Floor 1/Office/OfficePlaceableInventory.gd" id="6_5dwgs"]
-[ext_resource type="Script" uid="uid://bs352hrmb2mdn" path="res://Levels/Level Scenes/Floor 1/Office/OfficeWallInventory.gd" id="7_82y0x"]
+[ext_resource type="Texture2D" uid="uid://chfa3xq6k3xv8" path="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Alb.png" id="4_alhh5"]
+[ext_resource type="Texture2D" uid="uid://drq18wyuhp0d7" path="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Nrm.png" id="5_quj7a"]
+[ext_resource type="Script" uid="uid://e1y62t46de73" path="res://Levels/Level Scenes/Floor 2/Terrace/TerraceFloorFurnitureInventory.gd" id="8_alhh5"]
 [ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="8_p3vqo"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="9_iam1x"]
+[ext_resource type="Script" uid="uid://bqcy5joxtw4xn" path="res://Levels/Level Scenes/Floor 2/Terrace/TerracePlaceableInventory.gd" id="9_quj7a"]
+[ext_resource type="Script" uid="uid://bibkq6y8a2lql" path="res://Levels/Level Scenes/Floor 2/Terrace/TerraceWallInventory.gd" id="10_2otbt"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="10_cd7v5"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_hmc78"]
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_7tq4j"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="13_0uec8"]
+[ext_resource type="AudioStream" uid="uid://o4be3pxyyhc1" path="res://Floor and Wall Textures/OutsideWall/3 Min Timer music bird, relax music with nature sounds in the forest for work and study.mp3" id="17_quj7a"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="18_ibk80"]
+[ext_resource type="Material" uid="uid://bup6ljos7gn6s" path="res://Levels/Level Scenes/Floor 2/Terrace/Terrace_Material.tres" id="19_alhh5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_alhh5"]
+render_priority = 0
+shader = ExtResource("3_2htpw")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_alhh5")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_quj7a")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_quj7a"]
+render_priority = 0
+shader = ExtResource("3_2htpw")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_alhh5")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_quj7a")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2otbt"]
+render_priority = 0
+shader = ExtResource("3_2htpw")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_alhh5")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_quj7a")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ibk80"]
+render_priority = 0
+shader = ExtResource("3_2htpw")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_alhh5")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_quj7a")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
 shader = ExtResource("10_cd7v5")
@@ -20,12 +110,39 @@ shader_parameter/circle_size = 0.0
 shader_parameter/screen_width = 0.0
 shader_parameter/screen_height = 0.0
 
+[sub_resource type="Environment" id="Environment_alhh5"]
+background_mode = 1
+background_color = Color(0.3647059, 0.69411767, 0.9490196, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7539839, 0.75398386, 0.75398386, 1)
+reflected_light_source = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ibk80"]
+
 [node name="TestLevel" type="Node3D"]
 script = ExtResource("1_0uec8")
 room_name = "Terrace"
 
 [node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_tktxi")]
 camera = NodePath("../Camera")
+
+[node name="Back Wall" parent="Room" index="2"]
+material_override = SubResource("ShaderMaterial_alhh5")
+
+[node name="Left Wall" parent="Room" index="3"]
+visible = false
+material_override = SubResource("ShaderMaterial_quj7a")
+
+[node name="Right Wall" parent="Room" index="4"]
+visible = false
+material_override = SubResource("ShaderMaterial_2otbt")
+
+[node name="Front Wall" parent="Room" index="5"]
+visible = false
+material_override = SubResource("ShaderMaterial_ibk80")
+
+[node name="WorldEnvironment" parent="Room" index="9"]
+environment = null
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
@@ -36,9 +153,9 @@ script = ExtResource("2_ssnot")
 [node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("3_qu3ce")]
 camera = NodePath("../Camera")
 room = NodePath("../Room")
-floor_furniture_inventory = ExtResource("4_483yh")
-placeable_inventory = ExtResource("6_5dwgs")
-wall_furniture_inventory = ExtResource("7_82y0x")
+floor_furniture_inventory = ExtResource("8_alhh5")
+placeable_inventory = ExtResource("9_quj7a")
+wall_furniture_inventory = ExtResource("10_2otbt")
 wallpaper_inventory = ExtResource("8_p3vqo")
 
 [node name="Emily" parent="." instance=ExtResource("9_iam1x")]
@@ -64,3 +181,228 @@ next_door = "TerraceDoor"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)
 
 [node name="MusicPlayer" parent="." instance=ExtResource("13_0uec8")]
+stream = ExtResource("17_quj7a")
+autoplay = true
+script = null
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("18_ibk80")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_alhh5")
+
+[node name="Fences" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(15.258729, 0, 0, 0, 0.529975, 0, 0, 0, 1, -0.47587824, 3.1518202, 7.59077)
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(15.258729, 0, 0, 0, 0.529975, 0, 0, 0, 1, -0.47587824, 3.1518202, 7.59077)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-6.669802e-07, 0, 0.9999999, 0, 0.52997494, 0, -15.258729, 0, -4.3711385e-08, -7.53672, 3.0653, -0.4027028)
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("19_alhh5")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, 0.24671984)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, -1.2409773)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, -2.7875228)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, -4.1252627)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, -5.5218368)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, -6.8584146)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, 1.4373655)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, 3.045576)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.1473395e-07, -0.5236313, 0, 2.624807, -2.288865e-08, 0, 0, 0, 0.6337337, -7.53672, 1.5543914, 4.893112)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, -0.38518953, 1.5543914, 7.631767)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, -1.8727355, 1.5543914, 7.6105537)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, -3.4191241, 1.5543914, 7.588502)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, -4.7567277, 1.5543914, 7.5694275)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, -6.1531606, 1.5543914, 7.549514)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, -7.4896016, 1.5543914, 7.5304556)
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, 1.2138176, 1.5543914, 7.648744)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, 2.853757, 1.5543914, 7.6716757)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-1.6359891e-09, -0.0074663907, 0.63366926, 2.624807, -2.288865e-08, -1.9891338e-15, 1.1472229e-07, 0.52357805, 0.009036362, 4.6021967, 1.5543914, 7.698019)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.5796876, 1.5543914, 0.44709682)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.5744944, 1.5543914, 1.9347849)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.569096, 1.5543914, 3.4813213)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.564427, 1.5543914, 5.040478)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 6.8493643, 1.5543914, 7.552187)
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(4.3387345e-07, 1.7477171, 0.006475654, 9.92593, -7.639561e-08, -5.785244e-15, 1.5145586e-09, 0.006100709, -1.8551013, 7.244914, 5.118067, 7.2624893)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(4.0809664e-07, 1.7477171, 0.006475654, 9.336222, -7.639561e-08, -5.785244e-15, 1.4245773e-09, 0.006100709, -1.8551013, -7.7780704, 4.9603477, 7.2624893)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.5838437, 1.5543914, -1.3238559)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.589458, 1.5543914, -3.1100724)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.5959063, 1.5543914, -4.810917)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(1.1473324e-07, 0.52362806, 0.0022121784, 2.624807, -2.2888647e-08, -1.9763244e-15, 4.0050896e-10, 0.0018278142, -0.6337298, 7.601915, 1.5543914, -6.483388)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-0.36614844, 0, -0.999712, 0, 0.52997494, 0, 15.254335, 0, -0.023996001, 7.6248536, 3.1251936, -0.37064695)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(15.258729, 0, 0, 0, 0.529975, 0, 0, 0, 1, -0.47587824, 0.13308573, 7.59077)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-0.36614844, 0, -0.999712, 0, 0.52997494, 0, 15.254335, 0, -0.023996001, -7.53672, 0.046565533, -0.4027028)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(-0.36614844, 0, -0.999712, 0, 0.52997494, 0, 15.254335, 0, -0.023996001, 7.6248536, 0.10645914, -0.37064695)
+material_override = ExtResource("19_alhh5")
+mesh = SubResource("BoxMesh_ibk80")
+skeleton = NodePath("../..")
+
+[editable path="Room"]

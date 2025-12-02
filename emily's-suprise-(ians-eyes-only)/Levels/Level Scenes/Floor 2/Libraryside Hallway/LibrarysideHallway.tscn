@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c4gjnwif717r2"]
+[gd_scene load_steps=17 format=3 uid="uid://c4gjnwif717r2"]
 
 [ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_607x7"]
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_jwms0"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_1n3ex"]
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="12_v3fxy"]
 [ext_resource type="PackedScene" uid="uid://cpuf71mcq07a3" path="res://Levels/Components/open_entrance.tscn" id="13_ufueg"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="15_ghdro"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l6yyg"]
 shader = ExtResource("10_lrmfw")
@@ -87,6 +88,7 @@ transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0
 marker = NodePath("Marker3D")
 next_scene = "res://Levels/Level Scenes/Floor 2/Library Second Floor/Library.tscn"
 next_door = "StairsideHallwayDoor"
+unlocked_day = 30
 
 [node name="Marker3D" type="Marker3D" parent="Doors/LibraryDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
@@ -120,3 +122,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
 
 [node name="MusicPlayer" parent="." instance=ExtResource("2_607x7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10489941, 0.49827337, -0.13373804)
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("15_ghdro")]

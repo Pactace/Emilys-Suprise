@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg0oo5yxh1y0q"]
+[gd_scene load_steps=16 format=3 uid="uid://dg0oo5yxh1y0q"]
 
 [ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="1_1pj1x"]
 [ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_6d7ar"]
@@ -13,6 +13,7 @@
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="11_go1ub"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="12_6d7ar"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="13_6d7ar"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="14_aj1ts"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aj1ts"]
 shader = ExtResource("11_go1ub")
@@ -66,3 +67,5 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("12_6d7ar")
 
 [node name="MusicPlayer" parent="." instance=ExtResource("13_6d7ar")]
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("14_aj1ts")]

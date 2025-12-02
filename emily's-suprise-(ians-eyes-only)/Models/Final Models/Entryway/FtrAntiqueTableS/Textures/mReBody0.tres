@@ -4,4 +4,6 @@
 
 [resource]
 resource_name = "mReBody0"
+transparency = 1
+cull_mode = 1
 albedo_texture = ExtResource("1_t7f1l")

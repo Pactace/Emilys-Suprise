@@ -87,10 +87,10 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhapk"]
-size = Vector3(19.499325, 18.837349, 9.981723)
+size = Vector3(19.499, 9, 9.982)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7if2"]
-size = Vector3(19.499325, 18.837349, 9.981723)
+size = Vector3(19.499, 8, 9.982)
 
 [node name="FtrGamingDesk" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -120,11 +120,11 @@ collision_layer = 132
 collision_mask = 132
 
 [node name="@CollisionShape3D@257147" type="CollisionShape3D" parent="desctop_01_low__mReBody/@StaticBody3D@257148"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.418674, 0.041974545)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 4.433822, 0.041974545)
 shape = SubResource("BoxShape3D_qhapk")
 
 [node name="@Area3D@257150" type="Area3D" parent="desctop_01_low__mReBody"]
 
 [node name="@CollisionShape3D@257149" type="CollisionShape3D" parent="desctop_01_low__mReBody/@Area3D@257150"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.418674, 0.041974545)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 5.1577835, 0.041974545)
 shape = SubResource("BoxShape3D_y7if2")

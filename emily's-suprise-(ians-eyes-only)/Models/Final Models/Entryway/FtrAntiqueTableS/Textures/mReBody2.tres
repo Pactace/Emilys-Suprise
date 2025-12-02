@@ -5,6 +5,7 @@
 
 [resource]
 resource_name = "mReBody2"
+transparency = 1
 albedo_texture = ExtResource("1_6ben3")
 normal_enabled = true
 normal_texture = ExtResource("2_cqb4l")

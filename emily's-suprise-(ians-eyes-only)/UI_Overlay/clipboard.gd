@@ -7,20 +7,65 @@ func _ready() -> void:
 	var room_name = get_tree().current_scene.room_name
 	if(room_name == "Entryway"):
 		get_child(1).text = "This is the first place the\nfather see's when arrivng\nafter a long day of work,\nthe kids after a long day\nof school. and visitors \nafter a long journey \n"
-		get_child(3).text = "Make a place that people\ncan feel at home as they\nenter, whether they live\nhere or not"
+		get_child(3).text = "Make a place people\ncan feel at home as they\nenter, whether they live\nhere or not"
+
 	elif(room_name == "Office"):
 		get_child(1).text = "The mother and father\nboth work from home\nshe needs art tools\nfor her creative work\nthe father needs a gaming\ncomputer and whiteboard\n"
-		get_child(3).text = "Make a place that they can\nfeel calm as they work\nthrough the stresses\nof life together"
+		get_child(3).text = "Make a place where they\ncan feel calm as they work\nthrough stresses\nof life together"
+
 	elif(room_name == "GuestBathroom"):
 		get_child(1).text = "This is the place\nguests use the restroom\nit should be simple\nand compact"
-		get_child(3).text = "Make sure they\nhave nice place\nto poop :3"
+		get_child(3).text = "Make sure they\nhave a place\nto poop :3"
+
 	elif(room_name == "TripleThreat"):
 		get_child(1).text = "This is the place\nthe family spends most\nof their time\ncooking, eating, and\nhanging out in the\n kitchen, dinning room and\nliving room"
-		get_child(3).text = "Make sure the family\nhave nice place\n to cook together\neat together, pray, read\nand watch movies together"
+		get_child(3).text = "Make sure the family\nhas a place\nto cook together,\neat together, pray, read\nand watch movies"
+
 	elif(room_name == "Basement"):
 		get_child(1).text = "This is the place\nthe kids call there own\nthey hang out\n with friends and\nplay here"
-		get_child(3).text = "Make sure the kids\nhave a fun place\n to play"
-	
+		get_child(3).text = "Make sure the kids\nhave a place\nto play and enjoy"
+
+	elif(room_name == "KidsBathroom"):
+		get_child(1).text = "This is the place\nthe kids use every\nday before school\nand before bed,\nit should be easy\nto keep clean and\nsimple to move in\n"
+		get_child(3).text = "Make sure the kids\nhave a bright place\nto brush teeth,\nwash hands and get\nready each day"
+
+	elif(room_name == "StairsideHallway"):
+		get_child(1).text = "This is the space\nthat connects rooms\nand floors of the\nhome, everyone\nwalks through it\nmany times a day\nso keep it cozy\n"
+		get_child(3).text = "Make a place that\nfeels warm as the\nfamily moves from\nroom to room and\nkeeps things calm"
+
+	elif(room_name == "LibrarySideHallway"):
+		get_child(1).text = "This is the space\nthat connects rooms\nand floors of the\nhome, everyone\nwalks through it\nmany times a day\nso keep it cozy\n"
+		get_child(3).text = "Make a place that\nfeels warm as the\nfamily moves from\nroom to room and\nkeeps things calm"
+
+	elif(room_name == "MasterBedroom"):
+		get_child(1).text = "This is the place\nwhere the mother\nand father rest,\nread and talk at\nnight, it should be\na peaceful place\njust for them\n"
+		get_child(3).text = "Make a place where\nthey can feel close\ntogether as they end each\nday and start the\nnext with peace"
+
+	elif(room_name == "MasterBathroom"):
+		get_child(1).text = "This is the place\nwhere the parents\nget ready each day,\nshower, unwind and\nhave time to relax,\nit should feel clean\nand refreshing\n"
+		get_child(3).text = "Make a calm place\nfor them to breathe, slow down\nand feel renewed before \nthey face another day\n"
+
+	elif(room_name == "KidsBedroom3"):
+		get_child(1).text = "This is the place\nfor the oldest kid,\na 12 year old girl\nwho loves music,\nsoft lights and the\ncolor pink, this is\nher calm safe space\n"
+		get_child(3).text = "Make sure she has\na cozy place where\nshe can listen to\nsongs, relax, read\nand feel inspired"
+
+	elif(room_name == "KidsBedroom2"):
+		get_child(1).text = "This is the room\nfor the twin boys\nage eight, one loves\nart and drawing,\nthe other loves his\nbaseball gear, and\nboth love video games\n"
+		get_child(3).text = "Make a fun place\nwhere they can play,\ncreate, imagine,\nshare games, and\ngrow together"
+
+	elif(room_name == "KidsBedroom1"):
+		get_child(1).text = "This is the room\nfor the baby girl,\nsmall, sweet and\nfull of laughter,\nshe loves all her\nsoft plushies and\ncozy little things"
+		get_child(3).text = "Make sure she feels\nwarm here,\nsurrounded by soft\ntoys, colors and a\ncomfy space"
+
+	elif(room_name == "Terrace"):
+		get_child(1).text = "This is the place\nwhere the family\nenjoys the fresh\nair, warm sun, and\ntime outside\ntogether on calm\ndays and nights\n"
+		get_child(3).text = "Make a place where\npeace and nature\nmix, where they can\nsit, talk, relax,\nand enjoy views"
+
+	elif(room_name == "BasementBathroom"):
+		get_child(1).text = "This is the place\nused when hanging\nout downstairs,\nit should be handy,\nclean and simple\nfor family and\nfriends visiting\n"
+		get_child(3).text = "Make sure guests\nand kids have a\nquick, comfy place\nto wash up during\nbasement fun"
+
+		
 func _process(delta: float) -> void:
 	if get_parent().get_parent().current_state == get_parent().get_parent().PlayerState.Moving && enabled == false:
 		print(enabled)

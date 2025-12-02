@@ -49,6 +49,7 @@ skins = {
 }
 
 [node name="Race_low__mReBody" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_608rr")
 mesh = SubResource("ArrayMesh_77ykg")
 skin = SubResource("Skin_uejl0")
 
