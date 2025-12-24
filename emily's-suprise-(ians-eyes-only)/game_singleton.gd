@@ -22,6 +22,10 @@ func _ready() -> void:
 func _on_update_timer_timeout() -> void:
 	current_time = Time.get_datetime_dict_from_system()
 	print(current_time)
+	print(Time.get_unix_time_from_system())
+	if (current_time.year == 2025 && current_time.month == 12 && current_time.day == 12 && current_time.hour == 18 && current_time.minute == 30):
+		get_tree().change_scene_to_file("res://Start and Pause Menus/ProposalScene.tscn")
+		
 	_update_music()
 
 func _update_music() -> void:
@@ -55,6 +59,8 @@ func _update_music() -> void:
 		
 func _update_dialogue_lines() -> void:
 	var day: int = int(current_time.day)
+	var month: int =  int(current_time.month)
+	var year: int = int(current_time.year)
 
 	if day == 8:
 		lines = [
@@ -291,66 +297,175 @@ func _update_dialogue_lines() -> void:
 	if day == 25:
 		lines = [
 			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"HAHAHA just kidding Im back and better than ever my darling",
+			"I hope you are ready for a full day today!",
+			"I am definetly going to miss you this week :(",
+			"But Ive left lots of things for you to play with while your away",
+			"I hope you have a great week with your family I cant wait to see you soon :3",
+			"I love you madly!",
+			"Besitos amor <3"
 	]
 	if day == 26:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Heyyyy my darling gorgeous woman!",
+			"I hope you had lots of fun yesterday",
+			"You have lots to play today!",
+			"Before you get to it though I just wanted to tell you how much I love you",
+			"You make me feel at home my darling,",
+			"The hours fly by when we are together I blink and its been 9 hours",
+			"I dont know what we are going to do when we get married",
+			"Years fly by like minutes with you my dear",
+			"I love you madly! I cant wait to see you saturday!"
 	]
 	if day == 27:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Heyyyyy babyyy, todays gonna be another message like last week so be careful o_0",
+			"You alone?",
+			"Good.",
+			"I just wanted to say how much I love those beautiful lips of yours",
+			"I just love kissing them its my favorite",
+			"I love when we connect and just melt into each other",
+			"I cant wait to give you some smooches when you get back",
+			"I love you darling!",
+			"Have a great day! ;3"
 	]
 	if day == 28:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"Good morning my loveeeeee",
+			"I hope you slept well last night",
+			"You know what I love darling?",
+			"Cuddling my darling girl and falling asleep by her side",
+			"You are such a good cuddler and you make me feel so comfortable",
+			"and some times sleepy",
+			"hehe",
+			"I love you madly darling!"
 	]
 	if day == 29:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
+			"MY DARLINNNNGG!!!!!!!",
+			"You will be home today!!!!!",
+			"I hope you have been having fun this week",
+			"Decorating all the stinkyyyyy bathrooms hehehehe",
+			"I cant wait to see you today my love",
+			"I hope you have fun decorating on the way back",
+			"I love you my darling",
+			"All of you",
+			"All of the time <3",
+			"Come home to me safe my little sugar wafer, ooie gooie bear",
+			"hahahaha",
+			"ciaocitos amor"
 	]
-	if day == 30:
+	if day == 3 and month == 12 and year == 2025:
 		lines = [
 			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
-	]
-	if day == 1:
+			"HAHAHA just kidding Im back and better than ever my darling",
+			"I finally figured all this junk",
+			"I hope you had fun hanging out",
+			"I definitley did",
+			"I love you madly!",
+			"Besitos amor <3"
+		]
+	if day == 4 and month == 12 and year == 2025:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
-	]
-	if day == 2:
+			"Good morning my loveeeeee",
+			"I hope you slept well last night",
+			"You know what I love darling?",
+			"Cuddling my darling girl and falling asleep by her side",
+			"You are such a good cuddler and you make me feel so comfortable",
+			"and some times sleepy",
+			"hehe",
+			"I love you madly darling!"
+		]
+	if day == 5 and month == 12 and year == 2025:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
-	]
-	if day == 3:
+			"Good morning my loveeeeee",
+			"I hope you slept well last night",
+			"You know what I love darling?",
+			"Cuddling my darling girl and falling asleep by her side",
+			"You are such a good cuddler and you make me feel so comfortable",
+			"and some times sleepy",
+			"hehe",
+			"I love you madly darling!"
+		]
+	if day == 6 and month == 12 and year == 2025:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
-	]
-	if day == 4:
+			"Hey babyyyy!",
+			"I hope you are having fun with the house,",
+			"Dont worry if you have finished everything again there should be another update",
+			"In another few days with some rooms I didnt get to add and some flooring to try out",
+			"You know what I love about you my dear",
+			"Your creatvity",
+			"You are so creative",
+			"Always making cool things with your hands",
+			"Those little embroyderies",
+			"The cute clay things",
+			"I love those little presents you spend time making",
+			"I love you madly!",
+			"Besitos Amor <3"
+		]
+	if day == 7 and month == 12 and year == 2025:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
-	]
-	if day == 5:
+			"Good morning my little carne asada fries burrito",
+			"I hope you are relaxed this sunday",
+			"I cant wait to see you today!",
+			"With any luck the update should be ready",
+			"Do you remember the beginning of our relationship",
+			"When we were praying about getting together",
+			"Well more like you",
+			"I already knew",
+			"Day 1 I remember praying to God after we hung out",
+			"And I got the feeling that it would literally be the stupidest thing if we didnt get together",
+			"I also thought Emily DeJesus had a nice ring to it.",
+			"Anyways I'll see you later love!",
+			"I love you madly!",
+		]
+	if day == 9 and month == 12 and year == 2025:
 		lines = [
-			"Morning sunshine! Another big decorating day ahead!",
-			"The client said they loved your last setup.",
-			"Keep up that energy today!"
-	]
+			"Good morning my dear sweet darling!",
+			"I hope you are having a great relaxing day!",
+			"I am so proud of you singing yesterday",
+			"You sounded so good",
+			"Well at least what I heard of you, drowned out in the background",
+			"You are an amazing singer my love",
+			"Thats one of the things I love about you!",
+			"Anyways I hope you have a good day today!",
+			"I love you madly"
+		]
+	if day == 10 and month == 12 and year == 2025:
+		lines = [
+			"HALLOOOOOOO",
+			"MY DARLING WOMANNNNN",
+			"I MISS YOU MADLYYYYYYY",
+			"AGHHHHHHH",
+			"hehehe",
+			"Anyways",
+			"I dont have any more rooms for you to decorate today so I would recommend you look for flooring that you like",
+			"Obviously keep logging in for the next little while because I have lots of notes still to give you",
+			"But I love you tons and I hope you have a great day!"
+		]
+	if day == 11 and month == 12 and year == 2025:
+		lines = [
+			"Hello my dear",
+			"You know what I am thinking about today?",
+			"I am thinking about that time we went to the mall to make little lego guys",
+			"It was so fun just to chill and relax with you my dear",
+			"And it was so fun to make you dad with da cheese headdddddd",
+			"I love those little moments with you my darling",
+			"I hope you know that :3",
+			"I love you madly"
+		]
+	if day == 12 and month == 12 and year == 2025:
+		lines = [
+			"Hey love bug",
+			"Today's going to be a bit different from other days",
+			"I have decided I am sick of not seeing you this week",
+			"So I was thinking  of adding some new wall mounted items to the game",
+			"Anyways, I need you to come look at them so I have made a special cutscene for you today",
+			"Where I'll pick you up and we can look at it together ok?",
+			"I'll be picking you up around 6:30 today if that's okay dearest?",
+			"So make sure your on the game at least ten minutes early with the game charged",
+			"I can't wait to show you some cool stuff!",
+			"I love youuuuu!"
+		]
+	
+	

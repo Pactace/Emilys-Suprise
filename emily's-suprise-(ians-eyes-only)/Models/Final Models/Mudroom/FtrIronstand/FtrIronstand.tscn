@@ -58,10 +58,10 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ihmrm"]
-size = Vector3(8.824778, 11.88839, 5)
+size = Vector3(8.825, 6, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yj7cc"]
-size = Vector3(8.824778, 11.88839, 5)
+size = Vector3(8.825, 6, 5)
 
 [node name="FtrIronstand" type="Node3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -86,11 +86,11 @@ collision_layer = 132
 collision_mask = 132
 
 [node name="@CollisionShape3D@258019" type="CollisionShape3D" parent="Button_low__mBody/@StaticBody3D@258020"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0075559616, 5.944195, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.007555961, 4.0922008, 0)
 shape = SubResource("BoxShape3D_ihmrm")
 
 [node name="@Area3D@258022" type="Area3D" parent="Button_low__mBody"]
 
 [node name="@CollisionShape3D@258021" type="CollisionShape3D" parent="Button_low__mBody/@Area3D@258022"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0075559616, 5.944195, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.007555961, 4.0910234, 0)
 shape = SubResource("BoxShape3D_yj7cc")

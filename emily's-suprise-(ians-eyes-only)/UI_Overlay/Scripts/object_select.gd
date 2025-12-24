@@ -158,8 +158,6 @@ func load_objects(dict: Dictionary) -> void:
 		child.queue_free()
 	
 	var count :int 
-	if tab_name == "Wallpapers":
-		count = GameSingleton.current_time.day - 7
 	var i := 0
 	for key in dict.keys():
 		i+=1

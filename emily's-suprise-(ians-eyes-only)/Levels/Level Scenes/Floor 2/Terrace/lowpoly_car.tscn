@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://f3051md8joqo"]
+
+[ext_resource type="PackedScene" uid="uid://b1vp8ey00467w" path="res://Start and Pause Menus/low_poly_small_car.glb" id="1_uei5f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsvja"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_uei5f")]
+
+[node name="Chassis_Chassis_0" parent="Sketchfab_model/Car_SmallCar_FBX/RootNode/Chassis/Object_35" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dsvja")
+
+[node name="FL_Door_Chassis_0" parent="Sketchfab_model/Car_SmallCar_FBX/RootNode/FL_Door/Object_42" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dsvja")
+
+[node name="RL_Door_Chassis_0" parent="Sketchfab_model/Car_SmallCar_FBX/RootNode/RL_Door/Object_50" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dsvja")
+
+[node name="RR_Door_Chassis_0" parent="Sketchfab_model/Car_SmallCar_FBX/RootNode/RR_Door/Object_57" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dsvja")
+
+[node name="FR_Door_Chassis_0" parent="Sketchfab_model/Car_SmallCar_FBX/RootNode/FR_Door/Object_64" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dsvja")

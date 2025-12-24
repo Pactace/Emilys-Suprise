@@ -109,6 +109,7 @@ bind/0/pose = Transform3D(5.960466e-08, 0.9999998, -2.086162e-07, -2.086162e-07,
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_lo54m")
 area_path = NodePath("body__mReBody/@Area3D@258074")
+object_type = 1
 skins = {
 "mDisplay": [ExtResource("2_vgauh")],
 "mReBody": [ExtResource("3_m55m2"), ExtResource("4_n2xtu"), ExtResource("5_xx7t3"), ExtResource("6_3ntp7"), ExtResource("7_n2w64"), ExtResource("8_w2reg")],

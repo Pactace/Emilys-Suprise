@@ -43,7 +43,7 @@ func _ready() -> void:
 
 	elif(room_name == "MasterBathroom"):
 		get_child(1).text = "This is the place\nwhere the parents\nget ready each day,\nshower, unwind and\nhave time to relax,\nit should feel clean\nand refreshing\n"
-		get_child(3).text = "Make a calm place\nfor them to breathe, slow down\nand feel renewed before \nthey face another day\n"
+		get_child(3).text = "Make a calm place\nfor them to breathe, slow\ndown and feel renewed before \nthey face another day\n"
 
 	elif(room_name == "KidsBedroom3"):
 		get_child(1).text = "This is the place\nfor the oldest kid,\na 12 year old girl\nwho loves music,\nsoft lights and the\ncolor pink, this is\nher calm safe space\n"
@@ -65,6 +65,20 @@ func _ready() -> void:
 		get_child(1).text = "This is the place\nused when hanging\nout downstairs,\nit should be handy,\nclean and simple\nfor family and\nfriends visiting\n"
 		get_child(3).text = "Make sure guests\nand kids have a\nquick, comfy place\nto wash up during\nbasement fun"
 
+	elif(room_name == "Library"):
+		get_child(1).text = "A quiet room\nfor study and\nrest. The dad\nkeeps his cool\nmartial arts\nitems here."
+		get_child(3).text = "Keep this spot\nsimple, tidy,\nand calm so all\ncan read and\nrelax easily."
+	
+	elif(room_name == "SittingRoom"):
+		get_child(1).text = "The tower base\nwhere guests sit,\nfamily studies,\nand the daughter\nplays piano\nfor everyone."
+		get_child(3).text = "Make sure it’s\nwarm, clean, and\nready so friends\nfeel welcome\nwhen visiting."
+	
+	elif(room_name == "TowerTop"):
+		get_child(1).text = "A hideaway for\nkids and parents.\nThey come here on\nstormy nights to\nhear rain and\nplay games."
+		get_child(3).text = "Keep it cozy so\nfamily can rest,\nplay, and watch\nstorms together\nin comfort."
+	elif(room_name == "Mudroom"):
+		get_child(1).text = "Put washer, do not put toilet unless you want stinkkkyyyy clothes"
+		get_child(3).text = "I love youuuu hehehe"
 		
 func _process(delta: float) -> void:
 	if get_parent().get_parent().current_state == get_parent().get_parent().PlayerState.Moving && enabled == false:

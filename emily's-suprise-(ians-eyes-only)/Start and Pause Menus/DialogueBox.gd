@@ -2,6 +2,8 @@ extends TextureRect
 
 @onready var dialogue = $RichTextLabel
 @onready var moving_van = $"../Moving van"
+@onready var transition_screen = $"../TransitionScreen"
+@export var proposal := false
 
 @export var pop_duration: float = 0.3
 @export var pop_overshoot: float = 1.15
@@ -28,7 +30,33 @@ var type_timer := 0.0
 
 
 func _ready():
-	dialogue_lines = GameSingleton.lines
+	if !proposal:
+		dialogue_lines = GameSingleton.lines
+	else:
+		dialogue_lines = [
+			"Yooooo, it's me your favorite person!",
+			"Its so wonderful to see you face to face after LITERALLY A MONTH.",
+			"My goodness I'm a bad partner",
+			"Hehe JK JK",
+			"I guess you understand why it took me so long on monday to make this part of the game though",
+			"Supposedly just 'adding other rooms'",
+			"hehe",
+			"Anyways before we head off to check out these wall mounted items I just wanted to tell you",
+			"how much I love what you've done with the place",
+			"Its been such a joy watching you decorate and having fun with the game I spent so much time on",
+			"Whenever you'd show me during our calls or when I would come to visit it always", 
+			"brightened up my day seeing you turn this house into a home",
+			"It makes me think of our future in this house",
+			"All the kidleys running around",
+			"Me and you having fun working together",
+			"Building something that will last",
+			"There's no one I'd rather do it with my dear sweet emily",
+			"Anyways we should probably get going, we have some important things to do today!",
+			"I'll take your character here in the game",
+			"But there should be someone waiting outside for you in real life",
+			"Go check outside theres someone that should be out front",
+			"I love you madly! See you soon"
+		]
 	visible = false
 	scale = Vector2.ZERO
 	dialogue.visible = false
@@ -83,7 +111,10 @@ func _process(delta):
 		if t >= 1.0:
 			visible = false
 			animating_out = false
-			moving_van.speed_away()
+			if !proposal:
+				moving_van.speed_away()
+			else:
+				transition_screen.exit = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Accept") and dialogue_start:

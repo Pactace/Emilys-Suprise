@@ -32,7 +32,11 @@ func _on_body_entered(body: Node3D) -> void:
 				door = parent
 				
 				# Check if door is unlocked yet
-				if door.unlocked_day <= GameSingleton.current_time.day:
+				if door.unlocked_year <= GameSingleton.current_time.year:
+					label.text = "Press A to enter"
+				elif door.unlocked_month <= GameSingleton.current_time.month:
+					label.text = "Press A to enter"
+				elif door.unlocked_day <= GameSingleton.current_time.day:
 					label.text = "Press A to enter"
 				else:
 					label.text = "I can't go there yet"
@@ -50,7 +54,11 @@ func _on_body_exited(body: Node3D) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if door and event.is_action_pressed("Accept"):
-		if door.unlocked_day <= GameSingleton.current_time.day:
+		if door.unlocked_year <= GameSingleton.current_time.year:
+			door.enter_portal()
+		elif door.unlocked_month <= GameSingleton.current_time.month:
+			door.enter_portal()
+		elif door.unlocked_day <= GameSingleton.current_time.day:
 			door.enter_portal()
 		else:
-			print("Door is locked — cannot enter yet.")
+			print("frick")

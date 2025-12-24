@@ -150,31 +150,6 @@ def items_from_list_retrieve():
 
 def operation_steal_wall_papers():
     wall_papers_to_steal = [
-        "RoomTexFloorConcrete00",
-        "RoomTexWallConcrete00"
-
-
-        # "RoomTexWallDot01",
-        # "RoomTexWallPanelMold00",
-        # "RoomTexWallDot00",
-        # "RoomTexWallMud02",
-        # "RoomTexWallBoard00",
-        # "RoomTexWallPanelMold03",
-        # "RoomTexWallCountry03",
-        # "RoomTexWallPanelMold02",
-        # "RoomTexWallCute03",
-        # "RoomTexWallCute00",
-        # "RoomTexWallCute01",
-        # "RoomTexWallCute02",
-        # "RoomTexWallHall01",
-        # "RoomTexWallMud03",
-        # "RoomTexWallHall00",
-        # "RoomTexWallStripe03",
-        # "RoomTexWallPanelMold01",
-        # "RoomTexWallCountry02",
-        # "RoomTexWallHall03",
-        # "RoomTexWallCountry00",
-        # "RoomTexWallArtDeco00"
     ]
 
     base_src = "C:/Users/ianth/OneDrive/Desktop/untitled/ACNH_2.0.0_Exported_Model_DAE+PNG/Model"

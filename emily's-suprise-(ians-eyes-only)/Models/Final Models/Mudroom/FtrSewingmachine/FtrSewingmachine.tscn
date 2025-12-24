@@ -56,6 +56,7 @@ size = Vector3(7.620594, 7.274966, 3.479625)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_twno4")
 area_path = NodePath("bobbinshaft_low__mReBody/@Area3D@258054")
+object_type = 2
 skins = {
 "mReBody": [ExtResource("2_0x7og"), ExtResource("3_bhych"), ExtResource("4_b8ohe"), ExtResource("5_aphgl"), ExtResource("6_0rw74"), ExtResource("7_7ere0"), ExtResource("8_p84pa"), ExtResource("9_m2fh4"), ExtResource("10_tqfdb"), ExtResource("11_7vn3t")]
 }

@@ -5,6 +5,8 @@ extends Node3D
 @export var marker: Marker3D
 @export var next_door: String
 @export var unlocked_day: int
+@export var unlocked_month: int
+@export var unlocked_year: int
 
 func enter_portal():
 	GameSingleton.door_name = next_door

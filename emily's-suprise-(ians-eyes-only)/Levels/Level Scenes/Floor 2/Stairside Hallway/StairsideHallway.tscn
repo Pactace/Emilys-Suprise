@@ -77,6 +77,15 @@ next_door = "StairsideHallwayDoor"
 [node name="Marker3D" type="Marker3D" parent="Doors/MasterBedroomDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
 
+[node name="MudroomDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("12_0eywe")]
+transform = Transform3D(-0.99977565, 0, -0.02118665, 0, 1, 0, 0.02118665, 0, -0.99977565, -4.8165116, 3.7863307, -0.4698596)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 1/Mudroom/Mudroom.tscn"
+next_door = "StairsideHallwayDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/MudroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9315233, 0, 0)
+
 [node name="LivingDiningKitchenEntrance" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("13_qxxir")]
 transform = Transform3D(-2.1855693e-07, 0, 9.12171, 0, 9.511113, 0, -4.9999995, 0, -3.987226e-07, 0.20046902, 4.769101, -19.48436)
 visible = false

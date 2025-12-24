@@ -9,6 +9,8 @@ var standard_material: StandardMaterial3D
 @export var next_scene: String
 @export var next_door: String
 @export var unlocked_day: int 
+@export var unlocked_month: int
+@export var unlocked_year: int
 
 func _ready() -> void:
 	camera = get_viewport().get_camera_3d()
