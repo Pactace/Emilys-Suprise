@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var emily_model = $EmilyAnimations
 @onready var emily_overlay = $EmilyOverlay
 @onready var audioplayer = $AudioStreamPlayer3D
+@export var overworld = false
 signal play_walking()
 signal play_idle()
 var idle_or_walking = true
@@ -38,13 +39,15 @@ func _ready() -> void:
 		print("No 'Doors' node found at ../Doors")
 
 	# --- If this is a triple threat room, do a little startup step ---
-	if camera.triplethreat:
+	if "triplethreat" in camera && camera.triplethreat:
 		triplethreat_step_done = false  # reset the flag
+	if overworld:
+		camera.target_pos = Vector3(position.x, position.y + 5, position.z + 10)
 
 
 func _physics_process(delta: float) -> void:
 	if current_state == PlayerState.Moving:
-		if camera.triplethreat and !triplethreat_step_done:
+		if "triplethreat" in camera and camera.triplethreat and !triplethreat_step_done:
 			# 👣 Simulate one frame of forward movement using walk_around_logic
 			var fake_input_dir = Vector2(0, 1) # equivalent to pressing "Up"
 			walk_around_logic(delta, fake_input_dir)
@@ -57,21 +60,22 @@ func _physics_process(delta: float) -> void:
 
 
 func switch_states():
-	if current_state == PlayerState.Moving:
-		current_state = PlayerState.Editing
-		ui_overlay.enabled()
-		visible = false
-		old_position = position
-		position.y = -10
-		emily_model.visible = false
-		audioplayer.stop()
-	else:
-		current_state = PlayerState.Moving
-		ui_overlay.disabled()
-		visible = true
-		position = old_position
-		emily_model.visible = true
-		
+	if !overworld:
+		if current_state == PlayerState.Moving:
+			current_state = PlayerState.Editing
+			ui_overlay.enabled()
+			visible = false
+			old_position = position
+			position.y = -10
+			emily_model.visible = false
+			audioplayer.stop()
+		else:
+			current_state = PlayerState.Moving
+			ui_overlay.disabled()
+			visible = true
+			position = old_position
+			emily_model.visible = true
+			
 
 
 func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
@@ -98,7 +102,10 @@ func walk_around_logic(delta: float, forced_input_dir := Vector2.ZERO):
 		velocity.x = move_dir.x * SPEED
 		velocity.z = move_dir.z * SPEED
 		
-		if camera.triplethreat:
+		if overworld:
+			camera.target_pos = Vector3(position.x, position.y + 5, position.z + 10)
+		
+		if "triplethreat" in camera and camera.triplethreat:
 			if global_position.x > 7 and !new_center_bool:
 				camera.set_center(Vector3(10,0,0))
 				new_center_bool = true

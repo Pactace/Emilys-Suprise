@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://146eh3l8y33r"]
+
+[ext_resource type="Script" uid="uid://dbhnhpyg8q6dc" path="res://Levels/EmilyVille/Overworld/overworld_camera.gd" id="1_uj22n"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="8_8l6or"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="9_5h7ng"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="10_5c4vm"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="11_ikuof"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="12_hlk0a"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="13_i0jc6"]
+[ext_resource type="Texture2D" uid="uid://bpa0lnvi5lm5h" path="res://Start and Pause Menus/Start Screen Items/3a8ea8abf1d716ecb1e83f2610278ab0.jpg" id="13_uj22n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8qfao"]
+shader = ExtResource("9_5h7ng")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3424"]
+albedo_texture = ExtResource("13_uj22n")
+uv1_scale = Vector3(15, 15, 15)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_12hj8"]
+
+[sub_resource type="Environment" id="Environment_qwf2g"]
+background_mode = 1
+background_color = Color(5.390644e-06, 0.7418179, 0.9469257, 1)
+background_energy_multiplier = 1.1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("1_uj22n")
+
+[node name="Emily" parent="." instance=ExtResource("8_8l6or")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
+overworld = true
+SPEED = 5.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8qfao")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("10_5c4vm")
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="EntrywayDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("11_ikuof")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.9941573, 0, 8.742278e-08, 0, -1, -3.8896222, 3.6350203, -0.13832188)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 1/Entryway/Entryway.tscn"
+next_door = "BathroomDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/EntrywayDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.073964, -0.48973966, -2.682209e-07)
+
+[node name="MusicPlayer" parent="." instance=ExtResource("12_hlk0a")]
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("13_i0jc6")]
+
+[node name="OverworldGeo" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OverworldGeo"]
+transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_b3424")
+mesh = SubResource("PlaneMesh_12hj8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qwf2g")
