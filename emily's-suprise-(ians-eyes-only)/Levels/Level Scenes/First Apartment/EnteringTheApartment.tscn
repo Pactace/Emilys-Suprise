@@ -1,0 +1,200 @@
+[gd_scene load_steps=21 format=3 uid="uid://d08bimba3315e"]
+
+[ext_resource type="Texture2D" uid="uid://dq5mx2vt3ip17" path="res://Start and Pause Menus/Start Screen Items/sky_panorama.jpg" id="1_vqe2x"]
+[ext_resource type="PackedScene" uid="uid://40eyaqjeyi31" path="res://Start and Pause Menus/Start Screen Items/kei_truck.glb" id="2_41j7v"]
+[ext_resource type="Texture2D" uid="uid://dvf10sckw0sx3" path="res://Start and Pause Menus/Logo Sprites/unscreen-146.png" id="3_832yr"]
+[ext_resource type="PackedScene" uid="uid://b7bx5bnmslkmm" path="res://Start and Pause Menus/Start Screen Items/cc0_free_cardboard_box.glb" id="4_x15vs"]
+[ext_resource type="Texture2D" uid="uid://ddqm82xvvodf0" path="res://Start and Pause Menus/Start Screen Items/Seamless-Black-Asphalt-Road-Texture.jpg" id="5_2jnue"]
+[ext_resource type="Texture2D" uid="uid://bpa0lnvi5lm5h" path="res://Start and Pause Menus/Start Screen Items/3a8ea8abf1d716ecb1e83f2610278ab0.jpg" id="6_agfgi"]
+[ext_resource type="PackedScene" uid="uid://dmy5r6133pa4y" path="res://Emily/emily.tscn" id="7_2jp4v"]
+[ext_resource type="Script" uid="uid://4x7x53bh6ag7" path="res://Emily/emily_entering_house.gd" id="8_u3358"]
+[ext_resource type="AudioStream" uid="uid://bc1s7cdtxj2vv" path="res://Levels/Components/SoundEffects/Door Open and Close - Sound Effect  Non copyright sound effects  TCW-SoundEffects.mp3" id="9_b5io1"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="10_mkoou"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="11_lsni8"]
+[ext_resource type="AudioStream" uid="uid://dn2cc04l7luh1" path="res://Start and Pause Menus/smooth-instrumental-jazz-music-360498.mp3" id="12_3geno"]
+[ext_resource type="PackedScene" uid="uid://bc8xkm4jbw3tp" path="res://Levels/Level Scenes/First Apartment/low_poly_apartment_building.glb" id="13_ud8s0"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kusrh"]
+panorama = ExtResource("1_vqe2x")
+
+[sub_resource type="Sky" id="Sky_vmr02"]
+sky_material = SubResource("PanoramaSkyMaterial_kusrh")
+
+[sub_resource type="Environment" id="Environment_3aeag"]
+background_mode = 1
+background_color = Color(0.41583976, 0.77546483, 0.87328005, 1)
+sky = SubResource("Sky_vmr02")
+sky_rotation = Vector3(-0.49741885, 3.0927234, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.9999998, 0.76563627, 0.67289627, 1)
+ambient_light_energy = 2.95
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ktha"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q3mkv"]
+albedo_texture = ExtResource("5_2jnue")
+uv1_scale = Vector3(0.265, 1, 5.055)
+uv1_offset = Vector3(0.46, 0, 0)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tpsi"]
+albedo_texture = ExtResource("6_agfgi")
+uv1_scale = Vector3(0.36, 1, 3.93)
+uv1_triplanar = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mq5b"]
+shader = ExtResource("10_mkoou")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[node name="EnteringTheHouse" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3aeag")
+
+[node name="Moving van" parent="." instance=ExtResource("2_41j7v")]
+transform = Transform3D(0.009843558, 0, 2.9999838, 0, 3, 0, -2.9999838, 0, 0.009843558, -3.1834774, 0, -2.515)
+
+[node name="Sprite3D" type="Sprite3D" parent="Moving van"]
+transform = Transform3D(0.0013785453, 0, -1.0602517, 0, 0.19368565, 0, 0.15456478, 0, 0.00945626, -0.7807746, 0.8720552, 0.8797538)
+texture = ExtResource("3_832yr")
+
+[node name="Sketchfab_Scene" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000005, 0, -4.656613e-10, 0, 0.5982886, -0.43371952, 0.6733605, 0.0014228821)
+
+[node name="Sketchfab_Scene2" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000006, 0, -4.656613e-10, 0, 0.5982886, -0.43506896, 0.6733606, -0.40985107)
+
+[node name="Sketchfab_Scene3" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000007, 0, -4.656613e-10, 0, 0.5982886, -0.43639615, 0.67336065, -0.8143282)
+
+[node name="Sketchfab_Scene4" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000008, 0, -4.656613e-10, 0, 0.5982886, -0.43761984, 0.67336076, -1.1872711)
+
+[node name="Sketchfab_Scene5" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.000001, 0, -4.656613e-10, 0, 0.5982886, 0.056618154, 0.6733608, -1.1888933)
+
+[node name="Sketchfab_Scene6" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000011, 0, -4.656613e-10, 0, 0.5982886, 0.05780542, 0.6733609, -0.8270569)
+
+[node name="Sketchfab_Scene7" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000012, 0, -4.656613e-10, 0, 0.5982886, 0.058810353, 0.673361, -0.5207834)
+
+[node name="Sketchfab_Scene8" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000013, 0, -4.656613e-10, 0, 0.5982886, 0.060399234, 0.67336106, -0.0365448)
+
+[node name="Sketchfab_Scene9" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.0000018, 0, -0.67101353, 0, -0.018187365, 0.50827116, 0.6733613, -0.038017273)
+
+[node name="Sketchfab_Scene10" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.0000019, 0, -0.67101365, 0, -0.018187366, 0.50639194, 0.67336136, -0.6107178)
+
+[node name="Sketchfab_Scene11" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.000002, 0, -0.6710137, 0, -0.018187368, 0.5046274, 0.6733615, -1.1485033)
+
+[node name="Sketchfab_Scene12" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000006, 0, -4.656613e-10, 0, 0.5982886, -0.43371952, 1.1722727, 0.0014228821)
+
+[node name="Sketchfab_Scene13" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000007, 0, -4.656613e-10, 0, 0.5982886, -0.43506896, 1.1722728, -0.40985107)
+
+[node name="Sketchfab_Scene14" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000008, 0, -4.656613e-10, 0, 0.5982886, -0.43639615, 1.1722728, -0.8143282)
+
+[node name="Sketchfab_Scene15" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.000001, 0, -4.656613e-10, 0, 0.5982886, -0.43761984, 1.1722729, -1.1872711)
+
+[node name="Sketchfab_Scene16" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000011, 0, -4.656613e-10, 0, 0.5982886, 0.056618154, 1.172273, -1.1888943)
+
+[node name="Sketchfab_Scene17" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000012, 0, -4.656613e-10, 0, 0.5982886, 0.05780542, 1.172273, -0.8270569)
+
+[node name="Sketchfab_Scene18" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000013, 0, -4.656613e-10, 0, 0.5982886, 0.058810353, 1.1722732, -0.5207844)
+
+[node name="Sketchfab_Scene19" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000014, 0, -4.656613e-10, 0, 0.5982886, 0.060399234, 1.1722733, -0.036545753)
+
+[node name="Sketchfab_Scene20" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.0000019, 0, -0.67101365, 0, -0.018187366, 0.50827116, 1.1722735, -0.038018227)
+
+[node name="Sketchfab_Scene21" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(-0.02040755, 0, 0.59801215, 0, 1.000002, 0, -0.6710137, 0, -0.018187368, 0.50639194, 1.1722735, -0.6107187)
+
+[node name="Sketchfab_Scene22" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(-0.020407552, 0, 0.59801215, 0, 1.0000021, 0, -0.6710138, 0, -0.01818737, 0.5046274, 1.1722736, -1.1485043)
+
+[node name="Sketchfab_Scene23" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000007, 0, -4.656613e-10, 0, 0.5982886, -0.43371952, 1.6806335, 0.0014228821)
+
+[node name="Sketchfab_Scene24" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000008, 0, -4.656613e-10, 0, 0.5982886, -0.43506896, 1.6806338, -0.40985107)
+
+[node name="Sketchfab_Scene25" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.000001, 0, -4.656613e-10, 0, 0.5982886, -0.43639615, 1.6806338, -0.8143282)
+
+[node name="Sketchfab_Scene26" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000011, 0, -4.656613e-10, 0, 0.5982886, -0.43761984, 1.6806338, -1.1872711)
+
+[node name="Sketchfab_Scene27" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000012, 0, -4.656613e-10, 0, 0.5982886, 0.056618154, 1.6806339, -1.1888943)
+
+[node name="Sketchfab_Scene28" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000013, 0, -4.656613e-10, 0, 0.5982886, 0.05780542, 1.6806339, -0.8270569)
+
+[node name="Sketchfab_Scene29" parent="Moving van" instance=ExtResource("4_x15vs")]
+transform = Transform3D(0.6713236, 0, 2.3283064e-10, 0, 1.0000014, 0, -4.656613e-10, 0, 0.5982886, 0.058810353, 1.680634, -0.52078533)
+
+[node name="Road" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.087293886, 0, -119.40372, 0, 1, 0, 8.066745, 0, -1.2921213, 0, 0, 0.8509264)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("StandardMaterial3D_q3mkv")
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.405776e-07, -3.1899717e-08, -119.41068, -0.7214799, 1.4576966, -2.3780894e-06, 14.261913, 0.07374169, -4.6463933e-06, 3.9764671, -0.983984, -19.940807)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("StandardMaterial3D_7tpsi")
+
+[node name="Grass2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.405776e-07, -3.1899717e-08, -119.41068, -0.7214799, 1.4576966, -2.3780894e-06, 14.261913, 0.07374169, -4.6463933e-06, 3.9764671, -0.983984, -46.634064)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("StandardMaterial3D_7tpsi")
+
+[node name="Grass3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.405776e-07, -3.1899717e-08, -119.41068, -0.7214799, 1.4576966, -2.3780894e-06, 14.261913, 0.07374169, -4.6463933e-06, 3.9764671, -0.983984, -72.17136)
+mesh = SubResource("PlaneMesh_7ktha")
+surface_material_override/0 = SubResource("StandardMaterial3D_7tpsi")
+
+[node name="EmilyAnimations" parent="." instance=ExtResource("7_2jp4v")]
+transform = Transform3D(-2.1949158, 0, 0.14948054, 0, 2.2, 0, -0.14948054, 0, -2.1949158, -0.18613696, 0.0586493, -8.848671)
+script = ExtResource("8_u3358")
+timer = 1.5
+proposal_scene = false
+
+[node name="Camera3D" type="Camera3D" parent="EmilyAnimations"]
+transform = Transform3D(-0.453495, 0.028374407, -0.012195894, 0, 0.17949471, 0.4176041, 0.030884407, 0.4166391, -0.1790799, 0.873333, 5.3150253, -1.6447113)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="EmilyAnimations"]
+transform = Transform3D(0.003281186, 0, 0.9999946, 0, 1, 0, -0.9999946, 0, 0.003281186, -3.1834774, 0, -2.515)
+stream = ExtResource("9_b5io1")
+volume_db = 6.0
+max_db = 6.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2mq5b")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("11_lsni8")
+next_scene = "res://Levels/Level Scenes/First Apartment/WymountLivingRoom.tscn"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.003281186, 0, 0.9999946, 0, 1, 0, -0.9999946, 0, 0.003281186, -3.1834774, 0, -2.515)
+stream = ExtResource("12_3geno")
+volume_db = 3.0
+autoplay = true
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("13_ud8s0")]
+transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -1.0871525, 0.82307816, -55.055264)

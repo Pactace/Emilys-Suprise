@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://146eh3l8y33r"]
+[gd_scene load_steps=16 format=3 uid="uid://146eh3l8y33r"]
 
 [ext_resource type="Script" uid="uid://dbhnhpyg8q6dc" path="res://Levels/EmilyVille/Overworld/overworld_camera.gd" id="1_uj22n"]
 [ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="8_8l6or"]
 [ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="9_5h7ng"]
+[ext_resource type="Texture2D" uid="uid://6go6yque861c" path="res://Floor and Wall Textures/an-8-bit-retro-styled-pixel-art-illustration-of-an-oak-tree-free-png.png" id="9_qtxkv"]
 [ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="10_5c4vm"]
 [ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="11_ikuof"]
 [ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="12_hlk0a"]
@@ -20,6 +21,12 @@ albedo_texture = ExtResource("13_uj22n")
 uv1_scale = Vector3(15, 15, 15)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_12hj8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urx1i"]
+transparency = 1
+albedo_texture = ExtResource("9_qtxkv")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4bvf8"]
 
 [sub_resource type="Environment" id="Environment_qwf2g"]
 background_mode = 1
@@ -65,10 +72,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.073964, -0.48973966, -2.68
 
 [node name="OverworldGeo" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="OverworldGeo"]
-transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0, 0, 0)
+[node name="Grass" type="MeshInstance3D" parent="OverworldGeo"]
+transform = Transform3D(30, 0, 0, 0, 0.3, 0, 0, 0, 30, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_b3424")
 mesh = SubResource("PlaneMesh_12hj8")
+
+[node name="Tree53" type="MeshInstance3D" parent="OverworldGeo"]
+transform = Transform3D(-4.991933, -0.28376818, -0.008635216, 5.4649245e-09, 0.15208198, -4.997686, 0.2838987, -4.9896245, -0.15183657, 25.877178, 4.6215577, 26.52038)
+material_override = SubResource("StandardMaterial3D_urx1i")
+mesh = SubResource("PlaneMesh_4bvf8")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qwf2g")

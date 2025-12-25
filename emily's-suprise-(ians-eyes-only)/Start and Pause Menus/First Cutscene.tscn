@@ -372,7 +372,7 @@ offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("13_fsw08")
-next_scene = "res://Start and Pause Menus/EnteringTheHouse.tscn"
+next_scene = "res://Levels/Level Selector/Level Selector.tscn"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("17_yqt50")
