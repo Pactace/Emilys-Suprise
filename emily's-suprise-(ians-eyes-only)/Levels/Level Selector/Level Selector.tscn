@@ -100,10 +100,10 @@ autowrap_mode = 2
 
 [node name="TransitionScreen" type="ColorRect" parent="Camera2D"]
 material = SubResource("ShaderMaterial_vit34")
-offset_left = -356.0
-offset_top = -270.0
-offset_right = 284.0
-offset_bottom = 210.0
+offset_left = -377.0
+offset_top = -278.0
+offset_right = 263.0
+offset_bottom = 202.0
 scale = Vector2(1.1600013, 1.1458052)
 color = Color(0, 0, 0, 1)
 script = ExtResource("7_atjle")

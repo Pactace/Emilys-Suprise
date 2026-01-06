@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://twp8rdfcjhuy"]
+
+[ext_resource type="Texture2D" uid="uid://babylm3up8hg4" path="res://Models/Final Models/Backyard/FtrPottedPlant/Textures/mReBody_Alb.png" id="1_a6gnt"]
+
+[resource]
+resource_name = "mReBody0"
+albedo_texture = ExtResource("1_a6gnt")

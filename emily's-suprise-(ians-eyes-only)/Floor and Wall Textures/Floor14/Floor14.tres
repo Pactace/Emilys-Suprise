@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ptugubn7kmhm"]
+
+[ext_resource type="Texture2D" uid="uid://b865vbs5qikup" path="res://Floor and Wall Textures/Floor14/RoomTexFloorArgyleTile01_Alb.png" id="1_2aeja"]
+[ext_resource type="Texture2D" uid="uid://b6hhsa53byd2" path="res://Floor and Wall Textures/Floor14/RoomTexFloorArgyleTile01_Nrm.png" id="2_3xo8n"]
+
+[resource]
+albedo_texture = ExtResource("1_2aeja")
+normal_enabled = true
+normal_texture = ExtResource("2_3xo8n")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

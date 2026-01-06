@@ -5,7 +5,7 @@ var final_models := "res://Models/Final Models/"
 
 func _run():
 	var root_path := final_models
-	_traverse_folders_to_change_type(root_path)
+	_traverse_folders(root_path)
 
 # --- Traverse folders recursively
 func _traverse_folders(path: String) -> void:
@@ -324,12 +324,18 @@ func change_collision_layers(scene_root_path: String):
 	var scene := load(scene_root_path)
 	var inst = scene.instantiate()
 	var collision_node: StaticBody3D = null
+	
 	for i in range(inst.get_child_count()):
 		var child = inst.get_child(i)
 		if child.get_child_count() > 0:
 			collision_node = child.get_child(0)
 			break
 	if collision_node:
+		if not collision_node.get_collision_layer_value(1) and \
+		collision_node.get_collision_layer_value(3) and \
+		collision_node.get_collision_layer_value(8):
+			print("⏩ Collision layers already set:", scene_root_path)
+			return
 		collision_node.set_collision_layer_value(1, false)
 		collision_node.set_collision_layer_value(3, true)
 		collision_node.set_collision_layer_value(8, true)

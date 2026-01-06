@@ -1,7 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://djoyva78uxbnn"]
+[gd_scene load_steps=14 format=4 uid="uid://djoyva78uxbnn"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_3rq8v"]
 [ext_resource type="Material" uid="uid://dtka6iayjbf4i" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody0.tres" id="2_fr8ev"]
+[ext_resource type="Material" uid="uid://ctxtqt308hjkg" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody1.tres" id="3_fr8ev"]
+[ext_resource type="Material" uid="uid://1y4l71syfpqj" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody2.tres" id="4_sli58"]
+[ext_resource type="Material" uid="uid://pbo3eyvuio76" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody3.tres" id="5_wvoti"]
+[ext_resource type="Material" uid="uid://d24uidu44uqci" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody4.tres" id="6_q233j"]
+[ext_resource type="Material" uid="uid://dyfy8iqw2em4b" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody5.tres" id="7_mp1s4"]
+[ext_resource type="Material" uid="uid://bqktcpewcbcg0" path="res://Models/Final Models/Tower/FtrArmor/Textures/mReBody6.tres" id="8_hg61l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q2fbd"]
 
@@ -42,7 +48,7 @@ transform = Transform3D(0.43574956, 0, 0, 0, 0.45235804, 0, 0, 0, 0.44378427, 0,
 script = ExtResource("1_3rq8v")
 area_path = NodePath("armor__mReBody/@Area3D@258534")
 skins = {
-"mReBody": [ExtResource("2_fr8ev")]
+"mReBody": [ExtResource("2_fr8ev"), ExtResource("3_fr8ev"), ExtResource("4_sli58"), ExtResource("5_wvoti"), ExtResource("6_q233j"), ExtResource("7_mp1s4"), ExtResource("8_hg61l")]
 }
 
 [node name="armor__mReBody" type="MeshInstance3D" parent="."]

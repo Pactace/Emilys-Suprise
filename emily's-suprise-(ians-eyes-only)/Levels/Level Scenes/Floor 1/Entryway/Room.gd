@@ -106,6 +106,8 @@ func _load_saved_state():
 		canvas_layer.queue_free()  # remove once finished
 	else:
 		print("⚠️ No saved data for", room_name, "- starting fresh.")
+		if room_name == "Backyard":
+			get_child(0).flooring = "res://Floor and Wall Textures/Floor22/Floor22.tres"
 		canvas_layer.queue_free()  #
 
 func _load_json_objects(path: String):
@@ -132,6 +134,8 @@ func _load_json_objects(path: String):
 			get_child(0).wallpaper = obj_data["wallpaper"]
 			get_child(0).change_wallpaper(load(obj_data["wallpaper"]), obj_data["wallpaper"])
 			get_child(0).change_flooring(load(obj_data["flooring"]), obj_data["flooring"])
+			if room_name == "Backyard":
+				get_child(0).flooring = "res://Floor and Wall Textures/Floor22/Floor22.tres"
 		else:
 			# This is a regular object with a scene path
 			var obj_scene = load(obj_data["scene"])

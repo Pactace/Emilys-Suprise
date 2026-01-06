@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://5gckncfe2jt4"]
+
+[ext_resource type="Texture2D" uid="uid://crtnge4x42t8o" path="res://Floor and Wall Textures/Floor18/RoomTexFloorMosaicTile00_Alb.png" id="1_50g73"]
+[ext_resource type="Texture2D" uid="uid://uneermg8srw5" path="res://Floor and Wall Textures/Floor18/RoomTexFloorMosaicTile00_Nrm.png" id="2_2tkqg"]
+
+[resource]
+albedo_texture = ExtResource("1_50g73")
+normal_enabled = true
+normal_texture = ExtResource("2_2tkqg")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c42xnhcux7kfm"]
+
+[ext_resource type="Texture2D" uid="uid://dyh55141t436h" path="res://Floor and Wall Textures/Floor13/RoomTexFloorMorocco00_Alb.png" id="1_h6dko"]
+[ext_resource type="Texture2D" uid="uid://drw733nthm78o" path="res://Floor and Wall Textures/Floor13/RoomTexFloorMorocco00_Nrm.png" id="2_apjqn"]
+
+[resource]
+albedo_texture = ExtResource("1_h6dko")
+normal_enabled = true
+normal_texture = ExtResource("2_apjqn")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c0a12j52gemt5"]
+
+[ext_resource type="Texture2D" uid="uid://dsai83c0ktuiu" path="res://Floor and Wall Textures/Floor20/RoomTexFloorHerringbone00_Alb.png" id="1_wpsli"]
+[ext_resource type="Texture2D" uid="uid://deipwjd5vfaqg" path="res://Floor and Wall Textures/Floor20/RoomTexFloorHerringbone00_Nrm.png" id="2_fpijp"]
+
+[resource]
+albedo_texture = ExtResource("1_wpsli")
+normal_enabled = true
+normal_texture = ExtResource("2_fpijp")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

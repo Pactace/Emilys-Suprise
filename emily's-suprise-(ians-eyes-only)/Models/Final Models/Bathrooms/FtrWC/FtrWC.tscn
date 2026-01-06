@@ -1,8 +1,39 @@
-[gd_scene load_steps=11 format=4 uid="uid://ck8dm8xsjfd3h"]
+[gd_scene load_steps=42 format=4 uid="uid://ck8dm8xsjfd3h"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_ld2im"]
 [ext_resource type="Material" uid="uid://jk81lvw40oal" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mBody0.tres" id="2_0omyb"]
+[ext_resource type="Material" uid="uid://brno2f01sai6q" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mBody1.tres" id="3_0omyb"]
+[ext_resource type="Material" uid="uid://b8cmgaedksfnf" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mBody2.tres" id="4_2khvh"]
+[ext_resource type="Material" uid="uid://bp8gr3w6yreo4" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mBody3.tres" id="5_xg6o4"]
 [ext_resource type="Material" uid="uid://qstq1umjak4q" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody0.tres" id="6_1m7u0"]
+[ext_resource type="Material" uid="uid://mcwd4ic5e6lr" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody1.tres" id="7_j4ry7"]
+[ext_resource type="Material" uid="uid://b60uvskhvce6s" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody10.tres" id="8_1m7u0"]
+[ext_resource type="Material" uid="uid://enimdwlm3nec" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody11.tres" id="9_lxuki"]
+[ext_resource type="Material" uid="uid://2ygpels44tld" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody12.tres" id="10_h7181"]
+[ext_resource type="Material" uid="uid://rmjelxi2xhl6" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody13.tres" id="11_ig6ao"]
+[ext_resource type="Material" uid="uid://dmm14nsbiy2f6" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody14.tres" id="12_oysyv"]
+[ext_resource type="Material" uid="uid://dk0mrs5vqfd2o" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody15.tres" id="13_7rmyw"]
+[ext_resource type="Material" uid="uid://cncbl7yws2132" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody16.tres" id="14_1tmet"]
+[ext_resource type="Material" uid="uid://bmk53r2atvmur" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody17.tres" id="15_h5jic"]
+[ext_resource type="Material" uid="uid://c6hu600vc2g8a" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody18.tres" id="16_e3g7g"]
+[ext_resource type="Material" uid="uid://dja0o8owrn323" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody19.tres" id="17_kvnqw"]
+[ext_resource type="Material" uid="uid://m42jngioldpm" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody2.tres" id="18_4ypnd"]
+[ext_resource type="Material" uid="uid://dyhs5hggyev6b" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody3.tres" id="19_c1o77"]
+[ext_resource type="Material" uid="uid://chgkqsg2wa8ap" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody4.tres" id="20_uem1s"]
+[ext_resource type="Material" uid="uid://bw6dkyau3dwvy" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody5.tres" id="21_rdd7w"]
+[ext_resource type="Material" uid="uid://dbugo0l5kr60h" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody6.tres" id="22_gdvoy"]
+[ext_resource type="Material" uid="uid://knrbab1mvxwl" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody7.tres" id="23_plxa4"]
+[ext_resource type="Material" uid="uid://cucunc05gx7c3" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody8.tres" id="24_n4opg"]
+[ext_resource type="Material" uid="uid://5kl1onkbbjn2" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReBody9.tres" id="25_fo3x5"]
+[ext_resource type="Material" uid="uid://co27v17nr3dge" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReFabric0.tres" id="26_p8e2q"]
+[ext_resource type="Material" uid="uid://bdxuci6b3whkr" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReFabric1.tres" id="27_ivqkp"]
+[ext_resource type="Material" uid="uid://bpsu200wac3pk" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReFabric2.tres" id="28_sc08c"]
+[ext_resource type="Material" uid="uid://d2jacxad7eesj" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReFabric3.tres" id="29_jggnr"]
+[ext_resource type="Material" uid="uid://c25f7li36ipky" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mReFabric4.tres" id="30_qs7no"]
+[ext_resource type="Material" uid="uid://baser6ttskhba" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mSensor0.tres" id="31_musgq"]
+[ext_resource type="Material" uid="uid://c8tdsmy550sr4" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mSensor1.tres" id="32_ykd2m"]
+[ext_resource type="Material" uid="uid://qjlbhwbsin3x" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mWC0.tres" id="33_qtjy4"]
+[ext_resource type="Material" uid="uid://48ru8h3n7kup" path="res://Models/Final Models/Bathrooms/FtrWC/Textures/mWCSeat0.tres" id="34_ynr60"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8wd6"]
 
@@ -64,8 +95,12 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("1_ld2im")
 area_path = NodePath("toiletCover_low__mReBody/@Area3D@256966")
 skins = {
-"mBody": [ExtResource("2_0omyb")],
-"mReBody": [ExtResource("6_1m7u0")]
+"mBody": [ExtResource("2_0omyb"), ExtResource("3_0omyb"), ExtResource("4_2khvh"), ExtResource("5_xg6o4")],
+"mReBody": [ExtResource("6_1m7u0"), ExtResource("7_j4ry7"), ExtResource("8_1m7u0"), ExtResource("9_lxuki"), ExtResource("10_h7181"), ExtResource("11_ig6ao"), ExtResource("12_oysyv"), ExtResource("13_7rmyw"), ExtResource("14_1tmet"), ExtResource("15_h5jic"), ExtResource("16_e3g7g"), ExtResource("17_kvnqw"), ExtResource("18_4ypnd"), ExtResource("19_c1o77"), ExtResource("20_uem1s"), ExtResource("21_rdd7w"), ExtResource("22_gdvoy"), ExtResource("23_plxa4"), ExtResource("24_n4opg"), ExtResource("25_fo3x5")],
+"mReFabric": [ExtResource("26_p8e2q"), ExtResource("27_ivqkp"), ExtResource("28_sc08c"), ExtResource("29_jggnr"), ExtResource("30_qs7no")],
+"mSensor": [ExtResource("31_musgq"), ExtResource("32_ykd2m")],
+"mWC": [ExtResource("33_qtjy4")],
+"mWCSeat": [ExtResource("34_ynr60")]
 }
 
 [node name="lever_low__mBody" type="MeshInstance3D" parent="."]

@@ -1,10 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://b83nqmb6clsha"]
+[gd_scene load_steps=8 format=4 uid="uid://b83nqmb6clsha"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_s2pb2"]
 [ext_resource type="Material" uid="uid://cy5vd2633mkm3" path="res://Models/Final Models/Rugs/RugSquareElegantL00/Textures/mMain0.tres" id="2_usce1"]
-[ext_resource type="Material" uid="uid://dv4e0r6j0vap3" path="res://Models/Final Models/Rugs/RugSquareElegantL01/Textures/mMain0.tres" id="3_4ilq0"]
-[ext_resource type="Material" uid="uid://dq8qvryinas8d" path="res://Models/Final Models/Rugs/RugSquareElegantL02/Textures/mMain0.tres" id="4_7gurn"]
-[ext_resource type="Material" uid="uid://blwquemcqdfvt" path="res://Models/Final Models/Rugs/RugSquareElegantL03/Textures/mMain0.tres" id="5_slk5u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2085"]
 
@@ -46,7 +43,7 @@ script = ExtResource("1_s2pb2")
 area_path = NodePath("Main__mMain/@Area3D@258394")
 object_type = 3
 skins = {
-"mMain": [ExtResource("2_usce1"), ExtResource("3_4ilq0"), ExtResource("4_7gurn"), ExtResource("5_slk5u")]
+"mMain": [ExtResource("2_usce1")]
 }
 
 [node name="Main__mMain" type="MeshInstance3D" parent="."]

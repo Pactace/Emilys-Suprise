@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bodixhgfw5kwq"]
+
+[ext_resource type="Texture2D" uid="uid://dxwi4k65e0lnu" path="res://Models/Final Models/Backyard/FtrPergola/Textures/mReBody_Alb4.png" id="1_fcch1"]
+[ext_resource type="Texture2D" uid="uid://dk82txmrh1xpb" path="res://Models/Final Models/Backyard/FtrPergola/Textures/mReBody_Nrm4.png" id="2_iueuj"]
+
+[resource]
+resource_name = "mReBody4"
+albedo_texture = ExtResource("1_fcch1")
+normal_enabled = true
+normal_texture = ExtResource("2_iueuj")

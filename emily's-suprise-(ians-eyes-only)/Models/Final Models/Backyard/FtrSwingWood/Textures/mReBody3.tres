@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://kv8griyj8mew"]
+
+[ext_resource type="Texture2D" uid="uid://vsqfv48h1cv2" path="res://Models/Final Models/Backyard/FtrSwingWood/Textures/mReBody_Alb3.png" id="1_03col"]
+[ext_resource type="Texture2D" uid="uid://d2pt6thbyxfq3" path="res://Models/Final Models/Backyard/FtrSwingWood/Textures/mReBody_Nrm3.png" id="2_3x4el"]
+
+[resource]
+resource_name = "mReBody3"
+albedo_texture = ExtResource("1_03col")
+normal_enabled = true
+normal_texture = ExtResource("2_3x4el")

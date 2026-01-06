@@ -1,0 +1,207 @@
+[gd_scene load_steps=27 format=3 uid="uid://c3n1xy3sd3wmw"]
+
+[ext_resource type="Script" uid="uid://cuxds0bd4ww00" path="res://Levels/Level Scenes/Floor 1/Entryway/Room.gd" id="1_u64sf"]
+[ext_resource type="PackedScene" uid="uid://dt6j24qhea4jy" path="res://Levels/Components/Room.tscn" id="2_1i42j"]
+[ext_resource type="Shader" uid="uid://b5gdj0gfoerb4" path="res://Levels/Components/Portal.gdshader" id="3_n6617"]
+[ext_resource type="Texture2D" uid="uid://chfa3xq6k3xv8" path="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Alb.png" id="4_qpy3h"]
+[ext_resource type="Texture2D" uid="uid://drq18wyuhp0d7" path="res://Floor and Wall Textures/BaseWall/RoomTexWallConcrete00_Nrm.png" id="5_i63ef"]
+[ext_resource type="Script" uid="uid://c7svm8f5ribdi" path="res://Levels/camera_controller.gd" id="6_0tbh0"]
+[ext_resource type="Texture2D" uid="uid://wul3174m2hyt" path="res://Floor and Wall Textures/Floor22/RoomTexFloorLawn00_Alb.png" id="6_u64sf"]
+[ext_resource type="PackedScene" uid="uid://blqcb0l0orvyd" path="res://UI_Overlay/ui_overlay.tscn" id="7_qjw27"]
+[ext_resource type="Script" uid="uid://bqcy5joxtw4xn" path="res://Levels/Level Scenes/Floor 2/Terrace/TerracePlaceableInventory.gd" id="9_47v1k"]
+[ext_resource type="Script" uid="uid://k3vpy0uve1ka" path="res://Levels/Level Scenes/Floor 2/Terrace/BackyardFloorFurnitureInventory.gd" id="9_u64sf"]
+[ext_resource type="Script" uid="uid://bibkq6y8a2lql" path="res://Levels/Level Scenes/Floor 2/Terrace/TerraceWallInventory.gd" id="10_iw6ds"]
+[ext_resource type="Script" uid="uid://dnktgev8rj178" path="res://Inventories/WallPaperInventory.gd" id="11_u33qf"]
+[ext_resource type="PackedScene" uid="uid://b8gxmac3vkh3n" path="res://Levels/Components/Emily.tscn" id="12_q2q33"]
+[ext_resource type="Shader" uid="uid://dlln7bt0dv2nk" path="res://Start and Pause Menus/Transition.gdshader" id="13_plv15"]
+[ext_resource type="Script" uid="uid://cmrv4gn5hinpj" path="res://Start and Pause Menus/transition_screen.gd" id="14_hypeu"]
+[ext_resource type="PackedScene" uid="uid://dn85sibojc4ki" path="res://Models/Final Models/TransitionPieces/door.tscn" id="15_ppywv"]
+[ext_resource type="PackedScene" uid="uid://btd2vgimkjyac" path="res://Levels/Components/music_player.tscn" id="16_0q3rk"]
+[ext_resource type="AudioStream" uid="uid://o4be3pxyyhc1" path="res://Floor and Wall Textures/OutsideWall/3 Min Timer music bird, relax music with nature sounds in the forest for work and study.mp3" id="17_lva72"]
+[ext_resource type="PackedScene" uid="uid://de5xpctb4vxuq" path="res://Levels/Level Scenes/Floor 1/Entryway/sound_effect_player.tscn" id="18_m2o1y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rehjf"]
+render_priority = 0
+shader = ExtResource("3_n6617")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_qpy3h")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_i63ef")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u64sf"]
+render_priority = 0
+shader = ExtResource("3_n6617")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_qpy3h")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_i63ef")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1i42j"]
+render_priority = 0
+shader = ExtResource("3_n6617")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_qpy3h")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_i63ef")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n6617"]
+render_priority = 0
+shader = ExtResource("3_n6617")
+shader_parameter/center = Vector3(0, 0, 0)
+shader_parameter/scale = 0.49999997
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_qpy3h")
+shader_parameter/albedo_texture_size = Vector2i(256, 512)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("5_i63ef")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(0.125, 0.085, 0.25)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1i42j"]
+albedo_texture = ExtResource("6_u64sf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1lj7"]
+shader = ExtResource("13_plv15")
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+
+[sub_resource type="Environment" id="Environment_alhh5"]
+background_mode = 1
+background_color = Color(0.3647059, 0.69411767, 0.9490196, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7539839, 0.75398386, 0.75398386, 1)
+reflected_light_source = 1
+
+[node name="TestLevel" type="Node3D"]
+script = ExtResource("1_u64sf")
+room_name = "Backyard"
+
+[node name="Room" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_1i42j")]
+horizontal_size = 10
+vertical_size = 10
+camera = NodePath("../Camera")
+
+[node name="Back Wall" parent="Room" index="2"]
+transform = Transform3D(-36, 0, 0, 0, 9, -1.509958e-07, 0, 1.3589622e-06, 1, 0, 4.5, -18)
+visible = false
+material_override = SubResource("ShaderMaterial_rehjf")
+
+[node name="Left Wall" parent="Room" index="3"]
+transform = Transform3D(-1.57361e-06, 0, -1, 0, 9, 0, 36, 0, -4.371139e-08, 18, 4.5, 0)
+visible = false
+material_override = SubResource("ShaderMaterial_u64sf")
+
+[node name="Right Wall" parent="Room" index="4"]
+transform = Transform3D(-1.57361e-06, 0, 1, 0, 9, 0, -36, 0, -4.371139e-08, -18, 4.5, 0)
+visible = false
+material_override = SubResource("ShaderMaterial_1i42j")
+
+[node name="Front Wall" parent="Room" index="5"]
+transform = Transform3D(36, 1.3589622e-06, -1.5099563e-07, -5.435849e-06, 9, 3.358816e-19, -5.435843e-06, -2.0519434e-13, -1, 0, 4.5, 18)
+material_override = SubResource("ShaderMaterial_n6617")
+
+[node name="Floor" parent="Room" index="6"]
+transform = Transform3D(18, 0, 0, 0, 1, 0, 0, 0, 18, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_1i42j")
+
+[node name="Ceiling" parent="Room" index="7"]
+transform = Transform3D(18, 0, 0, 0, -1, 2.7179244e-06, 0, -1.509958e-07, -18, 0, 8.817201, 0.010361195)
+
+[node name="WorldEnvironment" parent="Room" index="9"]
+environment = null
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 10, 15)
+visible = false
+size = 8.0
+script = ExtResource("6_0tbh0")
+
+[node name="UiOverlay" parent="." node_paths=PackedStringArray("camera", "room") instance=ExtResource("7_qjw27")]
+camera = NodePath("../Camera")
+room = NodePath("../Room")
+floor_furniture_inventory = ExtResource("9_u64sf")
+placeable_inventory = ExtResource("9_47v1k")
+wall_furniture_inventory = ExtResource("10_iw6ds")
+wallpaper_inventory = ExtResource("11_u33qf")
+
+[node name="Emily" parent="." instance=ExtResource("12_q2q33")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.81631, 2.44494, -0.130091)
+SPEED = 5.0
+
+[node name="TransitionScreen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c1lj7")
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("14_hypeu")
+
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="StairsideHallwayDoor" parent="Doors" node_paths=PackedStringArray("marker") instance=ExtResource("15_ppywv")]
+transform = Transform3D(-0.0088661015, 0, -0.9999609, 0, 0.99415743, 0, 0.9999609, 0, -0.0088661015, 0.6956816, 3.6350203, 17.619818)
+marker = NodePath("Marker3D")
+next_scene = "res://Levels/Level Scenes/Floor 2/Libraryside Hallway/LibrarysideHallway.tscn"
+next_door = "TerraceDoor"
+
+[node name="Marker3D" type="Marker3D" parent="Doors/StairsideHallwayDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2846985, -0.5575495, -1.1920929e-07)
+
+[node name="MusicPlayer" parent="." instance=ExtResource("16_0q3rk")]
+stream = ExtResource("17_lva72")
+autoplay = true
+script = null
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource("18_m2o1y")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_alhh5")
+
+[editable path="Room"]

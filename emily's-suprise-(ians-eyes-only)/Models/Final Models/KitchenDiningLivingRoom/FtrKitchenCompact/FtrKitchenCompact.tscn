@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://clyav5qxkxwlh"]
+[gd_scene load_steps=16 format=4 uid="uid://clyav5qxkxwlh"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_g63cl"]
+[ext_resource type="Material" uid="uid://dnw4fm4uusxm0" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrKitchenCompact/Textures/mReBody0.tres" id="2_80kx5"]
 [ext_resource type="Material" uid="uid://cxc2xny6c8m74" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrKitchenCompact/Textures/mReBody1.tres" id="3_k45kk"]
 [ext_resource type="Material" uid="uid://m834uiflp7ew" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrKitchenCompact/Textures/mReBody2.tres" id="4_mfh4t"]
 [ext_resource type="Material" uid="uid://drxc1yxrdr235" path="res://Models/Final Models/KitchenDiningLivingRoom/FtrKitchenCompact/Textures/mReBody3.tres" id="5_rfxef"]
@@ -50,7 +51,7 @@ script = ExtResource("1_g63cl")
 area_path = NodePath("Body__mReBody/@Area3D@257818")
 object_type = 1
 skins = {
-"mReBody": [ExtResource("3_k45kk"), ExtResource("4_mfh4t"), ExtResource("5_rfxef"), ExtResource("6_1d0dr"), ExtResource("7_8woav"), ExtResource("8_t23mf"), ExtResource("9_y6r1p"), ExtResource("10_h5eqv")]
+"mReBody": [ExtResource("2_80kx5"), ExtResource("3_k45kk"), ExtResource("4_mfh4t"), ExtResource("5_rfxef"), ExtResource("6_1d0dr"), ExtResource("7_8woav"), ExtResource("8_t23mf"), ExtResource("9_y6r1p"), ExtResource("10_h5eqv")]
 }
 
 [node name="Body__mReBody" type="MeshInstance3D" parent="."]

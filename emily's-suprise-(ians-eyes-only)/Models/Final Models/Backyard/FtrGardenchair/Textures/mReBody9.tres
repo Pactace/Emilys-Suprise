@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cev2gpdpruwg6"]
+
+[ext_resource type="Texture2D" uid="uid://djp0sfchjjac3" path="res://Models/Final Models/Backyard/FtrGardenchair/Textures/mReBody_Alb9.png" id="1_r2luo"]
+[ext_resource type="Texture2D" uid="uid://c5jhvyhym0wmd" path="res://Models/Final Models/Backyard/FtrGardenchair/Textures/mReBody_Nrm9.png" id="2_mtojj"]
+
+[resource]
+resource_name = "mReBody9"
+albedo_texture = ExtResource("1_r2luo")
+normal_enabled = true
+normal_texture = ExtResource("2_mtojj")

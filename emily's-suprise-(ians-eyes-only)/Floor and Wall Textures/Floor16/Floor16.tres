@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cagpakn1o826s"]
+
+[ext_resource type="Texture2D" uid="uid://d3eqjsdeap58i" path="res://Floor and Wall Textures/Floor16/RoomTexFloorCute00_Alb.png" id="1_hqop5"]
+[ext_resource type="Texture2D" uid="uid://bf6a3g3882160" path="res://Floor and Wall Textures/Floor16/RoomTexFloorCute00_Nrm.png" id="2_hqop5"]
+
+[resource]
+albedo_texture = ExtResource("1_hqop5")
+normal_enabled = true
+normal_texture = ExtResource("2_hqop5")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cosodx086gmu8"]
+
+[ext_resource type="Texture2D" uid="uid://dkmah7sx8qa12" path="res://Models/Final Models/Downstairs/FtrArcadegameMahjong/Textures/mBody_Alb.png" id="1_14glo"]
+
+[resource]
+resource_name = "mBody0"
+albedo_texture = ExtResource("1_14glo")

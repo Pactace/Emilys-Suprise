@@ -8,7 +8,7 @@ import time
 # === Paths ===
 import_request_list = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\Assets_I_Will_Steal.txt"
 export_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\ACNH_2.0.0_Exported_Model_DAE+PNG\model"
-import_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\emily's-suprise-(ians-eyes-only)\Models\Final Models\Rugs"
+import_path = r"C:\Users\ianth\OneDrive\Desktop\untitled\Emilys-Suprise\emily's-suprise-(ians-eyes-only)\Models\Final Models\Backyard"
 
 # Path to COLLADA2GLTF executable
 collada_converter = "COLLADA2GLTF"  # <-- change this
@@ -150,16 +150,17 @@ def items_from_list_retrieve():
 
 def operation_steal_wall_papers():
     wall_papers_to_steal = [
+        "RoomTexFloorLawn00"
     ]
 
     base_src = "C:/Users/ianth/OneDrive/Desktop/untitled/ACNH_2.0.0_Exported_Model_DAE+PNG/Model"
     base_dest = "C:/Users/ianth/OneDrive/Desktop/untitled/Emilys-Suprise/emily's-suprise-(ians-eyes-only)/Floor and Wall Textures"
 
-    wall_num = 2
+    wall_num = 22
 
     for wall_paper in wall_papers_to_steal:
         src = f"{base_src}/{wall_paper}.Nin_NX_NVN"
-        dest = f"{base_dest}/Wall{wall_num}"
+        dest = f"{base_dest}/Floor{wall_num}"
 
         wall_num += 1
 
@@ -177,4 +178,4 @@ def operation_steal_wall_papers():
             print(f"⚠️ Source folder not found: {src}")
 
 if __name__ == "__main__":
-    operation_steal_wall_papers()
+    items_from_list_retrieve()

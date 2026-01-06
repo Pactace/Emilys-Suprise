@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://bm5rhkg8srk74"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_po1dk"]
-[ext_resource type="Material" uid="uid://dfbupmw22x0bv" path="res://Models/Final Models/Downstairs/FtrArcadegameFight/Textures/mBody0 (2).tres" id="2_auevx"]
+[ext_resource type="Material" uid="uid://cosodx086gmu8" path="res://Models/Final Models/Downstairs/FtrArcadegameMahjong/Textures/mBody0.tres" id="2_auevx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtf6t"]
 

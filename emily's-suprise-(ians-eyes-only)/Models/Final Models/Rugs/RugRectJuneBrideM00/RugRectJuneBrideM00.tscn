@@ -1,9 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://bkpaf1cu01nmi"]
+[gd_scene load_steps=8 format=4 uid="uid://bkpaf1cu01nmi"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_gv1be"]
 [ext_resource type="Material" uid="uid://cdhoox06s15af" path="res://Models/Final Models/Rugs/RugRectJuneBrideM00/Textures/mMain0.tres" id="2_kmj4f"]
-[ext_resource type="Material" uid="uid://b15udx3e5y28m" path="res://Models/Final Models/Rugs/RugRectJuneBrideM02/Textures/mMain0.tres" id="3_mdjar"]
-[ext_resource type="Material" uid="uid://ba3llm7qmeqgi" path="res://Models/Final Models/Rugs/RugRectJuneBrideM03/Textures/mMain0.tres" id="4_48jw3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wajhj"]
 
@@ -45,7 +43,7 @@ script = ExtResource("1_gv1be")
 area_path = NodePath("Main__mMain/@Area3D@258322")
 object_type = 3
 skins = {
-"mMain": [ExtResource("2_kmj4f"), ExtResource("3_mdjar"), ExtResource("4_48jw3")]
+"mMain": [ExtResource("2_kmj4f")]
 }
 
 [node name="Main__mMain" type="MeshInstance3D" parent="."]

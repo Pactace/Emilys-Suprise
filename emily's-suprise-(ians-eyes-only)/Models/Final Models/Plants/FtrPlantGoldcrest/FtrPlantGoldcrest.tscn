@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=4 uid="uid://dhy155u2mgvxu"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_61q8i"]
-[ext_resource type="Material" uid="uid://db0gcen4wuuw3" path="res://Models/Final Models/Office/FtrPlantGoldcrest/Textures/mReBody0.tres" id="2_b16gs"]
-[ext_resource type="Material" uid="uid://c4mnverlsssxg" path="res://Models/Final Models/Office/FtrPlantGoldcrest/Textures/mReBody1.tres" id="3_l1pai"]
-[ext_resource type="Material" uid="uid://bdqqeaq2dmdv3" path="res://Models/Final Models/Office/FtrPlantGoldcrest/Textures/mReBody2.tres" id="4_tuwja"]
-[ext_resource type="Material" uid="uid://bx543lsmxtosx" path="res://Models/Final Models/Office/FtrPlantGoldcrest/Textures/mReBody3.tres" id="5_o32fa"]
-[ext_resource type="Material" uid="uid://ctx5cfwrbe6tc" path="res://Models/Final Models/Office/FtrPlantGoldcrest/Textures/mReBody4.tres" id="6_0b826"]
+[ext_resource type="Material" uid="uid://eful375rkvti" path="res://Models/Final Models/Plants/FtrPlantGoldcrest/Textures/mReBody0.tres" id="2_iydhx"]
+[ext_resource type="Material" uid="uid://bgc4s4k3tlioj" path="res://Models/Final Models/Plants/FtrPlantGoldcrest/Textures/mReBody1.tres" id="3_m82vp"]
+[ext_resource type="Material" uid="uid://dsv0afay4alnd" path="res://Models/Final Models/Plants/FtrPlantGoldcrest/Textures/mReBody2.tres" id="4_mhq7n"]
+[ext_resource type="Material" uid="uid://c4cdltv7m3c4b" path="res://Models/Final Models/Plants/FtrPlantGoldcrest/Textures/mReBody3.tres" id="5_4ufgg"]
+[ext_resource type="Material" uid="uid://dvr35y78tko2x" path="res://Models/Final Models/Plants/FtrPlantGoldcrest/Textures/mReBody4.tres" id="6_6mq4y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2kaw"]
 
@@ -59,7 +59,7 @@ script = ExtResource("1_61q8i")
 area_path = NodePath("Leaf01_low__mReBody/@Area3D@258150")
 object_type = 2
 skins = {
-"mReBody": [ExtResource("2_b16gs"), ExtResource("3_l1pai"), ExtResource("4_tuwja"), ExtResource("5_o32fa"), ExtResource("6_0b826")]
+"mReBody": [ExtResource("2_iydhx"), ExtResource("3_m82vp"), ExtResource("4_mhq7n"), ExtResource("5_4ufgg"), ExtResource("6_6mq4y")]
 }
 
 [node name="Leaf01_low__mReBody" type="MeshInstance3D" parent="."]

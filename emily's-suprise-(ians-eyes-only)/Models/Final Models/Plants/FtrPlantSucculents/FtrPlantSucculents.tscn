@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=4 uid="uid://cu5pdpp3ghx87"]
 
 [ext_resource type="Script" uid="uid://cougtea2jnpp4" path="res://Models/Scripts/object_script.gd" id="1_t2ctj"]
-[ext_resource type="Material" uid="uid://dcf72kvo8gbqu" path="res://Models/Final Models/Office/FtrPlantSucculents/Textures/mBody0.tres" id="2_1oeww"]
-[ext_resource type="Material" uid="uid://cyx525gwnt1nn" path="res://Models/Final Models/Office/FtrPlantSucculents/Textures/mPlant0.tres" id="3_s6267"]
+[ext_resource type="Material" uid="uid://dpsgl8kg24ckg" path="res://Models/Final Models/Plants/FtrPlantSucculents/Textures/mBody0.tres" id="2_46uuc"]
+[ext_resource type="Material" uid="uid://ou6ch7txclpw" path="res://Models/Final Models/Plants/FtrPlantSucculents/Textures/mPlant0.tres" id="3_rnbbr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3kvkd"]
 
@@ -64,8 +64,8 @@ script = ExtResource("1_t2ctj")
 area_path = NodePath("Can_low__mBody/@Area3D@258158")
 object_type = 2
 skins = {
-"mBody": [ExtResource("2_1oeww")],
-"mPlant": [ExtResource("3_s6267")]
+"mBody": [ExtResource("2_46uuc")],
+"mPlant": [ExtResource("3_rnbbr")]
 }
 
 [node name="Can_low__mBody" type="MeshInstance3D" parent="."]

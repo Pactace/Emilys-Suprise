@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cbwswmh1nrxsh"]
+
+[ext_resource type="Texture2D" uid="uid://ciyothrou8hf2" path="res://Models/Final Models/Backyard/FtrDwarf/Textures/mReBody_Alb1.png" id="1_x5rqa"]
+[ext_resource type="Texture2D" uid="uid://crow0wdamyipk" path="res://Models/Final Models/Backyard/FtrDwarf/Textures/mReBody_Nrm1.png" id="2_e0guk"]
+
+[resource]
+resource_name = "mReBody1"
+albedo_texture = ExtResource("1_x5rqa")
+normal_enabled = true
+normal_texture = ExtResource("2_e0guk")

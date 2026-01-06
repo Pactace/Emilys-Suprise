@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cucgjgba5hdiy"]
+
+[ext_resource type="Texture2D" uid="uid://bnan6hxyd6okl" path="res://Models/Final Models/Backyard/FtrWherearenOfficeHammock/Textures/mFabric_Alb.png" id="1_7etkl"]
+
+[resource]
+resource_name = "mFabric0"
+albedo_texture = ExtResource("1_7etkl")
